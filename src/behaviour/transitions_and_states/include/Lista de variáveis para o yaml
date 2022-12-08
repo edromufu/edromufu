@@ -1,0 +1,71 @@
+Simulação:
+	Incremento horizontal da cabeça
+	Limites horizontal da cabeça
+	Número de steps horizontais da cabeça
+	Incremento vertical da cabeça
+	Limites vertical da cabeça
+	Número de steps verticais da cabeça
+	Formar uma lista de requisições possíveis com todos os itens anteriores
+	Formar uma lista de procura com as ordem desejada
+	Tempo de espera para novo comando da cabeça no simulador
+	Centros dos motores da cabeça (vertical e horizontal)
+	Sentido de giro da cabeça
+	
+	Formar uma lista de requisições possíveis com todos os itens de caminhada possíveis
+	Tempo de espera para novo comando de caminhada no simulador
+	Step da simulação de rotação
+	Step da simulação de caminhada para frente
+	
+	Formar uma lista de requisições possíveis com todos os itens de page possíveis
+	Tempo de espera para novo comando de page no simulador
+	Sentido de giro do corpo
+	
+	Especificações de width e height da camera
+
+Cabeça:
+	Especificações de interpretação da camera
+	Especificações de proximidade da bola
+	Setar grafia correta das interpretações da bola
+	Limites de centralização da cabeça horizontal
+	Indexes da posição da cabeça no vetor retornada pelo movimento
+	Setar grafia correta dos movimentos possíveis com a cabeça
+	Grafia correta para os movimentos da cabeça:
+		- Direita
+		- Esquerda
+		- Cima
+		- Baixo
+		- Centro
+		- Procura
+	
+Caminhada:
+	Sentido preferencial de procura
+	Grafia correta para os movimentos de caminhada:
+		- Frente
+		- Horário
+		- Anti-horário
+		
+Page:	
+	Grafia correta para as pages:
+		- Chute
+		- Levantar de frente
+		- Levantar de costas
+	Valores dos senor giroscopio para detectar:
+		- Queda
+		- Queda frente
+		- Queda costas
+		- Queda direita
+		- Queda esquerda
+	Setar grafia correta das interpretações de queda
+	Limite de verificação de chute com o motor vertical
+		
+ROS:
+	Nomes dos tópicos
+	HEADERs dos tópicos
+
+	Número de tópicos subscritos no ros_packer
+
+
+Geral:
+	Grafia com os nomes dos estados
+	Número de segurança para interpretadores
+

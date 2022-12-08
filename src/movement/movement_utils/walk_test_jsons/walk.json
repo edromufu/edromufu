@@ -1,0 +1,45 @@
+{
+    "structural_parameters": {
+        "distHipToKnee": 0.092,
+        "distKneeToAnkle": 0.172,
+        "distAnkleToGround": 0.03,
+        "distFeetLateral": 0.16
+    },
+    "step_parameters": {
+        "stepGain": 0.03,
+        "lateralGain": 0.02,
+        "turnGain": 0.02
+    },
+    "walk_parameters": {
+        "freq": 1.7,
+        "supportPhaseRatio": 0.0,
+        "footYOffset": 0.018,
+        "riseGain": 0.05,
+        "trunkZOffset": 0.04,
+        "swingGain": 0.01,
+        "swingRollGain": 0.0,
+        "swingPhase": 0.0,
+        "stepUpVel": 1.0,
+        "stepDownVel": 1.0,
+        "riseUpVel": 1.0,
+        "riseDownVel": 1.0,
+        "swingPause": 0.0,
+        "swingVel": 1.0,
+        "trunkXOffset": 0.0,
+        "trunkYOffset": 0.0,
+        "trunkPitch": 0.2,
+        "trunkRoll": 0.0,
+        "extraLeftX": 0.0,
+        "extraLeftY": 0.0,
+        "extraLeftZ": 0.0,
+        "extraRightX": 0.0,
+        "extraRightY": 0.0,
+        "extraRightZ": 0.02,
+        "extraLeftYaw": 0.0,
+        "extraLeftPitch": 0.0,
+        "extraLeftRoll": 0.0,
+        "extraRightYaw": 0.0,
+        "extraRightPitch": 0.0,
+        "extraRightRoll": 0.0
+    }
+}

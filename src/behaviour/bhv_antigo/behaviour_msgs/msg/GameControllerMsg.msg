@@ -1,0 +1,14 @@
+uint8[] header              
+uint16 version           
+uint8 packetNumber        
+uint8 playersPerTeam      
+uint8 gamePhase             
+uint8 state    
+uint8 setPlay           
+uint8 firstHalf            
+uint8 kickingTeam
+uint8 dropInTeam           
+uint16 dropInTime          
+uint16 secsRemaining      
+uint16 secondaryTime      
+GameControllerTeamMsg[] teams

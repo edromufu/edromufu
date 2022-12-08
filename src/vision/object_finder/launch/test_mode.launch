@@ -1,0 +1,4 @@
+<launch>
+	<param name="game_mode"      value="false"/>
+ 	<node name="object_finder" pkg="object_finder" type="object.py" output="screen" >   </node>
+</launch>

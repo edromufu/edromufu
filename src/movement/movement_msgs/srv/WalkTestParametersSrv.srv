@@ -1,0 +1,38 @@
+string currentWalk
+float64 stepGain
+float64 lateralGain
+float64 turnGain
+float64 freq
+float64 supportPhaseRatio
+float64 footYOffset
+float64 riseGain
+float64 trunkZOffset
+float64 swingGain
+float64 swingRollGain
+float64 swingPhase
+float64 stepUpVel
+float64 stepDownVel
+float64 riseUpVel
+float64 riseDownVel
+float64 swingPause
+float64 swingVel
+float64 trunkXOffset
+float64 trunkYOffset
+float64 trunkPitch
+float64 trunkRoll
+float64 extraLeftX
+float64 extraLeftY
+float64 extraLeftZ
+float64 extraRightX
+float64 extraRightY
+float64 extraRightZ
+float64 extraLeftYaw
+float64 extraLeftPitch
+float64 extraLeftRoll
+float64 extraRightYaw
+float64 extraRightPitch
+float64 extraRightRoll
+
+---
+
+bool success

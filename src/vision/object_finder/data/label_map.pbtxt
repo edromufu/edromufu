@@ -1,0 +1,19 @@
+item {
+  id: 1
+  name: 'ball'
+}
+
+item {
+  id: 2
+  name: 'post'
+}
+
+item {
+  id: 3
+  name: 'robot'
+}
+
+item {
+  id: 4
+  name: 'referee'
+}

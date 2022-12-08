@@ -1,0 +1,124 @@
+{   
+    "walking_movements":
+    {
+        "function_to_call": "IKWalk",
+        "params_all_kinds":
+            {
+                "walk_forward":
+                {
+                    "enabledGain": 1,
+                    "stepGain": 1,
+                    "lateralGain": 0,
+                    "turnGain": 0
+                },
+                "rotate_clockwise":
+                {
+                    "enabledGain": 1,
+                    "stepGain": 0,
+                    "lateralGain": 0,
+                    "turnGain": -1
+                },
+                "rotate_counter_clockwise":
+                {
+                    "enabledGain": 1,
+                    "stepGain": 0,
+                    "lateralGain": 0,
+                    "turnGain": 1
+                },
+                "stop_walk":
+                {
+                    "enabledGain": 0,
+                    "stepGain": 0,
+                    "lateralGain": 0,
+                    "turnGain": 0
+                }
+            }
+    },
+    "head_movements":
+    {
+        "function_to_call": "XYHead",
+        "params_all_kinds":
+            {
+                "head_to_left":
+                {
+                    "direction": "L",
+                    "pattern": "Linear"
+                },
+                "head_to_right":
+                {
+                    "direction": "R",
+                    "pattern": "Linear"
+                },
+                "head_to_up":
+                {
+                    "direction": "U",
+                    "pattern": "Linear"
+                },
+                "head_to_down":
+                {
+                    "direction": "D",
+                    "pattern": "Linear"
+                },
+                "head_to_center":
+                {
+                    "direction": "C",
+                    "pattern": "Linear"
+                },
+                "head_search":
+                {
+                    "direction": "S",
+                    "pattern": "Diagonal"
+                },
+                "stop_head":
+                {
+                    "direction": "N",
+                    "pattern": "None"
+                }
+            }
+    },
+    "body_alignment_movs":
+    {
+        "function_to_call": "BAMove",
+        "params_all_kinds":
+            {
+                "body_alignment_to_left":
+                {
+                    "head_movements": "head_to_right",
+                    "walking_movements": "rotate_counter_clockwise"
+                },
+                "body_alignment_to_right":
+                {
+                    "head_movements": "head_to_left",
+                    "walking_movements": "rotate_clockwise"
+                },
+                "stop_all_motions":
+                {
+                    "head_movements": "stop_head",
+                    "walking_movements": "stop_walk"
+                }
+            }
+    },
+    "pages_list":
+    {
+        "function_to_call": "PGRun",
+        "params_all_kinds":
+            {
+                "first_pose":
+                {
+                    "page_name": "first_pose"
+                },
+                "kick":
+                {
+                    "page_name": "kick"
+                },
+                "right_fall":
+                {
+                    "page_name": "right_fall"
+                },
+                "left_fall":
+                {
+                    "page_name": "left_fall"
+                }
+            }
+    }
+}

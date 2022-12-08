@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: 2f0d3d58a3a37518a32d05f694a54e5f
+needsRobotAncestor: 1
+baseType: Robot
+slotType: 
+parameters: translation,rotation,name,controller,controllerArgs,customData,supervisor,synchronization,selfCollision,cameraFOV,MX64-torque,MX64-vel,MX64-damping,MX106-torque,MX106-vel,MX106-damping,XH540W270-torque,XH540W270-vel,XH540W270-damping,gearMass,backlash,spring-constant,pid
+tags: 
+license:  Apache License 2.0
+licenseUrl:  http://www.apache.org/licenses/LICENSE-2.0
+documentationUrl: 
+info: This\sis\sa\sproto\sfile\sfor\sWebots\sfor\sthe\sWolfgang\nExtracted\sfrom:\swolfgang.urdf

@@ -1,0 +1,12 @@
+catkin_pkg
+
+# Dependencies
+matplotlib
+numpy
+opencv-python
+pandas
+Pillow
+six
+sphinx
+sphinx_rtd_theme
+tensorflow

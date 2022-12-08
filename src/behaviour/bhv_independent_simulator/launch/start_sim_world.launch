@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- start Webots -->
+  <arg name="no-gui" default="false," doc="Start Webots with minimal GUI"/>
+  <include file="$(find bhv_independent_simulator)/launch/webots.launch">
+    <arg name="mode" value="realtime"/>
+    <arg name="no-gui" value="$(arg no-gui)"/>
+    <arg name="world" value="$(find bhv_independent_simulator)/worlds/bhv_sim_world.wbt"/>
+  </include>
+</launch>

@@ -1,0 +1,10 @@
+<launch>
+
+<!-- Inicia o ambiente de simulação do Webots -->
+<include file="$(find movement_simulation)/launch/start_sim_world.launch"/>
+
+<!-- Inicia o supervisor da robô simulada -->
+<include file="$(find movement_simulation)/launch/start_sim_controller.launch"/>
+
+
+</launch>

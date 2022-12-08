@@ -1,0 +1,36 @@
+<launch>
+    <arg name="simulation" default="false"/>
+    <arg name="walk_test" default="false"/>
+    <arg name="page_creation" default="false"/>
+    <arg name="robot_name"/>
+
+    <arg name="camera" default="0"/>
+    <arg name="img_output" default="false"/>
+    <!-- Máquina de Estados 
+	<node name="body_alignment" pkg="states_routine" type="body_alignment_routine.py" output="screen" >    </node>
+    <node name="body_search" pkg="states_routine" type="body_search_routine.py" output="screen" >    </node>
+    <node name="search_ball" pkg="states_routine" type="search_ball_routine.py" output="screen" >    </node>
+    <node name="walking" pkg="states_routine" type="walking_routine.py" output="screen" >    </node>
+    -->
+
+    <node name="interpretation" pkg="transitions_and_states" type="natasha_goalkeeper.py" output="screen" >   </node>
+    
+	<!-- Webots 
+	<include file="$(find bhv_independent_simulator)/launch/behaviour_simulator.launch"></include>
+    -->
+
+    <!-- Movimento -->
+    <include file="$(find movement_utils)/launch/movement.launch">
+        <arg name="simulation" value="$(eval arg('simulation'))" />
+        <arg name="walk_test" value="$(eval arg('walk_test'))" />
+        <arg name="page_creation" value="$(eval arg('page_creation'))" />
+        <arg name="robot_name" value="$(eval arg('robot_name'))" />
+    </include> 
+
+    <!-- Visão -->
+    <include file="$(find object_finder)/launch/vision.launch"> 
+        <arg name="camera" value="$(eval arg('camera'))" />
+        <arg name="img_output" value="$(eval arg('img_output'))" />
+    </include>
+
+</launch>

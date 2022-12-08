@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- start Webots -->
+  <arg name="no-gui" default="false," doc="Start Webots with minimal GUI"/>
+  <include file="$(find movement_simulation)/launch/webots.launch">
+    <arg name="mode" value="realtime"/>
+    <arg name="no-gui" value="$(arg no-gui)"/>
+    <arg name="world" value="$(find movement_simulation)/worlds/natasha_world.wbt"/>
+  </include>
+</launch>

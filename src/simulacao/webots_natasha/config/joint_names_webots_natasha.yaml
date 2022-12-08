@@ -1,0 +1,1 @@
+controller_joint_names: ['', 'LARM_0', 'LARM_1', 'LARM_2', 'RARM_0', 'RARM_1', 'RARM_2', 'LLEG_0', 'LLEG_2', 'LLEG_1', 'LLEG_3', 'LLEG_4', 'LFOOT', 'RLEG_0', 'RLEG_2', 'RLEG_1', 'RLEG_3', 'RLEG_4', 'RFOOT', 'HEAD_0', 'HEAD_1', 'CAM', ]

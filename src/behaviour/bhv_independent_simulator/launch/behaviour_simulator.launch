@@ -1,0 +1,12 @@
+<launch>
+
+<!-- Inicia o ambiente de simulação do Webots -->
+<include file="$(find bhv_independent_simulator)/launch/start_sim_world.launch"/>
+
+<!-- Inicia o supervisor da robô simulada -->
+<include file="$(find bhv_independent_simulator)/launch/start_sim_supervisor.launch"/>
+
+<!-- Inicia a interpretação simulada da bola por detecção de cores -->
+<node name="vision_sim" pkg="bhv_independent_simulator" type="color_based_vision_for_sim.py"/>
+
+</launch>

@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: f302bf92f798d20d424de688e0bb2c42
+needsRobotAncestor: 1
+baseType: Robot
+slotType: 
+parameters: translation,rotation,name,controller,controllerArgs,customData,supervisor,synchronization,selfCollision,cameraWidth,cameraHeight,backlash,MX106-torque14-8V,MX106-vel14-8V,MX106-damping14-8V,MX106-friction14-8V,resolution
+tags: 
+license:  Apache License 2.0
+licenseUrl:  http://www.apache.org/licenses/LICENSE-2.0
+documentationUrl: 
+info: This\sis\sa\sproto\sfile\sfor\sWebots\sfor\sthe\sNatasha\nExtracted\sfrom:\snatasha.urdf
