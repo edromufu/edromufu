@@ -21,7 +21,7 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
     defaults:
       run:
-        working-directory: website
+        working-directory: edrom-docs
     steps:
       - uses: actions/checkout@v3
 
@@ -38,9 +38,9 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ${{ steps.yarn-cache.outputs.YARN_CACHE_DIR }}
-          key: ${{ runner.os }}-website-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-edrom-docs-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-website-
+            ${{ runner.os }}-edrom-docs-
 
       - run: yarn install --frozen-lockfile
       - run: yarn build
@@ -50,4 +50,4 @@ jobs:
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./website/build
+          publish_dir: ./edrom-docs/build
