@@ -5,7 +5,8 @@ name: GitHub Pages
 on:
   push:
     branches:
-      - main
+      - master
+      - docs/**
     paths:
       - '.github/workflows/deploy.yml'
       - 'edrom-docs/**'
