@@ -9,7 +9,7 @@ const config = {
   title: 'EDROM',
   tagline: 'Equipe de Desenvolvimento em Robótica Móvel',
   url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  baseUrl: '/edromufu/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
