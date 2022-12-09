@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkedrom=self.webpackChunkedrom||[]).push([[9978],{3434:e=>{e.exports=JSON.parse('{"permalink":"/edromufu/blog/tags/docusaurus","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
