@@ -6,6 +6,7 @@
     <node name="vision" pkg="object_finder" type="connecting_and_showing_current_frame_robocup.py" output="log" > 
         <param name="camera" value="$(eval arg('camera'))" />
         <param name="img_output" value="$(eval arg('img_output'))" />
+        <param name="ajuste" value="$(eval arg('ajuste'))" />
     </node>
 
 </launch>
