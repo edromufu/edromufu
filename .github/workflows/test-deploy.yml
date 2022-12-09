@@ -1,15 +1,12 @@
-# .github/workflows/deploy.yml
+name: Test deployment
 
-name: GitHub Pages
 on:
-  push:
+  pull_request:
     branches:
       - master
       - docs/**
-    paths:
-      - '.github/workflows/deploy.yml'
-      - 'edrom-docs/**'
-  pull_request:
+    # Review gh actions docs if you want to further define triggers, paths, etc
+    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
 
 jobs:
   deploy:
@@ -39,10 +36,3 @@ jobs:
             ${{ runner.os }}-edrom-docs-
       - run: yarn install --frozen-lockfile
       - run: yarn build
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.ref == 'refs/heads/master' || github.ref == 'refs/heads/docs/docusaurus' }}
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./edrom-docs/build
