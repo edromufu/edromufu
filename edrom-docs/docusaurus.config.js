@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'EDROM',
   tagline: 'Equipe de Desenvolvimento em Robótica Móvel',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://edromufu.github.io',
   baseUrl: '/edromufu/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
