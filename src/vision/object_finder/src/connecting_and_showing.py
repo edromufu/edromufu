@@ -13,7 +13,6 @@ from vision_msgs.msg import Webotsmsg
 import sys
 
 sys.setrecursionlimit(100000)
-videoInput = "/dev/video0" # É de onde vai pegar as imagens, "/dev/video2" é pegando por um dos usbs (o numero muda) e 0 é a webcam
 width = 416 # Largura da imagem (conferir no vídeo)
 height = 416 # Altura da imagem (Conferir no vídeo)
 
@@ -32,6 +31,7 @@ class Node():
         self.camera = rospy.get_param('vision/camera')
         self.output_img = rospy.get_param('vision/img_output')
         self.ajuste = rospy.get_param('vision/ajuste')
+        self.bright = rospy.get_param('vision/brilho')
 
 
         #Iniciando o nó e obtendo os arquivos que definem a rede neural
@@ -41,7 +41,6 @@ class Node():
         self.net.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA)   
         self.model = ri.set_model_input(self.net)
         self.searching = True
-        self.bright = 0    # How bright to set the camera image
         self.cap = cv2.VideoCapture(self.camera,cv2.CAP_ANY)
         self.cap.set(cv2.CAP_PROP_BRIGHTNESS, (self.bright))
         self.publisher = rospy.Publisher('/webots_natasha/vision_inference', Webotsmsg, queue_size=100)
@@ -57,7 +56,7 @@ class Node():
 
 
     def get_webcam(self):
-        '''Converts the sensor_msgs/Image to Numpy Array'''
+
         print("\n----Visão Operante----\n")
         if self.ajuste == True:
             print("Ajuste de Brilho '=' para aumentar e '-' para diminuir.\n")
@@ -111,8 +110,6 @@ class Node():
 
             
 
-            # A mesma classe de trave é reconhecida para as duas traves
-            # Sabendo disso, a trave direita é a com maior x
             self.dict_of_xs[i] = {"classe": self.classes[i], "x": x}
             print(self.dict_of_xs)
 
@@ -181,8 +178,7 @@ class Node():
         self.send_current_frame_to_inference()
         #Diferencias códigos da camera e do Webots
 
-        #Configurações da imagem (Brilho e foco) (Parametro passado launch)
-
+    #Configurações da imagem (Brilho) (Parametro passado launch)
 
     def ajuste_camera(self):
         
