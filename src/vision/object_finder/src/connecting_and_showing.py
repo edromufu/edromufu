@@ -10,8 +10,9 @@ import running_inference as ri
 
 from vision_msgs.msg import Ball
 from vision_msgs.msg import Webotsmsg
+import sys
 
-videoInput = "/dev/video0" # É de onde vai pegar as imagens, "/dev/video2" é pegando por um dos usbs (o numero muda) e 0 é a webcam
+sys.setrecursionlimit(100000)
 width = 416 # Largura da imagem (conferir no vídeo)
 height = 416 # Altura da imagem (Conferir no vídeo)
 
@@ -27,9 +28,10 @@ class Node():
 
         #Iniciando o ROS
         #Capturar parametros (qual camera e se queremos output de imagem) do launch
-        #self.camera = rospy.get_param('vision/camera')
-        #self.output_img = rospy.get_param('vision/img_output')
-        #self.ajuste = rospy.get_param('vision/ajuste')
+        self.camera = rospy.get_param('vision/camera')
+        self.output_img = rospy.get_param('vision/img_output')
+        self.ajuste = rospy.get_param('vision/ajuste')
+        self.bright = rospy.get_param('vision/brilho')
 
 
         #Iniciando o nó e obtendo os arquivos que definem a rede neural
@@ -39,10 +41,11 @@ class Node():
         self.net.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA)   
         self.model = ri.set_model_input(self.net)
         self.searching = True
-        self.bright = 128    # How bright to set the camera image
-
+        self.cap = cv2.VideoCapture(self.camera,cv2.CAP_ANY)
+        self.cap.set(cv2.CAP_PROP_BRIGHTNESS, (self.bright))
         self.publisher = rospy.Publisher('/webots_natasha/vision_inference', Webotsmsg, queue_size=100)
 
+        
         #SE FOR NO REAL
         self.get_webcam()
 
@@ -53,18 +56,31 @@ class Node():
 
 
     def get_webcam(self):
-        '''Converts the sensor_msgs/Image to Numpy Array'''
 
-        cap = cv2.VideoCapture(videoInput)
+        print("\n----Visão Operante----\n")
+        if self.ajuste == True:
+            print("Ajuste de Brilho '=' para aumentar e '-' para diminuir.\n")
+            print("Para continuar a detecção. Aperte W.\n")
 
         while True:
-            _ , self.current_frame = cap.read()
+            ret , self.current_frame = self.cap.read()
             self.classes, self.scores, self.boxes, self.fps = ri.detect_model(self.model,self.current_frame)
 
-            self.show_result_frame()
-            
-            if cv2.waitKey(1) == ord("q"):
-                cap.release()
+            if not ret:
+                print("Error capturing frame")
+                break
+
+            if self.output_img == True:
+                self.show_result_frame()
+
+            if self.ajuste == True:
+                self.ajuste_camera()
+
+
+            self.publish_results()
+
+            if cv2.waitKey(1) == ord("q") :
+                self.cap.release()
                 cv2.destroyAllWindows()
 
 
@@ -72,6 +88,8 @@ class Node():
         '''Shows the result frame obtained from neural network on OpenCV window.'''
         ri.draw_results(self.current_frame, self.classes, self.scores, self.boxes)
         cv2.imshow("Current Frame", self.current_frame)
+
+
         
     def publish_results(self):
 
@@ -92,8 +110,6 @@ class Node():
 
             
 
-            # A mesma classe de trave é reconhecida para as duas traves
-            # Sabendo disso, a trave direita é a com maior x
             self.dict_of_xs[i] = {"classe": self.classes[i], "x": x}
             print(self.dict_of_xs)
 
@@ -162,20 +178,32 @@ class Node():
         self.send_current_frame_to_inference()
         #Diferencias códigos da camera e do Webots
 
-        #Configurações da imagem (Brilho e foco) (Parametro passado launch)
-
+    #Configurações da imagem (Brilho) (Parametro passado launch)
 
     def ajuste_camera(self):
-        s_video.set(cv2.CAP_PROP_BRIGHTNESS, (self.bright))  # brightness (prop 10)
-        if key == ord('='):
-            self.bright = self.bright + 50
-            s_video.set(cv2.CAP_PROP_BRIGHTNESS, (self.bright))
+        
+        while cv2.waitKey(1) != ord("w"):
+            
+            if cv2.waitKey(1) == ord('='):
+                self.bright = self.bright + 10
+                if self.cap.get(cv2.CAP_PROP_BRIGHTNESS) < 64:
+                    self.cap.set(cv2.CAP_PROP_BRIGHTNESS, (self.bright))
+                else:
+                    self.bright = 64                
+                print("Brightness property current value:", self.cap.get(cv2.CAP_PROP_BRIGHTNESS))
 
-        if key == ord('-'):
-            self.bright = self.bright - 50
-            if self.bright < 0:
-                self.bright = 0
-            s_video.set(cv2.CAP_PROP_BRIGHTNESS, (self.bright))
+            if cv2.waitKey(1) == ord('-'):
+                self.bright = self.bright - 10
+                if self.cap.get(cv2.CAP_PROP_BRIGHTNESS) > -64:
+                    self.cap.set(cv2.CAP_PROP_BRIGHTNESS, (self.bright))
+                else:
+                    self.bright = -64     
+                print("Brightness property current value:", self.cap.get(cv2.CAP_PROP_BRIGHTNESS))
+
+            #Atualizar Frame
+            _ , self.current_frame = self.cap.read()
+            cv2.imshow("Current Frame", self.current_frame)
+        self.ajuste = False
         
 
 no_visao = Node('visao')
