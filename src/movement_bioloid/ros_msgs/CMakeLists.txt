@@ -25,6 +25,7 @@ add_message_files(
 add_service_files(
   FILES
   enable_torque.srv
+  position_feedback.srv
 )
 
 ## Generate actions in the 'action' folder

@@ -4,8 +4,8 @@ import os
 import rospy
 from dynamixel_sdk import *
 
-from ros_msgs.msg import motors_data
-from ros_msgs.srv import enable_torque, enable_torqueResponse
+from ros_msgs.msg import *
+from ros_msgs.srv import *
 
 PROTOCOL_VERSION = 1.0  
 BAUDRATE = 1000000
@@ -14,7 +14,8 @@ DEVICENAME = '/dev/ttyUSB0'
 ADDR_TORQUE_ENABLE = 24
 ADDR_LED_ENABLE = 25
 ADDR_GOAL_POSITION = 30
-ADDR_MOVING_SPEED = 32
+ADDR_PRESENT_POSITION = 36
+ADDR_MOVING = 46
 
 class u2d2Control():
 
@@ -25,6 +26,9 @@ class u2d2Control():
 
         rospy.Service('u2d2_comm/enableTorque', enable_torque, self.enableTorque)
         self.enableTorqueRes = enable_torqueResponse()
+
+        rospy.Service('u2d2_comm/feedbackMotors', position_feedback, self.feedbackMotors)
+        self.feedbackRes = position_feedbackResponse()
 
         self.portHandler = PortHandler(DEVICENAME)
         self.packetHandler = PacketHandler(PROTOCOL_VERSION)
@@ -37,8 +41,6 @@ class u2d2Control():
             print("Succeeded to open the port")
         except:
             print("Failed to open the port")
-            print("Press any key to terminate...")
-            getch()
             quit()
 
         # Set port baudrate
@@ -47,8 +49,6 @@ class u2d2Control():
             print("Succeeded to change the baudrate")
         except:
             print("Failed to change the baudrate")
-            print("Press any key to terminate...")
-            getch()
             quit()
     
     def enableTorque(self, req):
@@ -79,14 +79,40 @@ class u2d2Control():
         
         return self.enableTorqueRes
 
+    def feedbackMotors(self, req):
+        self.feedbackRes.pos_vector = [0]*20
+
+        for motor_id in range(20):
+            self.feedbackRes.pos_vector[motor_id], comm, hard = self.packetHandler.read2ByteTxRx(self.portHandler, motor_id, ADDR_PRESENT_POSITION)
+            
+            if comm !=0 or hard != 0:
+                self.feedbackRes.pos_vector[motor_id] = -1
+
+        return self.feedbackRes
+
     def data2motors(self, msg):
 
         for motor_id in range(20):
-            self.packetHandler.write2ByteTxOnly(self.portHandler, motor_id, ADDR_GOAL_POSITION, msg.pos_vector[motor_id]+512)         
+            self.packetHandler.write2ByteTxOnly(self.portHandler, motor_id, ADDR_GOAL_POSITION, msg.pos_vector[motor_id])         
 
     def run(self):
         rospy.spin()
+        """ count = 0
+        while not rospy.is_shutdown():
+            if not count%100:
+                self.checkMoving()
+            count += 1 """
+            
+    def checkMoving(self):
+        
+        isMotorMoving = [0]*20
 
+        for motor_id in range(20):
+            isMotorMoving[motor_id], comm, hard = self.packetHandler.read2ByteTxRx(self.portHandler, motor_id, ADDR_MOVING)
+
+        if any(isMotorMoving):
+            print('Ao menos um motor está se movendo.')
+        
 if __name__ == '__main__':
 
     u2d2 = u2d2Control()
