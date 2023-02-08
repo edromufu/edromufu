@@ -79,4 +79,7 @@ videos/
 #Arduino
 src/tools/rosserial/
 
+#Webots Cache
+*.wbproj
+
 
