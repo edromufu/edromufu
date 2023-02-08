@@ -97,6 +97,7 @@ class u2d2Control():
 
     def run(self):
         rospy.spin()
+        
         """ count = 0
         while not rospy.is_shutdown():
             if not count%100:
