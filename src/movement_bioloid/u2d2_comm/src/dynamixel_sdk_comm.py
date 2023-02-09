@@ -17,6 +17,8 @@ ADDR_GOAL_POSITION = 30
 ADDR_PRESENT_POSITION = 36
 ADDR_MOVING = 46
 
+inverted_motors_id = [6, 14, 7, 11, 15]
+
 class u2d2Control():
 
     def __init__(self):
@@ -93,7 +95,16 @@ class u2d2Control():
     def data2motors(self, msg):
 
         for motor_id in range(20):
-            self.packetHandler.write2ByteTxOnly(self.portHandler, motor_id, ADDR_GOAL_POSITION, msg.pos_vector[motor_id])         
+            motor_position = msg.pos_vector[motor_id]
+
+            if motor_id in inverted_motors_id:
+                motor_position *= -1
+            
+            motor_position = int(195.379*motor_position + 512)
+            motor_position = min(motor_position, 1023)
+            motor_position = max(motor_position, 0)
+
+            self.packetHandler.write2ByteTxOnly(self.portHandler, motor_id, ADDR_GOAL_POSITION, motor_position)         
 
     def run(self):
         rospy.spin()
