@@ -100,11 +100,15 @@ class u2d2Control():
             if motor_id in inverted_motors_id:
                 motor_position *= -1
             
-            motor_position = int(195.379*motor_position + 512)
-            motor_position = min(motor_position, 1023)
-            motor_position = max(motor_position, 0)
+            self.packetHandler.write2ByteTxOnly(self.portHandler, motor_id, ADDR_GOAL_POSITION, self.rad2pos(motor_position))  
 
-            self.packetHandler.write2ByteTxOnly(self.portHandler, motor_id, ADDR_GOAL_POSITION, motor_position)         
+    def rad2pos(self, pos_in_rad):
+        
+        motor_position = int(195.379*pos_in_rad + 512)
+        motor_position = min(motor_position, 1023)
+        motor_position = max(motor_position, 0)
+        
+        return motor_position
 
     def run(self):
         rospy.spin()
