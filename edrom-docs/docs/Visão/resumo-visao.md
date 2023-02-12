@@ -1,4 +1,8 @@
 ---
+id: resumo-visão
+title: Resumo da área visão
+description: Nesta seção conseguimos entender melhor quais são as responsabilidades da área visão dentro da EDROM
+slug: /resumo-visao
 sidebar_position: 1
 ---
 
