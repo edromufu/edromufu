@@ -4,6 +4,5 @@
     "link": {
         "type": "generated-index",
         "description": "Treinamento da rede neural da Visão da EDROM"
-    },
-    "slug": "training"
+    }
 }
