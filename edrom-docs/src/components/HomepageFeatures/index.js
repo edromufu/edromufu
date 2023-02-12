@@ -13,7 +13,7 @@ const FeatureList = [{
     },
     {
         title: 'EDROM',
-        Svg: require('@site/static/img/logo-edrom.svg').default,
+        Svg: require('@site/static/img/logo-edrom.png').default,
         description: ( <
             >
             Equipe de Desenvolvimento em Robótica Móvel da Universidade Federal de Uberlândia. <
