@@ -2,6 +2,7 @@
 id: marcando_labels
 title: Marcando labels
 sidebar_position: 5
+slug: vision/treinamento/marcando_labels
 ---
 
 

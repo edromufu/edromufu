@@ -2,6 +2,7 @@
 id: organizing_dataset
 title: Separar os frames
 sidebar_position: 4
+slug: vision/treinamento/organizing_dataset
 ---
 
 
