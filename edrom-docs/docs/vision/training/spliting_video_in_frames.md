@@ -2,7 +2,7 @@
 id: spliting_video_in_frames
 title: Dividir os vídeos em frames
 sidebar_position: 3
-slug: vision/treinamento/spliting_video_in_frames
+slug: /spliting_video_in_frames
 ---
 
 

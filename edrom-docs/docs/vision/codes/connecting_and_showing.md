@@ -2,7 +2,7 @@
 id: connecting_and_showing.py
 title: connecting_and_showing.py
 desrcion: Nesta seção teremos um explicação sobre o código connecting_and_showing.py
-slug: vision/codes/connecting_and_showing
+slug: /connecting_and_showing
 sidebar_position: 2
 ---
 
@@ -73,7 +73,7 @@ print(s.getvalue())'''
 
 Temos também em seguida, algumas funções auxiliares que são utilizadas para mostrar para nós, o tempo de execução do programa e quanto tempo o programa gasta em cada função do código. Essa função é ótima para ajudar na otimização do nosso código.
 
-##	__init__()
+##	init()
 
 ```py title="object_finder/src/connecting_and_showing.py"
 def __init__(self,nome_no):

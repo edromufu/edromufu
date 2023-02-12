@@ -2,7 +2,7 @@
 id: running_inference.py
 title: running_inference.py
 desrcion: Nesta seção teremos um explicação sobre o código running_inference.py
-slug: vision/codes/running_inference
+slug: /running_inference
 sidebar_position: 3
 ---
 

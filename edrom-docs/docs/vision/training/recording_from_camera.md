@@ -2,7 +2,7 @@
 id: recording_from_camera
 title: Gravando as imagens
 sidebar_position: 2
-slug: vision/treinamento/recording_from_camera
+slug: /recording_from_camera
 ---
 
 

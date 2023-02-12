@@ -2,7 +2,7 @@
 id: introducao
 title: Introdução
 sidebar_position: 1
-slug: vision/treinamento/introducao
+slug: /introducao
 ---
 
 

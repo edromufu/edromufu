@@ -1,7 +1,7 @@
 ---
 id: criando_txts_dataset
 title: Criando arquivos auxiliares
-slug: vision/treinamento/criando_txts_dataset
+slug: /criando_txts_dataset
 sidebar_position: 6
 ---
 

@@ -2,7 +2,7 @@
 id: vision.launch
 title: vision.launch
 description: Nesta seção teremos um explicação sobre o código vision.launch
-slug: vision/codes/vision_launch
+slug: /vision_launch
 sidebar_position: 1
 ---
 
