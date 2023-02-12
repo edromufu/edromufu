@@ -4,7 +4,7 @@ title: Separar os frames
 sidebar_position: 4
 ---
 
-## Separando os frames
+
 
 Para o treinamento com Tiny YOLOv4, é necessário separar as imagens em 3 categorias: treinamento (train), validação (val) e avaliação (eval). Os frames de treinamento são os utilizados para o treinamento em si da rede neural. Os de validação também são utilizados no treinamento, porém servem como um "teste com gabarito" para o treinamento. Enquanto os de avaliação são os separados para testes manuais feitos com a rede após o treinamento e por isso não precisam ser marcados ou alimentados no treinamento. No código de exemplo, foi utilizada a proporção de 7:2:1 para train:val:eval. O seguinte script é utilizado para renomear os arquivos e realizar a separação:
 

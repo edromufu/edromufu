@@ -4,7 +4,7 @@ title: Marcando labels
 sidebar_position: 5
 ---
 
-## Marcando labels
+
 
 Agora, os frames estão separados de acordo com sua função e devem ser marcados para o treinamento. Para isso, será utilizado o [LabelImg](https://github.com/heartexlabs/labelImg). 
 
@@ -28,4 +28,8 @@ Para facilitar a marcação, sugerimos selecionar a label desejada como padrão,
 
 Cada label ficará salva em um arquivo .txt na pasta designada, com o mesmo nome do frame que a gerou. Por exemplo, após marcar a label do arquivo "val_291.jpg", ela ficará salva no arquivo "val_291.txt".
 
-ATENÇÃO: Os frames para avaliação (denominados eval) não precisam ser marcados, pois são utilizados para testar o resultado do treinamento
+:::tip ATENÇÃO
+
+Os frames para avaliação (denominados eval) não precisam ser marcados, pois são utilizados para testar o resultado do treinamento
+
+:::

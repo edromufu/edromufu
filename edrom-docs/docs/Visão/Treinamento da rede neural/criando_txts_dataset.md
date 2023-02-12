@@ -4,7 +4,7 @@ title: Criando arquivos auxiliares
 sidebar_position: 6
 ---
 
-## Criando arquivos auxiliares
+
 
 Por fim, para realizar o treinamento, é necessário informar quais os frames serão utilizados para treinamento e validação, bem como seu endereço no drive. Para isso, é utilizado o seguinte script:
 

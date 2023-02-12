@@ -4,7 +4,7 @@ title: Gravando as imagens
 sidebar_position: 2
 ---
 
-## Gravando as imagens
+
 
 Para obter as imagens para o treinamento, primeiro gravamos vídeos utilizando a câmera que futuramente será usada no projeto. Para isso, conectamos a câmera em um USB e executamos o seguinte script:
 

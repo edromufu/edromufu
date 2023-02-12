@@ -4,7 +4,7 @@ title: Dividir os vídeos em frames
 sidebar_position: 3
 ---
 
-## Dividindo os vídeos em frames
+
 
 Agora, os vídeos serão divididos em frames. Para isso, executamos o seguinte script:
 

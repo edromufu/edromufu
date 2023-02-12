@@ -4,7 +4,7 @@ title: Introdução
 sidebar_position: 1
 ---
 
-## Introdução
+
 
 Para realizar o treinamento da rede, utilizamos o tutorial do repositório [Darknet](https://github.com/AlexeyAB/darknet), que ensina o treinamento com o modelo YOLO. Na nossa aplicação, utilizamos o Tiny YOLOv4, que é uma versão do YOLOv4 menos precisa, porém mais leve, o que funciona muito bem em nosso projeto.
 
