@@ -4,32 +4,29 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Robôs',
+    Svg: require('@site/static/img/robot-generic.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Dedicada a criação de robês de competição, estudamos e pesquisamos muito para criarmos o melhor robô possivel do zero.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'EDROM',
+    Svg: require('@site/static/img/logo-edrom.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Equipe de extensão da Universidade Federal de Uberlândia.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Documentação',
+    Svg: require('@site/static/img/brain-generic.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Site dedicado a documentação das área de equipe, com explicação sobre códigos, execução e ferramentas utilizadas.
       </>
     ),
   },
