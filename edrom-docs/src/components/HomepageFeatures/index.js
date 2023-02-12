@@ -7,7 +7,7 @@ const FeatureList = [{
         Svg: require('@site/static/img/robot-generic.svg').default,
         description: ( <
             >
-            Dedicada a criação de robês de competição, estudamos e pesquisamos muito para criarmos o melhor robô possivel do zero. <
+            Dedicada a criação de robôs de competição, estudamos e pesquisamos muito para criarmos a melhor robô possível do zero. <
                 />
         ),
     },
@@ -25,7 +25,7 @@ const FeatureList = [{
         Svg: require('@site/static/img/brain-generic.svg').default,
         description: ( <
             >
-            Site dedicado a documentação das área de equipe, com explicação sobre códigos, execução e ferramentas utilizadas. <
+            Site dedicado a documentação das áreas da equipe, com explicação sobre códigos, execução e ferramentas utilizadas. <
             />
         ),
     },
