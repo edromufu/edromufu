@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 486.4 486.4" xml:space="preserve">
+<path style="fill:#12D6BF;" d="M295.2,0c-18.4,0-36,9.6-52,27.2C228,9.6,210.4,0,191.2,0C128.8,0,2.4,54.4,2.4,188.8
+	s126.4,297.6,188.8,297.6c18.4,0,36-9.6,52-27.2c15.2,17.6,32.8,27.2,52,27.2c62.4,0,188.8-163.2,188.8-297.6S356.8,0,295.2,0z"/>
+<path style="fill:#08C4B2;" d="M2.4,188.8c0,134.4,126.4,297.6,188.8,297.6c18.4,0,36-9.6,52-27.2c15.2,17.6,32.8,27.2,52,27.2
+	c62.4,0,188.8-163.2,188.8-297.6S357.6,0,295.2,0c-18.4,0-36,9.6-52,27.2C228,9.6,210.4,0,191.2,0"/>
+<path style="fill:#04A0A0;" d="M243.2,459.2c15.2,17.6,32.8,27.2,52,27.2c62.4,0,188.8-163.2,188.8-297.6S357.6,0,295.2,0
+	c-18.4,0-36,9.6-52,27.2"/>
+<path style="fill:#16959B;" d="M243.2,459.2c15.2,17.6,32.8,27.2,52,27.2c62.4,0,188.8-163.2,188.8-297.6"/>
+<g>
+	<g>
+		<g>
+			
+				<polyline style="fill:#04A0A0;stroke:#5DEDE9;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="
+				99.2,107.2 99.2,187.2 211.2,187.2 			"/>
+			
+				<polyline style="fill:#04A0A0;stroke:#5DEDE9;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="
+				211.2,187.2 211.2,259.2 75.2,259.2 			"/>
+			
+				<polyline style="fill:#04A0A0;stroke:#5DEDE9;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="
+				75.2,299.2 115.2,299.2 115.2,363.2 179.2,363.2 179.2,267.2 			"/>
+			
+				<polyline style="fill:#04A0A0;stroke:#5DEDE9;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="
+				176.8,361.6 219.2,403.2 219.2,435.2 163.2,435.2 			"/>
+			
+				<polyline style="fill:#04A0A0;stroke:#5DEDE9;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="
+				139.2,139.2 177.6,139.2 216,99.2 201.6,83.2 83.2,83.2 			"/>
+			
+				<line style="fill:none;stroke:#5DEDE9;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="211.2" y1="291.2" x2="211.2" y2="339.2"/>
+		</g>
+		
+			<line style="fill:none;stroke:#5DEDE9;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="49.6" y1="188.8" x2="67.2" y2="205.6"/>
+	</g>
+	<g>
+		<g>
+			
+				<polyline style="fill:#307F87;stroke:#5DEDE9;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="
+				387.2,107.2 387.2,187.2 275.2,187.2 			"/>
+			
+				<polyline style="fill:#307F87;stroke:#5DEDE9;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="
+				275.2,187.2 275.2,259.2 411.2,259.2 			"/>
+			
+				<polyline style="fill:#307F87;stroke:#5DEDE9;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="
+				411.2,299.2 371.2,299.2 371.2,363.2 307.2,363.2 307.2,267.2 			"/>
+			
+				<polyline style="fill:#307F87;stroke:#5DEDE9;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="
+				309.6,361.6 267.2,403.2 267.2,435.2 323.2,435.2 			"/>
+			
+				<polyline style="fill:#307F87;stroke:#5DEDE9;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="
+				347.2,139.2 308.8,139.2 270.4,99.2 284.8,83.2 403.2,83.2 			"/>
+			
+				<line style="fill:none;stroke:#5DEDE9;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="275.2" y1="291.2" x2="275.2" y2="339.2"/>
+		</g>
+		
+			<line style="fill:none;stroke:#5DEDE9;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="436.8" y1="188.8" x2="419.2" y2="205.6"/>
+	</g>
+</g>
+<g>
+	<circle style="fill:#6CF4ED;" cx="101.6" cy="55.2" r="4"/>
+	<circle style="fill:#6CF4ED;" cx="120" cy="55.2" r="4"/>
+	<circle style="fill:#6CF4ED;" cx="139.2" cy="55.2" r="4"/>
+	<circle style="fill:#6CF4ED;" cx="157.6" cy="55.2" r="4"/>
+	<circle style="fill:#6CF4ED;" cx="176.8" cy="55.2" r="4"/>
+	<circle style="fill:#6CF4ED;" cx="195.2" cy="55.2" r="4"/>
+</g>
+<g>
+	<circle style="fill:#08C4B2;" cx="291.2" cy="55.2" r="4"/>
+	<circle style="fill:#08C4B2;" cx="309.6" cy="55.2" r="4"/>
+	<circle style="fill:#08C4B2;" cx="328.8" cy="55.2" r="4"/>
+	<circle style="fill:#08C4B2;" cx="347.2" cy="55.2" r="4"/>
+	<circle style="fill:#08C4B2;" cx="366.4" cy="55.2" r="4"/>
+	<circle style="fill:#08C4B2;" cx="384.8" cy="55.2" r="4"/>
+</g>
+</svg>
