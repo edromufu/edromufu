@@ -5,8 +5,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'Robôs',
-    Svg: require('@site/static/img/robot-generic.svg').default,
-    Svg.style.padding = "15px",
+    Svg: require('@site/static/img/robot-generic.png').default,
     description: (
       <>
         Dedicada a criação de robês de competição, estudamos e pesquisamos muito para criarmos o melhor robô possivel do zero.
@@ -15,7 +14,7 @@ const FeatureList = [
   },
   {
     title: 'EDROM',
-    Svg: require('@site/static/img/logo-edrom.svg').default,
+    Svg: require('@site/static/img/logo-edrom.png').default,
     description: (
       <>
         Equipe de extensão da Universidade Federal de Uberlândia.
@@ -25,7 +24,6 @@ const FeatureList = [
   {
     title: 'Documentação',
     Svg: require('@site/static/img/brain-generic.svg').default,
-    Svg.style.padding = "15px",
     description: (
       <>
         Site dedicado a documentação das área de equipe, com explicação sobre códigos, execução e ferramentas utilizadas.
