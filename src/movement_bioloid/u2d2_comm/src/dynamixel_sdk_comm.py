@@ -85,10 +85,12 @@ class u2d2Control():
         self.feedbackRes.pos_vector = [0]*20
 
         for motor_id in range(20):
-            self.feedbackRes.pos_vector[motor_id], comm, hard = self.packetHandler.read2ByteTxRx(self.portHandler, motor_id, ADDR_PRESENT_POSITION)
-            
+            motor_position, comm, hard = self.packetHandler.read2ByteTxRx(self.portHandler, motor_id, ADDR_PRESENT_POSITION)
+
             if comm !=0 or hard != 0:
                 self.feedbackRes.pos_vector[motor_id] = -1
+            else:
+                self.feedbackRes.pos_vector[motor_id] = pos2rad(motor_position)
 
         return self.feedbackRes
 
@@ -109,6 +111,14 @@ class u2d2Control():
         motor_position = max(motor_position, 0)
         
         return motor_position
+
+    def pos2rad(self, motor_position):
+        pos_in_rad = (motor_position-512)/195.379
+        
+        if motor_id in inverted_motors_id:
+            pos_in_rad = -pos_in_rad
+
+        return pos_in_rad
 
     def run(self):
         rospy.spin()
