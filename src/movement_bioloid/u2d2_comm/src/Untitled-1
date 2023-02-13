@@ -1,0 +1,16 @@
+rostopic pub /u2d2_comm/data2motors ros_msgs/motors_data "pos_vector: [0, 0, 0, 0, 0, 0, 0, 0.58776, 0, 0.58336, 0, 0.049226, 0, 0.27749, 0, 0.020168, 0, 0.42592, 0, 0]
+vel_vector: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]" 
+
+RLEG_J0 = ID_6 = -
+RLEG_J1 = ID_8 = +
+RLEG_J2 = ID_10 = +
+RLEG_J3 = ID_12 = +
+RLEG_J5 = ID_14 = -
+RLEG_J4 = ID_16 = +
+
+LLEG_J0 = ID_7 = -
+LLEG_J1 = ID_9 = +
+LLEG_J2 = ID_11 = -
+LLEG_J3 = ID_13 = +
+LLEG_J5 = ID_15 = -
+LLEG_J4 = ID_17 = +
