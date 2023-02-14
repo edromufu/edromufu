@@ -1,47 +1,20 @@
 ---
+id: resumo-edrom
+title: EDROM
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Quem somos?
 
-Let's discover **Docusaurus in less than 5 minutes**.
+A __Equipe de Desenvolvimento em Robótica Móvel (EDROM)__ é uma associação de discentes dos cursos de graduação da Faculdade de Engenharia Mecânica (FEMEC) da Universidade Federal de Uberlândia (UFU) orientados por um professor Tutor da FEMEC. Além dos aspectos tecnológicos, os alunos também cuidam da parte administrativa e participam ativamente da busca por recursos financeiros que garantam a concretização dos objetivos. O desenvolvimento da robótica móvel envolve várias especialidades como: mecânica; elétrica; eletrônica; computação; cinemática; dinâmica; controle; otimização; inteligência artificial; projeto assistido por computador; biologia; geologia entre outras.
 
-## Getting Started
+A multidisciplinaridade envolvida permite ao discente aplicar as teorias acadêmicas em conjunto para o desenvolvimento de robôs móveis. Esta equipe trabalha no desenvolvimento de tecnologia com a popularização desta a partir de competições de futebol de robôs humanóides, tornando-se uma vitrine para a divulgação do desenvolvimento tecnológico.
 
-Get started by **creating a new site**.
+O estudo de *robôs móveis* também possibilita o desenvolvimento de tecnologias que poderão auxiliar pessoas com dificuldades de locomoção como pessoas idosas e tetraplégicas. Cabe mencionar que a participação em um projeto como este representa um diferencial na formação do aluno, preparando-o melhor para sua futura vida profissional como engenheiro.
+A __EDROM__ tem por finalidades:
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+1. Participar de competições que envolvam o desenvolvimento de sistemas mecatrônicos;
+2. Promover o desenvolvimento técnico e acadêmico de seus membros;
+3. Fomentar o espírito empreendedor e de equipe de seus membros;
+4. Promover o contato dos discentes com o mercado de trabalho;
+5. Realizar atividades de extensão inerentes aos cursos de graduação.

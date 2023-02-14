@@ -3,7 +3,7 @@ id: cuda_cudnn
 title: Instalação CUDA e cuDNN
 description: Nesta seção serão listados as etapas para instalação do CUDA e suas dependências
 slug: /cuda-cudnn
-sidebar_position: 8
+sidebar_position: 2
 ---
 
 Nesta seção você encontrará o passo a passo detalhado para a instalação do CUDA e suas dependências.

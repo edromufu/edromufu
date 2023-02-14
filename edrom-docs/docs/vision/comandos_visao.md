@@ -3,7 +3,7 @@ id: comandos_visao
 title: Comandos utilizados pela visão
 description: Aqui serão explicados quais são os comandos da visão e suas funções
 slug: /cmd_visao
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 A visão utiliza basicamente dois comandos que habilitam o seu funcionamento, sendo eles:

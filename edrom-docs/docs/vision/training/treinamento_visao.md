@@ -3,7 +3,7 @@ id: treinamento_visao
 title: Arquivos a serem alterados para treinar
 description: Aqui será descrito o que deve ser alterado no arquivo 
 slug: /train_visao
-sidebar_position: 3
+sidebar_position: 7
 ---
 
 O arquivo a ser alterado para realizar o treinamento personalizado é o [yolov4-tiny-obj.cfg](https://github.com/edromufu/edromufu/blob/master/src/vision/robocup_cnn_files/yolov4-tiny-obj.cfg)
