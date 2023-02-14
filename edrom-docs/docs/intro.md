@@ -1,5 +1,5 @@
 ---
-id: resumo-edrom
+id: intro
 title: EDROM
 sidebar_position: 1
 slug: /intro
