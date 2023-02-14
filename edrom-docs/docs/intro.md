@@ -2,6 +2,7 @@
 id: resumo-edrom
 title: EDROM
 sidebar_position: 1
+slug: /intro
 ---
 
 # Quem somos?
