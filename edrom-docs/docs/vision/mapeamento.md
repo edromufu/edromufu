@@ -6,8 +6,6 @@ slug: /mapeamento-visao
 sidebar_position: 4
 ---
 
-## Árvore de Arquivos
-
 A pasta da [Visão](https://github.com/edromufu/edromufu/tree/master/src/vision) fica dentro da src do repositório, e dentro dela fica todo o escopo do projeto que compete à visão. Os arquivos da área são separados em quatro pastas:
 
 1. [Vision_msgs](https://github.com/edromufu/edromufu/tree/master/src/vision/vision_msgs)
