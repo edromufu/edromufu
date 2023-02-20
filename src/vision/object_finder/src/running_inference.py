@@ -13,7 +13,7 @@ def get_cnn_files():
     '''Gets the CNN filenames, despite the PC file structure.'''
 
     #forçando o path dos arquivos
-    robocup_folder = os.path.join(os.path.expanduser('~'), "visão/robocup_cnn_files")
+    robocup_folder = os.path.join(os.path.expanduser('~'), "edromufu/src/vision/robocup_cnn_files")
 
     config_file = os.path.join(robocup_folder, "yolov4-tiny-obj.cfg")
     weights_file = os.path.join(robocup_folder, "yolov4-tiny-obj_best.weights")
