@@ -20,31 +20,31 @@ Conferir se possui os drivers gráficos da nvidia instalados (versão 520+ recom
 Executando os comandos abaixo no terminal seguindo a ordem listada, permitirá a instalação do CUDA Toolkit através de um arquivo .deb (será necessária a criação de uma senha):  
 
 ```jsx
-wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
-sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600  
-wget https://developer.download.nvidia.com/compute/cuda/11.3.0/local_installers/cuda-repo-ubuntu2004-11-3-local_11.3.0-465.19.01-1_amd64.deb
-sudo dpkg -i cuda-repo-ubuntu2004-11-3-local_11.3.0-465.19.01-1_amd64.deb
-sudo apt-key add /var/cuda-repo-ubuntu2004-11-3-local/7fa2af80.pub
-sudo apt-get update
+$ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
+$ sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600  
+$ wget https://developer.download.nvidia.com/compute/cuda/11.3.0/local_installers/cuda-repo-ubuntu2004-11-3-local_11.3.0-465.19.01-1_amd64.deb
+$ sudo apt-key add /var/cuda-repo-ubuntu2004-11-3-local/7fa2af80.pub
+$ sudo dpkg -i cuda-repo-ubuntu2004-11-3-local_11.3.0-465.19.01-1_amd64.deb
+$ sudo apt-get update
 
-sudo apt-get -y install cuda
-export PATH=/usr/local/cuda-11.3/bin${PATH:+:${PATH}}
-export LD_LIBRARY_PATH=/usr/local/cuda-11.3/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+$ sudo apt-get -y install cuda
+$ export PATH=/usr/local/cuda-11.3/bin${PATH:+:${PATH}}
+$ export LD_LIBRARY_PATH=/usr/local/cuda-11.3/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 ```
 
 Para o bloco abaixo, caso o output da primeira linha for igual a imagem, não é necessário executar a ultima linha.
 
 ```jsx
-systemctl status nvidia-persistenced 
-sudo nvidia-smi -pm 1
-sudo systemctl enable nvidia-persistenced
+$ systemctl status nvidia-persistenced 
+$ sudo nvidia-smi -pm 1
+$ sudo systemctl enable nvidia-persistenced
 ```
 
 ![im](/img/IM.jpeg)
 
 Para checar a versão do driver NVIDIA, execute:
 ```jsx
-cat /proc/driver/nvidia/version
+$ cat /proc/driver/nvidia/version
 ```
 
 ## Instalando cuDNN
@@ -68,19 +68,19 @@ Com isso, você deve ter os seguintes arquivos .deb:
 
 Entrar na pasta em q os pacotes foram instalados (ex: $ cd Downloads) e instalar usando: 
 ```jsx
-sudo dpkg -i  libcudnn8_8.2.0.53-1+cuda11.3_amd64.deb
-sudo dpkg -i libcudnn8-dev_8.2.0.53-1+cuda11.3_amd64.deb
-sudo dpkg -i libcudnn8-samples_8.2.0.53-1+cuda11.3_amd64.deb
+$ sudo dpkg -i  libcudnn8_8.2.0.53-1+cuda11.3_amd64.deb
+$ sudo dpkg -i libcudnn8-dev_8.2.0.53-1+cuda11.3_amd64.deb
+$ sudo dpkg -i libcudnn8-samples_8.2.0.53-1+cuda11.3_amd64.deb
 ```
 
 Agora, é preciso testar se está havendo a comunicação entre o cuDNN e os drivers da NVIDIA:
 ```jsx
-nvidia-smi
+$ nvidia-smi
 ```
 
 Caso retorne um erro de falha na comunicação, uma possivel correção é executar a linha abaixo. Será necessário a criação de uma senha e reinicialização do sistema antes de tentar rodar o "nvidia-smi" novamente.
 ```jsx
-sudo mokutil --disable-validation
+$ sudo mokutil --disable-validation
 ```
 
 Caso ainda não tenha dado certo, provavelmente os drivers de vídeo nao foram devidamente instalados:
@@ -219,6 +219,22 @@ $ make -j8
 ```
 
 OBS: substituir o 8 pela quantidade de núcleos que tiver seu computador.
+
+Se der erro nos 3% por conta do gcc, executar os seguintes comandos:
+
+```jsx
+$ sudo apt remove gcc
+$ sudo apt-get install gcc-7 g++-7 -y
+$ sudo ln -s /usr/bin/gcc-7 /usr/bin/gcc
+$ sudo ln -s /usr/bin/g++-7 /usr/bin/g++
+$ sudo ln -s /usr/bin/gcc-7 /usr/bin/cc
+$ sudo ln -s /usr/bin/g++-7 /usr/bin/c++
+```
+E teste com:
+```jsx
+$ gcc --version
+```
+Para ter certeza que está usando a versão 7
 
 ## Instalando OpenCV com suporte para DNN GPU
 
