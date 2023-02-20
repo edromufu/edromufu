@@ -39,7 +39,7 @@ Nesse código temos algumas importações:
 ```py title="object_finder/src/running_inference.py"
 def get_cnn_files():
 
-    robocup_folder = os.path.join(os.path.expanduser('~'), "visão/robocup_cnn_files")
+    robocup_folder = os.path.join(os.path.expanduser('~'), "edromufu/src/vision/robocup_cnn_files")
 
     config_file = os.path.join(robocup_folder, "yolov4-tiny-obj.cfg")
     weights_file = os.path.join(robocup_folder, "yolov4-tiny-obj_best.weights")
