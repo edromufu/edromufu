@@ -3,9 +3,9 @@
 
 import numpy as np
 
-jointAxisPredef = {'x':np.array([[1, 0, 0]]).T,
-                   'y':np.array([[0, 1, 0]]).T,
-                   'z':np.array([[0, 0, 1]]).T
+jointAxisPredef = {'UX':np.array([[1, 0, 0]]).T,
+                   'UY':np.array([[0, 1, 0]]).T,
+                   'UZ':np.array([[0, 0, 1]]).T
                   }
 
 class Joint:
@@ -15,8 +15,9 @@ class Joint:
         self.__name = name
         self.__sister = sister
         self.__child = child
-        self.__mother2SelfVec = mother2SelfVec
+        self.__mother2SelfVec = np.array([mother2SelfVec]).T
         self.__jointAxis = jointAxisPredef[jointAxis]
+        self.__mom = None
 
         self.jointRotation = jointRotation
         self.absolutePostion = None
