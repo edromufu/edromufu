@@ -4,20 +4,19 @@ import os
 import rospy
 from dynamixel_sdk import *
 
-from ros_msgs.msg import *
-from ros_msgs.srv import *
+from movement_utils.msg import *
+from movement_utils.srv import *
 
 PROTOCOL_VERSION = 1.0  
 BAUDRATE = 1000000
-DEVICENAME = '/dev/ttyUSB0'
+
+DEVICENAME = rospy.get_param('u2d2/port')
 
 ADDR_TORQUE_ENABLE = 24
 ADDR_LED_ENABLE = 25
 ADDR_GOAL_POSITION = 30
 ADDR_PRESENT_POSITION = 36
 ADDR_MOVING = 46
-
-inverted_motors_id = [6, 14, 7, 11, 15]
 
 class u2d2Control():
 
@@ -98,9 +97,6 @@ class u2d2Control():
 
         for motor_id in range(20):
             motor_position = msg.pos_vector[motor_id]
-
-            if motor_id in inverted_motors_id:
-                motor_position *= -1
             
             self.packetHandler.write2ByteTxOnly(self.portHandler, motor_id, ADDR_GOAL_POSITION, self.rad2pos(motor_position))  
 
@@ -114,9 +110,6 @@ class u2d2Control():
 
     def pos2rad(self, motor_position):
         pos_in_rad = (motor_position-512)/195.379
-        
-        if motor_id in inverted_motors_id:
-            pos_in_rad = -pos_in_rad
 
         return pos_in_rad
 

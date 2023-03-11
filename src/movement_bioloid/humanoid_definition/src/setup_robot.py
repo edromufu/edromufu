@@ -24,7 +24,8 @@ class Robot:
             self.robotJoints.append(Joint(*joint_data.values()))
         
     def loadJson(self, fileName):
-        os.chdir(os.path.dirname(__file__))
+        if os.path.dirname(__file__):
+            os.chdir(os.path.dirname(__file__))
         os.chdir("../robots_jsons")
 
         with open(fileName) as f:

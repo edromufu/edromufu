@@ -1,0 +1,16 @@
+<launch>
+    <arg name="u2d2_connected" default="true"/>
+    <arg name="u2d2_port" default="/dev/ttyUSB0"/>
+    <arg name="robot_name"/>
+
+    <!-- Comunicação dos motores com U2D2 -->
+    <node name="u2d2" pkg="u2d2_comm" type="dynamixel_sdk_comm.py" output="screen" if="$(eval arg('u2d2_connected'))">
+        <param name="port" value="$(eval arg('u2d2_port'))" />
+    </node>
+
+    <!-- Inicialização da Robô em código 
+    <node name="robot_def" pkg="humanoid_definition" type="setup_robot.py" output="screen">
+        <param name="robot_name" value="$(eval arg('robot_name'))" />
+    </node>-->
+    
+</launch>
