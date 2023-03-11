@@ -115,23 +115,7 @@ class u2d2Control():
 
     def run(self):
         rospy.spin()
-        
-        """ count = 0
-        while not rospy.is_shutdown():
-            if not count%100:
-                self.checkMoving()
-            count += 1 """
-            
-    def checkMoving(self):
-        
-        isMotorMoving = [0]*20
 
-        for motor_id in range(20):
-            isMotorMoving[motor_id], comm, hard = self.packetHandler.read2ByteTxRx(self.portHandler, motor_id, ADDR_MOVING)
-
-        if any(isMotorMoving):
-            print('Ao menos um motor está se movendo.')
-        
 if __name__ == '__main__':
 
     u2d2 = u2d2Control()

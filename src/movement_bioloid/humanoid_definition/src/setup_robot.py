@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 #coding=utf-8
 
-import json, os, sys
+import json, os
 import numpy as np
 
 from joint import Joint
 
+#!Esse import não deve estar aqui, foi deixado apenas para deixar o código funcional e mostrar como fazê-lo quando
+#!for colocar no local correto
+import  sys
 os.chdir(os.path.dirname(__file__))
 os.chdir("../../kinematic_functions/src")
 sys.path.append(os.getcwd())
@@ -49,6 +52,8 @@ class Robot:
                 self.robotJoints[self.robotJoints[j].get_sister()].set_mom(self.robotJoints[j].get_mom())
                 self.findMother(self.robotJoints[j].get_sister())
     
+    #!Esse método não deve estar aqui, foi colocado apenas para teste, deve ir para onde será realmente utilizado
+    #!Por exemplo, essa chamada deve estar sendo realizada quando necessário no código de geração de marcha
     def runKinematics(self):
         direct_kinematics.ForwardKinematics(self.robotJoints)
 
@@ -60,4 +65,6 @@ class Robot:
 
 if __name__ == '__main__':
     nova = Robot('nova')
+
+    #!Também retirar daqui
     nova.runKinematics()
