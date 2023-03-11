@@ -2,6 +2,7 @@
 #coding=utf-8
 
 import json, os
+import numpy as np
 
 from joint import Joint
 
@@ -23,7 +24,9 @@ class Robot:
             self.robotJoints.append(Joint(*joint_data.values()))
         
     def loadJson(self, fileName):
-        os.chdir('/home/kirlin/edromufu/src/movement_bioloid/humanoid_properties/jsons/')
+        os.chdir(os.path.dirname(__file__))
+        os.chdir("../robots_jsons")
+
         with open(fileName) as f:
             self.json_data = json.loads(f.read())
     
