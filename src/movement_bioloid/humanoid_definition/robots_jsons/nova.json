@@ -1,7 +1,7 @@
 {
     "leg_joints":
     [
-    { "name":"COM",        "sister":-1,    "child":  1,    "mother2SelfVec": [0,  0,    0.341],    "jointAxis": "UZ",   "jointRotation": 0},
+    { "name":"COM",        "sister":-1,    "child":  1,    "mother2SelfVec": [0,  0,    0.314],    "jointAxis": "UZ",   "jointRotation": 0},
     { "name":"RLEG_06",    "sister": 7,    "child":  2,    "mother2SelfVec": [0, -0.0425,   0],    "jointAxis": "UZ",   "jointRotation": 0},
     { "name":"RLEG_08",    "sister":-1,    "child":  3,    "mother2SelfVec": [0,  0,        0],    "jointAxis": "UX",   "jointRotation": 0},
     { "name":"RLEG_10",    "sister":-1,    "child":  4,    "mother2SelfVec": [0,  0,        0],    "jointAxis": "UY",   "jointRotation": 0},
