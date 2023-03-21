@@ -89,7 +89,7 @@ class u2d2Control():
             if comm !=0 or hard != 0:
                 self.feedbackRes.pos_vector[motor_id] = -1
             else:
-                self.feedbackRes.pos_vector[motor_id] = pos2rad(motor_position)
+                self.feedbackRes.pos_vector[motor_id] = self.pos2rad(motor_position)
 
         return self.feedbackRes
 
