@@ -30,6 +30,7 @@ add_service_files(
   FILES
   enable_torque.srv
   position_feedback.srv
+  gait.srv
 )
 
 ## Generate actions in the 'action' folder

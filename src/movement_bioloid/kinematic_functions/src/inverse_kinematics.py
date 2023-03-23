@@ -22,7 +22,7 @@ def Rroll(phi):
 
 def ikLeg(absPositionCOM, absPostureCOM, body2Hip, hip2Knee, knee2Foot, newFootPosition, newFootPosture):
 
-    absPositionHip = absPositionCOM +  np.matmul(absPostureCOM,np.array([[0, body2Hip, 0]]).T)
+    absPositionHip = absPositionCOM +  np.matmul(absPostureCOM,body2Hip)
     foot2COMvect = np.matmul(newFootPosture.T, (absPositionHip - newFootPosition))
     foot2COMdist = np.linalg.norm(foot2COMvect)
 
@@ -43,6 +43,6 @@ def ikLeg(absPositionCOM, absPostureCOM, body2Hip, hip2Knee, knee2Foot, newFootP
     q2 = np.arctan2(-R[0][1], R[1][1])
     q3 = np.arctan2(R[2][1], -R[0][2]*np.sin(q2) + R[1][1]*np.cos(q2))
     q4 = np.arctan2(-R[2][0], R[2][2])    
-
+    
     q = np.around(np.array([[q2,q3,q4,q5,q6,q7]]).T, decimals=4)
     return q

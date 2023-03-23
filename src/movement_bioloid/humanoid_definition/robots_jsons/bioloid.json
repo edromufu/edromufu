@@ -1,21 +1,21 @@
 {
     "leg_joints":
     [
-    { "name":"COM",        "sister":-1,    "child":  1,    "mother2SelfVec": [     0,       0,    0.261],    "jointAxis": "UZ",   "jointRotation": 0},
-    { "name":"RLEG_06",    "sister": 7,    "child":  2,    "mother2SelfVec": [ 0.032,  -0.034,   -0.069],    "jointAxis": "UZ",   "jointRotation": 0},
-    { "name":"RLEG_08",    "sister":-1,    "child":  3,    "mother2SelfVec": [     0,       0,        0],    "jointAxis": "UX",   "jointRotation": 0},
-    { "name":"RLEG_10",    "sister":-1,    "child":  4,    "mother2SelfVec": [     0,       0,        0],    "jointAxis": "UY",   "jointRotation": 0},
-    { "name":"RLEG_12",    "sister":-1,    "child":  5,    "mother2SelfVec": [-0.014,       0,   -0.071],    "jointAxis": "UY",   "jointRotation": 0},
-    { "name":"RLEG_14",    "sister":-1,    "child":  6,    "mother2SelfVec": [     0,       0,   -0.089],    "jointAxis": "UY",   "jointRotation": 0},
-    { "name":"RLEG_16",    "sister":-1,    "child": 14,    "mother2SelfVec": [     0,       0,        0],    "jointAxis": "UX",   "jointRotation": 0},
-    { "name":"LLEG_07",    "sister":-1,    "child":  8,    "mother2SelfVec": [ 0.032,   0.034,   -0.069],    "jointAxis": "UZ",   "jointRotation": 0},
-    { "name":"LLEG_09",    "sister":-1,    "child":  9,    "mother2SelfVec": [     0,       0,        0],    "jointAxis": "UX",   "jointRotation": 0},
-    { "name":"LLEG_11",    "sister":-1,    "child": 10,    "mother2SelfVec": [     0,       0,        0],    "jointAxis": "UY",   "jointRotation": 0},
-    { "name":"LLEG_13",    "sister":-1,    "child": 11,    "mother2SelfVec": [-0.014,       0,   -0.071],    "jointAxis": "UY",   "jointRotation": 0},
-    { "name":"LLEG_15",    "sister":-1,    "child": 12,    "mother2SelfVec": [     0,       0,   -0.089],    "jointAxis": "UY",   "jointRotation": 0},
-    { "name":"LLEG_17",    "sister":-1,    "child": 13,    "mother2SelfVec": [     0,       0,        0],    "jointAxis": "UX",   "jointRotation": 0},
-    { "name":"LFOOT",      "sister":-1,    "child": -1,    "mother2SelfVec": [     0,       0,   -0.032],    "jointAxis": "UZ",   "jointRotation": 0},
-    { "name":"RFOOT",      "sister":-1,    "child": -1,    "mother2SelfVec": [     0,       0,   -0.032],    "jointAxis": "UZ",   "jointRotation": 0}
+    { "name":"COM",         "id":-1,    "sister":-1,    "child":  1,    "mother2SelfVec": [     0,       0,    0.261],    "jointAxis": "UZ",   "jointRotation": 0},
+    { "name":"RLEG_06",     "id": 6,    "sister": 7,    "child":  2,    "mother2SelfVec": [ 0.032,  -0.034,   -0.069],    "jointAxis": "UZ",   "jointRotation": 0},
+    { "name":"RLEG_08",     "id": 8,    "sister":-1,    "child":  3,    "mother2SelfVec": [     0,       0,        0],    "jointAxis": "UX",   "jointRotation": 0},
+    { "name":"RLEG_10",     "id":10,    "sister":-1,    "child":  4,    "mother2SelfVec": [     0,       0,        0],    "jointAxis": "UY",   "jointRotation": 0},
+    { "name":"RLEG_12",     "id":12,    "sister":-1,    "child":  5,    "mother2SelfVec": [-0.014,       0,   -0.071],    "jointAxis": "UY",   "jointRotation": 0},
+    { "name":"RLEG_14",     "id":14,    "sister":-1,    "child":  6,    "mother2SelfVec": [     0,       0,   -0.089],    "jointAxis": "UY",   "jointRotation": 0},
+    { "name":"RLEG_16",     "id":16,    "sister":-1,    "child": 14,    "mother2SelfVec": [     0,       0,        0],    "jointAxis": "UX",   "jointRotation": 0},
+    { "name":"LLEG_07",     "id": 7,    "sister":-1,    "child":  8,    "mother2SelfVec": [ 0.032,   0.034,   -0.069],    "jointAxis": "UZ",   "jointRotation": 0},
+    { "name":"LLEG_09",     "id": 9,    "sister":-1,    "child":  9,    "mother2SelfVec": [     0,       0,        0],    "jointAxis": "UX",   "jointRotation": 0},
+    { "name":"LLEG_11",     "id":11,    "sister":-1,    "child": 10,    "mother2SelfVec": [     0,       0,        0],    "jointAxis": "UY",   "jointRotation": 0},
+    { "name":"LLEG_13",     "id":13,    "sister":-1,    "child": 11,    "mother2SelfVec": [-0.014,       0,   -0.071],    "jointAxis": "UY",   "jointRotation": 0},
+    { "name":"LLEG_15",     "id":15,    "sister":-1,    "child": 12,    "mother2SelfVec": [     0,       0,   -0.089],    "jointAxis": "UY",   "jointRotation": 0},
+    { "name":"LLEG_17",     "id":17,    "sister":-1,    "child": 13,    "mother2SelfVec": [     0,       0,        0],    "jointAxis": "UX",   "jointRotation": 0},
+    { "name":"LFOOT",       "id":-1,    "sister":-1,    "child": -1,    "mother2SelfVec": [     0,       0,   -0.032],    "jointAxis": "UZ",   "jointRotation": 0},
+    { "name":"RFOOT",       "id":-1,    "sister":-1,    "child": -1,    "mother2SelfVec": [     0,       0,   -0.032],    "jointAxis": "UZ",   "jointRotation": 0}
     ],
     "inverted_motors_id": [6,7,11,16,17]
 }
