@@ -1,0 +1,5 @@
+int8 steps_number
+int8 step_resolution
+float32 step_height
+---
+bool success

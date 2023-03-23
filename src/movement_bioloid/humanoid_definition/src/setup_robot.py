@@ -6,13 +6,6 @@ import numpy as np
 
 from joint import Joint
 
-#!Esse import não deve estar aqui, foi deixado apenas para deixar o código funcional e mostrar como fazê-lo quando
-#!for colocar no local correto
-import  sys
-os.chdir(os.path.dirname(__file__))
-os.chdir("../../kinematic_functions/src")
-sys.path.append(os.getcwd())
-import direct_kinematics
 
 class Robot:
 
@@ -29,7 +22,11 @@ class Robot:
         self.robotJoints = []
 
         for joint_data in self.json_data['leg_joints']:
-            self.robotJoints.append(Joint(*joint_data.values()))
+            is_inverted = False
+            if joint_data['id'] in self.json_data['inverted_motors_id']:
+                is_inverted = True
+
+            self.robotJoints.append(Joint(*joint_data.values(),is_inverted))
         
     def loadJson(self, fileName):
         if os.path.dirname(__file__):
@@ -51,20 +48,3 @@ class Robot:
             if self.robotJoints[j].get_sister() != -1:
                 self.robotJoints[self.robotJoints[j].get_sister()].set_mom(self.robotJoints[j].get_mom())
                 self.findMother(self.robotJoints[j].get_sister())
-    
-    #!Esse método não deve estar aqui, foi colocado apenas para teste, deve ir para onde será realmente utilizado
-    #!Por exemplo, essa chamada deve estar sendo realizada quando necessário no código de geração de marcha
-    def runKinematics(self):
-        direct_kinematics.ForwardKinematics(self.robotJoints)
-
-        self.robotJoints[4].jointRotation = np.pi/2
-        direct_kinematics.ForwardKinematics(self.robotJoints)
-
-        for joint in self.robotJoints:
-            print(f'{joint.get_name()}: \n{joint.absolutePostion}\n')
-
-if __name__ == '__main__':
-    nova = Robot('nova')
-
-    #!Também retirar daqui
-    nova.runKinematics()
