@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "XT-60")(type "KiCad")(uri "/home/iuri/Github/edromufu/src/eletrica/global_libs/XT60-M.kicad_sym")(options "")(descr ""))
+)
