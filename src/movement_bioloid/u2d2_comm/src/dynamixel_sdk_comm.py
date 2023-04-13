@@ -95,10 +95,11 @@ class u2d2Control():
 
     def data2motors(self, msg):
 
-        for motor_id in range(20):
-            motor_position = msg.pos_vector[motor_id]
-            
-            self.packetHandler.write2ByteTxOnly(self.portHandler, motor_id, ADDR_GOAL_POSITION, self.rad2pos(motor_position))  
+        for n in range(5):
+            for motor_id in range(20):
+                motor_position = msg.pos_vector[motor_id]
+                
+                self.packetHandler.write2ByteTxOnly(self.portHandler, motor_id, ADDR_GOAL_POSITION, self.rad2pos(motor_position))  
 
     def rad2pos(self, pos_in_rad):
         
