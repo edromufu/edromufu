@@ -1,4 +1,4 @@
-function R = Rodrigues(w,dt)
+function R = dRodrigues(w,dt)
 % w should be a vector of size 3
 
 norm_w = norm(w);

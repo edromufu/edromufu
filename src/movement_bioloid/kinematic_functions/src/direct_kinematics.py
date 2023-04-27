@@ -22,8 +22,8 @@ def ForwardKinematics(robotJoints, current_id=0):
         return
     if current_id != 0:
         mom = robotJoints[current_id].get_mom()
-
-        robotJoints[current_id].absolutePostion = np.matmul(robotJoints[mom].absolutePosture,robotJoints[current_id].get_mother2SelfVec()) + robotJoints[mom].absolutePostion
+        
+        robotJoints[current_id].absolutePosition = np.matmul(robotJoints[mom].absolutePosture,robotJoints[current_id].get_mother2SelfVec()) + robotJoints[mom].absolutePosition
         
         robotJoints[current_id].absolutePosture = np.matmul(robotJoints[mom].absolutePosture,Rodrigues(robotJoints[current_id].get_jointAxis(), robotJoints[current_id].jointRotation))
 
