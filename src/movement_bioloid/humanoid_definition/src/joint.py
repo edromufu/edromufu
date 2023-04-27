@@ -22,7 +22,7 @@ class Joint:
         self.__mom = None
 
         self.jointRotation = jointRotation
-        self.absolutePostion = None
+        self.absolutePosition = None
         self.absolutePosture = None
     
     def get_name(self):

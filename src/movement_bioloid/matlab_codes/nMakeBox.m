@@ -1,4 +1,4 @@
-function [vert,face] = MakeBox(dim,org)
+function [vert,face] = nMakeBox(dim,org)
 % dim: dimension [x y z], org: origin [x0 y0 z0]
 
 vert = [
@@ -12,7 +12,7 @@ vert = [
    dim(1) 0      dim(3);
 ]';
 
-%@Œ´“_ˆÚ“®
+%ï¿½@ï¿½ï¿½ï¿½_ï¿½Ú“ï¿½
 vert(1,:) = vert(1,:) - org(1);
 vert(2,:) = vert(2,:) - org(2);
 vert(3,:) = vert(3,:) - org(3);
