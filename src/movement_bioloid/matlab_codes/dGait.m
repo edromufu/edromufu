@@ -6,9 +6,6 @@ stepHeight = 0.05;
 leg = 0; %0=direita, 1=esquerda
 stage = 1; %1=subida, -1=descida
 
-lFootInitialPos = uLINK(LFOOT).p;
-rFootInitialPos = uLINK(RFOOT).p;
-
 count = 0;
 while true
   % Escolhe o pé a ser movido, sua nova posição e indexes
