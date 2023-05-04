@@ -8,9 +8,9 @@
         <param name="port" value="$(eval arg('u2d2_port'))" />
     </node>
 
-    <!-- Inicialização do movimento 
-    <node name="movement_core" pkg="movement_core" type="movement_core.py" output="screen">
+    <!-- Inicialização do movimento -->
+    <node name="movement_core" pkg="movement_core" type="core.py" output="screen">
         <param name="name" value="$(eval arg('robot_name'))" />
-    </node>-->
+    </node>
     
 </launch>
