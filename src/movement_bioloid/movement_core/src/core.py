@@ -58,12 +58,19 @@ class Core:
         self.robotInstance.updateRobotModel(motorsCurrentPosition)
 
     def movementManager(self, req):
-        #self.callRobotModelUpdate()
+        self.callRobotModelUpdate()
 
         if 'gait' in str(req.__class__):
+            if req.step_duration/2 < QUEUE_TIME:
+                raise Exception(f"O tempo do passo {req.step_duration} eh menor do que \
+                                  o tempo minimo de execucao {QUEUE_TIME*2}.")
+
             gait_poses = Gait(self.robotModel, req.step_height, req.steps_number)
 
-            self.interpolation(gait_poses, 1.5)
+            for pose in gait_poses:
+                pose = self.invertMotorsPosition(pose)
+
+            self.interpolation(gait_poses, req.step_duration/2)
 
             response = gaitResponse()
             response.success = True
@@ -76,35 +83,35 @@ class Core:
             self.pub2motorsMsg.pos_vector = self.queue.pop(0)
             self.pub2motors.publish(self.pub2motorsMsg)
      
-    def interpolation(self, matrixToInterpol, stepDuration):
-        '''
-        newPosesNumber = int(stepDuration/QUEUE_TIME)
+    def interpolation(self, matrixToInterpol, changingPosesTime):
+        newPosesNumber = round(changingPosesTime/QUEUE_TIME)
 
-        t = np.linspace(0,stepDuration,newPosesNumber)
-        interpolFunc = (1-np.cos(t*np.pi/stepDuration))/2
+        motorsCurrentPosition = self.motorsFeedback(True).pos_vector
 
-        #?motorsCurrentPosition = self.motorsFeedback(True).pos_vector
-        motorsCurrentPosition = [0]*20
+        t = np.linspace(0,changingPosesTime-QUEUE_TIME,newPosesNumber)
+        interpolFunc = (1-np.cos(t*np.pi/changingPosesTime))/2
 
-        (n,_) = matrixToInterpol.shape
-        jointsInterpolation = np.zeros((n*newPosesNumber,20))
+        [m,n] = matrixToInterpol.shape
+        jointsInterpolation = np.zeros((20,m*newPosesNumber))
 
-        for index, pose in enumerate(matrixToInterpol):
-            for motor_id, motorRotation in enumerate(pose):
-                if index == 0:
+        for i in range(m):
+            for motor_id in range(n):
+                if i == 0:
                     initialPosition = motorsCurrentPosition[motor_id]
                 else:
-                    initialPosition = matrixToInterpol[index-1][motor_id]
-                finalPosition = motorRotation
-                
-                motorInterpol = initialPosition + (finalPosition - initialPosition)*interpolFunc
-                for i in range(newPosesNumber):
-                    jointsInterpolation[i+index][motor_id] = motorInterpol[i]    
+                    initialPosition = matrixToInterpol[i-1][motor_id]
+                finalPosition = matrixToInterpol[i][motor_id]
 
-        print(jointsInterpolation)
-        '''
-        #!! Criar interpolação, toda a matriz interpolada deve estar pronta antes de começar a ser colocada na fila.
+                motorInterpol = initialPosition + (finalPosition - initialPosition)*interpolFunc
+                
+                jointsInterpolation[motor_id][i*newPosesNumber:i*newPosesNumber+len(motorInterpol)] = motorInterpol
+
+        jointsInterpolation = np.vstack([jointsInterpolation.T,matrixToInterpol[-1][:]])
+        
+        for position in jointsInterpolation:
+            self.queue.append(position)
 
 if __name__ == '__main__':
+    np.set_printoptions(precision=3, suppress=True, linewidth=np.inf, threshold=sys.maxsize)
     movement = Core()
     rospy.spin()

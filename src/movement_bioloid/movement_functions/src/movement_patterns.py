@@ -25,7 +25,6 @@ def callIK(robot, newFootAbsPosition, newFootAbsPosture, currentFoot):
     return joint_angles
 
 def Gait(robot, stepHeight, stepNumber, initialLeg=False):
-    np.set_printoptions(precision=3, suppress=True)
     #leg == False (direita), leg == True (esquerda)
     #phase == True (subida), phase == False (descida)
 
