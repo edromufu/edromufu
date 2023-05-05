@@ -2,6 +2,7 @@
 #coding=utf=8
 
 import rospy
+import numpy as np
 
 import sys, os
 edrom_dir = '/home/'+os.getlogin()+'/edromufu/src/'
@@ -15,7 +16,7 @@ from movement_patterns import Gait
 from movement_utils.srv import *
 from movement_utils.msg import *
 
-QUEUE_TIME = 1 #Em segundos
+QUEUE_TIME = 0.5 #Em segundos
 
 class Core:
     def __init__(self): 
@@ -62,8 +63,7 @@ class Core:
         if 'gait' in str(req.__class__):
             gait_poses = Gait(self.robotModel, req.step_height, req.steps_number)
 
-            for pose in gait_poses:
-                self.queue.append(pose)
+            self.interpolation(gait_poses, 1.5)
 
             response = gaitResponse()
             response.success = True
@@ -71,12 +71,40 @@ class Core:
         return response
     
     def sendFromQueue(self, event):
-        print(event.current_expected)
-        print(event.last_duration)
+
         if self.queue:
             self.pub2motorsMsg.pos_vector = self.queue.pop(0)
             self.pub2motors.publish(self.pub2motorsMsg)
-            
+     
+    def interpolation(self, matrixToInterpol, stepDuration):
+        '''
+        newPosesNumber = int(stepDuration/QUEUE_TIME)
+
+        t = np.linspace(0,stepDuration,newPosesNumber)
+        interpolFunc = (1-np.cos(t*np.pi/stepDuration))/2
+
+        #?motorsCurrentPosition = self.motorsFeedback(True).pos_vector
+        motorsCurrentPosition = [0]*20
+
+        (n,_) = matrixToInterpol.shape
+        jointsInterpolation = np.zeros((n*newPosesNumber,20))
+
+        for index, pose in enumerate(matrixToInterpol):
+            for motor_id, motorRotation in enumerate(pose):
+                if index == 0:
+                    initialPosition = motorsCurrentPosition[motor_id]
+                else:
+                    initialPosition = matrixToInterpol[index-1][motor_id]
+                finalPosition = motorRotation
+                
+                motorInterpol = initialPosition + (finalPosition - initialPosition)*interpolFunc
+                for i in range(newPosesNumber):
+                    jointsInterpolation[i+index][motor_id] = motorInterpol[i]    
+
+        print(jointsInterpolation)
+        '''
+        #!! Criar interpolação, toda a matriz interpolada deve estar pronta antes de começar a ser colocada na fila.
+
 if __name__ == '__main__':
     movement = Core()
     rospy.spin()
