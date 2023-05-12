@@ -6,11 +6,11 @@ slug: /t-de-bateria
 sidebar_position: 2
 ---
 
-## Finalidade <h2>
+## Finalidade 
 
 O _T de Bateria®_ é um componente que permite que a técnica de __Hot Swap__ seja utilizada pela equipe para manter em funcionamento, para testes ou partidas, as robôs sem que elas precisem serem reiniciadas durante esse período, perdendo assim, tempo operação e as informações que estão sendo coletadas durante o funcionamento. Isso permite um maior tempo de operação, que reflete um menor tempo fora de campo.
 
-## Componentes <h2>
+## Componentes 
 
 O _T de Bateria®_ é composto por:
 
@@ -20,8 +20,11 @@ O _T de Bateria®_ é composto por:
 - 2 MOSFET IRF4905
 - 3 Conectores XT60 tipo FÊMEA
 
-## Operação <h2>
+## Operação 
 
 O _T de Bateria®_ funciona refazendo a rota da corrente no circuito de baterias de modo que, quando ligadas em paralelo, não haja retorno de corrente na bateria de menor tensão, podendo diminuir a vida útil da mesma.
-
+<div align = "center" width="600" height="480">
+  
 ![gif](/img/TdeBateria.gif)
+  
+</div>
