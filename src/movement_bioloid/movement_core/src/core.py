@@ -16,7 +16,7 @@ from movement_patterns import Gait
 from movement_utils.srv import *
 from movement_utils.msg import *
 
-QUEUE_TIME = 0.5 #Em segundos
+QUEUE_TIME = 0.4 #Em segundos
 
 class Core:
     def __init__(self): 
@@ -42,6 +42,7 @@ class Core:
         self.queue = []
 
     def invertMotorsPosition(self, toInvert):
+        toInvert = list(toInvert)
         for motor in self.robotModel:
             if motor.is_inverted():
                 toInvert[motor.get_id()] *= -1 
@@ -61,16 +62,18 @@ class Core:
         self.callRobotModelUpdate()
 
         if 'gait' in str(req.__class__):
+            '''
             if req.step_duration/2 < QUEUE_TIME:
                 raise Exception(f"O tempo do passo {req.step_duration} eh menor do que \
                                   o tempo minimo de execucao {QUEUE_TIME*2}.")
-
+            '''
             gait_poses = Gait(self.robotModel, req.step_height, req.steps_number)
 
             for pose in gait_poses:
                 pose = self.invertMotorsPosition(pose)
+                self.queue.append(pose)
 
-            self.interpolation(gait_poses, req.step_duration/2)
+            #self.interpolation(gait_poses, req.step_duration/2)
 
             response = gaitResponse()
             response.success = True
