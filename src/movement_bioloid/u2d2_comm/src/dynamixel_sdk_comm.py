@@ -81,17 +81,20 @@ class u2d2Control():
         return self.enableTorqueRes
 
     def feedbackMotors(self, req):
-        self.feedbackRes.pos_vector = [0]*20
+        try:
+            self.feedbackRes.pos_vector = [0]*20
 
-        for motor_id in range(20):
-            motor_position, comm, hard = self.packetHandler.read2ByteTxRx(self.portHandler, motor_id, ADDR_PRESENT_POSITION)
+            for motor_id in range(20):
+                motor_position, comm, hard = self.packetHandler.read2ByteTxRx(self.portHandler, motor_id, ADDR_PRESENT_POSITION)
 
-            if comm !=0 or hard != 0:
-                self.feedbackRes.pos_vector[motor_id] = -1
-            else:
-                self.feedbackRes.pos_vector[motor_id] = self.pos2rad(motor_position)
+                if comm !=0 or hard != 0:
+                    self.feedbackRes.pos_vector[motor_id] = -1
+                else:
+                    self.feedbackRes.pos_vector[motor_id] = self.pos2rad(motor_position)
 
-        return self.feedbackRes
+            return self.feedbackRes
+        except:
+            return self.feedbackMotors(req)
 
     def data2motors(self, msg):
 
