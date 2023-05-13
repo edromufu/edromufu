@@ -25,6 +25,6 @@ O _T de Bateria®_ é composto por:
 O _T de Bateria®_ funciona refazendo a rota da corrente no circuito de baterias de modo que, quando ligadas em paralelo, não haja retorno de corrente na bateria de menor tensão, podendo diminuir a vida útil da mesma.
 <div align = "center"> 
 
-![img](/img/t-de-bateria-img.png)  
+![gif](/img/T-de-bateria.gif)  
 
 </div>
