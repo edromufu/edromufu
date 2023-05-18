@@ -68,7 +68,12 @@ def VirtuallyMoveJoints(indexes, dq, robot):
 
         qNew = robot[j].jointRotation + dq[n]
         qNew = np.mod(qNew + np.pi, 2*np.pi) - np.pi
-
+        if 'FOOT' in robot[j].get_name():
+            qNew = 0
+        if 'KNEE' in robot[j].get_name():
+            if qNew < 0:
+                qNew = 0
+                
         robot[j].jointRotation = qNew
     
 def InverseKinematics(newFootAbsPosition, newFootAbsPosture, currentFoot, robotik):
