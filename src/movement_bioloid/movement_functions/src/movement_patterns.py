@@ -30,12 +30,12 @@ def Gait(robot, stepHeight, stepNumber, initialLeg=False):
 
     leg = initialLeg
     phase = True
-    gait_poses = np.zeros((2*stepNumber,20))
+    gait_poses = np.zeros((2*stepNumber,len(robot)))
 
-    #? Descomentar quando bioloid.json tiver representação dos braços e cabeças
-    #for joint in robot:
-    #    current_position = joint.jointRotation * np.ones((1,2*stepNumber))
-    #    gait_poses[:,joint.get_id()] = current_position
+    initial = []
+    for motor in robot:
+        initial.append(motor.jointRotation)
+    initial = np.array(initial)
 
     for step_phase in range(2*stepNumber):
         if leg:
@@ -45,18 +45,17 @@ def Gait(robot, stepHeight, stepNumber, initialLeg=False):
             newFootAbsPosition = robot[-1].absolutePosition + np.array([[0, 0, phase*stepHeight]]).T
             currentFoot = -1
 
-        joint_angles = callIK(robot, newFootAbsPosition, np.identity(3), currentFoot)
-        joint_angles = joint_angles[1:-2]
+        if phase:
+            joint_angles = callIK(robot, newFootAbsPosition, np.identity(3), currentFoot)
+        else:
+            joint_angles = initial
 
-        for index in range(20):
-            for indexInRobotJoints, motor in enumerate(robot):
-                if index == motor.get_id():
-                    gait_poses[step_phase][index] = joint_angles[indexInRobotJoints-1]
+        gait_poses[step_phase] = joint_angles
         
         if not phase:
             leg = not leg
         phase = not phase
-
+    
     return gait_poses
     
 if __name__ == '__main__':

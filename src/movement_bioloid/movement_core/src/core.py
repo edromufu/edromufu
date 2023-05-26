@@ -25,6 +25,7 @@ class Core:
         
         self.robotInstance = Robot(robot_name)
         self.robotModel = self.robotInstance.robotJoints
+        self.motorId2JsonIndex = self.robotInstance.motorId2JsonIndex
         
         # Inicialização das variáveis do ROS
         rospy.init_node('movement_central')
@@ -34,46 +35,73 @@ class Core:
         
         #Estruturas para comunicação com U2D2
         self.motorsFeedback = rospy.ServiceProxy('u2d2_comm/feedbackMotors', position_feedback)
+        rospy.wait_for_service('u2d2_comm/feedbackMotors')
         self.pub2motors = rospy.Publisher('u2d2_comm/data2motors', motors_data, queue_size=100)
         self.pub2motorsMsg = motors_data()
 
         #Timer para fila de publicações
         rospy.Timer(rospy.Duration(QUEUE_TIME), self.sendFromQueue)
-        self.queue = []
-
-    def invertMotorsPosition(self, toInvert):
-        toInvert = list(toInvert)
-        for motor in self.robotModel:
-            if motor.is_inverted():
-                toInvert[motor.get_id()] *= -1 
-
-        inverted = toInvert
-
-        return inverted
+        self.queue = []  
+        self.queue.append(np.array([0]*10 + [-0.65, 0.65, 0.84, 0.84, -0.3, -0.3] + [0]*4))
 
     def callRobotModelUpdate(self):
-        motorsCurrentPosition = self.motorsFeedback(True).pos_vector
+        motorsCurrentPosition = list(self.motorsFeedback(True).pos_vector)
+        
+        motorsCurrentPosition = self.sortMotorReturn2JsonIndex(motorsCurrentPosition)
 
         motorsCurrentPosition = self.invertMotorsPosition(motorsCurrentPosition)
 
         self.robotInstance.updateRobotModel(motorsCurrentPosition)
 
-    def movementManager(self, req):
-        self.callRobotModelUpdate()
+    def sortMotorReturn2JsonIndex(self, toSort):
 
+        sorted2JsonIndexPositions = [0]*len(self.robotModel)
+        for motor_id, motor_position in enumerate(toSort):
+            if motor_id in self.motorId2JsonIndex.keys():
+                jsonIndex = self.motorId2JsonIndex[motor_id]
+                sorted2JsonIndexPositions[jsonIndex] = motor_position
+        
+        return sorted2JsonIndexPositions
+    
+    def sortJsonIndex2MotorInput(self, toSort):
+        
+        sorted2MotorsId = list(self.motorsFeedback(True).pos_vector)
+        for json_id, position in enumerate(toSort):
+            if json_id in self.motorId2JsonIndex.values():
+                motor_id = self.keyFromValue(self.motorId2JsonIndex, json_id)
+                sorted2MotorsId[motor_id] = position
+        
+        return sorted2MotorsId
+
+    def keyFromValue(self, dict, value):
+        for key, v in dict.items():
+            if v == value:
+                return key
+        return None
+    
+    def invertMotorsPosition(self, toInvert):
+        for jsonIndex, joint in enumerate(self.robotModel):
+            if joint.is_inverted():
+                toInvert[jsonIndex] *= -1
+        
+        return toInvert
+
+    def movementManager(self, req):
+        
+        self.callRobotModelUpdate()
         if 'gait' in str(req.__class__):
             '''
             if req.step_duration/2 < QUEUE_TIME:
                 raise Exception(f"O tempo do passo {req.step_duration} eh menor do que \
                                   o tempo minimo de execucao {QUEUE_TIME*2}.")
             '''
+
             gait_poses = Gait(self.robotModel, req.step_height, req.steps_number)
 
             for pose in gait_poses:
                 pose = self.invertMotorsPosition(pose)
+                pose = self.sortJsonIndex2MotorInput(pose)
                 self.queue.append(pose)
-
-            #self.interpolation(gait_poses, req.step_duration/2)
 
             response = gaitResponse()
             response.success = True

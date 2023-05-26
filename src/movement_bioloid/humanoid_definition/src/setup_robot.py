@@ -20,18 +20,21 @@ class Robot:
         self.robotJoints[0].absolutePosition = self.robotJoints[0].get_mother2SelfVec()
         self.robotJoints[0].absolutePosture = np.identity(3)
 
-        self.id2jsonPositionDict = {}
-        for indexInJson, motorRobotJoints in enumerate(self.robotJoints):
-            if motorRobotJoints.get_id() != -1:
-                self.id2jsonPositionDict[motorRobotJoints.get_id()] = indexInJson
-
         ForwardKinematics(self.robotJoints)
+        
+        self.motorId2JsonIndex = {}
+        self.mapMotorId2Json()
+    
+    def mapMotorId2Json(self):
+        for jsonIndex, joint in enumerate(self.robotJoints):
+            motor_id = joint.get_id()
+            if motor_id != -1:
+                self.motorId2JsonIndex[motor_id] = jsonIndex
     
     def updateRobotModel(self, jointsRotation):
-        for motor_id, newJointRotation in enumerate(jointsRotation):
-            if motor_id in self.id2jsonPositionDict.keys():
-                index_json = self.id2jsonPositionDict[motor_id]
-                self.robotJoints[index_json].jointRotation = newJointRotation
+
+        for index, rotation in enumerate(jointsRotation):
+            self.robotJoints[index].jointRotation = rotation
 
         ForwardKinematics(self.robotJoints)
         
