@@ -26,7 +26,6 @@ class u2d2Control():
     def __init__(self):
         rospy.init_node('u2d2')
 
-        self.data_queue=[]
         rospy.Subscriber('u2d2_comm/data2motors', motors_data, self.poseStack)
         
         rospy.Service('u2d2_comm/enableTorque', enable_torque, self.enableTorque)
@@ -38,10 +37,11 @@ class u2d2Control():
         self.portHandler = PortHandler(DEVICENAME)
         self.packetHandler = PacketHandler(PROTOCOL_VERSION)
 
-        #Timer para fila de publicações
-        rospy.Timer(rospy.Duration(QUEUE_TIME), self.data2motors)
-
         self.startComm()
+
+        #Timer para fila de publicações
+        self.data_queue=[]
+        rospy.Timer(rospy.Duration(QUEUE_TIME), self.data2motors)
 
     def startComm(self):
         # Open port
@@ -104,10 +104,13 @@ class u2d2Control():
         except:
             return self.feedbackMotors(req)
 
-
     def poseStack(self,msg):
-        self.data_queue.append(msg.pos_vector)
+        pos_vector = msg.pos_vector
 
+        for id, position in enumerate(pos_vector):
+            pos_vector[id] = self.rad2pos(position)
+
+        self.data_queue.append(pos_vector)
 
     def data2motors(self):
         if self.data_queue:
@@ -116,7 +119,7 @@ class u2d2Control():
                 for motor_id in range(20):
                     motor_position = pos_motor[motor_id]
                     
-                    self.packetHandler.write2ByteTxOnly(self.portHandler, motor_id, ADDR_GOAL_POSITION, self.rad2pos(motor_position))  
+                    self.packetHandler.write2ByteTxOnly(self.portHandler, motor_id, ADDR_GOAL_POSITION, motor_position)  
             
     def rad2pos(self, pos_in_rad):
         

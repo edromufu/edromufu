@@ -15,8 +15,6 @@ from movement_patterns import Gait
 
 from movement_utils.srv import *
 from movement_utils.msg import *
-
-QUEUE_TIME = 0.4 #Em segundos
  
 class Core:
     def __init__(self): 
@@ -38,12 +36,6 @@ class Core:
         rospy.wait_for_service('u2d2_comm/feedbackMotors')
         self.pub2motors = rospy.Publisher('u2d2_comm/data2motors', motors_data, queue_size=100)
         self.pub2motorsMsg = motors_data()
-
-        
-        
-        self.queue = []  
-        self.queue.append(np.array([0]*10 + [-0.65, 0.65, 0.84, 0.84, -0.3, -0.3] + [0]*4))
-        self.sendFromQueue()
 
     def callRobotModelUpdate(self):
         motorsCurrentPosition = list(self.motorsFeedback(True).pos_vector)
@@ -88,33 +80,24 @@ class Core:
         return toInvert
 
     def movementManager(self, req):
-        
-        self.callRobotModelUpdate()
+        self.pub2motorsMsg.pos_vector = np.array([0]*10 + [-0.65, 0.65, 0.84, 0.84, -0.3, -0.3] + [0]*4)
+        self.pub2motors.publish(self.pub2motorsMsg)
+                
         if 'gait' in str(req.__class__):
-            '''
-            if req.step_duration/2 < QUEUE_TIME:
-                raise Exception(f"O tempo do passo {req.step_duration} eh menor do que \
-                                  o tempo minimo de execucao {QUEUE_TIME*2}.")
-            '''
-
+            self.callRobotModelUpdate()
+            
             gait_poses = Gait(self.robotModel, req.step_height, req.steps_number)
 
             for pose in gait_poses:
                 pose = self.invertMotorsPosition(pose)
                 pose = self.sortJsonIndex2MotorInput(pose)
-                self.queue.append(pose)
+                self.pub2motorsMsg.pos_vector = pose
+                self.pub2motors.publish(self.pub2motorsMsg)
 
-            self.sendFromQueue()
             response = gaitResponse()
             response.success = True
         
         return response
-    
-    def sendFromQueue(self, event):
-
-        if self.queue:
-            self.pub2motorsMsg.pos_vector = self.queue.pop(0)
-            self.pub2motors.publish(self.pub2motorsMsg)
      
     def interpolation(self, matrixToInterpol, changingPosesTime):
         newPosesNumber = round(changingPosesTime/QUEUE_TIME)
