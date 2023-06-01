@@ -17,5 +17,6 @@
     { "name":"LFOOT"    ,     "id":-1,    "sister":-1,    "child": -1,    "mother2SelfVec": [ 0.025,       0,   -0.032],    "jointAxis": "UZ",   "jointRotation": 0},
     { "name":"RFOOT"    ,     "id":-1,    "sister":-1,    "child": -1,    "mother2SelfVec": [ 0.025,       0,   -0.032],    "jointAxis": "UZ",   "jointRotation": 0}
     ],
-    "inverted_motors_id": [6,7,11,16,17]
+    "inverted_motors_id": [6,7,11,16,17],
+    "knee_ids": [12,13] 
 }

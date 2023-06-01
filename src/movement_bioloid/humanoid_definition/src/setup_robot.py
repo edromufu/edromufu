@@ -45,10 +45,14 @@ class Robot:
 
         for joint_data in self.json_data['leg_joints']:
             is_inverted = False
+            is_knee = False
             if joint_data['id'] in self.json_data['inverted_motors_id']:
                 is_inverted = True
+            
+            if joint_data['id'] in self.json_data['knee_ids']:
+                is_knee = True
 
-            self.robotJoints.append(Joint(*joint_data.values(),is_inverted))
+            self.robotJoints.append(Joint(*joint_data.values(),is_inverted, is_knee))
 
     def loadJson(self, fileName):
         os.chdir('/home/'+os.getlogin()+'/edromufu/src/movement_bioloid/humanoid_definition/robots_jsons/')

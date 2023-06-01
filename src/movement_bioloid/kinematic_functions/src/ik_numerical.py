@@ -69,9 +69,9 @@ def VirtuallyMoveJoints(indexes, dq, robot):
         qNew = robot[j].jointRotation + dq[n]
         qNew = np.mod(qNew + np.pi, 2*np.pi) - np.pi
         
-        if 'FOOT' in robot[j].get_name():
+        if robot[j].get_id() == -1:
             qNew = 0
-        if 'KNEE' in robot[j].get_name():
+        if robot[j].is_knee():
             if qNew < -0.01:
                 qNew = 0
                 
