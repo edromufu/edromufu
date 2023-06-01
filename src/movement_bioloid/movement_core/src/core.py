@@ -17,7 +17,7 @@ from movement_utils.srv import *
 from movement_utils.msg import *
 
 QUEUE_TIME = 0.4 #Em segundos
-
+ 
 class Core:
     def __init__(self): 
         #Inicialização do objeto (modelo) da robô em código
@@ -39,10 +39,11 @@ class Core:
         self.pub2motors = rospy.Publisher('u2d2_comm/data2motors', motors_data, queue_size=100)
         self.pub2motorsMsg = motors_data()
 
-        #Timer para fila de publicações
-        rospy.Timer(rospy.Duration(QUEUE_TIME), self.sendFromQueue)
+        
+        
         self.queue = []  
         self.queue.append(np.array([0]*10 + [-0.65, 0.65, 0.84, 0.84, -0.3, -0.3] + [0]*4))
+        self.sendFromQueue()
 
     def callRobotModelUpdate(self):
         motorsCurrentPosition = list(self.motorsFeedback(True).pos_vector)
@@ -103,6 +104,7 @@ class Core:
                 pose = self.sortJsonIndex2MotorInput(pose)
                 self.queue.append(pose)
 
+            self.sendFromQueue()
             response = gaitResponse()
             response.success = True
         

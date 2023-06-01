@@ -18,13 +18,17 @@ ADDR_GOAL_POSITION = 30
 ADDR_PRESENT_POSITION = 36
 ADDR_MOVING = 46
 
+QUEUE_TIME = 0.4 #Em segundos
+#! Talvez a melhor maneira para ter certeza que esse código esteja sempre rodando e que a o tempo de fila seja respeitado, seja aumentando a prioridade dele com o "sudo nice -n -20"
+
 class u2d2Control():
 
     def __init__(self):
         rospy.init_node('u2d2')
-        
-        rospy.Subscriber('u2d2_comm/data2motors', motors_data, self.data2motors)
 
+        self.data_queue=[]
+        rospy.Subscriber('u2d2_comm/data2motors', motors_data, self.poseStack)
+        
         rospy.Service('u2d2_comm/enableTorque', enable_torque, self.enableTorque)
         self.enableTorqueRes = enable_torqueResponse()
 
@@ -33,6 +37,10 @@ class u2d2Control():
 
         self.portHandler = PortHandler(DEVICENAME)
         self.packetHandler = PacketHandler(PROTOCOL_VERSION)
+
+        #Timer para fila de publicações
+        rospy.Timer(rospy.Duration(QUEUE_TIME), self.data2motors)
+
         self.startComm()
 
     def startComm(self):
@@ -96,14 +104,20 @@ class u2d2Control():
         except:
             return self.feedbackMotors(req)
 
-    def data2motors(self, msg):
 
-        for n in range(5):
-            for motor_id in range(20):
-                motor_position = msg.pos_vector[motor_id]
-                
-                self.packetHandler.write2ByteTxOnly(self.portHandler, motor_id, ADDR_GOAL_POSITION, self.rad2pos(motor_position))  
+    def poseStack(self,msg):
+        self.data_queue.append(msg.pos_vector)
 
+
+    def data2motors(self):
+        if self.data_queue:
+            pos_motor = self.data_queue.pop(0)
+            for n in range(5):
+                for motor_id in range(20):
+                    motor_position = pos_motor[motor_id]
+                    
+                    self.packetHandler.write2ByteTxOnly(self.portHandler, motor_id, ADDR_GOAL_POSITION, self.rad2pos(motor_position))  
+            
     def rad2pos(self, pos_in_rad):
         
         motor_position = int(195.379*pos_in_rad + 512)
