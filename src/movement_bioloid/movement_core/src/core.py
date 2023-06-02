@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 #coding=utf=8
 
-import rospy
+import rospy, time
 import numpy as np
 
 import sys, os
@@ -97,10 +97,13 @@ class Core:
             '''
 
             gait_poses = Gait(self.robotModel, req.step_height, req.steps_number)
-
-            for pose in gait_poses:
+            new_poses = []
+            for index, pose in enumerate(gait_poses):
                 pose = self.invertMotorsPosition(pose)
                 pose = self.sortJsonIndex2MotorInput(pose)
+                new_poses.append(pose)            
+
+            for pose in new_poses:
                 self.queue.append(pose)
 
             response = gaitResponse()
