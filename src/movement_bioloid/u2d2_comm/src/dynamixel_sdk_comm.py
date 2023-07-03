@@ -13,9 +13,14 @@ BAUDRATE = 1000000
 DEVICENAME = rospy.get_param('u2d2/port')
 
 ADDR_TORQUE_ENABLE = 24
+
 ADDR_LED_ENABLE = 25
+
 ADDR_GOAL_POSITION = 30
+GOAL_POSITION_LENGTH = 2
+
 ADDR_PRESENT_POSITION = 36
+
 ADDR_MOVING = 46
 
 class u2d2Control():
@@ -23,7 +28,9 @@ class u2d2Control():
     def __init__(self):
         rospy.init_node('u2d2')
         
-        rospy.Subscriber('u2d2_comm/data2motors', motors_data, self.data2motors)
+        rospy.Subscriber('u2d2_comm/data2body', body_motors_data, self.data2body)
+
+        #rospy.Subscriber('u2d2_comm/data2head', head_motors_data, self.data2head)
 
         rospy.Service('u2d2_comm/enableTorque', enable_torque, self.enableTorque)
         self.enableTorqueRes = enable_torqueResponse()
@@ -33,6 +40,8 @@ class u2d2Control():
 
         self.portHandler = PortHandler(DEVICENAME)
         self.packetHandler = PacketHandler(PROTOCOL_VERSION)
+
+        self.bodyGroup = GroupSyncWrite(self.portHandler, self.packetHandler, ADDR_GOAL_POSITION, GOAL_POSITION_LENGTH)
         self.startComm()
 
     def startComm(self):
@@ -96,14 +105,19 @@ class u2d2Control():
         except:
             return self.feedbackMotors(req)
 
-    def data2motors(self, msg):
+    def data2body(self, msg):
+        self.bodyGroup.clearParam()
 
-        for n in range(5):
-            for motor_id in range(20):
-                motor_position = msg.pos_vector[motor_id]
-                
-                self.packetHandler.write2ByteTxOnly(self.portHandler, motor_id, ADDR_GOAL_POSITION, self.rad2pos(motor_position))  
+        for motor_id in range(18):
+            motor_position = msg.pos_vector[motor_id]
 
+            value = self.rad2pos(motor_position)
+            bytes_value = value.to_bytes(2, byteorder='little')
+
+            self.bodyGroup.addParam(motor_id, bytes_value)
+
+        self.bodyGroup.txPacket()
+        
     def rad2pos(self, pos_in_rad):
         
         motor_position = int(195.379*pos_in_rad + 512)
