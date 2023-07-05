@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 #coding=utf=8
 
-import rospy, time
+import rospy, timeit
 import numpy as np
 
 import sys, os
@@ -45,13 +45,15 @@ class Core:
         self.queue.append(np.array([0]*10 + [-0.65, 0.65, 0.84, 0.84, -0.3, -0.3] + [0]*2))
 
     def callRobotModelUpdate(self):
-        motorsCurrentPosition = list(self.motorsFeedback(True).pos_vector)
+        self.motorsCurrentPosition = list(self.motorsFeedback(True).pos_vector)
+
+        positions2Update = self.motorsCurrentPosition
         
-        motorsCurrentPosition = self.sortMotorReturn2JsonIndex(motorsCurrentPosition)
+        positions2Update = self.sortMotorReturn2JsonIndex(positions2Update)
 
-        motorsCurrentPosition = self.invertMotorsPosition(motorsCurrentPosition)
+        positions2Update  = self.invertMotorsPosition(positions2Update)
 
-        self.robotInstance.updateRobotModel(motorsCurrentPosition)
+        self.robotInstance.updateRobotModel(positions2Update)
 
     def sortMotorReturn2JsonIndex(self, toSort):
 
@@ -65,7 +67,8 @@ class Core:
     
     def sortJsonIndex2MotorInput(self, toSort):
         
-        sorted2MotorsId = list(self.motorsFeedback(True).pos_vector)
+        sorted2MotorsId = self.motorsCurrentPosition
+
         for json_id, position in enumerate(toSort):
             if json_id in self.motorId2JsonIndex.values():
                 motor_id = self.keyFromValue(self.motorId2JsonIndex, json_id)
@@ -90,14 +93,10 @@ class Core:
         
         self.callRobotModelUpdate()
         if 'gait' in str(req.__class__):
-            '''
-            if req.step_duration/2 < QUEUE_TIME:
-                raise Exception(f"O tempo do passo {req.step_duration} eh menor do que \
-                                  o tempo minimo de execucao {QUEUE_TIME*2}.")
-            '''
 
             gait_poses = Gait(self.robotModel, req.step_height, req.steps_number)
             new_poses = []
+
             for index, pose in enumerate(gait_poses):
                 pose = self.invertMotorsPosition(pose)
                 pose = self.sortJsonIndex2MotorInput(pose)
