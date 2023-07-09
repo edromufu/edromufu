@@ -42,6 +42,11 @@ class u2d2Control():
         self.packetHandler = PacketHandler(PROTOCOL_VERSION)
 
         self.bodyGroup = GroupSyncWrite(self.portHandler, self.packetHandler, ADDR_GOAL_POSITION, GOAL_POSITION_LENGTH)
+        self.headGroup = GroupSyncWrite(self.portHandler, self.packetHandler, ADDR_GOAL_POSITION, GOAL_POSITION_LENGTH)
+        self.feedbackGroup = GroupSyncRead(self.portHandler, self.packetHandler, ADDR_GOAL_POSITION, GOAL_POSITION_LENGTH)
+        for motor_id in range(20):
+            _=self.feedbackGroup.addParam(motor_id)
+
         self.startComm()
 
     def startComm(self):
@@ -91,16 +96,21 @@ class u2d2Control():
 
     def feedbackMotors(self, req):
         try:
+
             self.feedbackRes.pos_vector = [0]*20
-
+            self.feedbackGroup.txRxPacket()
             for motor_id in range(20):
-                motor_position, comm, hard = self.packetHandler.read2ByteTxRx(self.portHandler, motor_id, ADDR_PRESENT_POSITION)
+                print(self.feedbackGroup.isAvailable(motor_id,ADDR_GOAL_POSITION, GOAL_POSITION_LENGTH)) #! Debug?
 
-                if comm !=0 or hard != 0:
-                    self.feedbackRes.pos_vector[motor_id] = -1
+                if self.feedbackGroup.isAvailable(motor_id,ADDR_GOAL_POSITION, GOAL_POSITION_LENGTH):
+                    motor_pos= self.feedbackGroup.getData( motor_id,ADDR_GOAL_POSITION, GOAL_POSITION_LENGTH)
+
+                    print(motor_pos)    #! Debug?           
+
+                    self.feedbackRes.pos_vector[motor_id] = self.pos2rad(motor_pos)
                 else:
-                    self.feedbackRes.pos_vector[motor_id] = self.pos2rad(motor_position)
-
+                    self.feedbackRes.pos_vector[motor_id] = -1
+                
             return self.feedbackRes
         except:
             return self.feedbackMotors(req)
@@ -117,7 +127,20 @@ class u2d2Control():
             self.bodyGroup.addParam(motor_id, bytes_value)
 
         self.bodyGroup.txPacket()
-        
+
+    def data2head(self, msg):
+        self.headGroup.clearParam()
+
+        for motor_id in range(2):
+            motor_position = msg.pos_vector[motor_id]
+
+            value = self.rad2pos(motor_position)
+            bytes_value = value.to_bytes(2, byteorder='little')
+
+            self.headGroup.addParam(motor_id, bytes_value)
+
+        self.headGroup.txPacket()
+    
     def rad2pos(self, pos_in_rad):
         
         motor_position = int(195.379*pos_in_rad + 512)
