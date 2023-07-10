@@ -34,8 +34,8 @@ class Core:
         rospy.Service('movement_central/request_gait', gait, self.movementManager)
         
         #Estruturas para comunicação com U2D2
-        self.motorsFeedback = rospy.ServiceProxy('u2d2_comm/feedbackMotors', position_feedback)
-        rospy.wait_for_service('u2d2_comm/feedbackMotors')
+        self.motorsFeedback = rospy.ServiceProxy('u2d2_comm/feedbackBody', body_feedback)
+        rospy.wait_for_service('u2d2_comm/feedbackBody')
         self.pub2motors = rospy.Publisher('u2d2_comm/data2body', body_motors_data, queue_size=100)
         self.pub2motorsMsg = body_motors_data()
 
@@ -74,7 +74,7 @@ class Core:
                 motor_id = self.keyFromValue(self.motorId2JsonIndex, json_id)
                 sorted2MotorsId[motor_id] = position
         
-        return sorted2MotorsId[:-2]
+        return sorted2MotorsId
 
     def keyFromValue(self, dict, value):
         for key, v in dict.items():
@@ -94,15 +94,16 @@ class Core:
         self.callRobotModelUpdate()
         if 'gait' in str(req.__class__):
 
+            checked_poses = np.array([[0]*10 + [-0.65, 0.65, 0.84, 0.84, -0.3, -0.3] + [0]*2])
             gait_poses = Gait(self.robotModel, req.step_height, req.steps_number)
-            new_poses = []
-
+            
             for index, pose in enumerate(gait_poses):
                 pose = self.invertMotorsPosition(pose)
                 pose = self.sortJsonIndex2MotorInput(pose)
-                new_poses.append(pose)            
+                checked_poses = np.append(checked_poses, [pose], axis=0)  
 
-            for pose in new_poses:
+            
+            for pose in checked_poses: 
                 self.queue.append(pose)
 
             response = gaitResponse()

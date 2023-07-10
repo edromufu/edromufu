@@ -30,7 +30,8 @@ add_message_files(
 add_service_files(
   FILES
   enable_torque.srv
-  position_feedback.srv
+  body_feedback.srv
+  head_feedback.srv
   gait.srv
 )
 
