@@ -116,34 +116,6 @@ class Core:
         if self.queue:
             self.pub2motorsMsg.pos_vector = self.queue.pop(0)
             self.pub2motors.publish(self.pub2motorsMsg)
-     
-    def interpolation(self, matrixToInterpol, changingPosesTime):
-        newPosesNumber = round(changingPosesTime/QUEUE_TIME)
-
-        motorsCurrentPosition = self.motorsFeedback(True).pos_vector
-
-        t = np.linspace(0,changingPosesTime-QUEUE_TIME,newPosesNumber)
-        interpolFunc = (1-np.cos(t*np.pi/changingPosesTime))/2
-
-        [m,n] = matrixToInterpol.shape
-        jointsInterpolation = np.zeros((20,m*newPosesNumber))
-
-        for i in range(m):
-            for motor_id in range(n):
-                if i == 0:
-                    initialPosition = motorsCurrentPosition[motor_id]
-                else:
-                    initialPosition = matrixToInterpol[i-1][motor_id]
-                finalPosition = matrixToInterpol[i][motor_id]
-
-                motorInterpol = initialPosition + (finalPosition - initialPosition)*interpolFunc
-                
-                jointsInterpolation[motor_id][i*newPosesNumber:i*newPosesNumber+len(motorInterpol)] = motorInterpol
-
-        jointsInterpolation = np.vstack([jointsInterpolation.T,matrixToInterpol[-1][:]])
-        
-        for position in jointsInterpolation:
-            self.queue.append(position)
 
 if __name__ == '__main__':
     np.set_printoptions(precision=3, suppress=True, linewidth=np.inf, threshold=sys.maxsize)
