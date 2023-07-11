@@ -2,7 +2,6 @@
 #coding=utf-8
 
 import rospy
-import time
 from transitions import Machine
 from modularized_bhv_msgs.msg import currentStateMsg
 
@@ -29,26 +28,86 @@ class StateMachine():
         - Inicializa a maquina de estados, utilizando as caracteristicas ja criadas
         """
 
-        states = ['stand_still','defense', 'impossible']
-
-        go_to_defense_transitions = [
-            { 'trigger': 'go_to_defense', 'source': 'stand_still', 'dest': 'defense',
-             'conditions': 'defense_condition'}
+        states = ['search_ball','body_alignment','body_search','walking','stand_still','kick','getting_up', 'impossible']
+        
+        go_to_search_ball_transitions = [
+            { 'trigger': 'go_to_search_ball', 'source': 'body_alignment', 'dest': 'search_ball',
+             'conditions': 'search_ball_condition', 'unless': 'getting_up_condition'}
+            ,
+            { 'trigger': 'go_to_search_ball', 'source': 'body_search', 'dest': 'search_ball',
+             'conditions': 'search_ball_condition', 'unless': 'getting_up_condition'}
+            ,
+            { 'trigger': 'go_to_search_ball', 'source': 'stand_still', 'dest': 'search_ball',
+             'conditions': 'search_ball_condition', 'unless': 'getting_up_condition'}
+            ,
+            { 'trigger': 'go_to_search_ball', 'source': 'getting_up', 'dest': 'search_ball',
+             'conditions': 'search_ball_condition', 'unless': 'getting_up_condition'}
+            ,
+            { 'trigger': 'go_to_search_ball', 'source': 'walking', 'dest': 'search_ball',
+             'conditions': 'search_ball_align_kick_condition', 'unless': 'getting_up_condition'}
         ]
 
+        go_to_body_alignment_transitions = [
+            { 'trigger': 'go_to_body_alignment', 'source': 'search_ball', 'dest': 'body_alignment',
+             'conditions': 'body_alignment_condition', 'unless': 'getting_up_condition'}
+        ]
+
+        go_to_body_search_transitions = [
+            { 'trigger': 'go_to_body_search', 'source': '*', 'dest': 'body_search',
+             'conditions': 'body_search_condition', 'unless': 'getting_up_condition'}
+        ]
+
+        go_to_walking_transitions = [
+            { 'trigger': 'go_to_walking', 'source': 'search_ball', 'dest': 'walking',
+             'conditions': 'walking_condition', 'unless': 'getting_up_condition'}
+            ,
+            { 'trigger': 'go_to_walking', 'source': 'body_search', 'dest': 'walking',
+             'conditions': 'walking_condition', 'unless': 'getting_up_condition'}
+            ,
+            { 'trigger': 'go_to_walking', 'source': 'body_alignment', 'dest': 'walking',
+             'conditions': 'walking_condition', 'unless': 'getting_up_condition'}
+        ]
+        
         go_to_stand_still_transitions = [
-            { 'trigger': 'go_to_stand_still', 'source': 'defense', 'dest': 'stand_still',
-             'unless': 'defense_condition'}
+            { 'trigger': 'go_to_stand_still', 'source': 'getting_up', 'dest': 'stand_still',
+             'unless': 'getting_up_condition'}
+            ,
+            { 'trigger': 'go_to_stand_still', 'source': 'kick', 'dest': 'stand_still',
+             'unless': 'getting_up_condition'}
+        ]
+
+        go_to_kick_transitions = [
+            { 'trigger': 'go_to_kick', 'source': 'walking', 'dest': 'kick',
+             'conditions': 'kick_condition', 'unless': 'getting_up_condition'},
+            { 'trigger': 'go_to_kick', 'source': 'search_ball', 'dest': 'kick',
+             'conditions': 'kick_condition', 'unless': 'getting_up_condition'},
+        ]
+
+        go_to_getting_up_transitions = [
+            { 'trigger': 'go_to_getting_up', 'source': '*', 'dest': 'getting_up',
+             'conditions': 'getting_up_condition'}
         ]
 
         go_to_impossible_transitions = [
-            {'trigger': 'go_to_stand_still', 'source': '*', 'dest': 'impossible',
+            {'trigger': 'go_to_search_ball', 'source': '*', 'dest': 'impossible',
              'conditions': 'impossible_condition'},
-            {'trigger': 'go_to_defense', 'source': '*', 'dest': 'impossible',
+            {'trigger': 'go_to_body_search', 'source': '*', 'dest': 'impossible',
+             'conditions': 'impossible_condition'},
+            {'trigger': 'go_to_walking', 'source': '*', 'dest': 'impossible',
+             'conditions': 'impossible_condition'},
+            {'trigger': 'go_to_kick', 'source': '*', 'dest': 'impossible',
+             'conditions': 'impossible_condition'},
+            {'trigger': 'go_to_getting_up', 'source': '*', 'dest': 'impossible',
+             'conditions': 'impossible_condition'},
+            {'trigger': 'go_to_body_alignment', 'source': '*', 'dest': 'impossible',
+             'conditions': 'impossible_condition'},
+            {'trigger': 'go_to_stand_still', 'source': '*', 'dest': 'impossible',
              'conditions': 'impossible_condition'}
         ]
 
-        all_transitions = (go_to_defense_transitions + go_to_stand_still_transitions + go_to_impossible_transitions) 
+        all_transitions = (go_to_search_ball_transitions + go_to_body_alignment_transitions + go_to_walking_transitions 
+        + go_to_kick_transitions + go_to_getting_up_transitions + go_to_stand_still_transitions + go_to_body_search_transitions
+        + go_to_impossible_transitions)
 
         self.robot_state_machine = Machine(self, states=states, transitions=all_transitions, initial='stand_still')
 
@@ -57,7 +116,7 @@ class StateMachine():
     
     #Funcao para chamada de atualizacao de cada uma das variaveis
     #que controlarao as transicoes de estados da maquina
-    def request_state_machine_update(self, ballFound, ballClose):
+    def request_state_machine_update(self, fallState, ballFound, ballClose, ballRelativePosition, verAngleAccomplished, headPossibleMovements, horMotorOutOfCenter):
         """
         -> Funcao:
         Chamar a atualizacao das variaveis de transicao, atraves de:
@@ -72,7 +131,13 @@ class StateMachine():
             - headPossibleMovements: Lista os movimentos possiveis dos motores da cabeca
             - horMotorOutOfCenter: Indica se o motor horizontal ultrapassou os limites do centro
         """
-        self.defense_condition_update(ballFound, ballClose)
+        self.walking_condition_update(ballRelativePosition, horMotorOutOfCenter)
+        self.getting_up_condition_update(fallState)
+        self.kick_condition_update(ballRelativePosition, verAngleAccomplished, ballClose)
+        self.body_alignment_condition_update(ballRelativePosition, headPossibleMovements, horMotorOutOfCenter)
+        self.search_ball_condition_update(ballFound, ballRelativePosition)
+        self.search_ball_align_kick_condition_update(ballRelativePosition)
+        self.body_search_condition_update(ballFound)
 
         #!
         print(f'-------------------\nEstado {str(self.state)}')
@@ -89,25 +154,174 @@ class StateMachine():
             inicializacao da maquina de estados em um logica de if's
             funcional
         """
-
-        if self.go_to_stand_still():
-            print('Transição para o stand_still\n-------------------\n')
+        
+        if self.go_to_getting_up():
+            print('Transição para o getting_up\n-------------------\n')
+            return True
+        
+        elif self.go_to_kick():
+            print('Transição para o kick\n-------------------\n')
             return True
 
-        elif self.go_to_defense():
-            print('Transição para o defense\n-------------------\n')
+        elif self.go_to_search_ball():
+            print('Transição para o search_ball\n-------------------\n')
+            return True
+
+        elif self.go_to_body_search():
+            print('Transição para o body_search\n-------------------\n')
+            return True
+
+        elif self.go_to_walking():
+            print('Transição para o walking\n-------------------\n')
+            return True
+        
+        elif self.go_to_body_alignment():
+            print('Transição para o body_alignment\n-------------------\n')
+            return True
+        
+        elif self.go_to_stand_still():
+            print('Transição para o stand_still\n-------------------\n')
             return True
         
         else:
             return False
     
     ########################################FUNÇÕES UPDATE CONDITION########################################
-    def defense_condition_update(self, ball_found, ball_close):
-        if ball_close and ball_found:
-            self.defense_condition = True
+    #Funcao para atualizar a variavel de codigo relacionada ao estado de walking
+    def walking_condition_update(self, ball_relative_position, hor_motor_out_of_center):
+        """
+        -> Funcao:
+        Avaliar a necessidade de transicao para o estado de walking e
+        atualizar a variavel de controle responsavel, atraves de:
+            - Verificar se a bola esta centralizada com a camera e se a camera
+            (motor horizontal da cabeca) esta centralizada com o corpo
+            - Atualizacao da variavel de condicao segundo a interpretacao
+        """
+
+        if ball_relative_position == CENTER and not hor_motor_out_of_center:
+            self.walking_condition = True
         else:
-            self.defense_condition = False
+            self.walking_condition = False
+    
+    #Funcao para atualizar a variavel de codigo relacionada ao estado de getting_up
+    def getting_up_condition_update(self, fall_state):
+        """
+        -> Funcao:
+        Avaliar a necessidade de transicao para o estado de getting_up e
+        atualizar a variavel de controle responsavel, atraves de:
+            - Verificar se a resposta do interpretador de queda e qualquer
+            diferente de "de pe"
+            - Atualizar a variavel de condicao de acordo com verificacao
+        """
+
+        if fall_state != UP:
+            self.getting_up_condition = True
+        else:
+            self.getting_up_condition = False
+    
+    #Funcao para atualizar a variavel de codigo relacionada ao estado de kick
+    def kick_condition_update(self, ball_relative_position, ver_angle_accomplished, ball_close):
+        """
+        -> Funcao:
+        Avaliar a necessidade de transicao para o estado de kick e
+        atualizar a variavel de controle responsavel, atraves de:
+            - Verificar se a bola esta proxima o suficiente, centralizada para a robo
+            e se a cabeca esta a um angulo minimo para garantia de um bom chute
+            - Atualizar a variavel de condicao de acordo com verificacao
+        """
+
+        if ball_close and ball_relative_position == CENTER and ver_angle_accomplished:
+            self.kick_condition = True
+        else:
+            self.kick_condition = False
+    
+    #Funcao para atualizar a variavel de codigo relacionada ao estado de body_alignment
+    def body_alignment_condition_update(self, ball_relative_position, head_possible_movements, hor_motor_out_of_center):
+        """
+        -> Funcao:
+        Avaliar a necessidade de transicao para o estado de body_alignment e
+        atualizar a variavel de controle responsavel, atraves de:
+            - Verifica se ha a necessidade da cabeca de se movimentar
+            em uma direcao nao disponivel (pelos limites do motor) para criar
+            o caso na qual a bola esta fora do "range" da camera
+            - Verifica se ha a necessidade de recentralizar a cabeca com o corpo
+            apos centralizacao da bola, para criar o caso de alinhamento do corpo 
+            em direcao a bola
+            - Checar se qualquer um dos casos e verdadeiro para atualizacao
+            da varivel de condicao
+        """
+
+        if ( (RIGHT_HEAD_MOVEMENT not in head_possible_movements and RIGHT in ball_relative_position) or 
+            (LEFT_HEAD_MOVEMENT not in head_possible_movements and LEFT in ball_relative_position) ):
+            out_of_range = True
+        else:
+            out_of_range = False
+
+        if ball_relative_position == CENTER and hor_motor_out_of_center:
+            align_to_ball = True
+        else:
+            align_to_ball = False
+        
+        if out_of_range or align_to_ball:
+            self.body_alignment_condition = True
+        else:
+            self.body_alignment_condition = False
+
+    #Funcao para atualizar a variavel de codigo relacionada ao estado de search_ball        
+    def search_ball_condition_update(self, ball_found, ball_relative_position):
+        """
+        -> Funcao:
+        Avaliar a necessidade de transicao para o estado de search_ball e
+        atualizar a variavel de controle responsavel, atraves de:
+            - Checar se a bola esta na camera e nao esta centralizada
+            - Atualizar a variavel de condicao de acordo com verificacao
+        """
+
+        if ball_relative_position != CENTER and ball_found:
+            self.search_ball_condition = True
+        else:
+            self.search_ball_condition = False
+
+    #Funcao para atualizar a variavel de codigo relacionada ao estado de search_ball para alinhar para o chute
+    def search_ball_align_kick_condition_update(self, ball_relative_position):
+        """
+        -> Funcao:
+        Avaliar a necessidade de transicao para o estado de search_ball, alinhando para o chute,
+        e atualizar a variavel de controle responsavel, atraves de:
+            - Verifica se o estado atual era walking e se a bola se
+            descentralizou em direcao a parte inferior da camera, indicando
+            aproximacao da robo a bola
+            - Atualizar a variavel de condicao de acordo com verificacao
+        """
+
+        if str(self.state) == 'walking' and ball_relative_position != CENTER:
+            self.search_ball_align_kick_condition = True
+        else:
+            self.search_ball_align_kick_condition = False
+    
+    #Funcao para atualizar a variavel de codigo relacionada ao estado de body_search
+    def body_search_condition_update(self, ball_found):
+        """
+        -> Funcao:
+        Avaliar a necessidade de transicao para o estado de ball_found
+        e atualizar a variavel de controle responsavel, atraves de:
+            - Verifica se a bola nao esta localizada em qualquer lugar na camera,
+            indicando necessidade de rotacao em torno de si mesmo para localiza-la
+            - Atualizar a variavel de condicao de acordo com verificacao
+        """
+
+        if not ball_found:
+            self.body_search_condition = True
+        else:
+            self.body_search_condition = False
 
     ########################################FUNÇÕES RETURN CONDITION########################################
-    def defense_condition(self): return self.defense_condition
+    #Funcoes de retorno das variaveis de controle da forma necessitada pela state machine
+    def walking_condition(self): return self.walking_condition   
+    def getting_up_condition(self): return self.getting_up_condition  
+    def kick_condition(self): return self.kick_condition  
+    def body_alignment_condition(self): return self.body_alignment_condition
+    def search_ball_condition(self): return self.search_ball_condition
+    def search_ball_align_kick_condition(self): return self.search_ball_align_kick_condition  
+    def body_search_condition(self): return self.body_search_condition
     def impossible_condition(self): return False
