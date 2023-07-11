@@ -1,0 +1,16 @@
+<launch>
+    <arg name="u2d2_connected" default="true"/>
+    <arg name="u2d2_port" default="/dev/ttyUSB0"/>
+    <arg name="robot_name" default="bioloid"/>
+
+    <!-- Comunicação dos motores com U2D2 -->
+    <node name="u2d2" pkg="u2d2_comm" type="dynamixel_sdk_comm.py" output="screen" if="$(eval arg('u2d2_connected'))">
+        <param name="port" value="$(eval arg('u2d2_port'))" />
+    </node>
+
+    <!-- Inicialização do movimento -->
+    <node name="movement_core" pkg="movement_core" type="core.py" output="screen">
+        <param name="name" value="$(eval arg('robot_name'))" />
+    </node>
+    
+</launch>
