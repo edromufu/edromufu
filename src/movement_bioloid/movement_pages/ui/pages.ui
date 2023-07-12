@@ -1320,7 +1320,7 @@ Máxima:</string>
                <x>0</x>
                <y>0</y>
                <width>910</width>
-               <height>704</height>
+               <height>675</height>
               </rect>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_8">
@@ -1460,13 +1460,32 @@ Máxima:</string>
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
-                     <height>32</height>
+                     <height>29</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
                      <width>16777215</width>
-                     <height>28</height>
+                     <height>29</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_21">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>29</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>29</height>
                     </size>
                    </property>
                    <property name="text">
@@ -1479,13 +1498,13 @@ Máxima:</string>
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
-                     <height>32</height>
+                     <height>29</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
                      <width>16777215</width>
-                     <height>28</height>
+                     <height>29</height>
                     </size>
                    </property>
                   </widget>
@@ -1495,13 +1514,13 @@ Máxima:</string>
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
-                     <height>32</height>
+                     <height>29</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
                      <width>16777215</width>
-                     <height>28</height>
+                     <height>29</height>
                     </size>
                    </property>
                   </widget>
@@ -1511,13 +1530,13 @@ Máxima:</string>
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
-                     <height>32</height>
+                     <height>29</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
                      <width>16777215</width>
-                     <height>28</height>
+                     <height>29</height>
                     </size>
                    </property>
                   </widget>
@@ -1527,13 +1546,13 @@ Máxima:</string>
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
-                     <height>32</height>
+                     <height>29</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
                      <width>16777215</width>
-                     <height>28</height>
+                     <height>29</height>
                     </size>
                    </property>
                   </widget>
@@ -1543,13 +1562,13 @@ Máxima:</string>
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
-                     <height>32</height>
+                     <height>29</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
                      <width>16777215</width>
-                     <height>28</height>
+                     <height>29</height>
                     </size>
                    </property>
                   </widget>
@@ -1559,13 +1578,13 @@ Máxima:</string>
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
-                     <height>32</height>
+                     <height>29</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
                      <width>16777215</width>
-                     <height>28</height>
+                     <height>29</height>
                     </size>
                    </property>
                   </widget>
@@ -1575,13 +1594,13 @@ Máxima:</string>
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
-                     <height>32</height>
+                     <height>29</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
                      <width>16777215</width>
-                     <height>28</height>
+                     <height>29</height>
                     </size>
                    </property>
                   </widget>
@@ -1591,13 +1610,13 @@ Máxima:</string>
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
-                     <height>32</height>
+                     <height>29</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
                      <width>16777215</width>
-                     <height>28</height>
+                     <height>29</height>
                     </size>
                    </property>
                   </widget>
@@ -1607,13 +1626,13 @@ Máxima:</string>
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
-                     <height>32</height>
+                     <height>29</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
                      <width>16777215</width>
-                     <height>28</height>
+                     <height>29</height>
                     </size>
                    </property>
                   </widget>
@@ -1623,13 +1642,13 @@ Máxima:</string>
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
-                     <height>32</height>
+                     <height>29</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
                      <width>16777215</width>
-                     <height>28</height>
+                     <height>29</height>
                     </size>
                    </property>
                   </widget>
@@ -1639,13 +1658,13 @@ Máxima:</string>
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
-                     <height>32</height>
+                     <height>29</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
                      <width>16777215</width>
-                     <height>28</height>
+                     <height>29</height>
                     </size>
                    </property>
                   </widget>
@@ -1655,13 +1674,13 @@ Máxima:</string>
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
-                     <height>32</height>
+                     <height>29</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
                      <width>16777215</width>
-                     <height>28</height>
+                     <height>29</height>
                     </size>
                    </property>
                   </widget>
@@ -1671,13 +1690,13 @@ Máxima:</string>
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
-                     <height>32</height>
+                     <height>29</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
                      <width>16777215</width>
-                     <height>28</height>
+                     <height>29</height>
                     </size>
                    </property>
                   </widget>
@@ -1687,13 +1706,13 @@ Máxima:</string>
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
-                     <height>32</height>
+                     <height>29</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
                      <width>16777215</width>
-                     <height>28</height>
+                     <height>29</height>
                     </size>
                    </property>
                   </widget>
@@ -1703,13 +1722,13 @@ Máxima:</string>
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
-                     <height>32</height>
+                     <height>29</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
                      <width>16777215</width>
-                     <height>28</height>
+                     <height>29</height>
                     </size>
                    </property>
                   </widget>
@@ -1719,13 +1738,13 @@ Máxima:</string>
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
-                     <height>32</height>
+                     <height>29</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
                      <width>16777215</width>
-                     <height>28</height>
+                     <height>29</height>
                     </size>
                    </property>
                   </widget>
@@ -1735,13 +1754,13 @@ Máxima:</string>
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
-                     <height>32</height>
+                     <height>29</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
                      <width>16777215</width>
-                     <height>28</height>
+                     <height>29</height>
                     </size>
                    </property>
                   </widget>
@@ -1751,13 +1770,13 @@ Máxima:</string>
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
-                     <height>32</height>
+                     <height>29</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
                      <width>16777215</width>
-                     <height>28</height>
+                     <height>29</height>
                     </size>
                    </property>
                   </widget>
@@ -1767,13 +1786,13 @@ Máxima:</string>
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
-                     <height>32</height>
+                     <height>29</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
                      <width>16777215</width>
-                     <height>28</height>
+                     <height>29</height>
                     </size>
                    </property>
                   </widget>
