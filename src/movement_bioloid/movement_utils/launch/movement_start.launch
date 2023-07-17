@@ -6,6 +6,7 @@
     <!-- Comunicação dos motores com U2D2 -->
     <node name="u2d2" pkg="u2d2_comm" type="dynamixel_sdk_comm.py" output="screen" if="$(eval arg('u2d2_connected'))">
         <param name="port" value="$(eval arg('u2d2_port'))" />
+        <param name="robot_name" value="$(eval arg('robot_name'))" />
     </node>
 
     <!-- Inicialização do movimento -->
