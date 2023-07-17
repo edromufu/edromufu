@@ -50,8 +50,18 @@ class Localization:
         self.runVision()
 
     def runVision(self):
-        self.vision.formatFrame(self.current_frame,size=[Localization.HEIGHT,Localization.WIDTH])
-        self.vision.showResults(original=True)
+        self.vision.setFrame(self.current_frame)
+        self.vision.formatFrame(size=[Localization.HEIGHT,Localization.WIDTH])
+        self.vision.getMasks()
+        self.vision.findLines()
+        self.vision.findIntersections(filtering=True)
+        self.vision.drawResults(drawLines=True, drawIntersections=True, drawNeighbours=True)
+
+        for i in self.vision.getIntersections():
+            print(i)
+
+        cv.imshow("Tie break",self.vision.tieBreaker())
+        self.vision.showResults(resultColored=True, dilatedMask=True)
 
 
 

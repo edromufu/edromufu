@@ -13,8 +13,8 @@ class Intersection:
 
     def vizinhos(self, distancia):
         vizinho1 = (int(self.x + distancia*(-sin(self.reta1[1]))), int(self.y + distancia*(cos(self.reta1[1]))))
-        vizinho3 = (int(self.x - distancia*(-sin(self.reta1[1]))), int(self.y - distancia*(cos(self.reta1[1]))))
         vizinho2 = (int(self.x + distancia*(-sin(self.reta2[1]))), int(self.y + distancia*(cos(self.reta2[1]))))
+        vizinho3 = (int(self.x - distancia*(-sin(self.reta1[1]))), int(self.y - distancia*(cos(self.reta1[1]))))
         vizinho4 = (int(self.x - distancia*(-sin(self.reta2[1]))), int(self.y - distancia*(cos(self.reta2[1]))))
 
 
@@ -25,3 +25,7 @@ class Intersection:
 
     def nomear(self,label):
         self.label = label
+
+    def __str__(self):
+        string = f'X = {self.x}\nY = {self.y}\nClasse = {self.classe}'
+        return string
