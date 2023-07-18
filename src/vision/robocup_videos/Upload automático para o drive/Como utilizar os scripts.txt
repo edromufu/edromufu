@@ -1,0 +1,12 @@
+*Não precisa rodar o script "setup.py", sua classe é chamada no "upload.py".
+
+*Em "setup.py", mudar a variável "folder_id" para o ID da pasta no drive, que é o código depois da última barra da URL quando dentro da pasta.
+
+*Em "setup.py", mudar a variável "path" para o caminho do diretório local de onde se deseja fazer upload dos arquivos
+
+*Utilizar a parte comentada se pelo menos um arquivo tem o mesmo nome na pasta de destino e é desejável atualizá-lo
+
+*Sempre deixar o arquivo credentials.json na pasta dos scripts, com as informações das credenciais fornecidas pelo Google para utilização da API. 
+	-> https://console.cloud.google.com/apis/credentials
+
+*Se for necessário mudar as credenciais, como no caso de rodar os scripts em contas diferentes do drive, sempre apagar o arquivo "token.json" para atualizar os acessos

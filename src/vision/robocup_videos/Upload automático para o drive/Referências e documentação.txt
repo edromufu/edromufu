@@ -1,0 +1,8 @@
+Tutoriais: 
+    Autenticação: https://developers.google.com/drive/api/quickstart/python
+    Upload de arquivo: https://developers.google.com/drive/api/guides/manage-uploads
+    https://www.youtube.com/watch?v=LSP9PUx7n04
+    https://www.youtube.com/watch?v=fkWM7A-MxR0
+
+Documentação:
+    https://developers.google.com/drive/api/v3/reference

@@ -10,10 +10,10 @@ firstSearch = 'Left' #Sentido preferencial de busca com o corpo
 #Parametros de configuracao da camera e seus quadrantes
 [cameraWidth, cameraHeight] = [416, 416]
 
-[xCenterLeftLimit, xCenterRightLimit] = [cameraWidth/2, cameraWidth/2]
+[xCenterLeftLimit, xCenterRightLimit] = [cameraWidth/4, 3*cameraWidth/4]
 [yCenterBottomLimit, yCenterTopLimit] = [2*cameraHeight/3, cameraHeight/3]
 
-[close_width, close_height] = [40, 40] #Parametro de definicao da proximidade da bola
+[close_width, close_height] = [80, 80] #Parametro de definicao da proximidade da bola
 timesSecurity = 7 #Numero de vezes para verificacoes de seguranca no codigo
 
 class BallInterpreter():
@@ -70,10 +70,8 @@ class BallInterpreter():
         if(self.countFound > timesSecurity):
             self.ballFound = False
             self.ballClose = False
-            '''
             if 'Left' not in self.ballRelativePosition and 'Right' not in self.ballRelativePosition:
-               self.ballRelativePosition = firstSearch
-               '''
+                self.ballRelativePosition = firstSearch
 
         if(msg.found):
             #Reseta o contador de informar que a bola foi perdida, pois encontrou :)
@@ -83,22 +81,22 @@ class BallInterpreter():
             #Módulo de verificacao da proximidade da bola, serve para resetar
             #a interpretacao apenas apos um numero definido de medidas desfavoraveis
             if(msg.roi_width*msg.roi_height < close_width*close_height):
-                self.ballClose = False
+                self.countDistance += 1
+                if(self.countDistance > timesSecurity):
+                    self.ballClose = False
             else:
+                self.countDistance = 0
                 self.ballClose = True
 
             #Módulo de verificacao da posicao relativa da bola
             #Interpretacao horizontal
-            if(msg.x <= xCenterLeftLimit):
+            if(msg.x < xCenterLeftLimit):
                 analysisX = 'Left'
-            elif(msg.x >= xCenterRightLimit):
+            elif(msg.x > xCenterRightLimit):
                 analysisX = 'Right' 
-            '''
             else:
                 analysisX = 'Center'
-            '''
             
-            '''
             #Interpretacao vertical
             if(msg.y > yCenterBottomLimit): #Deve ser maior por conta da referência ([0,0] no canto superior esquerdo)
                 analysisY = 'Bottom'
@@ -116,8 +114,7 @@ class BallInterpreter():
                 analysis = analysisX
             else:
                 analysis = analysisX + '/' + analysisY
-            '''
 
-            self.ballRelativePosition = analysisX
+            self.ballRelativePosition = analysis
 
     
