@@ -2,11 +2,16 @@
   <qresource prefix="logo">
     <file>logo.png</file>
   </qresource>
+  <qresource prefix="Seta">
+    <file>setaTempo.png</file>
+  </qresource>
   <qresource prefix="play2">
     <file>play2.png</file>
+    <file>play2Branco.png</file>
   </qresource>
   <qresource prefix="play">
     <file>play.png</file>
+    <file>playBranco.png</file>
   </qresource>
   <qresource prefix="save">
     <file>save.png</file>
