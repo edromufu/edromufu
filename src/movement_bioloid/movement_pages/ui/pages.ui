@@ -303,9 +303,9 @@
                    <property name="geometry">
                     <rect>
                      <x>0</x>
-                     <y>0</y>
-                     <width>301</width>
-                     <height>2132</height>
+                     <y>-1442</y>
+                     <width>304</width>
+                     <height>1920</height>
                     </rect>
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -699,50 +699,6 @@ Máxima:</string>
                       </property>
                       <property name="text">
                        <string>Motor 17
-Atual:
-Mínima:
-Máxima:</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QPushButton" name="motor18">
-                      <property name="minimumSize">
-                       <size>
-                        <width>0</width>
-                        <height>100</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>16777215</width>
-                        <height>100</height>
-                       </size>
-                      </property>
-                      <property name="text">
-                       <string>Motor 18
-Atual:
-Mínima:
-Máxima:</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QPushButton" name="motor19">
-                      <property name="minimumSize">
-                       <size>
-                        <width>0</width>
-                        <height>100</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>16777215</width>
-                        <height>100</height>
-                       </size>
-                      </property>
-                      <property name="text">
-                       <string>Motor 19
 Atual:
 Mínima:
 Máxima:</string>
@@ -1495,71 +1451,6 @@ Máxima:</string>
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="label_95">
-               <property name="minimumSize">
-                <size>
-                 <width>10</width>
-                 <height>10</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>50</width>
-                 <height>50</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>18 </string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="Line" name="line_21">
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="label_93">
-               <property name="minimumSize">
-                <size>
-                 <width>10</width>
-                 <height>10</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>50</width>
-                 <height>50</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>19 </string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="Line" name="line_23">
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="Line" name="line_22">
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-              </widget>
-             </item>
-             <item>
               <spacer name="verticalSpacer">
                <property name="orientation">
                 <enum>Qt::Vertical</enum>
@@ -1598,7 +1489,7 @@ Máxima:</string>
                <x>0</x>
                <y>0</y>
                <width>910</width>
-               <height>662</height>
+               <height>664</height>
               </rect>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_8">
@@ -1657,13 +1548,13 @@ Máxima:</string>
                   <widget class="QCheckBox" name="checkBox">
                    <property name="minimumSize">
                     <size>
-                     <width>10</width>
-                     <height>10</height>
+                     <width>70</width>
+                     <height>9</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>50</width>
+                     <width>70</width>
                      <height>50</height>
                     </size>
                    </property>
@@ -1967,38 +1858,6 @@ Máxima:</string>
                    </property>
                   </widget>
                  </item>
-                 <item>
-                  <widget class="QLineEdit" name="lineEdit_2">
-                   <property name="minimumSize">
-                    <size>
-                     <width>10</width>
-                     <height>10</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>500</width>
-                     <height>50</height>
-                    </size>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLineEdit" name="lineEdit">
-                   <property name="minimumSize">
-                    <size>
-                     <width>10</width>
-                     <height>10</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>500</width>
-                     <height>50</height>
-                    </size>
-                   </property>
-                  </widget>
-                 </item>
                 </layout>
                </widget>
               </item>
@@ -2054,7 +1913,7 @@ Máxima:</string>
                  <item>
                   <widget class="QFrame" name="frame">
                    <property name="frameShape">
-                    <enum>QFrame::StyledPanel</enum>
+                    <enum>QFrame::NoFrame</enum>
                    </property>
                    <property name="frameShadow">
                     <enum>QFrame::Raised</enum>
@@ -2173,7 +2032,7 @@ Máxima:</string>
      <x>0</x>
      <y>0</y>
      <width>1280</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
