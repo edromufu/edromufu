@@ -51,24 +51,25 @@ class Localization:
 
     def runVision(self):
         self.vision.setFrame(self.current_frame)
-        self.vision.formatFrame(size=[Localization.HEIGHT,Localization.WIDTH])
+        #self.vision.formatFrame(size=[Localization.HEIGHT,Localization.WIDTH])
         self.vision.getMasks()
         self.vision.findLines()
-        self.vision.findIntersections(filtering=True)
+        self.vision.findIntersections(filtering=False)
         self.vision.drawResults(drawLines=True, drawIntersections=True, drawNeighbours=True)
 
-        for i in self.vision.getIntersections():
-            print(i)
+        '''for i in self.vision.getIntersections():
+            print(i)'''
 
         cv.imshow("Tie break",self.vision.tieBreaker())
-        self.vision.showResults(resultColored=True, dilatedMask=True)
+        self.vision.showResults(mask=True, resultColored=True, dilatedMask=True)
 
-
+    def runInference(self):
+        pass
 
 
 if __name__ == '__main__':
 
     rospy.init_node('localization_node', anonymous=False)
-    robotFinder = Localization(Localization.IMAGES)
+    robotFinder = Localization(Localization.SIMULATION)
     
     rospy.spin()

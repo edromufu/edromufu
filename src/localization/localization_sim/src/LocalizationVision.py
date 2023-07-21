@@ -110,7 +110,7 @@ class LocalizationVision:
             intersections = list(set(intersections))
             self.finalIntersections = []
             for intersection in intersections:
-                p1, p2, p3, p4 = intersection.vizinhos(10) #p1 e p3 pertencem a uma reta, p2 e p4 a outra
+                p1, p2, p3, p4 = intersection.vizinhos(50) #p1 e p3 pertencem a uma reta, p2 e p4 a outra
                 p1Pertence = (self.dilatedMask[p1[0]][p1[1]] == 255)
                 p2Pertence = (self.dilatedMask[p2[0]][p2[1]] == 255)
                 p3Pertence = (self.dilatedMask[p3[0]][p3[1]] == 255)
@@ -151,7 +151,7 @@ class LocalizationVision:
 
         if drawNeighbours:
             for intersection in self.finalIntersections:
-                p1, p2, p3, p4 = intersection.vizinhos(20)
+                p1, p2, p3, p4 = intersection.vizinhos(40)
                 cv.circle(self.resultColored,(p1[0],p1[1]),2,(30,30,30),2)
                 cv.circle(self.resultColored,(p2[0],p2[1]),2,(70,70,70),2)
                 cv.circle(self.resultColored,(p3[0],p3[1]),2,(140,140,140),2)
