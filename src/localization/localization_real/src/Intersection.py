@@ -18,7 +18,7 @@ class Intersection:
         vizinho4 = (int(self.x - distancia*(-sin(self.reta2[1]))), int(self.y - distancia*(cos(self.reta2[1]))))
 
 
-        return (vizinho1, vizinho2, vizinho3, vizinho4)
+        return vizinho1, vizinho2, vizinho3, vizinho4
 
     def classificar(self,classe):
         self.classe = classe

@@ -5,8 +5,6 @@ from Intersection import Intersection
 
 class LocalizationVision:
 
-    neighbourDistance = 30
-
     def __init__(self):
         self.finalLines = []
         self.finalIntersections = []
@@ -112,17 +110,11 @@ class LocalizationVision:
             intersections = list(set(intersections))
             self.finalIntersections = []
             for intersection in intersections:
-                p1, p2, p3, p4 = intersection.vizinhos(LocalizationVision.neighbourDistance) #p1 e p3 pertencem a uma reta, p2 e p4 a outra
-                p1Pertence = (self.dilatedMask[p1[1]][p1[0]] == 255)
-                p2Pertence = (self.dilatedMask[p2[1]][p2[0]] == 255)
-                p3Pertence = (self.dilatedMask[p3[1]][p3[0]] == 255)
-                p4Pertence = (self.dilatedMask[p4[1]][p4[0]] == 255)
-                '''print(f'X: {intersection.x} Y: {intersection.y}')
-                print(f'P1({p1[0]},{p1[1]}): {p1Pertence}')
-                print(f'P2({p2[0]},{p2[1]}): {p2Pertence}')
-                print(f'P3({p3[0]},{p3[1]}): {p3Pertence}')
-                print(f'P4({p4[0]},{p4[1]}): {p4Pertence}')
-                print("-------")'''
+                p1, p2, p3, p4 = intersection.vizinhos(10) #p1 e p3 pertencem a uma reta, p2 e p4 a outra
+                p1Pertence = (self.dilatedMask[p1[0]][p1[1]] == 255)
+                p2Pertence = (self.dilatedMask[p2[0]][p2[1]] == 255)
+                p3Pertence = (self.dilatedMask[p3[0]][p3[1]] == 255)
+                p4Pertence = (self.dilatedMask[p4[0]][p4[1]] == 255)
                 if ((p1Pertence or p3Pertence) and (p2Pertence or p4Pertence)): #Para ser uma interseccao, precisa de no minimo um ponto em cada reta
                     if p1Pertence and p2Pertence and p3Pertence and p4Pertence:
                         intersection.classificar(4)
@@ -153,22 +145,17 @@ class LocalizationVision:
                 
                 cv.line(self.resultColored, pt1, pt2, colorRed, 3)
 
-        if drawNeighbours:
-            for intersection in self.finalIntersections:
-                p1, p2, p3, p4 = intersection.vizinhos(LocalizationVision.neighbourDistance)
-                cv.circle(self.resultColored,(p1[0],p1[1]),4,(30,30,30),4)
-                cv.circle(self.resultColored,(p2[0],p2[1]),4,(70,70,70),4)
-                cv.circle(self.resultColored,(p3[0],p3[1]),4,(140,140,140),4)
-                cv.circle(self.resultColored,(p4[0],p4[1]),4,(200,200,200),4)
-
         if drawIntersections:
             for intersection in self.finalIntersections:
-                cv.circle(self.resultColored,(intersection.x,intersection.y),5,colorBlue,5)
-                cv.putText(self.resultColored, text= f'({intersection.x},{intersection.y})', org=(intersection.x,intersection.y),
-            fontFace= cv.FONT_HERSHEY_SIMPLEX, fontScale=0.5, color=(0,0,0),
-            thickness=2, lineType=cv.LINE_AA)
+                cv.circle(self.resultColored,(intersection.x,intersection.y),3,colorBlue,3)
 
-        
+        if drawNeighbours:
+            for intersection in self.finalIntersections:
+                p1, p2, p3, p4 = intersection.vizinhos(20)
+                cv.circle(self.resultColored,(p1[0],p1[1]),2,(30,30,30),2)
+                cv.circle(self.resultColored,(p2[0],p2[1]),2,(70,70,70),2)
+                cv.circle(self.resultColored,(p3[0],p3[1]),2,(140,140,140),2)
+                cv.circle(self.resultColored,(p4[0],p4[1]),2,(200,200,200),2)
 
     def showResults(self, mask = False, resultColored = False, original = False, dilatedMask = False):
 
