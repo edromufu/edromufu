@@ -5,7 +5,9 @@ from Intersection import Intersection
 
 class LocalizationVision:
 
-    neighbourDistance = 30
+    neighbourDistance = 40
+    SIMULATION = 'SIMULATION'
+    IMAGES = 'IMAGES'
 
     def __init__(self):
         self.finalLines = []
@@ -36,7 +38,7 @@ class LocalizationVision:
 
     def getMasks(self):
         # Convertendo para escala de cinza e obtendo a máscara a partir de um threshold
-        ret,self.mask = cv.threshold(cv.cvtColor(self.frame,cv.COLOR_BGR2GRAY),220,255,cv.THRESH_BINARY)
+        _,self.mask = cv.threshold(cv.cvtColor(self.frame,cv.COLOR_BGR2GRAY),220,255,cv.THRESH_BINARY)
 
         # Operação de fechamento com kernel maior (remover buracos)
         filter = LocalizationVision.kernel(int(16/self.ratio))
@@ -64,22 +66,23 @@ class LocalizationVision:
         self.finalLines = []
         thresholdRho = 30
         thresholdTheta = 0.2
+        
+        if type(lines) is np.ndarray:
+            for i in range(len(lines)):
+                rho = lines[i][0][0]
+                theta = lines[i][0][1]
+                match = False
 
-        for i in range(len(lines)):
-            rho = lines[i][0][0]
-            theta = lines[i][0][1]
-            match = False
+                for j in range(len(self.finalLines)):
+                    rhoRef, thetaRef = self.finalLines[j]
+                    if rho >= rhoRef-thresholdRho and rho <= rhoRef+thresholdRho and theta >= thetaRef-thresholdTheta and theta <= thetaRef+thresholdTheta:
+                        self.finalLines.append((rhoRef,thetaRef))
+                        self.finalLines.pop(j)
+                        match = True
+                        
 
-            for j in range(len(self.finalLines)):
-                rhoRef, thetaRef = self.finalLines[j]
-                if rho >= rhoRef-thresholdRho and rho <= rhoRef+thresholdRho and theta >= thetaRef-thresholdTheta and theta <= thetaRef+thresholdTheta:
-                    self.finalLines.append((rhoRef,thetaRef))
-                    self.finalLines.pop(j)
-                    match = True
-                    
-
-            if not match:
-                self.finalLines.append((rho,theta))
+                if not match:
+                    self.finalLines.append((rho,theta))
 
     def findIntersections(self, filtering = True):
         # Interseccao => (x1,y1) = (x2,y2)
@@ -112,17 +115,8 @@ class LocalizationVision:
             intersections = list(set(intersections))
             self.finalIntersections = []
             for intersection in intersections:
-                p1, p2, p3, p4 = intersection.vizinhos(LocalizationVision.neighbourDistance) #p1 e p3 pertencem a uma reta, p2 e p4 a outra
-                p1Pertence = (self.dilatedMask[p1[1]][p1[0]] == 255)
-                p2Pertence = (self.dilatedMask[p2[1]][p2[0]] == 255)
-                p3Pertence = (self.dilatedMask[p3[1]][p3[0]] == 255)
-                p4Pertence = (self.dilatedMask[p4[1]][p4[0]] == 255)
-                '''print(f'X: {intersection.x} Y: {intersection.y}')
-                print(f'P1({p1[0]},{p1[1]}): {p1Pertence}')
-                print(f'P2({p2[0]},{p2[1]}): {p2Pertence}')
-                print(f'P3({p3[0]},{p3[1]}): {p3Pertence}')
-                print(f'P4({p4[0]},{p4[1]}): {p4Pertence}')
-                print("-------")'''
+                intersection.findNeighbours(LocalizationVision.neighbourDistance)
+                p1Pertence, p2Pertence, p3Pertence, p4Pertence = intersection.checkNeighbours(self.dilatedMask)
                 if ((p1Pertence or p3Pertence) and (p2Pertence or p4Pertence)): #Para ser uma interseccao, precisa de no minimo um ponto em cada reta
                     if p1Pertence and p2Pertence and p3Pertence and p4Pertence:
                         intersection.classificar(4)
@@ -155,12 +149,10 @@ class LocalizationVision:
 
         if drawNeighbours:
             for intersection in self.finalIntersections:
-                p1, p2, p3, p4 = intersection.vizinhos(LocalizationVision.neighbourDistance)
-                cv.circle(self.resultColored,(p1[0],p1[1]),4,(30,30,30),4)
-                cv.circle(self.resultColored,(p2[0],p2[1]),4,(70,70,70),4)
-                cv.circle(self.resultColored,(p3[0],p3[1]),4,(140,140,140),4)
-                cv.circle(self.resultColored,(p4[0],p4[1]),4,(200,200,200),4)
-
+                if intersection.p1Check: cv.circle(self.resultColored,(intersection.p1[0],intersection.p1[1]),4,colorGreen,4)
+                if intersection.p2Check: cv.circle(self.resultColored,(intersection.p2[0],intersection.p2[1]),4,colorGreen,4)
+                if intersection.p3Check: cv.circle(self.resultColored,(intersection.p3[0],intersection.p3[1]),4,colorGreen,4)
+                if intersection.p4Check: cv.circle(self.resultColored,(intersection.p4[0],intersection.p4[1]),4,colorGreen,4)
         if drawIntersections:
             for intersection in self.finalIntersections:
                 cv.circle(self.resultColored,(intersection.x,intersection.y),5,colorBlue,5)
@@ -170,7 +162,7 @@ class LocalizationVision:
 
         
 
-    def showResults(self, mask = False, resultColored = False, original = False, dilatedMask = False):
+    def showResults(self, mask = False, resultColored = False, original = False, dilatedMask = False, source=SIMULATION):
 
         showing = False
         if mask:
@@ -190,8 +182,9 @@ class LocalizationVision:
             showing = True
 
         if showing:
-            cv.waitKey(0)
-            cv.destroyAllWindows()
+            if source == LocalizationVision.IMAGES: cv.waitKey(0)
+            else: cv.waitKey(1)
+            #cv.destroyAllWindows()
 
     def tieBreaker(self):
         return cv.bitwise_and(self.resultColored,self.resultColored,mask=self.dilatedMask)

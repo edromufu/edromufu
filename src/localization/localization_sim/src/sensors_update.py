@@ -89,6 +89,10 @@ class RobotSensors():
 
         self.image_msg = visionSimImage()
         self.image_msg.encoding = 'bgra8'
+        # Usando o tamanho original da simulacao
+        # [self.image_msg.height, self.image_msg.width] = [self.camera_sensor.getWidth(),self.camera_sensor.getHeight()]
+        # self.image_msg.step = self.camera_sensor.getWidth()*self.camera_sensor.getHeight()
+        # Formatando para 416x416
         [self.image_msg.height, self.image_msg.width] = [416,416]
         self.image_msg.step = 1664
     
