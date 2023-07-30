@@ -3,7 +3,7 @@ id: motores_estrutura
 title: Conhecendo os motores
 description: Breve abordagem sobre os motores que são usados nas robôs
 slug: /motores_estrutura
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 ### Apresentação dos motores 

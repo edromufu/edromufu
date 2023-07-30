@@ -3,7 +3,7 @@ id: montagem
 title: Como montar uma robô da EDROM
 description: Aprensentar dicas e cuidados ao fazer a montagem das robôs da EDROM
 slug: /montagem-robo
-sidebar_position: 3
+sidebar_position: 2
 ---
 
 ### Instruções para montagem da robô
