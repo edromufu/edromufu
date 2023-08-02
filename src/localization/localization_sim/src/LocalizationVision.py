@@ -149,18 +149,24 @@ class LocalizationVision:
 
         if drawNeighbours:
             for intersection in self.finalIntersections:
-                if intersection.p1Check: cv.circle(self.resultColored,(intersection.p1[0],intersection.p1[1]),4,colorGreen,4)
-                if intersection.p2Check: cv.circle(self.resultColored,(intersection.p2[0],intersection.p2[1]),4,colorGreen,4)
-                if intersection.p3Check: cv.circle(self.resultColored,(intersection.p3[0],intersection.p3[1]),4,colorGreen,4)
-                if intersection.p4Check: cv.circle(self.resultColored,(intersection.p4[0],intersection.p4[1]),4,colorGreen,4)
+                if intersection.p1Check: cv.circle(self.resultColored,(intersection.p1[0],intersection.p1[1]),4,colorBlue,4)
+                if intersection.p2Check: cv.circle(self.resultColored,(intersection.p2[0],intersection.p2[1]),4,colorBlue,4)
+                if intersection.p3Check: cv.circle(self.resultColored,(intersection.p3[0],intersection.p3[1]),4,colorBlue,4)
+                if intersection.p4Check: cv.circle(self.resultColored,(intersection.p4[0],intersection.p4[1]),4,colorBlue,4)
+                
+        if drawNeighbours and drawIntersections:
+            for intersection in self.finalIntersections:
+                if intersection.p1Check: cv.line(self.resultColored, (intersection.x,intersection.y), (intersection.p1[0],intersection.p1[1]), colorBlue, 3)
+                if intersection.p2Check: cv.line(self.resultColored, (intersection.x,intersection.y), (intersection.p2[0],intersection.p2[1]), colorBlue, 3)
+                if intersection.p3Check: cv.line(self.resultColored, (intersection.x,intersection.y), (intersection.p3[0],intersection.p3[1]), colorBlue, 3)
+                if intersection.p4Check: cv.line(self.resultColored, (intersection.x,intersection.y), (intersection.p4[0],intersection.p4[1]), colorBlue, 3)
+        
         if drawIntersections:
             for intersection in self.finalIntersections:
                 cv.circle(self.resultColored,(intersection.x,intersection.y),5,colorBlue,5)
-                cv.putText(self.resultColored, text= f'({intersection.x},{intersection.y})', org=(intersection.x,intersection.y),
+                '''cv.putText(self.resultColored, text= f'({intersection.x},{intersection.y})', org=(intersection.x,intersection.y),
             fontFace= cv.FONT_HERSHEY_SIMPLEX, fontScale=0.5, color=(0,0,0),
-            thickness=2, lineType=cv.LINE_AA)
-
-        
+            thickness=2, lineType=cv.LINE_AA)'''
 
     def showResults(self, mask = False, resultColored = False, original = False, dilatedMask = False, source=SIMULATION):
 

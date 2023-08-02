@@ -40,7 +40,6 @@ class Localization:
             self.runVision()
         self.cont = 0
 
-    
     def callback_image(self, camera_msg):
 
         self.opencv_bridge = CvBridge()
@@ -62,7 +61,7 @@ class Localization:
         self.vision.getMasks()
         self.vision.findLines()
         self.vision.findIntersections(filtering=True)
-        self.vision.drawResults(drawLines=True, drawIntersections=True, drawNeighbours=True)
+        self.vision.drawResults(drawLines=False, drawIntersections=True, drawNeighbours=True)
 
         # Para debug de interseções
         if self.debug:
@@ -73,7 +72,6 @@ class Localization:
 
     def runInference(self):
         pass
-
 
 if __name__ == '__main__':
 
