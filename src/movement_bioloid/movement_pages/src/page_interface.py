@@ -84,15 +84,15 @@ class MainWindow(QMainWindow):
     def selectedCheckBoxChanged(self, index, state):
 
         if state:
+
+            if self.currentCheckedPose is not None:
+                self.poseObjects[self.currentCheckedPose].checkBox.setChecked(False)
+
             self.currentCheckedPose = (index - 1)
 
-            for i, poseObejct in enumerate(self.poseObjects):
-                if i != (index-1):
-                    poseCheckbox = poseObejct.checkBox
-                    poseCheckbox.setChecked(False)
         else:
             self.currentCheckedPose = None
-            
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
 
