@@ -19,6 +19,8 @@ class newPoseFrame():
         self.configPoseFrameLayout(index, parent)
         self.insertFrame(self.pose_frame, poseScrollAreaLayout)
 
+        self.parent = parent
+
     def initPoseFrame(self):
         self.pose_frame = QtWidgets.QFrame()
         self.pose_frame.setMinimumSize(QtCore.QSize(83, 0))
@@ -108,3 +110,9 @@ class newPoseFrame():
     def insertFrame(self, frame, scrollLayout):
         index = scrollLayout.indexOf(scrollLayout.itemAt(scrollLayout.count() - 1).widget())
         scrollLayout.insertWidget(index,frame)
+    
+    # Atualiza informações internas importantes ao deletar-se um card de pose
+    def updatePoseCard(self, newIndex):
+        self.checkBox.setText('Pose ' + str(newIndex))
+        self.checkBox.clicked.disconnect()
+        self.checkBox.clicked.connect(lambda: self.parent.selectedCheckBoxChanged(newIndex, self.checkBox.checkState()))

@@ -32,6 +32,7 @@ class MainWindow(QMainWindow):
         self.currentPoseNumber = 0
         self.poseObjects = [] 
         self.currentCheckedPose = None
+        self.copiedContent = [None]*18
 
         # Variáveis do ROS
         rospy.init_node('page_interface')
@@ -41,21 +42,39 @@ class MainWindow(QMainWindow):
         rospy.wait_for_service('u2d2_comm/enableTorque')
 
         # Integração dos botões
-        self.ui.torqueButton.clicked.connect(lambda: self.toggleAllTorque())
+        self.ui.torqueButton.clicked.connect(self.toggleAllTorque)
 
-        self.ui.saveCurrentPose.clicked.connect(lambda: self.generateNewCard())
+        self.ui.saveCurrentPose.clicked.connect(self.generateNewCard)
 
         for i, btn in enumerate(self.ui.scrollMotorsContent.findChildren(QPushButton)):
             btn.clicked.connect(lambda _, index=i: self.toggleOneTorque(index))    
 
-    def generateNewCard(self):
-        current_position = list(self.motorsFeedback(True).pos_vector)
+        self.shortcutsConfig()
         
-        self.currentPoseNumber += 1
-        self.poseObjects.append(newPoseFrame(self.ui.horizontalLayout_8, self.currentPoseNumber, self))
-        
-        for index, lineEdit in enumerate(self.poseObjects[-1].posePositionsLineEdit):
-            lineEdit.setText(str(current_position[index]))
+    def shortcutsConfig(self):
+        # Atalho de captura de pose
+        shortcutCapturePose = QShortcut(QKeySequence(Qt.CTRL + Qt.Key_Q), self)
+        shortcutCapturePose.activated.connect(self.ui.saveCurrentPose.click)
+
+        # Atalho de deleção de pose
+        shortcutDeletePose = QShortcut(QKeySequence(Qt.SHIFT + Qt.Key_Delete), self)
+        shortcutDeletePose.activated.connect(lambda: self.deletePose(self.currentCheckedPose))
+
+        # Atalho de desfazer captura de pose
+        shortcutUndoPoseCap = QShortcut(QKeySequence(Qt.CTRL + Qt.Key_Z), self)
+        shortcutUndoPoseCap.activated.connect(lambda: self.deletePose(len(self.poseObjects)-1))
+
+        # Atalho de ligar/desligar todos os torques
+        shortcutToggleTorque = QShortcut(QKeySequence(Qt.CTRL + Qt.Key_T), self)
+        shortcutToggleTorque.activated.connect(self.toggleAllTorque)
+
+        # Atalho de copiar posição de todos os motores de uma pose
+        shortcutCopyPose = QShortcut(QKeySequence(Qt.CTRL + Qt.SHIFT + Qt.Key_C), self)
+        shortcutCopyPose.activated.connect(self.copyWholePoseContent)
+
+        # Atalho de colar posição de todos os motores em uma pose (desde que copiado)
+        shortcutPastePose = QShortcut(QKeySequence(Qt.CTRL + Qt.SHIFT + Qt.Key_V), self)
+        shortcutPastePose.activated.connect(self.pasteWholePoseContent)
 
     def toggleAllTorque(self):       
         
@@ -84,7 +103,6 @@ class MainWindow(QMainWindow):
     def selectedCheckBoxChanged(self, index, state):
 
         if state:
-
             if self.currentCheckedPose is not None:
                 self.poseObjects[self.currentCheckedPose].checkBox.setChecked(False)
 
@@ -92,6 +110,60 @@ class MainWindow(QMainWindow):
 
         else:
             self.currentCheckedPose = None
+    
+    def generateNewCard(self):
+        current_position = list(self.motorsFeedback(True).pos_vector)
+        
+        self.currentPoseNumber += 1
+        self.poseObjects.append(newPoseFrame(self.ui.horizontalLayout_8, self.currentPoseNumber, self))
+        
+        for index, lineEdit in enumerate(self.poseObjects[-1].posePositionsLineEdit):
+            lineEdit.setText(str(current_position[index]))
+    
+    def deletePose(self, poseSelectedIndex):
+
+        # Checa se tem alguma pose selecionada
+        if poseSelectedIndex is not None:
+
+            # Deleção comum do campo que salva as posições
+            cardToBeDeleted = self.poseObjects[poseSelectedIndex]
+            self.ui.horizontalLayout_8.removeWidget(cardToBeDeleted.pose_frame)
+            cardToBeDeleted.pose_frame.hide()
+
+            # Retirada do time frame, é diferente pois há apenas a partir do segundo elemento
+            if poseSelectedIndex != 0:
+                self.ui.horizontalLayout_8.removeWidget(cardToBeDeleted.time_frame)
+                cardToBeDeleted.time_frame.hide()
+            elif len(self.poseObjects) > 1:
+                firstTimeFrame = self.poseObjects[poseSelectedIndex+1].time_frame
+                self.ui.horizontalLayout_8.removeWidget(firstTimeFrame)
+                firstTimeFrame.hide()
+            
+            # Atualização dos objetos de card de pose após remoção
+            for poseNumber, poseCard in enumerate(self.poseObjects):
+                if poseNumber > poseSelectedIndex:
+                    poseCard.updatePoseCard(poseNumber)
+
+            # Remoção do objeto do card da lista de objetos
+            cardDeleted = self.poseObjects.pop(poseSelectedIndex)
+            del cardDeleted
+
+            # Desfaz a seleção do card que não existe mais
+            self.currentCheckedPose = None
+            self.currentPoseNumber -= 1
+    
+    def copyWholePoseContent(self):
+        
+        if self.currentCheckedPose is not None:
+            
+            for index, lineEdit in enumerate(self.poseObjects[self.currentCheckedPose].posePositionsLineEdit):
+                self.copiedContent[index] = float(lineEdit.text())
+    
+    def pasteWholePoseContent(self):
+
+        if self.currentCheckedPose is not None and type(self.copiedContent[0]) == float:
+            for index, lineEdit in enumerate(self.poseObjects[self.currentCheckedPose].posePositionsLineEdit):
+                lineEdit.setText(str(self.copiedContent[index]))
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
