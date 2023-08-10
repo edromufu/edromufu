@@ -505,8 +505,6 @@ class Ui_MainWindow(object):
         self.menubar.setObjectName("menubar")
         self.menuFile = QtWidgets.QMenu(self.menubar)
         self.menuFile.setObjectName("menuFile")
-        self.menuRecent_Mov = QtWidgets.QMenu(self.menuFile)
-        self.menuRecent_Mov.setObjectName("menuRecent_Mov")
         self.menuHelp = QtWidgets.QMenu(self.menubar)
         self.menuHelp.setObjectName("menuHelp")
         MainWindow.setMenuBar(self.menubar)
@@ -528,9 +526,7 @@ class Ui_MainWindow(object):
         self.actionPlayFromStart.setObjectName("actionPlayFromStart")
         self.actionPlayFromSelected = QtWidgets.QAction(MainWindow)
         self.actionPlayFromSelected.setObjectName("actionPlayFromSelected")
-        self.menuFile.addAction(self.actionNewPage)
         self.menuFile.addAction(self.actionOpenPage)
-        self.menuFile.addAction(self.menuRecent_Mov.menuAction())
         self.menuFile.addSeparator()
         self.menuFile.addAction(self.actionSave)
         self.menuFile.addAction(self.actionSaveAs)
@@ -545,7 +541,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Page Creator"))
         self.torqueButton.setText(_translate("MainWindow", "Torque On/Off"))
         self.motor0.setText(_translate("MainWindow", "Motor 0\n"
 "Mínima:\n"
@@ -621,7 +617,6 @@ class Ui_MainWindow(object):
         self.label_90.setText(_translate("MainWindow", "16 "))
         self.label_94.setText(_translate("MainWindow", "17 "))
         self.menuFile.setTitle(_translate("MainWindow", "File"))
-        self.menuRecent_Mov.setTitle(_translate("MainWindow", "Recent Mov"))
         self.menuHelp.setTitle(_translate("MainWindow", "Help"))
         self.actionNewPage.setText(_translate("MainWindow", "New... "))
         self.actionNewPage.setShortcut(_translate("MainWindow", "Ctrl+N"))

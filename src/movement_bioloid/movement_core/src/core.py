@@ -13,6 +13,9 @@ from setup_robot import Robot
 sys.path.append(edrom_dir+'movement_bioloid/movement_functions/src')
 from movement_patterns import Gait
 
+sys.path.append(edrom_dir+'movement_bioloid/movement_pages/src')
+from page_runner import Page
+
 from movement_utils.srv import *
 from movement_utils.msg import *
 
@@ -32,6 +35,7 @@ class Core:
 
         #Services de requisição de movimento, todos possuem como callback movementManager
         rospy.Service('movement_central/request_gait', gait, self.movementManager)
+        rospy.Service('movement_central/request_page', page, self.movementManager)
         
         #Estruturas para comunicação com U2D2
         self.motorsFeedback = rospy.ServiceProxy('u2d2_comm/feedbackBody', body_feedback)
@@ -107,6 +111,12 @@ class Core:
                 self.queue.append(pose)
 
             response = gaitResponse()
+            response.success = True
+        
+        elif 'page' in str(req.__class__):
+            Page(req.page_name, QUEUE_TIME)
+
+            response = pageResponse()
             response.success = True
         
         return response

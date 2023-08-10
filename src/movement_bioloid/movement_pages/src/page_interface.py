@@ -185,7 +185,9 @@ class MainWindow(QMainWindow):
         
         # Seleção do nome do arquivo
         if self.fileName is None or As:
-            self.fileName, _ = QFileDialog.getSaveFileName(self,"Salvar em", MAIN_DIR,"Page Files (*)")
+            self.fileName, _ = QFileDialog.getSaveFileName(self,"Salvar em", MAIN_DIR,"Page Files (*.json)")
+            if '.json' not in self.fileName:
+                self.fileName += '.json'
 
         # Salva os dados da GUI no arquivo selecionado
         with open(self.fileName, 'w') as file:
