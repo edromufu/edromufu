@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 #coding=utf-8
 
-import sys, rospy
+import sys, rospy, os, json
 
 from movement_utils.msg import *
 from movement_utils.srv import *
@@ -16,6 +16,7 @@ from new_pose import newPoseFrame
 
 GREEN_BGC = 'background-color: rgb(138, 226, 52);'
 RED_BGC   = 'background-color: rgb(204, 0, 0);'
+MAIN_DIR = '/home/'+os.getlogin()+'/edromufu/src/movement_bioloid/movement_pages/pages/'
 
 
 class MainWindow(QMainWindow):
@@ -33,6 +34,7 @@ class MainWindow(QMainWindow):
         self.poseObjects = [] 
         self.currentCheckedPose = None
         self.copiedContent = [None]*18
+        self.fileName = None
 
         # Variáveis do ROS
         rospy.init_node('page_interface')
@@ -48,6 +50,9 @@ class MainWindow(QMainWindow):
 
         for i, btn in enumerate(self.ui.scrollMotorsContent.findChildren(QPushButton)):
             btn.clicked.connect(lambda _, index=i: self.toggleOneTorque(index))    
+
+        self.ui.actionSaveAs.triggered.connect(lambda: self.save(As=True))
+        self.ui.actionSave.triggered.connect(self.save)
 
         self.shortcutsConfig()
         
@@ -164,6 +169,27 @@ class MainWindow(QMainWindow):
         if self.currentCheckedPose is not None and type(self.copiedContent[0]) == float:
             for index, lineEdit in enumerate(self.poseObjects[self.currentCheckedPose].posePositionsLineEdit):
                 lineEdit.setText(str(self.copiedContent[index]))
+
+    def save(self, As=False):
+        # Captura dos dados na GUI
+        pageData = {'joints_positions': {}, 'time_between_poses': []}
+        for n in range(18):
+            pageData['joints_positions'][f'motor_{n}'] = []
+        
+        for poseId, poseObject in enumerate(self.poseObjects):
+            for index, lineEdit in enumerate(poseObject.posePositionsLineEdit):
+                pageData['joints_positions'][f'motor_{index}'].append(float(lineEdit.text()))
+
+            if poseId != 0:
+                pageData['time_between_poses'].append(float(poseObject.timeEdit.text()))
+        
+        # Seleção do nome do arquivo
+        if self.fileName is None or As:
+            self.fileName, _ = QFileDialog.getSaveFileName(self,"Salvar em", MAIN_DIR,"Page Files (*)")
+
+        # Salva os dados da GUI no arquivo selecionado
+        with open(self.fileName, 'w') as file:
+            json.dump(pageData, file, indent=4) 
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

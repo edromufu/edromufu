@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 #coding=utf=8
 
-import rospy, timeit
+import rospy
 import numpy as np
 
 import sys, os
@@ -16,13 +16,13 @@ from movement_patterns import Gait
 from movement_utils.srv import *
 from movement_utils.msg import *
 
-QUEUE_TIME = 0.2 #Em segundos
+QUEUE_TIME = rospy.get_param('/movement_core/queue_time') #Em segundos
 
 class Core:
     def __init__(self): 
         #Inicialização do objeto (modelo) da robô em código
         robot_name = rospy.get_param('/movement_core/name')
-        
+                
         self.robotInstance = Robot(robot_name)
         self.robotModel = self.robotInstance.robotJoints
         self.motorId2JsonIndex = self.robotInstance.motorId2JsonIndex
@@ -41,8 +41,7 @@ class Core:
 
         #Timer para fila de publicações
         rospy.Timer(rospy.Duration(QUEUE_TIME), self.sendFromQueue)
-        self.queue = []  
-        self.queue.append(np.array([0]*10 + [-0.65, 0.65, 0.84, 0.84, -0.3, -0.3] + [0]*2))
+        self.queue = []
 
     def callRobotModelUpdate(self):
         self.motorsCurrentPosition = list(self.motorsFeedback(True).pos_vector)
@@ -92,6 +91,7 @@ class Core:
     def movementManager(self, req):
         
         self.callRobotModelUpdate()
+
         if 'gait' in str(req.__class__):
 
             checked_poses = np.array([[0]*10 + [-0.65, 0.65, 0.84, 0.84, -0.3, -0.3] + [0]*2])

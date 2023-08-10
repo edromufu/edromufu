@@ -3,6 +3,7 @@
     <arg name="u2d2_port" default="/dev/ttyUSB0"/>
     <arg name="robot_name" default="bioloid"/>
     <arg name="page_creation" default="false"/>
+    <arg name="queue_time" default=0.2/>
 
     <!-- Comunicação dos motores com U2D2 -->
     <node name="u2d2" pkg="u2d2_comm" type="dynamixel_sdk_comm.py" output="screen" if="$(eval arg('u2d2_connected'))">
@@ -13,6 +14,7 @@
     <!-- Inicialização do movimento -->
     <node name="movement_core" pkg="movement_core" type="core.py" output="screen">
         <param name="name" value="$(eval arg('robot_name'))" />
+        <param name="queue_time" value="$(eval arg('queue_time'))" />
     </node>
 
     <!-- Inicialização da interface de captura de page -->
