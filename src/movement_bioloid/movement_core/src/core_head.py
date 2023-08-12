@@ -29,25 +29,26 @@ class CoreHead:
             dx = 0
             dy = 0
             if ballInfos.x > 344 or ballInfos.x < 296:
-                dx = self.callPIDx(ballInfos.x)
+                [currentHorRotation, currentVerRotation] = self.motorsFeedback(True).pos_vector
+                dx = self.callPx(ballInfos.x)
+
             if ballInfos.y > 264 or ballInfos.y < 216:
-                dy = self.callPIDy(ballInfos.y)
+                [currentHorRotation, currentVerRotation] = self.motorsFeedback(True).pos_vector
+                dy = self.callPy(ballInfos.y)
 
-            [currentHorRotation, currentVerRotation] = self.motorsFeedback(True).pos_vector
+            if dx or dy:
+                newHorPos = currentHorRotation + dx
+                newVerPos = currentVerRotation + dy
 
-            newHorPos = currentHorRotation + dx
-            newVerPos = currentVerRotation + dy
-
-            self.pub2motorsMsg.pos_vector = [newHorPos, newVerPos]
-            self.pub2motors.publish(self.pub2motorsMsg)
+                self.pub2motorsMsg.pos_vector = [newHorPos, newVerPos]
+                self.pub2motors.publish(self.pub2motorsMsg)
+                print(newHorPos)
     
-    def callPIDx(self, x):
-        if x > WIDTH/2: #Direita
-            return -0.05
-        else: #Esquerda
-            return 0.05
+    def callPx(self, x):
+        error_x = (WIDTH/2) - x
+        return 0.0024*error_x
 
-    def callPIDy(self, y):
+    def callPy(self, y):
         if y > HEIGHT/2: #Baixo
             return -0.05
         else: #Cima
