@@ -9,9 +9,13 @@
         <param name="robot_name" value="$(eval arg('robot_name'))" />
     </node>
 
-    <!-- Inicialização do movimento -->
+    <!-- Inicialização do movimento de caminhada e pages-->
     <node name="movement_core" pkg="movement_core" type="core.py" output="screen">
         <param name="name" value="$(eval arg('robot_name'))" />
     </node>
     
+    <!-- Inicialização do movimento da cabeça-->
+    <node name="head_core" pkg="movement_core" type="core_head.py" output="screen">
+    </node>
+
 </launch>
