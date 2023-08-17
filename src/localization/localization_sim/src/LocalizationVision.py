@@ -117,6 +117,7 @@ class LocalizationVision:
             for intersection in intersections:
                 intersection.findNeighbours(LocalizationVision.neighbourDistance)
                 p1Pertence, p2Pertence, p3Pertence, p4Pertence = intersection.checkNeighbours(self.dilatedMask)
+                
                 if ((p1Pertence or p3Pertence) and (p2Pertence or p4Pertence)): #Para ser uma interseccao, precisa de no minimo um ponto em cada reta
                     if p1Pertence and p2Pertence and p3Pertence and p4Pertence:
                         intersection.classificar(4)

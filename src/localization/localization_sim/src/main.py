@@ -19,7 +19,7 @@ class Localization:
 
     HEIGHT = 416
     WIDTH = 416
-    imagens = ['imagem1.png','imagem2.png','imagem3.png','imagem4.png','imagem5.png','imagem6.png']
+    imagens = ['field.jpg','imagem1.png','imagem2.png','imagem3.png','imagem4.png','imagem5.png','imagem6.png']
     SIMULATION = 'SIMULATION'
     IMAGES = 'IMAGES'
     ratio = 3
@@ -61,14 +61,14 @@ class Localization:
         self.vision.getMasks()
         self.vision.findLines()
         self.vision.findIntersections(filtering=True)
-        self.vision.drawResults(drawLines=False, drawIntersections=True, drawNeighbours=True)
+        self.vision.drawResults(drawLines=True, drawIntersections=True, drawNeighbours=True)
 
         # Para debug de interseções
         if self.debug:
             for i in self.vision.getIntersections():
                 print(i)
             cv.imshow("Tie break",self.vision.tieBreaker())
-        self.vision.showResults(mask=False, resultColored=True, dilatedMask=False, source=self.source)
+        self.vision.showResults(mask=True, resultColored=True, dilatedMask=True, source=self.source)
 
     def runInference(self):
         pass
@@ -76,5 +76,5 @@ class Localization:
 if __name__ == '__main__':
 
     rospy.init_node('localization_node', anonymous=False)
-    robotFinder = Localization(Localization.SIMULATION)
+    robotFinder = Localization(Localization.SIMULATION, debug=False)
     rospy.spin()
