@@ -22,11 +22,13 @@ class Localization:
     imagens = ['teste1.jpg','teste2.jpg','teste3.jpg']
     REAL = 'REAL'
     IMAGES = 'IMAGES'
+    ratio = 3
 
-    def __init__(self, source):
+    def __init__(self, source, debug=False):
 
         self.vision = LocalizationVision()
-
+        self.source = source
+        self.debug = debug
         if source == Localization.REAL:
             self.camera = cv.VideoCapture(0)
             # self.infos_publisher = rospy.Publisher('/webots_natasha/localization_inference', Webotsmsg, queue_size=100)
@@ -39,7 +41,7 @@ class Localization:
         elif source == Localization.IMAGES:
             self.current_frame = cv.imread("img/" + Localization.imagens[1])
             self.runVision()
-
+        self.cont = 0
 
     def runVision(self):
         self.vision.setFrame(self.current_frame)
@@ -49,11 +51,15 @@ class Localization:
         self.vision.findIntersections(filtering=False)
         self.vision.drawResults(drawLines=True, drawIntersections=True, drawNeighbours=True)
 
-        for i in self.vision.getIntersections():
-            print(i)
+        # Para debug de interseções
+        if self.debug:
+            for i in self.vision.getIntersections():
+                print(i)
+            cv.imshow("Tie break",self.vision.tieBreaker())
+        self.vision.showResults(mask=True, resultColored=True, dilatedMask=True, source=self.source)
 
-        cv.imshow("Tie break",self.vision.tieBreaker())
-        self.vision.showResults(resultColored=True, dilatedMask=True)
+    def runInference(self):
+        pass
 
 
 
