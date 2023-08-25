@@ -4,6 +4,7 @@ from numpy import sin, cos
 from Intersection import Intersection
 import FilterUtils as fu
 import ParticleFilter as pf
+import time
 
 
 class FieldGenerator():
@@ -69,7 +70,6 @@ class FieldGenerator():
         nwRPenaltyArea, neRPenaltyArea, swRPenaltyArea, seRPenaltyArea
     ]
 
-
     def generate():
         # Empty field
         field = np.zeros((FieldGenerator.padding*2+FieldGenerator.fieldWidth, FieldGenerator.padding*2+FieldGenerator.fieldLenght))
@@ -122,16 +122,19 @@ class FieldGenerator():
 
         return coloredField
     
-    def drawParticle(coloredField, particle, fov, minRange, maxRange, drawFov=True, color=[255,0,0]):
-        cv.circle(coloredField,(particle[0],particle[1]),3,color,3)
+    def drawParticle(coloredField, particle, fov, minRange, maxRange, drawFov=True, color=[255,0,0], robo=False):
+        if robo: size = 3
+        else: size = 2
+
+        cv.circle(coloredField,(particle[0],particle[1]),size,color,size)
 
         if drawFov:
-            cv.line(coloredField,(int(particle[0]+minRange*np.cos(particle[2]*np.pi/180+fov/2)),int(particle[1]+minRange*np.sin(particle[2]*np.pi/180+fov/2))),(int(particle[0]+maxRange*np.cos(particle[2]*np.pi/180+fov/2)),int(particle[1]+maxRange*np.sin(particle[2]*np.pi/180+fov/2))),[150,0,0],4)
-            cv.line(coloredField,(int(particle[0]+minRange*np.cos(particle[2]*np.pi/180-fov/2)),int(particle[1]+minRange*np.sin(particle[2]*np.pi/180-fov/2))),(int(particle[0]+maxRange*np.cos(particle[2]*np.pi/180-fov/2)),int(particle[1]+maxRange*np.sin(particle[2]*np.pi/180-fov/2))),[150,0,0],4)
-            cv.ellipse(coloredField, (particle[0],particle[1]), (minRange,minRange), particle[2]*np.pi/180, int(particle[2]-180*fov/(np.pi*2)), int(particle[2]+180*fov/(np.pi*2)), [150,0,0], 4)
-            cv.ellipse(coloredField, (particle[0],particle[1]), (maxRange,maxRange), particle[2]*np.pi/180, int(particle[2]-180*fov/(np.pi*2)), int(particle[2]+180*fov/(np.pi*2)), [150,0,0], 4)
+            cv.line(coloredField,(int(particle[0]+minRange*np.cos(particle[2]*np.pi/180+fov/2)),int(particle[1]+minRange*np.sin(particle[2]*np.pi/180+fov/2))),(int(particle[0]+maxRange*np.cos(particle[2]*np.pi/180+fov/2)),int(particle[1]+maxRange*np.sin(particle[2]*np.pi/180+fov/2))),[150,0,0],size)
+            cv.line(coloredField,(int(particle[0]+minRange*np.cos(particle[2]*np.pi/180-fov/2)),int(particle[1]+minRange*np.sin(particle[2]*np.pi/180-fov/2))),(int(particle[0]+maxRange*np.cos(particle[2]*np.pi/180-fov/2)),int(particle[1]+maxRange*np.sin(particle[2]*np.pi/180-fov/2))),[150,0,0],size)
+            cv.ellipse(coloredField, (particle[0],particle[1]), (minRange,minRange), particle[2]*np.pi/180, int(particle[2]-180*fov/(np.pi*2)), int(particle[2]+180*fov/(np.pi*2)), [150,0,0], size)
+            cv.ellipse(coloredField, (particle[0],particle[1]), (maxRange,maxRange), particle[2]*np.pi/180, int(particle[2]-180*fov/(np.pi*2)), int(particle[2]+180*fov/(np.pi*2)), [150,0,0], size)
         else:
-            cv.line(coloredField,(particle[0],particle[1]),(int(particle[0]+10*np.cos(particle[2]*np.pi/180)),int(particle[1]+10*np.sin(particle[2]*np.pi/180))),color,3)
+            cv.line(coloredField,(particle[0],particle[1]),(int(particle[0]+size*3*np.cos(particle[2]*np.pi/180)),int(particle[1]+size*3*np.sin(particle[2]*np.pi/180))),color,size)
 
         return coloredField
     
@@ -144,61 +147,63 @@ if __name__ == '__main__':
     baseField = FieldGenerator.drawInField(baseField)
     
 
-    fov = 2*np.pi/3
+    fov = np.pi/4
     minRange = 30
     maxRange = 120
+
     heading = 90
 
-    passo = [20,15]
-    erro = [5+passo[0]/5, 10+passo[1]/5]
+    passo = [5,5]
+    erro = [passo[0]/5, passo[1]/5]
     robot = [FieldGenerator.nwRGoalArea[0][0]+50,FieldGenerator.nwRGoalArea[0][1],heading]
 
-    N = 400
-    # Criando distribuição normal das particulas
+    N = 1000
+
+    # Criando distribuição uniforme das particulas
     # particles = pf.create_uniform_particles((0,baseField.shape[1]),(0,baseField.shape[0]),(0,360),N)
+
     # Criando distribuição gaussiana das particulas
     particles = pf.create_gaussian_particles((robot[0],robot[1],robot[2]),(100,100,180),N)
-    #print(particles)
 
     var=[100,100]
     i = 0
 
-    
-    while (i<40 and var[0]>0.1):
+    start_time = time.time()
+
+    while (i<200 and (var[0]+var[1])>20):
         field = np.copy(baseField)
         robot = pf.moveRobot(robot,(passo[0],passo[1]))
         field = FieldGenerator.drawParticles(field, particles, drawFov=False, fov=fov, minRange=minRange, maxRange=maxRange)
-        field = FieldGenerator.drawParticle(field, robot, fov, minRange, maxRange, drawFov=False, color=[0,100,200])
+        field = FieldGenerator.drawParticle(field, robot, fov, minRange, maxRange, drawFov=False, color=[0,100,200],robo=True)
 
         # Pegando resposta do robô
         answer = pf.checkFOV(robot, fov, minRange, maxRange, FieldGenerator.fieldIntersections)
         print(f'Robot vision: {answer}')
 
-        # Prediz localizacao das particulas
+        # Atualiza localizacao das particulas
         particles = pf.predict(particles,(passo[0],passo[1]),erro)
-        print(len(particles))
 
         # Testa o input das particulas (update)
         weights = pf.testParticles(particles, fov, minRange, maxRange, FieldGenerator.fieldIntersections, answer)
-        #print(f'Weights: {weights}')
 
         # Verifica se é necessario resample
         if pf.neff(weights) < (N/2):
-            print(f'Neff: {pf.neff(weights)}')
             particles, weights = pf.resample_from_index(particles, weights)
 
-        
+        # Calcula a media e variancia
         mean, var = pf.estimate(particles,weights)
         print(f'Media: {mean}')
         print(f'Variancia: {var}')
 
         print('-------------')
         cv.imshow("test",cv.flip(field,0))
-        cv.waitKey(200)
+        cv.waitKey(50)
 
         i +=1
     
-    print(f'Convergiu para ({mean[0]},{mean[1]})')
+    end_time = time.time()
+
+    print(f'Convergiu para ({mean[0]},{mean[1]}) com {i} iteracoes e {end_time - start_time}')
     print(f'Posicao real em ({robot[0],robot[1]})')
     cv.circle(field,(int(mean[0]),int(mean[1])),15,[0,100,200],3)
     cv.imshow("test",cv.flip(field,0))

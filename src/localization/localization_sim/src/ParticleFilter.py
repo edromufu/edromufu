@@ -2,8 +2,9 @@ import numpy as np
 from filterpy.monte_carlo import systematic_resample
 from numpy.random import randn, uniform
 from math import dist
-import scipy.stats
 
+
+# Gera particulas com distribuicao uniforme
 def create_uniform_particles(xRange, yRange, headingRange, N):
     particles = np.empty((N, 3))
     particles[:, 0] = uniform(xRange[0], xRange[1], size=N)
@@ -12,6 +13,7 @@ def create_uniform_particles(xRange, yRange, headingRange, N):
     particles[:, 2] %= 360
     return particles.astype(int)
 
+# Gera particulas com distribuicao gaussiana, utilizando uma media e um desvio padrao
 def create_gaussian_particles(mean, standardDeviation, N):
     particles = np.empty((N, 3))
     particles[:, 0] = mean[0] + (randn(N) * standardDeviation[0])
@@ -20,17 +22,40 @@ def create_gaussian_particles(mean, standardDeviation, N):
     particles[:, 2] %= 360
     return particles.astype(int)
 
+# Move as particulas de acordo com a movimentacao do robo, com um erro
 def predict(particles, passo, erro):
     N = len(particles)
     particles[:, 2] += (passo[1] + (randn(N) * erro[1])).astype(int)
     particles[:, 2] %= 360
 
     dist = passo[0] + (randn(N) * erro[0])
-    particles[:, 0] += (np.cos(particles[:, 2]) * dist).astype(int)
-    particles[:, 1] += (np.sin(particles[:, 2]) * dist).astype(int)
+    particles[:, 0] += (np.cos(particles[:, 2]*np.pi/180) * dist).astype(int)
+    particles[:, 1] += (np.sin(particles[:, 2]*np.pi/180) * dist).astype(int)
 
     return particles
 
+# Testa todas as particulas para atualizar seus pesos (utiliza a checkFOV())
+def testParticles(particles, fov, minRange, maxRange, intersections, answer, weights = None):
+    if weights == None: 
+        weights = [1]*len(particles)
+
+    for i, particle in enumerate(particles):
+        particleAnswer = []
+        particleAnswer = checkFOV(particle, fov, minRange, maxRange, intersections)
+        
+        if len(answer) != 0:
+            checking = compareIntersectionLists(answer,particleAnswer)/len(answer)
+        elif len(particleAnswer) != 0:
+            checking = 1/(1+len(particleAnswer))
+        else:
+            checking = 1
+        weights[i] *= checking
+        weights[i] += 1e-300
+
+    weights = np.divide(weights,sum(weights))
+    return weights
+
+# Verifica quais intersecoes estao na linha de visao de uma unica particula
 def checkFOV(particle, fov, minRange, maxRange, intersections):
     seen = []
     for intersection in intersections:
@@ -69,26 +94,11 @@ def checkFOV(particle, fov, minRange, maxRange, intersections):
 
     return seen
 
-def testParticles(particles, fov, minRange, maxRange, intersections, answer, weights = None):
-    if weights == None: 
-        weights = [1]*len(particles)
+# Utilizada para verificar a necessidade de resample
+def neff(weights):
+    return 1. / np.sum(np.square(weights))
 
-    for i, particle in enumerate(particles):
-        particleAnswer = []
-        particleAnswer = checkFOV(particle, fov, minRange, maxRange, intersections)
-        
-        if len(answer) != 0:
-            checking = compareIntersectionLists(answer,particleAnswer)/len(answer)
-        elif len(particleAnswer) != 0:
-            checking = 1/(1+len(particleAnswer))
-        else:
-            checking = 1
-        weights[i] *= checking
-
-
-    weights = np.divide(weights,sum(weights))
-    return weights
-
+# Realiza o resample
 def resample_from_index(particles, weights):
     N = len(particles)
     indexes = systematic_resample(weights)
@@ -99,26 +109,22 @@ def resample_from_index(particles, weights):
 
     return particles,weights
 
-
-
-def neff(weights):
-    return 1. / np.sum(np.square(weights))
-
-def moveRobot(robot, passo):
-    robot[2] += passo[1]
-    robot[0] += int(passo[0]*np.cos(robot[2]*np.pi/180))
-    robot[1] += int(passo[0]*np.sin(robot[2]*np.pi/180))
-    return robot
-
-
+# Estima a posicao do robo atraves da media e variancia ponderada das particulas (nao estima a direcao)
 def estimate(particles, weights):
-    """returns mean and variance of the weighted particles"""
 
     pos = particles[:, 0:2]
     mean = np.average(pos, weights=weights, axis=0).astype(int)
     var  = np.average((pos - mean)**2, weights=weights, axis=0)
     return mean, var
 
+# Utilizada para atualizar a posicao do robo 2D simulado
+def moveRobot(robot, passo):
+    robot[2] += passo[1]
+    robot[0] += int(passo[0]*np.cos(robot[2]*np.pi/180))
+    robot[1] += int(passo[0]*np.sin(robot[2]*np.pi/180))
+    return robot
+
+# Utilizada para calcular a quantidade de elementos presentes nas duas listas
 def compareIntersectionLists(list1, list2):
     result = 0
     for intersection1 in list1:
