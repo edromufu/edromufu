@@ -106,7 +106,6 @@ class Core:
                 pose = self.sortJsonIndex2MotorInput(pose)
                 checked_poses = np.append(checked_poses, [pose], axis=0)  
 
-            
             for pose in checked_poses: 
                 self.queue.append(pose)
 
@@ -114,7 +113,14 @@ class Core:
             response.success = True
         
         elif 'page' in str(req.__class__):
-            Page(req.page_name, QUEUE_TIME)
+            page_poses = Page(req.page_name, QUEUE_TIME)
+
+            for index, pose in enumerate(page_poses):
+                pose = self.invertMotorsPosition(pose)
+                page_poses[index] = pose
+            
+            for pose in page_poses: 
+                self.queue.append(pose)
 
             response = pageResponse()
             response.success = True

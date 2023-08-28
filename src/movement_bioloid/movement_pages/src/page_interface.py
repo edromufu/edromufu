@@ -40,19 +40,27 @@ class MainWindow(QMainWindow):
         rospy.init_node('page_interface')
         self.motorsTorque = rospy.ServiceProxy('u2d2_comm/enableTorque', enable_torque)
         self.motorsFeedback = rospy.ServiceProxy('u2d2_comm/feedbackBody', body_feedback)
+        self.pageRunner = rospy.ServiceProxy('movement_central/request_page', page)
 
         rospy.wait_for_service('u2d2_comm/enableTorque')
 
         # Integração dos botões
         self.ui.torqueButton.clicked.connect(self.toggleAllTorque)
 
-        self.ui.saveCurrentPose.clicked.connect(self.generateNewCard)
+        self.ui.saveCurrentPose.clicked.connect(lambda: self.generateNewCard(requestFeedback=True))
+
+        self.ui.playFromFirst.clicked.connect(self.playPage)
+        self.ui.playFromSelected.clicked.connect(lambda: self.playPage(selected=True))
 
         for i, btn in enumerate(self.ui.scrollMotorsContent.findChildren(QPushButton)):
             btn.clicked.connect(lambda _, index=i: self.toggleOneTorque(index))    
 
         self.ui.actionSaveAs.triggered.connect(lambda: self.save(As=True))
         self.ui.actionSave.triggered.connect(self.save)
+        self.ui.actionOpenPage.triggered.connect(self.open)
+        self.ui.actionShortcutsInfo.triggered.connect(lambda: self.showInfo('shortcuts'))
+        self.ui.actionAbout.triggered.connect(lambda: self.showInfo('about'))
+        self.ui.actionHelp.triggered.connect(lambda: self.showInfo('help'))
 
         self.shortcutsConfig()
         
@@ -80,6 +88,14 @@ class MainWindow(QMainWindow):
         # Atalho de colar posição de todos os motores em uma pose (desde que copiado)
         shortcutPastePose = QShortcut(QKeySequence(Qt.CTRL + Qt.SHIFT + Qt.Key_V), self)
         shortcutPastePose.activated.connect(self.pasteWholePoseContent)
+
+        # Atalho de rodar a page a partir da primeira
+        shortcutPlayPage = QShortcut(QKeySequence(Qt.CTRL + Qt.Key_P), self)
+        shortcutPlayPage.activated.connect(self.playPage)
+
+        # Atalho de rodar a page a partir da selecionada
+        shortcutPlayPageFromSelected = QShortcut(QKeySequence(Qt.CTRL + Qt.SHIFT + Qt.Key_P), self)
+        shortcutPlayPageFromSelected.activated.connect(lambda: self.playPage(selected=True))
 
     def toggleAllTorque(self):       
         
@@ -116,9 +132,12 @@ class MainWindow(QMainWindow):
         else:
             self.currentCheckedPose = None
     
-    def generateNewCard(self):
-        current_position = list(self.motorsFeedback(True).pos_vector)
-        
+    def generateNewCard(self, requestFeedback=True):
+        if requestFeedback:
+            current_position = list(self.motorsFeedback(True).pos_vector)
+        else:
+            current_position = [-1]*18
+
         self.currentPoseNumber += 1
         self.poseObjects.append(newPoseFrame(self.ui.horizontalLayout_8, self.currentPoseNumber, self))
         
@@ -170,18 +189,19 @@ class MainWindow(QMainWindow):
             for index, lineEdit in enumerate(self.poseObjects[self.currentCheckedPose].posePositionsLineEdit):
                 lineEdit.setText(str(self.copiedContent[index]))
 
-    def save(self, As=False):
+    def save(self, As=False, selected=0):
         # Captura dos dados na GUI
         pageData = {'joints_positions': {}, 'time_between_poses': []}
         for n in range(18):
             pageData['joints_positions'][f'motor_{n}'] = []
         
         for poseId, poseObject in enumerate(self.poseObjects):
-            for index, lineEdit in enumerate(poseObject.posePositionsLineEdit):
-                pageData['joints_positions'][f'motor_{index}'].append(float(lineEdit.text()))
+            if poseId >= selected:
+                for index, lineEdit in enumerate(poseObject.posePositionsLineEdit):
+                    pageData['joints_positions'][f'motor_{index}'].append(float(lineEdit.text()))
 
-            if poseId != 0:
-                pageData['time_between_poses'].append(float(poseObject.timeEdit.text()))
+                if poseId != selected:
+                    pageData['time_between_poses'].append(float(poseObject.timeEdit.text()))
         
         # Seleção do nome do arquivo
         if self.fileName is None or As:
@@ -191,7 +211,69 @@ class MainWindow(QMainWindow):
 
         # Salva os dados da GUI no arquivo selecionado
         with open(self.fileName, 'w') as file:
-            json.dump(pageData, file, indent=4) 
+            json.dump(pageData, file, indent=4)
+    
+    def open(self):
+        # Obtem os dados do arquivo selecionado
+        self.fileName, _ = QFileDialog.getOpenFileName(self,"Abrir...", MAIN_DIR, "Page Files (*.json)")
+        
+        with open(self.fileName, 'r') as pageFile:
+            pageData = json.loads(pageFile.read())
+
+        # Reseta a interface e a prepara para receber o que estava no arquivo salvo
+        while self.currentPoseNumber > 0:
+            self.deletePose(0)
+        
+        for _ in range(len(pageData['joints_positions']['motor_0'])):
+            self.generateNewCard(requestFeedback=False)
+
+        # Insere os dados do arquivo na GUI
+        for poseId, poseObject in enumerate(self.poseObjects):
+            for index, lineEdit in enumerate(poseObject.posePositionsLineEdit):
+                lineEdit.setText(str(pageData['joints_positions'][f'motor_{index}'][poseId]))
+            
+            if poseId != 0:
+                poseObject.timeEdit.setText(str(pageData['time_between_poses'][poseId-1]))
+
+    def playPage(self, selected=False):
+        
+        currentFileName = self.fileName
+        self.fileName = MAIN_DIR+'temp2run.json'
+        if selected and self.currentCheckedPose is not None:
+            self.save(selected=self.currentCheckedPose)
+        else:   
+            self.save()
+
+        self.pageRunner('temp2run')
+        os.remove(self.fileName)
+        self.fileName = currentFileName
+
+    def showInfo(self, info):
+        msg_box = QMessageBox(self)
+
+        if info == 'shortcuts':
+            msg_box.setWindowTitle("Atalhos da GUI")
+            msg_box.setIcon(QMessageBox.Information)
+            msg_box.setText("CTRL+Q: Captura a pose atual.\nSHIFT+DELETE: Deleta a pose selecionada.\n" \
+                            "CTRL+Z: Remove a última pose.\nCTRL+SHIFT+C: Copia as posições da pose selecionada.\n" \
+                            "CTRL+SHIFT+V: Cola as posições na pose selecionada (se copiado).\nCTRL+P: Reproduz a page da primeira pose.\n" \
+                            "CTRL+SHIFT+P: Reproduz a page da pose selecionada."
+                           )
+                           
+        elif info == 'about':
+            msg_box.setWindowTitle("Sobre")
+            msg_box.setIcon(QMessageBox.Information)
+            msg_box.setText('Interface gráfica finalizada em 28/08 para a LARC 2023.' \
+                            '\nESTA INTERFACE NÃO EXECUTA DURANTE OS JOGOS.\nContatos:' \
+                            '\nDiretor responsável: Luis Costa (lipemenezescosta@gmail.com)'
+                           )
+            
+        elif info == 'help':
+            msg_box.setWindowTitle("Ajuda")
+            msg_box.setText("Link para página da documentação sobre pages.")
+        
+        msg_box.exec_()
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
