@@ -1,2 +1,0 @@
-string direction
-string pattern
