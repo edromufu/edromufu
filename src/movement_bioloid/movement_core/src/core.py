@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 #coding=utf=8
 
-import rospy, timeit
+import rospy
 import numpy as np
 
 import sys, os
@@ -13,16 +13,19 @@ from setup_robot import Robot
 sys.path.append(edrom_dir+'movement_bioloid/movement_functions/src')
 from movement_patterns import Gait
 
+sys.path.append(edrom_dir+'movement_bioloid/movement_pages/src')
+from page_runner import Page
+
 from movement_utils.srv import *
 from movement_utils.msg import *
 
-QUEUE_TIME = 0.2 #Em segundos
+QUEUE_TIME = rospy.get_param('/movement_core/queue_time') #Em segundos
 
 class Core:
     def __init__(self): 
         #Inicialização do objeto (modelo) da robô em código
         robot_name = rospy.get_param('/movement_core/name')
-        
+                
         self.robotInstance = Robot(robot_name)
         self.robotModel = self.robotInstance.robotJoints
         self.motorId2JsonIndex = self.robotInstance.motorId2JsonIndex
@@ -32,6 +35,7 @@ class Core:
 
         #Services de requisição de movimento, todos possuem como callback movementManager
         rospy.Service('movement_central/request_gait', gait, self.movementManager)
+        rospy.Service('movement_central/request_page', page, self.movementManager)
         
         #Estruturas para comunicação com U2D2
         self.motorsFeedback = rospy.ServiceProxy('u2d2_comm/feedbackBody', body_feedback)
@@ -41,8 +45,7 @@ class Core:
 
         #Timer para fila de publicações
         rospy.Timer(rospy.Duration(QUEUE_TIME), self.sendFromQueue)
-        self.queue = []  
-        self.queue.append(np.array([0]*10 + [-0.65, 0.65, 0.84, 0.84, -0.3, -0.3] + [0]*2))
+        self.queue = []
 
     def callRobotModelUpdate(self):
         self.motorsCurrentPosition = list(self.motorsFeedback(True).pos_vector)
@@ -92,6 +95,7 @@ class Core:
     def movementManager(self, req):
         
         self.callRobotModelUpdate()
+
         if 'gait' in str(req.__class__):
 
             checked_poses = np.array([[0]*10 + [-0.65, 0.65, 0.84, 0.84, -0.3, -0.3] + [0]*2])
@@ -102,11 +106,23 @@ class Core:
                 pose = self.sortJsonIndex2MotorInput(pose)
                 checked_poses = np.append(checked_poses, [pose], axis=0)  
 
-            
             for pose in checked_poses: 
                 self.queue.append(pose)
 
             response = gaitResponse()
+            response.success = True
+        
+        elif 'page' in str(req.__class__):
+            page_poses = Page(req.page_name, QUEUE_TIME)
+
+            for index, pose in enumerate(page_poses):
+                pose = self.invertMotorsPosition(pose)
+                page_poses[index] = pose
+            
+            for pose in page_poses: 
+                self.queue.append(pose)
+
+            response = pageResponse()
             response.success = True
         
         return response

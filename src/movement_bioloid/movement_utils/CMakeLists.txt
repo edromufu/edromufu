@@ -33,6 +33,7 @@ add_service_files(
   body_feedback.srv
   head_feedback.srv
   gait.srv
+  page.srv
 )
 
 ## Generate actions in the 'action' folder

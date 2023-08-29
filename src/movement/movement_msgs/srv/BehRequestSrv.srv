@@ -1,5 +1,0 @@
-string required_movement
-bool required_status
----
-
-bool response
