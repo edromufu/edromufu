@@ -44,8 +44,8 @@ class u2d2Control():
 
         if self.MX_106_MOTORS or self.MX_64_MOTORS:
             self.packetHandler2 = PacketHandler(2.0)   
-            self.bodyGroup2 = GroupSyncWrite(self.portHandler, self.packetHandler2, PROTOCOL_2_INFOS['GOAL_POS_ADDR'], PROTOCOL_1_INFOS['GOAL_POS_LEN'])
-            self.headGroup2 = GroupSyncWrite(self.portHandler, self.packetHandler2, PROTOCOL_2_INFOS['GOAL_POS_ADDR'], PROTOCOL_1_INFOS['GOAL_POS_LEN'])  
+            self.bodyGroup2 = GroupSyncWrite(self.portHandler, self.packetHandler2, PROTOCOL_2_INFOS['GOAL_POS_ADDR'], PROTOCOL_2_INFOS['GOAL_POS_LEN'])
+            self.headGroup2 = GroupSyncWrite(self.portHandler, self.packetHandler2, PROTOCOL_2_INFOS['GOAL_POS_ADDR'], PROTOCOL_2_INFOS['GOAL_POS_LEN'])  
 
         self.startComm()
         
