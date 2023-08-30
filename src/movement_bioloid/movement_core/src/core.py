@@ -98,7 +98,7 @@ class Core:
 
         if 'gait' in str(req.__class__):
 
-            checked_poses = np.array([[0]*10 + [-0.65, 0.65, 0.84, 0.84, -0.3, -0.3] + [0]*2])
+            checked_poses = np.array([[0]*6 + [0.0652, 0.0161, -0.0407, 0.0944, 0.6452, -0.524, 1.0733, 1.0978, -0.5654, -0.5746, -0.0713, 0.0069]])
             gait_poses = Gait(self.robotModel, req.step_height, req.steps_number)
             
             for index, pose in enumerate(gait_poses):
@@ -114,10 +114,6 @@ class Core:
         
         elif 'page' in str(req.__class__):
             page_poses = Page(req.page_name, QUEUE_TIME)
-
-            for index, pose in enumerate(page_poses):
-                pose = self.invertMotorsPosition(pose)
-                page_poses[index] = pose
             
             for pose in page_poses: 
                 self.queue.append(pose)
