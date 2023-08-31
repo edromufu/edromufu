@@ -18,8 +18,10 @@ from page_runner import Page
 
 from movement_utils.srv import *
 from movement_utils.msg import *
+from sensor_msgs.msg import JointState
 
 QUEUE_TIME = rospy.get_param('/movement_core/queue_time') #Em segundos
+PUB2VIS = rospy.get_param('/movement_core/pub2vis')
 
 class Core:
     def __init__(self): 
@@ -48,6 +50,15 @@ class Core:
         #Timer para fila de publicações
         rospy.Timer(rospy.Duration(QUEUE_TIME), self.sendFromQueue)
         self.queue = []
+
+        # Definições para visualizador
+        if PUB2VIS:
+            self.queuevis = []
+            self.pub2vis = rospy.Publisher('/joint_states', JointState, queue_size=100)
+            self.pub2vismsg = JointState()
+            self.pub2vismsg.name = ['RHIP_UZ_joint','RHIP_UX_joint','RHIP_UY_joint','RKNEE_joint',
+            'RANKLE_UY_joint','RANKLE_UX_joint','LHIP_UZ_joint','LHIP_UX_joint','LHIP_UY_joint',
+            'LKNEE_joint','LANKLE_UY_joint','LANKLE_UX_joint']
 
     def callRobotModelUpdate(self):
         self.motorsCurrentPosition = list(self.motorsFeedback(True).pos_vector)
@@ -100,7 +111,7 @@ class Core:
 
         if 'gait' in str(req.__class__):
 
-            checked_poses = np.array([[0]*6 + [0.0652, 0.0161, -0.0407, 0.0944, 0.6452, -0.524, 1.0733, 1.0978, -0.5654, -0.5746, -0.0713, 0.0069]])
+            checked_poses = self.motorsCurrentPosition
             gait_poses = Gait(self.robotModel, req.step_height, req.steps_number)
             
             for index, pose in enumerate(gait_poses):
@@ -111,6 +122,11 @@ class Core:
             for pose in checked_poses: 
                 self.queue.append(pose)
 
+            if PUB2VIS:
+                for pose in gait_poses:
+                    pose = self.invertMotorsPosition(pose)
+                    self.queuevis.append(pose[1:-2])
+
             response = gaitResponse()
             response.success = True
         
@@ -119,6 +135,13 @@ class Core:
             
             for pose in page_poses: 
                 self.queue.append(pose)
+            
+            if PUB2VIS:
+                for pose in page_poses:
+                    pose = self.sortMotorReturn2JsonIndex(pose)
+                    pose = self.invertMotorsPosition(pose)
+
+                    self.queuevis.append(pose[1:-2])
 
             response = pageResponse()
             response.success = True
@@ -130,6 +153,12 @@ class Core:
         if self.queue:
             self.pub2motorsMsg.pos_vector = self.queue.pop(0)
             self.pub2motors.publish(self.pub2motorsMsg)
+
+        if self.queuevis and PUB2VIS:
+            self.pub2vismsg.position = self.queuevis.pop(0)
+            self.pub2vismsg.header.stamp = rospy.Time.now()
+            self.pub2vis.publish(self.pub2vismsg)
+
 
 if __name__ == '__main__':
     np.set_printoptions(precision=3, suppress=True, linewidth=np.inf, threshold=sys.maxsize)

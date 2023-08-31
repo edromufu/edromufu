@@ -10,6 +10,7 @@
     <node name="movement_core" pkg="movement_core" type="core.py" output="screen">
         <param name="name" value="$(eval arg('robot_name'))" />
         <param name="queue_time" value="$(eval arg('queue_time'))" />
+        <param name="pub2vis" value="$(eval arg('visualization'))" />
     </node>
 
     <!-- Comunicação dos motores com U2D2 -->
@@ -27,7 +28,7 @@
     </node>
 
     <!-- Inicialização da visualização da robô -->
-    <include file="$(find urdf_tutorial)/launch/display.launch" if="$(eval arg('visualization'))">
+    <include file="$(find humanoid_visualization)/launch/display.launch" if="$(eval arg('visualization'))">
         <arg name="model" value="$(find humanoid_visualization)/urdf/$(arg robot_name).urdf" />
         <arg name="rvizconfig" value="$(find humanoid_visualization)/urdf/movement.rviz" />
     </include>
