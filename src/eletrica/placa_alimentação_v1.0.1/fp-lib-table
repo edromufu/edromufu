@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name "XT-60")(type "KiCad")(uri "${KIPRJMOD}/../../global_libs/TTL")(options "")(descr ""))
+  (lib (name "EDROM")(type "KiCad")(uri "/home/iuri/Github/edromufu/src/eletrica/placa_alimentação_v1.0.1")(options "")(descr ""))
+)
