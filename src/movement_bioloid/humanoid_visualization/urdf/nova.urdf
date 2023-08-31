@@ -1,0 +1,342 @@
+<?xml version="1.0"?>
+
+<robot name="nova">
+
+  <material name="black">
+    <color rgba="0 0 0 1"/>
+  </material>
+  <material name="white">
+    <color rgba="1 1 1 1"/>
+  </material>
+  <material name="red">
+    <color rgba="1 0 0 0.2"/>
+  </material>
+  <material name="blue">
+    <color rgba="0 0 1 0.2"/>
+  </material>
+  <material name="green">
+    <color rgba="0 1 0 0.2"/>
+  </material>
+
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <sphere radius="0.015"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <link name="x_axis">
+    <visual>
+      <geometry>
+				<cylinder radius="0.015" length="5"/>
+			</geometry>
+      <origin rpy="0 1.57075 0" xyz="2.5 0 0"/>
+      <material name="red"/>
+    </visual>
+  </link>
+
+	<joint name="base_to_x_axis" type="fixed">
+    <parent link="base_link"/>
+    <child link="x_axis"/>
+    <origin xyz="0 0 0"/>
+  </joint>
+
+  <link name="y_axis">
+    <visual>
+      <geometry>
+				<cylinder radius="0.015" length="5"/>
+			</geometry>
+      <origin rpy="1.57075 0 0" xyz="0 2.5 0"/>
+      <material name="green"/>
+    </visual>
+  </link>
+
+	<joint name="base_to_y_axis" type="fixed">
+    <parent link="base_link"/>
+    <child link="y_axis"/>
+    <origin xyz="0 0 0"/>
+  </joint>
+
+  <link name="z_axis">
+    <visual>
+      <geometry>
+				<cylinder radius="0.015" length="5"/>
+			</geometry>
+      <origin xyz="0 0 2.5"/>
+      <material name="blue"/>
+    </visual>
+  </link>
+
+  <joint name="base_to_z_axis" type="fixed">
+    <parent link="base_link"/>
+    <child link="z_axis"/>
+    <origin xyz="0 0 0"/>
+  </joint>
+
+  <link name="COM">
+    <visual>
+      <geometry>
+				<cylinder radius="0.01" length="0.03"/>
+			</geometry>
+      <origin xyz="0 0 0"/>
+      <material name="black"/>
+    </visual>
+  </link>
+
+  <joint name="base_to_COM" type="fixed">
+    <parent link="base_link"/>
+    <child link="COM"/>
+    <origin xyz="0 0 0.295"/>
+  </joint>
+
+  <link name="RHIP_UZ">
+    <visual>
+			<geometry>
+				<cylinder radius="0.01" length="0.03"/>
+			</geometry>
+      <origin xyz="0 0 0"/>
+      <material name="black"/>
+    </visual>
+  </link>
+
+  <joint name="RHIP_UZ_joint" type="revolute">
+    <axis xyz="0 0 1"/>
+		<limit effort="1000.0" lower="-3.14" upper="3.14" velocity="10"/>
+    <origin rpy="0 0 0" xyz="0.002 -0.042 -0.045"/>
+    <parent link="COM"/>
+    <child link="RHIP_UZ"/>
+  </joint>
+
+  <link name="RHIP_UX">
+    <visual>
+			<geometry>
+				<cylinder radius="0.01" length="0.03"/>
+			</geometry>
+      <origin rpy="0 1.57075 0" xyz="0 0 0"/>
+      <material name="black"/>
+    </visual>
+  </link>
+
+  <joint name="RHIP_UX_joint" type="revolute">
+    <axis xyz="1 0 0"/>
+		<limit effort="1000.0" lower="-3.14" upper="3.14" velocity="10"/>
+    <origin rpy="0 0 0" xyz="-0.051 0 -0.034"/>
+    <parent link="RHIP_UZ"/>
+    <child link="RHIP_UX"/>
+  </joint>
+
+  <link name="RHIP_UY">
+    <visual>
+      <geometry>
+				<cylinder radius="0.01" length="0.03"/>
+			</geometry>
+      <origin rpy="1.57075 0 0" xyz="0 0 0"/>
+      <material name="black"/>
+    </visual>
+  </link>
+
+  <joint name="RHIP_UY_joint" type="revolute">
+    <axis xyz="0 1 0"/>
+		<limit effort="1000.0" lower="-3.14" upper="3.14" velocity="10"/>
+    <origin rpy="0 0 0" xyz="0.073 0 0"/>
+    <parent link="RHIP_UX"/>
+    <child link="RHIP_UY"/>
+  </joint>
+
+	<link name="RKNEE">
+    <visual>
+      <geometry>
+				<cylinder radius="0.01" length="0.03"/>
+			</geometry>
+      <origin rpy="1.57075 0 0" xyz="0 0 0"/>
+      <material name="black"/>
+    </visual>
+  </link>
+
+  <joint name="RKNEE_joint" type="revolute">
+    <axis xyz="0 1 0"/>
+		<limit effort="1000.0" lower="-3.14" upper="3.14" velocity="10"/>
+    <origin rpy="0 0 0" xyz="0 0 -0.11"/>
+    <parent link="RHIP_UY"/>
+    <child link="RKNEE"/>
+  </joint>
+
+	<link name="RANKLE_UY">
+    <visual>
+      <geometry>
+				<cylinder radius="0.01" length="0.03"/>
+			</geometry>
+      <origin rpy="1.57075 0 0" xyz="0 0 0"/>
+      <material name="black"/>
+    </visual>
+  </link>
+
+  <joint name="RANKLE_UY_joint" type="revolute">
+    <axis xyz="0 1 0"/>
+		<limit effort="1000.0" lower="-3.14" upper="3.14" velocity="10"/>
+    <origin rpy="0 0 0" xyz="0 0 -0.083"/>
+    <parent link="RKNEE"/>
+    <child link="RANKLE_UY"/>
+  </joint>
+
+	<link name="RANKLE_UX">
+    <visual>
+      <geometry>
+				<cylinder radius="0.01" length="0.03"/>
+			</geometry>
+      <origin rpy="0 1.57075 0" xyz="0 0 0"/>
+      <material name="black"/>
+    </visual>
+  </link>
+
+  <joint name="RANKLE_UX_joint" type="revolute">
+    <axis xyz="1 0 0"/>
+		<limit effort="1000.0" lower="-3.14" upper="3.14" velocity="10"/>
+    <origin rpy="0 0 0" xyz="-0.073 0 0"/>
+    <parent link="RANKLE_UY"/>
+    <child link="RANKLE_UX"/>
+  </joint>
+
+	<link name="RFOOT">
+    <visual>
+      <geometry>
+				<box size="0.13 0.076 0.02"/>
+			</geometry>
+      <origin xyz="0 0 0"/>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <joint name="RFOOT_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0.05 0 -0.028"/>
+    <parent link="RANKLE_UX"/>
+    <child link="RFOOT"/>
+  </joint>
+
+    <link name="LHIP_UZ">
+    <visual>
+			<geometry>
+				<cylinder radius="0.01" length="0.03"/>
+			</geometry>
+      <origin xyz="0 0 0"/>
+      <material name="black"/>
+    </visual>
+  </link>
+
+  <joint name="LHIP_UZ_joint" type="revolute">
+    <axis xyz="0 0 1"/>
+		<limit effort="1000.0" lower="-3.14" upper="3.14" velocity="10"/>
+    <origin rpy="0 0 0" xyz="0.002 0.042 -0.045"/>
+    <parent link="COM"/>
+    <child link="LHIP_UZ"/>
+  </joint>
+
+  <link name="LHIP_UX">
+    <visual>
+			<geometry>
+				<cylinder radius="0.01" length="0.03"/>
+			</geometry>
+      <origin rpy="0 1.57075 0" xyz="0 0 0"/>
+      <material name="black"/>
+    </visual>
+  </link>
+
+  <joint name="LHIP_UX_joint" type="revolute">
+    <axis xyz="1 0 0"/>
+		<limit effort="1000.0" lower="-3.14" upper="3.14" velocity="10"/>
+    <origin rpy="0 0 0" xyz="-0.051 0 -0.034"/>
+    <parent link="LHIP_UZ"/>
+    <child link="LHIP_UX"/>
+  </joint>
+
+  <link name="LHIP_UY">
+    <visual>
+      <geometry>
+				<cylinder radius="0.01" length="0.03"/>
+			</geometry>
+      <origin rpy="1.57075 0 0" xyz="0 0 0"/>
+      <material name="black"/>
+    </visual>
+  </link>
+
+  <joint name="LHIP_UY_joint" type="revolute">
+    <axis xyz="0 1 0"/>
+		<limit effort="1000.0" lower="-3.14" upper="3.14" velocity="10"/>
+    <origin rpy="0 0 0" xyz="0.073 0 0"/>
+    <parent link="LHIP_UX"/>
+    <child link="LHIP_UY"/>
+  </joint>
+
+	<link name="LKNEE">
+    <visual>
+      <geometry>
+				<cylinder radius="0.01" length="0.03"/>
+			</geometry>
+      <origin rpy="1.57075 0 0" xyz="0 0 0"/>
+      <material name="black"/>
+    </visual>
+  </link>
+
+  <joint name="LKNEE_joint" type="revolute">
+    <axis xyz="0 1 0"/>
+		<limit effort="1000.0" lower="-3.14" upper="3.14" velocity="10"/>
+    <origin rpy="0 0 0" xyz="0 0 -0.11"/>
+    <parent link="LHIP_UY"/>
+    <child link="LKNEE"/>
+  </joint>
+
+	<link name="LANKLE_UY">
+    <visual>
+      <geometry>
+				<cylinder radius="0.01" length="0.03"/>
+			</geometry>
+      <origin rpy="1.57075 0 0" xyz="0 0 0"/>
+      <material name="black"/>
+    </visual>
+  </link>
+
+  <joint name="LANKLE_UY_joint" type="revolute">
+    <axis xyz="0 1 0"/>
+		<limit effort="1000.0" lower="-3.14" upper="3.14" velocity="10"/>
+    <origin rpy="0 0 0" xyz="0 0 -0.083"/>
+    <parent link="LKNEE"/>
+    <child link="LANKLE_UY"/>
+  </joint>
+
+	<link name="LANKLE_UX">
+    <visual>
+      <geometry>
+				<cylinder radius="0.01" length="0.03"/>
+			</geometry>
+      <origin rpy="0 1.57075 0" xyz="0 0 0"/>
+      <material name="black"/>
+    </visual>
+  </link>
+
+  <joint name="LANKLE_UX_joint" type="revolute">
+    <axis xyz="1 0 0"/>
+		<limit effort="1000.0" lower="-3.14" upper="3.14" velocity="10"/>
+    <origin rpy="0 0 0" xyz="-0.073 0 0"/>
+    <parent link="LANKLE_UY"/>
+    <child link="LANKLE_UX"/>
+  </joint>
+
+	<link name="LFOOT">
+    <visual>
+      <geometry>
+				<box size="0.13 0.076 0.02"/>
+			</geometry>
+      <origin xyz="0 0 0"/>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <joint name="LFOOT_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0.05 0 -0.028"/>
+    <parent link="LANKLE_UX"/>
+    <child link="LFOOT"/>
+  </joint>
+
+</robot>

@@ -23,6 +23,9 @@ QUEUE_TIME = rospy.get_param('/movement_core/queue_time') #Em segundos
 
 class Core:
     def __init__(self): 
+
+        rospy.wait_for_service('u2d2_comm/feedbackBody')
+        
         #Inicialização do objeto (modelo) da robô em código
         robot_name = rospy.get_param('/movement_core/name')
                 
@@ -39,7 +42,6 @@ class Core:
         
         #Estruturas para comunicação com U2D2
         self.motorsFeedback = rospy.ServiceProxy('u2d2_comm/feedbackBody', body_feedback)
-        rospy.wait_for_service('u2d2_comm/feedbackBody')
         self.pub2motors = rospy.Publisher('u2d2_comm/data2body', body_motors_data, queue_size=100)
         self.pub2motorsMsg = body_motors_data()
 

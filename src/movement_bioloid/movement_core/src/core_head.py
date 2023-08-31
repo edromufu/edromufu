@@ -15,11 +15,11 @@ class CoreHead:
     def __init__(self):
         rospy.init_node('head_central')
 
+        rospy.wait_for_service('u2d2_comm/feedbackHead')
         self.motorsFeedback = rospy.ServiceProxy('u2d2_comm/feedbackHead', head_feedback)
         self.pub2motors = rospy.Publisher('u2d2_comm/data2head', head_motors_data, queue_size=10)
         self.pub2motorsMsg = head_motors_data()
-        rospy.wait_for_service('u2d2_comm/feedbackHead')
-
+        
         rospy.Subscriber('/webots_natasha/vision_inference', Webotsmsg, self.callPID)
 
     def callPID(self, msg):
