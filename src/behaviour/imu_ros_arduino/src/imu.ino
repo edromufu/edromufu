@@ -43,7 +43,7 @@ int16_t mpu_read () {
   //Serial.print(Tmp);
   delay ( 1000 ) ;*/
   // Serial. print ( "\nGyroscope values:\t" ) ;
-  Serial.print("GyX: ");
+  Serial.print("yX: ");
   Serial.print(GyX);
   Serial.print(" \t GyY: ");
   Serial.print(GyY);

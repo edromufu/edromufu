@@ -4,7 +4,7 @@
 import rospy
 from geometry_msgs.msg import Vector3
 
-simulation2BhvTopic = '/webots_natasha/behaviour_controller' #Endereço do tópico que está transmitindo as informações do acelerometro
+simulation2BhvTopic = '/behaviour/imu' #Endereço do tópico que está transmitindo as informações do acelerometro
 
 timesSecurity = 7 #Numero de vezes para verificacoes de seguranca no codigo
 
