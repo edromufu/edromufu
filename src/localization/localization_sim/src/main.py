@@ -70,7 +70,7 @@ class Localization:
             cv.imshow("Tie break",self.vision.tieBreaker())
         self.vision.showResults(mask=True, resultColored=True, dilatedMask=True, source=self.source)
 
-    def runInference(self):
+    def runParticleFilter(self):
         pass
 
 if __name__ == '__main__':

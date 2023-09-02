@@ -2,7 +2,6 @@ import cv2 as cv
 import numpy as np
 from numpy import sin, cos
 from Intersection import Intersection
-import FilterUtils as fu
 import ParticleFilter as pf
 import time
 
@@ -137,75 +136,3 @@ class FieldGenerator():
             cv.line(coloredField,(particle[0],particle[1]),(int(particle[0]+size*3*np.cos(particle[2]*np.pi/180)),int(particle[1]+size*3*np.sin(particle[2]*np.pi/180))),color,size)
 
         return coloredField
-    
-
-
-if __name__ == '__main__':
-
-
-    baseField = FieldGenerator.generate()
-    baseField = FieldGenerator.drawInField(baseField)
-    
-
-    fov = np.pi/4
-    minRange = 30
-    maxRange = 120
-
-    heading = 90
-
-    passo = [5,5]
-    erro = [passo[0]/5, passo[1]/5]
-    robot = [FieldGenerator.nwRGoalArea[0][0]+50,FieldGenerator.nwRGoalArea[0][1],heading]
-
-    N = 1000
-
-    # Criando distribuição uniforme das particulas
-    # particles = pf.create_uniform_particles((0,baseField.shape[1]),(0,baseField.shape[0]),(0,360),N)
-
-    # Criando distribuição gaussiana das particulas
-    particles = pf.create_gaussian_particles((robot[0],robot[1],robot[2]),(100,100,180),N)
-
-    var=[100,100]
-    i = 0
-
-    start_time = time.time()
-
-    while (i<200 and (var[0]+var[1])>20):
-        field = np.copy(baseField)
-        robot = pf.moveRobot(robot,(passo[0],passo[1]))
-        field = FieldGenerator.drawParticles(field, particles, drawFov=False, fov=fov, minRange=minRange, maxRange=maxRange)
-        field = FieldGenerator.drawParticle(field, robot, fov, minRange, maxRange, drawFov=False, color=[0,100,200],robo=True)
-
-        # Pegando resposta do robô
-        answer = pf.checkFOV(robot, fov, minRange, maxRange, FieldGenerator.fieldIntersections)
-        print(f'Robot vision: {answer}')
-
-        # Atualiza localizacao das particulas
-        particles = pf.predict(particles,(passo[0],passo[1]),erro)
-
-        # Testa o input das particulas (update)
-        weights = pf.testParticles(particles, fov, minRange, maxRange, FieldGenerator.fieldIntersections, answer)
-
-        # Verifica se é necessario resample
-        if pf.neff(weights) < (N/2):
-            particles, weights = pf.resample_from_index(particles, weights)
-
-        # Calcula a media e variancia
-        mean, var = pf.estimate(particles,weights)
-        print(f'Media: {mean}')
-        print(f'Variancia: {var}')
-
-        print('-------------')
-        cv.imshow("test",cv.flip(field,0))
-        cv.waitKey(50)
-
-        i +=1
-    
-    end_time = time.time()
-
-    print(f'Convergiu para ({mean[0]},{mean[1]}) com {i} iteracoes e {end_time - start_time}')
-    print(f'Posicao real em ({robot[0],robot[1]})')
-    cv.circle(field,(int(mean[0]),int(mean[1])),15,[0,100,200],3)
-    cv.imshow("test",cv.flip(field,0))
-    cv.waitKey(0)
-    cv.destroyAllWindows()
