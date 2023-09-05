@@ -27,6 +27,7 @@ class Core:
     def __init__(self): 
 
         rospy.wait_for_service('u2d2_comm/feedbackBody')
+        rospy.wait_for_service('u2d2_comm/enableTorque')
         
         #Inicialização do objeto (modelo) da robô em código
         robot_name = rospy.get_param('/movement_core/name')
@@ -44,8 +45,12 @@ class Core:
         
         #Estruturas para comunicação com U2D2
         self.motorsFeedback = rospy.ServiceProxy('u2d2_comm/feedbackBody', body_feedback)
+        self.motorsTorque = rospy.ServiceProxy('u2d2_comm/enableTorque', enable_torque)
         self.pub2motors = rospy.Publisher('u2d2_comm/data2body', body_motors_data, queue_size=100)
         self.pub2motorsMsg = body_motors_data()
+
+        #Inicialização do torque
+        self.motorsTorque(True, [-1])
 
         #Timer para fila de publicações
         rospy.Timer(rospy.Duration(QUEUE_TIME), self.sendFromQueue)
@@ -111,7 +116,7 @@ class Core:
 
         if 'gait' in str(req.__class__):
 
-            checked_poses = self.motorsCurrentPosition
+            checked_poses = np.array([self.motorsCurrentPosition])
             gait_poses = Gait(self.robotModel, req.step_height, req.steps_number)
             
             for index, pose in enumerate(gait_poses):

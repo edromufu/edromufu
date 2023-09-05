@@ -33,9 +33,13 @@ def Gait(robot, stepHeight, stepNumber, initialLeg=False):
     gait_poses = np.zeros((2*stepNumber,len(robot)))
 
     initial = []
+    footInitialPosture = []
     for motor in robot:
         initial.append(motor.jointRotation)
+        if 'FOOT' in motor.get_name():
+            footInitialPosture.append(motor.absolutePosture)
     initial = np.array(initial)
+
 
     for step_phase in range(2*stepNumber):
         if leg:
@@ -46,7 +50,7 @@ def Gait(robot, stepHeight, stepNumber, initialLeg=False):
             currentFoot = -1
 
         if phase:
-            joint_angles = callIK(robot, newFootAbsPosition, np.identity(3), currentFoot)
+            joint_angles = callIK(robot, newFootAbsPosition, footInitialPosture[int(not leg)], currentFoot)
         else:
             joint_angles = initial
 
