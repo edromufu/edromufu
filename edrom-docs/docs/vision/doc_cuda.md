@@ -28,8 +28,8 @@ sudo cp /var/cuda-repo-ubuntu2004-12-0-local/cuda-*-keyring.gpg /usr/share/keyri
 sudo apt-get update
 
 sudo apt-get -y install cuda
-export PATH=/usr/local/cuda-11.3/bin${PATH:+:${PATH}}
-export LD_LIBRARY_PATH=/usr/local/cuda-11.3/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export PATH=/usr/local/cuda-12.0/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-12.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 ```
 
 Para o bloco abaixo, caso o output da primeira linha for igual a imagem, não é necessário executar a ultima linha.
@@ -48,27 +48,21 @@ cat /proc/driver/nvidia/version
 ## Instalando cuDNN
 Para prosseguir com esta etapa, é necessário se cadastrar no [site da NVIDIA](https://developer.nvidia.com/cudnn) caso não tenha uma conta ao clicar em "Download cuDNN". Feito isso, baixar os 3 arquivos abaixo:
 
-[cuDNN Runtime Library for Ubuntu20.04 x86_64 (Deb)](https://developer.nvidia.com/compute/machine-learning/cudnn/secure/8.2.0.53/11.3_04222021/Ubuntu20_04-x64/libcudnn8_8.2.0.53-1+cuda11.3_amd64.deb)
+[cuDNN Runtime Library for Ubuntu20.04 x86_64 (Deb)](https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/libcudnn8_8.8.0.121-1+cuda12.0_amd64.deb)
 
-[cuDNN Developer Library for Ubuntu20.04 x86_64 (Deb)](https://developer.nvidia.com/compute/machine-learning/cudnn/secure/8.2.0.53/11.3_04222021/Ubuntu20_04-x64/libcudnn8-dev_8.2.0.53-1+cuda11.3_amd64.deb
-)
+[cuDNN Developer Library for Ubuntu20.04 x86_64 (Deb)](https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/libcudnn8-dev_8.8.0.121-1+cuda12.0_amd64.deb)
 
-[cuDNN Code Samples and User Guide for Ubuntu20.04 x86_64 (Deb)](https://developer.nvidia.com/compute/machine-learning/cudnn/secure/8.2.0.53/11.3_04222021/Ubuntu20_04-x64/libcudnn8-samples_8.2.0.53-1+cuda11.3_amd64.deb
-)
 
 Com isso, você deve ter os seguintes arquivos .deb:
 
-1. libcudnn8-samples_8.2.0.53–1+cuda11.3_amd64.deb
+1. libcudnn8-dev_8.8.0.121-1+cuda12.0_amd64.deb
 
-2. libcudnn8-dev_8.2.0.53–1+cuda11.3_amd64.deb
-
-3. libcudnn8_8.2.0.53–1+cuda11.3_amd64.deb
+2. libcudnn8_8.8.0.121-1+cuda12.0_amd64.deb
 
 Entrar na pasta em q os pacotes foram instalados (ex: cd Downloads) e instalar usando: 
 ```jsx
-sudo dpkg -i  libcudnn8_8.2.0.53-1+cuda11.3_amd64.deb
-sudo dpkg -i libcudnn8-dev_8.2.0.53-1+cuda11.3_amd64.deb
-sudo dpkg -i libcudnn8-samples_8.2.0.53-1+cuda11.3_amd64.deb
+sudo dpkg -i  libcudnn8_8.8.0.121-1+cuda12.0_amd64.deb
+sudo dpkg -i libcudnn8-dev_8.8.0.121-1+cuda12.0_amd64.deb
 ```
 
 Agora, é preciso testar se está havendo a comunicação entre o cuDNN e os drivers da NVIDIA:
@@ -121,45 +115,6 @@ unzip opencv_contrib.zip
 mv opencv-4.6.0 opencv
 mv opencv_contrib-4.6.0 opencv_contrib
 ```
-
-## Criando e configurando um ambiente virtual do python
-```jsx
-wget https://bootstrap.pypa.io/get-pip.py 
-sudo python3 get-pip.py
-sudo pip install virtualenv virtualenvwrapper
-sudo rm -rf ~/get-pip.py ~/.cache/pip
-```
-
-Abra o arquivo ~/.bashrc (dar ctrl+H na pasta pessoal) e no final colocar:
-```jsx
-# virtualenv and virtualenvwrapper
-export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-source /usr/local/bin/virtualenvwrapper.sh
-```
-
-Salvar o arquivo e dar reload no ~/.bashrc no terminal:
-```jsx
-source ~/.bashrc
-```
-
-```jsx
-mkvirtualenv opencv_cuda -p python3
-```
-:::danger Atenção
-
-A partir de agora tudo será feito nesse ambiente virtual, se por acaso sair de alguma forma, basta dar o comando: workon opencv_cuda
-
-:::
-
-## Instalando NUMPY no ambiente virtual
-```jsx
-(your-venv)pip install numpy
-(your-venv)pip install pip --upgrade
-(your-venv)pip install -U rosdep rosinstall_generator wstool rosinstall
-(your-venv)pip install --upgrade setuptools
-```
-OBS: (your-venv) é a indicação para seu ambiente virtual.
 
 ## Determinando a versão da arquitetura do CUDA
 Usar o comando "nvidia-smi" se nao souber qual a arquiterura da sua placa de video
