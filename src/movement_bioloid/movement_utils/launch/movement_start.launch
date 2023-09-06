@@ -1,29 +1,36 @@
 <launch>
     <arg name="u2d2_connected" default="true"/>
     <arg name="u2d2_port" default="/dev/ttyUSB0"/>
-    <arg name="robot_name" default="bioloid"/>
+    <arg name="robot_name" default="nova"/>
     <arg name="page_creation" default="false"/>
     <arg name="queue_time" default="0.2"/>
+    <arg name="visualization" default="false"/>
+
+    <!-- Inicialização do movimento de caminhada e pages-->
+    <node name="movement_core" pkg="movement_core" type="core.py" output="screen">
+        <param name="name" value="$(eval arg('robot_name'))" />
+        <param name="queue_time" value="$(eval arg('queue_time'))" />
+        <param name="pub2vis" value="$(eval arg('visualization'))" />
+    </node>
 
     <!-- Comunicação dos motores com U2D2 -->
     <node name="u2d2" pkg="u2d2_comm" type="dynamixel_sdk_comm.py" output="screen" if="$(eval arg('u2d2_connected'))">
         <param name="port" value="$(eval arg('u2d2_port'))" />
         <param name="robot_name" value="$(eval arg('robot_name'))" />
     </node>
-
-    <!-- Inicialização do movimento de caminhada e pages-->
-    <node name="movement_core" pkg="movement_core" type="core.py" output="screen">
-        <param name="name" value="$(eval arg('robot_name'))" />
-        <param name="queue_time" value="$(eval arg('queue_time'))" />
-    </node>
-
-
-    <!-- Inicialização da interface de captura de page -->
-    <node name="page_creator" pkg="movement_pages" type="page_interface.py" output="screen" if="$(eval arg('page_creation'))">
-    </node>
     
     <!-- Inicialização do movimento da cabeça-->
     <node name="head_core" pkg="movement_core" type="core_head.py" output="screen">
     </node>
+
+    <!-- Inicialização da interface de captura de page -->
+    <node name="page_creator" pkg="movement_pages" type="page_interface.py" output="screen" if="$(eval arg('page_creation'))">
+    </node>
+
+    <!-- Inicialização da visualização da robô -->
+    <include file="$(find humanoid_visualization)/launch/display.launch" if="$(eval arg('visualization'))">
+        <arg name="model" value="$(find humanoid_visualization)/urdf/$(arg robot_name).urdf" />
+        <arg name="rvizconfig" value="$(find humanoid_visualization)/urdf/movement.rviz" />
+    </include>
 
 </launch>

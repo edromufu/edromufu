@@ -142,7 +142,7 @@ class MainWindow(QMainWindow):
         self.poseObjects.append(newPoseFrame(self.ui.horizontalLayout_8, self.currentPoseNumber, self))
         
         for index, lineEdit in enumerate(self.poseObjects[-1].posePositionsLineEdit):
-            lineEdit.setText(str(current_position[index]))
+            lineEdit.setText(str(round(current_position[index],4)))
     
     def deletePose(self, poseSelectedIndex):
 
