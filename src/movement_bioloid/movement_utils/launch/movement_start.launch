@@ -5,12 +5,14 @@
     <arg name="page_creation" default="false"/>
     <arg name="queue_time" default="0.2"/>
     <arg name="visualization" default="false"/>
+    <arg name="head_plugged" default="true"/>
 
     <!-- Inicialização do movimento de caminhada e pages-->
     <node name="movement_core" pkg="movement_core" type="core.py" output="screen">
         <param name="name" value="$(eval arg('robot_name'))" />
         <param name="queue_time" value="$(eval arg('queue_time'))" />
         <param name="pub2vis" value="$(eval arg('visualization'))" />
+        <param name="wait4u2d2" value="$(eval arg('u2d2_connected'))" />
     </node>
 
     <!-- Comunicação dos motores com U2D2 -->
@@ -20,11 +22,11 @@
     </node>
     
     <!-- Inicialização do movimento da cabeça-->
-    <node name="head_core" pkg="movement_core" type="core_head.py" output="screen">
+    <node name="head_core" pkg="movement_core" type="core_head.py" output="screen"  if="$(eval arg('head_plugged'))">
     </node>
 
     <!-- Inicialização da interface de captura de page -->
-    <node name="page_creator" pkg="movement_pages" type="page_interface.py" output="screen" if="$(eval arg('page_creation'))">
+    <node name="page_creator" pkg="movement_pages" type="page_interface.py" output="screen">
     </node>
 
     <!-- Inicialização da visualização da robô -->
