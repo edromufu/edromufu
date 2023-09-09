@@ -1,2 +1,0 @@
-string approved_movement
-
