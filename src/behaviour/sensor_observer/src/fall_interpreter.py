@@ -1,19 +1,13 @@
 #!/usr/bin/env python3
 #coding=utf-8
 
-import rospy
+import rospy, os, sys
 from geometry_msgs.msg import Vector3
 
-simulation2BhvTopic = '/behaviour/imu' #Endereço do tópico que está transmitindo as informações do acelerometro
+edrom_dir = '/home/'+os.getlogin()+'/edromufu/src/'
 
-timesSecurity = 7 #Numero de vezes para verificacoes de seguranca no codigo
-
-#Parametros de avaliação de queda nos três eixos
-yGravitySecurity = 4  #Valor abaixo do qual a medida de y deve estar para queda
-zSensorFront     = -5 #Valor abaixo do qual a medida de z deve estar para queda de frente                           
-zSensorBack      = 5  #Valor acima do qual a medida de z deve estar para queda de costas                               
-xSensorLeft      = -5 #Valor abaixo do qual a medida de x deve estar para queda sobre o lado esquerdo         
-xSensorRight     = 5  #Valor acima do qual a medida de x deve estar para queda sobre o lado direito                         
+sys.path.append(edrom_dir+'behaviour/transitions_and_states/src')
+from behaviour_parameters import BehaviourParameters
 
 class FallInterpreter():
 
@@ -24,11 +18,13 @@ class FallInterpreter():
         - Define e inicializa variaveis do código
         """
         
+        self.parameters = BehaviourParameters()
+
         #Variaveis do ROS
-        rospy.Subscriber(simulation2BhvTopic, Vector3, self.callback_sensor)
+        rospy.Subscriber(self.parameters.imuAccelTopic, Vector3, self.callback_sensor)
 
         #Variaveis de código
-        self.fallState = 'Up' #Estado da queda do robô, sendo up = em pé
+        self.fallState = self.parameters.up #Estado da queda do robô, sendo up = em pé
         self.countFalled = 0 #Contador de quedas interpretadas para segurança
     
     #Funcao chamada pelo agrupador ROS quando necessitar saber 
@@ -61,34 +57,34 @@ class FallInterpreter():
         #reseta quando apenas uma não conta, ou seja, confia em estar de pé
         #desconfia de ter caido, pois durante a caminhada a acelaração efetuada
         #pelo robô pode fazer com que o sensor tenha uma medida de "queda"
-        if (msg.y < yGravitySecurity):
+        if (msg.z > self.parameters.zGravitySecurity):
             self.countFalled += 1
         else:
-            self.fallState = 'Up'
+            self.fallState = self.parameters.up
             self.countFalled = 0
 
         #Situação na qual interpretou-se queda muitas vezes seguidas,
         #realizará as verificações para determinar o lado de queda
-        if(self.countFalled > timesSecurity):
+        if(self.countFalled > self.parameters.timesSecurity):
             #Verificação se caiu sobre algum lado é feita depois
             #da verificação se caiu de frente ou de costas, pois os
             #últimos são mais prováveis e eficientes (page costuma 
             #levantar mesmo se não estiver)
-            if msg.z < zSensorFront:
+            if msg.x < self.parameters.xSensorBack:
                 #Caiu de costa
-                self.fallState = 'Back'
+                self.fallState = self.parameters.back
 
-            elif msg.z > zSensorBack:
+            elif msg.x > self.parameters.xSensorFront:
                 #Caiu de frente     
-                self.fallState = 'Front'
+                self.fallState = self.parameters.front
 
-            elif msg.x < xSensorLeft:
+            elif msg.y < self.parameters.ySensorRight:
                 #Caiu sobre o lado direito    
-                self.fallState = 'Right'
+                self.fallState = self.parameters.right
 
-            elif msg.x > xSensorRight:
+            elif msg.y > self.parameters.ySensorLeft:
                 #Caiu sobre o lado esquerdo    
-                self.fallState = 'Left'  
+                self.fallState = self.parameters.left
 
 
 

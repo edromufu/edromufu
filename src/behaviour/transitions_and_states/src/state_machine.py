@@ -28,10 +28,22 @@ class StateMachine():
         - Inicializa a maquina de estados, utilizando as caracteristicas ja criadas
         """
 
-        states = ['search_ball','body_alignment','body_search','walking','stand_still','kick','getting_up', 'impossible']
-        
-        go_to_search_ball_transitions = [
-            { 'trigger': 'go_to_search_ball', 'source': 'body_alignment', 'dest': 'search_ball',
+        states = ['walking','stand_still','kick','getting_up', 'rotate', 'impossible']
+
+    
+        go_to_impossible_transitions = [
+            {'trigger': 'go_to_walking', 'source': '*', 'dest': 'impossible',
+             'conditions': 'impossible_condition'},
+            {'trigger': 'go_to_kick', 'source': '*', 'dest': 'impossible',
+             'conditions': 'impossible_condition'},
+            {'trigger': 'go_to_getting_up', 'source': '*', 'dest': 'impossible',
+             'conditions': 'impossible_condition'},
+            {'trigger': 'go_to_stand_still', 'source': '*', 'dest': 'impossible',
+             'conditions': 'impossible_condition'}
+        ]
+
+        go_to_rotate_transitions = [
+            { 'trigger': 'go_to_rotation', 'source': 'stand_still', 'dest': 'rotate',
              'conditions': 'search_ball_condition', 'unless': 'getting_up_condition'}
             ,
             { 'trigger': 'go_to_search_ball', 'source': 'body_search', 'dest': 'search_ball',
@@ -45,64 +57,6 @@ class StateMachine():
             ,
             { 'trigger': 'go_to_search_ball', 'source': 'walking', 'dest': 'search_ball',
              'conditions': 'search_ball_align_kick_condition', 'unless': 'getting_up_condition'}
-        ]
-
-        go_to_body_alignment_transitions = [
-            { 'trigger': 'go_to_body_alignment', 'source': 'search_ball', 'dest': 'body_alignment',
-             'conditions': 'body_alignment_condition', 'unless': 'getting_up_condition'}
-        ]
-
-        go_to_body_search_transitions = [
-            { 'trigger': 'go_to_body_search', 'source': '*', 'dest': 'body_search',
-             'conditions': 'body_search_condition', 'unless': 'getting_up_condition'}
-        ]
-
-        go_to_walking_transitions = [
-            { 'trigger': 'go_to_walking', 'source': 'search_ball', 'dest': 'walking',
-             'conditions': 'walking_condition', 'unless': 'getting_up_condition'}
-            ,
-            { 'trigger': 'go_to_walking', 'source': 'body_search', 'dest': 'walking',
-             'conditions': 'walking_condition', 'unless': 'getting_up_condition'}
-            ,
-            { 'trigger': 'go_to_walking', 'source': 'body_alignment', 'dest': 'walking',
-             'conditions': 'walking_condition', 'unless': 'getting_up_condition'}
-        ]
-        
-        go_to_stand_still_transitions = [
-            { 'trigger': 'go_to_stand_still', 'source': 'getting_up', 'dest': 'stand_still',
-             'unless': 'getting_up_condition'}
-            ,
-            { 'trigger': 'go_to_stand_still', 'source': 'kick', 'dest': 'stand_still',
-             'unless': 'getting_up_condition'}
-        ]
-
-        go_to_kick_transitions = [
-            { 'trigger': 'go_to_kick', 'source': 'walking', 'dest': 'kick',
-             'conditions': 'kick_condition', 'unless': 'getting_up_condition'},
-            { 'trigger': 'go_to_kick', 'source': 'search_ball', 'dest': 'kick',
-             'conditions': 'kick_condition', 'unless': 'getting_up_condition'},
-        ]
-
-        go_to_getting_up_transitions = [
-            { 'trigger': 'go_to_getting_up', 'source': '*', 'dest': 'getting_up',
-             'conditions': 'getting_up_condition'}
-        ]
-
-        go_to_impossible_transitions = [
-            {'trigger': 'go_to_search_ball', 'source': '*', 'dest': 'impossible',
-             'conditions': 'impossible_condition'},
-            {'trigger': 'go_to_body_search', 'source': '*', 'dest': 'impossible',
-             'conditions': 'impossible_condition'},
-            {'trigger': 'go_to_walking', 'source': '*', 'dest': 'impossible',
-             'conditions': 'impossible_condition'},
-            {'trigger': 'go_to_kick', 'source': '*', 'dest': 'impossible',
-             'conditions': 'impossible_condition'},
-            {'trigger': 'go_to_getting_up', 'source': '*', 'dest': 'impossible',
-             'conditions': 'impossible_condition'},
-            {'trigger': 'go_to_body_alignment', 'source': '*', 'dest': 'impossible',
-             'conditions': 'impossible_condition'},
-            {'trigger': 'go_to_stand_still', 'source': '*', 'dest': 'impossible',
-             'conditions': 'impossible_condition'}
         ]
 
         all_transitions = (go_to_search_ball_transitions + go_to_body_alignment_transitions + go_to_walking_transitions 
@@ -188,7 +142,7 @@ class StateMachine():
     
     ########################################FUNÇÕES UPDATE CONDITION########################################
     #Funcao para atualizar a variavel de codigo relacionada ao estado de walking
-    def walking_condition_update(self, ball_relative_position, hor_motor_out_of_center):
+    def rotate_condition_update(self, timer_to_rotate, ball_relative_position, ):
         """
         -> Funcao:
         Avaliar a necessidade de transicao para o estado de walking e

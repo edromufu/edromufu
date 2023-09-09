@@ -1,4 +1,0 @@
-behaviour_msgs/ActionMsg actions
-
----
-bool status
