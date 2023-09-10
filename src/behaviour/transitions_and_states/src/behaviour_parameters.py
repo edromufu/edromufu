@@ -8,19 +8,28 @@ class BehaviourParameters():
         self.behaviourwiseParameters()
         self.movementwiseParameters()
 
+    def movementwiseParameters(self):
+        #Tópico do ROS da cabeça
+        self.headPositionsTopic = '/u2d2_comm/data2head'
+
+        #Parâmetros dos motores da cabeça 
+        self.lookingLeftRad = 0.35
+        self.lookingRightRad = -0.35
+        self.minVerRad2Kick = -1.22
+
     def behaviourwiseParameters(self):
         #Relacionado à número de vezes que uma variável deve extrapolar certo valor para resetar
         self.timerCountLimit = 3
 
         #Tópico do ROS IMU
-        self.imuAccelTopic = '/behaviour/imu'
+        self.imuAccelTopic = '/behaviour/imu_accel'
 
         #Parametros de avaliação de queda nos três eixos
-        self.zGravitySecurity = -4  #Valor abaixo do qual a medida de z deve estar para queda
-        self.xSensorFront     = 5 #Valor abaixo do qual a medida de x deve estar para queda de frente                           
-        self.xSensorBack      = -5  #Valor acima do qual a medida de x deve estar para queda de costas                               
-        self.ySensorLeft      = 5 #Valor abaixo do qual a medida de y deve estar para queda sobre o lado esquerdo         
-        self.ySensorRight     = -5  #Valor acima do qual a medida de y deve estar para queda sobre o lado direito                         
+        self.zGravitySecurity = -6  #Valor abaixo do qual a medida de z deve estar para queda
+        self.xSensorFront     = 4 #Valor abaixo do qual a medida de x deve estar para queda de frente                           
+        self.xSensorBack      = -4  #Valor acima do qual a medida de x deve estar para queda de costas                               
+        self.ySensorLeft      = 4 #Valor abaixo do qual a medida de y deve estar para queda sobre o lado esquerdo         
+        self.ySensorRight     = -4  #Valor acima do qual a medida de y deve estar para queda sobre o lado direito                         
 
         #Retornos possíveis da interpretação de posição relativa da bola
         self.left = 'Left'
@@ -34,6 +43,12 @@ class BehaviourParameters():
         self.front = 'Front'
         self.up = 'Up'
         self.back = 'Back'
+
+        #Tópico de conversa entre ros_packer e state_machine_receiver
+        self.stateMachineTopic = '/sensor_observer/state_machine_vars'
+
+        #Tópico de publicação do IMU (Gyro)
+        self.imuGyroTopic = '/behaviour/imu_gyro'
 
     def visionwiseParameters(self):
         #Tópico do ROS

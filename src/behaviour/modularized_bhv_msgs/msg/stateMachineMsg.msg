@@ -1,8 +1,6 @@
-string fallState
-bool ballFound
+string ballPosition
 bool ballClose
-string ballRelativePosition
-bool verAngleAccomplished
-string[] headPossibleMovements
-bool horMotorOutOfCenter
-float32 horMotorPosition
+bool ballFound
+string fallState
+string horMotorOutOfCenter
+bool headKickCheck

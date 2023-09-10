@@ -65,7 +65,7 @@ class FallInterpreter():
 
         #Situação na qual interpretou-se queda muitas vezes seguidas,
         #realizará as verificações para determinar o lado de queda
-        if(self.countFalled > self.parameters.timesSecurity):
+        if(self.countFalled > self.parameters.timerCountLimit):
             #Verificação se caiu sobre algum lado é feita depois
             #da verificação se caiu de frente ou de costas, pois os
             #últimos são mais prováveis e eficientes (page costuma 
