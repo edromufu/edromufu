@@ -26,7 +26,7 @@
     </node>
 
     <!-- Inicialização da interface de captura de page -->
-    <node name="page_creator" pkg="movement_pages" type="page_interface.py" output="screen">
+    <node name="page_creator" pkg="movement_pages" type="page_interface.py" output="screen" if="$(eval arg('page_creation'))">
     </node>
 
     <!-- Inicialização da visualização da robô -->
