@@ -65,6 +65,7 @@ class u2d2Control():
                 cwLimitAddr = PROTOCOL_2_INFOS['CW_LIMIT_ADDR']
                 ccwLimitAddr = PROTOCOL_2_INFOS['CCW_LIMIT_ADDR']
             
+            #! Função errada para AX-12 (read2Byte)
             if motorId in motorsConnected:
                 cwLimit, commcw, hardcw = packetHandler.read4ByteTxRx(self.portHandler, motorId, cwLimitAddr)
                 ccwLimit, commccw, hardccw = packetHandler.read4ByteTxRx(self.portHandler, motorId, ccwLimitAddr)

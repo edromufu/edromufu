@@ -16,6 +16,9 @@ from movement_patterns import Gait
 sys.path.append(edrom_dir+'movement/movement_pages/src')
 from page_runner import Page
 
+sys.path.append(edrom_dir+'movement/step_planner/src')
+from walking_planner import WalkVx
+
 from movement_utils.srv import *
 from movement_utils.msg import *
 from sensor_msgs.msg import JointState
@@ -48,6 +51,7 @@ class Core:
         #Services de requisição de movimento, todos possuem como callback movementManager
         rospy.Service('movement_central/request_gait', gait, self.movementManager)
         rospy.Service('movement_central/request_page', page, self.movementManager)
+        rospy.Service('movement_central/request_vx', vx, self.movementManager)
 
         #Inicialização do objeto (modelo) da robô em código
         robot_name = rospy.get_param('/movement_core/name')
@@ -114,8 +118,8 @@ class Core:
         return toInvert
 
     def movementManager(self, req):
-        
-        self.callRobotModelUpdate()
+        if rospy.get_param('/movement_core/wait4u2d2'):
+            self.callRobotModelUpdate()
 
         if 'gait' in str(req.__class__):
 
@@ -156,6 +160,12 @@ class Core:
             response = pageResponse()
             response.success = True
         
+        elif 'vx' in str(req.__class__):
+            WalkVx(req.distX, req.vx, self.robotModel)
+
+            response = vxResponse()
+            response.success = True
+
         return response
     
     def sendFromQueue(self, event):

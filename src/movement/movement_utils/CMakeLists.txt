@@ -34,6 +34,7 @@ add_service_files(
   head_feedback.srv
   gait.srv
   page.srv
+  vx.srv
 )
 
 ## Generate actions in the 'action' folder
