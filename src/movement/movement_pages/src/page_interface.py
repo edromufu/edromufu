@@ -16,7 +16,7 @@ from new_pose import newPoseFrame
 
 GREEN_BGC = 'background-color: rgb(138, 226, 52);'
 RED_BGC   = 'background-color: rgb(204, 0, 0);'
-MAIN_DIR = '/home/'+os.getlogin()+'/edromufu/src/movement_bioloid/movement_pages/pages/'
+MAIN_DIR = '/home/'+os.getlogin()+'/edromufu/src/movement/movement_pages/pages/'
 
 
 class MainWindow(QMainWindow):

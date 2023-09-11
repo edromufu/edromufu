@@ -7,10 +7,10 @@ import copy
 import sys, os
 edrom_dir = '/home/'+os.getlogin()+'/edromufu/src/'
 
-sys.path.append(edrom_dir+'movement_bioloid/kinematic_functions/src')
+sys.path.append(edrom_dir+'movement/kinematic_functions/src')
 from ik_numerical import InverseKinematics
 
-sys.path.append(edrom_dir+'movement_bioloid/humanoid_definition/src')
+sys.path.append(edrom_dir+'movement/humanoid_definition/src')
 from setup_robot import Robot
 
 def callIK(robot, newFootAbsPosition, newFootAbsPosture, currentFoot):

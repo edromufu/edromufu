@@ -6,7 +6,7 @@ import numpy as np
 
 import sys, os
 edrom_dir = '/home/'+os.getlogin()+'/edromufu/src/'
-sys.path.append(edrom_dir+'movement_bioloid/kinematic_functions/src')
+sys.path.append(edrom_dir+'movement/kinematic_functions/src')
 from ik_numerical import ForwardKinematics
 
 from joint import Joint
@@ -55,7 +55,7 @@ class Robot:
             self.robotJoints.append(Joint(*joint_data.values(),is_inverted, is_knee))
 
     def loadJson(self, fileName):
-        os.chdir('/home/'+os.getlogin()+'/edromufu/src/movement_bioloid/humanoid_definition/robots_jsons/')
+        os.chdir('/home/'+os.getlogin()+'/edromufu/src/movement/humanoid_definition/robots_jsons/')
 
         with open(fileName) as f:
             self.json_data = json.loads(f.read())

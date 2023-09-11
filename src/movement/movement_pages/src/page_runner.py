@@ -4,7 +4,7 @@
 import os, json
 import numpy as np
 
-MAIN_DIR = '/home/'+os.getlogin()+'/edromufu/src/movement_bioloid/movement_pages/pages/'
+MAIN_DIR = '/home/'+os.getlogin()+'/edromufu/src/movement/movement_pages/pages/'
 
 def Page(page2Run, queueTime):
 

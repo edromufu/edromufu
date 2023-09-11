@@ -7,13 +7,13 @@ import numpy as np
 import sys, os
 edrom_dir = '/home/'+os.getlogin()+'/edromufu/src/'
 
-sys.path.append(edrom_dir+'movement_bioloid/humanoid_definition/src')
+sys.path.append(edrom_dir+'movement/humanoid_definition/src')
 from setup_robot import Robot
 
-sys.path.append(edrom_dir+'movement_bioloid/movement_functions/src')
+sys.path.append(edrom_dir+'movement/movement_functions/src')
 from movement_patterns import Gait
 
-sys.path.append(edrom_dir+'movement_bioloid/movement_pages/src')
+sys.path.append(edrom_dir+'movement/movement_pages/src')
 from page_runner import Page
 
 from movement_utils.srv import *

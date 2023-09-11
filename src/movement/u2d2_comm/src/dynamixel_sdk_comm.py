@@ -50,7 +50,7 @@ class u2d2Control():
         self.startComm()
         
     def loadMotorsType(self):
-        os.chdir('/home/'+os.getlogin()+'/edromufu/src/movement_bioloid/humanoid_definition/robots_jsons/')
+        os.chdir('/home/'+os.getlogin()+'/edromufu/src/movement/humanoid_definition/robots_jsons/')
 
         with open(ROBOT_MOTORS+'.json') as f:
             json_data = json.loads(f.read())
