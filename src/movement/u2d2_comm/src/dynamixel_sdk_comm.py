@@ -12,8 +12,8 @@ BAUDRATE = 1000000
 DEVICENAME = rospy.get_param('u2d2/port')
 ROBOT_MOTORS = rospy.get_param('u2d2/robot_name')
 
-PROTOCOL_1_INFOS =  {'TORQUE_ADDR': 24, 'LED_ADDR': 25 , 'PRES_POS_ADDR': 36, 'GOAL_POS_ADDR': 30, 'GOAL_POS_LEN': 2}
-PROTOCOL_2_INFOS =  {'TORQUE_ADDR': 64, 'LED_ADDR': 65 , 'PRES_POS_ADDR': 132, 'GOAL_POS_ADDR': 116, 'GOAL_POS_LEN': 4}
+PROTOCOL_1_INFOS =  {'CW_LIMIT_ADDR': 6, 'CCW_LIMIT_ADDR': 8, 'TORQUE_ADDR': 24, 'LED_ADDR': 25 , 'PRES_POS_ADDR': 36, 'GOAL_POS_ADDR': 30, 'GOAL_POS_LEN': 2}
+PROTOCOL_2_INFOS =  {'CW_LIMIT_ADDR': 48, 'CCW_LIMIT_ADDR': 52, 'TORQUE_ADDR': 64, 'LED_ADDR': 65 , 'PRES_POS_ADDR': 132, 'GOAL_POS_ADDR': 116, 'GOAL_POS_LEN': 4}
 
 class u2d2Control():
 
@@ -58,25 +58,31 @@ class u2d2Control():
         for motorId in motorsConnected:
             if motorId in self.AX_12_MOTORS:
                 packetHandler = self.packetHandler1
+                cwLimitAddr = PROTOCOL_1_INFOS['CW_LIMIT_ADDR']
+                ccwLimitAddr = PROTOCOL_1_INFOS['CCW_LIMIT_ADDR']
             elif motorId in (self.MX_106_MOTORS+self.MX_64_MOTORS):
-                packetHandler = self.packetHandler1
+                packetHandler = self.packetHandler2
+                cwLimitAddr = PROTOCOL_2_INFOS['CW_LIMIT_ADDR']
+                ccwLimitAddr = PROTOCOL_2_INFOS['CCW_LIMIT_ADDR']
             
             if motorId in motorsConnected:
-                cwLimit = packetHandler.read2ByteTxRx(self.portHandler, motorId, 6)
-                ccwLimit = packetHandler.read2ByteTxRx(self.portHandler, motorId, 8)
+                cwLimit, commcw, hardcw = packetHandler.read4ByteTxRx(self.portHandler, motorId, cwLimitAddr)
+                ccwLimit, commccw, hardccw = packetHandler.read4ByteTxRx(self.portHandler, motorId, ccwLimitAddr)
 
-                self.motorLimitsDict[motorId] = [cwLimit, ccwLimit]
-    
+                if commcw == 0 and hardcw == 0 and  commccw == 0 and hardccw == 0:
+                    self.motorLimitsDict[motorId] = [cwLimit, ccwLimit]
+
     def checkPositionInLimit(self, value, motor_id):
 
-        if self.motorLimitsDict[motor_id][0] > value:
-            valueTmp = value
-            value = self.motorLimitsDict[motor_id][0]
-            print(f'Foi comandado {valueTmp} para o motor {motor_id}, isso extrapola o limite {value}, comandando {value}')
-        elif self.motorLimitsDict[motor_id][1] < value:
-            valueTmp = value
-            value = self.motorLimitsDict[motor_id][1]
-            print(f'Foi comandado {valueTmp} para o motor {motor_id}, isso extrapola o limite {value}, comandando {value}')
+        if motor_id in self.motorLimitsDict.keys():
+            if self.motorLimitsDict[motor_id][0] < value:
+                valueTmp = value
+                value = self.motorLimitsDict[motor_id][0]
+                print(f'Foi comandado {valueTmp} para o motor {motor_id}, isso extrapola o limite {value}, comandando {value}')
+            elif self.motorLimitsDict[motor_id][1] > value:
+                valueTmp = value
+                value = self.motorLimitsDict[motor_id][1]
+                print(f'Foi comandado {valueTmp} para o motor {motor_id}, isso extrapola o limite {value}, comandando {value}')
         
         return value
 
@@ -214,7 +220,7 @@ class u2d2Control():
             if motor_id in self.MX_106_MOTORS+self.MX_64_MOTORS+self.AX_12_MOTORS:
                 value = self.rad2pos(motor_position, protocol)
                 value = self.checkPositionInLimit(value, motor_id)
-                bytes_value = value.to_bytes(num, byteorder='little')
+                bytes_value = value.to_bytes(numBytes, byteorder='little')
 
                 bodyGroup.addParam(motor_id, bytes_value)
 
