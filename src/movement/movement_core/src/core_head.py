@@ -42,7 +42,6 @@ class CoreHead:
 
                 self.pub2motorsMsg.pos_vector = [newHorPos, newVerPos]
                 self.pub2motors.publish(self.pub2motorsMsg)
-                print(newHorPos)
     
     def callPx(self, x):
         error_x = (WIDTH/2) - x
