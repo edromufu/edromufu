@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
 #coding=utf-8
 
-import rospy
+import rospy, os, sys
 from state_machine import StateMachine
 
 from modularized_bhv_msgs.msg import stateMachineMsg
+
+edrom_dir = '/home/'+os.getlogin()+'/edromufu/src/'
+
+sys.path.append(edrom_dir+'behaviour/transitions_and_states/src')
+from behaviour_parameters import BehaviourParameters
 
 class StateMachineReceiver(StateMachine):
 
@@ -15,8 +20,10 @@ class StateMachineReceiver(StateMachine):
         - Construção do subscriber do ROS responsável pelo recebimento das variáveis
         """
 
+        self.parameters = self.BehaviourParameters()
+
         self.state_machine = StateMachine()
-        rospy.Subscriber('/sensor_observer/state_machine_vars', stateMachineMsg, self.call_state_machine_update)
+        rospy.Subscriber(self.parameters.stateMachineTopic, stateMachineMsg, self.call_state_machine_update)
     
     #Callback do subscriber das variáveis interpretados pelos módulos de interpretação
     def call_state_machine_update(self, stateMachineVars):
@@ -30,9 +37,9 @@ class StateMachineReceiver(StateMachine):
             informações enviadas pelo ROS packer, da qual são extraidas para atualização   
         """
 
-        self.state_machine.request_state_machine_update(stateMachineVars.fallState, stateMachineVars.ballFound, 
-        stateMachineVars.ballClose, stateMachineVars.ballRelativePosition, stateMachineVars.verAngleAccomplished, 
-        stateMachineVars.headPossibleMovements, stateMachineVars.horMotorOutOfCenter)
+        #self.state_machine.request_state_machine_update(stateMachineVars.ballPosition, stateMachineVars.ballClose, stateMachineVars.ballFound,
+        #                                               stateMachineVars.fallState,
+        #                                                stateMachineVars.horMotorOutOfCenter, stateMachineVars.headKickCheck)
     
 if __name__ == '__main__':
     rospy.init_node('State_machine_node', anonymous=False)
