@@ -3,17 +3,22 @@
 
 import numpy as np
 
-import rospy
+import rospy, os, sys 
 from vision_msgs.msg import Webotsmsg
 from movement_utils.srv import *
 from movement_utils.msg import *
 
-WIDTH = 640
-HEIGHT = 480
+edrom_dir = '/home/'+os.getlogin()+'/edromufu/src/'
+
+sys.path.append(edrom_dir+'behaviour/transitions_and_states/src')
+from behaviour_parameters import BehaviourParameters
 
 class CoreHead:
     def __init__(self):
+
         rospy.init_node('head_central')
+
+        self.parameters = BehaviourParameters()
 
         rospy.wait_for_service('u2d2_comm/feedbackHead')
         self.motorsFeedback = rospy.ServiceProxy('u2d2_comm/feedbackHead', head_feedback)
@@ -22,37 +27,51 @@ class CoreHead:
         
         rospy.Subscriber('/webots_natasha/vision_inference', Webotsmsg, self.callPID)
 
+        self.found = False
+        self.x = None
+        self.y = None
+
     def callPID(self, msg):
         ballInfos = msg.ball
 
-        if ballInfos.found:
-            dx = 0
-            dy = 0
-            if ballInfos.x > 344 or ballInfos.x < 296:
-                [currentHorRotation, currentVerRotation] = self.motorsFeedback(True).pos_vector
-                dx = self.callPx(ballInfos.x)
-
-            if ballInfos.y > 264 or ballInfos.y < 216:
-                [currentHorRotation, currentVerRotation] = self.motorsFeedback(True).pos_vector
-                dy = self.callPy(ballInfos.y)
-
-            if dx or dy:
-                newHorPos = currentHorRotation + dx
-                newVerPos = currentVerRotation + dy
-
-                self.pub2motorsMsg.pos_vector = [newHorPos, newVerPos]
-                self.pub2motors.publish(self.pub2motorsMsg)
+        self.found = ballInfos.found
+        self.x = ballInfos.x
+        self.y = ballInfos.y
     
     def callPx(self, x):
-        error_x = (WIDTH/2) - x
+        error_x = (self.parameters.cameraWidth/2) - x
         return 0.0024*error_x
 
     def callPy(self, y):
-        if y > HEIGHT/2: #Baixo
+        if y > self.parameters.cameraHeight/2: #Baixo
             return -0.05
         else: #Cima
             return 0.05
+    
+    def run(self):
+        
+        while not rospy.is_shutdown():
+            if self.found:
+                dx = 0
+                dy = 0
+                if self.x > self.parameters.xCenterRightLimit or self.x < self.parameters.xCenterLeftLimit:
+                    [currentHorRotation, currentVerRotation] = self.motorsFeedback(True).pos_vector
+                    dx = self.callPx(self.x)
+
+                if self.y > self.parameters.yCenterBottomLimit or self.y < self.parameters.yCenterTopLimit:
+                    [currentHorRotation, currentVerRotation] = self.motorsFeedback(True).pos_vector
+                    dy = self.callPy(self.y)
+
+                if dx or dy:
+                    newHorPos = currentHorRotation + dx
+                    newVerPos = currentVerRotation + dy
+
+                    self.pub2motorsMsg.pos_vector = [newHorPos, newVerPos]
+                    self.pub2motors.publish(self.pub2motorsMsg)
+            else:
+                pass
 
 if __name__ == '__main__':
     movement_head = CoreHead()
+    movement_head.run()
     rospy.spin()

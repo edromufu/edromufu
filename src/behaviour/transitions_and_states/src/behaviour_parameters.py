@@ -55,8 +55,8 @@ class BehaviourParameters():
         self.vision2BhvTopic = '/webots_natasha/vision_inference'
 
         #Parâmetros da câmera
-        self.cameraWidth =  416
-        self.cameraHeight = 416
+        self.cameraWidth =  640
+        self.cameraHeight = 480
 
         #Parâmetros de interpretação da câmera
         self.xCenterLeftLimit = self.cameraWidth/4
