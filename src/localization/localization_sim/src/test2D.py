@@ -48,6 +48,9 @@ if __name__ == '__main__':
     minRange = 30
     maxRange = 120
 
+    # Distancia para intersecao
+    # d = h*tg(thetaCam - fov/2 + ypixel*fov)
+
     # Parametros para a robo simulada
     desvioPos = 5
     desvioAngle = 5
