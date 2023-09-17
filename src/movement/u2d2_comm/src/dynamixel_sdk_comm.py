@@ -176,27 +176,28 @@ class u2d2Control():
             self.headFeedbackRes.pos_vector = [0]*2
 
             for motor_id in range(2):
-                if motor_id in self.AX_12_MOTORS:
+                if motor_id+18 in self.AX_12_MOTORS:
                     packetHandler = self.packetHandler1
                     presPosAddr = PROTOCOL_1_INFOS['PRES_POS_ADDR']
                     protocol = 1.0
                 
-                elif (motor_id in self.MX_106_MOTORS+motor_id in self.MX_64_MOTORS):
+                elif (motor_id+18 in self.MX_106_MOTORS+self.MX_64_MOTORS):
                     packetHandler = self.packetHandler2
                     presPosAddr = PROTOCOL_2_INFOS['PRES_POS_ADDR']
                     protocol = 2.0
                 
-                if motor_id in self.MX_106_MOTORS+self.MX_64_MOTORS+self.AX_12_MOTORS:
+                if motor_id+18 in self.MX_106_MOTORS+self.MX_64_MOTORS+self.AX_12_MOTORS:
                     motor_position, comm, hard = packetHandler.read2ByteTxRx(self.portHandler, motor_id+18, presPosAddr)
 
                     if comm !=0 or hard != 0:
-                        self.bodyFeedbackRes.pos_vector[motor_id] = -1
+                        self.headFeedbackRes.pos_vector[motor_id] = -1
                     else:
-                        self.bodyFeedbackRes.pos_vector[motor_id] = self.pos2rad(motor_position, protocol)
+                        self.headFeedbackRes.pos_vector[motor_id] = self.pos2rad(motor_position, protocol)
 
             return self.headFeedbackRes
 
-        except:
+        except Exception as e:
+            print(e)
             return self.feedbackHeadMotors(req)
 
     def data2body(self, msg):
@@ -251,7 +252,7 @@ class u2d2Control():
             
             if motor_id+18 in self.MX_106_MOTORS+self.MX_64_MOTORS+self.AX_12_MOTORS:
                 value = self.rad2pos(motor_position, protocol)
-                value = self.checkPositionInLimit(value, motor_id+18)
+                #value = self.checkPositionInLimit(value, motor_id+18)
                 bytes_value = value.to_bytes(numBytes, byteorder='little')
 
                 bodyGroup.addParam(motor_id+18, bytes_value)

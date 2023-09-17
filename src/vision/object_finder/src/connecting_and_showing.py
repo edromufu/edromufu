@@ -62,7 +62,7 @@ class Node():
             print("Ajuste de Brilho '=' para aumentar e '-' para diminuir.\n")
             print("Para continuar a detecção. Aperte W.\n")
 
-        while True:
+        while not rospy.is_shutdown():
             ret , self.current_frame = self.cap.read()
             self.classes, self.scores, self.boxes, self.fps = ri.detect_model(self.model,self.current_frame)
 

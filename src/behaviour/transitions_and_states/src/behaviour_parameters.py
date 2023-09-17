@@ -59,10 +59,10 @@ class BehaviourParameters():
         self.cameraHeight = 480
 
         #Parâmetros de interpretação da câmera
-        self.xCenterLeftLimit = self.cameraWidth/4
-        self.xCenterRightLimit = 3*self.cameraWidth/4
-        self.yCenterBottomLimit = 2*self.cameraHeight/3
-        self.yCenterTopLimit = self.cameraHeight/3
+        self.xCenterLeftLimit = 4*self.cameraWidth/10
+        self.xCenterRightLimit = 6*self.cameraWidth/10
+        self.yCenterBottomLimit = 6*self.cameraHeight/10
+        self.yCenterTopLimit = 4*self.cameraHeight/10
 
         self.closeSize = 80*80
 
