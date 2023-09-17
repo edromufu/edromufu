@@ -5,17 +5,10 @@ import rospy
 from transitions import Machine
 from modularized_bhv_msgs.msg import currentStateMsg
 
-#Parametros associados a posicao relativa da bola
-LEFT = 'Left' #Strings de resposta do interpretador da bola
-RIGHT = 'Right' #para cada posicao
-CENTER = 'Center'
-BOTTOM = 'Bottom'
+edrom_dir = '/home/'+os.getlogin()+'/edromufu/src/'
 
-UP = 'Up' #String associada a estar de pe na resposta do interpretador de queda
-
-#Parametros associados a movimentacao da cabeca
-RIGHT_HEAD_MOVEMENT = 'R' #Strings de reposta do interpretador
-LEFT_HEAD_MOVEMENT = 'L' #para possiveis movimentos da cabeca
+sys.path.append(edrom_dir+'behaviour/transitions_and_states/src')
+from behaviour_parameters import BehaviourParameters
 
 class StateMachine():
 
@@ -28,118 +21,12 @@ class StateMachine():
         - Inicializa a maquina de estados, utilizando as caracteristicas ja criadas
         """
 
-        states = ['search_ball','body_alignment','body_search','walking','stand_still','kick','getting_up', 'impossible']
-        
-        go_to_search_ball_transitions = [
-            { 'trigger': 'go_to_search_ball', 'source': 'body_alignment', 'dest': 'search_ball',
-             'conditions': 'search_ball_condition', 'unless': 'getting_up_condition'}
-            ,
-            { 'trigger': 'go_to_search_ball', 'source': 'body_search', 'dest': 'search_ball',
-             'conditions': 'search_ball_condition', 'unless': 'getting_up_condition'}
-            ,
-            { 'trigger': 'go_to_search_ball', 'source': 'stand_still', 'dest': 'search_ball',
-             'conditions': 'search_ball_condition', 'unless': 'getting_up_condition'}
-            ,
-            { 'trigger': 'go_to_search_ball', 'source': 'getting_up', 'dest': 'search_ball',
-             'conditions': 'search_ball_condition', 'unless': 'getting_up_condition'}
-            ,
-            { 'trigger': 'go_to_search_ball', 'source': 'walking', 'dest': 'search_ball',
-             'conditions': 'search_ball_align_kick_condition', 'unless': 'getting_up_condition'}
-        ]
-
-        go_to_body_alignment_transitions = [
-            { 'trigger': 'go_to_body_alignment', 'source': 'search_ball', 'dest': 'body_alignment',
-             'conditions': 'body_alignment_condition', 'unless': 'getting_up_condition'}
-        ]
-
-        go_to_body_search_transitions = [
-            { 'trigger': 'go_to_body_search', 'source': '*', 'dest': 'body_search',
-             'conditions': 'body_search_condition', 'unless': 'getting_up_condition'}
-        ]
-
-        go_to_walking_transitions = [
-            { 'trigger': 'go_to_walking', 'source': 'search_ball', 'dest': 'walking',
-             'conditions': 'walking_condition', 'unless': 'getting_up_condition'}
-            ,
-            { 'trigger': 'go_to_walking', 'source': 'body_search', 'dest': 'walking',
-             'conditions': 'walking_condition', 'unless': 'getting_up_condition'}
-            ,
-            { 'trigger': 'go_to_walking', 'source': 'body_alignment', 'dest': 'walking',
-             'conditions': 'walking_condition', 'unless': 'getting_up_condition'}
-        ]
-        
-        go_to_stand_still_transitions = [
-            { 'trigger': 'go_to_stand_still', 'source': 'getting_up', 'dest': 'stand_still',
-             'unless': 'getting_up_condition'}
-            ,
-            { 'trigger': 'go_to_stand_still', 'source': 'kick', 'dest': 'stand_still',
-             'unless': 'getting_up_condition'}
-        ]
-
-        go_to_kick_transitions = [
-            { 'trigger': 'go_to_kick', 'source': 'walking', 'dest': 'kick',
-             'conditions': 'kick_condition', 'unless': 'getting_up_condition'},
-            { 'trigger': 'go_to_kick', 'source': 'search_ball', 'dest': 'kick',
-             'conditions': 'kick_condition', 'unless': 'getting_up_condition'},
-        ]
-
-        go_to_getting_up_transitions = [
-            { 'trigger': 'go_to_getting_up', 'source': '*', 'dest': 'getting_up',
-             'conditions': 'getting_up_condition'}
-        ]
-
-        go_to_impossible_transitions = [
-            {'trigger': 'go_to_search_ball', 'source': '*', 'dest': 'impossible',
-             'conditions': 'impossible_condition'},
-            {'trigger': 'go_to_body_search', 'source': '*', 'dest': 'impossible',
-             'conditions': 'impossible_condition'},
-            {'trigger': 'go_to_walking', 'source': '*', 'dest': 'impossible',
-             'conditions': 'impossible_condition'},
-            {'trigger': 'go_to_kick', 'source': '*', 'dest': 'impossible',
-             'conditions': 'impossible_condition'},
-            {'trigger': 'go_to_getting_up', 'source': '*', 'dest': 'impossible',
-             'conditions': 'impossible_condition'},
-            {'trigger': 'go_to_body_alignment', 'source': '*', 'dest': 'impossible',
-             'conditions': 'impossible_condition'},
-            {'trigger': 'go_to_stand_still', 'source': '*', 'dest': 'impossible',
-             'conditions': 'impossible_condition'}
-        ]
-
-        all_transitions = (go_to_search_ball_transitions + go_to_body_alignment_transitions + go_to_walking_transitions 
-        + go_to_kick_transitions + go_to_getting_up_transitions + go_to_stand_still_transitions + go_to_body_search_transitions
-        + go_to_impossible_transitions)
-
-        self.robot_state_machine = Machine(self, states=states, transitions=all_transitions, initial='stand_still')
-
-        self.state_publisher = rospy.Publisher('/transitions_and_states/state_machine', currentStateMsg, queue_size=1)
-        self.state_msg = currentStateMsg()
+        states = ['rotate', 'walking','stand_still','kick','getting_up', 'impossible']
     
     #Funcao para chamada de atualizacao de cada uma das variaveis
     #que controlarao as transicoes de estados da maquina
-    def request_state_machine_update(self, fallState, ballFound, ballClose, ballRelativePosition, verAngleAccomplished, headPossibleMovements, horMotorOutOfCenter):
-        """
-        -> Funcao:
-        Chamar a atualizacao das variaveis de transicao, atraves de:
-            - Recebe as variaveis de interesse da state_machine_receiver
-            - Realiza a chamada individual de cada uma das funcoes de atualizacao das variaveis 
-        -> Input:
-            - fallState: Resultado da interpretacao de queda da robo
-            - ballFound: Declara se a bola foi encontrada pela camera
-            - ballClose: Informa se a bola passou de um limite de proximidade
-            - ballRelativePosition: Informa a posicao relativa da bola na interpretacao da camera
-            - verAngleAccomplished: Informa se a posicao vertical do motor passou de um limite definido
-            - headPossibleMovements: Lista os movimentos possiveis dos motores da cabeca
-            - horMotorOutOfCenter: Indica se o motor horizontal ultrapassou os limites do centro
-        """
-        self.walking_condition_update(ballRelativePosition, horMotorOutOfCenter)
-        self.getting_up_condition_update(fallState)
-        self.kick_condition_update(ballRelativePosition, verAngleAccomplished, ballClose)
-        self.body_alignment_condition_update(ballRelativePosition, headPossibleMovements, horMotorOutOfCenter)
-        self.search_ball_condition_update(ballFound, ballRelativePosition)
-        self.search_ball_align_kick_condition_update(ballRelativePosition)
-        self.body_search_condition_update(ballFound)
-
-        #!
+    def request_state_machine_update(self, ballPosition, ballClose, ballFound, fallState, horMotorOutOfCenter, headKickCheck):
+        
         print(f'-------------------\nEstado {str(self.state)}')
         self.update_state()
         self.state_msg.currentState = str(self.state)
@@ -188,7 +75,7 @@ class StateMachine():
     
     ########################################FUNÇÕES UPDATE CONDITION########################################
     #Funcao para atualizar a variavel de codigo relacionada ao estado de walking
-    def walking_condition_update(self, ball_relative_position, hor_motor_out_of_center):
+    def rotate_condition_update(self, timer_to_rotate, ball_relative_position, ):
         """
         -> Funcao:
         Avaliar a necessidade de transicao para o estado de walking e

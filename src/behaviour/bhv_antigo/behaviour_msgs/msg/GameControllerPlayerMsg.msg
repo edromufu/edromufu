@@ -1,2 +1,0 @@
-uint8 penalty
-uint8 secsTillUnpenalised

@@ -1,15 +1,26 @@
 <launch>
-    <!-- Máquina de Estados -->
-	<node name="state_machine" pkg="transitions_and_states" type="state_machine_receiver.py" output="screen" >   </node>
+    <arg name="imu_connected" default="true"/>
+    <arg name="imu_port" default="/dev/ttyUSB0"/>
+    
+    <!-- Máquina de Estados 
+	<node name="state_machine" pkg="transitions_and_states" type="state_machine_receiver.py" output="screen" >   </node> 
 	<node name="body_alignment" pkg="states_routine" type="body_alignment_routine.py" output="screen" >    </node>
     <node name="body_search" pkg="states_routine" type="body_search_routine.py" output="screen" >    </node>
     <node name="search_ball" pkg="states_routine" type="search_ball_routine.py" output="screen" >    </node>
     <node name="walking" pkg="states_routine" type="walking_routine.py" output="screen" >    </node>
+    -->
 
-	<!-- Webots -->
+	<!-- Webots 
 	<include file="$(find bhv_independent_simulator)/launch/behaviour_simulator.launch"></include>
+    -->
 
     <!--Interpretação-->
-	<node name="ros_packer" pkg="sensor_observer" type="ros_packer.py" output="screen" >    </node>
+	<node name="ros_packer" pkg="sensor_observer" type="ros_packer.py" output="screen" >   
+    </node>
+
+    <!--Leitura do IMU-->
+	<node name="imu_ros_arduino" pkg="imu_ros_arduino" type="imu_read.py" output="screen" if="$(eval arg('imu_connected'))">   
+        <param name="port" value="$(eval arg('imu_port'))" />
+    </node>
 
 </launch>
