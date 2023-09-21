@@ -24,6 +24,26 @@ def callIK(robot, newFootAbsPosition, newFootAbsPosture, currentFoot):
 
     return joint_angles
 
+def feetPosesCalculator(robot, xcom, ycom, xswing, yswing, zswing, supportFoot):
+
+    absCOM = robot[0].absolutePosition
+
+    absCOMCalc = np.tile(absCOM, (1,len(xcom))).T
+    xyzCOM = np.c_[xcom, ycom, absCOM[2]*np.ones(len(xcom))]
+    xyzSwing = np.c_[xswing, yswing, zswing]
+
+    if 'L' in robot[supportFoot].get_name():
+        leftFootPoses = absCOMCalc - xyzCOM
+    else:
+        leftFootPoses = absCOMCalc - xyzCOM + zswing
+    
+    if 'R' in robot[supportFoot].get_name():
+        rightFootPoses = absCOMCalc - xyzCOM
+    else:
+        rightFootPoses = absCOMCalc - xyzCOM + zswing
+    
+    return leftFootPoses, rightFootPoses
+
 def Gait(robot, stepHeight, stepNumber, initialLeg=False):
     #leg == False (direita), leg == True (esquerda)
     #phase == True (subida), phase == False (descida)
