@@ -51,7 +51,7 @@ class Core:
         #Services de requisição de movimento, todos possuem como callback movementManager
         rospy.Service('movement_central/request_gait', gait, self.movementManager)
         rospy.Service('movement_central/request_page', page, self.movementManager)
-        rospy.Service('movement_central/request_vx', vx, self.movementManager)
+        rospy.Service('movement_central/request_walk', vx, self.movementManager)
 
         #Inicialização do objeto (modelo) da robô em código
         robot_name = rospy.get_param('/movement_core/name')
