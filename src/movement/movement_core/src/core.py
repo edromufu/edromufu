@@ -16,9 +16,6 @@ from movement_patterns import Gait
 sys.path.append(edrom_dir+'movement/movement_pages/src')
 from page_runner import Page
 
-sys.path.append(edrom_dir+'movement/step_planner/src')
-from walking_planner import WalkVx
-
 from movement_utils.srv import *
 from movement_utils.msg import *
 from sensor_msgs.msg import JointState
@@ -161,10 +158,7 @@ class Core:
             response.success = True
         
         elif 'vx' in str(req.__class__):
-            WalkVx(req.distX, req.vx, self.robotModel)
-
-            response = vxResponse()
-            response.success = True
+            pass
 
         return response
     

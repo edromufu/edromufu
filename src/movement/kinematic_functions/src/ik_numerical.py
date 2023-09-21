@@ -59,7 +59,6 @@ def CalcJacobian(indexes, robot):
     
     return J
 
-#!!!Limitar motores para não calcular rotações impossíveis
 def VirtuallyMoveJoints(indexes, dq, robot):
 
     for n in range(len(indexes)):
