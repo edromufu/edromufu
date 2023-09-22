@@ -7,6 +7,9 @@ import copy
 import sys, os
 edrom_dir = '/home/'+os.getlogin()+'/edromufu/src/'
 
+
+YCOM_FINAL = 0.05
+
 sys.path.append(edrom_dir+'movement/kinematic_functions/src')
 from ik_numerical import InverseKinematics
 
@@ -24,9 +27,21 @@ def callIK(robot, newFootAbsPosition, newFootAbsPosture, currentFoot):
 
     return joint_angles
 
-def feetPosesCalculator(robot, xcom, ycom, xswing, yswing, zswing, supportFoot):
+def feetPosesCalculator(robot, supportFoot): #xcom, ycom, xswing, yswing, zswing, 
 
     absCOM = robot[0].absolutePosition
+
+    ysignal = 1 if supportFoot == -2 else 0
+    
+    #! PARA TESTES
+    # ---------------------------------
+    ycom = np.linspace(0.0,ysignal*YCOM_FINAL,11)
+    xcom = np.zeros(len(ycom))
+    xswing=np.zeros(len(ycom))
+    yswing=np.zeros(len(ycom))
+    zswing=np.zeros(len(ycom))
+    # ---------------------------------
+
 
     absCOMCalc = np.tile(absCOM, (1,len(xcom))).T
     xyzCOM = np.c_[xcom, ycom, absCOM[2]*np.ones(len(xcom))]
@@ -35,14 +50,48 @@ def feetPosesCalculator(robot, xcom, ycom, xswing, yswing, zswing, supportFoot):
     if 'L' in robot[supportFoot].get_name():
         leftFootPoses = absCOMCalc - xyzCOM
     else:
-        leftFootPoses = absCOMCalc - xyzCOM + zswing
+        leftFootPoses = absCOMCalc - xyzCOM + xyzSwing
     
     if 'R' in robot[supportFoot].get_name():
         rightFootPoses = absCOMCalc - xyzCOM
     else:
-        rightFootPoses = absCOMCalc - xyzCOM + zswing
+        rightFootPoses = absCOMCalc - xyzCOM + xyzSwing
     
     return leftFootPoses, rightFootPoses
+
+def callbalance(robot, leftFootPoses, rightFootPoses):
+    balance_poses = np.zeros((len(leftFootPoses),len(robot)))
+
+
+    initial = []
+    footInitialPosture = []
+    for motor in robot:
+        initial.append(motor.jointRotation)
+        if 'FOOT' in motor.get_name():
+            footInitialPosture.append(motor.absolutePosture)
+    initial = np.array(initial)
+
+
+    for phase in range(len(leftFootPoses)):
+
+        leftFootAbsPosition = robot[-2].absolutePosition + leftFootPoses[phase]
+        currentFoot = -2
+        left_joint_angles = callIK(robot, leftFootAbsPosition, footInitialPosture[0], currentFoot)
+        
+        rightFootAbsPosition = robot[-1].absolutePosition + rightFootPoses[phase]
+        currentFoot = -1
+        right_joint_angles = callIK(robot, rightFootAbsPosition, footInitialPosture[1], currentFoot)
+        joint_id = 0
+
+        for motor in robot:
+            if 'R' in motor.get_name()[0]:
+                balance_poses[phase][joint_id] = left_joint_angles[joint_id]
+            elif 'L' in motor.get_name()[0]:
+                balance_poses[phase][joint_id] = right_joint_angles[joint_id]
+            joint_id += 1
+
+    return balance_poses
+
 
 def Gait(robot, stepHeight, stepNumber, initialLeg=False):
     #leg == False (direita), leg == True (esquerda)
