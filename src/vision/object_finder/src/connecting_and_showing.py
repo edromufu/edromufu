@@ -71,7 +71,7 @@ class Node():
             ret , self.current_frame = self.cap.read()
 
             if not ret:
-                print("Error capturing frame")
+                print("\nError capturing frame\n")
                 break
 
                     
