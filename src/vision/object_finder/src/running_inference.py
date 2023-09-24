@@ -28,7 +28,7 @@ def read_cnn_architecture(config_file, weights_file):
 
 def set_model_input(net):
 
-    #o pedro mandou tirar o underline e botar ponto!
+
     model = cv2.dnn.DetectionModel(net)
     model.setInputParams(size=(416,416), scale=1/255, swapRB=True)
     
@@ -63,7 +63,7 @@ def draw_results(frame, classes, scores, boxes):
         radius = round((roi_width+roi_height)/4)
         
         cv2.rectangle(frame, p1, p2, outline_color_list[classes[i]], 2)
-        #cv2.circle (frame,(x_center,y_center),radius, outline_color_list[classes[i]],2 )
+        #cv2.circle (frame,(int(x_center),int(y_center)),radius, outline_color_list[classes[i]],2 )
         confidence = str(round(float(scores[i]), 2))
         
         label = "Ball"
