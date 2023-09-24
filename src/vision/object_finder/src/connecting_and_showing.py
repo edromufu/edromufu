@@ -13,8 +13,8 @@ from vision_msgs.msg import Webotsmsg
 import sys
 
 sys.setrecursionlimit(100000)
-width = 416 # Largura da imagem (conferir no vídeo)
-height = 416 # Altura da imagem (Conferir no vídeo)
+WIDTH = 416 # Largura da imagem (conferir no vídeo)
+HEIGHT = 416 # Altura da imagem (Conferir no vídeo)
 
 '''import cProfile, pstats, io
 from pstats import SortKey
@@ -64,12 +64,14 @@ class Node():
 
         while not rospy.is_shutdown():
             ret , self.current_frame = self.cap.read()
-            self.classes, self.scores, self.boxes, self.fps = ri.detect_model(self.model,self.current_frame)
 
             if not ret:
                 print("Error capturing frame")
                 break
-
+                    
+            self.current_frame = cv2.resize(self.current_frame, (WIDTH,HEIGHT))
+            self.classes, self.scores, self.boxes, self.fps = ri.detect_model(self.model,self.current_frame)
+                
             if self.output_img == True:
                 self.show_result_frame()
 
@@ -167,15 +169,15 @@ class Node():
     def convert_ros_image_to_cv2(self, message):
         '''Converts the sensor_msgs/Image to Numpy Array'''
 
-        self.opencv_bridge = CvBridge()
+        #self.opencv_bridge = CvBridge()
         
-        try:
-            self.current_frame = self.opencv_bridge.imgmsg_to_cv2(message, desired_encoding="bgr8")
+        #try:
+        #    self.current_frame = self.opencv_bridge.imgmsg_to_cv2(message, desired_encoding="bgr8")
         
-        except Exception as e:
-            print(f"{e}")
+        #except Exception as e:
+        #    print(f"{e}")
 
-        self.send_current_frame_to_inference()
+        #self.send_current_frame_to_inference()
         #Diferencias códigos da camera e do Webots
 
     #Configurações da imagem (Brilho) (Parametro passado launch)
