@@ -11,7 +11,7 @@ sys.path.append(edrom_dir+'movement/humanoid_definition/src')
 from setup_robot import Robot
 
 sys.path.append(edrom_dir+'movement/movement_functions/src')
-from movement_patterns import Gait
+from movement_patterns import Gait,feetPosesCalculator,callbalance
 
 sys.path.append(edrom_dir+'movement/movement_pages/src')
 from page_runner import Page
@@ -48,7 +48,7 @@ class Core:
         #Services de requisição de movimento, todos possuem como callback movementManager
         rospy.Service('movement_central/request_gait', gait, self.movementManager)
         rospy.Service('movement_central/request_page', page, self.movementManager)
-        rospy.Service('movement_central/request_walk', vx, self.movementManager)
+        rospy.Service('movement_central/request_walk', balance, self.movementManager)
 
         #Inicialização do objeto (modelo) da robô em código
         robot_name = rospy.get_param('/movement_core/name')
@@ -141,7 +141,7 @@ class Core:
             response.success = True
         
         elif 'page' in str(req.__class__):
-            page_poses = Page(req.page_name, QUEUE_TIME)
+            page_poses = Page(req.page_name, QUEUE_TIME, self.motorsCurrentPosition)
             
             if rospy.get_param('/movement_core/wait4u2d2'):
                 for pose in page_poses: 
@@ -157,8 +157,28 @@ class Core:
             response = pageResponse()
             response.success = True
         
-        elif 'vx' in str(req.__class__):
-            pass
+        elif 'balance' in str(req.__class__):
+
+            checked_poses = np.array([self.motorsCurrentPosition])
+            leftFootPoses, rightFootPoses = feetPosesCalculator(self.robotModel, req.supported_foot)
+            balance_poses = callbalance(self.robotModel, leftFootPoses, rightFootPoses)
+
+            if rospy.get_param('/movement_core/wait4u2d2'):
+                for index, pose in enumerate(balance_poses):
+                    pose = self.invertMotorsPosition(pose)
+                    pose = self.sortJsonIndex2MotorInput(pose)
+                    checked_poses = np.append(checked_poses, [pose], axis=0)  
+
+                for pose in checked_poses: 
+                    self.queue.append(pose)
+
+            if PUB2VIS:
+                for pose in balance_poses:
+                    pose = self.invertMotorsPosition(pose)
+                    self.queuevis.append(pose[1:-2])
+
+            response = balanceResponse()
+            response.success = True
 
         return response
     

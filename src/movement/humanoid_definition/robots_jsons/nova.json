@@ -17,7 +17,7 @@
         { "name":"LFOOT"    ,     "id":-1,    "sister":-1,    "child": -1,    "mother2SelfVec": [-0.021,       0,   -0.029],    "jointAxis": "UZ",   "jointRotation": 0},
         { "name":"RFOOT"    ,     "id":-1,    "sister":-1,    "child": -1,    "mother2SelfVec": [-0.021,       0,   -0.029],    "jointAxis": "UZ",   "jointRotation": 0}
     ],
-    "inverted_motors_id": [6, 7, 10, 16, 17],
+    "inverted_motors_id": [6, 7, 10, 12, 13,16, 17],
     "knee_ids": [12,13],
     "motor_type": {"AX-12":  [18, 19], 
                    "MX-106": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
