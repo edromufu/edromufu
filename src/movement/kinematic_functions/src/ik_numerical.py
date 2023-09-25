@@ -82,7 +82,6 @@ def InverseKinematics(newFootAbsPosition, newFootAbsPosture, currentFoot, roboti
     
     lambda_val = 0.7
     indexes = FindRoute(currentFoot, robotik)
-
     err = CalcVWerr(targetAbsPosition, targetAbsPosture, robotik[currentFoot])
     
     count = 0

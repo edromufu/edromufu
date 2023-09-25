@@ -31,8 +31,8 @@ def feetPosesCalculator(robot, supportFoot): #xcom, ycom, xswing, yswing, zswing
 
     absCOM = robot[0].absolutePosition
 
-    ysignal = 1 if supportFoot == -2 else 0
-    
+    ysignal = 1 if supportFoot == -2 else -1
+
     #! PARA TESTES
     # ---------------------------------
     ycom = np.linspace(0.0,ysignal*YCOM_FINAL,11)
@@ -56,39 +56,36 @@ def feetPosesCalculator(robot, supportFoot): #xcom, ycom, xswing, yswing, zswing
         rightFootPoses = absCOMCalc - xyzCOM
     else:
         rightFootPoses = absCOMCalc - xyzCOM + xyzSwing
-    
+
     return leftFootPoses, rightFootPoses
 
 def callbalance(robot, leftFootPoses, rightFootPoses):
-    balance_poses = np.zeros((len(leftFootPoses),len(robot)))
 
+    balance_poses = np.zeros((len(leftFootPoses),len(robot)))
 
     initial = []
     footInitialPosture = []
     for motor in robot:
-        initial.append(motor.jointRotation)
+        
         if 'FOOT' in motor.get_name():
+            initial.append(motor.absolutePosition)
             footInitialPosture.append(motor.absolutePosture)
     initial = np.array(initial)
 
-
     for phase in range(len(leftFootPoses)):
 
-        leftFootAbsPosition = robot[-2].absolutePosition + leftFootPoses[phase]
+        leftFootAbsPosition = initial[0] + np.array([leftFootPoses[phase]]).T
         currentFoot = -2
         left_joint_angles = callIK(robot, leftFootAbsPosition, footInitialPosture[0], currentFoot)
-        
-        rightFootAbsPosition = robot[-1].absolutePosition + rightFootPoses[phase]
+        left_joint_angles = left_joint_angles[7:13]
+
+        rightFootAbsPosition = initial[1] + np.array([rightFootPoses[phase]]).T
         currentFoot = -1
         right_joint_angles = callIK(robot, rightFootAbsPosition, footInitialPosture[1], currentFoot)
-        joint_id = 0
+        right_joint_angles = right_joint_angles[1:7]
 
-        for motor in robot:
-            if 'R' in motor.get_name()[0]:
-                balance_poses[phase][joint_id] = left_joint_angles[joint_id]
-            elif 'L' in motor.get_name()[0]:
-                balance_poses[phase][joint_id] = right_joint_angles[joint_id]
-            joint_id += 1
+        balance_poses[phase][1:7] = right_joint_angles
+        balance_poses[phase][7:13] = left_joint_angles
 
     return balance_poses
 

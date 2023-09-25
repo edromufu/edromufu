@@ -141,7 +141,7 @@ class Core:
             response.success = True
         
         elif 'page' in str(req.__class__):
-            page_poses = Page(req.page_name, QUEUE_TIME)
+            page_poses = Page(req.page_name, QUEUE_TIME, self.motorsCurrentPosition)
             
             if rospy.get_param('/movement_core/wait4u2d2'):
                 for pose in page_poses: 
@@ -160,7 +160,7 @@ class Core:
         elif 'balance' in str(req.__class__):
 
             checked_poses = np.array([self.motorsCurrentPosition])
-            leftFootPoses, rightFootPoses = feetPosesCalculator(self.robotModel, req.support_foot)
+            leftFootPoses, rightFootPoses = feetPosesCalculator(self.robotModel, req.supported_foot)
             balance_poses = callbalance(self.robotModel, leftFootPoses, rightFootPoses)
 
             if rospy.get_param('/movement_core/wait4u2d2'):
