@@ -23,6 +23,8 @@ from sensor_msgs.msg import JointState
 QUEUE_TIME = rospy.get_param('/movement_core/queue_time') #Em segundos
 PUB2VIS = rospy.get_param('/movement_core/pub2vis')
 
+
+
 class Core:
     def __init__(self): 
         
@@ -56,6 +58,7 @@ class Core:
         self.robotInstance = Robot(robot_name)
         self.robotModel = self.robotInstance.robotJoints
         self.motorId2JsonIndex = self.robotInstance.motorId2JsonIndex
+        self.FT = True
         
         #Timer para fila de publicações
         rospy.Timer(rospy.Duration(QUEUE_TIME), self.sendFromQueue)
@@ -70,6 +73,10 @@ class Core:
             'LKNEE_joint','LANKLE_UY_joint','LANKLE_UX_joint']
 
     def callRobotModelUpdate(self):
+        if self.FT:
+            self.motorsFeedback(True).pos_vector
+            self.FT = False
+        
         self.motorsCurrentPosition = list(self.motorsFeedback(True).pos_vector)
 
         positions2Update = self.motorsCurrentPosition
@@ -141,6 +148,7 @@ class Core:
             response.success = True
         
         elif 'page' in str(req.__class__):
+            print(self.motorsCurrentPosition)
             page_poses = Page(req.page_name, QUEUE_TIME, self.motorsCurrentPosition)
             
             if rospy.get_param('/movement_core/wait4u2d2'):
