@@ -1,20 +1,24 @@
 #!/usr/bin/env python3
 # coding=utf-8
 
-import rospy
-from sensor_msgs.msg import Image as ROS_Image
+import rospy, os, sys
+
 
 import cv2
-from cv_bridge import CvBridge
+#from cv_bridge import CvBridge
 import running_inference as ri
 
+
+edrom_dir = '/home/'+os.getlogin()+'/edromufu/src/'
+
+sys.path.append(edrom_dir+'behaviour/transitions_and_states/src')
+from behaviour_parameters import BehaviourParameters
+
+#from sensor_msgs.msg import Image as ROS_Image
 from vision_msgs.msg import Ball
 from vision_msgs.msg import Webotsmsg
-import sys
 
 sys.setrecursionlimit(100000)
-width = 416 # Largura da imagem (conferir no vídeo)
-height = 416 # Altura da imagem (Conferir no vídeo)
 
 '''import cProfile, pstats, io
 from pstats import SortKey
@@ -33,7 +37,9 @@ class Node():
         self.ajuste = rospy.get_param('vision/ajuste')
         self.bright = rospy.get_param('vision/brilho')
 
-
+        #Pegando os parametros do behaviour
+        self.parameters = BehaviourParameters()
+        
         #Iniciando o nó e obtendo os arquivos que definem a rede neural
         rospy.init_node(nome_no, anonymous = True)
         self.net = ri.get_cnn_files()
@@ -43,8 +49,7 @@ class Node():
         self.searching = True
         self.cap = cv2.VideoCapture(self.camera,cv2.CAP_ANY)
         self.cap.set(cv2.CAP_PROP_BRIGHTNESS, (self.bright))
-        self.publisher = rospy.Publisher('/webots_natasha/vision_inference', Webotsmsg, queue_size=100)
-
+        self.publisher = rospy.Publisher(self.parameters.vision2BhvTopic, Webotsmsg, queue_size=100)
         
         #SE FOR NO REAL
         self.get_webcam()
@@ -57,19 +62,22 @@ class Node():
 
     def get_webcam(self):
 
-        print("\n----Visão Operante----\n")
+        print("\nVisão Operante\n")
         if self.ajuste == True:
             print("Ajuste de Brilho '=' para aumentar e '-' para diminuir.\n")
             print("Para continuar a detecção. Aperte W.\n")
 
         while not rospy.is_shutdown():
             ret , self.current_frame = self.cap.read()
-            self.classes, self.scores, self.boxes, self.fps = ri.detect_model(self.model,self.current_frame)
 
             if not ret:
-                print("Error capturing frame")
+                print("\nError capturing frame\n")
                 break
 
+                    
+            self.current_frame = cv2.resize(self.current_frame, (self.parameters.cameraWidth,self.parameters.cameraHeight))
+            self.classes, self.scores, self.boxes, self.fps = ri.detect_model(self.model,self.current_frame)
+                
             if self.output_img == True:
                 self.show_result_frame()
 
@@ -111,7 +119,7 @@ class Node():
             
 
             self.dict_of_xs[i] = {"classe": self.classes[i], "x": x}
-            print(self.dict_of_xs)
+
 
             if self.classes[i] not in self.list_of_classes_in_current_frame:
                 self.list_of_classes_in_current_frame.append(self.classes[i])
@@ -140,9 +148,6 @@ class Node():
                 elif self.dict_of_xs[self.pos_maior_x]['classe'] == 1:
                     self.dict_of_xs[self.pos_maior_x]['classe'] = 2
 
-
-                print("Detectei duas iguais!")
-                print(self.dict_of_xs)
                 
         self.publisher.publish(objects_msg)
 
@@ -158,7 +163,7 @@ class Node():
                         if "vision_controller" in item:
                             self.vision_topic = item
 
-                rospy.Subscriber(self.vision_topic, ROS_Image, callback = self.convert_ros_image_to_cv2)
+                #rospy.Subscriber(self.vision_topic, ROS_Image, callback = self.convert_ros_image_to_cv2)
                 self.topic_found = True
                 rospy.spin()
             except Exception:
@@ -167,15 +172,15 @@ class Node():
     def convert_ros_image_to_cv2(self, message):
         '''Converts the sensor_msgs/Image to Numpy Array'''
 
-        self.opencv_bridge = CvBridge()
+        #self.opencv_bridge = CvBridge()
         
-        try:
-            self.current_frame = self.opencv_bridge.imgmsg_to_cv2(message, desired_encoding="bgr8")
+        #try:
+        #    self.current_frame = self.opencv_bridge.imgmsg_to_cv2(message, desired_encoding="bgr8")
         
-        except Exception as e:
-            print(f"{e}")
+        #except Exception as e:
+        #    print(f"{e}")
 
-        self.send_current_frame_to_inference()
+        #self.send_current_frame_to_inference()
         #Diferencias códigos da camera e do Webots
 
     #Configurações da imagem (Brilho) (Parametro passado launch)

@@ -44,10 +44,10 @@ class CoreHead:
         self.defineSearchPattern()
     
     def defineSearchPattern(self):
-        x_top_cw = np.linspace(LEFT_X_POSITION, RIGHT_X_POSITION, X_STEPS)
+        x_top_cw   = np.linspace(LEFT_X_POSITION, RIGHT_X_POSITION, X_STEPS)
         y_right_cw = np.linspace(UP_Y_POSITION, BOTTOM_Y_POSITION, Y_STEPS)
-        x_bot_cw = np.linspace(RIGHT_X_POSITION, LEFT_X_POSITION, X_STEPS)
-        y_left_cw = np.linspace(BOTTOM_Y_POSITION, UP_Y_POSITION, Y_STEPS)
+        x_bot_cw   = np.linspace(RIGHT_X_POSITION, LEFT_X_POSITION, X_STEPS)
+        y_left_cw  = np.linspace(BOTTOM_Y_POSITION, UP_Y_POSITION, Y_STEPS)
         
         top_cw      = np.c_[x_top_cw, UP_Y_POSITION*np.ones(len(x_top_cw))]
         right_cw    = np.c_[RIGHT_X_POSITION*np.ones(len(y_right_cw)), y_right_cw]

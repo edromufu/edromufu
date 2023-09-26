@@ -20,21 +20,6 @@ class u2d2Control():
     def __init__(self):
         self.loadMotorsType()
 
-        rospy.init_node('u2d2')
-        
-        rospy.Subscriber('u2d2_comm/data2body', body_motors_data, self.data2body)
-
-        rospy.Subscriber('u2d2_comm/data2head', head_motors_data, self.data2head)
-
-        rospy.Service('u2d2_comm/enableTorque', enable_torque, self.enableTorque)
-        self.enableTorqueRes = enable_torqueResponse()
-
-        rospy.Service('u2d2_comm/feedbackBody', body_feedback, self.feedbackBodyMotors)
-        self.bodyFeedbackRes = body_feedbackResponse()
-
-        rospy.Service('u2d2_comm/feedbackHead', head_feedback, self.feedbackHeadMotors)
-        self.headFeedbackRes = head_feedbackResponse()
-
         self.portHandler = PortHandler(DEVICENAME)
 
         if self.AX_12_MOTORS:
@@ -50,28 +35,51 @@ class u2d2Control():
         self.startComm()
         self.obtainMinMax()
 
+        rospy.init_node('u2d2')
+        
+        rospy.Subscriber('u2d2_comm/data2body', body_motors_data, self.data2body)
+
+        rospy.Subscriber('u2d2_comm/data2head', head_motors_data, self.data2head)
+
+        rospy.Service('u2d2_comm/enableTorque', enable_torque, self.enableTorque)
+        self.enableTorqueRes = enable_torqueResponse()
+
+        rospy.Service('u2d2_comm/feedbackBody', body_feedback, self.feedbackBodyMotors)
+        self.bodyFeedbackRes = body_feedbackResponse()
+
+        rospy.Service('u2d2_comm/feedbackHead', head_feedback, self.feedbackHeadMotors)
+        self.headFeedbackRes = head_feedbackResponse()
+
     def obtainMinMax(self):
-        motorsConnected = self.AX_12_MOTORS + self.MX_106_MOTORS + self.MX_64_MOTORS
+        try:
+            motorsConnected = self.AX_12_MOTORS + self.MX_106_MOTORS + self.MX_64_MOTORS
 
-        self.motorLimitsDict = {}
+            self.motorLimitsDict = {}
 
-        for motorId in motorsConnected:
-            if motorId in self.AX_12_MOTORS:
-                packetHandler = self.packetHandler1
-                cwLimitAddr = PROTOCOL_1_INFOS['CW_LIMIT_ADDR']
-                ccwLimitAddr = PROTOCOL_1_INFOS['CCW_LIMIT_ADDR']
-            elif motorId in (self.MX_106_MOTORS+self.MX_64_MOTORS):
-                packetHandler = self.packetHandler2
-                cwLimitAddr = PROTOCOL_2_INFOS['CW_LIMIT_ADDR']
-                ccwLimitAddr = PROTOCOL_2_INFOS['CCW_LIMIT_ADDR']
+            for motorId in motorsConnected:
+                if motorId in self.AX_12_MOTORS:
+                    cwLimitAddr = PROTOCOL_1_INFOS['CW_LIMIT_ADDR']
+                    ccwLimitAddr = PROTOCOL_1_INFOS['CCW_LIMIT_ADDR']
+                    readFunction = self.packetHandler1.read2ByteTxRx
+
+                elif motorId in (self.MX_106_MOTORS+self.MX_64_MOTORS):
+                    cwLimitAddr = PROTOCOL_2_INFOS['CW_LIMIT_ADDR']
+                    ccwLimitAddr = PROTOCOL_2_INFOS['CCW_LIMIT_ADDR']
+                    readFunction = self.packetHandler2.read4ByteTxRx
+                
+                if motorId in motorsConnected:
+
+                    cwLimit, commcw, hardcw = self.packetHandler2.read4ByteTxRx(self.portHandler, motorId, cwLimitAddr)
+                    ccwLimit, commccw, hardccw = self.packetHandler2.read4ByteTxRx(self.portHandler, motorId, ccwLimitAddr)
+
+                    if commcw == 0 and hardcw == 0 and  commccw == 0 and hardccw == 0:
+                        self.motorLimitsDict[motorId] = [cwLimit, ccwLimit]
             
-            #! Função errada para AX-12 (read2Byte)
-            if motorId in motorsConnected:
-                cwLimit, commcw, hardcw = packetHandler.read4ByteTxRx(self.portHandler, motorId, cwLimitAddr)
-                ccwLimit, commccw, hardccw = packetHandler.read4ByteTxRx(self.portHandler, motorId, ccwLimitAddr)
+            if self.motorLimitsDict == {}:
+                raise Exception
 
-                if commcw == 0 and hardcw == 0 and  commccw == 0 and hardccw == 0:
-                    self.motorLimitsDict[motorId] = [cwLimit, ccwLimit]
+        except:
+            self.obtainMinMax()      
 
     def checkPositionInLimit(self, value, motor_id):
 
@@ -172,7 +180,9 @@ class u2d2Control():
             return self.feedbackBodyMotors(req)
     
     def feedbackHeadMotors(self, req):
+
         try:
+
             self.headFeedbackRes.pos_vector = [0]*2
 
             for motor_id in range(2):
@@ -197,7 +207,6 @@ class u2d2Control():
             return self.headFeedbackRes
 
         except Exception as e:
-            print(e)
             return self.feedbackHeadMotors(req)
 
     def data2body(self, msg):
@@ -252,7 +261,7 @@ class u2d2Control():
             
             if motor_id+18 in self.MX_106_MOTORS+self.MX_64_MOTORS+self.AX_12_MOTORS:
                 value = self.rad2pos(motor_position, protocol)
-                #value = self.checkPositionInLimit(value, motor_id+18)
+                value = self.checkPositionInLimit(value, motor_id+18)
                 bytes_value = value.to_bytes(numBytes, byteorder='little')
 
                 bodyGroup.addParam(motor_id+18, bytes_value)

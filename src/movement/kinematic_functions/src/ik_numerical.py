@@ -59,7 +59,6 @@ def CalcJacobian(indexes, robot):
     
     return J
 
-#!!!Limitar motores para não calcular rotações impossíveis
 def VirtuallyMoveJoints(indexes, dq, robot):
 
     for n in range(len(indexes)):
@@ -83,7 +82,6 @@ def InverseKinematics(newFootAbsPosition, newFootAbsPosture, currentFoot, roboti
     
     lambda_val = 0.7
     indexes = FindRoute(currentFoot, robotik)
-
     err = CalcVWerr(targetAbsPosition, targetAbsPosture, robotik[currentFoot])
     
     count = 0

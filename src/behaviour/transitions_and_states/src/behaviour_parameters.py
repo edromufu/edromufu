@@ -52,11 +52,11 @@ class BehaviourParameters():
 
     def visionwiseParameters(self):
         #Tópico do ROS
-        self.vision2BhvTopic = '/webots_natasha/vision_inference'
+        self.vision2BhvTopic = '/vision/vision_inference'
 
         #Parâmetros da câmera
-        self.cameraWidth =  640
-        self.cameraHeight = 480
+        self.cameraWidth =  416
+        self.cameraHeight = 416
 
         #Parâmetros de interpretação da câmera
         self.xCenterLeftLimit = 4*self.cameraWidth/10
