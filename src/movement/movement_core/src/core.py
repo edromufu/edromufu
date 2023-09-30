@@ -149,7 +149,7 @@ class Core:
         
         elif 'page' in str(req.__class__):
             print(self.motorsCurrentPosition)
-            page_poses = Page(req.page_name, QUEUE_TIME, self.motorsCurrentPosition)
+            page_poses = Page(req.page_name, QUEUE_TIME)
             
             if rospy.get_param('/movement_core/wait4u2d2'):
                 for pose in page_poses: 

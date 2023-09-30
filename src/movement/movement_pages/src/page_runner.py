@@ -6,15 +6,10 @@ import numpy as np
 
 MAIN_DIR = '/home/'+os.getlogin()+'/edromufu/src/movement/movement_pages/pages/'
 
-def Page(page2Run, queueTime, startPose, toPose1Time=0.6):
+def Page(page2Run, queueTime):
 
     with open(MAIN_DIR+page2Run+'.json', 'r') as pageFile:
         jsonData = json.loads(pageFile.read())
-    
-    for motor_id, motor_pos in enumerate(startPose):
-        jsonData['joints_positions'][f'motor_{motor_id}'].insert(0, motor_pos)
-    
-    jsonData['time_between_poses'].insert(0, toPose1Time)
 
     pagePoses = pageInterpol(jsonData['joints_positions'], jsonData['time_between_poses'], queueTime)
 
