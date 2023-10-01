@@ -1,7 +1,7 @@
 <launch>
     <arg name="u2d2_connected" default="true"/>
-    <arg name="u2d2_port" default="/dev/ttyUSB0"/>
-    <arg name="robot_name" default="nova"/>
+    <arg name="u2d2_port" default="/dev/ttyU2D2"/>
+    <arg name="robot_name" default="aurea"/>
     <arg name="page_creation" default="false"/>
     <arg name="queue_time" default="0.2"/>
     <arg name="visualization" default="false"/>

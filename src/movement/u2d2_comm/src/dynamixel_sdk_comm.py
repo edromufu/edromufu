@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import os, json
+import os, json, time
 import rospy
 from dynamixel_sdk import *
 
@@ -10,30 +10,30 @@ from movement_utils.srv import *
 BAUDRATE = 1000000
 
 DEVICENAME = rospy.get_param('u2d2/port')
-ROBOT_MOTORS = rospy.get_param('u2d2/robot_name')
 
 PROTOCOL_1_INFOS =  {'CW_LIMIT_ADDR': 6, 'CCW_LIMIT_ADDR': 8, 'TORQUE_ADDR': 24, 'LED_ADDR': 25 , 'PRES_POS_ADDR': 36, 'GOAL_POS_ADDR': 30, 'GOAL_POS_LEN': 2}
 PROTOCOL_2_INFOS =  {'CW_LIMIT_ADDR': 48, 'CCW_LIMIT_ADDR': 52, 'TORQUE_ADDR': 64, 'LED_ADDR': 65 , 'PRES_POS_ADDR': 132, 'GOAL_POS_ADDR': 116, 'GOAL_POS_LEN': 4}
 
+PROTOCOL_2_MOTORS = list(range(18))
+PROTOCOL_1_MOTORS = [18,19]
+
+if rospy.get_param('u2d2/robot_name') == 'aurea':
+    MIN_MAX_DICT = {'0': [1450,4095],'1': [0,2650],'2': [2040,3600],'3': [500,2100],'4': [700,2300],
+                    '5': [1800,3400],'6': [1930,2425],'7': [1589,2275],'8': [1600,2444],'9': [1700,2500],
+                    '10': [1690,2922],'11': [1100,2922],'12': [948,2226],'13': [885,2226],'14': [900,2300],
+                    '15': [865,2330],'16': [1760,2290],'17': [1665,2300],'18': [0,1023],'19': [0,1023]}
+else:
+    MIN_MAX_DICT = {'0': [1450,4095],'1': [0,2650],'2': [2040,3600],'3': [500,2100],'4': [700,2300],
+                    '5': [1800,3400],'6': [1930,2425],'7': [1589,2275],'8': [1600,2444],'9': [1700,2500],
+                    '10': [1690,2922],'11': [1100,2922],'12': [948,2226],'13': [885,2226],'14': [900,2300],
+                    '15': [865,2330],'16': [1760,2290],'17': [1665,2300],'18': [0,1023],'19': [0,1023]}
+
 class u2d2Control():
 
     def __init__(self):
-        self.loadMotorsType()
-
-        self.portHandler = PortHandler(DEVICENAME)
-
-        if self.AX_12_MOTORS:
-            self.packetHandler1 = PacketHandler(1.0)
-            self.bodyGroup1 = GroupSyncWrite(self.portHandler, self.packetHandler1, PROTOCOL_1_INFOS['GOAL_POS_ADDR'], PROTOCOL_1_INFOS['GOAL_POS_LEN'])
-            self.headGroup1 = GroupSyncWrite(self.portHandler, self.packetHandler1, PROTOCOL_1_INFOS['GOAL_POS_ADDR'], PROTOCOL_1_INFOS['GOAL_POS_LEN'])
-
-        if self.MX_106_MOTORS+self.MX_64_MOTORS:
-            self.packetHandler2 = PacketHandler(2.0)   
-            self.bodyGroup2 = GroupSyncWrite(self.portHandler, self.packetHandler2, PROTOCOL_2_INFOS['GOAL_POS_ADDR'], PROTOCOL_2_INFOS['GOAL_POS_LEN'])
-            self.headGroup2 = GroupSyncWrite(self.portHandler, self.packetHandler2, PROTOCOL_2_INFOS['GOAL_POS_ADDR'], PROTOCOL_2_INFOS['GOAL_POS_LEN'])  
-
+        self.motorLimitsDict = MIN_MAX_DICT
+        
         self.startComm()
-        self.obtainMinMax()
 
         rospy.init_node('u2d2')
         
@@ -48,38 +48,7 @@ class u2d2Control():
         self.bodyFeedbackRes = body_feedbackResponse()
 
         rospy.Service('u2d2_comm/feedbackHead', head_feedback, self.feedbackHeadMotors)
-        self.headFeedbackRes = head_feedbackResponse()
-
-    def obtainMinMax(self):
-        try:
-            motorsConnected = self.AX_12_MOTORS + self.MX_106_MOTORS + self.MX_64_MOTORS
-
-            self.motorLimitsDict = {}
-
-            for motorId in motorsConnected:
-                if motorId in self.AX_12_MOTORS:
-                    cwLimitAddr = PROTOCOL_1_INFOS['CW_LIMIT_ADDR']
-                    ccwLimitAddr = PROTOCOL_1_INFOS['CCW_LIMIT_ADDR']
-                    readFunction = self.packetHandler1.read2ByteTxRx
-
-                elif motorId in (self.MX_106_MOTORS+self.MX_64_MOTORS):
-                    cwLimitAddr = PROTOCOL_2_INFOS['CW_LIMIT_ADDR']
-                    ccwLimitAddr = PROTOCOL_2_INFOS['CCW_LIMIT_ADDR']
-                    readFunction = self.packetHandler2.read4ByteTxRx
-                
-                if motorId in motorsConnected:
-
-                    cwLimit, commcw, hardcw = self.packetHandler2.read4ByteTxRx(self.portHandler, motorId, cwLimitAddr)
-                    ccwLimit, commccw, hardccw = self.packetHandler2.read4ByteTxRx(self.portHandler, motorId, ccwLimitAddr)
-
-                    if commcw == 0 and hardcw == 0 and  commccw == 0 and hardccw == 0:
-                        self.motorLimitsDict[motorId] = [cwLimit, ccwLimit]
-            
-            if self.motorLimitsDict == {}:
-                raise Exception
-
-        except:
-            self.obtainMinMax()      
+        self.headFeedbackRes = head_feedbackResponse()    
 
     def checkPositionInLimit(self, value, motor_id):
 
@@ -95,17 +64,9 @@ class u2d2Control():
         
         return value
 
-    def loadMotorsType(self):
-        os.chdir('/home/'+os.getlogin()+'/edromufu/src/movement/humanoid_definition/robots_jsons/')
-
-        with open(ROBOT_MOTORS+'.json') as f:
-            json_data = json.loads(f.read())
-        
-        self.AX_12_MOTORS = json_data["motor_type"]["AX-12"]
-        self.MX_106_MOTORS = json_data["motor_type"]["MX-106"]
-        self.MX_64_MOTORS = json_data["motor_type"]["MX-64"]
-
     def startComm(self):
+        self.portHandler = PortHandler(DEVICENAME)
+
         # Open port
         try:
             self.portHandler.openPort()
@@ -121,7 +82,13 @@ class u2d2Control():
         except:
             print("Failed to change the baudrate")
             quit()
-    
+        
+        self.packetHandler1 = PacketHandler(1.0)
+        self.headGroup = GroupSyncWrite(self.portHandler, self.packetHandler1, PROTOCOL_1_INFOS['GOAL_POS_ADDR'], PROTOCOL_1_INFOS['GOAL_POS_LEN'])
+
+        self.packetHandler2 = PacketHandler(2.0)   
+        self.bodyGroup = GroupSyncWrite(self.portHandler, self.packetHandler2, PROTOCOL_2_INFOS['GOAL_POS_ADDR'], PROTOCOL_2_INFOS['GOAL_POS_LEN'])  
+
     def enableTorque(self, req):
         
         for _ in range(3):
@@ -131,19 +98,19 @@ class u2d2Control():
                 motor_ids = req.motor_ids
             
             for motor_id in motor_ids:
-                if motor_id in self.AX_12_MOTORS:
+                if motor_id in PROTOCOL_1_MOTORS:
                     packetHandler = self.packetHandler1
                     torqueAddr = PROTOCOL_1_INFOS['TORQUE_ADDR']
                     ledAddr = PROTOCOL_1_INFOS['LED_ADDR']
 
-                elif (motor_id in self.MX_106_MOTORS+self.MX_64_MOTORS):
+                elif motor_id in PROTOCOL_2_MOTORS:
                     packetHandler = self.packetHandler2
                     torqueAddr = PROTOCOL_2_INFOS['TORQUE_ADDR']
                     ledAddr = PROTOCOL_2_INFOS['LED_ADDR']
 
-                if motor_id in self.MX_106_MOTORS+self.MX_64_MOTORS+self.AX_12_MOTORS:
-                    packetHandler.write1ByteTxOnly(self.portHandler, motor_id, torqueAddr, req.data)
-                    packetHandler.write1ByteTxOnly(self.portHandler, motor_id, ledAddr, req.data)
+                
+                packetHandler.write1ByteTxOnly(self.portHandler, motor_id, torqueAddr, req.data)
+                packetHandler.write1ByteTxOnly(self.portHandler, motor_id, ledAddr, req.data)
 
             self.enableTorqueRes.success = True
         
@@ -156,29 +123,20 @@ class u2d2Control():
             self.bodyFeedbackRes.pos_vector = [0]*18
 
             for motor_id in range(18):
-                if motor_id in self.AX_12_MOTORS:
-                    packetHandler = self.packetHandler1
-                    presPosAddr = PROTOCOL_1_INFOS['PRES_POS_ADDR']
-                    protocol = 1.0
+                motor_position, comm, hard = self.packetHandler2.read4ByteTxRx(self.portHandler, motor_id, PROTOCOL_2_INFOS['PRES_POS_ADDR'])
 
-                elif (motor_id in self.MX_106_MOTORS+self.MX_64_MOTORS):
-                    packetHandler = self.packetHandler2
-                    presPosAddr = PROTOCOL_2_INFOS['PRES_POS_ADDR']
-                    protocol = 2.0
-
-                if motor_id in self.MX_106_MOTORS+self.MX_64_MOTORS+self.AX_12_MOTORS:
-                    motor_position, comm, hard = packetHandler.read2ByteTxRx(self.portHandler, motor_id, presPosAddr)
-
-                    if comm !=0 or hard != 0:
-                        self.bodyFeedbackRes.pos_vector[motor_id] = -1
-                    else:
-                        self.bodyFeedbackRes.pos_vector[motor_id] = self.pos2rad(motor_position, protocol)
+                if comm !=0 or hard != 0:
+                    self.bodyFeedbackRes.pos_vector[motor_id] = -1
+                else:
+                    self.bodyFeedbackRes.pos_vector[motor_id] = self.pos2rad(motor_position, 2.0)
 
             return self.bodyFeedbackRes
 
         except:
+            time.sleep(0.5)
+            self.startComm()
             return self.feedbackBodyMotors(req)
-    
+
     def feedbackHeadMotors(self, req):
 
         try:
@@ -186,90 +144,57 @@ class u2d2Control():
             self.headFeedbackRes.pos_vector = [0]*2
 
             for motor_id in range(2):
-                if motor_id+18 in self.AX_12_MOTORS:
-                    packetHandler = self.packetHandler1
-                    presPosAddr = PROTOCOL_1_INFOS['PRES_POS_ADDR']
-                    protocol = 1.0
-                
-                elif (motor_id+18 in self.MX_106_MOTORS+self.MX_64_MOTORS):
-                    packetHandler = self.packetHandler2
-                    presPosAddr = PROTOCOL_2_INFOS['PRES_POS_ADDR']
-                    protocol = 2.0
-                
-                if motor_id+18 in self.MX_106_MOTORS+self.MX_64_MOTORS+self.AX_12_MOTORS:
-                    motor_position, comm, hard = packetHandler.read2ByteTxRx(self.portHandler, motor_id+18, presPosAddr)
+                motor_position, comm, hard = self.packetHandler1.read2ByteTxRx(self.portHandler, motor_id+18, PROTOCOL_1_INFOS['PRES_POS_ADDR'])
 
-                    if comm !=0 or hard != 0:
-                        self.headFeedbackRes.pos_vector[motor_id] = -1
-                    else:
-                        self.headFeedbackRes.pos_vector[motor_id] = self.pos2rad(motor_position, protocol)
+                if comm !=0 or hard != 0:
+                    self.headFeedbackRes.pos_vector[motor_id] = -1
+                else:
+                    self.headFeedbackRes.pos_vector[motor_id] = self.pos2rad(motor_position, 1.0)
 
             return self.headFeedbackRes
 
-        except Exception as e:
+        except:
+            time.sleep(0.5)
+            self.startComm()
             return self.feedbackHeadMotors(req)
 
     def data2body(self, msg):
-        if self.AX_12_MOTORS:
-            self.bodyGroup1.clearParam()
-        if self.MX_106_MOTORS+self.MX_64_MOTORS:
-            self.bodyGroup2.clearParam()
+        self.bodyGroup.clearParam()
 
         for motor_id in range(18):
-            motor_position = msg.pos_vector[motor_id]
-
-            if motor_id in self.AX_12_MOTORS:
-                protocol = 1.0
-                numBytes = 2
-                bodyGroup = self.bodyGroup1
-                
-            elif (motor_id in self.MX_106_MOTORS+self.MX_64_MOTORS):
-                protocol = 2.0
-                numBytes = 4
-                bodyGroup = self.bodyGroup2
+            motor_position = msg.pos_vector[motor_id]          
             
-            if motor_id in self.MX_106_MOTORS+self.MX_64_MOTORS+self.AX_12_MOTORS:
-                value = self.rad2pos(motor_position, protocol)
-                value = self.checkPositionInLimit(value, motor_id)
-                bytes_value = value.to_bytes(numBytes, byteorder='little')
+            value = self.rad2pos(motor_position, 2.0)
+            value = self.checkPositionInLimit(value, motor_id)
+            bytes_value = value.to_bytes(4, byteorder='little')
 
-                bodyGroup.addParam(motor_id, bytes_value)
+            self.bodyGroup.addParam(motor_id, bytes_value)
 
-        if self.AX_12_MOTORS:
-            self.bodyGroup1.txPacket()
-        if self.MX_106_MOTORS+self.MX_64_MOTORS:
-            self.bodyGroup2.txPacket()
+        try:
+            self.bodyGroup.txPacket()
+        except:
+            time.sleep(0.5)
+            self.startComm()
+            self.data2body(msg)
 
     def data2head(self, msg):
-        if self.AX_12_MOTORS:
-            self.bodyGroup1.clearParam()
-        if self.MX_106_MOTORS+self.MX_64_MOTORS:
-            self.bodyGroup2.clearParam()
+        self.headGroup.clearParam()
 
         for motor_id in range(2):
             motor_position = msg.pos_vector[motor_id]
 
-            if motor_id+18 in self.AX_12_MOTORS:
-                protocol = 1.0
-                numBytes = 2
-                bodyGroup = self.bodyGroup1
-                
-            elif (motor_id+18 in self.MX_106_MOTORS+self.MX_64_MOTORS):
-                protocol = 2.0
-                numBytes = 4
-                bodyGroup = self.bodyGroup2
-            
-            if motor_id+18 in self.MX_106_MOTORS+self.MX_64_MOTORS+self.AX_12_MOTORS:
-                value = self.rad2pos(motor_position, protocol)
-                value = self.checkPositionInLimit(value, motor_id+18)
-                bytes_value = value.to_bytes(numBytes, byteorder='little')
+            value = self.rad2pos(motor_position, 1.0)
+            value = self.checkPositionInLimit(value, motor_id+18)
+            bytes_value = value.to_bytes(2, byteorder='little')
 
-                bodyGroup.addParam(motor_id+18, bytes_value)
+            self.headGroup.addParam(motor_id+18, bytes_value)
 
-        if self.AX_12_MOTORS:
-            self.bodyGroup1.txPacket()
-        if self.MX_106_MOTORS+self.MX_64_MOTORS:
-            self.bodyGroup2.txPacket()
+        try:
+            self.headGroup.txPacket()
+        except:
+            time.sleep(0.5)
+            self.startComm()
+            self.data2body(msg)
     
     def rad2pos(self, pos_in_rad, motor_protocol):
         

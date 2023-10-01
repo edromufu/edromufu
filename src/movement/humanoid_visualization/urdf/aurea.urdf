@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<robot name="nova">
+<robot name="aurea">
 
   <material name="black">
     <color rgba="0 0 0 1"/>
