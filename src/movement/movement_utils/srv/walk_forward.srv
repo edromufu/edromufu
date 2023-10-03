@@ -1,4 +1,4 @@
 int8 supported_foot
-
+float32 step_x
 ---
 bool success

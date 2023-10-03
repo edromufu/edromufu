@@ -11,7 +11,7 @@ sys.path.append(edrom_dir+'movement/humanoid_definition/src')
 from setup_robot import Robot
 
 sys.path.append(edrom_dir+'movement/movement_functions/src')
-from movement_patterns import Gait,feetPosesCalculator,callbalance
+from movement_patterns import * 
 
 sys.path.append(edrom_dir+'movement/movement_pages/src')
 from page_runner import Page
@@ -50,7 +50,7 @@ class Core:
         #Services de requisição de movimento, todos possuem como callback movementManager
         rospy.Service('movement_central/request_gait', gait, self.movementManager)
         rospy.Service('movement_central/request_page', page, self.movementManager)
-        rospy.Service('movement_central/request_walk', balance, self.movementManager)
+        rospy.Service('movement_central/request_walk', walk_forward, self.movementManager)
 
         #Inicialização do objeto (modelo) da robô em código
         robot_name = rospy.get_param('/movement_core/name')
@@ -124,6 +124,7 @@ class Core:
     def movementManager(self, req):
         if rospy.get_param('/movement_core/wait4u2d2'):
             self.callRobotModelUpdate()
+            self.motorsTorque(True, [-1])
 
         if 'gait' in str(req.__class__):
 
@@ -148,7 +149,6 @@ class Core:
             response.success = True
         
         elif 'page' in str(req.__class__):
-            print(self.motorsCurrentPosition)
             page_poses = Page(req.page_name, QUEUE_TIME)
             
             if rospy.get_param('/movement_core/wait4u2d2'):
@@ -165,8 +165,8 @@ class Core:
             response = pageResponse()
             response.success = True
         
-        elif 'balance' in str(req.__class__):
-
+        elif 'walk_forward' in str(req.__class__):
+            '''
             checked_poses = np.array([self.motorsCurrentPosition])
             leftFootPoses, rightFootPoses = feetPosesCalculator(self.robotModel, req.supported_foot)
             balance_poses = callbalance(self.robotModel, leftFootPoses, rightFootPoses)
@@ -184,8 +184,22 @@ class Core:
                 for pose in balance_poses:
                     pose = self.invertMotorsPosition(pose)
                     self.queuevis.append(pose[1:-2])
+            '''
 
-            response = balanceResponse()
+            checked_poses = np.array([self.motorsCurrentPosition])
+    
+            swing_poses = callWalk(self.robotModel,req.step_x,req.supported_foot,QUEUE_TIME)
+
+            if rospy.get_param('/movement_core/wait4u2d2'):
+                for index, pose in enumerate(swing_poses):
+                    pose = self.invertMotorsPosition(pose)
+                    pose = self.sortJsonIndex2MotorInput(pose)
+                    checked_poses = np.append(checked_poses, [pose], axis=0)  
+
+                for pose in checked_poses: 
+                    self.queue.append(pose)
+
+            response = walk_forwardResponse()
             response.success = True
 
         return response
