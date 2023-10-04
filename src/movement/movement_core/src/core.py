@@ -166,38 +166,33 @@ class Core:
             response.success = True
         
         elif 'walk_forward' in str(req.__class__):
-            '''
+            
             checked_poses = np.array([self.motorsCurrentPosition])
-            leftFootPoses, rightFootPoses = feetPosesCalculator(self.robotModel, req.supported_foot)
-            balance_poses = callbalance(self.robotModel, leftFootPoses, rightFootPoses)
 
+            supFoot = req.support_foot
+            for n in range(req.steps_number): 
+                if n:
+                    walk_poses = np.vstack((walk_poses,callWalk(self.robotModel,supFoot,QUEUE_TIME)))
+                else:
+                    walk_poses = callWalk(self.robotModel,supFoot,QUEUE_TIME)
+                self.robotInstance.updateRobotModel(walk_poses[-1])
+                
+                supFoot *= -1
+
+            '''
             if rospy.get_param('/movement_core/wait4u2d2'):
-                for index, pose in enumerate(balance_poses):
+                for index, pose in enumerate(walk_poses):
                     pose = self.invertMotorsPosition(pose)
                     pose = self.sortJsonIndex2MotorInput(pose)
                     checked_poses = np.append(checked_poses, [pose], axis=0)  
 
                 for pose in checked_poses: 
                     self.queue.append(pose)
-
+            '''
             if PUB2VIS:
-                for pose in balance_poses:
+                for pose in walk_poses:
                     pose = self.invertMotorsPosition(pose)
                     self.queuevis.append(pose[1:-2])
-            '''
-
-            checked_poses = np.array([self.motorsCurrentPosition])
-    
-            swing_poses = callWalk(self.robotModel,req.step_x,req.supported_foot,QUEUE_TIME)
-
-            if rospy.get_param('/movement_core/wait4u2d2'):
-                for index, pose in enumerate(swing_poses):
-                    pose = self.invertMotorsPosition(pose)
-                    pose = self.sortJsonIndex2MotorInput(pose)
-                    checked_poses = np.append(checked_poses, [pose], axis=0)  
-
-                for pose in checked_poses: 
-                    self.queue.append(pose)
 
             response = walk_forwardResponse()
             response.success = True

@@ -1,4 +1,4 @@
-int8 supported_foot
-float32 step_x
+int8 support_foot
+int8 steps_number
 ---
 bool success
