@@ -44,12 +44,12 @@ def feetPosesCalculator(robot, stepTime, queueTime, supportFoot, xcom, ycom, xsw
     if supportFoot == -1:
         leftFootPoses = absCOMCalc - xyzCOM
     else:
-        leftFootPoses = absCOMCalc - xyzCOM + xyzSwing
+        leftFootPoses = xyzSwing
     
     if supportFoot == 1:
         rightFootPoses = absCOMCalc - xyzCOM
     else:
-        rightFootPoses = absCOMCalc - xyzCOM + xyzSwing
+        rightFootPoses = xyzSwing
 
     return leftFootPoses, rightFootPoses
 
@@ -92,6 +92,7 @@ def callWalk(robot, supFoot, queueTime):
     return walk_poses
 
 def genZMPTrajectory(queueTime, stepTime, doubleSupProportion, supFootPos, torsoPos):
+     #! to achando que ta mandando torsoPos errado
     
     t = np.linspace(0.0,stepTime,np.ceil(stepTime/queueTime))
     td = stepTime*doubleSupProportion
@@ -104,16 +105,17 @@ def genZMPTrajectory(queueTime, stepTime, doubleSupProportion, supFootPos, torso
     ySupFoot = supFootPos[1]
     xTorso = torsoPos[0]
     yTorso = torsoPos[1]
-
+   
     m1x = xSupFoot/td
     m2x = (xTorso-xSupFoot)/td
 
     m1y = ySupFoot/td
     m2y = (yTorso-ySupFoot)/td
 
+    #! ta faltando o xtorso na formula e esse xtorso acredito que seria o inicial e não o que voce ta recebendo igual colocou no ytorso
     Xzmp = np.concatenate((m1x*t[mask1], np.full(len(t[mask2]), xSupFoot), xSupFoot + m2x*(t[mask3]-stepTime+td)))
     Yzmp = np.concatenate((yTorso+m1y*t[mask1], np.full(len(t[mask2]), ySupFoot), ySupFoot + m2y*(t[mask3]-stepTime+td)))
-
+    #!  a falta do xtorso ali deve estar fazendo aquele salto de valor das coordenadas x do supfoot
     return Xzmp, Yzmp, m1x, m2x, m1y, m2y
 
 def genSwingFootAndTorsoNextPositions(stepX, leftFootAbsPos, rightFootAbsPos, supFoot):
