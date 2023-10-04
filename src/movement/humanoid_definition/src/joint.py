@@ -16,9 +16,8 @@ class Joint:
         self.__sister = sister
         self.__child = child
         self.__mother2SelfVec = np.array([mother2SelfVec]).T
-        self.__jointAxis = jointAxisPredef[jointAxis]
+        self.__jointAxis = -jointAxisPredef[jointAxis] if is_inverted else jointAxisPredef[jointAxis]
         self.__motor_id = motor_id
-        self.__is_inverted = is_inverted
         self.__is_knee = is_knee
         self.__mom = None
 
@@ -49,9 +48,6 @@ class Joint:
     
     def is_knee(self):
         return self.__is_knee
-    
-    def is_inverted(self):
-        return self.__is_inverted
     
     def set_mom(self, mom):
         self.__mom = mom

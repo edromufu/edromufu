@@ -83,8 +83,6 @@ class Core:
         
         positions2Update = self.sortMotorReturn2JsonIndex(positions2Update)
 
-        positions2Update  = self.invertMotorsPosition(positions2Update)
-
         self.robotInstance.updateRobotModel(positions2Update)
 
     def sortMotorReturn2JsonIndex(self, toSort):
@@ -113,13 +111,6 @@ class Core:
             if v == value:
                 return key
         return None
-    
-    def invertMotorsPosition(self, toInvert):
-        for jsonIndex, joint in enumerate(self.robotModel):
-            if joint.is_inverted():
-                toInvert[jsonIndex] *= -1
-        
-        return toInvert
 
     def movementManager(self, req):
         if rospy.get_param('/movement_core/wait4u2d2'):
@@ -133,7 +124,6 @@ class Core:
             
             if rospy.get_param('/movement_core/wait4u2d2'):
                 for index, pose in enumerate(gait_poses):
-                    pose = self.invertMotorsPosition(pose)
                     pose = self.sortJsonIndex2MotorInput(pose)
                     checked_poses = np.append(checked_poses, [pose], axis=0)  
 
@@ -142,7 +132,6 @@ class Core:
 
             if PUB2VIS:
                 for pose in gait_poses:
-                    pose = self.invertMotorsPosition(pose)
                     self.queuevis.append(pose[1:-2])
 
             response = gaitResponse()
@@ -158,7 +147,6 @@ class Core:
             if PUB2VIS:
                 for pose in page_poses:
                     pose = self.sortMotorReturn2JsonIndex(pose)
-                    pose = self.invertMotorsPosition(pose)
 
                     self.queuevis.append(pose[1:-2])
 
@@ -168,7 +156,7 @@ class Core:
         elif 'walk_forward' in str(req.__class__):
             
             checked_poses = np.array([self.motorsCurrentPosition])
-
+    
             supFoot = req.support_foot
             for n in range(req.steps_number): 
                 if n:
@@ -179,19 +167,17 @@ class Core:
                 
                 supFoot *= -1
 
-            '''
             if rospy.get_param('/movement_core/wait4u2d2'):
                 for index, pose in enumerate(walk_poses):
-                    pose = self.invertMotorsPosition(pose)
                     pose = self.sortJsonIndex2MotorInput(pose)
                     checked_poses = np.append(checked_poses, [pose], axis=0)  
 
                 for pose in checked_poses: 
                     self.queue.append(pose)
-            '''
+            
+
             if PUB2VIS:
                 for pose in walk_poses:
-                    pose = self.invertMotorsPosition(pose)
                     self.queuevis.append(pose[1:-2])
 
             response = walk_forwardResponse()

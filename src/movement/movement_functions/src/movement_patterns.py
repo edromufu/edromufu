@@ -13,11 +13,14 @@ from ik_numerical import InverseKinematics
 sys.path.append(edrom_dir+'movement/humanoid_definition/src')
 from setup_robot import Robot
 
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
 #? Parâmetros da caminhada
 zSwingHeight = 0.04 #Altura do pé de balanço (m )
-stepTime = 5 #Tempo para "um" passo (s)
-doubleSupProportion = 0.2 # Proporção do tempo de um passo em suporte duplo (adim)
-stepX = 0.04 #Tamanho de um passo em x (m)
+stepTime = 2 #Tempo para "um" passo (s)
+doubleSupProportion = 0.3 # Proporção do tempo de um passo em suporte duplo (adim)
+stepX = 0.1 #Tamanho de um passo em x (m)
 g = 9.8 #Gravidade (m/s²)
 zCOM = 0.28 #Altura do centro de massa (m)
 
@@ -32,22 +35,18 @@ def callIK(robot, newFootAbsPosition, newFootAbsPosture, currentFoot):
 
     return joint_angles
 
-def feetPosesCalculator(robot, stepTime, queueTime, supportFoot, xcom, ycom, xswing, zswing):
+def feetPosesCalculator(xCOM, yCOM, zSwing, dxSwing, t,supportFoot):
 
-    absCOM = robot[0].absolutePosition
-
-    absCOMCalc = np.tile(absCOM, (1,len(xcom))).T
-
-    xyzCOM = np.c_[xcom, ycom, absCOM[2]*np.ones(len(xcom))]
-    xyzSwing = np.c_[np.linspace(0.0,xswing,np.ceil(stepTime/queueTime)), np.zeros(len(zswing)), zswing]
+    xyzCOM = np.c_[xCOM/2, yCOM, np.zeros(len(xCOM))]
+    xyzSwing = np.c_[np.linspace(0,dxSwing/2,len(t)), -yCOM, zSwing]
 
     if supportFoot == -1:
-        leftFootPoses = absCOMCalc - xyzCOM
+        leftFootPoses = -xyzCOM
     else:
         leftFootPoses = xyzSwing
     
     if supportFoot == 1:
-        rightFootPoses = absCOMCalc - xyzCOM
+        rightFootPoses = -xyzCOM
     else:
         rightFootPoses = xyzSwing
 
@@ -56,44 +55,22 @@ def feetPosesCalculator(robot, stepTime, queueTime, supportFoot, xcom, ycom, xsw
 def callWalk(robot, supFoot, queueTime):
     # SupportFoot = 1 p/ direita; SupportFoot = -1 p/ esquerda;
 
+    #? Obtendo informações relevantes do modelo
     leftFootPos = robot[-2].absolutePosition
     rightFootPos = robot[-1].absolutePosition
 
     leftFootPosture = robot[-2].absolutePosture
     rightFootPosture = robot[-1].absolutePosture
 
-    supFootPos = rightFootPos if supFoot == 1 else leftFootPos
+    absCOM = robot[0].absolutePosition
 
-    newSwingFootPos, newTorsoPos, currentStep = genSwingFootAndTorsoNextPositions(stepX, leftFootPos, rightFootPos, supFoot)
-    xZMP, yZMP, m1x, m2x, m1y, m2y = genZMPTrajectory(queueTime, stepTime, doubleSupProportion, supFootPos, newTorsoPos)
-    zSwing = genSwingFootZTrajectory(queueTime, stepTime, doubleSupProportion)
-    
-    xCOM, yCOM = genCOMTrajectory(queueTime, stepTime, doubleSupProportion, xZMP, yZMP, m1x, m2x, m1y, m2y)
+    #? Definindo variáveis padrões
+    [swingFootInitPos, supFootInitPos] = [rightFootPos, leftFootPos] if supFoot == -1 else [leftFootPos, rightFootPos]
 
-    leftFootPoses, rightFootPoses = feetPosesCalculator(robot, stepTime, queueTime, supFoot, xCOM, yCOM, currentStep, zSwing)
-    
-    walk_poses = np.zeros((len(leftFootPoses),len(robot)))
+    print(f'absCOM:\n{absCOM}')
+    print(f'swingFootInitPos:\n{swingFootInitPos}')
+    print(f'supFootInitPos:\n{supFootInitPos}')
 
-    for i in range(len(leftFootPoses)):
-        leftFootAbsPosition = leftFootPos+np.array([leftFootPoses[i]]).T
-        rightFootAbsPosition = rightFootPos+np.array([rightFootPoses[i]]).T
-
-        currentFoot = -2
-        left_joint_angles = callIK(robot, leftFootAbsPosition, leftFootPosture, currentFoot)
-        left_joint_angles = left_joint_angles[7:13]
-
-        currentFoot = -1
-        right_joint_angles = callIK(robot, rightFootAbsPosition, rightFootPosture, currentFoot)
-        right_joint_angles = right_joint_angles[1:7]
-
-        walk_poses[i][1:7] = right_joint_angles
-        walk_poses[i][7:13] = left_joint_angles
-    
-    return walk_poses
-
-def genZMPTrajectory(queueTime, stepTime, doubleSupProportion, supFootPos, torsoPos):
-     #! to achando que ta mandando torsoPos errado
-    
     t = np.linspace(0.0,stepTime,np.ceil(stepTime/queueTime))
     td = stepTime*doubleSupProportion
 
@@ -101,54 +78,104 @@ def genZMPTrajectory(queueTime, stepTime, doubleSupProportion, supFootPos, torso
     mask2 = (t >= td) & (t < (stepTime - td))
     mask3 = t >= (stepTime - td)
 
-    xSupFoot = supFootPos[0]
-    ySupFoot = supFootPos[1]
-    xTorso = torsoPos[0]
-    yTorso = torsoPos[1]
+    t1 = t[mask1]
+    t2 = t[mask2]
+    t3 = t[mask3]
+
+    #? Seleciona posição final (vetor coluna) do torso e pé de balanço
+    newSwingFootPos, newTorsoPos, currentStep = genSwingFootAndTorsoNextPositions(stepX, swingFootInitPos, supFootInitPos)
+
+    print(f'newSwingFootPos:\n{newSwingFootPos}')
+    print(f'newTorsoPos:\n{newTorsoPos}')
+    print(f'currentStep:\n{currentStep}')
+
+    #? Obtém posições do ZMP e coeficientes angulares da reta que será usado na EDO
+    xZMP, yZMP, m1x, m2x, m1y, m2y = genZMPTrajectory(stepTime, td, t1, t2, t3, supFootInitPos, newTorsoPos)
+
+    print(f'xZMP:\n{xZMP}')
+    print(f'yZMP:\n{yZMP}')
+
+    #? Obtém um deslocamento relativo em Z para o pé de balanço
+    zSwing = genSwingFootZTrajectory(stepTime, td, t1, t2, t3)
+    print(f'zSwing:\n{zSwing}')
+
+    #? Obtém a solução da EDO (xCOM e yCOM)
+    xCOM, yCOM = genCOMTrajectory(stepTime, td, mask1, mask2, mask3, t1, t2, t3, xZMP, yZMP, m1x, m2x, m1y, m2y)
+    
+    print(f'xCOM:\n{xCOM}')
+    print(f'yCOM:\n{yCOM}')
+
+    #? Transformando o referencial em relativo para os pés
+    leftFootPoses, rightFootPoses = feetPosesCalculator(xCOM, yCOM, zSwing, currentStep, t, supFoot)
+
+    print(f'leftFootPoses:\n{leftFootPoses}')
+    print(f'rightFootPoses:\n{rightFootPoses}')
+
+    #? Somando à posição inicial dos pés para transformar em absoluto
+    walk_poses = np.zeros((len(leftFootPoses),len(robot)))
+
+    for i in range(len(leftFootPoses)):
+
+        newLeftFootPos = leftFootPos+np.array([leftFootPoses[i]]).T
+        newRightFootPos = rightFootPos+np.array([rightFootPoses[i]]).T
+
+        currentFoot = -2
+        left_joint_angles = callIK(robot, newLeftFootPos, leftFootPosture, currentFoot)
+        left_joint_angles = left_joint_angles[7:13]
+
+        currentFoot = -1
+        right_joint_angles = callIK(robot, newRightFootPos, rightFootPosture, currentFoot)
+        right_joint_angles = right_joint_angles[1:7]
+
+        walk_poses[i][1:7] = right_joint_angles
+        walk_poses[i][7:13] = left_joint_angles
+    
+    return walk_poses
+
+def genSwingFootAndTorsoNextPositions(stepX, initSwingPos, initSuppPos):
+    
+    if abs(initSwingPos[0][0]-initSuppPos[0][0]) < stepX/4:
+        addInX = stepX/2
+    else:
+        addInX = stepX
+
+    newSwingFootPos = initSwingPos + np.array([[addInX, 0,0]]).T
+
+    newTorsoPos = np.array([[(newSwingFootPos[0][0]+initSuppPos[0][0])/2, 0,0]]).T
+
+    return newSwingFootPos, newTorsoPos, addInX
+
+def genZMPTrajectory(stepTime, td, t1, t2, t3, supFootInitPos, torsoFinal):    
+
+    xSupFoot = supFootInitPos[0][0]
+    ySupFoot = supFootInitPos[1][0]
+
+    xTorso = torsoFinal[0][0]
+    yTorso = torsoFinal[1][0]
    
     m1x = xSupFoot/td
     m2x = (xTorso-xSupFoot)/td
 
     m1y = ySupFoot/td
     m2y = (yTorso-ySupFoot)/td
+    
+    Xzmp = np.concatenate((m1x*t1, np.full(len(t2), xSupFoot), xSupFoot + m2x*(t3-stepTime+td)))
+    Yzmp = np.concatenate((m1y*t1, np.full(len(t2), ySupFoot), ySupFoot + m2y*(t3-stepTime+td)))
 
-    #! ta faltando o xtorso na formula e esse xtorso acredito que seria o inicial e não o que voce ta recebendo igual colocou no ytorso
-    Xzmp = np.concatenate((m1x*t[mask1], np.full(len(t[mask2]), xSupFoot), xSupFoot + m2x*(t[mask3]-stepTime+td)))
-    Yzmp = np.concatenate((yTorso+m1y*t[mask1], np.full(len(t[mask2]), ySupFoot), ySupFoot + m2y*(t[mask3]-stepTime+td)))
-    #!  a falta do xtorso ali deve estar fazendo aquele salto de valor das coordenadas x do supfoot
     return Xzmp, Yzmp, m1x, m2x, m1y, m2y
 
-def genSwingFootAndTorsoNextPositions(stepX, leftFootAbsPos, rightFootAbsPos, supFoot):
-    # SupportFoot = 1 p/ direita; SupportFoot = -1 p/ esquerda;
+def genSwingFootZTrajectory(stepTime, td, t1, t2, t3):
 
-    xLeftAbsPos = leftFootAbsPos[0]
-    xRightAbsPos = rightFootAbsPos[0]
-    
-    if abs(xLeftAbsPos-xRightAbsPos) < stepX/2:
-        addInX = stepX/2
-    else:
-        addInX = stepX
+    zSwing = np.concatenate((np.zeros(len(t1)),zSwingHeight*np.sin(np.pi*(t2-td)/(stepTime-2*td)),np.zeros(len(t3))))
 
-    [swingFootPos, supFootPos] = [rightFootAbsPos, leftFootAbsPos] if supFoot == -1 else [leftFootAbsPos, rightFootAbsPos]
-    newSwingFootPos = swingFootPos + np.array([[addInX, 0,0]]).T
+    return zSwing
 
-    newTorsoPos = np.array([(newSwingFootPos[0]+supFootPos[0])/2, 0,0]).T
-
-    return newSwingFootPos, newTorsoPos, addInX
-
-def genCOMTrajectory(queueTime, stepTime, doubleSupProportion, xZMP, yZMP, m1x, m2x, m1y, m2y):
+def genCOMTrajectory(stepTime, td, mask1, mask2, mask3, t1, t2, t3, xZMP, yZMP, m1x, m2x, m1y, m2y):
     #? Constantes da resolução da EDO
-    td = stepTime*doubleSupProportion
     lambda_ = np.sqrt(g/zCOM) 
 
     lambStep = lambda_*stepTime
     denominator = np.exp(lambStep) - np.exp(-lambStep)
-
-    t = np.linspace(0.0,stepTime,np.ceil(stepTime/queueTime))
-
-    t1 = t[t < td]
-    t2 = t[(t >= td) & (t < (stepTime - td))]
-    t3 = t[t >= (stepTime - td)]
 
     #? Resolução da EDO de x
     k1x = m1x*np.sinh(-lambda_*td)/lambda_
@@ -157,9 +184,9 @@ def genCOMTrajectory(queueTime, stepTime, doubleSupProportion, xZMP, yZMP, m1x, 
     c1x = ( k2x - k1x*np.exp(-lambStep) ) / (denominator)
     c2x = ( k1x*np.exp(lambStep) - k2x) / (denominator)
 
-    x1 = xZMP[t < td] + c1x*np.exp(lambda_*t1) + c2x*np.exp(-lambda_*t1) - (m1x*np.sinh(lambda_*(t1-td))/lambda_)
-    x2 = xZMP[(t >= td) & (t < (stepTime - td))] + c1x*np.exp(lambda_*t2) + c2x*np.exp(-lambda_*t2)
-    x3 = xZMP[t >= (stepTime - td)] + c1x*np.exp(lambda_*t3) + c2x*np.exp(-lambda_*t3) - (m2x*np.sinh(lambda_*(t3-stepTime+td))/lambda_)
+    x1 = xZMP[mask1] + c1x*np.exp(lambda_*t1) + c2x*np.exp(-lambda_*t1) - (m1x*np.sinh(lambda_*(t1-td))/lambda_)
+    x2 = xZMP[mask2] + c1x*np.exp(lambda_*t2) + c2x*np.exp(-lambda_*t2)
+    x3 = xZMP[mask3] + c1x*np.exp(lambda_*t3) + c2x*np.exp(-lambda_*t3) - (m2x*np.sinh(lambda_*(t3-stepTime+td))/lambda_)
 
     xCOM = np.concatenate((x1,x2,x3))
 
@@ -170,50 +197,13 @@ def genCOMTrajectory(queueTime, stepTime, doubleSupProportion, xZMP, yZMP, m1x, 
     c1y = ( k2y - k1y*np.exp(-lambStep) ) / (denominator)
     c2y = ( k1y*np.exp(lambStep) - k2y) / (denominator)
 
-    y1 = yZMP[t < td] + c1y*np.exp(lambda_*t1) + c2y*np.exp(-lambda_*t1) - (m1y*np.sinh(lambda_*(t1-td))/lambda_)
-    y2 = yZMP[(t >= td) & (t < (stepTime - td))] + c1y*np.exp(lambda_*t2) + c2y*np.exp(-lambda_*t2)
-    y3 = yZMP[t >= (stepTime - td)] + c1y*np.exp(lambda_*t3) + c2y*np.exp(-lambda_*t3) - (m2y*np.sinh(lambda_*(t3-stepTime+td))/lambda_)
+    y1 = yZMP[mask1] + c1y*np.exp(lambda_*t1) + c2y*np.exp(-lambda_*t1) - (m1y*np.sinh(lambda_*(t1-td))/lambda_)
+    y2 = yZMP[mask2] + c1y*np.exp(lambda_*t2) + c2y*np.exp(-lambda_*t2)
+    y3 = yZMP[mask3] + c1y*np.exp(lambda_*t3) + c2y*np.exp(-lambda_*t3) - (m2y*np.sinh(lambda_*(t3-stepTime+td))/lambda_)
 
     yCOM = np.concatenate((y1,y2,y3))
 
     return xCOM, yCOM
-
-def genSwingFootZTrajectory(queueTime, stepTime, doubleSupProportion):
-    t = np.linspace(0.0,stepTime,np.ceil(stepTime/queueTime))
-    td = stepTime*doubleSupProportion
-
-    mask1 = t < td
-    mask2 = (t >= td) & (t < (stepTime - td))
-    mask3 = t >= (stepTime - td)
-
-    zSwing = np.concatenate((np.zeros(len(t[mask1])),zSwingHeight*np.sin(np.pi*(t[mask2]-td)/(stepTime-2*td)),np.zeros(len(t[mask3]))))
-
-    return zSwing
-
-def backup():
-
-    swing_poses = np.zeros((len(swingFoot),len(robot)))
-
-    for i in range(len(swingFoot)):
-        currentSwing = np.array([swingFoot[i]]).T
-        currentLeft = np.array([leftFoot[i]]).T
-        currentRight = np.array([rightFoot[i]]).T
-
-        leftFootAbsPosition = currentLeft+currentSwing if supFoot == 1 else currentLeft
-        rightFootAbsPosition = currentRight+currentSwing if supFoot == -1 else currentRight
-
-        currentFoot = -2
-        left_joint_angles = callIK(robot, leftFootAbsPosition, leftFootPosture, currentFoot)
-        left_joint_angles = left_joint_angles[7:13]
-
-        currentFoot = -1
-        right_joint_angles = callIK(robot, rightFootAbsPosition, rightFootPosture, currentFoot)
-        right_joint_angles = right_joint_angles[1:7]
-
-        swing_poses[i][1:7] = right_joint_angles
-        swing_poses[i][7:13] = left_joint_angles
-
-    return swing_poses
 
 def Gait(robot, stepHeight, stepNumber, initialLeg=False):
     #leg == False (direita), leg == True (esquerda)
