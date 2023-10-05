@@ -17,28 +17,32 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
 #? Parâmetros da caminhada
-zSwingHeight = 0.04 #Altura do pé de balanço (m )
-stepTime = 2 #Tempo para "um" passo (s)
+zSwingHeight = 0.05 #Altura do pé de balanço (m)
+stepTime = 1 #Tempo para "um" passo (s)
 doubleSupProportion = 0.3 # Proporção do tempo de um passo em suporte duplo (adim)
-stepX = 0.1 #Tamanho de um passo em x (m)
-g = 9.8 #Gravidade (m/s²)
+stepX = 0.12 #Tamanho de um passo em x (m)
+g = 9.81 #Gravidade (m/s²)
 zCOM = 0.28 #Altura do centro de massa (m)
+Y_ZMP_CORRECTION = 0.01
+Y_SWING_CORRECTION = 0.02
 
 def callIK(robot, newFootAbsPosition, newFootAbsPosture, currentFoot):
     robotIK = copy.deepcopy(robot)
         
     joint_angles = [0]*len(robot)
-    try:
-        joint_angles = InverseKinematics(newFootAbsPosition, newFootAbsPosture, currentFoot, robotIK)
-    except Exception as e:
-        print('Erro na callIK da movement_patterns',e)
+    
+    joint_angles = InverseKinematics(newFootAbsPosition, newFootAbsPosture, currentFoot, robotIK)
 
     return joint_angles
 
-def feetPosesCalculator(xCOM, yCOM, zSwing, dxSwing, t,supportFoot):
+def feetPosesCalculator(xCOM, yCOM, zSwing, dxSwing, t1, t2, t3,supportFoot):
 
     xyzCOM = np.c_[xCOM/2, yCOM, np.zeros(len(xCOM))]
-    xyzSwing = np.c_[np.linspace(0,dxSwing/2,len(t)), -yCOM, zSwing]
+
+    xSwing = np.concatenate((np.zeros(len(t1)),np.linspace(0,dxSwing/2,len(t2)),(dxSwing/2)*np.ones(len(t3))))
+    ySwing = np.concatenate((np.zeros(len(t1)),np.linspace(0,-supportFoot*Y_SWING_CORRECTION,len(t2)),np.linspace(-supportFoot*Y_SWING_CORRECTION,0,len(t3))))
+
+    xyzSwing = np.c_[xSwing, -yCOM-ySwing, zSwing]
 
     if supportFoot == -1:
         leftFootPoses = -xyzCOM
@@ -67,9 +71,9 @@ def callWalk(robot, supFoot, queueTime):
     #? Definindo variáveis padrões
     [swingFootInitPos, supFootInitPos] = [rightFootPos, leftFootPos] if supFoot == -1 else [leftFootPos, rightFootPos]
 
-    print(f'absCOM:\n{absCOM}')
-    print(f'swingFootInitPos:\n{swingFootInitPos}')
-    print(f'supFootInitPos:\n{supFootInitPos}')
+    #print(f'absCOM:\n{absCOM}')
+    #print(f'swingFootInitPos:\n{swingFootInitPos}')
+    #print(f'supFootInitPos:\n{supFootInitPos}')
 
     t = np.linspace(0.0,stepTime,np.ceil(stepTime/queueTime))
     td = stepTime*doubleSupProportion
@@ -85,31 +89,31 @@ def callWalk(robot, supFoot, queueTime):
     #? Seleciona posição final (vetor coluna) do torso e pé de balanço
     newSwingFootPos, newTorsoPos, currentStep = genSwingFootAndTorsoNextPositions(stepX, swingFootInitPos, supFootInitPos)
 
-    print(f'newSwingFootPos:\n{newSwingFootPos}')
-    print(f'newTorsoPos:\n{newTorsoPos}')
-    print(f'currentStep:\n{currentStep}')
+    #print(f'newSwingFootPos:\n{newSwingFootPos}')
+    #print(f'newTorsoPos:\n{newTorsoPos}')
+    #print(f'currentStep:\n{currentStep}')
 
     #? Obtém posições do ZMP e coeficientes angulares da reta que será usado na EDO
-    xZMP, yZMP, m1x, m2x, m1y, m2y = genZMPTrajectory(stepTime, td, t1, t2, t3, supFootInitPos, newTorsoPos)
+    xZMP, yZMP, m1x, m2x, m1y, m2y = genZMPTrajectory(stepTime, td, t1, t2, t3, supFootInitPos, newTorsoPos, supFoot)
 
-    print(f'xZMP:\n{xZMP}')
-    print(f'yZMP:\n{yZMP}')
+    #print(f'xZMP:\n{xZMP}')
+    #print(f'yZMP:\n{yZMP}')
 
     #? Obtém um deslocamento relativo em Z para o pé de balanço
     zSwing = genSwingFootZTrajectory(stepTime, td, t1, t2, t3)
-    print(f'zSwing:\n{zSwing}')
+    #print(f'zSwing:\n{zSwing}')
 
     #? Obtém a solução da EDO (xCOM e yCOM)
     xCOM, yCOM = genCOMTrajectory(stepTime, td, mask1, mask2, mask3, t1, t2, t3, xZMP, yZMP, m1x, m2x, m1y, m2y)
     
-    print(f'xCOM:\n{xCOM}')
-    print(f'yCOM:\n{yCOM}')
+    #print(f'xCOM:\n{xCOM}')
+    #print(f'yCOM:\n{yCOM}')
 
     #? Transformando o referencial em relativo para os pés
-    leftFootPoses, rightFootPoses = feetPosesCalculator(xCOM, yCOM, zSwing, currentStep, t, supFoot)
+    leftFootPoses, rightFootPoses = feetPosesCalculator(xCOM, yCOM, zSwing, currentStep, t1, t2, t3, supFoot)
 
-    print(f'leftFootPoses:\n{leftFootPoses}')
-    print(f'rightFootPoses:\n{rightFootPoses}')
+    #print(f'leftFootPoses:\n{leftFootPoses}')
+    #print(f'rightFootPoses:\n{rightFootPoses}')
 
     #? Somando à posição inicial dos pés para transformar em absoluto
     walk_poses = np.zeros((len(leftFootPoses),len(robot)))
@@ -119,16 +123,28 @@ def callWalk(robot, supFoot, queueTime):
         newLeftFootPos = leftFootPos+np.array([leftFootPoses[i]]).T
         newRightFootPos = rightFootPos+np.array([rightFootPoses[i]]).T
 
-        currentFoot = -2
-        left_joint_angles = callIK(robot, newLeftFootPos, leftFootPosture, currentFoot)
-        left_joint_angles = left_joint_angles[7:13]
+        try:
+            currentFoot = -2
+            left_joint_angles = callIK(robot, newLeftFootPos, leftFootPosture, currentFoot)
+            left_joint_angles = left_joint_angles[7:13]
+            lastLAngles = left_joint_angles
+        except Exception as e:
+            print(e)
+            left_joint_angles = lastLAngles
 
-        currentFoot = -1
-        right_joint_angles = callIK(robot, newRightFootPos, rightFootPosture, currentFoot)
-        right_joint_angles = right_joint_angles[1:7]
+        try:
+            currentFoot = -1
+            right_joint_angles = callIK(robot, newRightFootPos, rightFootPosture, currentFoot)
+            right_joint_angles = right_joint_angles[1:7]
+            lastRAngles = right_joint_angles
+        except Exception as e:
+            print(e)
+            right_joint_angles = lastRAngles
 
         walk_poses[i][1:7] = right_joint_angles
         walk_poses[i][7:13] = left_joint_angles
+
+        
     
     return walk_poses
 
@@ -145,10 +161,10 @@ def genSwingFootAndTorsoNextPositions(stepX, initSwingPos, initSuppPos):
 
     return newSwingFootPos, newTorsoPos, addInX
 
-def genZMPTrajectory(stepTime, td, t1, t2, t3, supFootInitPos, torsoFinal):    
+def genZMPTrajectory(stepTime, td, t1, t2, t3, supFootInitPos, torsoFinal, supFoot):    
 
     xSupFoot = supFootInitPos[0][0]
-    ySupFoot = supFootInitPos[1][0]
+    ySupFoot = supFootInitPos[1][0]-supFoot*Y_ZMP_CORRECTION
 
     xTorso = torsoFinal[0][0]
     yTorso = torsoFinal[1][0]

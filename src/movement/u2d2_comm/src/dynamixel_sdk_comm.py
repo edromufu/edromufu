@@ -12,10 +12,13 @@ BAUDRATE = 1000000
 DEVICENAME = rospy.get_param('u2d2/port')
 
 PROTOCOL_1_INFOS =  {'CW_LIMIT_ADDR': 6, 'CCW_LIMIT_ADDR': 8, 'TORQUE_ADDR': 24, 'LED_ADDR': 25 , 'PRES_POS_ADDR': 36, 'GOAL_POS_ADDR': 30, 'GOAL_POS_LEN': 2}
-PROTOCOL_2_INFOS =  {'CW_LIMIT_ADDR': 48, 'CCW_LIMIT_ADDR': 52, 'TORQUE_ADDR': 64, 'LED_ADDR': 65 , 'PRES_POS_ADDR': 132, 'GOAL_POS_ADDR': 116, 'GOAL_POS_LEN': 4}
+PROTOCOL_2_INFOS =  {'CW_LIMIT_ADDR': 48, 'CCW_LIMIT_ADDR': 52, 'TORQUE_ADDR': 64, 'LED_ADDR': 65 , 'PRES_POS_ADDR': 132, 'GOAL_POS_ADDR': 116, 'GOAL_POS_LEN': 4, 'VELOCITY_ADDR': 112, 'VELOCITY_LEN': 4, 'CURRENT_ADDR': 126}
 
 PROTOCOL_2_MOTORS = list(range(18))
 PROTOCOL_1_MOTORS = [18,19]
+
+VELOCITY = 95 #max 195
+
 
 if rospy.get_param('u2d2/robot_name') == 'aurea':
     print('Aurea')
@@ -66,7 +69,6 @@ class u2d2Control():
                 valueTmp = value
                 value = self.motorLimitsDict[motor_id][1]
                 print(f'Foi comandado {valueTmp} para o motor {motor_id}, isso extrapola o limite {value}, comandando {value}')
-
         
         return value
 
@@ -94,6 +96,12 @@ class u2d2Control():
 
         self.packetHandler2 = PacketHandler(2.0)   
         self.bodyGroup = GroupSyncWrite(self.portHandler, self.packetHandler2, PROTOCOL_2_INFOS['GOAL_POS_ADDR'], PROTOCOL_2_INFOS['GOAL_POS_LEN'])  
+        self.velocityGroup = GroupSyncWrite(self.portHandler, self.packetHandler2, PROTOCOL_2_INFOS['VELOCITY_ADDR'], PROTOCOL_2_INFOS['VELOCITY_LEN'])  
+
+        for id in range(18):
+            self.velocityGroup.addParam(id, VELOCITY.to_bytes(4, byteorder='little'))
+        
+        self.velocityGroup.txPacket()
 
     def enableTorque(self, req):
         
@@ -166,7 +174,7 @@ class u2d2Control():
 
     def data2body(self, msg):
         self.bodyGroup.clearParam()
-
+        
         for motor_id in range(18):
             motor_position = msg.pos_vector[motor_id]          
             

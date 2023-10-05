@@ -166,7 +166,7 @@ class Core:
                 self.robotInstance.updateRobotModel(walk_poses[-1])
                 
                 supFoot *= -1
-
+        
             if rospy.get_param('/movement_core/wait4u2d2'):
                 for index, pose in enumerate(walk_poses):
                     pose = self.sortJsonIndex2MotorInput(pose)
