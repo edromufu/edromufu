@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import os, json, time
+import time
 import rospy
 from dynamixel_sdk import *
 

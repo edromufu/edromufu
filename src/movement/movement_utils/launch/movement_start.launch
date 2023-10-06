@@ -3,7 +3,7 @@
     <arg name="u2d2_port" default="/dev/ttyU2D2"/>
     <arg name="robot_name" default="aurea"/>
     <arg name="page_creation" default="false"/>
-    <arg name="queue_time" default="0.2"/>
+    <arg name="queue_time" default="0.1"/>
     <arg name="visualization" default="false"/>
     <arg name="head_plugged" default="true"/>
 
@@ -12,12 +12,16 @@
         <param name="name" value="$(eval arg('robot_name'))" />
         <param name="queue_time" value="$(eval arg('queue_time'))" />
         <param name="pub2vis" value="$(eval arg('visualization'))" />
-        <param name="wait4u2d2" value="$(eval arg('u2d2_connected'))" />
     </node>
 
     <!-- Comunicação dos motores com U2D2 -->
     <node name="u2d2" pkg="u2d2_comm" type="dynamixel_sdk_comm.py" output="screen" if="$(eval arg('u2d2_connected'))">
         <param name="port" value="$(eval arg('u2d2_port'))" />
+        <param name="robot_name" value="$(eval arg('robot_name'))" />
+    </node>
+
+    <!-- Comunicação falsa dos motores para teste -->
+    <node name="u2d2_false" pkg="u2d2_comm" type="dynamixel_sdk_test.py" output="screen" unless="$(eval arg('u2d2_connected'))">
         <param name="robot_name" value="$(eval arg('robot_name'))" />
     </node>
     
