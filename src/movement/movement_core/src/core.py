@@ -11,7 +11,8 @@ sys.path.append(edrom_dir+'movement/humanoid_definition/src')
 from setup_robot import Robot
 
 sys.path.append(edrom_dir+'movement/movement_functions/src')
-from movement_patterns import * 
+from gait_gen import Gait
+from walk_forward_gen import callWalk
 
 sys.path.append(edrom_dir+'movement/movement_pages/src')
 from page_runner import Page

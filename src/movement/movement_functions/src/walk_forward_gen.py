@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-#coding=utf-8
-
 import numpy as np
 import copy
 
@@ -10,12 +7,6 @@ edrom_dir = '/home/'+os.getlogin()+'/edromufu/src/'
 sys.path.append(edrom_dir+'movement/kinematic_functions/src')
 from ik_numerical import InverseKinematics
 
-sys.path.append(edrom_dir+'movement/humanoid_definition/src')
-from setup_robot import Robot
-
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
-
 #? Parâmetros da caminhada
 zSwingHeight = 0.05 #Altura do pé de balanço (m)
 stepTime = 1 #Tempo para "um" passo (s)
@@ -24,7 +15,7 @@ stepX = 0.12 #Tamanho de um passo em x (m)
 g = 9.81 #Gravidade (m/s²)
 zCOM = 0.28 #Altura do centro de massa (m)
 Y_ZMP_CORRECTION = 0.01
-Y_SWING_CORRECTION = 0.02
+Y_SWING_CORRECTION = 0.0
 
 def callIK(robot, newFootAbsPosition, newFootAbsPosture, currentFoot):
     robotIK = copy.deepcopy(robot)
@@ -220,47 +211,3 @@ def genCOMTrajectory(stepTime, td, mask1, mask2, mask3, t1, t2, t3, xZMP, yZMP, 
     yCOM = np.concatenate((y1,y2,y3))
 
     return xCOM, yCOM
-
-def Gait(robot, stepHeight, stepNumber, initialLeg=False):
-    #leg == False (direita), leg == True (esquerda)
-    #phase == True (subida), phase == False (descida)
-
-    leg = initialLeg
-    phase = True
-    gait_poses = np.zeros((2*stepNumber,len(robot)))
-
-    initial = []
-    footInitialPosture = []
-    for motor in robot:
-        initial.append(motor.jointRotation)
-        if 'FOOT' in motor.get_name():
-            footInitialPosture.append(motor.absolutePosture)
-    initial = np.array(initial)
-
-
-    for step_phase in range(2*stepNumber):
-        if leg:
-            newFootAbsPosition = robot[-2].absolutePosition + np.array([[0, 0, phase*stepHeight]]).T
-            currentFoot = -2
-        else:
-            newFootAbsPosition = robot[-1].absolutePosition + np.array([[0, 0, phase*stepHeight]]).T
-            currentFoot = -1
-
-        if phase:
-            joint_angles = callIK(robot, newFootAbsPosition, footInitialPosture[int(not leg)], currentFoot)
-        else:
-            joint_angles = initial
-
-        gait_poses[step_phase] = joint_angles
-        
-        if not phase:
-            leg = not leg
-        phase = not phase
-    
-    return gait_poses
-    
-if __name__ == '__main__':
-    robotInstance = Robot('bioloid').robotJoints
-    gait_poses = Gait(robotInstance, 0.05, 20)
-    for count, pose in enumerate(gait_poses):
-        print(f'{count}:\n {pose}\n')
