@@ -13,6 +13,7 @@ from setup_robot import Robot
 sys.path.append(edrom_dir+'movement/movement_functions/src')
 from gait_gen import Gait
 from walk_forward_gen import callWalk
+from rotate_cc_ccw_gen import callRotate
 
 sys.path.append(edrom_dir+'movement/movement_pages/src')
 from page_runner import Page
@@ -49,6 +50,7 @@ class Core:
         rospy.Service('movement_central/request_gait', gait, self.movementManager)
         rospy.Service('movement_central/request_page', page, self.movementManager)
         rospy.Service('movement_central/request_walk', walk_forward, self.movementManager)
+        rospy.Service('movement_central/request_rotation', rotate, self.movementManager)
 
         #Inicialização do objeto (modelo) da robô em código
         robot_name = rospy.get_param('/movement_core/name')
@@ -183,6 +185,41 @@ class Core:
             response = walk_forwardResponse()
             response.success = True
 
+        elif 'rotate' in str(req.__class__):
+            
+            checked_poses = np.array([self.motorsCurrentPosition])
+
+            phase = -1
+            for n in range(req.steps_number): 
+                if n:
+                    rotate_poses = np.vstack((rotate_poses,callRotate(self.robotModel, req.direction, phase, QUEUE_TIME)))
+                else:
+                    rotate_poses = callRotate(self.robotModel, req.direction, phase, QUEUE_TIME)
+
+                if phase == 1:
+                    self.robotInstance.updateRobotModel(rotate_poses[0])
+                    rotate_poses = np.vstack((rotate_poses,rotate_poses[0]))
+                else:
+                    self.robotInstance.updateRobotModel(rotate_poses[-1])
+                    
+                phase *= -1
+
+            for index, pose in enumerate(rotate_poses):
+                pose = self.sortJsonIndex2MotorInput(pose)
+                checked_poses = np.append(checked_poses, [pose], axis=0)  
+
+            for pose in checked_poses: 
+                self.queue.append(pose)
+            
+            self.callRobotModelUpdate(checked_poses[-1])
+            
+            if PUB2VIS:
+                for pose in rotate_poses:
+                    self.queuevis.append(pose[1:-2])
+
+            response = rotateResponse()
+            response.success = True
+
         return response
     
     def sendFromQueue(self, event):
@@ -198,6 +235,6 @@ class Core:
                 self.pub2vis.publish(self.pub2vismsg)
 
 if __name__ == '__main__':
-    np.set_printoptions(precision=3, suppress=True, linewidth=np.inf, threshold=sys.maxsize)
+    np.set_printoptions(precision=4, suppress=True, linewidth=np.inf, threshold=sys.maxsize)
     movement = Core()
     rospy.spin()

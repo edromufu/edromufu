@@ -11,7 +11,7 @@ from ik_numerical import InverseKinematics
 zSwingHeight = 0.05 #Altura do pé de balanço (m)
 stepTime = 1 #Tempo para "um" passo (s)
 doubleSupProportion = 0.3 # Proporção do tempo de um passo em suporte duplo (adim)
-stepX = 0.12 #Tamanho de um passo em x (m)
+stepX = 0.05 #Tamanho de um passo em x (m)
 g = 9.81 #Gravidade (m/s²)
 zCOM = 0.28 #Altura do centro de massa (m)
 Y_ZMP_CORRECTION = 0.01
