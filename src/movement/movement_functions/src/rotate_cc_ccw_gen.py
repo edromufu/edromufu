@@ -9,9 +9,9 @@ from ik_numerical import InverseKinematics
 
 #? Parâmetros da caminhada
 zSwingHeight = 0.05 #Altura do pé de balanço (m)
-stepTime = 5 #Tempo para "um" passo (s)
+stepTime = 1 #Tempo para "um" passo (s)
 doubleSupProportion = 0.3 # Proporção do tempo de um passo em suporte duplo (adim)
-rotationTheta = np.deg2rad(10) #Incremento de uma rotação (rad)
+rotationTheta = np.deg2rad(5) #Incremento de uma rotação (rad)
 
 import matplotlib.pyplot as plt
 
