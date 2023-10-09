@@ -2,31 +2,27 @@
 #coding=utf-8
 
 import rospy
-from modularized_bhv_msgs.msg import currentStateMsg
-from modularized_bhv_msgs.srv import moveRequest
+from movement_utils.srv import *
+from movement_utils.msg import *
 
-#Setando a grafia correta das requisições para movimento de caminhada
-FORWARD = 'walk_forward'
-
-HEADER = { 'origin' : 'walking' }
 
 class WalkingRoutine():
 
     def __init__(self):
         
-        self.move_request = rospy.ServiceProxy('/bhv2mov_communicator/3D_move_requisitions', moveRequest,headers=HEADER)
+        self.move_request = rospy.ServiceProxy('/movement_central/request_walk', walk_forward)
         rospy.Subscriber('/transitions_and_states/state_machine', currentStateMsg, self.flagUpdate)
 
         self.flag = False
         self.last_decision = None
 
-        rospy.wait_for_service('/bhv2mov_communicator/3D_move_requisitions')
+        rospy.wait_for_service('/movement_central/request_walk')
         while not rospy.is_shutdown():
             self.createRequest()
 
-            if self.last_decision != self.request:
-                self.last_decision = self.request
-                self.move_request(self.request)
+            if self.last_decision != self.support_foot:
+                self.last_decision = self.support_foot
+                self.move_request(self.support_foot,self.step_number)
     
     def flagUpdate(self, msg):
         message = msg.currentState
@@ -40,9 +36,10 @@ class WalkingRoutine():
     def createRequest(self):
         
         if self.flag:
-            self.request = FORWARD
+            self.support_foot = 1
+            self.step_number = 2
         else:
-            self.request = None
+            self.support_foot = None
 
 
 if __name__ == '__main__':
