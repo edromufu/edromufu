@@ -1,20 +1,13 @@
 #!/usr/bin/env python3
 #coding=utf-8
 
-import rospy
+import rospy, os, sys
 from vision_msgs.msg import Webotsmsg
 
-vision2BhvTopic = '/webots_natasha/vision_inference' #String do topico associado as infos da bola da visao
-firstSearch = 'Left' #Sentido preferencial de busca com o corpo
+edrom_dir = '/home/'+os.getlogin()+'/edromufu/src/'
 
-#Parametros de configuracao da camera e seus quadrantes
-[cameraWidth, cameraHeight] = [416, 416]
-
-[xCenterLeftLimit, xCenterRightLimit] = [cameraWidth/2, cameraWidth/2]
-[yCenterBottomLimit, yCenterTopLimit] = [2*cameraHeight/3, cameraHeight/3]
-
-[close_width, close_height] = [40, 40] #Parametro de definicao da proximidade da bola
-timesSecurity = 7 #Numero de vezes para verificacoes de seguranca no codigo
+sys.path.append(edrom_dir+'behaviour/transitions_and_states/src')
+from behaviour_parameters import BehaviourParameters
 
 class BallInterpreter():
 
@@ -25,11 +18,13 @@ class BallInterpreter():
         - Define e inicializa variaveis do código
         """    
 
+        self.parameters = BehaviourParameters()
+
         #Variaveis do ROS
-        rospy.Subscriber(vision2BhvTopic, Webotsmsg, self.callback_vision)
+        rospy.Subscriber(self.parameters.vision2BhvTopic, Webotsmsg, self.callback_vision)
 
         #Variaveis de código
-        self.ballRelativePosition = firstSearch
+        self.ballRelativePosition = None
         self.ballClose = False
         self.ballFound = False
         self.countDistance = 0
@@ -67,13 +62,10 @@ class BallInterpreter():
 
         #Contador para informar que a bola foi perdida apos um numero de vezes sem encontra-la
         self.countFound += 1
-        if(self.countFound > timesSecurity):
+        if (self.countFound > self.parameters.timerCountLimit):
             self.ballFound = False
             self.ballClose = False
-            '''
-            if 'Left' not in self.ballRelativePosition and 'Right' not in self.ballRelativePosition:
-               self.ballRelativePosition = firstSearch
-               '''
+            self.ballRelativePosition = None
 
         if(msg.found):
             #Reseta o contador de informar que a bola foi perdida, pois encontrou :)
@@ -82,42 +74,37 @@ class BallInterpreter():
 
             #Módulo de verificacao da proximidade da bola, serve para resetar
             #a interpretacao apenas apos um numero definido de medidas desfavoraveis
-            if(msg.roi_width*msg.roi_height < close_width*close_height):
-                self.ballClose = False
+            if (msg.roi_width*msg.roi_height < self.parameters.closeSize):
+                self.countDistance += 1
+                if (self.countDistance > self.parameters.timerCountLimit):
+                    self.ballClose = False
             else:
+                self.countDistance = 0
                 self.ballClose = True
 
             #Módulo de verificacao da posicao relativa da bola
             #Interpretacao horizontal
-            if(msg.x <= xCenterLeftLimit):
-                analysisX = 'Left'
-            elif(msg.x >= xCenterRightLimit):
-                analysisX = 'Right' 
-            '''
+            if(msg.x < self.parameters.xCenterLeftLimit):
+                analysisX = self.parameters.left
+            elif(msg.x > self.parameters.xCenterRightLimit):
+                analysisX = self.parameters.right
             else:
-                analysisX = 'Center'
-            '''
+                analysisX = self.parameters.center
             
-            '''
             #Interpretacao vertical
-            if(msg.y > yCenterBottomLimit): #Deve ser maior por conta da referência ([0,0] no canto superior esquerdo)
-                analysisY = 'Bottom'
-            elif(msg.y < yCenterTopLimit):
-                analysisY = 'Top'
+            if(msg.y > self.parameters.yCenterBottomLimit): #Deve ser maior por conta da referência ([0,0] no canto superior esquerdo)
+                analysisY = self.parameters.bottom
+            elif(msg.y < self.parameters.yCenterTopLimit):
+                analysisY = self.parameters.top
             else:
-                analysisY = 'Center'
+                analysisY = self.parameters.center
 
             #Junção das interpretações em cada eixo
-            if(analysisX == 'Center' and analysisY == 'Center'):
-                analysis = 'Center'
-            elif(analysisX == 'Center'):
-                analysis = analysisY
-            elif(analysisY == 'Center'):
-                analysis = analysisX
+            if(analysisX == self.parameters.center and analysisY == self.parameters.center):
+                analysis = self.parameters.center
             else:
-                analysis = analysisX + '/' + analysisY
-            '''
+                analysis = f'{analysisX} {analysisY}'
 
-            self.ballRelativePosition = analysisX
+            self.ballRelativePosition = analysis
 
     

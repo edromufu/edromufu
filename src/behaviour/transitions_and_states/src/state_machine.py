@@ -2,21 +2,13 @@
 #coding=utf-8
 
 import rospy
-import time
 from transitions import Machine
 from modularized_bhv_msgs.msg import currentStateMsg
 
-#Parametros associados a posicao relativa da bola
-LEFT = 'Left' #Strings de resposta do interpretador da bola
-RIGHT = 'Right' #para cada posicao
-CENTER = 'Center'
-BOTTOM = 'Bottom'
+edrom_dir = '/home/'+os.getlogin()+'/edromufu/src/'
 
-UP = 'Up' #String associada a estar de pe na resposta do interpretador de queda
-
-#Parametros associados a movimentacao da cabeca
-RIGHT_HEAD_MOVEMENT = 'R' #Strings de reposta do interpretador
-LEFT_HEAD_MOVEMENT = 'L' #para possiveis movimentos da cabeca
+sys.path.append(edrom_dir+'behaviour/transitions_and_states/src')
+from behaviour_parameters import BehaviourParameters
 
 class StateMachine():
 
@@ -29,26 +21,60 @@ class StateMachine():
         - Inicializa a maquina de estados, utilizando as caracteristicas ja criadas
         """
 
-        states = ['stand_still','defense', 'impossible']
+        states = [ 'walking','stand_still','kick','getting_up', 'impossible']
 
-        go_to_defense_transitions = [
-            { 'trigger': 'go_to_defense', 'source': 'stand_still', 'dest': 'defense',
-             'conditions': 'defense_condition'}
+ 
+
+
+        go_to_walking_transitions = [
+            
+            { 'trigger': 'go_to_walking', 'source': 'stand_still', 'dest': 'walking',
+             'conditions': 'walking_condition', 'unless': 'getting_up_condition'}
+            ,
+             { 'trigger': 'go_to_walking', 'source': 'stand_still', 'dest': 'walking',
+             'conditions': 'walking_condition', 'unless': 'kick_condition'}
+        ]
+        
+        go_to_stand_still_transitions = [
+            { 'trigger': 'go_to_stand_still', 'source': 'getting_up', 'dest': 'stand_still',
+             'unless': 'getting_up_condition'}
+            ,
+            { 'trigger': 'go_to_stand_still', 'source': 'kick', 'dest': 'stand_still',
+             'unless': 'getting_up_condition'}
         ]
 
-        go_to_stand_still_transitions = [
-            { 'trigger': 'go_to_stand_still', 'source': 'defense', 'dest': 'stand_still',
-             'unless': 'defense_condition'}
+        go_to_kick_transitions = [
+            { 'trigger': 'go_to_kick', 'source': 'walking', 'dest': 'kick',
+             'conditions': 'kick_condition', 'unless': 'getting_up_condition'},
+            { 'trigger': 'go_to_kick', 'source': 'stand_still', 'dest': 'kick',
+             'conditions': 'kick_condition', 'unless': 'getting_up_condition'}
+        ]
+
+        go_to_getting_up_transitions = [
+            { 'trigger': 'go_to_getting_up', 'source': '*', 'dest': 'getting_up',
+             'conditions': 'getting_up_condition'}
         ]
 
         go_to_impossible_transitions = [
-            {'trigger': 'go_to_stand_still', 'source': '*', 'dest': 'impossible',
+            {'trigger': 'go_to_search_ball', 'source': '*', 'dest': 'impossible',
              'conditions': 'impossible_condition'},
-            {'trigger': 'go_to_defense', 'source': '*', 'dest': 'impossible',
+            {'trigger': 'go_to_body_search', 'source': '*', 'dest': 'impossible',
+             'conditions': 'impossible_condition'},
+            {'trigger': 'go_to_walking', 'source': '*', 'dest': 'impossible',
+             'conditions': 'impossible_condition'},
+            {'trigger': 'go_to_kick', 'source': '*', 'dest': 'impossible',
+             'conditions': 'impossible_condition'},
+            {'trigger': 'go_to_getting_up', 'source': '*', 'dest': 'impossible',
+             'conditions': 'impossible_condition'},
+            {'trigger': 'go_to_body_alignment', 'source': '*', 'dest': 'impossible',
+             'conditions': 'impossible_condition'},
+            {'trigger': 'go_to_stand_still', 'source': '*', 'dest': 'impossible',
              'conditions': 'impossible_condition'}
         ]
 
-        all_transitions = (go_to_defense_transitions + go_to_stand_still_transitions + go_to_impossible_transitions) 
+        all_transitions = (go_to_search_ball_transitions + go_to_body_alignment_transitions + go_to_walking_transitions 
+        + go_to_kick_transitions + go_to_getting_up_transitions + go_to_stand_still_transitions + go_to_body_search_transitions
+        + go_to_impossible_transitions)
 
         self.robot_state_machine = Machine(self, states=states, transitions=all_transitions, initial='stand_still')
 
@@ -57,24 +83,8 @@ class StateMachine():
     
     #Funcao para chamada de atualizacao de cada uma das variaveis
     #que controlarao as transicoes de estados da maquina
-    def request_state_machine_update(self, ballFound, ballClose):
-        """
-        -> Funcao:
-        Chamar a atualizacao das variaveis de transicao, atraves de:
-            - Recebe as variaveis de interesse da state_machine_receiver
-            - Realiza a chamada individual de cada uma das funcoes de atualizacao das variaveis 
-        -> Input:
-            - fallState: Resultado da interpretacao de queda da robo
-            - ballFound: Declara se a bola foi encontrada pela camera
-            - ballClose: Informa se a bola passou de um limite de proximidade
-            - ballRelativePosition: Informa a posicao relativa da bola na interpretacao da camera
-            - verAngleAccomplished: Informa se a posicao vertical do motor passou de um limite definido
-            - headPossibleMovements: Lista os movimentos possiveis dos motores da cabeca
-            - horMotorOutOfCenter: Indica se o motor horizontal ultrapassou os limites do centro
-        """
-        self.defense_condition_update(ballFound, ballClose)
-
-        #!
+    def request_state_machine_update(self, ballPosition, ballClose, ballFound, fallState, horMotorOutOfCenter, headKickCheck):
+        
         print(f'-------------------\nEstado {str(self.state)}')
         self.update_state()
         self.state_msg.currentState = str(self.state)
@@ -89,25 +99,71 @@ class StateMachine():
             inicializacao da maquina de estados em um logica de if's
             funcional
         """
-
-        if self.go_to_stand_still():
-            print('Transição para o stand_still\n-------------------\n')
+        
+        if self.go_to_getting_up():
+            print('Transição para o getting_up\n-------------------\n')
+            return True
+        
+        elif self.go_to_kick():
+            print('Transição para o kick\n-------------------\n')
             return True
 
-        elif self.go_to_defense():
-            print('Transição para o defense\n-------------------\n')
+
+        elif self.go_to_walking():
+            print('Transição para o walking\n-------------------\n')
+            return True
+
+        elif self.go_to_stand_still():
+            print('Transição para o stand_still\n-------------------\n')
             return True
         
         else:
             return False
     
     ########################################FUNÇÕES UPDATE CONDITION########################################
-    def defense_condition_update(self, ball_found, ball_close):
-        if ball_close and ball_found:
-            self.defense_condition = True
+
+            
+    
+    #Funcao para atualizar a variavel de codigo relacionada ao estado de getting_up
+    def getting_up_condition_update(self, fall_state):
+        """
+        -> Funcao:
+        Avaliar a necessidade de transicao para o estado de getting_up e
+        atualizar a variavel de controle responsavel, atraves de:
+            - Verificar se a resposta do interpretador de queda e qualquer
+            diferente de "de pe"
+            - Atualizar a variavel de condicao de acordo com verificacao
+        """
+
+        if fall_state != UP:
+            self.getting_up_condition = True
+            self.walking_condition = False
         else:
-            self.defense_condition = False
+            self.walking_condition = True
+            self.getting_up_condition = False
+    
+    #Funcao para atualizar a variavel de codigo relacionada ao estado de kick
+    def kick_condition_update(self, ball_relative_position, ver_angle_accomplished, ball_close):
+        """
+        -> Funcao:
+        Avaliar a necessidade de transicao para o estado de kick e
+        atualizar a variavel de controle responsavel, atraves de:
+            - Verificar se a bola esta proxima o suficiente, centralizada para a robo
+            e se a cabeca esta a um angulo minimo para garantia de um bom chute
+            - Atualizar a variavel de condicao de acordo com verificacao
+        """
+
+        if ball_close and ball_relative_position == CENTER and ver_angle_accomplished:
+            self.kick_condition = True
+            self.walking_condition = False
+        else:
+            self.walking_condition = True
+            self.kick_condition = False
+    
 
     ########################################FUNÇÕES RETURN CONDITION########################################
-    def defense_condition(self): return self.defense_condition
+    #Funcoes de retorno das variaveis de controle da forma necessitada pela state machine
+    def walking_condition(self): return self.walking_condition   
+    def getting_up_condition(self): return self.getting_up_condition  
+    def kick_condition(self): return self.kick_condition 
     def impossible_condition(self): return False
