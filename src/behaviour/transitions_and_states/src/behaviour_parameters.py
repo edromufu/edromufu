@@ -28,11 +28,11 @@ class BehaviourParameters():
         self.imuAccelTopic = '/behaviour/imu_accel'
 
         #Parametros de avaliação de queda nos três eixos
-        self.zGravitySecurity = -3  #Valor abaixo do qual a medida de z deve estar para queda
-        self.xSensorFront     = 4 #Valor abaixo do qual a medida de x deve estar para queda de frente                           
-        self.xSensorBack      = -4  #Valor acima do qual a medida de x deve estar para queda de costas                               
-        self.ySensorLeft      = 4 #Valor abaixo do qual a medida de y deve estar para queda sobre o lado esquerdo         
-        self.ySensorRight     = -4  #Valor acima do qual a medida de y deve estar para queda sobre o lado direito                         
+        self.xGravitySecurity = 6 #Valor absoluto do qual a medida de x deve estar para queda
+        self.xSensorFront     = 6 #Valor abaixo do qual a medida de x deve estar para queda de frente                           
+        self.xSensorBack      = -6  #Valor acima do qual a medida de x deve estar para queda de costas                               
+        self.ySensorLeft      = 6 #Valor abaixo do qual a medida de y deve estar para queda sobre o lado esquerdo         
+        self.ySensorRight     = -6  #Valor acima do qual a medida de y deve estar para queda sobre o lado direito                         
 
         #Retornos possíveis da interpretação de posição relativa da bola
         self.left = 'Left'

@@ -25,8 +25,8 @@ class stand_still_routine():
         rospy.Timer(rospy.Duration(self.parameters.timerFirstPose), self.runStandStill)
 
     def runStandStill(self, event):
-        print('stand_still')
         if self.flag:
+            print('Routine Stand Still')
             self.move_request('aurea_first_pose')
     
     def flagUpdate(self, msg):
@@ -34,7 +34,6 @@ class stand_still_routine():
 
         if message == 'stand_still':
             self.flag = True
-            self.runStandStill(True)
         else:
             self.flag = False
 

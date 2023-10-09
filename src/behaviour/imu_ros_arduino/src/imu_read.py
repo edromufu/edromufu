@@ -36,15 +36,10 @@ class imuReader():
                         self.accelMsg.y = imu_output[1]
                         self.accelMsg.z = imu_output[2]
                         
-                        self.gyroMsg.x = imu_output[3]
-                        self.gyroMsg.y = imu_output[4]
-                        self.gyroMsg.z = imu_output[5]
-
-                    self.accelPub.publish(self.accelMsg)
-                    self.gyroPub.publish(self.gyroMsg)
+                        self.accelPub.publish(self.accelMsg)
 
             except Exception as e:
-                print(e)
+                pass
 
         self.imu.close()
 

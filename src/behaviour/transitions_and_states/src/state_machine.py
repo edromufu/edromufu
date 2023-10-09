@@ -88,13 +88,12 @@ class StateMachine():
             inicializacao da maquina de estados em um logica de if's
             funcional
         """
-        
-        if self.go_to_getting_up():
-            print('Transição para o getting_up\n-------------------\n')
+        if self.go_to_walking():
+            print('Transição para o walking\n-------------------\n')
             return True
         
-        elif self.go_to_walking():
-            print('Transição para o walking\n-------------------\n')
+        elif self.go_to_getting_up():
+            print('Transição para o getting_up\n-------------------\n')
             return True
 
         elif self.go_to_stand_still():
@@ -131,6 +130,6 @@ class StateMachine():
 
     ########################################FUNÇÕES RETURN CONDITION########################################
     #Funcoes de retorno das variaveis de controle da forma necessitada pela state machine
-    def walking_condition(self): return True  
+    def walking_condition(self): return False  
     def getting_up_condition(self): return self.getting_up_condition  
     def impossible_condition(self): return False

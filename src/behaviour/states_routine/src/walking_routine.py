@@ -28,9 +28,8 @@ class WalkingRoutine():
         rospy.Timer(rospy.Duration(self.parameters.timerWalk), self.runWalk)
 
     def runWalk(self, event):
-        print('Walking')
         if self.flag:
-            print(self.stepNumber)
+            print('Routine Walk')
             self.move_request(self.supFoot, self.stepNumber)
     
     def flagUpdate(self, msg):
@@ -38,7 +37,6 @@ class WalkingRoutine():
 
         if message == 'walking':
             self.flag = True
-            self.runWalk(True)
         else:
             self.flag = False
 

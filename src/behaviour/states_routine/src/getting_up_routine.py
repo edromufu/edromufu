@@ -30,18 +30,15 @@ class getting_up_routine():
         rospy.Timer(rospy.Duration(self.parameters.timerPage), self.runGetUp)
 
     def runGetUp(self, event):
-            print('Getting_up')
-            if self.flag:
-                print(self.currentGetUpPage)
-                self.move_request(self.currentGetUpPage)
+        if self.flag:
+            print('Routine Get Up') 
+            self.move_request(self.currentGetUpPage)
     
     def flagUpdate(self, msg):
         message = msg.currentState
 
         if message == 'getting_up':
             self.flag = True
-
-            self.runGetUp(True)
         else:
             self.flag = False
 
