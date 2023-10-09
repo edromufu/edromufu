@@ -14,7 +14,7 @@ doubleSupProportion = 0.2 # Proporção do tempo de um passo em suporte duplo (a
 stepX = 0.055 #Tamanho de um passo em x (m)
 g = 9.81 #Gravidade (m/s²)
 zCOM = 0.253 #Altura do centro de massa (m)
-Y_ZMP_CORRECTION = -0.03 #Correção forçada da posição em Y do ZMP (m)
+Y_ZMP_CORRECTION = -0.04 #Correção forçada da posição em Y do ZMP (m)
 PAUSE_AFTER_STEP = 0.2 #Pausa após um passo (s)
 
 def callIK(robot, newFootAbsPosition, newFootAbsPosture, currentFoot):
