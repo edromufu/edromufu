@@ -28,7 +28,7 @@ def get_cnn_files():
 
 
     config_file = os.path.join(robocup_folder, "yolov4-tiny-obj.cfg")
-    weights_file = os.path.join(robocup_folder, "yolov4-tiny-obj_final.weights")
+    weights_file = os.path.join(robocup_folder, "yolov4-tiny-obj_best.weights")
 
     return read_cnn_architecture(config_file, weights_file)
 
