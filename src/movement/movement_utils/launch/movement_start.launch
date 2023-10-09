@@ -6,6 +6,7 @@
     <arg name="queue_time" default="0.05"/>
     <arg name="visualization" default="false"/>
     <arg name="head_plugged" default="true"/>
+    <arg name="behaviour" default="true"/>
 
     <!-- Inicialização do movimento de caminhada e pages-->
     <node name="movement_core" pkg="movement_core" type="core.py" output="screen">
@@ -31,7 +32,7 @@
 
     <!-- Inicialização da visão-->
     <include file="$(find object_finder)/launch/vision.launch" if="$(eval arg('head_plugged'))">
-        <arg name="img_output" value="true"/>
+        <arg name="img_output" value="false"/>
         <arg name="ajuste" value="false"/>
         <arg name="brilho" value="4"/>
         <arg name="camera" value="0"/>
@@ -46,5 +47,10 @@
         <arg name="model" value="$(find humanoid_visualization)/urdf/$(arg robot_name).urdf" />
         <arg name="rvizconfig" value="$(find humanoid_visualization)/urdf/movement.rviz" />
     </include>
+
+    <!-- Inicialização do Behaviour -->
+
+    <include file="$(find transitions_and_states)/launch/behaviour.launch" if="$(eval arg('behaviour'))"/>
+   
 
 </launch>

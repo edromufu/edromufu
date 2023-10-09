@@ -20,7 +20,7 @@ class StateMachineReceiver(StateMachine):
         - Construção do subscriber do ROS responsável pelo recebimento das variáveis
         """
 
-        self.parameters = self.BehaviourParameters()
+        self.parameters = BehaviourParameters()
 
         self.state_machine = StateMachine()
         rospy.Subscriber(self.parameters.stateMachineTopic, stateMachineMsg, self.call_state_machine_update)
@@ -37,9 +37,9 @@ class StateMachineReceiver(StateMachine):
             informações enviadas pelo ROS packer, da qual são extraidas para atualização   
         """
 
-        #self.state_machine.request_state_machine_update(stateMachineVars.ballPosition, stateMachineVars.ballClose, stateMachineVars.ballFound,
-        #                                               stateMachineVars.fallState,
-        #                                                stateMachineVars.horMotorOutOfCenter, stateMachineVars.headKickCheck)
+        self.state_machine.request_state_machine_update(stateMachineVars.ballPosition, stateMachineVars.ballClose, stateMachineVars.ballFound,
+                                                        stateMachineVars.fallState,
+                                                        stateMachineVars.horMotorOutOfCenter, stateMachineVars.headKickCheck)
     
 if __name__ == '__main__':
     rospy.init_node('State_machine_node', anonymous=False)

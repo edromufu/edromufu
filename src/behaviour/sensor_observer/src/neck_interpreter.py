@@ -24,7 +24,7 @@ class NeckInterpreter():
         rospy.Subscriber(self.parameters.headPositionsTopic, head_motors_data, self.callback_positions)
 
         #Variaveis de código
-        self.horHeadPosition = None
+        self.horHeadPosition = 'none'
         self.verAngleAccomplished = False
 
     #Funcao chamada pelo agrupador ROS quando necessitar saber 
@@ -60,7 +60,7 @@ class NeckInterpreter():
         else:
             self.horHeadPosition = self.right
 
-        if verMotorValue < minVerRad2Kick:
+        if verMotorValue < self.parameters.minVerRad2Kick:
             self.verAngleAccomplished = True
 
 

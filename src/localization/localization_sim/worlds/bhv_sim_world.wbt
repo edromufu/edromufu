@@ -1,0 +1,145 @@
+#VRML_SIM R2022a utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation -0.7959530805691623 0.0714286513618202 -0.601129471326346 1.6267008390230049
+  position -2.4387862627910493 4.7053570730990835 -2.1182933351947684
+}
+TexturedBackground {
+  texture "noon_park_empty"
+}
+TexturedBackgroundLight {
+  texture "noon_park_empty"
+}
+DEF Ball Ball {
+  translation 0.578072503162244 0.06491363988943911 0.044586094002279766
+  rotation 0.30870826567388654 0.6692956438780162 0.6758273061888905 -2.5634108493234047
+  color 1 0.08 0.58
+  radius 0.055
+}
+DEF Robot3D Transform {
+  translation 0 0.25723 0
+  rotation 0 1 0 -1.8325412287183438
+  children [
+    DEF Supervisor Robot {
+      translation 1.1105782392173658 0.012070107670573815 -4.343730513724001
+      rotation 0.25557831010278975 -7.171386021221124e-07 -0.9667883570898483 -3.1415908473383456
+      children [
+        DEF HorizontalMotor Transform {
+          translation 0 -0.31 -0.03
+          rotation 0 1 0 0
+          children [
+            Transform {
+              rotation 1 0 0 1.5699996938995748
+              children [
+                Transform {
+                  translation 0.035 -0.02 0.02
+                  rotation 0.7071062811861719 0.7071072811865696 -1.0171504044775673e-08 3.14159
+                  children [
+                    DEF VerticalMotor Transform {
+                      translation 0 -0.035 -0.015
+                      rotation 0 1 0 0.9
+                      children [
+                        Transform {
+                          rotation 1 0 0 -1.5707953071795862
+                          children [
+                            DEF jointCilynder Shape {
+                              geometry Cylinder {
+                                height 0.01
+                                radius 0.005
+                              }
+                            }
+                          ]
+                        }
+                        Transform {
+                          translation -0.003 0 0
+                          children [
+                            DEF boxHead Transform {
+                              translation -0.024 0 -0.025
+                              children [
+                                Transform {
+                                  translation 0 0 -0.025
+                                  children [
+                                    Camera {
+                                      translation -0.025 0 0.02
+                                      rotation 3.6634499999728014e-06 0.9999999999925757 -1.1949199999911285e-06 3.14159
+                                      name "Camera"
+                                      fieldOfView 1.01
+                                      width 416
+                                      height 416
+                                      focus Focus {
+                                      }
+                                    }
+                                  ]
+                                }
+                                Shape {
+                                  appearance PBRAppearance {
+                                    baseColor 0.3 0.3 0.3
+                                    metalness 0.5
+                                    IBLStrength 0.1
+                                  }
+                                  geometry Box {
+                                    size 0.05 0.1 0.05
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+                DEF horizontalNeck Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.3 0.3 0.3
+                    metalness 0.5
+                    IBLStrength 0.1
+                  }
+                  geometry Cylinder {
+                    height 0.07
+                    radius 0.02
+                  }
+                }
+              ]
+            }
+          ]
+        }
+        DEF torsoBox Shape {
+          appearance PBRAppearance {
+            baseColor 0.3 0.3 0.3
+            metalness 0.5
+            IBLStrength 0.01
+            emissiveIntensity 0
+          }
+          geometry Box {
+            size 0.2 0.55 0.11
+          }
+        }
+        DEF Accelerometer Accelerometer {
+          rotation 1.2723699999955203e-14 -2.6535899999906573e-06 0.9999999999964793 3.14159
+          name "Accelerometer"
+        }
+      ]
+      boundingObject Transform {
+        translation 0 -0.065 0
+        children [
+          Box {
+            size 0.2 0.66 0.11
+          }
+        ]
+      }
+      physics Physics {
+      }
+      controller "<extern>"
+      supervisor TRUE
+      linearVelocity 2.383461341137492e-07 3.630292336918534e-08 -2.1394071720120818e-07
+      angularVelocity -6.501902966905059e-07 1.0054684605317892e-12 -7.230497821147934e-07
+    }
+  ]
+}
+RobocupSoccerField {
+  rotation 1 0 0 -1.5707953071795862
+  size "kid"
+}

@@ -24,7 +24,7 @@ class BallInterpreter():
         rospy.Subscriber(self.parameters.vision2BhvTopic, Webotsmsg, self.callback_vision)
 
         #Variaveis de código
-        self.ballRelativePosition = None
+        self.ballRelativePosition = 'none'
         self.ballClose = False
         self.ballFound = False
         self.countDistance = 0
@@ -65,7 +65,7 @@ class BallInterpreter():
         if (self.countFound > self.parameters.timerCountLimit):
             self.ballFound = False
             self.ballClose = False
-            self.ballRelativePosition = None
+            self.ballRelativePosition = 'nenhuma'
 
         if(msg.found):
             #Reseta o contador de informar que a bola foi perdida, pois encontrou :)
