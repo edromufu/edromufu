@@ -16,7 +16,7 @@ def get_cnn_files():
     arq = open('/proc/self/cgroup', 'r')
     linhas = arq.readlines()
 
-    robocup_folder = os.path.join(os.path.expanduser('~'), "edrom/src/vision/robocup_cnn_files")
+    robocup_folder = os.path.join(os.path.expanduser('~'), "edromufu/src/vision/robocup_cnn_files")
     for linha in linhas:
         if 'docker' in linha:
             robocup_folder = "/robotica_ufu/src/vision/robocup_cnn_files"
@@ -24,11 +24,11 @@ def get_cnn_files():
 
 
     #forçando o path dos arquivos
-    robocup_folder = os.path.join(os.path.expanduser('~'), "edrom/src/vision/robocup_cnn_files")
+    robocup_folder = os.path.join(os.path.expanduser('~'), "edromufu/src/vision/robocup_cnn_files")
 
 
     config_file = os.path.join(robocup_folder, "yolov4-tiny-obj.cfg")
-    weights_file = os.path.join(robocup_folder, "yolov4-tiny-obj_best.weights")
+    weights_file = os.path.join(robocup_folder, "yolov4-tiny-obj_final.weights")
 
     return read_cnn_architecture(config_file, weights_file)
 
@@ -43,7 +43,7 @@ def set_model_input(net):
 
     #o pedro mandou tirar o underline e botar ponto!
     model = cv2.dnn.DetectionModel(net)
-    model.setInputParams(size=(416,416), scale=1/255, swapRB=True)
+    model.setInputParams(size=(640,480), scale=1/255, swapRB=True)
     
     return model
 
@@ -91,4 +91,4 @@ def draw_results(frame, classes, scores, boxes):
 
 def create_binary_image(net, current_frame):
 
-    return cv2.dnn.blobFromImage(current_frame, size = (416, 416))
+    return cv2.dnn.blobFromImage(current_frame, size = (640, 480))

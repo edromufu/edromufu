@@ -79,9 +79,9 @@ class Node():
         self.opencv_bridge = CvBridge()
         while True:
 
-            self.current_frame = cv2.VideoCapture(f"/dev/video{self.camera}")
+            self.current_frame = cv2.VideoCapture(1)
             _, self.current_frame = self.current_frame.read()
-            self.current_frame = cv2.resize(self.current_frame, (416,416))
+            self.current_frame = cv2.resize(self.current_frame, (640,480))
             #self.current_frame = cv2.blur(self.current_frame, (10,10))
 
             key = cv2.waitKey(1)

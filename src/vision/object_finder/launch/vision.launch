@@ -1,6 +1,6 @@
 <launch>
     <arg name="camera" default="0"/>
-    <arg name="img_output" default="false"/>
+    <arg name="img_output" default="true"/>
 
     <!-- Visão -->
     <node name="vision" pkg="object_finder" type="connecting_and_showing_current_frame_robocup.py" output="log" > 
