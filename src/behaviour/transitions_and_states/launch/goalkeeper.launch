@@ -1,0 +1,12 @@
+<launch>
+    <!-- Máquina de Estados  -->
+	<node name="goalkeeper_behaviour" pkg="transitions_and_states" type="goalkeeper_behaviour.py" output="screen" >   </node> 
+
+	<!-- Webots 
+	<include file="$(find bhv_independent_simulator)/launch/behaviour_simulator.launch"></include>
+    -->
+
+    <!--Interpretação-->
+	<node name="ros_packer" pkg="sensor_observer" type="ros_packer.py" output="screen" >   
+    </node>
+</launch>
