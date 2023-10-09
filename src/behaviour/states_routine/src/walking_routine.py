@@ -4,6 +4,7 @@
 import rospy
 from movement_utils.srv import *
 from movement_utils.msg import *
+from modularized_bhv_msgs.msg import currentStateMsg
 
 
 class WalkingRoutine():
@@ -43,7 +44,7 @@ class WalkingRoutine():
 
 
 if __name__ == '__main__':
-    rospy.init_node('Walking_node', anonymous=False)
+    rospy.init_node('walking_node', anonymous=False)
 
     routine = WalkingRoutine()
     rospy.spin()

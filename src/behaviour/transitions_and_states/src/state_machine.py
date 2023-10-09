@@ -2,9 +2,15 @@
 #coding=utf-8
 
 import rospy
+import os,sys
 from transitions import Machine
 from modularized_bhv_msgs.msg import currentStateMsg
 
+LEFT = 'Left' #Strings de resposta do interpretador da bola
+RIGHT = 'Right' #para cada posicao
+CENTER = 'Center'
+BOTTOM = 'Bottom'
+UP = 'Up'
 edrom_dir = '/home/'+os.getlogin()+'/edromufu/src/'
 
 sys.path.append(edrom_dir+'behaviour/transitions_and_states/src')
@@ -72,9 +78,9 @@ class StateMachine():
              'conditions': 'impossible_condition'}
         ]
 
-        all_transitions = (go_to_search_ball_transitions + go_to_body_alignment_transitions + go_to_walking_transitions 
-        + go_to_kick_transitions + go_to_getting_up_transitions + go_to_stand_still_transitions + go_to_body_search_transitions
-        + go_to_impossible_transitions)
+        all_transitions = (go_to_walking_transitions 
+                           + go_to_kick_transitions + go_to_getting_up_transitions + go_to_stand_still_transitions
+                           + go_to_impossible_transitions)
 
         self.robot_state_machine = Machine(self, states=states, transitions=all_transitions, initial='stand_still')
 
@@ -85,8 +91,9 @@ class StateMachine():
     #que controlarao as transicoes de estados da maquina
     def request_state_machine_update(self, ballPosition, ballClose, ballFound, fallState, horMotorOutOfCenter, headKickCheck):
         
-        print(f'-------------------\nEstado {str(self.state)}')
+        print(f'-------------------\nEstado {str(self.state)}')        
         self.update_state()
+        print(self.state)
         self.state_msg.currentState = str(self.state)
         self.state_publisher.publish(self.state_msg)
     
@@ -136,6 +143,7 @@ class StateMachine():
         """
 
         if fall_state != UP:
+            print('getting_up')
             self.getting_up_condition = True
             self.walking_condition = False
         else:

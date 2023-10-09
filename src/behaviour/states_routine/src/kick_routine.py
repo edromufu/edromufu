@@ -4,6 +4,7 @@
 import rospy
 from movement_utils.srv import *
 from movement_utils.msg import *
+from modularized_bhv_msgs.msg import currentStateMsg
 
 
 class KickRoutine():

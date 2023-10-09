@@ -43,4 +43,9 @@
         <arg name="rvizconfig" value="$(find humanoid_visualization)/urdf/movement.rviz" />
     </include>
 
+    <!-- Inicialização do Behaviour -->
+    <include file="$(find transitions_and_states)/launch/atacker.launch" if="$(eval '1' if arg('robot_name') == 'aurea' else '0')"/>
+    <include file="$(find transitions_and_states)/launch/atacker.launch" if="$(eval '1' if arg('robot_name') == 'natasha' else '0')"/>
+
+
 </launch>

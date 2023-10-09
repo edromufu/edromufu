@@ -52,6 +52,7 @@ class Node():
         self.publisher = rospy.Publisher(self.parameters.vision2BhvTopic, Webotsmsg, queue_size=100)
         
         #SE FOR NO REAL
+        print("\nVisão Operante\n")
         self.get_webcam()
 
         #SE FOR NO WEBOTS
@@ -62,19 +63,19 @@ class Node():
 
     def get_webcam(self):
 
-        print("\nVisão Operante\n")
+        
         if self.ajuste == True:
             print("Ajuste de Brilho '=' para aumentar e '-' para diminuir.\n")
             print("Para continuar a detecção. Aperte W.\n")
 
             self.current_frame = cv2.VideoCapture(f"/dev/video{self.camera}")
-            _, self.current_frame = self.current_frame.read()
+            ret, self.current_frame = self.current_frame.read()
             self.current_frame = cv2.resize(self.current_frame, (640,480))
             #self.current_frame = cv2.blur(self.current_frame, (10,10))
 
             if not ret:
                 print("\nError capturing frame\n")
-                break
+                self.get_webcam()
 
                     
             self.current_frame = cv2.resize(self.current_frame, (self.parameters.cameraWidth,self.parameters.cameraHeight))

@@ -20,7 +20,7 @@ class StateMachineReceiver(StateMachine):
         - Construção do subscriber do ROS responsável pelo recebimento das variáveis
         """
 
-        self.parameters = self.BehaviourParameters()
+        self.parameters = BehaviourParameters()
 
         self.state_machine = StateMachine()
         rospy.Subscriber(self.parameters.stateMachineTopic, stateMachineMsg, self.call_state_machine_update)
