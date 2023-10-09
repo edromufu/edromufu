@@ -8,13 +8,13 @@ sys.path.append(edrom_dir+'movement/kinematic_functions/src')
 from ik_numerical import InverseKinematics
 
 #? Parâmetros da caminhada
-zSwingHeight = 0.04 #Altura do pé de balanço (m)
-stepTime = 0.5 #Tempo para "um" passo (s)
+zSwingHeight = 0.03 #Altura do pé de balanço (m)
+stepTime = 1#Tempo para "um" passo (s)
 doubleSupProportion = 0.2 # Proporção do tempo de um passo em suporte duplo (adim)
-stepX = 0.0 #Tamanho de um passo em x (m)
+stepX = 0.055 #Tamanho de um passo em x (m)
 g = 9.81 #Gravidade (m/s²)
-zCOM = 0.28 #Altura do centro de massa (m)
-Y_ZMP_CORRECTION = -0.015 #Correção forçada da posição em Y do ZMP (m)
+zCOM = 0.253 #Altura do centro de massa (m)
+Y_ZMP_CORRECTION = -0.03 #Correção forçada da posição em Y do ZMP (m)
 PAUSE_AFTER_STEP = 0.2 #Pausa após um passo (s)
 
 def callIK(robot, newFootAbsPosition, newFootAbsPosture, currentFoot):

@@ -2,10 +2,12 @@
 #coding=utf-8
 
 import numpy as np
-
 from direct_kinematics import ForwardKinematics
 
 IK_ITERATIONS_LIMIT = 100
+
+MAX_POSITIONS = [3.1415951251983643, 0.9244498014450073, 2.3820884227752686, 0.08055371791124344, 0.387425035238266, 2.0752172470092773, 0.5792195796966553, 0.3490661084651947, 0.6083723902702332, 0.6942963600158691, 1.3417948484420776, 1.3417948484420776, 0.273882657289505, 0.273882657289505, 0.387425035238266, 0.4334557354450226, 0.462081458568573, 0.477425035238266]
+MIN_POSITIONS = [-0.916778028011322, -3.1415951251983643, -0.011507674120366573, -2.3744168281555176, -2.0675454139709473, -0.3797532320022583, -0.18028689920902252, -0.7035024762153625, -0.6866245269775391, -0.5331888794898987, -0.5485324859619141, -1.4538028240203857, -1.9908275604248047, -1.9908275604248047, -1.7606741189956665, -1.8143765926361084, -0.5311275088787079, -0.6768913531303406]
 
 def FindRoute(targetJoint, robot):
 
@@ -68,11 +70,14 @@ def VirtuallyMoveJoints(indexes, dq, robot):
         qNew = robot[j].jointRotation + dq[n]
         qNew = np.mod(qNew + np.pi, 2*np.pi) - np.pi
         
+
         if robot[j].get_id() == -1:
             qNew = 0
-        if robot[j].is_knee():
-            if qNew > -0.01:
+        else:
+            if robot[j].is_knee() and qNew > -0.01:
                 qNew = 0
+            qNew = max(MIN_POSITIONS[robot[j].get_id()], qNew)
+            qNew = min(MAX_POSITIONS[robot[j].get_id()], qNew)
                 
         robot[j].jointRotation = qNew
     
