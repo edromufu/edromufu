@@ -50,7 +50,7 @@
 
     <!-- Inicialização do Behaviour -->
 
-    <include file="$(find transitions_and_states)/launch/atacker.launch" if="$(eval arg('behaviour'))"/>
+    <include file="$(find transitions_and_states)/launch/behaviour.launch" if="$(eval arg('behaviour'))"/>
    
 
 </launch>
