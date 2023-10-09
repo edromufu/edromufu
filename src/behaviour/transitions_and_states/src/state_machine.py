@@ -93,7 +93,7 @@ class StateMachine():
         
         print(f'-------------------\nEstado {str(self.state)}')        
         self.update_state()
-        print(self.state)
+
         self.state_msg.currentState = str(self.state)
         self.state_publisher.publish(self.state_msg)
     

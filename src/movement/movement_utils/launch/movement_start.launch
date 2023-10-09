@@ -27,7 +27,7 @@
 
     <!-- Inicialização da visão-->
     <include file="$(find object_finder)/launch/vision.launch" if="$(eval arg('head_plugged'))">
-        <arg name="img_output" value="true"/>
+        <arg name="img_output" value="false"/>
         <arg name="ajuste" value="false"/>
         <arg name="brilho" value="4"/>
         <arg name="camera" value="0"/>
