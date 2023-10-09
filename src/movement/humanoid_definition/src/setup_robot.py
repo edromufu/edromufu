@@ -41,6 +41,8 @@ class Robot:
         self.robotJoints[0].absolutePosition = self.robotJoints[0].absolutePosition + np.array([[0.0,0.0,dzCOM]]).T
         ForwardKinematics(self.robotJoints)
 
+        return dzCOM
+    
     def mapMotorId2Json(self):
         for jsonIndex, joint in enumerate(self.robotJoints):
             motor_id = joint.get_id()
@@ -55,9 +57,13 @@ class Robot:
 
         if self.robotJoints[-1].absolutePosition[2][0] > 0.02:
             print('Atualizando')
-            self.updateCOMPosturebyFoot()
+            pitch = self.updateCOMPosturebyFoot()
             
-            self.updateCOMPositionbyFoot()
+            dz = self.updateCOMPositionbyFoot()
+
+            return dz, pitch
+
+        return [None, None]
         
     def setupRobot(self, robot):
         self.loadJson(robot+'.json')

@@ -35,6 +35,7 @@ add_service_files(
   gait.srv
   page.srv
   walk_forward.srv
+  rotate.srv
 )
 
 ## Generate actions in the 'action' folder

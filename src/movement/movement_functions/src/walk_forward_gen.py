@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-#coding=utf-8
-
 import numpy as np
 import copy
 
@@ -10,21 +7,15 @@ edrom_dir = '/home/'+os.getlogin()+'/edromufu/src/'
 sys.path.append(edrom_dir+'movement/kinematic_functions/src')
 from ik_numerical import InverseKinematics
 
-sys.path.append(edrom_dir+'movement/humanoid_definition/src')
-from setup_robot import Robot
-
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
-
 #? Parâmetros da caminhada
-zSwingHeight = 0.05 #Altura do pé de balanço (m)
-stepTime = 1 #Tempo para "um" passo (s)
-doubleSupProportion = 0.3 # Proporção do tempo de um passo em suporte duplo (adim)
-stepX = 0.12 #Tamanho de um passo em x (m)
+zSwingHeight = 0.03 #Altura do pé de balanço (m)
+stepTime = 1#Tempo para "um" passo (s)
+doubleSupProportion = 0.2 # Proporção do tempo de um passo em suporte duplo (adim)
+stepX = 0.055 #Tamanho de um passo em x (m)
 g = 9.81 #Gravidade (m/s²)
-zCOM = 0.28 #Altura do centro de massa (m)
-Y_ZMP_CORRECTION = 0.01
-Y_SWING_CORRECTION = 0.02
+zCOM = 0.253 #Altura do centro de massa (m)
+Y_ZMP_CORRECTION = -0.04 #Correção forçada da posição em Y do ZMP (m)
+PAUSE_AFTER_STEP = 0.2 #Pausa após um passo (s)
 
 def callIK(robot, newFootAbsPosition, newFootAbsPosture, currentFoot):
     robotIK = copy.deepcopy(robot)
@@ -40,7 +31,7 @@ def feetPosesCalculator(xCOM, yCOM, zSwing, dxSwing, t1, t2, t3,supportFoot):
     xyzCOM = np.c_[xCOM/2, yCOM, np.zeros(len(xCOM))]
 
     xSwing = np.concatenate((np.zeros(len(t1)),np.linspace(0,dxSwing/2,len(t2)),(dxSwing/2)*np.ones(len(t3))))
-    ySwing = np.concatenate((np.zeros(len(t1)),np.linspace(0,-supportFoot*Y_SWING_CORRECTION,len(t2)),np.linspace(-supportFoot*Y_SWING_CORRECTION,0,len(t3))))
+    ySwing = np.zeros(len(t1)+len(t2)+len(t3))
 
     xyzSwing = np.c_[xSwing, -yCOM-ySwing, zSwing]
 
@@ -116,9 +107,9 @@ def callWalk(robot, supFoot, queueTime):
     #print(f'rightFootPoses:\n{rightFootPoses}')
 
     #? Somando à posição inicial dos pés para transformar em absoluto
-    walk_poses = np.zeros((len(leftFootPoses),len(robot)))
+    walk_poses = np.zeros((len(leftFootPoses)+int(np.ceil(PAUSE_AFTER_STEP/queueTime)),len(robot)))
 
-    for i in range(len(leftFootPoses)):
+    for i in range(len(t1)+len(t2)):
 
         newLeftFootPos = leftFootPos+np.array([leftFootPoses[i]]).T
         newRightFootPos = rightFootPos+np.array([rightFootPoses[i]]).T
@@ -144,8 +135,35 @@ def callWalk(robot, supFoot, queueTime):
         walk_poses[i][1:7] = right_joint_angles
         walk_poses[i][7:13] = left_joint_angles
 
-        
+    for i in range(len(t1)+len(t2),len(t1)+len(t2)+int(np.ceil(PAUSE_AFTER_STEP/queueTime))):
+        walk_poses[i][1:7] = right_joint_angles
+        walk_poses[i][7:13] = left_joint_angles
     
+    for i in range(len(t1)+len(t2),len(t1)+len(t2)+len(t3)):
+        newLeftFootPos = leftFootPos+np.array([leftFootPoses[i]]).T
+        newRightFootPos = rightFootPos+np.array([rightFootPoses[i]]).T
+
+        try:
+            currentFoot = -2
+            left_joint_angles = callIK(robot, newLeftFootPos, leftFootPosture, currentFoot)
+            left_joint_angles = left_joint_angles[7:13]
+            lastLAngles = left_joint_angles
+        except Exception as e:
+            print(e)
+            left_joint_angles = lastLAngles
+
+        try:
+            currentFoot = -1
+            right_joint_angles = callIK(robot, newRightFootPos, rightFootPosture, currentFoot)
+            right_joint_angles = right_joint_angles[1:7]
+            lastRAngles = right_joint_angles
+        except Exception as e:
+            print(e)
+            right_joint_angles = lastRAngles
+
+        walk_poses[i+int(np.ceil(PAUSE_AFTER_STEP/queueTime))][1:7] = right_joint_angles
+        walk_poses[i+int(np.ceil(PAUSE_AFTER_STEP/queueTime))][7:13] = left_joint_angles
+
     return walk_poses
 
 def genSwingFootAndTorsoNextPositions(stepX, initSwingPos, initSuppPos):
@@ -220,47 +238,3 @@ def genCOMTrajectory(stepTime, td, mask1, mask2, mask3, t1, t2, t3, xZMP, yZMP, 
     yCOM = np.concatenate((y1,y2,y3))
 
     return xCOM, yCOM
-
-def Gait(robot, stepHeight, stepNumber, initialLeg=False):
-    #leg == False (direita), leg == True (esquerda)
-    #phase == True (subida), phase == False (descida)
-
-    leg = initialLeg
-    phase = True
-    gait_poses = np.zeros((2*stepNumber,len(robot)))
-
-    initial = []
-    footInitialPosture = []
-    for motor in robot:
-        initial.append(motor.jointRotation)
-        if 'FOOT' in motor.get_name():
-            footInitialPosture.append(motor.absolutePosture)
-    initial = np.array(initial)
-
-
-    for step_phase in range(2*stepNumber):
-        if leg:
-            newFootAbsPosition = robot[-2].absolutePosition + np.array([[0, 0, phase*stepHeight]]).T
-            currentFoot = -2
-        else:
-            newFootAbsPosition = robot[-1].absolutePosition + np.array([[0, 0, phase*stepHeight]]).T
-            currentFoot = -1
-
-        if phase:
-            joint_angles = callIK(robot, newFootAbsPosition, footInitialPosture[int(not leg)], currentFoot)
-        else:
-            joint_angles = initial
-
-        gait_poses[step_phase] = joint_angles
-        
-        if not phase:
-            leg = not leg
-        phase = not phase
-    
-    return gait_poses
-    
-if __name__ == '__main__':
-    robotInstance = Robot('bioloid').robotJoints
-    gait_poses = Gait(robotInstance, 0.05, 20)
-    for count, pose in enumerate(gait_poses):
-        print(f'{count}:\n {pose}\n')

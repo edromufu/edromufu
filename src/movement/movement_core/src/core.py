@@ -11,7 +11,9 @@ sys.path.append(edrom_dir+'movement/humanoid_definition/src')
 from setup_robot import Robot
 
 sys.path.append(edrom_dir+'movement/movement_functions/src')
-from movement_patterns import * 
+from gait_gen import Gait
+from walk_forward_gen import callWalk
+from rotate_cc_ccw_gen import callRotate
 
 sys.path.append(edrom_dir+'movement/movement_pages/src')
 from page_runner import Page
@@ -23,8 +25,6 @@ from sensor_msgs.msg import JointState
 QUEUE_TIME = rospy.get_param('/movement_core/queue_time') #Em segundos
 PUB2VIS = rospy.get_param('/movement_core/pub2vis')
 
-
-
 class Core:
     def __init__(self): 
         
@@ -32,25 +32,25 @@ class Core:
         rospy.init_node('movement_central')
         
         # Inicialização das variáveis do ROS para u2d2
-        if rospy.get_param('/movement_core/wait4u2d2'):
-            rospy.wait_for_service('u2d2_comm/feedbackBody')
-            rospy.wait_for_service('u2d2_comm/enableTorque')
-        
-            #Estruturas para comunicação com U2D2
-            self.motorsFeedback = rospy.ServiceProxy('u2d2_comm/feedbackBody', body_feedback)
-            self.motorsTorque = rospy.ServiceProxy('u2d2_comm/enableTorque', enable_torque)
-            self.pub2motors = rospy.Publisher('u2d2_comm/data2body', body_motors_data, queue_size=100)
-            self.pub2motorsMsg = body_motors_data()
+        rospy.wait_for_service('u2d2_comm/feedbackBody')
+        rospy.wait_for_service('u2d2_comm/enableTorque')
+    
+        #Estruturas para comunicação com U2D2
+        self.motorsFeedback = rospy.ServiceProxy('u2d2_comm/feedbackBody', body_feedback)
+        self.motorsTorque = rospy.ServiceProxy('u2d2_comm/enableTorque', enable_torque)
+        self.pub2motors = rospy.Publisher('u2d2_comm/data2body', body_motors_data, queue_size=100)
+        self.pub2motorsMsg = body_motors_data()
 
-            #Inicialização do torque
-            self.motorsTorque(True, [-1])
+        #Inicialização do torque
+        self.motorsTorque(True, [-1])
 
-            self.queue = []
+        self.queue = []
 
         #Services de requisição de movimento, todos possuem como callback movementManager
         rospy.Service('movement_central/request_gait', gait, self.movementManager)
         rospy.Service('movement_central/request_page', page, self.movementManager)
         rospy.Service('movement_central/request_walk', walk_forward, self.movementManager)
+        rospy.Service('movement_central/request_rotation', rotate, self.movementManager)
 
         #Inicialização do objeto (modelo) da robô em código
         robot_name = rospy.get_param('/movement_core/name')
@@ -58,7 +58,7 @@ class Core:
         self.robotInstance = Robot(robot_name)
         self.robotModel = self.robotInstance.robotJoints
         self.motorId2JsonIndex = self.robotInstance.motorId2JsonIndex
-        self.FT = True
+        self.motorsCurrentPosition = [0]*18
         
         #Timer para fila de publicações
         rospy.Timer(rospy.Duration(QUEUE_TIME), self.sendFromQueue)
@@ -68,22 +68,23 @@ class Core:
             self.queuevis = []
             self.pub2vis = rospy.Publisher('/joint_states', JointState, queue_size=100)
             self.pub2vismsg = JointState()
-            self.pub2vismsg.name = ['RHIP_UZ_joint','RHIP_UX_joint','RHIP_UY_joint','RKNEE_joint',
+            self.pub2vismsg.name = ['COM_height_slider','COM_pitch_joint','RHIP_UZ_joint','RHIP_UX_joint','RHIP_UY_joint','RKNEE_joint',
             'RANKLE_UY_joint','RANKLE_UX_joint','LHIP_UZ_joint','LHIP_UX_joint','LHIP_UY_joint',
             'LKNEE_joint','LANKLE_UY_joint','LANKLE_UX_joint']
 
-    def callRobotModelUpdate(self):
-        if self.FT:
-            self.motorsFeedback(True).pos_vector
-            self.FT = False
-        
-        self.motorsCurrentPosition = list(self.motorsFeedback(True).pos_vector)
+            self.currentCOMPitch = 0.0
+            self.currentCOMHeight = 0.0
 
-        positions2Update = self.motorsCurrentPosition
+    def callRobotModelUpdate(self, position2update):
+        self.motorsCurrentPosition = position2update
         
-        positions2Update = self.sortMotorReturn2JsonIndex(positions2Update)
+        sorted2update = self.sortMotorReturn2JsonIndex(position2update)
 
-        self.robotInstance.updateRobotModel(positions2Update)
+        dz, pitch = self.robotInstance.updateRobotModel(sorted2update)
+
+        if dz is not None and dz is not None and PUB2VIS:
+            self.currentCOMHeight = dz
+            self.currentCOMPitch = pitch
 
     def sortMotorReturn2JsonIndex(self, toSort):
 
@@ -113,22 +114,21 @@ class Core:
         return None
 
     def movementManager(self, req):
-        if rospy.get_param('/movement_core/wait4u2d2'):
-            self.callRobotModelUpdate()
-            self.motorsTorque(True, [-1])
+        self.motorsTorque(True, [-1])
 
         if 'gait' in str(req.__class__):
 
             checked_poses = np.array([self.motorsCurrentPosition])
             gait_poses = Gait(self.robotModel, req.step_height, req.steps_number)
             
-            if rospy.get_param('/movement_core/wait4u2d2'):
-                for index, pose in enumerate(gait_poses):
-                    pose = self.sortJsonIndex2MotorInput(pose)
-                    checked_poses = np.append(checked_poses, [pose], axis=0)  
+            for index, pose in enumerate(gait_poses):
+                pose = self.sortJsonIndex2MotorInput(pose)
+                checked_poses = np.append(checked_poses, [pose], axis=0)  
 
-                for pose in checked_poses: 
-                    self.queue.append(pose)
+            for pose in checked_poses: 
+                self.queue.append(pose)
+
+            self.callRobotModelUpdate(checked_poses[-1])
 
             if PUB2VIS:
                 for pose in gait_poses:
@@ -140,10 +140,12 @@ class Core:
         elif 'page' in str(req.__class__):
             page_poses = Page(req.page_name, QUEUE_TIME)
             
-            if rospy.get_param('/movement_core/wait4u2d2'):
-                for pose in page_poses: 
-                    self.queue.append(pose)
+            for pose in page_poses: 
+                self.queue.append(pose)
             
+
+            self.callRobotModelUpdate(page_poses[-1])
+
             if PUB2VIS:
                 for pose in page_poses:
                     pose = self.sortMotorReturn2JsonIndex(pose)
@@ -167,15 +169,15 @@ class Core:
                 
                 supFoot *= -1
         
-            if rospy.get_param('/movement_core/wait4u2d2'):
-                for index, pose in enumerate(walk_poses):
-                    pose = self.sortJsonIndex2MotorInput(pose)
-                    checked_poses = np.append(checked_poses, [pose], axis=0)  
+            for index, pose in enumerate(walk_poses):
+                pose = self.sortJsonIndex2MotorInput(pose)
+                checked_poses = np.append(checked_poses, [pose], axis=0)  
 
-                for pose in checked_poses: 
-                    self.queue.append(pose)
+            for pose in checked_poses: 
+                self.queue.append(pose)
             
-
+            self.callRobotModelUpdate(checked_poses[-1])
+            
             if PUB2VIS:
                 for pose in walk_poses:
                     self.queuevis.append(pose[1:-2])
@@ -183,22 +185,56 @@ class Core:
             response = walk_forwardResponse()
             response.success = True
 
+        elif 'rotate' in str(req.__class__):
+            
+            checked_poses = np.array([self.motorsCurrentPosition])
+
+            phase = -1
+            for n in range(req.steps_number): 
+                if n:
+                    rotate_poses = np.vstack((rotate_poses,callRotate(self.robotModel, req.direction, phase, QUEUE_TIME)))
+                else:
+                    rotate_poses = callRotate(self.robotModel, req.direction, phase, QUEUE_TIME)
+
+                if phase == 1:
+                    self.robotInstance.updateRobotModel(rotate_poses[0])
+                    rotate_poses = np.vstack((rotate_poses,rotate_poses[0]))
+                else:
+                    self.robotInstance.updateRobotModel(rotate_poses[-1])
+                    
+                phase *= -1
+
+            for index, pose in enumerate(rotate_poses):
+                pose = self.sortJsonIndex2MotorInput(pose)
+                checked_poses = np.append(checked_poses, [pose], axis=0)  
+
+            for pose in checked_poses: 
+                self.queue.append(pose)
+            
+            self.callRobotModelUpdate(checked_poses[-1])
+            
+            if PUB2VIS:
+                for pose in rotate_poses:
+                    self.queuevis.append(pose[1:-2])
+
+            response = rotateResponse()
+            response.success = True
+
         return response
     
     def sendFromQueue(self, event):
         
-        if rospy.get_param('/movement_core/wait4u2d2'):
-            if self.queue:
-                self.pub2motorsMsg.pos_vector = self.queue.pop(0)
-                self.pub2motors.publish(self.pub2motorsMsg)
+        if self.queue:
+            self.pub2motorsMsg.pos_vector = self.queue.pop(0)
+            self.pub2motors.publish(self.pub2motorsMsg)
 
         if PUB2VIS:
             if self.queuevis:
-                self.pub2vismsg.position = self.queuevis.pop(0)
+                self.pub2vismsg.position = np.concatenate((np.array([self.currentCOMHeight, self.currentCOMPitch]),self.queuevis.pop(0)))
                 self.pub2vismsg.header.stamp = rospy.Time.now()
                 self.pub2vis.publish(self.pub2vismsg)
 
 if __name__ == '__main__':
-    np.set_printoptions(precision=3, suppress=True, linewidth=np.inf, threshold=sys.maxsize)
+    np.set_printoptions(precision=4, suppress=True, linewidth=np.inf, threshold=sys.maxsize)
     movement = Core()
     rospy.spin()

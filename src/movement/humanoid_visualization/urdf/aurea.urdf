@@ -75,6 +75,28 @@
     <origin xyz="0 0 0"/>
   </joint>
 
+  <link name="COM_height">
+  </link>
+
+  <joint name="COM_height_slider" type="prismatic">
+    <axis xyz="0 0 1"/>
+    <limit effort="1000.0" lower="-1" upper="1" velocity="10"/>
+    <parent link="base_link"/>
+    <child link="COM_height"/>
+    <origin xyz="0 0 0.29846"/>
+  </joint>
+
+  <link name="COM_pitch">
+  </link>
+
+  <joint name="COM_pitch_joint" type="revolute">
+    <axis xyz="0 1 0"/>
+    <limit effort="1000.0" lower="-3.14" upper="3.14" velocity="10"/>
+    <parent link="COM_height"/>
+    <child link="COM_pitch"/>
+    <origin xyz="0 0 0"/>
+  </joint>
+
   <link name="COM">
     <visual>
       <geometry>
@@ -86,9 +108,9 @@
   </link>
 
   <joint name="base_to_COM" type="fixed">
-    <parent link="base_link"/>
+    <parent link="COM_pitch"/>
     <child link="COM"/>
-    <origin xyz="0 0 0.29846"/>
+    <origin xyz="0 0 0"/>
   </joint>
 
   <link name="RHIP_UZ">
