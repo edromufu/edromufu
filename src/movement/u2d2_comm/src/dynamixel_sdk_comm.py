@@ -22,9 +22,13 @@ VELOCITY = 95 #max 195
 
 if rospy.get_param('u2d2/robot_name') == 'aurea':
     print('Aurea')
-    MIN_MAX_DICT = {0: [1450,4095],1: [0,2650],2: [2040,3600],3: [500,2100],4: [700,2300],
+    # MIN_MAX_DICT = {0: [570,4095],1: [0,3500],2: [2040,3600],3: [500,2100],4: [700,2300],
+    #                 5: [1800,3400],6: [1930,2425],7: [1589,2275],8: [1600,2444],9: [1700,2500],
+    #                 10: [1690,2922],11: [1100,2922],12: [750,2226],13: [750,2226],14: [900,2300],
+    #                 15: [865,2330],16: [1760,2290],17: [1665,2300],18: [0,1023],19: [0,1023]}
+    MIN_MAX_DICT = {0: [570,4095],1: [0,3500],2: [2040,3600],3: [500,2100],4: [700,2300],
                     5: [1800,3400],6: [1930,2425],7: [1589,2275],8: [1600,2444],9: [1700,2500],
-                    10: [1690,2922],11: [1100,2922],12: [750,2226],13: [750,2226],14: [900,2300],
+                    10: [1690,3400],11: [650,2922],12: [750,2226],13: [750,2226],14: [900,2300],
                     15: [865,2330],16: [1760,2290],17: [1665,2300],18: [0,1023],19: [0,1023]}
 else:
     print('Natasha')
@@ -147,7 +151,7 @@ class u2d2Control():
             return self.bodyFeedbackRes
 
         except:
-            time.sleep(0.5)
+            time.sleep(1.5)
             self.startComm()
             return self.feedbackBodyMotors(req)
 
@@ -168,7 +172,7 @@ class u2d2Control():
             return self.headFeedbackRes
 
         except:
-            time.sleep(0.5)
+            time.sleep(1.5)
             self.startComm()
             return self.feedbackHeadMotors(req)
 
@@ -188,7 +192,7 @@ class u2d2Control():
         try:
             self.bodyGroup.txPacket()
         except:
-            time.sleep(0.5)
+            time.sleep(1.5)
             self.startComm()
             self.data2body(msg)
 
@@ -207,7 +211,7 @@ class u2d2Control():
         try:
             self.headGroup.txPacket()
         except:
-            time.sleep(0.5)
+            time.sleep(1.5)
             self.startComm()
             self.data2body(msg)
     
