@@ -67,8 +67,10 @@ class Node():
             print("Ajuste de Brilho '=' para aumentar e '-' para diminuir.\n")
             print("Para continuar a detecção. Aperte W.\n")
 
-        while not rospy.is_shutdown():
-            ret , self.current_frame = self.cap.read()
+            self.current_frame = cv2.VideoCapture(f"/dev/video{self.camera}")
+            _, self.current_frame = self.current_frame.read()
+            self.current_frame = cv2.resize(self.current_frame, (640,480))
+            #self.current_frame = cv2.blur(self.current_frame, (10,10))
 
             if not ret:
                 print("\nError capturing frame\n")

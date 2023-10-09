@@ -1,0 +1,4 @@
+#VRML_OBJ R2022a utf8
+RobocupSoccerField {
+  size "kid"
+}

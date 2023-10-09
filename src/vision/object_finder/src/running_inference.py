@@ -30,7 +30,7 @@ def set_model_input(net):
 
 
     model = cv2.dnn.DetectionModel(net)
-    model.setInputParams(size=(416,416), scale=1/255, swapRB=True)
+    model.setInputParams(size=(640,480), scale=1/255, swapRB=True)
     
     return model
 
