@@ -50,7 +50,7 @@ class Core:
         rospy.Service('movement_central/request_gait', gait, self.movementManager)
         rospy.Service('movement_central/request_page', page, self.movementManager)
         rospy.Service('movement_central/request_walk', walk_forward, self.movementManager)
-        rospy.Service('movement_central/request_rotation', rotate, self.movementManager)
+        #rospy.Service('movement_central/request_rotation', rotate, self.movementManager)
 
         #Inicialização do objeto (modelo) da robô em código
         robot_name = rospy.get_param('/movement_core/name')

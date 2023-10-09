@@ -20,12 +20,15 @@ class BehaviourParameters():
     def behaviourwiseParameters(self):
         #Relacionado à número de vezes que uma variável deve extrapolar certo valor para resetar
         self.timerCountLimit = 3
+        self.timerPage = 60 #s
+        self.timerFirstPose = 5 #s
+        self.timerWalk = 15 #s
 
         #Tópico do ROS IMU
         self.imuAccelTopic = '/behaviour/imu_accel'
 
         #Parametros de avaliação de queda nos três eixos
-        self.zGravitySecurity = -6  #Valor abaixo do qual a medida de z deve estar para queda
+        self.zGravitySecurity = -3  #Valor abaixo do qual a medida de z deve estar para queda
         self.xSensorFront     = 4 #Valor abaixo do qual a medida de x deve estar para queda de frente                           
         self.xSensorBack      = -4  #Valor acima do qual a medida de x deve estar para queda de costas                               
         self.ySensorLeft      = 4 #Valor abaixo do qual a medida de y deve estar para queda sobre o lado esquerdo         

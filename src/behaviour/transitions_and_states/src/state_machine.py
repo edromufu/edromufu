@@ -27,33 +27,20 @@ class StateMachine():
         - Inicializa a maquina de estados, utilizando as caracteristicas ja criadas
         """
 
-        states = [ 'walking','stand_still','kick','getting_up', 'impossible']
-
+        states = ['walking','stand_still','getting_up', 'impossible']
  
-
-
         go_to_walking_transitions = [
-            
+            { 'trigger': 'go_to_walking', 'source': 'walking', 'dest': 'walking',
+             'conditions': 'walking_condition', 'unless': 'getting_up_condition'},
             { 'trigger': 'go_to_walking', 'source': 'stand_still', 'dest': 'walking',
              'conditions': 'walking_condition', 'unless': 'getting_up_condition'}
-            ,
-             { 'trigger': 'go_to_walking', 'source': 'stand_still', 'dest': 'walking',
-             'conditions': 'walking_condition', 'unless': 'kick_condition'}
         ]
         
         go_to_stand_still_transitions = [
+            { 'trigger': 'go_to_stand_still', 'source': 'stand_still', 'dest': 'stand_still',
+             'unless': 'getting_up_condition'},
             { 'trigger': 'go_to_stand_still', 'source': 'getting_up', 'dest': 'stand_still',
              'unless': 'getting_up_condition'}
-            ,
-            { 'trigger': 'go_to_stand_still', 'source': 'kick', 'dest': 'stand_still',
-             'unless': 'getting_up_condition'}
-        ]
-
-        go_to_kick_transitions = [
-            { 'trigger': 'go_to_kick', 'source': 'walking', 'dest': 'kick',
-             'conditions': 'kick_condition', 'unless': 'getting_up_condition'},
-            { 'trigger': 'go_to_kick', 'source': 'stand_still', 'dest': 'kick',
-             'conditions': 'kick_condition', 'unless': 'getting_up_condition'}
         ]
 
         go_to_getting_up_transitions = [
@@ -62,24 +49,16 @@ class StateMachine():
         ]
 
         go_to_impossible_transitions = [
-            {'trigger': 'go_to_search_ball', 'source': '*', 'dest': 'impossible',
+            {'trigger': 'go_to_walking', 'source': '*', 'dest': 'impossible', 
              'conditions': 'impossible_condition'},
-            {'trigger': 'go_to_body_search', 'source': '*', 'dest': 'impossible',
+            {'trigger': 'go_to_getting_up', 'source': '*', 'dest': 'impossible', 
              'conditions': 'impossible_condition'},
-            {'trigger': 'go_to_walking', 'source': '*', 'dest': 'impossible',
-             'conditions': 'impossible_condition'},
-            {'trigger': 'go_to_kick', 'source': '*', 'dest': 'impossible',
-             'conditions': 'impossible_condition'},
-            {'trigger': 'go_to_getting_up', 'source': '*', 'dest': 'impossible',
-             'conditions': 'impossible_condition'},
-            {'trigger': 'go_to_body_alignment', 'source': '*', 'dest': 'impossible',
-             'conditions': 'impossible_condition'},
-            {'trigger': 'go_to_stand_still', 'source': '*', 'dest': 'impossible',
+             {'trigger': 'got_to_stand_still', 'source': '*', 'dest': 'impossible', 
              'conditions': 'impossible_condition'}
-        ]
+            ]
 
         all_transitions = (go_to_walking_transitions 
-                           + go_to_kick_transitions + go_to_getting_up_transitions + go_to_stand_still_transitions
+                           + go_to_getting_up_transitions + go_to_stand_still_transitions
                            + go_to_impossible_transitions)
 
         self.robot_state_machine = Machine(self, states=states, transitions=all_transitions, initial='stand_still')
@@ -91,6 +70,9 @@ class StateMachine():
     #que controlarao as transicoes de estados da maquina
     def request_state_machine_update(self, ballPosition, ballClose, ballFound, fallState, horMotorOutOfCenter, headKickCheck):
         
+        self.getting_up_condition_update(fallState)
+        self.walking_condition_update(ballFound)
+
         print(f'-------------------\nEstado {str(self.state)}')        
         self.update_state()
 
@@ -111,11 +93,6 @@ class StateMachine():
             print('Transição para o getting_up\n-------------------\n')
             return True
         
-        elif self.go_to_kick():
-            print('Transição para o kick\n-------------------\n')
-            return True
-
-
         elif self.go_to_walking():
             print('Transição para o walking\n-------------------\n')
             return True
@@ -129,8 +106,6 @@ class StateMachine():
     
     ########################################FUNÇÕES UPDATE CONDITION########################################
 
-            
-    
     #Funcao para atualizar a variavel de codigo relacionada ao estado de getting_up
     def getting_up_condition_update(self, fall_state):
         """
@@ -143,35 +118,19 @@ class StateMachine():
         """
 
         if fall_state != UP:
-            print('getting_up')
             self.getting_up_condition = True
-            self.walking_condition = False
         else:
-            self.walking_condition = True
             self.getting_up_condition = False
-    
-    #Funcao para atualizar a variavel de codigo relacionada ao estado de kick
-    def kick_condition_update(self, ball_relative_position, ver_angle_accomplished, ball_close):
-        """
-        -> Funcao:
-        Avaliar a necessidade de transicao para o estado de kick e
-        atualizar a variavel de controle responsavel, atraves de:
-            - Verificar se a bola esta proxima o suficiente, centralizada para a robo
-            e se a cabeca esta a um angulo minimo para garantia de um bom chute
-            - Atualizar a variavel de condicao de acordo com verificacao
-        """
 
-        if ball_close and ball_relative_position == CENTER and ver_angle_accomplished:
-            self.kick_condition = True
-            self.walking_condition = False
-        else:
+    def walking_condition_update(self, ball_found):
+        if ball_found:
             self.walking_condition = True
-            self.kick_condition = False
+        else:
+            self.walking_condition = False
     
 
     ########################################FUNÇÕES RETURN CONDITION########################################
     #Funcoes de retorno das variaveis de controle da forma necessitada pela state machine
-    def walking_condition(self): return self.walking_condition   
+    def walking_condition(self): return True  
     def getting_up_condition(self): return self.getting_up_condition  
-    def kick_condition(self): return self.kick_condition 
     def impossible_condition(self): return False

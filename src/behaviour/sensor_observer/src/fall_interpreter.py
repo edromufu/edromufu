@@ -57,7 +57,7 @@ class FallInterpreter():
         #reseta quando apenas uma não conta, ou seja, confia em estar de pé
         #desconfia de ter caido, pois durante a caminhada a acelaração efetuada
         #pelo robô pode fazer com que o sensor tenha uma medida de "queda"
-        if (msg.z > self.parameters.zGravitySecurity):
+        if (msg.z < self.parameters.zGravitySecurity):
             self.countFalled += 1
         else:
             self.fallState = self.parameters.up
