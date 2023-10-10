@@ -29,6 +29,10 @@ class CoreHead:
         self.parameters = BehaviourParameters()
 
         rospy.wait_for_service('u2d2_comm/feedbackHead')
+        rospy.wait_for_service('movement_central/request_page')
+
+        self.requestPage = rospy.ServiceProxy('movement_central/request_page', page)
+
         self.motorsFeedback = rospy.ServiceProxy('u2d2_comm/feedbackHead', head_feedback)
         self.pub2motors = rospy.Publisher('u2d2_comm/data2head', head_motors_data, queue_size=10)
         self.pub2motorsMsg = head_motors_data()
@@ -40,6 +44,7 @@ class CoreHead:
         self.y = 0
         self.hasReceivedVision = False
         self.timesFoundFalse = 0
+        self.ballClose = False
 
         self.defineSearchPattern()
     
@@ -66,6 +71,11 @@ class CoreHead:
                 self.timesFoundFalse = 0
 
         else:
+            if ballInfos.roi_width > 80 or ballInfos.roi_height > 80:
+                self.ballClose = True
+            else:
+                self.ballClose = False
+
             self.found = True
             self.x = ballInfos.x
             self.y = ballInfos.y
@@ -97,18 +107,21 @@ class CoreHead:
 
                     if self.x > self.parameters.xCenterRightLimit or self.x < self.parameters.xCenterLeftLimit:
                         [currentHorRotation, currentVerRotation] = self.motorsFeedback(True).pos_vector
-                        dx = self.callPx(self.x)
+                        dx = self.callPx(self.x)                  
 
-                    if self.y > self.parameters.yCenterBottomLimit or self.y < self.parameters.yCenterTopLimit:
-                        [currentHorRotation, currentVerRotation] = self.motorsFeedback(True).pos_vector
-                        dy = self.callPy(self.y)                        
-
-                    if dx or dy:
+                    if dx:
                         newHorPos = currentHorRotation + dx
                         newVerPos = currentVerRotation + dy
 
                         self.pub2motorsMsg.pos_vector = [newHorPos, newVerPos]
                         self.pub2motors.publish(self.pub2motorsMsg)
+                    
+                    else:
+                        if self.ballClose:
+                            if currentHorRotation > 0:
+                                self.requestPage('natasha_left_defense')
+                            else:
+                                self.requestPage('natasha_right_defense')
                     
                     self.hasReceivedVision = False
                 
