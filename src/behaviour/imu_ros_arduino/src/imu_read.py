@@ -31,19 +31,15 @@ class imuReader():
                     imu_output = imu_output.strip().split()
                     imu_output = [float(string) for string in imu_output]
                     
-                    self.accelMsg.x = imu_output[0]
-                    self.accelMsg.y = imu_output[1]
-                    self.accelMsg.z = imu_output[2]
-                    
-                    self.gyroMsg.x = imu_output[3]
-                    self.gyroMsg.y = imu_output[4]
-                    self.gyroMsg.z = imu_output[5]
-
-                    self.accelPub.publish(self.accelMsg)
-                    self.gyroPub.publish(self.gyroMsg)
+                    if max(imu_output) < 10 and min(imu_output) > -10:
+                        self.accelMsg.x = imu_output[0]
+                        self.accelMsg.y = imu_output[1]
+                        self.accelMsg.z = imu_output[2]
+                        
+                        self.accelPub.publish(self.accelMsg)
 
             except Exception as e:
-                print(e)
+                pass
 
         self.imu.close()
 

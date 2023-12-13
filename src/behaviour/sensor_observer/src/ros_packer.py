@@ -11,6 +11,7 @@ edrom_dir = '/home/'+os.getlogin()+'/edromufu/src/'
 
 sys.path.append(edrom_dir+'behaviour/transitions_and_states/src')
 from behaviour_parameters import BehaviourParameters
+NUM_CONNECTIONS = 2
 
 class RosPacker():
 
@@ -39,7 +40,9 @@ class RosPacker():
         self.smVarsLastValue = [self.pBallPosition, self.pBallClose, self.pBallFound,
                                 self.pFallState,
                                 self.pHorMotorOutOfCenter, self.pHeadKickCheck]
-            
+        
+        while self.pub2StateMachine.get_num_connections() != NUM_CONNECTIONS:pass
+
         self.publish2StateMachine()
     
     #Loopa capturando as novas interpretações para o código

@@ -1,13 +1,14 @@
 <launch>
     <arg name="imu_connected" default="true"/>
-    <arg name="imu_port" default="/dev/ttyUSB0"/>
+    <arg name="imu_port" default="/dev/ttyIMU"/>
+
     
     <!-- Máquina de Estados  -->
-	<node name="state_machine" pkg="transitions_and_states" type="state_machine_receiver.py" output="screen" >   </node> 
-	<node name="body_alignment" pkg="states_routine" type="body_alignment_routine.py" output="screen" >    </node>
-    <node name="body_search" pkg="states_routine" type="body_search_routine.py" output="screen" >    </node>
-    <node name="search_ball" pkg="states_routine" type="search_ball_routine.py" output="screen" >    </node>
+	<node name="behaviour_node" pkg="transitions_and_states" type="state_machine_receiver.py" output="screen" >   </node> 
     <node name="walking" pkg="states_routine" type="walking_routine.py" output="screen" >    </node>
+    <node name="kick" pkg="states_routine" type="kick_routine.py" output="screen" >    </node>
+    <node name="stand_still" pkg="states_routine" type="stand_still_routine.py" output="screen" >    </node>
+    <node name="getting_up" pkg="states_routine" type="getting_up_routine.py" output="screen" >    </node>
 
 
 	<!-- Webots 
