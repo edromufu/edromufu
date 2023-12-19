@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 #coding=utf=8
 
-#ADENDO MANGA: TESTE PARA SABER SE VAI DAR MERDA.
+#ADENDO MANGA: TESTE PARA SABER SE VAI DAR MERDA. kk
 
 import rospy
 import numpy as np
