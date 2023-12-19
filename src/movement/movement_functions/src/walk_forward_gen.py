@@ -1,3 +1,6 @@
+
+"REVISAR SISTEMAS DE COORDENADAS"
+
 import numpy as np
 import copy
 
@@ -14,9 +17,12 @@ doubleSupProportion = 0.2 # Proporção do tempo de um passo em suporte duplo (a
 stepX = 0.055 #Tamanho de um passo em x (m)
 g = 9.81 #Gravidade (m/s²)
 zCOM = 0.253 #Altura do centro de massa (m)
-Y_ZMP_CORRECTION = -0.04 #Correção forçada da posição em Y do ZMP (m)
-PAUSE_AFTER_STEP = 0.2 #Pausa após um passo (s)
 
+''''Provável Gambiarra'''
+Y_ZMP_CORRECTION = -0.04 #Correção forçada da posição em Y do ZMP (m)
+PAUSE_AFTER_STEP = 0.2 #Pausa após um passo (s) IMPROVISO NA PRÁTICA
+
+#chama inverse Kinamatics
 def callIK(robot, newFootAbsPosition, newFootAbsPosture, currentFoot):
     robotIK = copy.deepcopy(robot)
         
@@ -27,10 +33,12 @@ def callIK(robot, newFootAbsPosition, newFootAbsPosture, currentFoot):
     return joint_angles
 
 def feetPosesCalculator(xCOM, yCOM, zSwing, dxSwing, t1, t2, t3,supportFoot):
+    "Xcom, Ycom, coordenadas em relação ao suportFoot"
 
     xyzCOM = np.c_[xCOM/2, yCOM, np.zeros(len(xCOM))]
 
     xSwing = np.concatenate((np.zeros(len(t1)),np.linspace(0,dxSwing/2,len(t2)),(dxSwing/2)*np.ones(len(t3))))
+
     ySwing = np.zeros(len(t1)+len(t2)+len(t3))
 
     xyzSwing = np.c_[xSwing, -yCOM-ySwing, zSwing]
@@ -69,15 +77,19 @@ def callWalk(robot, supFoot, queueTime):
     t = np.linspace(0.0,stepTime,np.ceil(stepTime/queueTime))
     td = stepTime*doubleSupProportion
 
-    mask1 = t < td
-    mask2 = (t >= td) & (t < (stepTime - td))
-    mask3 = t >= (stepTime - td)
+
+    "Essa parte tá certa"
+    mask1 = t < td #suporte duplo
+    mask2 = (t >= td) & (t < (stepTime - td))#Suporte simples
+    mask3 = t >= (stepTime - td)#voltou para suporte duplo e corrige a footPos
 
     t1 = t[mask1]
     t2 = t[mask2]
     t3 = t[mask3]
 
     #? Seleciona posição final (vetor coluna) do torso e pé de balanço
+    "usar a posição dos motores do quadril para calcular o centro de massa?"
+    "usando swing para referencia da posição do torso"
     newSwingFootPos, newTorsoPos, currentStep = genSwingFootAndTorsoNextPositions(stepX, swingFootInitPos, supFootInitPos)
 
     #print(f'newSwingFootPos:\n{newSwingFootPos}')
@@ -166,6 +178,8 @@ def callWalk(robot, supFoot, queueTime):
 
     return walk_poses
 
+"Função de testes de parametros"
+
 def genSwingFootAndTorsoNextPositions(stepX, initSwingPos, initSuppPos):
     
     if abs(initSwingPos[0][0]-initSuppPos[0][0]) < stepX/4:
@@ -174,7 +188,6 @@ def genSwingFootAndTorsoNextPositions(stepX, initSwingPos, initSuppPos):
         addInX = stepX
 
     newSwingFootPos = initSwingPos + np.array([[addInX, 0,0]]).T
-
     newTorsoPos = np.array([[(newSwingFootPos[0][0]+initSuppPos[0][0])/2, 0,0]]).T
 
     return newSwingFootPos, newTorsoPos, addInX
@@ -182,7 +195,7 @@ def genSwingFootAndTorsoNextPositions(stepX, initSwingPos, initSuppPos):
 def genZMPTrajectory(stepTime, td, t1, t2, t3, supFootInitPos, torsoFinal, supFoot):    
 
     xSupFoot = supFootInitPos[0][0]
-    ySupFoot = supFootInitPos[1][0]-supFoot*Y_ZMP_CORRECTION
+    ySupFoot = supFootInitPos[1][0]-supFoot*Y_ZMP_CORRECTION#Gambiarra talvez a correção forçado em X ou em X E Y.
 
     xTorso = torsoFinal[0][0]
     yTorso = torsoFinal[1][0]
@@ -193,6 +206,8 @@ def genZMPTrajectory(stepTime, td, t1, t2, t3, supFootInitPos, torsoFinal, supFo
     m1y = ySupFoot/td
     m2y = (yTorso-ySupFoot)/td
     
+
+    "Revisar mais tarde talvez adicionar referência/feedback do torso!!"
     Xzmp = np.concatenate((m1x*t1, np.full(len(t2), xSupFoot), xSupFoot + m2x*(t3-stepTime+td)))
     Yzmp = np.concatenate((m1y*t1, np.full(len(t2), ySupFoot), ySupFoot + m2y*(t3-stepTime+td)))
 
@@ -200,12 +215,15 @@ def genZMPTrajectory(stepTime, td, t1, t2, t3, supFootInitPos, torsoFinal, supFo
 
 def genSwingFootZTrajectory(stepTime, td, t1, t2, t3):
 
+    #formula 341
+    # outras formulas da gen Z não aparecem 339 e 340
     zSwing = np.concatenate((np.zeros(len(t1)),zSwingHeight*np.sin(np.pi*(t2-td)/(stepTime-2*td)),np.zeros(len(t3))))
 
     return zSwing
 
 def genCOMTrajectory(stepTime, td, mask1, mask2, mask3, t1, t2, t3, xZMP, yZMP, m1x, m2x, m1y, m2y):
     #? Constantes da resolução da EDO
+    #PAG 61 DO MESTRADO
     lambda_ = np.sqrt(g/zCOM) 
 
     lambStep = lambda_*stepTime

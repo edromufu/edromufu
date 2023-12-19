@@ -49,7 +49,7 @@ def callRotate(robot, direction, phase, queueTime):
     t2 = t[mask2]
     t3 = t[mask3]
 
-    swingFootRelativePositions, comPositions = genSwingFotAndCOMPositions(supFootInitPos, t1, t2, t3)
+    swingFootRelativePositions, comPositions = genSwingFootAndCOMPositions(supFootInitPos, t1, t2, t3)
 
     leftFootPostures, rightFootPostures = genLeftAndRightFootPostures(leftFootPosture, rightFootPosture, direction*phase, t1, t2, t3, direction)
 
@@ -101,8 +101,9 @@ def feetPosesCalculator(com, swing, dirphase):
 
     return leftFootPositions, rightFootPositions
     
-def genSwingFotAndCOMPositions(supFootInitPos, t1, t2, t3):
-
+def genSwingFootAndCOMPositions(supFootInitPos, t1, t2, t3):
+    "OLHAR DE CABO A RABO"
+    "COORDENADAS DO TORSO?"
     xSup = supFootInitPos[0][0]
     ySup = supFootInitPos[1][0]
 
