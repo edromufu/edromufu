@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 # coding=utf-8
 
+from ultralytics import YOLO
 import os
 import cv2
 import numpy as np
 import time
 
+'''Retirou função Draw_results e paramatros em set_model_input, embutidos na detecção
+Alguns comentários em vermelho são lembretes para modificar o código depois'''
 
 outline_color_list = [(255, 0, 0), (0, 0, 255), (0, 0, 255)]
 
@@ -14,6 +17,8 @@ def get_cnn_files():
 
     #forçando o path dos arquivos
     robocup_folder = os.path.join(os.path.expanduser('~'), "edromufu/src/vision/robocup_cnn_files")
+
+    '''Modificar os nomes dos arquivos de treinamento'''
 
     config_file = os.path.join(robocup_folder, "yolov4-tiny-obj.cfg")
     weights_file = os.path.join(robocup_folder, "yolov4-tiny-obj_best.weights")
@@ -28,16 +33,25 @@ def read_cnn_architecture(config_file, weights_file):
 
 def set_model_input(net):
 
-
-    model = cv2.dnn.DetectionModel(net)
-    model.setInputParams(size=(640,480), scale=1/255, swapRB=True)
+    #Recebe o modelo no YOLO 
+    model = YOLO(net)
     
     return model
 
-def detect_model(model, current_frame):
+def detect_model(model, current_frame, output_img ):
     
     start_time = time.time()
-    classes, scores, boxes = model.detect(current_frame, 0.85, 0.4)
+    '''Conferir se o tamanho da imagem (imgsz) está certo e qual device atribuir'''
+    results = model.predict(source=current_frame,conf=0.85,imgsz=(480,640),max_det=1,show=output_img,device=)
+    '''Corrigir as atribuições dessas variáveis abaixo'''
+    classes, scores, boxes = results[0].boxes.xywh
+    '''Organizar a descrição dos argumentos'''
+    #conf = limiar de confiança mínima
+    #imgsz = Tamanho da imagem (h, w) 
+    #max_det = número máximo de detecções por imagem
+    #show = mostra imagens marcadas na detecção
+    #device = Escolhe qual dispositivo rodar a detecção (cpu, gpu, cuda)
+
     finish_time = time.time()
     fps = 1/(finish_time-start_time)
     
@@ -48,24 +62,3 @@ def detect_model(model, current_frame):
 
     return classes, scores, boxes, int(fps)
 
-def draw_results(frame, classes, scores, boxes):
-
-    # Draw the bounding boxes
-
-    for i in range(len(boxes)):
-        [x_top, y_top, roi_width, roi_height] = boxes[i]
-        p1 = (x_top, y_top)
-        p2 = (x_top + roi_width, y_top + roi_height)
-        p3 = (x_top, y_top - 5)
-
-        x_center = round(x_top+(roi_width/2))
-        y_center = round(y_top+(roi_height/2))
-        radius = round((roi_width+roi_height)/4)
-        
-        cv2.rectangle(frame, p1, p2, outline_color_list[classes[i]], 2)
-        #cv2.circle (frame,(int(x_center),int(y_center)),radius, outline_color_list[classes[i]],2 )
-        confidence = str(round(float(scores[i]), 2))
-        
-        label = "Ball"
-
-        cv2.putText(frame, label+" " + confidence, p3, cv2.FONT_HERSHEY_PLAIN, 1, (255,255,255), 1)

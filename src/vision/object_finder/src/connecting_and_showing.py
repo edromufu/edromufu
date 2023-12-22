@@ -26,6 +26,9 @@ pr = cProfile.Profile()
 pr.enable()
 '''
 
+
+'''Retirou show_result_frame()'''
+
 class Node():
         #Init
     def __init__(self,nome_no):
@@ -42,9 +45,13 @@ class Node():
         
         #Iniciando o nó e obtendo os arquivos que definem a rede neural
         rospy.init_node(nome_no, anonymous = True)
+    
+        '''Modificar configurações relacionadas aos arquivos do YOLOv8'''
         self.net = ri.get_cnn_files()
         self.net.setPreferableBackend(cv2.dnn.DNN_BACKEND_CUDA)
         self.net.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA)   
+        
+        
         self.model = ri.set_model_input(self.net)
         self.searching = True
         self.cap = cv2.VideoCapture(self.camera,cv2.CAP_ANY)
@@ -59,8 +66,6 @@ class Node():
         #self.connect_to_webots()
         
         
-
-
     def get_webcam(self):
 
         
@@ -77,12 +82,10 @@ class Node():
                 print("\nError capturing frame\n")
                 self.get_webcam()
 
-                    
+            '''Conferir o resize e o cv2.VideoCapture que está sendo executado duas vezes'''      
             self.current_frame = cv2.resize(self.current_frame, (self.parameters.cameraWidth,self.parameters.cameraHeight))
-            self.classes, self.scores, self.boxes, self.fps = ri.detect_model(self.model,self.current_frame)
-                
-            if self.output_img == True:
-                self.show_result_frame()
+            self.classes, self.scores, self.boxes, self.fps = ri.detect_model(self.model,self.current_frame,self.output_img)
+            
 
             if self.ajuste == True:
                 self.ajuste_camera()
@@ -93,12 +96,6 @@ class Node():
             if cv2.waitKey(1) == ord("q") :
                 self.cap.release()
                 cv2.destroyAllWindows()
-
-
-    def show_result_frame(self):
-        '''Shows the result frame obtained from neural network on OpenCV window.'''
-        ri.draw_results(self.current_frame, self.classes, self.scores, self.boxes)
-        cv2.imshow("Current Frame", self.current_frame)
 
 
         
