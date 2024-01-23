@@ -14,8 +14,6 @@ doubleSupProportion = 0.2 # Proporção do tempo de um passo em suporte duplo (a
 stepX = 0.055 #Tamanho de um passo em x (m)
 g = 9.81 #Gravidade (m/s²)
 zCOM = 0.253 #Altura do centro de massa (m)
-Y_ZMP_CORRECTION = -0.04 #Correção forçada da posição em Y do ZMP (m)
-PAUSE_AFTER_STEP = 0.2 #Pausa após um passo (s)
 
 def callIK(robot, newFootAbsPosition, newFootAbsPosture, currentFoot):
     robotIK = copy.deepcopy(robot)
@@ -30,18 +28,20 @@ def feetPosesCalculator(xCOM, yCOM, zSwing, dxSwing, t1, t2, t3,supportFoot):
 
     xyzCOM = np.c_[xCOM/2, yCOM, np.zeros(len(xCOM))]
 
-    xSwing = np.concatenate((np.zeros(len(t1)),np.linspace(0,dxSwing/2,len(t2)),(dxSwing/2)*np.ones(len(t3))))
-    ySwing = np.zeros(len(t1)+len(t2)+len(t3))
+    xSwing = np.concatenate((np.zeros(len(t1)),
+                             np.linspace(0,dxSwing/2,len(t2)),
+                             (dxSwing/2)*np.ones(len(t3))))
+    ySwing = np.zeros(len(t1)+len(t2)+len(t3))  #Pra que serve o ySwing
 
     xyzSwing = np.c_[xSwing, -yCOM-ySwing, zSwing]
 
     if supportFoot == -1:
-        leftFootPoses = -xyzCOM
+        leftFootPoses = -xyzCOM     #Provavelmente seria o vetor ZMP e não o COM
     else:
         leftFootPoses = xyzSwing
     
     if supportFoot == 1:
-        rightFootPoses = -xyzCOM
+        rightFootPoses = -xyzCOM    #Provavelmente seria o vetor ZMP e não o COM
     else:
         rightFootPoses = xyzSwing
 
@@ -107,11 +107,12 @@ def callWalk(robot, supFoot, queueTime):
     #print(f'rightFootPoses:\n{rightFootPoses}')
 
     #? Somando à posição inicial dos pés para transformar em absoluto
-    walk_poses = np.zeros((len(leftFootPoses)+int(np.ceil(PAUSE_AFTER_STEP/queueTime)),len(robot)))
+    walk_poses = np.zeros((len(leftFootPoses),len(robot)))  
 
-    for i in range(len(t1)+len(t2)):
+    for i in range(len(leftFootPoses)): 
 
-        newLeftFootPos = leftFootPos+np.array([leftFootPoses[i]]).T
+        #Conferir se é necessário as multiplicações por T ou o valor já está definido em comprimento (e não velocidade)
+        newLeftFootPos = leftFootPos+np.array([leftFootPoses[i]]).T     
         newRightFootPos = rightFootPos+np.array([rightFootPoses[i]]).T
 
         try:
@@ -121,7 +122,7 @@ def callWalk(robot, supFoot, queueTime):
             lastLAngles = left_joint_angles
         except Exception as e:
             print(e)
-            left_joint_angles = lastLAngles
+            left_joint_angles = lastLAngles     #LastLAngles é declarado mesmo dentro do try?
 
         try:
             currentFoot = -1
@@ -130,59 +131,36 @@ def callWalk(robot, supFoot, queueTime):
             lastRAngles = right_joint_angles
         except Exception as e:
             print(e)
-            right_joint_angles = lastRAngles
+            right_joint_angles = lastRAngles    #LastRAngles é declarado mesmo dentro do try?
 
         walk_poses[i][1:7] = right_joint_angles
         walk_poses[i][7:13] = left_joint_angles
 
-    for i in range(len(t1)+len(t2),len(t1)+len(t2)+int(np.ceil(PAUSE_AFTER_STEP/queueTime))):
-        walk_poses[i][1:7] = right_joint_angles
-        walk_poses[i][7:13] = left_joint_angles
+        
     
-    for i in range(len(t1)+len(t2),len(t1)+len(t2)+len(t3)):
-        newLeftFootPos = leftFootPos+np.array([leftFootPoses[i]]).T
-        newRightFootPos = rightFootPos+np.array([rightFootPoses[i]]).T
+    return walk_poses  
 
-        try:
-            currentFoot = -2
-            left_joint_angles = callIK(robot, newLeftFootPos, leftFootPosture, currentFoot)
-            left_joint_angles = left_joint_angles[7:13]
-            lastLAngles = left_joint_angles
-        except Exception as e:
-            print(e)
-            left_joint_angles = lastLAngles
-
-        try:
-            currentFoot = -1
-            right_joint_angles = callIK(robot, newRightFootPos, rightFootPosture, currentFoot)
-            right_joint_angles = right_joint_angles[1:7]
-            lastRAngles = right_joint_angles
-        except Exception as e:
-            print(e)
-            right_joint_angles = lastRAngles
-
-        walk_poses[i+int(np.ceil(PAUSE_AFTER_STEP/queueTime))][1:7] = right_joint_angles
-        walk_poses[i+int(np.ceil(PAUSE_AFTER_STEP/queueTime))][7:13] = left_joint_angles
-
-    return walk_poses
-
-def genSwingFootAndTorsoNextPositions(stepX, initSwingPos, initSuppPos):
+def genSwingFootAndTorsoNextPositions(stepX, initSwingPos, initSuppPos): #O mestrado define que precisa de dois passos para andar um "passo", o que aparentemente não é definido aqui
     
-    if abs(initSwingPos[0][0]-initSuppPos[0][0]) < stepX/4:
+    if abs(initSwingPos[0][0]-initSuppPos[0][0]) < stepX/4:     #Esta lógica pode não ser necessária
         addInX = stepX/2
     else:
         addInX = stepX
 
-    newSwingFootPos = initSwingPos + np.array([[addInX, 0,0]]).T
+    #newSwingFootPos não está sendo utilizado após o retorno da função, está sendo calculado novamente
+    newSwingFootPos = initSwingPos + np.array([[addInX, 0,0]]).T        #O x (deslocamento) está multiplicando o tempo, deveria ser velocidade (StepX/T? ou sem multiplicar por T)
 
     newTorsoPos = np.array([[(newSwingFootPos[0][0]+initSuppPos[0][0])/2, 0,0]]).T
+    #Por que somou newSwingFootPos ao initSuppPos e atribuiu ao Torso
+    #O Torso deveria ser: [Pos do Torso atual]+[passo,0,0] sendo que [Pos do Torso atual]=[0,0,0] e passo é o deslocamento do swing dividido por 2
+    #Seguindo o mestrado o Torso fica no mesmo x dos pés a cada dois passos
 
     return newSwingFootPos, newTorsoPos, addInX
 
 def genZMPTrajectory(stepTime, td, t1, t2, t3, supFootInitPos, torsoFinal, supFoot):    
 
     xSupFoot = supFootInitPos[0][0]
-    ySupFoot = supFootInitPos[1][0]-supFoot*Y_ZMP_CORRECTION
+    ySupFoot = supFootInitPos[1][0]-supFoot
 
     xTorso = torsoFinal[0][0]
     yTorso = torsoFinal[1][0]
@@ -193,14 +171,30 @@ def genZMPTrajectory(stepTime, td, t1, t2, t3, supFootInitPos, torsoFinal, supFo
     m1y = ySupFoot/td
     m2y = (yTorso-ySupFoot)/td
     
-    Xzmp = np.concatenate((m1x*t1, np.full(len(t2), xSupFoot), xSupFoot + m2x*(t3-stepTime+td)))
-    Yzmp = np.concatenate((m1y*t1, np.full(len(t2), ySupFoot), ySupFoot + m2y*(t3-stepTime+td)))
+    Xzmp = np.concatenate((m1x*t1, 
+                           np.full(len(t2), xSupFoot), 
+                           xSupFoot + m2x*(t3-stepTime+td)))
+    
+    Yzmp = np.concatenate((m1y*t1, 
+                           np.full(len(t2), ySupFoot), 
+                           ySupFoot + m2y*(t3-stepTime+td)))
 
     return Xzmp, Yzmp, m1x, m2x, m1y, m2y
 
 def genSwingFootZTrajectory(stepTime, td, t1, t2, t3):
 
-    zSwing = np.concatenate((np.zeros(len(t1)),zSwingHeight*np.sin(np.pi*(t2-td)/(stepTime-2*td)),np.zeros(len(t3))))
+    #Cálculo de z está errado
+    zSwing = np.concatenate((np.zeros(len(t1)),
+                             zSwingHeight*np.sin(np.pi*(t2-td)/(stepTime-2*td)),
+                             np.zeros(len(t3))))
+    
+    #phi é o tempo normalizado (t/T), talvez possa ser utilizado o tempo normal
+    #v(phi)=0 se t1, 0.5 (1-cos(2pi*(phi-phi_b)/(phi_e-phi_b))),0 se t1
+    #za(phi)=zcom-zstep*v(phi)  #zcom é 0 e za é no sentido contrario
+
+    #Cálculo de velocidade que pode ou não ser necessário
+    #v'=0.5*sen(2pi*(phi-phi_b)/(phi_e-phi_b))
+    #za'(phi)=-zstep*v'(phi)
 
     return zSwing
 
