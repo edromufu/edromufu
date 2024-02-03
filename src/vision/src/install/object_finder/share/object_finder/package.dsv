@@ -1,9 +1,0 @@
-source;share/object_finder/hook/pythonpath.ps1
-source;share/object_finder/hook/pythonpath.dsv
-source;share/object_finder/hook/pythonpath.sh
-source;share/object_finder/hook/ament_prefix_path.ps1
-source;share/object_finder/hook/ament_prefix_path.dsv
-source;share/object_finder/hook/ament_prefix_path.sh
-source;../../build/object_finder/share/object_finder/hook/pythonpath_develop.ps1
-source;../../build/object_finder/share/object_finder/hook/pythonpath_develop.dsv
-source;../../build/object_finder/share/object_finder/hook/pythonpath_develop.sh
