@@ -37,9 +37,10 @@ src/vision/object_finder/EDROM_Vision.egg-info
 src/vision/object_finder/dist
 src/tools/gui_program/moc_opencvworker.cpp
 src/tools/gui_program/moc_parameters.cpp
-build/
-devel/
 src/src/
+build/
+install/
+
 
 #Imagens
 training_images/
