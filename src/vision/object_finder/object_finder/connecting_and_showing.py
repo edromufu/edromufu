@@ -12,7 +12,6 @@ import object_finder.running_inference as ri    #Importa o arquivo python do dir
 
 
 edrom_dir = '/home/'+os.getlogin()+'/edromufu/src/'
-
 sys.path.append(edrom_dir+'behaviour/transitions_and_states/src')
 #from behaviour_parameters import BehaviourParameters
 

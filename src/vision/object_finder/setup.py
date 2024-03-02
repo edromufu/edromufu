@@ -23,7 +23,6 @@ setup(
         'Intended Audience :: Developers',
         'Programming Language :: Python :: 3.10',
     ],
-    tests_require=['pytest'],
     entry_points={
         'console_scripts': [
             'vision = object_finder.connecting_and_showing:main',
