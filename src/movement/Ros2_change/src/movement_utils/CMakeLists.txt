@@ -27,15 +27,15 @@ if(BUILD_TESTING)
 endif()
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/Body_motors_data.msg"
-  "msg/Head_motors_data.msg"
-  "srv/Body_feedback.srv"
-  "srv/Enable_torque.srv"
+  "msg/BodyMotorsData.msg"
+  "msg/HeadMotorsData.msg"
+  "srv/BodyFeedback.srv"
+  "srv/EnableTorque.srv"
   "srv/Gait.srv"
-  "srv/Head_feedback.srv"
+  "srv/HeadFeedback.srv"
   "srv/Page.srv"
   "srv/Rotate.srv"
-  "srv/Walk_forward.srv"
+  "srv/WalkForward.srv"
   DEPENDENCIES std_msgs
 )
 
