@@ -13,11 +13,11 @@ outline_color_list = [(255, 0, 0), (0, 0, 255), (0, 0, 255)]
 def set_model_input():
         
     '''Gets the CNN filenames, despite the PC file structure.'''
-
+    
     #Forçando o path dos arquivos e passando o nome do modelo pré-treinado para uma variável
     robocup_folder = os.path.join(os.path.expanduser('~'), "edromufu/src/vision/robocup_cnn_files")
-    net = os.path.join(robocup_folder, "yolov8-larc23.pt")
-
+    net = os.path.join(robocup_folder, "yolov8n-vision.pt")
+    
     #Recebe o modelo no YOLO 
     model = YOLO(net)
     
@@ -41,7 +41,7 @@ def detect_model(model, current_frame, output_img ):
     classes = results[0].boxes.cls.tolist()
     scores = results[0].boxes.conf.tolist() 
     boxes = results[0].boxes.xywh.tolist()  
-    print(results[0].boxes)
+    #print(results[0].names)
 
     finish_time = time.time()
     fps_inf = 1/(finish_time-start_time)

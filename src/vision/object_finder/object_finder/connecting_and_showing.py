@@ -83,7 +83,7 @@ class Visao(Node):
         while rclpy.ok():
             start_time=time.time()
             
-            #Le um frame da camera e redimensiona a imagem
+            #Lê um frame da camera e redimensiona a imagem
             ret, self.current_frame = self.cap.read()
             #self.current_frame = cv2.resize(self.current_frame, (640,480))
             #self.current_frame = cv2.blur(self.current_frame, (10,10))
