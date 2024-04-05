@@ -1,22 +1,25 @@
 #include <Arduino.h>
 #include <esp_now.h>
 #include <WiFi.h>
-const int potpin = 4;
-
+const int potpin[] = {13,32};
+const int numPorts = 2;
 esp_now_peer_info_t peerInfo;
 
 typedef struct struct_message {
-  uint16_t potValue;
+  int potValue[2];
 } struct_message;
-0x08, 0xD1, 0xF9, 0x27, 0xF9, 0x14
 struct_message myData;
 
 void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status);
 
 void setup() {
   Serial.begin(115200);
+  analogSetPinAttenuation(13, ADC_0db);
+  analogSetPinAttenuation(32, ADC_0db);
 
-  pinMode(potpin, INPUT);
+  for(int i = 0; i < numPorts; i++){
+      pinMode(potpin[i], INPUT);
+    }
 
   uint8_t broadcastAddress[] = {0x08, 0xD1, 0xF9, 0x27, 0xB6, 0x28}; // Replace with receiver's MAC address
   memcpy(peerInfo.peer_addr, broadcastAddress, 6);
@@ -25,28 +28,29 @@ void setup() {
 }
 
 void loop() {
-  int potValue = analogRead(potpin);
-  myData.potValue = potValue;
-  int teste = 5;  // Definindo o valor de teste
-
+  int potValue;
   Serial.print("Potentiometer Value: ");
-  Serial.println(potValue); // Imprimindo o valor do potenciômetro
-  Serial.print("Teste Value: ");
-  Serial.println(teste);  // Imprimindo o valor de teste
-  
+  for(int i = 0; i < numPorts; i++){
+    potValue = analogRead(potpin[i]);
+    myData.potValue[i] = potValue;
+    Serial.print(String(potValue)+" ");
+    
+  }
+  Serial.println("ESP POT");
+ 
 
-  delay(500);
   WiFi.mode(WIFI_STA);
   if (esp_now_init() != ESP_OK) {
     Serial.println("Error initializing ESP-NOW");
+    abort();
     return;
   }
-  esp_now_register_send_cb(OnDataSent);
-
   if (esp_now_add_peer(&peerInfo) != ESP_OK) {
     Serial.println("Failed to add peer");
+    abort();
     return;
   }
+  //esp_now_register_send_cb(OnDataSent);//Ve se os dados foram enviados
 
   esp_err_t result = esp_now_send(peerInfo.peer_addr, (uint8_t *)&myData, sizeof(myData));
 
@@ -61,3 +65,4 @@ void loop() {
 void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status) {
   Serial.println(status == ESP_NOW_SEND_SUCCESS ? "Delivery Success" : "Delivery Fail");
 }
+
