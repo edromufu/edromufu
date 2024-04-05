@@ -3,11 +3,11 @@
 #include <WiFi.h>
 
 esp_now_peer_info_t peerInfo;
-int potPrint[2];
-int numPorts=2;
+int potPrint = 1;
 typedef struct struct_message {
-  int potValue[2];
+  uint16_t potValue;
 } struct_message;
+
 struct_message myData;
 
 void OnDataRecv(const uint8_t *mac, const uint8_t *incomingData, int len);
@@ -32,13 +32,9 @@ void setup() {
 }
 
 void loop() {
-  Serial.print("Potentiometer Value: ");
-  for (int i = 0; i < numPorts; i++){
-    potPrint[i] = myData.potValue[i];
-    Serial.print(String(potPrint[i]) + " ");
-    }
-  Serial.println("Receiver");
-  
+  potPrint = myData.potValue;
+  Serial.println("Potentiometer Value: " + String(potPrint));
+  delay(500);
 }
 
 void OnDataRecv(const uint8_t *mac, const uint8_t *incomingData, int len) {
