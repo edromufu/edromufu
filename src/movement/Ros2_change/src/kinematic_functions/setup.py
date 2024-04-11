@@ -15,7 +15,7 @@ setup(
     zip_safe=True,
     maintainer='kirlin',
     maintainer_email='kirlin@todo.todo',
-    description='TODO',
+    description='The kinematic_functions package',
     license='TODO',
     entry_points={
         'console_scripts': [

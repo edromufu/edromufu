@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'humanoid_definition'
+package_name = 'movement_pages'
 
 setup(
     name=package_name,
@@ -13,10 +13,11 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='kirlin@todo.todo',
-    maintainer_email='kirlin',
-    description='The humanoid_definition package',
-    license='TODO',
+    maintainer='kirlin',
+    maintainer_email='kirlin@todo.todo',
+    description='The movement_pages package',
+    license='TODO: License declaration',
+    tests_require=['pytest'],
     entry_points={
         'console_scripts': [
         ],
