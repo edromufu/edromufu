@@ -43,7 +43,7 @@ void setup() {
     return;
   }
 }
-
+uint16_t j = 0;
 void loop() {
   for(int canal = 0; canal < 8; canal++){
     selecionarCanal(canal);
@@ -52,10 +52,11 @@ void loop() {
     Serial.print(canal);
     Serial.print(":");
     Serial.print(valor);
-    myData.potValue[canal] = valor;
+    
+    myData.potValue[canal] = j%4095;
   }
-
-  Serial.println(" ");
+  j++;
+  Serial.println(j);
 
   esp_err_t result = esp_now_send(peerInfo.peer_addr, (uint8_t *)&myData, sizeof(myData));
 
