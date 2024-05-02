@@ -1,1 +1,0 @@
-float32[18] pos_vector

@@ -1,6 +1,7 @@
 Conferir nomes de msgs e srvs nos codigos
 Testar launch e urdf do movement visualization
 Launch do movement utils
-Core
+Core:
+	Verificar parametros, e testar codigo
 u2d2comm
 Testar movement_pages (page interface)
