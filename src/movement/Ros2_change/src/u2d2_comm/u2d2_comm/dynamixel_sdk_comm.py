@@ -167,7 +167,7 @@ class u2d2Control():
 
             enableTorqueRes.success = True 
         
-        return self.enableTorqueRes
+        return enableTorqueRes
 
     def feedbackBodyMotors(self, req, bodyFeedbackRes): #adição do novo argumento 'bodyFeedbackRes' (11)
 
@@ -276,7 +276,7 @@ class u2d2Control():
 
     def run(self):
         #rospy.spin() (9)
-        rlcpy.spin(u2d2.node) #(9)
+        rclpy.spin(u2d2.node) #(9)
 
 if __name__ == '__main__':
 
