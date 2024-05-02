@@ -15,8 +15,8 @@ setup(
     zip_safe=True,
     maintainer='matheus',
     maintainer_email='matheusbenigno090@gmail.com',
-    description='TODO: Package description',
-    license='Apache-2.0',
+    description='The u2d2_comm package',
+    license='TODO',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
