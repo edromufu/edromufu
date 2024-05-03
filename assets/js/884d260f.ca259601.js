@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkedrom=self.webpackChunkedrom||[]).push([[1706],{5121:e=>{e.exports=JSON.parse('{"label":"hola","permalink":"/edromufu/blog/tags/hola","allTagsPath":"/edromufu/blog/tags","count":1}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkedrom=self.webpackChunkedrom||[]).push([[9929],{5945:e=>{e.exports=JSON.parse('{"permalink":"/edromufu/blog/tags/hello","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
