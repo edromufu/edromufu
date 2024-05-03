@@ -1,7 +1,8 @@
 {
-    "label": "Outras Áreas - coming soon",
+    "label": "Behaviour",
     "position": 5,
     "link": {
-        "type": "generated-index"
+        "type": "generated-index",
+        "description": "Área do behaviour da EDROM"
     }
 }
