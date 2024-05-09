@@ -26,7 +26,7 @@ def set_model_input():
 
     
 
-def detect_model(model, current_frame, output_img ):
+def detect_model(model, current_frame):
     
     start_time = time.time()
     #Testar imgsz=(640,448), ver se não prejudica a detecção comparado a (640,480)
@@ -35,7 +35,7 @@ def detect_model(model, current_frame, output_img ):
                             conf=0.25,   #conf = limiar de confiança mínima
                             imgsz=(640,448), #imgsz = Tamanho da imagem (h, w) 
                             max_det=10, #max_det = número máximo de detecções por imagem
-                            device=0, #device = Escolhe qual dispositivo rodar a detecção (cpu, gpu, cuda)
+                            device='cpu', #device = Escolhe qual dispositivo rodar a detecção (cpu, gpu, cuda)
                             verbose=False) #verbose = Não imprime a saída da função na tela
     
     classes = results[0].boxes.cls.tolist()

@@ -1,4 +1,6 @@
 from setuptools import find_packages, setup
+import os
+from glob import glob
 
 package_name = 'object_finder'
 __version__ = '0.0.1'
@@ -12,6 +14,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        (os.path.join('share', package_name, 'launch'), glob(os.path.join('launch', '*launch.[pxy][yma]*'))),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -25,7 +28,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'vision = object_finder.connecting_and_showing:main',
+            'finder = object_finder.connecting_and_showing:main',
         ],
     },
     author='EDROM',

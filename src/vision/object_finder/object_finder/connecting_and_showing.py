@@ -46,6 +46,7 @@ class Visao(Node):
         self.output_img = self.declare_parameter('vision/img_output',False).get_parameter_value().bool_value
         self.ajuste = self.declare_parameter('vision/ajuste',False).get_parameter_value().bool_value
         self.bright = self.declare_parameter('vision/brilho',4).get_parameter_value().integer_value
+        self.feedback = self.declare_parameter('vision/feedback',False).get_parameter_value().bool_value
         
         #Retorna os valores para verificação
         print(f"\nCamera:{self.camera}\nOutput:{self.output_img}\nAjuste:{self.ajuste}\nBrilho:{self.bright}\n")
@@ -94,7 +95,7 @@ class Visao(Node):
                 print("\nError capturing frame\n")
                 self.get_webcam()
             
-            self.classes, self.scores, self.boxes,self.inference_frame = ri.detect_model(self.model,self.current_frame,self.output_img)
+            self.classes, self.scores, self.boxes,self.inference_frame = ri.detect_model(self.model,self.current_frame)
             #Para testar a eficiencia da inferencia utiliza-se a linha abaixo e compara a execução a inferencia
             #self.classes, self.scores, self.boxes, self.fps,self.inference_frame = 1,1,1,1,self.current_frame
             
