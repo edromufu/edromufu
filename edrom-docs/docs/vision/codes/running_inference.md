@@ -47,7 +47,7 @@ def get_cnn_files():
     return read_cnn_architecture(config_file, weights_file)
 ```
 
-Esta função recupera os nomes dos arquivos de uma rede neural convolucional (CNN) especificando as rotas dos arquivos de configuração e pesos. A função usa a biblioteca os para juntar o caminho do diretório home do usuário com a pasta "visão/robocup_cnn_files" específica onde os arquivos estão localizados. Os arquivos específicos dentro desta pasta são "yolov4-tiny-obj.cfg" e "yolov4-tiny-obj_best.weights". A função então retorna a saída da função *read_cnn_architecture()*, passando os arquivos config_file e weights_file como argumentos.
+LUCAS ESTEVE AQ. Esta função recupera os nomes dos arquivos de uma rede neural convolucional (CNN) especificando as rotas dos arquivos de configuração e pesos. A função usa a biblioteca os para juntar o caminho do diretório home do usuário com a pasta "visão/robocup_cnn_files" específica onde os arquivos estão localizados. Os arquivos específicos dentro desta pasta são "yolov4-tiny-obj.cfg" e "yolov4-tiny-obj_best.weights". A função então retorna a saída da função *read_cnn_architecture()*, passando os arquivos config_file e weights_file como argumentos.
 
 
 ##	read_cnn_architecture()
