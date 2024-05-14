@@ -6,7 +6,7 @@ slug: /train_visao
 sidebar_position: 7
 ---
 
-O arquivo a ser alterado para realizar o treinamento personalizado é o [yolov4-tiny-obj.cfg](https://github.com/edromufu/edromufu/blob/master/src/vision/robocup_cnn_files/yolov4-tiny-obj.cfg)
+O arquivo a ser alterado para realizar o treinamento personalizado é o [TrainYolov8CustomDataset.ipynb](https://colab.research.google.com/drive/1Lv6hiIDyZOJj6Hee8C2NmSgl4f0gProb#scrollTo=oyZJX6PVfE7J)
 
 Antes de iniciar o treinamento, é importante garantir que os nomes das pastas estejam configurados corretamente no arquivo TrainYolov8 do Google Colab. Caso os nomes das pastas tenham sido alterados, os seguintes trechos devem ser ajustados:
 
