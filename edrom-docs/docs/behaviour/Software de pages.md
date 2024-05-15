@@ -1,6 +1,6 @@
 ---
-id: game_controller_build
-title: Instalação do Game Controller
+id: Software_de_pagesr_build
+title: Software de Pages
 description: Tutorial para a instalação do Game Controller
 slug: /game_controller_build
 sidebar_position: 1
