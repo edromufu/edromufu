@@ -1,0 +1,22 @@
+[2.727s] Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/src/movement_pages': PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/build/movement_pages/prefix_override:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/movement_pages build --build-base /home/paulo/edromufu/src/movement/Ros2_change/build/movement_pages/build install --record /home/paulo/edromufu/src/movement/Ros2_change/build/movement_pages/install.log --single-version-externally-managed
+[3.207s] running egg_info
+[3.209s] writing ../../build/movement_pages/movement_pages.egg-info/PKG-INFO
+[3.209s] writing dependency_links to ../../build/movement_pages/movement_pages.egg-info/dependency_links.txt
+[3.209s] writing entry points to ../../build/movement_pages/movement_pages.egg-info/entry_points.txt
+[3.210s] writing requirements to ../../build/movement_pages/movement_pages.egg-info/requires.txt
+[3.210s] writing top-level names to ../../build/movement_pages/movement_pages.egg-info/top_level.txt
+[3.214s] reading manifest file '../../build/movement_pages/movement_pages.egg-info/SOURCES.txt'
+[3.216s] writing manifest file '../../build/movement_pages/movement_pages.egg-info/SOURCES.txt'
+[3.217s] running build
+[3.217s] running build_py
+[3.217s] running install
+[3.218s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[3.218s]   warnings.warn(
+[3.218s] running install_lib
+[3.221s] running install_data
+[3.222s] running install_egg_info
+[3.226s] removing '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages/movement_pages-0.0.0-py3.10.egg-info' (and everything under it)
+[3.226s] Copying ../../build/movement_pages/movement_pages.egg-info to /home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages/movement_pages-0.0.0-py3.10.egg-info
+[3.228s] running install_scripts
+[3.284s] writing list of installed files to '/home/paulo/edromufu/src/movement/Ros2_change/build/movement_pages/install.log'
+[3.340s] Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/src/movement_pages' returned '0': PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/build/movement_pages/prefix_override:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/movement_pages build --build-base /home/paulo/edromufu/src/movement/Ros2_change/build/movement_pages/build install --record /home/paulo/edromufu/src/movement/Ros2_change/build/movement_pages/install.log --single-version-externally-managed

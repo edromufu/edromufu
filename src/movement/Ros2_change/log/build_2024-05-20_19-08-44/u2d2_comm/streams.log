@@ -1,0 +1,42 @@
+[1.281s] Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/src/u2d2_comm': AMENT_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/prefix_override:/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/u2d2_comm build --build-base /home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/build install --record /home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/install.log --single-version-externally-managed
+[1.585s] running egg_info
+[1.586s] creating ../../build/u2d2_comm/u2d2_comm.egg-info
+[1.586s] writing ../../build/u2d2_comm/u2d2_comm.egg-info/PKG-INFO
+[1.586s] writing dependency_links to ../../build/u2d2_comm/u2d2_comm.egg-info/dependency_links.txt
+[1.586s] writing entry points to ../../build/u2d2_comm/u2d2_comm.egg-info/entry_points.txt
+[1.587s] writing requirements to ../../build/u2d2_comm/u2d2_comm.egg-info/requires.txt
+[1.587s] writing top-level names to ../../build/u2d2_comm/u2d2_comm.egg-info/top_level.txt
+[1.587s] writing manifest file '../../build/u2d2_comm/u2d2_comm.egg-info/SOURCES.txt'
+[1.588s] reading manifest file '../../build/u2d2_comm/u2d2_comm.egg-info/SOURCES.txt'
+[1.589s] adding license file 'LICENSE'
+[1.589s] writing manifest file '../../build/u2d2_comm/u2d2_comm.egg-info/SOURCES.txt'
+[1.589s] running build
+[1.590s] running build_py
+[1.590s] creating /home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/build
+[1.590s] creating /home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/build/lib
+[1.590s] creating /home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/build/lib/u2d2_comm
+[1.590s] copying u2d2_comm/__init__.py -> /home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/build/lib/u2d2_comm
+[1.590s] copying u2d2_comm/dynamixel_sdk_test.py -> /home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/build/lib/u2d2_comm
+[1.590s] copying u2d2_comm/dynamixel_sdk_comm.py -> /home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/build/lib/u2d2_comm
+[1.590s] running install
+[1.590s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[1.590s]   warnings.warn(
+[1.591s] running install_lib
+[1.592s] creating /home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages/u2d2_comm
+[1.592s] copying /home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/build/lib/u2d2_comm/__init__.py -> /home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages/u2d2_comm
+[1.592s] copying /home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/build/lib/u2d2_comm/dynamixel_sdk_test.py -> /home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages/u2d2_comm
+[1.592s] copying /home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/build/lib/u2d2_comm/dynamixel_sdk_comm.py -> /home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages/u2d2_comm
+[1.593s] byte-compiling /home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages/u2d2_comm/__init__.py to __init__.cpython-310.pyc
+[1.593s] byte-compiling /home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages/u2d2_comm/dynamixel_sdk_test.py to dynamixel_sdk_test.cpython-310.pyc
+[1.595s] byte-compiling /home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages/u2d2_comm/dynamixel_sdk_comm.py to dynamixel_sdk_comm.cpython-310.pyc
+[1.597s] running install_data
+[1.598s] creating /home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/share/ament_index
+[1.598s] creating /home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/share/ament_index/resource_index
+[1.598s] creating /home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/share/ament_index/resource_index/packages
+[1.598s] copying resource/u2d2_comm -> /home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/share/ament_index/resource_index/packages
+[1.598s] copying package.xml -> /home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/share/u2d2_comm
+[1.598s] running install_egg_info
+[1.600s] Copying ../../build/u2d2_comm/u2d2_comm.egg-info to /home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages/u2d2_comm-0.0.0-py3.10.egg-info
+[1.601s] running install_scripts
+[1.633s] writing list of installed files to '/home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/install.log'
+[1.664s] Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/src/u2d2_comm' returned '0': AMENT_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/prefix_override:/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/u2d2_comm build --build-base /home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/build install --record /home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/install.log --single-version-externally-managed

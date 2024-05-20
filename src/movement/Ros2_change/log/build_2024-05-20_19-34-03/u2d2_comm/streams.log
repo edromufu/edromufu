@@ -1,0 +1,23 @@
+[3.224s] Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/src/u2d2_comm': PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/prefix_override:/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/u2d2_comm build --build-base /home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/build install --record /home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/install.log --single-version-externally-managed
+[3.670s] running egg_info
+[3.671s] writing ../../build/u2d2_comm/u2d2_comm.egg-info/PKG-INFO
+[3.671s] writing dependency_links to ../../build/u2d2_comm/u2d2_comm.egg-info/dependency_links.txt
+[3.672s] writing entry points to ../../build/u2d2_comm/u2d2_comm.egg-info/entry_points.txt
+[3.672s] writing requirements to ../../build/u2d2_comm/u2d2_comm.egg-info/requires.txt
+[3.672s] writing top-level names to ../../build/u2d2_comm/u2d2_comm.egg-info/top_level.txt
+[3.675s] reading manifest file '../../build/u2d2_comm/u2d2_comm.egg-info/SOURCES.txt'
+[3.675s] adding license file 'LICENSE'
+[3.676s] writing manifest file '../../build/u2d2_comm/u2d2_comm.egg-info/SOURCES.txt'
+[3.676s] running build
+[3.676s] running build_py
+[3.677s] running install
+[3.677s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[3.677s]   warnings.warn(
+[3.677s] running install_lib
+[3.680s] running install_data
+[3.681s] running install_egg_info
+[3.684s] removing '/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages/u2d2_comm-0.0.0-py3.10.egg-info' (and everything under it)
+[3.685s] Copying ../../build/u2d2_comm/u2d2_comm.egg-info to /home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages/u2d2_comm-0.0.0-py3.10.egg-info
+[3.686s] running install_scripts
+[3.728s] writing list of installed files to '/home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/install.log'
+[3.784s] Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/src/u2d2_comm' returned '0': PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/prefix_override:/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/u2d2_comm build --build-base /home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/build install --record /home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/install.log --single-version-externally-managed
