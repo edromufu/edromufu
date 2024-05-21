@@ -39,10 +39,10 @@ O _ros2 run_ permite você executar um arquivo executável dentro de um pacote a
 ```py
 ros2 run <pacote> <executavel>
 ```
-Neste caso, executamos o arquivo __Python__ *finder* dentro do diretorio *object_finder*.
+Neste caso, executamos o arquivo __Python__ *finder* dentro do diretorio *object_finder*. O nome _finder_ é o nome do executável entendido pelo ROS 2, que se refere ao script _connect_and_showing.py_.
 
-É o comando que roda o código do finder, que executa as funções da visão no geral
-*explicar q finder é o nome do executável entendido pelo ros2 que se refere a connect and showing.py*
+Esse comando roda o código do finder, que executa as funções principais da visão.
+
 :::tip Como passar o argumento
 
 Utilizar o modelo "nome_argumento:=valor_desejado"
@@ -51,4 +51,4 @@ Utilizar o modelo "nome_argumento:=valor_desejado"
 ```py
 ros2 launch vision.launch.py camera:=2 img_output:=True
 ```
-O exemplo acima executa o comando alterando a camêra a ser utilizada e retornando a imagem na tela
+O exemplo acima executa o comando alterando a camêra a ser utilizada e exibindo a imagem na tela.
