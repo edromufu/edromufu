@@ -1,0 +1,41 @@
+[1.547s] Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/src/humanoid_definition': AMENT_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions:${AMENT_PREFIX_PATH} PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_definition/prefix_override:/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/lib/python3.10/site-packages:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/humanoid_definition build --build-base /home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_definition/build install --record /home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_definition/install.log --single-version-externally-managed
+[1.863s] running egg_info
+[1.864s] creating ../../build/humanoid_definition/humanoid_definition.egg-info
+[1.865s] writing ../../build/humanoid_definition/humanoid_definition.egg-info/PKG-INFO
+[1.865s] writing dependency_links to ../../build/humanoid_definition/humanoid_definition.egg-info/dependency_links.txt
+[1.865s] writing entry points to ../../build/humanoid_definition/humanoid_definition.egg-info/entry_points.txt
+[1.865s] writing requirements to ../../build/humanoid_definition/humanoid_definition.egg-info/requires.txt
+[1.865s] writing top-level names to ../../build/humanoid_definition/humanoid_definition.egg-info/top_level.txt
+[1.866s] writing manifest file '../../build/humanoid_definition/humanoid_definition.egg-info/SOURCES.txt'
+[1.867s] reading manifest file '../../build/humanoid_definition/humanoid_definition.egg-info/SOURCES.txt'
+[1.868s] writing manifest file '../../build/humanoid_definition/humanoid_definition.egg-info/SOURCES.txt'
+[1.869s] running build
+[1.869s] running build_py
+[1.869s] creating /home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_definition/build
+[1.869s] creating /home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_definition/build/lib
+[1.869s] creating /home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_definition/build/lib/humanoid_definition
+[1.869s] copying humanoid_definition/__init__.py -> /home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_definition/build/lib/humanoid_definition
+[1.870s] copying humanoid_definition/joint.py -> /home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_definition/build/lib/humanoid_definition
+[1.870s] copying humanoid_definition/setup_robot.py -> /home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_definition/build/lib/humanoid_definition
+[1.870s] running install
+[1.870s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[1.870s]   warnings.warn(
+[1.871s] running install_lib
+[1.872s] creating /home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/lib/python3.10/site-packages/humanoid_definition
+[1.872s] copying /home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_definition/build/lib/humanoid_definition/__init__.py -> /home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/lib/python3.10/site-packages/humanoid_definition
+[1.872s] copying /home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_definition/build/lib/humanoid_definition/joint.py -> /home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/lib/python3.10/site-packages/humanoid_definition
+[1.872s] copying /home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_definition/build/lib/humanoid_definition/setup_robot.py -> /home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/lib/python3.10/site-packages/humanoid_definition
+[1.873s] byte-compiling /home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/lib/python3.10/site-packages/humanoid_definition/__init__.py to __init__.cpython-310.pyc
+[1.873s] byte-compiling /home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/lib/python3.10/site-packages/humanoid_definition/joint.py to joint.cpython-310.pyc
+[1.874s] byte-compiling /home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/lib/python3.10/site-packages/humanoid_definition/setup_robot.py to setup_robot.cpython-310.pyc
+[1.875s] running install_data
+[1.876s] creating /home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/share/ament_index
+[1.877s] creating /home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/share/ament_index/resource_index
+[1.877s] creating /home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/share/ament_index/resource_index/packages
+[1.877s] copying resource/humanoid_definition -> /home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/share/ament_index/resource_index/packages
+[1.877s] copying package.xml -> /home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/share/humanoid_definition
+[1.877s] running install_egg_info
+[1.879s] Copying ../../build/humanoid_definition/humanoid_definition.egg-info to /home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/lib/python3.10/site-packages/humanoid_definition-0.0.0-py3.10.egg-info
+[1.881s] running install_scripts
+[1.917s] writing list of installed files to '/home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_definition/install.log'
+[1.958s] Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/src/humanoid_definition' returned '0': AMENT_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions:${AMENT_PREFIX_PATH} PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_definition/prefix_override:/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/lib/python3.10/site-packages:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/humanoid_definition build --build-base /home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_definition/build install --record /home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_definition/install.log --single-version-externally-managed

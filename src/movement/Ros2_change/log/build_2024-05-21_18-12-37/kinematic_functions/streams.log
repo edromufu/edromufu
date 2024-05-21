@@ -1,0 +1,41 @@
+[1.204s] Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/src/kinematic_functions': PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/build/kinematic_functions/prefix_override:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/kinematic_functions build --build-base /home/paulo/edromufu/src/movement/Ros2_change/build/kinematic_functions/build install --record /home/paulo/edromufu/src/movement/Ros2_change/build/kinematic_functions/install.log --single-version-externally-managed
+[1.555s] running egg_info
+[1.556s] creating ../../build/kinematic_functions/kinematic_functions.egg-info
+[1.557s] writing ../../build/kinematic_functions/kinematic_functions.egg-info/PKG-INFO
+[1.557s] writing dependency_links to ../../build/kinematic_functions/kinematic_functions.egg-info/dependency_links.txt
+[1.557s] writing entry points to ../../build/kinematic_functions/kinematic_functions.egg-info/entry_points.txt
+[1.557s] writing requirements to ../../build/kinematic_functions/kinematic_functions.egg-info/requires.txt
+[1.557s] writing top-level names to ../../build/kinematic_functions/kinematic_functions.egg-info/top_level.txt
+[1.557s] writing manifest file '../../build/kinematic_functions/kinematic_functions.egg-info/SOURCES.txt'
+[1.559s] reading manifest file '../../build/kinematic_functions/kinematic_functions.egg-info/SOURCES.txt'
+[1.561s] writing manifest file '../../build/kinematic_functions/kinematic_functions.egg-info/SOURCES.txt'
+[1.561s] running build
+[1.561s] running build_py
+[1.561s] creating /home/paulo/edromufu/src/movement/Ros2_change/build/kinematic_functions/build
+[1.561s] creating /home/paulo/edromufu/src/movement/Ros2_change/build/kinematic_functions/build/lib
+[1.561s] creating /home/paulo/edromufu/src/movement/Ros2_change/build/kinematic_functions/build/lib/kinematic_functions
+[1.562s] copying kinematic_functions/__init__.py -> /home/paulo/edromufu/src/movement/Ros2_change/build/kinematic_functions/build/lib/kinematic_functions
+[1.562s] copying kinematic_functions/ik_numerical.py -> /home/paulo/edromufu/src/movement/Ros2_change/build/kinematic_functions/build/lib/kinematic_functions
+[1.562s] copying kinematic_functions/direct_kinematics.py -> /home/paulo/edromufu/src/movement/Ros2_change/build/kinematic_functions/build/lib/kinematic_functions
+[1.562s] running install
+[1.563s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[1.563s]   warnings.warn(
+[1.563s] running install_lib
+[1.564s] creating /home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages/kinematic_functions
+[1.565s] copying /home/paulo/edromufu/src/movement/Ros2_change/build/kinematic_functions/build/lib/kinematic_functions/__init__.py -> /home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages/kinematic_functions
+[1.565s] copying /home/paulo/edromufu/src/movement/Ros2_change/build/kinematic_functions/build/lib/kinematic_functions/ik_numerical.py -> /home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages/kinematic_functions
+[1.565s] copying /home/paulo/edromufu/src/movement/Ros2_change/build/kinematic_functions/build/lib/kinematic_functions/direct_kinematics.py -> /home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages/kinematic_functions
+[1.565s] byte-compiling /home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages/kinematic_functions/__init__.py to __init__.cpython-310.pyc
+[1.566s] byte-compiling /home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages/kinematic_functions/ik_numerical.py to ik_numerical.cpython-310.pyc
+[1.568s] byte-compiling /home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages/kinematic_functions/direct_kinematics.py to direct_kinematics.cpython-310.pyc
+[1.569s] running install_data
+[1.570s] creating /home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/share/ament_index
+[1.570s] creating /home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/share/ament_index/resource_index
+[1.570s] creating /home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/share/ament_index/resource_index/packages
+[1.570s] copying resource/kinematic_functions -> /home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/share/ament_index/resource_index/packages
+[1.570s] copying package.xml -> /home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/share/kinematic_functions
+[1.570s] running install_egg_info
+[1.572s] Copying ../../build/kinematic_functions/kinematic_functions.egg-info to /home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages/kinematic_functions-0.0.0-py3.10.egg-info
+[1.573s] running install_scripts
+[1.610s] writing list of installed files to '/home/paulo/edromufu/src/movement/Ros2_change/build/kinematic_functions/install.log'
+[1.649s] Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/src/kinematic_functions' returned '0': PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/build/kinematic_functions/prefix_override:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/kinematic_functions build --build-base /home/paulo/edromufu/src/movement/Ros2_change/build/kinematic_functions/build install --record /home/paulo/edromufu/src/movement/Ros2_change/build/kinematic_functions/install.log --single-version-externally-managed

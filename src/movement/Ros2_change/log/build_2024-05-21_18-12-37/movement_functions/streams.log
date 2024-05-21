@@ -1,0 +1,44 @@
+[1.458s] Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/src/movement_functions': AMENT_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions:${AMENT_PREFIX_PATH} PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/build/movement_functions/prefix_override:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/lib/python3.10/site-packages:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/movement_functions build --build-base /home/paulo/edromufu/src/movement/Ros2_change/build/movement_functions/build install --record /home/paulo/edromufu/src/movement/Ros2_change/build/movement_functions/install.log --single-version-externally-managed
+[1.778s] running egg_info
+[1.780s] creating ../../build/movement_functions/movement_functions.egg-info
+[1.780s] writing ../../build/movement_functions/movement_functions.egg-info/PKG-INFO
+[1.780s] writing dependency_links to ../../build/movement_functions/movement_functions.egg-info/dependency_links.txt
+[1.781s] writing entry points to ../../build/movement_functions/movement_functions.egg-info/entry_points.txt
+[1.781s] writing requirements to ../../build/movement_functions/movement_functions.egg-info/requires.txt
+[1.781s] writing top-level names to ../../build/movement_functions/movement_functions.egg-info/top_level.txt
+[1.781s] writing manifest file '../../build/movement_functions/movement_functions.egg-info/SOURCES.txt'
+[1.784s] reading manifest file '../../build/movement_functions/movement_functions.egg-info/SOURCES.txt'
+[1.785s] writing manifest file '../../build/movement_functions/movement_functions.egg-info/SOURCES.txt'
+[1.785s] running build
+[1.785s] running build_py
+[1.786s] creating /home/paulo/edromufu/src/movement/Ros2_change/build/movement_functions/build
+[1.786s] creating /home/paulo/edromufu/src/movement/Ros2_change/build/movement_functions/build/lib
+[1.786s] creating /home/paulo/edromufu/src/movement/Ros2_change/build/movement_functions/build/lib/movement_functions
+[1.786s] copying movement_functions/__init__.py -> /home/paulo/edromufu/src/movement/Ros2_change/build/movement_functions/build/lib/movement_functions
+[1.786s] copying movement_functions/gait_gen.py -> /home/paulo/edromufu/src/movement/Ros2_change/build/movement_functions/build/lib/movement_functions
+[1.787s] copying movement_functions/walk_forward_gen.py -> /home/paulo/edromufu/src/movement/Ros2_change/build/movement_functions/build/lib/movement_functions
+[1.787s] copying movement_functions/rotate_cc_ccw_gen.py -> /home/paulo/edromufu/src/movement/Ros2_change/build/movement_functions/build/lib/movement_functions
+[1.787s] running install
+[1.788s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[1.788s]   warnings.warn(
+[1.788s] running install_lib
+[1.790s] creating /home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/lib/python3.10/site-packages/movement_functions
+[1.790s] copying /home/paulo/edromufu/src/movement/Ros2_change/build/movement_functions/build/lib/movement_functions/__init__.py -> /home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/lib/python3.10/site-packages/movement_functions
+[1.790s] copying /home/paulo/edromufu/src/movement/Ros2_change/build/movement_functions/build/lib/movement_functions/gait_gen.py -> /home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/lib/python3.10/site-packages/movement_functions
+[1.790s] copying /home/paulo/edromufu/src/movement/Ros2_change/build/movement_functions/build/lib/movement_functions/walk_forward_gen.py -> /home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/lib/python3.10/site-packages/movement_functions
+[1.791s] copying /home/paulo/edromufu/src/movement/Ros2_change/build/movement_functions/build/lib/movement_functions/rotate_cc_ccw_gen.py -> /home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/lib/python3.10/site-packages/movement_functions
+[1.791s] byte-compiling /home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/lib/python3.10/site-packages/movement_functions/__init__.py to __init__.cpython-310.pyc
+[1.791s] byte-compiling /home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/lib/python3.10/site-packages/movement_functions/gait_gen.py to gait_gen.cpython-310.pyc
+[1.793s] byte-compiling /home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/lib/python3.10/site-packages/movement_functions/walk_forward_gen.py to walk_forward_gen.cpython-310.pyc
+[1.796s] byte-compiling /home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/lib/python3.10/site-packages/movement_functions/rotate_cc_ccw_gen.py to rotate_cc_ccw_gen.cpython-310.pyc
+[1.798s] running install_data
+[1.799s] creating /home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/share/ament_index
+[1.799s] creating /home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/share/ament_index/resource_index
+[1.799s] creating /home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/share/ament_index/resource_index/packages
+[1.800s] copying resource/movement_functions -> /home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/share/ament_index/resource_index/packages
+[1.800s] copying package.xml -> /home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/share/movement_functions
+[1.800s] running install_egg_info
+[1.803s] Copying ../../build/movement_functions/movement_functions.egg-info to /home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/lib/python3.10/site-packages/movement_functions-0.0.0-py3.10.egg-info
+[1.805s] running install_scripts
+[1.843s] writing list of installed files to '/home/paulo/edromufu/src/movement/Ros2_change/build/movement_functions/install.log'
+[1.928s] Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/src/movement_functions' returned '0': AMENT_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions:${AMENT_PREFIX_PATH} PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/build/movement_functions/prefix_override:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/lib/python3.10/site-packages:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/movement_functions build --build-base /home/paulo/edromufu/src/movement/Ros2_change/build/movement_functions/build install --record /home/paulo/edromufu/src/movement/Ros2_change/build/movement_functions/install.log --single-version-externally-managed
