@@ -18,5 +18,28 @@ sidebar_position: 1
 
     Por outro lado, outra opção é instalar o próprio PyQt, o que pode ser feito de várias maneiras. Para obter informações detalhadas sobre as diferentes abordagens de instalação do PyQt, recomendamos consultar o seguinte link: https://pythonbasics.org/install-pyqt/.
 
-3 - Construção do design da página principal
+3 - Apresentação do design da página principal
+    No programa, era essencial realizar a modelagem rápida de todos os motores e atuadores que seriam utilizados. Para atender a essa necessidade, optamos por utilizar duas áreas de rolagem (scroll areas), uma destinada a cada tipo de motor.
+    ![alt text](image-2.png)
+
+    Cada motor/atuador é representado por um botão (push button), que ao ser acionado, direciona para uma área de controle por sliders (a ser atualizada posteriormente). Na interface principal, serão exibidos os valores máximos e mínimos que os motores podem alcançar.
+
+    No canto superior esquerdo, há um botão denominado Torque on/off. Quando o torque está desativado (off), os motores não podem ser movimentados. Quando ativado (on), permite a definição de posições, facilitando a criação dos movimentos do robô.
+    ![alt text](image-3.png)
+
+    Logo acima da logo, encontramos três botões essenciais para a operação do sistema. O primeiro é o botão de "Salvar Movimento", que permite armazenar a configuração atual dos motores e atuadores. O segundo é o botão "Realizar Ação", que executa os movimentos programados no robô. O terceiro é o botão "Próximo", que avança para a próxima etapa ou configuração, facilitando a sequência de ajustes e verificações necessárias para completar a programação dos movimentos do robô. 
+    ![alt text](image-4.png)
+    O resultado da página principal foi esse:
+
+
+4- Contrução e componentes da página principal
+    1 - Scroll Area
+        Importante ativar a ScrollBar on para poder fazer a movimentação.
+        Colocar os push bottons na scroll área, nos próprios botãos é possível escrever um texto.
+        Para organização, colocamos uma label indicando qual são os Motores e quais são os atuadores
+
+
+    
+
+
 
