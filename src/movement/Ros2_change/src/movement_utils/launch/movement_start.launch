@@ -1,0 +1,56 @@
+<launch>
+    <arg name="u2d2_connected" default="true"/>
+    <arg name="u2d2_port" default="/dev/ttyU2D2"/>
+    <arg name="robot_name" default="aurea"/>
+    <arg name="page_creation" default="false"/>
+    <arg name="queue_time" default="0.05"/>
+    <arg name="visualization" default="false"/>
+    <arg name="head_plugged" default="true"/>
+    <arg name="behaviour" default="true"/>
+
+    <!-- Inicialização do movimento de caminhada e pages-->
+    <node name="movement_core" pkg="movement_core" exec="core.py" output="screen">
+        <param name="name" value="$(eval arg('robot_name'))" />
+        <param name="queue_time" value="$(eval arg('queue_time'))" />
+        <param name="pub2vis" value="$(eval arg('visualization'))" />
+    </node>
+
+    <!-- Comunicação dos motores com U2D2 -->
+    <node name="u2d2" pkg="u2d2_comm" exec="dynamixel_sdk_comm.py" output="screen" if="$(eval arg('u2d2_connected'))">
+        <param name="port" value="$(eval arg('u2d2_port'))" />
+        <param name="robot_name" value="$(eval arg('robot_name'))" />
+    </node>
+
+    <!-- Comunicação falsa dos motores para teste -->
+    <node name="u2d2_false" pkg="u2d2_comm" exec="dynamixel_sdk_test.py" output="screen" unless="$(eval arg('u2d2_connected'))">
+        <param name="robot_name" value="$(eval arg('robot_name'))" />
+    </node>
+    
+    <!-- Inicialização do movimento da cabeça-->
+    <node name="head_core" pkg="movement_core" exec="core_head.py" output="screen"  if="$(eval arg('head_plugged'))">
+    </node>
+
+    <!-- Inicialização da visão-->
+    <include file="$(find object_finder)/launch/vision.launch" if="$(eval arg('head_plugged'))">
+        <arg name="img_output" value="false"/>
+        <arg name="ajuste" value="false"/>
+        <arg name="brilho" value="4"/>
+        <arg name="camera" value="0"/>
+    </include>
+
+    <!-- Inicialização da interface de captura de page -->
+    <node name="page_creator" pkg="movement_pages" exec="page_interface.py" output="screen" if="$(eval arg('page_creation'))">
+    </node>
+
+    <!-- Inicialização da visualização da robô -->
+    <include file="$(find humanoid_visualization)/launch/display.launch" if="$(eval arg('visualization'))">
+        <arg name="model" value="$(find humanoid_visualization)/urdf/$(arg robot_name).urdf" />
+        <arg name="rvizconfig" value="$(find humanoid_visualization)/urdf/movement.rviz" />
+    </include>
+
+    <!-- Inicialização do Behaviour -->
+
+    <include file="$(find transitions_and_states)/launch/behaviour.launch" if="$(eval arg('behaviour'))"/>
+   
+
+</launch>
