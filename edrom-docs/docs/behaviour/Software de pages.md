@@ -1,9 +1,9 @@
 ---
-id: Software_de_pagesr_build
+id: Software_de_pages_build
 title: Software de Pages
 description: Tutorial para criaçao do Softaware Pages
-slug: /game_controller_build
-sidebar_position: 1
+slug: /software_pages
+sidebar_position: 2
 ---
 
 ## Software de Pages
