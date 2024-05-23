@@ -61,8 +61,6 @@ No launch da visão temos 4 tipos de argumentos que são passados:
 4.  __bright__ que irá receber um número de –64 até 64, esse número será utilizado como fator de brilho da câmera, sendo 64 o maior brilho possível e por consequência –64 o menor. Tendo como DEFAULT 4.
 
 
-E nesse Node o arquivo que será executado é o __“connecting_and_showing.py”__ que utilizará todos esses parâmetros para realizar a detecção.
-
 No contexto do ROS 2, o script connect_and_showing.py é referenciado pelo nome do executável finder. Este nome é definido no arquivo de configuração do pacote, geralmente no setup.py ou em arquivos de configuração específicos do ROS 2. Isso significa que, ao referenciar finder, o ROS 2 sabe que deve executar connect_and_showing.py.
 
 Esse código usa algumas substituições: 
