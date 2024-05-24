@@ -108,8 +108,8 @@ class Core:
             #self.pub2vis = rospy.Publisher('/joint_states', JointState, queue_size=100)    (15)
             self.pub2vis = self.node.create_subscription(JointState, '/joint_states', queue_size=100)#(15)
             self.pub2vismsg = JointState()
-            self.pub2vismsg.name = ['COM_height_slider','COM_pitch_joint','RHIP_UZ_joint','RHIP_UX_joint','RHIP_UY_joint','RKNEE_joint',
-            'RANKLE_UY_joint','RANKLE_UX_joint','LHIP_UZ_joint','LHIP_UX_joint','LHIP_UY_joint',
+            self.pub2vismsg.name = ['COM_height_slider','COM_pitch_joint','RHIP_UX_joint','RHIP_UY_joint','RKNEE_joint',
+            'RANKLE_UY_joint','RANKLE_UX_joint','LHIP_UX_joint','LHIP_UY_joint',
             'LKNEE_joint','LANKLE_UY_joint','LANKLE_UX_joint']
 
             self.currentCOMPitch = 0.0
@@ -276,8 +276,11 @@ class Core:
                 
                 self.pub2vis.publish(self.pub2vismsg)
 
-if __name__ == '__main__':
+def main():
     np.set_printoptions(precision=4, suppress=True, linewidth=np.inf, threshold=sys.maxsize)
     movement = Core()
     #rospy.spin() (13)
     rclpy.spin(movement.node)   #(13)
+    
+if __name__ == '__main__': 
+    main()

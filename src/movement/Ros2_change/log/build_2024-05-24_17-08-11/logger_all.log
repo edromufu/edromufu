@@ -1,0 +1,586 @@
+[11.325s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[11.326s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x73fcf3c2d8d0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x73fcf3d2df60>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x73fcf3d2df60>>, mixin_verb=('build',))
+[18.029s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[18.029s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[18.029s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[18.029s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[18.029s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[18.029s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[18.029s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/certezas/edromufu/src/movement/Ros2_change'
+[18.029s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[18.029s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[18.029s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[18.029s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[18.029s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[18.029s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[18.029s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[18.029s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[18.029s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[18.347s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[18.348s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[18.348s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[18.348s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[18.348s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[18.349s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[18.349s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[18.349s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[18.350s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[18.350s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[18.350s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[18.351s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[18.351s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[18.351s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[18.398s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[18.399s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[18.399s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[18.399s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[18.399s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[18.399s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[18.400s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[18.400s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[18.400s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[18.400s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[18.400s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[18.401s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[18.401s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[18.401s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[18.401s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_definition) by extensions ['ignore', 'ignore_ament_install']
+[18.402s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_definition) by extension 'ignore'
+[18.402s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_definition) by extension 'ignore_ament_install'
+[18.402s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_definition) by extensions ['colcon_pkg']
+[18.402s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_definition) by extension 'colcon_pkg'
+[18.403s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_definition) by extensions ['colcon_meta']
+[18.403s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_definition) by extension 'colcon_meta'
+[18.403s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_definition) by extensions ['ros']
+[18.403s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_definition) by extension 'ros'
+[18.475s] DEBUG:colcon.colcon_core.package_identification:Package 'src/humanoid_definition' with type 'ros.ament_python' and name 'humanoid_definition'
+[18.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_visualization) by extensions ['ignore', 'ignore_ament_install']
+[18.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_visualization) by extension 'ignore'
+[18.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_visualization) by extension 'ignore_ament_install'
+[18.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_visualization) by extensions ['colcon_pkg']
+[18.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_visualization) by extension 'colcon_pkg'
+[18.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_visualization) by extensions ['colcon_meta']
+[18.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_visualization) by extension 'colcon_meta'
+[18.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_visualization) by extensions ['ros']
+[18.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_visualization) by extension 'ros'
+[18.613s] DEBUG:colcon.colcon_core.package_identification:Package 'src/humanoid_visualization' with type 'ros.ament_cmake' and name 'humanoid_visualization'
+[18.620s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematic_functions) by extensions ['ignore', 'ignore_ament_install']
+[18.620s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematic_functions) by extension 'ignore'
+[18.620s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematic_functions) by extension 'ignore_ament_install'
+[18.620s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematic_functions) by extensions ['colcon_pkg']
+[18.621s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematic_functions) by extension 'colcon_pkg'
+[18.621s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematic_functions) by extensions ['colcon_meta']
+[18.621s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematic_functions) by extension 'colcon_meta'
+[18.621s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematic_functions) by extensions ['ros']
+[18.621s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematic_functions) by extension 'ros'
+[18.704s] DEBUG:colcon.colcon_core.package_identification:Package 'src/kinematic_functions' with type 'ros.ament_python' and name 'kinematic_functions'
+[18.715s] Level 1:colcon.colcon_core.package_identification:_identify(src/matlab_codes) by extensions ['ignore', 'ignore_ament_install']
+[18.715s] Level 1:colcon.colcon_core.package_identification:_identify(src/matlab_codes) by extension 'ignore'
+[18.715s] Level 1:colcon.colcon_core.package_identification:_identify(src/matlab_codes) by extension 'ignore_ament_install'
+[18.715s] Level 1:colcon.colcon_core.package_identification:_identify(src/matlab_codes) by extensions ['colcon_pkg']
+[18.716s] Level 1:colcon.colcon_core.package_identification:_identify(src/matlab_codes) by extension 'colcon_pkg'
+[18.716s] Level 1:colcon.colcon_core.package_identification:_identify(src/matlab_codes) by extensions ['colcon_meta']
+[18.716s] Level 1:colcon.colcon_core.package_identification:_identify(src/matlab_codes) by extension 'colcon_meta'
+[18.716s] Level 1:colcon.colcon_core.package_identification:_identify(src/matlab_codes) by extensions ['ros']
+[18.716s] Level 1:colcon.colcon_core.package_identification:_identify(src/matlab_codes) by extension 'ros'
+[18.717s] Level 1:colcon.colcon_core.package_identification:_identify(src/matlab_codes) by extensions ['cmake', 'python']
+[18.717s] Level 1:colcon.colcon_core.package_identification:_identify(src/matlab_codes) by extension 'cmake'
+[18.717s] Level 1:colcon.colcon_core.package_identification:_identify(src/matlab_codes) by extension 'python'
+[18.717s] Level 1:colcon.colcon_core.package_identification:_identify(src/matlab_codes) by extensions ['python_setup_py']
+[18.717s] Level 1:colcon.colcon_core.package_identification:_identify(src/matlab_codes) by extension 'python_setup_py'
+[18.743s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_core) by extensions ['ignore', 'ignore_ament_install']
+[18.743s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_core) by extension 'ignore'
+[18.744s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_core) by extension 'ignore_ament_install'
+[18.744s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_core) by extensions ['colcon_pkg']
+[18.744s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_core) by extension 'colcon_pkg'
+[18.744s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_core) by extensions ['colcon_meta']
+[18.745s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_core) by extension 'colcon_meta'
+[18.745s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_core) by extensions ['ros']
+[18.745s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_core) by extension 'ros'
+[18.772s] DEBUG:colcon.colcon_core.package_identification:Package 'src/movement_core' with type 'ros.ament_python' and name 'movement_core'
+[18.799s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_functions) by extensions ['ignore', 'ignore_ament_install']
+[18.800s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_functions) by extension 'ignore'
+[18.800s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_functions) by extension 'ignore_ament_install'
+[18.800s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_functions) by extensions ['colcon_pkg']
+[18.800s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_functions) by extension 'colcon_pkg'
+[18.801s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_functions) by extensions ['colcon_meta']
+[18.801s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_functions) by extension 'colcon_meta'
+[18.801s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_functions) by extensions ['ros']
+[18.801s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_functions) by extension 'ros'
+[18.839s] DEBUG:colcon.colcon_core.package_identification:Package 'src/movement_functions' with type 'ros.ament_python' and name 'movement_functions'
+[18.855s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_pages) by extensions ['ignore', 'ignore_ament_install']
+[18.855s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_pages) by extension 'ignore'
+[18.856s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_pages) by extension 'ignore_ament_install'
+[18.856s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_pages) by extensions ['colcon_pkg']
+[18.856s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_pages) by extension 'colcon_pkg'
+[18.856s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_pages) by extensions ['colcon_meta']
+[18.856s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_pages) by extension 'colcon_meta'
+[18.857s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_pages) by extensions ['ros']
+[18.857s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_pages) by extension 'ros'
+[18.876s] DEBUG:colcon.colcon_core.package_identification:Package 'src/movement_pages' with type 'ros.ament_python' and name 'movement_pages'
+[18.899s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_utils) by extensions ['ignore', 'ignore_ament_install']
+[18.900s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_utils) by extension 'ignore'
+[18.900s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_utils) by extension 'ignore_ament_install'
+[18.900s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_utils) by extensions ['colcon_pkg']
+[18.901s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_utils) by extension 'colcon_pkg'
+[18.901s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_utils) by extensions ['colcon_meta']
+[18.901s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_utils) by extension 'colcon_meta'
+[18.901s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_utils) by extensions ['ros']
+[18.901s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_utils) by extension 'ros'
+[18.966s] DEBUG:colcon.colcon_core.package_identification:Package 'src/movement_utils' with type 'ros.ament_cmake' and name 'movement_utils'
+[18.981s] Level 1:colcon.colcon_core.package_identification:_identify(src/u2d2_comm) by extensions ['ignore', 'ignore_ament_install']
+[18.982s] Level 1:colcon.colcon_core.package_identification:_identify(src/u2d2_comm) by extension 'ignore'
+[18.982s] Level 1:colcon.colcon_core.package_identification:_identify(src/u2d2_comm) by extension 'ignore_ament_install'
+[18.983s] Level 1:colcon.colcon_core.package_identification:_identify(src/u2d2_comm) by extensions ['colcon_pkg']
+[18.983s] Level 1:colcon.colcon_core.package_identification:_identify(src/u2d2_comm) by extension 'colcon_pkg'
+[18.983s] Level 1:colcon.colcon_core.package_identification:_identify(src/u2d2_comm) by extensions ['colcon_meta']
+[18.983s] Level 1:colcon.colcon_core.package_identification:_identify(src/u2d2_comm) by extension 'colcon_meta'
+[18.984s] Level 1:colcon.colcon_core.package_identification:_identify(src/u2d2_comm) by extensions ['ros']
+[18.984s] Level 1:colcon.colcon_core.package_identification:_identify(src/u2d2_comm) by extension 'ros'
+[19.004s] DEBUG:colcon.colcon_core.package_identification:Package 'src/u2d2_comm' with type 'ros.ament_python' and name 'u2d2_comm'
+[19.020s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_example) by extensions ['ignore', 'ignore_ament_install']
+[19.020s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_example) by extension 'ignore'
+[19.020s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_example) by extension 'ignore_ament_install'
+[19.020s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_example) by extensions ['colcon_pkg']
+[19.020s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_example) by extension 'colcon_pkg'
+[19.020s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_example) by extensions ['colcon_meta']
+[19.021s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_example) by extension 'colcon_meta'
+[19.021s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_example) by extensions ['ros']
+[19.021s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_example) by extension 'ros'
+[19.040s] DEBUG:colcon.colcon_core.package_identification:Package 'src/urdf_example' with type 'ros.ament_cmake' and name 'urdf_example'
+[19.041s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[19.041s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[19.041s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[19.041s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[19.041s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[20.336s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[20.337s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[20.446s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 273 installed packages in /opt/ros/humble
+[20.451s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[20.565s] Level 5:colcon.colcon_core.verb:set package 'humanoid_visualization' build argument 'cmake_args' from command line to 'None'
+[20.565s] Level 5:colcon.colcon_core.verb:set package 'humanoid_visualization' build argument 'cmake_target' from command line to 'None'
+[20.566s] Level 5:colcon.colcon_core.verb:set package 'humanoid_visualization' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[20.566s] Level 5:colcon.colcon_core.verb:set package 'humanoid_visualization' build argument 'cmake_clean_cache' from command line to 'False'
+[20.566s] Level 5:colcon.colcon_core.verb:set package 'humanoid_visualization' build argument 'cmake_clean_first' from command line to 'False'
+[20.566s] Level 5:colcon.colcon_core.verb:set package 'humanoid_visualization' build argument 'cmake_force_configure' from command line to 'False'
+[20.566s] Level 5:colcon.colcon_core.verb:set package 'humanoid_visualization' build argument 'ament_cmake_args' from command line to 'None'
+[20.566s] Level 5:colcon.colcon_core.verb:set package 'humanoid_visualization' build argument 'catkin_cmake_args' from command line to 'None'
+[20.566s] Level 5:colcon.colcon_core.verb:set package 'humanoid_visualization' build argument 'catkin_skip_building_tests' from command line to 'False'
+[20.566s] DEBUG:colcon.colcon_core.verb:Building package 'humanoid_visualization' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/certezas/edromufu/src/movement/Ros2_change/build/humanoid_visualization', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization', 'merge_install': False, 'path': '/home/certezas/edromufu/src/movement/Ros2_change/src/humanoid_visualization', 'symlink_install': False, 'test_result_base': None}
+[20.566s] Level 5:colcon.colcon_core.verb:set package 'kinematic_functions' build argument 'cmake_args' from command line to 'None'
+[20.566s] Level 5:colcon.colcon_core.verb:set package 'kinematic_functions' build argument 'cmake_target' from command line to 'None'
+[20.566s] Level 5:colcon.colcon_core.verb:set package 'kinematic_functions' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[20.566s] Level 5:colcon.colcon_core.verb:set package 'kinematic_functions' build argument 'cmake_clean_cache' from command line to 'False'
+[20.566s] Level 5:colcon.colcon_core.verb:set package 'kinematic_functions' build argument 'cmake_clean_first' from command line to 'False'
+[20.566s] Level 5:colcon.colcon_core.verb:set package 'kinematic_functions' build argument 'cmake_force_configure' from command line to 'False'
+[20.566s] Level 5:colcon.colcon_core.verb:set package 'kinematic_functions' build argument 'ament_cmake_args' from command line to 'None'
+[20.566s] Level 5:colcon.colcon_core.verb:set package 'kinematic_functions' build argument 'catkin_cmake_args' from command line to 'None'
+[20.566s] Level 5:colcon.colcon_core.verb:set package 'kinematic_functions' build argument 'catkin_skip_building_tests' from command line to 'False'
+[20.566s] DEBUG:colcon.colcon_core.verb:Building package 'kinematic_functions' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/certezas/edromufu/src/movement/Ros2_change/build/kinematic_functions', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions', 'merge_install': False, 'path': '/home/certezas/edromufu/src/movement/Ros2_change/src/kinematic_functions', 'symlink_install': False, 'test_result_base': None}
+[20.567s] Level 5:colcon.colcon_core.verb:set package 'movement_utils' build argument 'cmake_args' from command line to 'None'
+[20.567s] Level 5:colcon.colcon_core.verb:set package 'movement_utils' build argument 'cmake_target' from command line to 'None'
+[20.567s] Level 5:colcon.colcon_core.verb:set package 'movement_utils' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[20.567s] Level 5:colcon.colcon_core.verb:set package 'movement_utils' build argument 'cmake_clean_cache' from command line to 'False'
+[20.567s] Level 5:colcon.colcon_core.verb:set package 'movement_utils' build argument 'cmake_clean_first' from command line to 'False'
+[20.567s] Level 5:colcon.colcon_core.verb:set package 'movement_utils' build argument 'cmake_force_configure' from command line to 'False'
+[20.567s] Level 5:colcon.colcon_core.verb:set package 'movement_utils' build argument 'ament_cmake_args' from command line to 'None'
+[20.567s] Level 5:colcon.colcon_core.verb:set package 'movement_utils' build argument 'catkin_cmake_args' from command line to 'None'
+[20.567s] Level 5:colcon.colcon_core.verb:set package 'movement_utils' build argument 'catkin_skip_building_tests' from command line to 'False'
+[20.567s] DEBUG:colcon.colcon_core.verb:Building package 'movement_utils' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/certezas/edromufu/src/movement/Ros2_change/build/movement_utils', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils', 'merge_install': False, 'path': '/home/certezas/edromufu/src/movement/Ros2_change/src/movement_utils', 'symlink_install': False, 'test_result_base': None}
+[20.567s] Level 5:colcon.colcon_core.verb:set package 'urdf_example' build argument 'cmake_args' from command line to 'None'
+[20.567s] Level 5:colcon.colcon_core.verb:set package 'urdf_example' build argument 'cmake_target' from command line to 'None'
+[20.567s] Level 5:colcon.colcon_core.verb:set package 'urdf_example' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[20.567s] Level 5:colcon.colcon_core.verb:set package 'urdf_example' build argument 'cmake_clean_cache' from command line to 'False'
+[20.567s] Level 5:colcon.colcon_core.verb:set package 'urdf_example' build argument 'cmake_clean_first' from command line to 'False'
+[20.567s] Level 5:colcon.colcon_core.verb:set package 'urdf_example' build argument 'cmake_force_configure' from command line to 'False'
+[20.567s] Level 5:colcon.colcon_core.verb:set package 'urdf_example' build argument 'ament_cmake_args' from command line to 'None'
+[20.567s] Level 5:colcon.colcon_core.verb:set package 'urdf_example' build argument 'catkin_cmake_args' from command line to 'None'
+[20.567s] Level 5:colcon.colcon_core.verb:set package 'urdf_example' build argument 'catkin_skip_building_tests' from command line to 'False'
+[20.567s] DEBUG:colcon.colcon_core.verb:Building package 'urdf_example' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/certezas/edromufu/src/movement/Ros2_change/build/urdf_example', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example', 'merge_install': False, 'path': '/home/certezas/edromufu/src/movement/Ros2_change/src/urdf_example', 'symlink_install': False, 'test_result_base': None}
+[20.568s] Level 5:colcon.colcon_core.verb:set package 'humanoid_definition' build argument 'cmake_args' from command line to 'None'
+[20.568s] Level 5:colcon.colcon_core.verb:set package 'humanoid_definition' build argument 'cmake_target' from command line to 'None'
+[20.568s] Level 5:colcon.colcon_core.verb:set package 'humanoid_definition' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[20.568s] Level 5:colcon.colcon_core.verb:set package 'humanoid_definition' build argument 'cmake_clean_cache' from command line to 'False'
+[20.568s] Level 5:colcon.colcon_core.verb:set package 'humanoid_definition' build argument 'cmake_clean_first' from command line to 'False'
+[20.568s] Level 5:colcon.colcon_core.verb:set package 'humanoid_definition' build argument 'cmake_force_configure' from command line to 'False'
+[20.568s] Level 5:colcon.colcon_core.verb:set package 'humanoid_definition' build argument 'ament_cmake_args' from command line to 'None'
+[20.568s] Level 5:colcon.colcon_core.verb:set package 'humanoid_definition' build argument 'catkin_cmake_args' from command line to 'None'
+[20.568s] Level 5:colcon.colcon_core.verb:set package 'humanoid_definition' build argument 'catkin_skip_building_tests' from command line to 'False'
+[20.568s] DEBUG:colcon.colcon_core.verb:Building package 'humanoid_definition' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/certezas/edromufu/src/movement/Ros2_change/build/humanoid_definition', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_definition', 'merge_install': False, 'path': '/home/certezas/edromufu/src/movement/Ros2_change/src/humanoid_definition', 'symlink_install': False, 'test_result_base': None}
+[20.568s] Level 5:colcon.colcon_core.verb:set package 'movement_functions' build argument 'cmake_args' from command line to 'None'
+[20.568s] Level 5:colcon.colcon_core.verb:set package 'movement_functions' build argument 'cmake_target' from command line to 'None'
+[20.568s] Level 5:colcon.colcon_core.verb:set package 'movement_functions' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[20.568s] Level 5:colcon.colcon_core.verb:set package 'movement_functions' build argument 'cmake_clean_cache' from command line to 'False'
+[20.568s] Level 5:colcon.colcon_core.verb:set package 'movement_functions' build argument 'cmake_clean_first' from command line to 'False'
+[20.568s] Level 5:colcon.colcon_core.verb:set package 'movement_functions' build argument 'cmake_force_configure' from command line to 'False'
+[20.568s] Level 5:colcon.colcon_core.verb:set package 'movement_functions' build argument 'ament_cmake_args' from command line to 'None'
+[20.568s] Level 5:colcon.colcon_core.verb:set package 'movement_functions' build argument 'catkin_cmake_args' from command line to 'None'
+[20.568s] Level 5:colcon.colcon_core.verb:set package 'movement_functions' build argument 'catkin_skip_building_tests' from command line to 'False'
+[20.568s] DEBUG:colcon.colcon_core.verb:Building package 'movement_functions' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/certezas/edromufu/src/movement/Ros2_change/build/movement_functions', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_functions', 'merge_install': False, 'path': '/home/certezas/edromufu/src/movement/Ros2_change/src/movement_functions', 'symlink_install': False, 'test_result_base': None}
+[20.569s] Level 5:colcon.colcon_core.verb:set package 'movement_pages' build argument 'cmake_args' from command line to 'None'
+[20.569s] Level 5:colcon.colcon_core.verb:set package 'movement_pages' build argument 'cmake_target' from command line to 'None'
+[20.569s] Level 5:colcon.colcon_core.verb:set package 'movement_pages' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[20.569s] Level 5:colcon.colcon_core.verb:set package 'movement_pages' build argument 'cmake_clean_cache' from command line to 'False'
+[20.569s] Level 5:colcon.colcon_core.verb:set package 'movement_pages' build argument 'cmake_clean_first' from command line to 'False'
+[20.569s] Level 5:colcon.colcon_core.verb:set package 'movement_pages' build argument 'cmake_force_configure' from command line to 'False'
+[20.569s] Level 5:colcon.colcon_core.verb:set package 'movement_pages' build argument 'ament_cmake_args' from command line to 'None'
+[20.569s] Level 5:colcon.colcon_core.verb:set package 'movement_pages' build argument 'catkin_cmake_args' from command line to 'None'
+[20.569s] Level 5:colcon.colcon_core.verb:set package 'movement_pages' build argument 'catkin_skip_building_tests' from command line to 'False'
+[20.569s] DEBUG:colcon.colcon_core.verb:Building package 'movement_pages' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/certezas/edromufu/src/movement/Ros2_change/build/movement_pages', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages', 'merge_install': False, 'path': '/home/certezas/edromufu/src/movement/Ros2_change/src/movement_pages', 'symlink_install': False, 'test_result_base': None}
+[20.569s] Level 5:colcon.colcon_core.verb:set package 'u2d2_comm' build argument 'cmake_args' from command line to 'None'
+[20.569s] Level 5:colcon.colcon_core.verb:set package 'u2d2_comm' build argument 'cmake_target' from command line to 'None'
+[20.569s] Level 5:colcon.colcon_core.verb:set package 'u2d2_comm' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[20.569s] Level 5:colcon.colcon_core.verb:set package 'u2d2_comm' build argument 'cmake_clean_cache' from command line to 'False'
+[20.569s] Level 5:colcon.colcon_core.verb:set package 'u2d2_comm' build argument 'cmake_clean_first' from command line to 'False'
+[20.569s] Level 5:colcon.colcon_core.verb:set package 'u2d2_comm' build argument 'cmake_force_configure' from command line to 'False'
+[20.569s] Level 5:colcon.colcon_core.verb:set package 'u2d2_comm' build argument 'ament_cmake_args' from command line to 'None'
+[20.569s] Level 5:colcon.colcon_core.verb:set package 'u2d2_comm' build argument 'catkin_cmake_args' from command line to 'None'
+[20.569s] Level 5:colcon.colcon_core.verb:set package 'u2d2_comm' build argument 'catkin_skip_building_tests' from command line to 'False'
+[20.569s] DEBUG:colcon.colcon_core.verb:Building package 'u2d2_comm' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/certezas/edromufu/src/movement/Ros2_change/build/u2d2_comm', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/certezas/edromufu/src/movement/Ros2_change/install/u2d2_comm', 'merge_install': False, 'path': '/home/certezas/edromufu/src/movement/Ros2_change/src/u2d2_comm', 'symlink_install': False, 'test_result_base': None}
+[20.570s] Level 5:colcon.colcon_core.verb:set package 'movement_core' build argument 'cmake_args' from command line to 'None'
+[20.570s] Level 5:colcon.colcon_core.verb:set package 'movement_core' build argument 'cmake_target' from command line to 'None'
+[20.570s] Level 5:colcon.colcon_core.verb:set package 'movement_core' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[20.570s] Level 5:colcon.colcon_core.verb:set package 'movement_core' build argument 'cmake_clean_cache' from command line to 'False'
+[20.570s] Level 5:colcon.colcon_core.verb:set package 'movement_core' build argument 'cmake_clean_first' from command line to 'False'
+[20.570s] Level 5:colcon.colcon_core.verb:set package 'movement_core' build argument 'cmake_force_configure' from command line to 'False'
+[20.570s] Level 5:colcon.colcon_core.verb:set package 'movement_core' build argument 'ament_cmake_args' from command line to 'None'
+[20.570s] Level 5:colcon.colcon_core.verb:set package 'movement_core' build argument 'catkin_cmake_args' from command line to 'None'
+[20.570s] Level 5:colcon.colcon_core.verb:set package 'movement_core' build argument 'catkin_skip_building_tests' from command line to 'False'
+[20.570s] DEBUG:colcon.colcon_core.verb:Building package 'movement_core' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/certezas/edromufu/src/movement/Ros2_change/build/movement_core', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_core', 'merge_install': False, 'path': '/home/certezas/edromufu/src/movement/Ros2_change/src/movement_core', 'symlink_install': False, 'test_result_base': None}
+[20.570s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[20.571s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[20.571s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/certezas/edromufu/src/movement/Ros2_change/src/kinematic_functions' with build type 'ament_python'
+[20.571s] Level 1:colcon.colcon_core.shell:create_environment_hook('kinematic_functions', 'ament_prefix_path')
+[20.919s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[20.920s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions/share/kinematic_functions/hook/ament_prefix_path.ps1'
+[21.095s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions/share/kinematic_functions/hook/ament_prefix_path.dsv'
+[21.160s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions/share/kinematic_functions/hook/ament_prefix_path.sh'
+[21.228s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[21.228s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[21.388s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/certezas/edromufu/src/movement/Ros2_change/src/movement_utils' with build type 'ament_cmake'
+[21.388s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/certezas/edromufu/src/movement/Ros2_change/src/movement_utils'
+[21.389s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[21.389s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[21.408s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/certezas/edromufu/src/movement/Ros2_change/src/humanoid_visualization' with build type 'ament_cmake'
+[21.409s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/certezas/edromufu/src/movement/Ros2_change/src/humanoid_visualization'
+[21.410s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[21.410s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[21.467s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/certezas/edromufu/src/movement/Ros2_change/src/urdf_example' with build type 'ament_cmake'
+[21.468s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/certezas/edromufu/src/movement/Ros2_change/src/urdf_example'
+[21.469s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[21.469s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[22.031s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/certezas/edromufu/src/movement/Ros2_change/src/kinematic_functions'
+[22.032s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[22.032s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[22.198s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/certezas/edromufu/src/movement/Ros2_change/build/movement_utils': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/certezas/edromufu/src/movement/Ros2_change/build/movement_utils -- -j12 -l12
+[22.263s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/certezas/edromufu/src/movement/Ros2_change/build/humanoid_visualization': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/certezas/edromufu/src/movement/Ros2_change/build/humanoid_visualization -- -j12 -l12
+[22.314s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/certezas/edromufu/src/movement/Ros2_change/build/urdf_example': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/certezas/edromufu/src/movement/Ros2_change/build/urdf_example -- -j12 -l12
+[25.347s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/certezas/edromufu/src/movement/Ros2_change/build/urdf_example' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/certezas/edromufu/src/movement/Ros2_change/build/urdf_example -- -j12 -l12
+[25.372s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/certezas/edromufu/src/movement/Ros2_change/build/humanoid_visualization' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/certezas/edromufu/src/movement/Ros2_change/build/humanoid_visualization -- -j12 -l12
+[25.386s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/certezas/edromufu/src/movement/Ros2_change/build/urdf_example': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/certezas/edromufu/src/movement/Ros2_change/build/urdf_example
+[25.386s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/certezas/edromufu/src/movement/Ros2_change/build/humanoid_visualization': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/certezas/edromufu/src/movement/Ros2_change/build/humanoid_visualization
+[26.044s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(urdf_example)
+[26.044s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/certezas/edromufu/src/movement/Ros2_change/build/urdf_example' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/certezas/edromufu/src/movement/Ros2_change/build/urdf_example
+[26.357s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example' for CMake module files
+[26.359s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example' for CMake config files
+[26.364s] Level 1:colcon.colcon_core.shell:create_environment_hook('urdf_example', 'cmake_prefix_path')
+[26.365s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/hook/cmake_prefix_path.ps1'
+[26.366s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/hook/cmake_prefix_path.dsv'
+[26.367s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/hook/cmake_prefix_path.sh'
+[26.370s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/bin'
+[26.370s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/lib/pkgconfig/urdf_example.pc'
+[26.371s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/lib/python3.10/site-packages'
+[26.372s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/bin'
+[26.373s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/package.ps1'
+[26.420s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/package.dsv'
+[26.473s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/package.sh'
+[26.488s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/package.bash'
+[26.671s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/package.zsh'
+[26.694s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/colcon-core/packages/urdf_example)
+[26.728s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(humanoid_visualization)
+[26.729s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization' for CMake module files
+[26.730s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/certezas/edromufu/src/movement/Ros2_change/src/kinematic_functions': PYTHONPATH=/home/certezas/edromufu/src/movement/Ros2_change/build/kinematic_functions/prefix_override:/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/kinematic_functions build --build-base /home/certezas/edromufu/src/movement/Ros2_change/build/kinematic_functions/build install --record /home/certezas/edromufu/src/movement/Ros2_change/build/kinematic_functions/install.log --single-version-externally-managed install_data
+[26.731s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/certezas/edromufu/src/movement/Ros2_change/build/humanoid_visualization' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/certezas/edromufu/src/movement/Ros2_change/build/humanoid_visualization
+[26.732s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization' for CMake config files
+[26.744s] Level 1:colcon.colcon_core.shell:create_environment_hook('humanoid_visualization', 'cmake_prefix_path')
+[26.745s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/hook/cmake_prefix_path.ps1'
+[26.745s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/hook/cmake_prefix_path.dsv'
+[26.746s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/hook/cmake_prefix_path.sh'
+[26.746s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/bin'
+[26.746s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/lib/pkgconfig/humanoid_visualization.pc'
+[26.746s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/lib/python3.10/site-packages'
+[26.747s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/bin'
+[26.747s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/package.ps1'
+[26.747s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/package.dsv'
+[26.755s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/package.sh'
+[26.755s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/package.bash'
+[26.755s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/package.zsh'
+[26.756s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/colcon-core/packages/humanoid_visualization)
+[26.757s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(urdf_example)
+[26.757s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example' for CMake module files
+[26.758s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example' for CMake config files
+[26.758s] Level 1:colcon.colcon_core.shell:create_environment_hook('urdf_example', 'cmake_prefix_path')
+[26.758s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/hook/cmake_prefix_path.ps1'
+[26.758s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/hook/cmake_prefix_path.dsv'
+[26.768s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/hook/cmake_prefix_path.sh'
+[26.769s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/bin'
+[26.769s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/lib/pkgconfig/urdf_example.pc'
+[26.769s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/lib/python3.10/site-packages'
+[26.769s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/bin'
+[26.769s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/package.ps1'
+[26.770s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/package.dsv'
+[26.770s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/package.sh'
+[26.770s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/package.bash'
+[26.795s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/package.zsh'
+[26.795s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/colcon-core/packages/urdf_example)
+[26.796s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(humanoid_visualization)
+[26.796s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization' for CMake module files
+[26.796s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization' for CMake config files
+[26.797s] Level 1:colcon.colcon_core.shell:create_environment_hook('humanoid_visualization', 'cmake_prefix_path')
+[26.797s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/hook/cmake_prefix_path.ps1'
+[26.802s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/hook/cmake_prefix_path.dsv'
+[26.803s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/hook/cmake_prefix_path.sh'
+[26.803s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/bin'
+[26.803s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/lib/pkgconfig/humanoid_visualization.pc'
+[26.804s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/lib/python3.10/site-packages'
+[26.804s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/bin'
+[26.804s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/package.ps1'
+[26.805s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/package.dsv'
+[26.805s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/package.sh'
+[26.813s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/package.bash'
+[26.813s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/package.zsh'
+[26.814s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/colcon-core/packages/humanoid_visualization)
+[27.215s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions' for CMake module files
+[27.216s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/certezas/edromufu/src/movement/Ros2_change/src/kinematic_functions' returned '0': PYTHONPATH=/home/certezas/edromufu/src/movement/Ros2_change/build/kinematic_functions/prefix_override:/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/kinematic_functions build --build-base /home/certezas/edromufu/src/movement/Ros2_change/build/kinematic_functions/build install --record /home/certezas/edromufu/src/movement/Ros2_change/build/kinematic_functions/install.log --single-version-externally-managed install_data
+[27.216s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions' for CMake config files
+[27.244s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib'
+[27.245s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions/bin'
+[27.245s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/pkgconfig/kinematic_functions.pc'
+[27.246s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages'
+[27.246s] Level 1:colcon.colcon_core.shell:create_environment_hook('kinematic_functions', 'pythonpath')
+[27.247s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions/share/kinematic_functions/hook/pythonpath.ps1'
+[27.249s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions/share/kinematic_functions/hook/pythonpath.dsv'
+[27.250s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions/share/kinematic_functions/hook/pythonpath.sh'
+[27.253s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions/bin'
+[27.253s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(kinematic_functions)
+[27.255s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions/share/kinematic_functions/package.ps1'
+[27.257s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions/share/kinematic_functions/package.dsv'
+[27.259s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions/share/kinematic_functions/package.sh'
+[27.261s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions/share/kinematic_functions/package.bash'
+[27.262s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions/share/kinematic_functions/package.zsh'
+[27.266s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions/share/colcon-core/packages/kinematic_functions)
+[27.267s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/certezas/edromufu/src/movement/Ros2_change/src/humanoid_definition' with build type 'ament_python'
+[27.267s] Level 1:colcon.colcon_core.shell:create_environment_hook('humanoid_definition', 'ament_prefix_path')
+[27.268s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_definition/share/humanoid_definition/hook/ament_prefix_path.ps1'
+[27.286s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_definition/share/humanoid_definition/hook/ament_prefix_path.dsv'
+[27.286s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_definition/share/humanoid_definition/hook/ament_prefix_path.sh'
+[27.287s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[27.287s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[27.325s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/certezas/edromufu/src/movement/Ros2_change/src/movement_functions' with build type 'ament_python'
+[27.325s] Level 1:colcon.colcon_core.shell:create_environment_hook('movement_functions', 'ament_prefix_path')
+[27.326s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_functions/share/movement_functions/hook/ament_prefix_path.ps1'
+[27.348s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_functions/share/movement_functions/hook/ament_prefix_path.dsv'
+[27.349s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_functions/share/movement_functions/hook/ament_prefix_path.sh'
+[27.351s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[27.351s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[27.686s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/certezas/edromufu/src/movement/Ros2_change/src/humanoid_definition'
+[27.687s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[27.687s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[27.903s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/certezas/edromufu/src/movement/Ros2_change/src/movement_functions'
+[27.903s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[27.903s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[28.425s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/certezas/edromufu/src/movement/Ros2_change/src/movement_functions': AMENT_PREFIX_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions:${AMENT_PREFIX_PATH} PYTHONPATH=/home/certezas/edromufu/src/movement/Ros2_change/build/movement_functions/prefix_override:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_functions/lib/python3.10/site-packages:/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/movement_functions build --build-base /home/certezas/edromufu/src/movement/Ros2_change/build/movement_functions/build install --record /home/certezas/edromufu/src/movement/Ros2_change/build/movement_functions/install.log --single-version-externally-managed install_data
+[28.426s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/certezas/edromufu/src/movement/Ros2_change/src/humanoid_definition': AMENT_PREFIX_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions:${AMENT_PREFIX_PATH} PYTHONPATH=/home/certezas/edromufu/src/movement/Ros2_change/build/humanoid_definition/prefix_override:/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_definition/lib/python3.10/site-packages:/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/humanoid_definition build --build-base /home/certezas/edromufu/src/movement/Ros2_change/build/humanoid_definition/build install --record /home/certezas/edromufu/src/movement/Ros2_change/build/humanoid_definition/install.log --single-version-externally-managed install_data
+[28.890s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_definition' for CMake module files
+[28.890s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/certezas/edromufu/src/movement/Ros2_change/src/humanoid_definition' returned '0': AMENT_PREFIX_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions:${AMENT_PREFIX_PATH} PYTHONPATH=/home/certezas/edromufu/src/movement/Ros2_change/build/humanoid_definition/prefix_override:/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_definition/lib/python3.10/site-packages:/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/humanoid_definition build --build-base /home/certezas/edromufu/src/movement/Ros2_change/build/humanoid_definition/build install --record /home/certezas/edromufu/src/movement/Ros2_change/build/humanoid_definition/install.log --single-version-externally-managed install_data
+[28.891s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_definition' for CMake config files
+[28.901s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_definition/lib'
+[28.901s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_definition/bin'
+[28.901s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_definition/lib/pkgconfig/humanoid_definition.pc'
+[28.902s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_definition/lib/python3.10/site-packages'
+[28.902s] Level 1:colcon.colcon_core.shell:create_environment_hook('humanoid_definition', 'pythonpath')
+[28.903s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_definition/share/humanoid_definition/hook/pythonpath.ps1'
+[28.904s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_definition/share/humanoid_definition/hook/pythonpath.dsv'
+[28.904s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_definition/share/humanoid_definition/hook/pythonpath.sh'
+[28.906s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_definition/bin'
+[28.906s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(humanoid_definition)
+[28.907s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_definition/share/humanoid_definition/package.ps1'
+[28.908s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_definition/share/humanoid_definition/package.dsv'
+[28.909s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_definition/share/humanoid_definition/package.sh'
+[28.946s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_definition/share/humanoid_definition/package.bash'
+[28.948s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_definition/share/humanoid_definition/package.zsh'
+[28.949s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_definition/share/colcon-core/packages/humanoid_definition)
+[28.951s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_functions' for CMake module files
+[28.954s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/certezas/edromufu/src/movement/Ros2_change/src/movement_functions' returned '0': AMENT_PREFIX_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions:${AMENT_PREFIX_PATH} PYTHONPATH=/home/certezas/edromufu/src/movement/Ros2_change/build/movement_functions/prefix_override:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_functions/lib/python3.10/site-packages:/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/movement_functions build --build-base /home/certezas/edromufu/src/movement/Ros2_change/build/movement_functions/build install --record /home/certezas/edromufu/src/movement/Ros2_change/build/movement_functions/install.log --single-version-externally-managed install_data
+[28.954s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_functions' for CMake config files
+[28.967s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_functions/lib'
+[28.968s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_functions/bin'
+[28.968s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_functions/lib/pkgconfig/movement_functions.pc'
+[28.969s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_functions/lib/python3.10/site-packages'
+[28.970s] Level 1:colcon.colcon_core.shell:create_environment_hook('movement_functions', 'pythonpath')
+[28.971s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_functions/share/movement_functions/hook/pythonpath.ps1'
+[28.973s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_functions/share/movement_functions/hook/pythonpath.dsv'
+[28.974s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_functions/share/movement_functions/hook/pythonpath.sh'
+[28.977s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_functions/bin'
+[28.977s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(movement_functions)
+[28.978s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_functions/share/movement_functions/package.ps1'
+[28.980s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_functions/share/movement_functions/package.dsv'
+[28.981s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_functions/share/movement_functions/package.sh'
+[28.982s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_functions/share/movement_functions/package.bash'
+[29.008s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_functions/share/movement_functions/package.zsh'
+[29.010s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/certezas/edromufu/src/movement/Ros2_change/install/movement_functions/share/colcon-core/packages/movement_functions)
+[29.081s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/certezas/edromufu/src/movement/Ros2_change/build/movement_utils' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/certezas/edromufu/src/movement/Ros2_change/build/movement_utils -- -j12 -l12
+[29.307s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/certezas/edromufu/src/movement/Ros2_change/build/movement_utils': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/certezas/edromufu/src/movement/Ros2_change/build/movement_utils
+[30.441s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(movement_utils)
+[30.441s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils' for CMake module files
+[30.442s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/certezas/edromufu/src/movement/Ros2_change/build/movement_utils' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/certezas/edromufu/src/movement/Ros2_change/build/movement_utils
+[30.442s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils' for CMake config files
+[30.442s] Level 1:colcon.colcon_core.shell:create_environment_hook('movement_utils', 'cmake_prefix_path')
+[30.443s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/hook/cmake_prefix_path.ps1'
+[30.443s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/hook/cmake_prefix_path.dsv'
+[30.443s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/hook/cmake_prefix_path.sh'
+[30.444s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/lib'
+[30.444s] Level 1:colcon.colcon_core.shell:create_environment_hook('movement_utils', 'ld_library_path_lib')
+[30.444s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/hook/ld_library_path_lib.ps1'
+[30.444s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/hook/ld_library_path_lib.dsv'
+[30.444s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/hook/ld_library_path_lib.sh'
+[30.445s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/bin'
+[30.445s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/lib/pkgconfig/movement_utils.pc'
+[30.445s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/lib/python3.10/site-packages'
+[30.445s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/bin'
+[30.445s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/package.ps1'
+[30.446s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/package.dsv'
+[30.446s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/package.sh'
+[30.446s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/package.bash'
+[30.447s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/package.zsh'
+[30.447s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/share/colcon-core/packages/movement_utils)
+[30.579s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(movement_utils)
+[30.579s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils' for CMake module files
+[30.580s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils' for CMake config files
+[30.580s] Level 1:colcon.colcon_core.shell:create_environment_hook('movement_utils', 'cmake_prefix_path')
+[30.580s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/hook/cmake_prefix_path.ps1'
+[30.581s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/hook/cmake_prefix_path.dsv'
+[30.581s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/hook/cmake_prefix_path.sh'
+[30.581s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/lib'
+[30.581s] Level 1:colcon.colcon_core.shell:create_environment_hook('movement_utils', 'ld_library_path_lib')
+[30.581s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/hook/ld_library_path_lib.ps1'
+[30.582s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/hook/ld_library_path_lib.dsv'
+[30.582s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/hook/ld_library_path_lib.sh'
+[30.582s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/bin'
+[30.582s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/lib/pkgconfig/movement_utils.pc'
+[30.583s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/lib/python3.10/site-packages'
+[30.583s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/bin'
+[30.583s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/package.ps1'
+[30.584s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/package.dsv'
+[30.584s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/package.sh'
+[30.584s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/package.bash'
+[30.585s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/package.zsh'
+[30.585s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/share/colcon-core/packages/movement_utils)
+[30.585s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/certezas/edromufu/src/movement/Ros2_change/src/movement_pages' with build type 'ament_python'
+[30.585s] Level 1:colcon.colcon_core.shell:create_environment_hook('movement_pages', 'ament_prefix_path')
+[30.586s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/share/movement_pages/hook/ament_prefix_path.ps1'
+[30.586s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/share/movement_pages/hook/ament_prefix_path.dsv'
+[30.587s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/share/movement_pages/hook/ament_prefix_path.sh'
+[30.587s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[30.587s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[30.590s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/certezas/edromufu/src/movement/Ros2_change/src/u2d2_comm' with build type 'ament_python'
+[30.590s] Level 1:colcon.colcon_core.shell:create_environment_hook('u2d2_comm', 'ament_prefix_path')
+[30.591s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/u2d2_comm/share/u2d2_comm/hook/ament_prefix_path.ps1'
+[30.591s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/certezas/edromufu/src/movement/Ros2_change/install/u2d2_comm/share/u2d2_comm/hook/ament_prefix_path.dsv'
+[30.592s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/u2d2_comm/share/u2d2_comm/hook/ament_prefix_path.sh'
+[30.592s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[30.592s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[30.914s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/certezas/edromufu/src/movement/Ros2_change/src/movement_pages'
+[30.914s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[30.914s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[31.198s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/certezas/edromufu/src/movement/Ros2_change/src/u2d2_comm'
+[31.198s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[31.198s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[31.572s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/certezas/edromufu/src/movement/Ros2_change/src/u2d2_comm': AMENT_PREFIX_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils LD_LIBRARY_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/certezas/edromufu/src/movement/Ros2_change/build/u2d2_comm/prefix_override:/home/certezas/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/u2d2_comm build --build-base /home/certezas/edromufu/src/movement/Ros2_change/build/u2d2_comm/build install --record /home/certezas/edromufu/src/movement/Ros2_change/build/u2d2_comm/install.log --single-version-externally-managed install_data
+[31.599s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/certezas/edromufu/src/movement/Ros2_change/src/movement_pages': AMENT_PREFIX_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils LD_LIBRARY_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/certezas/edromufu/src/movement/Ros2_change/build/movement_pages/prefix_override:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/movement_pages build --build-base /home/certezas/edromufu/src/movement/Ros2_change/build/movement_pages/build install --record /home/certezas/edromufu/src/movement/Ros2_change/build/movement_pages/install.log --single-version-externally-managed install_data
+[31.952s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages' for CMake module files
+[31.952s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/certezas/edromufu/src/movement/Ros2_change/src/movement_pages' returned '0': AMENT_PREFIX_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils LD_LIBRARY_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/certezas/edromufu/src/movement/Ros2_change/build/movement_pages/prefix_override:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/movement_pages build --build-base /home/certezas/edromufu/src/movement/Ros2_change/build/movement_pages/build install --record /home/certezas/edromufu/src/movement/Ros2_change/build/movement_pages/install.log --single-version-externally-managed install_data
+[31.952s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages' for CMake config files
+[31.975s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/lib'
+[31.975s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/bin'
+[31.975s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/lib/pkgconfig/movement_pages.pc'
+[31.975s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages'
+[31.975s] Level 1:colcon.colcon_core.shell:create_environment_hook('movement_pages', 'pythonpath')
+[31.975s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/share/movement_pages/hook/pythonpath.ps1'
+[31.976s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/share/movement_pages/hook/pythonpath.dsv'
+[31.976s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/share/movement_pages/hook/pythonpath.sh'
+[31.976s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/bin'
+[31.976s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(movement_pages)
+[31.976s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/share/movement_pages/package.ps1'
+[31.977s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/share/movement_pages/package.dsv'
+[31.977s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/share/movement_pages/package.sh'
+[31.977s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/share/movement_pages/package.bash'
+[31.985s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/share/movement_pages/package.zsh'
+[31.985s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/share/colcon-core/packages/movement_pages)
+[31.986s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/certezas/edromufu/src/movement/Ros2_change/src/movement_core' with build type 'ament_python'
+[31.986s] Level 1:colcon.colcon_core.shell:create_environment_hook('movement_core', 'ament_prefix_path')
+[31.986s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/share/movement_core/hook/ament_prefix_path.ps1'
+[32.007s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/share/movement_core/hook/ament_prefix_path.dsv'
+[32.008s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/share/movement_core/hook/ament_prefix_path.sh'
+[32.008s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[32.008s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[32.050s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/u2d2_comm' for CMake module files
+[32.050s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/certezas/edromufu/src/movement/Ros2_change/src/u2d2_comm' returned '0': AMENT_PREFIX_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils LD_LIBRARY_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/certezas/edromufu/src/movement/Ros2_change/build/u2d2_comm/prefix_override:/home/certezas/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/u2d2_comm build --build-base /home/certezas/edromufu/src/movement/Ros2_change/build/u2d2_comm/build install --record /home/certezas/edromufu/src/movement/Ros2_change/build/u2d2_comm/install.log --single-version-externally-managed install_data
+[32.051s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/u2d2_comm' for CMake config files
+[32.071s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib'
+[32.072s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/u2d2_comm/bin'
+[32.072s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/pkgconfig/u2d2_comm.pc'
+[32.073s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages'
+[32.073s] Level 1:colcon.colcon_core.shell:create_environment_hook('u2d2_comm', 'pythonpath')
+[32.074s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/u2d2_comm/share/u2d2_comm/hook/pythonpath.ps1'
+[32.075s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/certezas/edromufu/src/movement/Ros2_change/install/u2d2_comm/share/u2d2_comm/hook/pythonpath.dsv'
+[32.076s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/u2d2_comm/share/u2d2_comm/hook/pythonpath.sh'
+[32.078s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/u2d2_comm/bin'
+[32.078s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(u2d2_comm)
+[32.079s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/u2d2_comm/share/u2d2_comm/package.ps1'
+[32.081s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/certezas/edromufu/src/movement/Ros2_change/install/u2d2_comm/share/u2d2_comm/package.dsv'
+[32.082s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/u2d2_comm/share/u2d2_comm/package.sh'
+[32.084s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/u2d2_comm/share/u2d2_comm/package.bash'
+[32.119s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/u2d2_comm/share/u2d2_comm/package.zsh'
+[32.121s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/certezas/edromufu/src/movement/Ros2_change/install/u2d2_comm/share/colcon-core/packages/u2d2_comm)
+[32.390s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/certezas/edromufu/src/movement/Ros2_change/src/movement_core'
+[32.390s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[32.390s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[32.824s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/certezas/edromufu/src/movement/Ros2_change/src/movement_core': AMENT_PREFIX_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_functions:/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils:/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils LD_LIBRARY_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/certezas/edromufu/src/movement/Ros2_change/build/movement_core/prefix_override:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/lib/python3.10/site-packages:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_functions/lib/python3.10/site-packages:/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_definition/lib/python3.10/site-packages:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages:/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/movement_core build --build-base /home/certezas/edromufu/src/movement/Ros2_change/build/movement_core/build install --record /home/certezas/edromufu/src/movement/Ros2_change/build/movement_core/install.log --single-version-externally-managed install_data
+[33.701s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_core' for CMake module files
+[33.701s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/certezas/edromufu/src/movement/Ros2_change/src/movement_core' returned '0': AMENT_PREFIX_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_functions:/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils:/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils LD_LIBRARY_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/certezas/edromufu/src/movement/Ros2_change/build/movement_core/prefix_override:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/lib/python3.10/site-packages:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_functions/lib/python3.10/site-packages:/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_definition/lib/python3.10/site-packages:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages:/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/movement_core build --build-base /home/certezas/edromufu/src/movement/Ros2_change/build/movement_core/build install --record /home/certezas/edromufu/src/movement/Ros2_change/build/movement_core/install.log --single-version-externally-managed install_data
+[33.702s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_core' for CMake config files
+[33.746s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/lib'
+[33.746s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/bin'
+[33.746s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/lib/pkgconfig/movement_core.pc'
+[33.746s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/lib/python3.10/site-packages'
+[33.746s] Level 1:colcon.colcon_core.shell:create_environment_hook('movement_core', 'pythonpath')
+[33.747s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/share/movement_core/hook/pythonpath.ps1'
+[33.747s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/share/movement_core/hook/pythonpath.dsv'
+[33.747s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/share/movement_core/hook/pythonpath.sh'
+[33.748s] Level 1:colcon.colcon_core.environment:checking '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/bin'
+[33.748s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(movement_core)
+[33.748s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/share/movement_core/package.ps1'
+[33.748s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/share/movement_core/package.dsv'
+[33.749s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/share/movement_core/package.sh'
+[33.749s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/share/movement_core/package.bash'
+[33.749s] INFO:colcon.colcon_core.shell:Creating package script '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/share/movement_core/package.zsh'
+[33.749s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/share/colcon-core/packages/movement_core)
+[33.750s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[33.750s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[33.750s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[33.750s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[33.901s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[33.901s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[33.901s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[33.915s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[33.916s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/certezas/edromufu/src/movement/Ros2_change/install/local_setup.ps1'
+[33.944s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/certezas/edromufu/src/movement/Ros2_change/install/_local_setup_util_ps1.py'
+[33.977s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/certezas/edromufu/src/movement/Ros2_change/install/setup.ps1'
+[34.011s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/certezas/edromufu/src/movement/Ros2_change/install/local_setup.sh'
+[34.019s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/certezas/edromufu/src/movement/Ros2_change/install/_local_setup_util_sh.py'
+[34.020s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/certezas/edromufu/src/movement/Ros2_change/install/setup.sh'
+[34.041s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/certezas/edromufu/src/movement/Ros2_change/install/local_setup.bash'
+[34.082s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/certezas/edromufu/src/movement/Ros2_change/install/setup.bash'
+[34.085s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/certezas/edromufu/src/movement/Ros2_change/install/local_setup.zsh'
+[34.104s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/certezas/edromufu/src/movement/Ros2_change/install/setup.zsh'

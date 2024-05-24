@@ -1,0 +1,39 @@
+[0.437s] Invoking command in '/home/certezas/edromufu/src/movement/Ros2_change/src/movement_core': AMENT_PREFIX_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_functions:/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils:/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils LD_LIBRARY_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/certezas/edromufu/src/movement/Ros2_change/build/movement_core/prefix_override:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/lib/python3.10/site-packages:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_functions/lib/python3.10/site-packages:/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_definition/lib/python3.10/site-packages:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages:/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/movement_core build --build-base /home/certezas/edromufu/src/movement/Ros2_change/build/movement_core/build install --record /home/certezas/edromufu/src/movement/Ros2_change/build/movement_core/install.log --single-version-externally-managed install_data
+[0.613s] running egg_info
+[0.614s] creating ../../build/movement_core/movement_core.egg-info
+[0.614s] writing ../../build/movement_core/movement_core.egg-info/PKG-INFO
+[0.614s] writing dependency_links to ../../build/movement_core/movement_core.egg-info/dependency_links.txt
+[0.614s] writing entry points to ../../build/movement_core/movement_core.egg-info/entry_points.txt
+[0.614s] writing requirements to ../../build/movement_core/movement_core.egg-info/requires.txt
+[0.615s] writing top-level names to ../../build/movement_core/movement_core.egg-info/top_level.txt
+[0.615s] writing manifest file '../../build/movement_core/movement_core.egg-info/SOURCES.txt'
+[0.616s] reading manifest file '../../build/movement_core/movement_core.egg-info/SOURCES.txt'
+[0.616s] writing manifest file '../../build/movement_core/movement_core.egg-info/SOURCES.txt'
+[0.616s] running build
+[0.616s] running build_py
+[0.617s] creating /home/certezas/edromufu/src/movement/Ros2_change/build/movement_core/build
+[0.617s] creating /home/certezas/edromufu/src/movement/Ros2_change/build/movement_core/build/lib
+[0.617s] creating /home/certezas/edromufu/src/movement/Ros2_change/build/movement_core/build/lib/movement_core
+[0.617s] copying movement_core/core_head.py -> /home/certezas/edromufu/src/movement/Ros2_change/build/movement_core/build/lib/movement_core
+[0.617s] copying movement_core/__init__.py -> /home/certezas/edromufu/src/movement/Ros2_change/build/movement_core/build/lib/movement_core
+[0.617s] copying movement_core/core.py -> /home/certezas/edromufu/src/movement/Ros2_change/build/movement_core/build/lib/movement_core
+[0.617s] running install
+[0.617s] running install_lib
+[0.618s] creating /home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/lib/python3.10/site-packages/movement_core
+[0.618s] copying /home/certezas/edromufu/src/movement/Ros2_change/build/movement_core/build/lib/movement_core/core_head.py -> /home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/lib/python3.10/site-packages/movement_core
+[0.618s] copying /home/certezas/edromufu/src/movement/Ros2_change/build/movement_core/build/lib/movement_core/__init__.py -> /home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/lib/python3.10/site-packages/movement_core
+[0.618s] copying /home/certezas/edromufu/src/movement/Ros2_change/build/movement_core/build/lib/movement_core/core.py -> /home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/lib/python3.10/site-packages/movement_core
+[0.618s] byte-compiling /home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/lib/python3.10/site-packages/movement_core/core_head.py to core_head.cpython-310.pyc
+[0.619s] byte-compiling /home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/lib/python3.10/site-packages/movement_core/__init__.py to __init__.cpython-310.pyc
+[0.619s] byte-compiling /home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/lib/python3.10/site-packages/movement_core/core.py to core.cpython-310.pyc
+[0.621s] running install_data
+[0.621s] creating /home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/share/ament_index
+[0.621s] creating /home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/share/ament_index/resource_index
+[0.621s] creating /home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/share/ament_index/resource_index/packages
+[0.621s] copying resource/movement_core -> /home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/share/ament_index/resource_index/packages
+[0.621s] copying package.xml -> /home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/share/movement_core
+[0.621s] running install_egg_info
+[0.622s] Copying ../../build/movement_core/movement_core.egg-info to /home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/lib/python3.10/site-packages/movement_core-0.0.0-py3.10.egg-info
+[0.623s] running install_scripts
+[0.638s] writing list of installed files to '/home/certezas/edromufu/src/movement/Ros2_change/build/movement_core/install.log'
+[0.652s] Invoked command in '/home/certezas/edromufu/src/movement/Ros2_change/src/movement_core' returned '0': AMENT_PREFIX_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_functions:/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils:/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils LD_LIBRARY_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/certezas/edromufu/src/movement/Ros2_change/build/movement_core/prefix_override:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/lib/python3.10/site-packages:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_functions/lib/python3.10/site-packages:/home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_definition/lib/python3.10/site-packages:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages:/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/movement_core build --build-base /home/certezas/edromufu/src/movement/Ros2_change/build/movement_core/build install --record /home/certezas/edromufu/src/movement/Ros2_change/build/movement_core/install.log --single-version-externally-managed install_data

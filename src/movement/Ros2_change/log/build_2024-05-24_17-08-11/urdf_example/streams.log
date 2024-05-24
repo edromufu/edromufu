@@ -1,0 +1,27 @@
+[0.844s] Invoking command in '/home/certezas/edromufu/src/movement/Ros2_change/build/urdf_example': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/certezas/edromufu/src/movement/Ros2_change/build/urdf_example -- -j12 -l12
+[3.877s] Invoked command in '/home/certezas/edromufu/src/movement/Ros2_change/build/urdf_example' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/certezas/edromufu/src/movement/Ros2_change/build/urdf_example -- -j12 -l12
+[3.916s] Invoking command in '/home/certezas/edromufu/src/movement/Ros2_change/build/urdf_example': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/certezas/edromufu/src/movement/Ros2_change/build/urdf_example
+[4.221s] -- Install configuration: ""
+[4.398s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/description
+[4.468s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/description/robox.urdf
+[4.469s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/launch
+[4.530s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/launch/rsp.launch.py
+[4.530s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/launch/rsp_sim.launch.py
+[4.531s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/worlds
+[4.536s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/worlds/test_world.world
+[4.537s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/ament_index/resource_index/package_run_dependencies/urdf_example
+[4.537s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/ament_index/resource_index/parent_prefix_path/urdf_example
+[4.537s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/environment/ament_prefix_path.sh
+[4.538s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/environment/ament_prefix_path.dsv
+[4.538s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/environment/path.sh
+[4.539s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/environment/path.dsv
+[4.539s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/local_setup.bash
+[4.539s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/local_setup.sh
+[4.539s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/local_setup.zsh
+[4.540s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/local_setup.dsv
+[4.540s] -- Installing: /home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/package.dsv
+[4.572s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/ament_index/resource_index/packages/urdf_example
+[4.572s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/cmake/urdf_exampleConfig.cmake
+[4.572s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/cmake/urdf_exampleConfig-version.cmake
+[4.572s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/package.xml
+[4.575s] Invoked command in '/home/certezas/edromufu/src/movement/Ros2_change/build/urdf_example' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/certezas/edromufu/src/movement/Ros2_change/build/urdf_example

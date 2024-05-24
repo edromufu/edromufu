@@ -1,0 +1,22 @@
+[0.415s] Invoking command in '/home/certezas/edromufu/src/movement/Ros2_change/build/humanoid_visualization': /usr/bin/cmake --build /home/certezas/edromufu/src/movement/Ros2_change/build/humanoid_visualization -- -j12 -l12
+[1.642s] Invoked command in '/home/certezas/edromufu/src/movement/Ros2_change/build/humanoid_visualization' returned '0': /usr/bin/cmake --build /home/certezas/edromufu/src/movement/Ros2_change/build/humanoid_visualization -- -j12 -l12
+[1.669s] Invoking command in '/home/certezas/edromufu/src/movement/Ros2_change/build/humanoid_visualization': /usr/bin/cmake --install /home/certezas/edromufu/src/movement/Ros2_change/build/humanoid_visualization
+[1.738s] -- Install configuration: ""
+[1.760s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization//launch
+[1.761s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization//launch/display.launch
+[1.763s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/ament_index/resource_index/package_run_dependencies/humanoid_visualization
+[1.763s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/ament_index/resource_index/parent_prefix_path/humanoid_visualization
+[1.765s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/environment/ament_prefix_path.sh
+[1.765s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/environment/ament_prefix_path.dsv
+[1.766s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/environment/path.sh
+[1.766s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/environment/path.dsv
+[1.766s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/local_setup.bash
+[1.766s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/local_setup.sh
+[1.767s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/local_setup.zsh
+[1.767s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/local_setup.dsv
+[1.767s] -- Installing: /home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/package.dsv
+[1.793s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/ament_index/resource_index/packages/humanoid_visualization
+[1.823s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/cmake/humanoid_visualizationConfig.cmake
+[1.824s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/cmake/humanoid_visualizationConfig-version.cmake
+[1.824s] -- Up-to-date: /home/certezas/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/package.xml
+[1.828s] Invoked command in '/home/certezas/edromufu/src/movement/Ros2_change/build/humanoid_visualization' returned '0': /usr/bin/cmake --install /home/certezas/edromufu/src/movement/Ros2_change/build/humanoid_visualization

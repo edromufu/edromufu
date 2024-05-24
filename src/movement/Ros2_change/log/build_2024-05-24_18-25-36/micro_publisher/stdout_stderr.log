@@ -1,0 +1,35 @@
+running egg_info
+creating ../../../build/micro_publisher/micro_publisher.egg-info
+writing ../../../build/micro_publisher/micro_publisher.egg-info/PKG-INFO
+writing dependency_links to ../../../build/micro_publisher/micro_publisher.egg-info/dependency_links.txt
+writing entry points to ../../../build/micro_publisher/micro_publisher.egg-info/entry_points.txt
+writing requirements to ../../../build/micro_publisher/micro_publisher.egg-info/requires.txt
+writing top-level names to ../../../build/micro_publisher/micro_publisher.egg-info/top_level.txt
+writing manifest file '../../../build/micro_publisher/micro_publisher.egg-info/SOURCES.txt'
+reading manifest file '../../../build/micro_publisher/micro_publisher.egg-info/SOURCES.txt'
+writing manifest file '../../../build/micro_publisher/micro_publisher.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/certezas/edromufu/src/movement/Ros2_change/build/micro_publisher/build
+creating /home/certezas/edromufu/src/movement/Ros2_change/build/micro_publisher/build/lib
+creating /home/certezas/edromufu/src/movement/Ros2_change/build/micro_publisher/build/lib/micro_publisher
+copying micro_publisher/pub_to_esp.py -> /home/certezas/edromufu/src/movement/Ros2_change/build/micro_publisher/build/lib/micro_publisher
+copying micro_publisher/__init__.py -> /home/certezas/edromufu/src/movement/Ros2_change/build/micro_publisher/build/lib/micro_publisher
+running install
+running install_lib
+creating /home/certezas/edromufu/src/movement/Ros2_change/install/micro_publisher/lib/python3.10/site-packages/micro_publisher
+copying /home/certezas/edromufu/src/movement/Ros2_change/build/micro_publisher/build/lib/micro_publisher/pub_to_esp.py -> /home/certezas/edromufu/src/movement/Ros2_change/install/micro_publisher/lib/python3.10/site-packages/micro_publisher
+copying /home/certezas/edromufu/src/movement/Ros2_change/build/micro_publisher/build/lib/micro_publisher/__init__.py -> /home/certezas/edromufu/src/movement/Ros2_change/install/micro_publisher/lib/python3.10/site-packages/micro_publisher
+byte-compiling /home/certezas/edromufu/src/movement/Ros2_change/install/micro_publisher/lib/python3.10/site-packages/micro_publisher/pub_to_esp.py to pub_to_esp.cpython-310.pyc
+byte-compiling /home/certezas/edromufu/src/movement/Ros2_change/install/micro_publisher/lib/python3.10/site-packages/micro_publisher/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/certezas/edromufu/src/movement/Ros2_change/install/micro_publisher/share/ament_index
+creating /home/certezas/edromufu/src/movement/Ros2_change/install/micro_publisher/share/ament_index/resource_index
+creating /home/certezas/edromufu/src/movement/Ros2_change/install/micro_publisher/share/ament_index/resource_index/packages
+copying resource/micro_publisher -> /home/certezas/edromufu/src/movement/Ros2_change/install/micro_publisher/share/ament_index/resource_index/packages
+copying package.xml -> /home/certezas/edromufu/src/movement/Ros2_change/install/micro_publisher/share/micro_publisher
+running install_egg_info
+Copying ../../../build/micro_publisher/micro_publisher.egg-info to /home/certezas/edromufu/src/movement/Ros2_change/install/micro_publisher/lib/python3.10/site-packages/micro_publisher-0.0.0-py3.10.egg-info
+running install_scripts
+Installing pub_to_esp script to /home/certezas/edromufu/src/movement/Ros2_change/install/micro_publisher/lib/micro_publisher
+writing list of installed files to '/home/certezas/edromufu/src/movement/Ros2_change/build/micro_publisher/install.log'

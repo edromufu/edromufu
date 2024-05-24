@@ -1,0 +1,37 @@
+[0.782s] Invoking command in '/home/certezas/edromufu/src/movement/Ros2_change/src/micro_ros/micro_publisher': PYTHONPATH=/home/certezas/edromufu/src/movement/Ros2_change/build/micro_publisher/prefix_override:/home/certezas/edromufu/src/movement/Ros2_change/install/micro_publisher/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/micro_publisher build --build-base /home/certezas/edromufu/src/movement/Ros2_change/build/micro_publisher/build install --record /home/certezas/edromufu/src/movement/Ros2_change/build/micro_publisher/install.log --single-version-externally-managed install_data
+[0.986s] running egg_info
+[0.987s] creating ../../../build/micro_publisher/micro_publisher.egg-info
+[0.987s] writing ../../../build/micro_publisher/micro_publisher.egg-info/PKG-INFO
+[0.987s] writing dependency_links to ../../../build/micro_publisher/micro_publisher.egg-info/dependency_links.txt
+[0.987s] writing entry points to ../../../build/micro_publisher/micro_publisher.egg-info/entry_points.txt
+[0.987s] writing requirements to ../../../build/micro_publisher/micro_publisher.egg-info/requires.txt
+[0.987s] writing top-level names to ../../../build/micro_publisher/micro_publisher.egg-info/top_level.txt
+[0.987s] writing manifest file '../../../build/micro_publisher/micro_publisher.egg-info/SOURCES.txt'
+[0.988s] reading manifest file '../../../build/micro_publisher/micro_publisher.egg-info/SOURCES.txt'
+[0.989s] writing manifest file '../../../build/micro_publisher/micro_publisher.egg-info/SOURCES.txt'
+[0.989s] running build
+[0.990s] running build_py
+[0.990s] creating /home/certezas/edromufu/src/movement/Ros2_change/build/micro_publisher/build
+[0.990s] creating /home/certezas/edromufu/src/movement/Ros2_change/build/micro_publisher/build/lib
+[0.990s] creating /home/certezas/edromufu/src/movement/Ros2_change/build/micro_publisher/build/lib/micro_publisher
+[0.990s] copying micro_publisher/pub_to_esp.py -> /home/certezas/edromufu/src/movement/Ros2_change/build/micro_publisher/build/lib/micro_publisher
+[0.990s] copying micro_publisher/__init__.py -> /home/certezas/edromufu/src/movement/Ros2_change/build/micro_publisher/build/lib/micro_publisher
+[0.990s] running install
+[0.990s] running install_lib
+[0.991s] creating /home/certezas/edromufu/src/movement/Ros2_change/install/micro_publisher/lib/python3.10/site-packages/micro_publisher
+[0.991s] copying /home/certezas/edromufu/src/movement/Ros2_change/build/micro_publisher/build/lib/micro_publisher/pub_to_esp.py -> /home/certezas/edromufu/src/movement/Ros2_change/install/micro_publisher/lib/python3.10/site-packages/micro_publisher
+[0.991s] copying /home/certezas/edromufu/src/movement/Ros2_change/build/micro_publisher/build/lib/micro_publisher/__init__.py -> /home/certezas/edromufu/src/movement/Ros2_change/install/micro_publisher/lib/python3.10/site-packages/micro_publisher
+[0.991s] byte-compiling /home/certezas/edromufu/src/movement/Ros2_change/install/micro_publisher/lib/python3.10/site-packages/micro_publisher/pub_to_esp.py to pub_to_esp.cpython-310.pyc
+[0.991s] byte-compiling /home/certezas/edromufu/src/movement/Ros2_change/install/micro_publisher/lib/python3.10/site-packages/micro_publisher/__init__.py to __init__.cpython-310.pyc
+[0.992s] running install_data
+[0.992s] creating /home/certezas/edromufu/src/movement/Ros2_change/install/micro_publisher/share/ament_index
+[0.992s] creating /home/certezas/edromufu/src/movement/Ros2_change/install/micro_publisher/share/ament_index/resource_index
+[0.992s] creating /home/certezas/edromufu/src/movement/Ros2_change/install/micro_publisher/share/ament_index/resource_index/packages
+[0.992s] copying resource/micro_publisher -> /home/certezas/edromufu/src/movement/Ros2_change/install/micro_publisher/share/ament_index/resource_index/packages
+[0.992s] copying package.xml -> /home/certezas/edromufu/src/movement/Ros2_change/install/micro_publisher/share/micro_publisher
+[0.992s] running install_egg_info
+[0.993s] Copying ../../../build/micro_publisher/micro_publisher.egg-info to /home/certezas/edromufu/src/movement/Ros2_change/install/micro_publisher/lib/python3.10/site-packages/micro_publisher-0.0.0-py3.10.egg-info
+[0.994s] running install_scripts
+[1.011s] Installing pub_to_esp script to /home/certezas/edromufu/src/movement/Ros2_change/install/micro_publisher/lib/micro_publisher
+[1.011s] writing list of installed files to '/home/certezas/edromufu/src/movement/Ros2_change/build/micro_publisher/install.log'
+[1.033s] Invoked command in '/home/certezas/edromufu/src/movement/Ros2_change/src/micro_ros/micro_publisher' returned '0': PYTHONPATH=/home/certezas/edromufu/src/movement/Ros2_change/build/micro_publisher/prefix_override:/home/certezas/edromufu/src/movement/Ros2_change/install/micro_publisher/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/micro_publisher build --build-base /home/certezas/edromufu/src/movement/Ros2_change/build/micro_publisher/build install --record /home/certezas/edromufu/src/movement/Ros2_change/build/micro_publisher/install.log --single-version-externally-managed install_data

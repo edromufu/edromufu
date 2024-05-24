@@ -1,0 +1,20 @@
+[0.686s] Invoking command in '/home/certezas/edromufu/src/movement/Ros2_change/src/kinematic_functions': PYTHONPATH=/home/certezas/edromufu/src/movement/Ros2_change/build/kinematic_functions/prefix_override:/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/kinematic_functions build --build-base /home/certezas/edromufu/src/movement/Ros2_change/build/kinematic_functions/build install --record /home/certezas/edromufu/src/movement/Ros2_change/build/kinematic_functions/install.log --single-version-externally-managed install_data
+[0.951s] running egg_info
+[0.952s] writing ../../build/kinematic_functions/kinematic_functions.egg-info/PKG-INFO
+[0.952s] writing dependency_links to ../../build/kinematic_functions/kinematic_functions.egg-info/dependency_links.txt
+[0.953s] writing entry points to ../../build/kinematic_functions/kinematic_functions.egg-info/entry_points.txt
+[0.953s] writing requirements to ../../build/kinematic_functions/kinematic_functions.egg-info/requires.txt
+[0.953s] writing top-level names to ../../build/kinematic_functions/kinematic_functions.egg-info/top_level.txt
+[0.955s] reading manifest file '../../build/kinematic_functions/kinematic_functions.egg-info/SOURCES.txt'
+[0.956s] writing manifest file '../../build/kinematic_functions/kinematic_functions.egg-info/SOURCES.txt'
+[0.956s] running build
+[0.956s] running build_py
+[0.957s] running install
+[0.957s] running install_lib
+[0.959s] running install_data
+[0.959s] running install_egg_info
+[0.961s] removing '/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages/kinematic_functions-0.0.0-py3.10.egg-info' (and everything under it)
+[0.961s] Copying ../../build/kinematic_functions/kinematic_functions.egg-info to /home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages/kinematic_functions-0.0.0-py3.10.egg-info
+[0.962s] running install_scripts
+[0.984s] writing list of installed files to '/home/certezas/edromufu/src/movement/Ros2_change/build/kinematic_functions/install.log'
+[1.006s] Invoked command in '/home/certezas/edromufu/src/movement/Ros2_change/src/kinematic_functions' returned '0': PYTHONPATH=/home/certezas/edromufu/src/movement/Ros2_change/build/kinematic_functions/prefix_override:/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/kinematic_functions build --build-base /home/certezas/edromufu/src/movement/Ros2_change/build/kinematic_functions/build install --record /home/certezas/edromufu/src/movement/Ros2_change/build/kinematic_functions/install.log --single-version-externally-managed install_data

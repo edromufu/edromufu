@@ -1,0 +1,21 @@
+running egg_info
+writing ../../build/movement_core/movement_core.egg-info/PKG-INFO
+writing dependency_links to ../../build/movement_core/movement_core.egg-info/dependency_links.txt
+writing entry points to ../../build/movement_core/movement_core.egg-info/entry_points.txt
+writing requirements to ../../build/movement_core/movement_core.egg-info/requires.txt
+writing top-level names to ../../build/movement_core/movement_core.egg-info/top_level.txt
+reading manifest file '../../build/movement_core/movement_core.egg-info/SOURCES.txt'
+writing manifest file '../../build/movement_core/movement_core.egg-info/SOURCES.txt'
+running build
+running build_py
+copying movement_core/core.py -> /home/certezas/edromufu/src/movement/Ros2_change/build/movement_core/build/lib/movement_core
+running install
+running install_lib
+copying /home/certezas/edromufu/src/movement/Ros2_change/build/movement_core/build/lib/movement_core/core.py -> /home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/lib/python3.10/site-packages/movement_core
+byte-compiling /home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/lib/python3.10/site-packages/movement_core/core.py to core.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/lib/python3.10/site-packages/movement_core-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/movement_core/movement_core.egg-info to /home/certezas/edromufu/src/movement/Ros2_change/install/movement_core/lib/python3.10/site-packages/movement_core-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/certezas/edromufu/src/movement/Ros2_change/build/movement_core/install.log'

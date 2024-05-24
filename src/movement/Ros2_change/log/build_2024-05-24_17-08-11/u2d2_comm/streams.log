@@ -1,0 +1,21 @@
+[0.982s] Invoking command in '/home/certezas/edromufu/src/movement/Ros2_change/src/u2d2_comm': AMENT_PREFIX_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils LD_LIBRARY_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/certezas/edromufu/src/movement/Ros2_change/build/u2d2_comm/prefix_override:/home/certezas/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/u2d2_comm build --build-base /home/certezas/edromufu/src/movement/Ros2_change/build/u2d2_comm/build install --record /home/certezas/edromufu/src/movement/Ros2_change/build/u2d2_comm/install.log --single-version-externally-managed install_data
+[1.161s] running egg_info
+[1.161s] writing ../../build/u2d2_comm/u2d2_comm.egg-info/PKG-INFO
+[1.207s] writing dependency_links to ../../build/u2d2_comm/u2d2_comm.egg-info/dependency_links.txt
+[1.208s] writing entry points to ../../build/u2d2_comm/u2d2_comm.egg-info/entry_points.txt
+[1.216s] writing requirements to ../../build/u2d2_comm/u2d2_comm.egg-info/requires.txt
+[1.216s] writing top-level names to ../../build/u2d2_comm/u2d2_comm.egg-info/top_level.txt
+[1.221s] reading manifest file '../../build/u2d2_comm/u2d2_comm.egg-info/SOURCES.txt'
+[1.283s] adding license file 'LICENSE'
+[1.284s] writing manifest file '../../build/u2d2_comm/u2d2_comm.egg-info/SOURCES.txt'
+[1.284s] running build
+[1.284s] running build_py
+[1.306s] running install
+[1.307s] running install_lib
+[1.348s] running install_data
+[1.356s] running install_egg_info
+[1.357s] removing '/home/certezas/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages/u2d2_comm-0.0.0-py3.10.egg-info' (and everything under it)
+[1.357s] Copying ../../build/u2d2_comm/u2d2_comm.egg-info to /home/certezas/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages/u2d2_comm-0.0.0-py3.10.egg-info
+[1.358s] running install_scripts
+[1.374s] writing list of installed files to '/home/certezas/edromufu/src/movement/Ros2_change/build/u2d2_comm/install.log'
+[1.460s] Invoked command in '/home/certezas/edromufu/src/movement/Ros2_change/src/u2d2_comm' returned '0': AMENT_PREFIX_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils LD_LIBRARY_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/certezas/edromufu/src/movement/Ros2_change/build/u2d2_comm/prefix_override:/home/certezas/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/u2d2_comm build --build-base /home/certezas/edromufu/src/movement/Ros2_change/build/u2d2_comm/build install --record /home/certezas/edromufu/src/movement/Ros2_change/build/u2d2_comm/install.log --single-version-externally-managed install_data

@@ -1,0 +1,46 @@
+running egg_info
+creating ../../build/movement_pages/movement_pages.egg-info
+writing ../../build/movement_pages/movement_pages.egg-info/PKG-INFO
+writing dependency_links to ../../build/movement_pages/movement_pages.egg-info/dependency_links.txt
+writing entry points to ../../build/movement_pages/movement_pages.egg-info/entry_points.txt
+writing requirements to ../../build/movement_pages/movement_pages.egg-info/requires.txt
+writing top-level names to ../../build/movement_pages/movement_pages.egg-info/top_level.txt
+writing manifest file '../../build/movement_pages/movement_pages.egg-info/SOURCES.txt'
+reading manifest file '../../build/movement_pages/movement_pages.egg-info/SOURCES.txt'
+writing manifest file '../../build/movement_pages/movement_pages.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/certezas/edromufu/src/movement/Ros2_change/build/movement_pages/build
+creating /home/certezas/edromufu/src/movement/Ros2_change/build/movement_pages/build/lib
+creating /home/certezas/edromufu/src/movement/Ros2_change/build/movement_pages/build/lib/movement_pages
+copying movement_pages/new_pose.py -> /home/certezas/edromufu/src/movement/Ros2_change/build/movement_pages/build/lib/movement_pages
+copying movement_pages/__init__.py -> /home/certezas/edromufu/src/movement/Ros2_change/build/movement_pages/build/lib/movement_pages
+copying movement_pages/page_runner.py -> /home/certezas/edromufu/src/movement/Ros2_change/build/movement_pages/build/lib/movement_pages
+copying movement_pages/ui.py -> /home/certezas/edromufu/src/movement/Ros2_change/build/movement_pages/build/lib/movement_pages
+copying movement_pages/page_interface.py -> /home/certezas/edromufu/src/movement/Ros2_change/build/movement_pages/build/lib/movement_pages
+copying movement_pages/edrom_logo_rc.py -> /home/certezas/edromufu/src/movement/Ros2_change/build/movement_pages/build/lib/movement_pages
+running install
+running install_lib
+creating /home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages/movement_pages
+copying /home/certezas/edromufu/src/movement/Ros2_change/build/movement_pages/build/lib/movement_pages/new_pose.py -> /home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages/movement_pages
+copying /home/certezas/edromufu/src/movement/Ros2_change/build/movement_pages/build/lib/movement_pages/__init__.py -> /home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages/movement_pages
+copying /home/certezas/edromufu/src/movement/Ros2_change/build/movement_pages/build/lib/movement_pages/page_runner.py -> /home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages/movement_pages
+copying /home/certezas/edromufu/src/movement/Ros2_change/build/movement_pages/build/lib/movement_pages/ui.py -> /home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages/movement_pages
+copying /home/certezas/edromufu/src/movement/Ros2_change/build/movement_pages/build/lib/movement_pages/page_interface.py -> /home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages/movement_pages
+copying /home/certezas/edromufu/src/movement/Ros2_change/build/movement_pages/build/lib/movement_pages/edrom_logo_rc.py -> /home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages/movement_pages
+byte-compiling /home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages/movement_pages/new_pose.py to new_pose.cpython-310.pyc
+byte-compiling /home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages/movement_pages/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages/movement_pages/page_runner.py to page_runner.cpython-310.pyc
+byte-compiling /home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages/movement_pages/ui.py to ui.cpython-310.pyc
+byte-compiling /home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages/movement_pages/page_interface.py to page_interface.cpython-310.pyc
+byte-compiling /home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages/movement_pages/edrom_logo_rc.py to edrom_logo_rc.cpython-310.pyc
+running install_data
+creating /home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/share/ament_index
+creating /home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/share/ament_index/resource_index
+creating /home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/share/ament_index/resource_index/packages
+copying resource/movement_pages -> /home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/share/ament_index/resource_index/packages
+copying package.xml -> /home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/share/movement_pages
+running install_egg_info
+Copying ../../build/movement_pages/movement_pages.egg-info to /home/certezas/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages/movement_pages-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/certezas/edromufu/src/movement/Ros2_change/build/movement_pages/install.log'

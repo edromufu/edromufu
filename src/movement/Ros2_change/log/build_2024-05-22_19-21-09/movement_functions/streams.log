@@ -1,0 +1,20 @@
+[1.030s] Invoking command in '/home/certezas/edromufu/src/movement/Ros2_change/src/movement_functions': AMENT_PREFIX_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions PYTHONPATH=/home/certezas/edromufu/src/movement/Ros2_change/build/movement_functions/prefix_override:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_functions/lib/python3.10/site-packages:/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/movement_functions build --build-base /home/certezas/edromufu/src/movement/Ros2_change/build/movement_functions/build install --record /home/certezas/edromufu/src/movement/Ros2_change/build/movement_functions/install.log --single-version-externally-managed install_data
+[1.234s] running egg_info
+[1.236s] writing ../../build/movement_functions/movement_functions.egg-info/PKG-INFO
+[1.236s] writing dependency_links to ../../build/movement_functions/movement_functions.egg-info/dependency_links.txt
+[1.236s] writing entry points to ../../build/movement_functions/movement_functions.egg-info/entry_points.txt
+[1.236s] writing requirements to ../../build/movement_functions/movement_functions.egg-info/requires.txt
+[1.236s] writing top-level names to ../../build/movement_functions/movement_functions.egg-info/top_level.txt
+[1.238s] reading manifest file '../../build/movement_functions/movement_functions.egg-info/SOURCES.txt'
+[1.240s] writing manifest file '../../build/movement_functions/movement_functions.egg-info/SOURCES.txt'
+[1.240s] running build
+[1.240s] running build_py
+[1.241s] running install
+[1.241s] running install_lib
+[1.243s] running install_data
+[1.244s] running install_egg_info
+[1.246s] removing '/home/certezas/edromufu/src/movement/Ros2_change/install/movement_functions/lib/python3.10/site-packages/movement_functions-0.0.0-py3.10.egg-info' (and everything under it)
+[1.246s] Copying ../../build/movement_functions/movement_functions.egg-info to /home/certezas/edromufu/src/movement/Ros2_change/install/movement_functions/lib/python3.10/site-packages/movement_functions-0.0.0-py3.10.egg-info
+[1.261s] running install_scripts
+[1.285s] writing list of installed files to '/home/certezas/edromufu/src/movement/Ros2_change/build/movement_functions/install.log'
+[1.312s] Invoked command in '/home/certezas/edromufu/src/movement/Ros2_change/src/movement_functions' returned '0': AMENT_PREFIX_PATH=/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions PYTHONPATH=/home/certezas/edromufu/src/movement/Ros2_change/build/movement_functions/prefix_override:/home/certezas/edromufu/src/movement/Ros2_change/install/movement_functions/lib/python3.10/site-packages:/home/certezas/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/movement_functions build --build-base /home/certezas/edromufu/src/movement/Ros2_change/build/movement_functions/build install --record /home/certezas/edromufu/src/movement/Ros2_change/build/movement_functions/install.log --single-version-externally-managed install_data

@@ -1,0 +1,6 @@
+Invoking command in '/home/certezas/edromufu/src/movement/Ros2_change/build/tinyxml2': /usr/bin/cmake /home/certezas/edromufu/src/movement/Ros2_change/src/micro_ros/Tinyxml2 -DCMAKE_INSTALL_PREFIX=/home/certezas/edromufu/src/movement/Ros2_change/install/tinyxml2
+Invoked command in '/home/certezas/edromufu/src/movement/Ros2_change/build/tinyxml2' returned '0': /usr/bin/cmake /home/certezas/edromufu/src/movement/Ros2_change/src/micro_ros/Tinyxml2 -DCMAKE_INSTALL_PREFIX=/home/certezas/edromufu/src/movement/Ros2_change/install/tinyxml2
+Invoking command in '/home/certezas/edromufu/src/movement/Ros2_change/build/tinyxml2': /usr/bin/cmake --build /home/certezas/edromufu/src/movement/Ros2_change/build/tinyxml2 -- -j12 -l12
+Invoked command in '/home/certezas/edromufu/src/movement/Ros2_change/build/tinyxml2' returned '0': /usr/bin/cmake --build /home/certezas/edromufu/src/movement/Ros2_change/build/tinyxml2 -- -j12 -l12
+Invoking command in '/home/certezas/edromufu/src/movement/Ros2_change/build/tinyxml2': /usr/bin/cmake --install /home/certezas/edromufu/src/movement/Ros2_change/build/tinyxml2
+Invoked command in '/home/certezas/edromufu/src/movement/Ros2_change/build/tinyxml2' returned '0': /usr/bin/cmake --install /home/certezas/edromufu/src/movement/Ros2_change/build/tinyxml2
