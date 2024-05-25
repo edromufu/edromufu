@@ -59,7 +59,7 @@ class Core:
         #self.motorsTorque = rospy.ServiceProxy('u2d2_comm/enableTorque', enable_torque)        (4)
 
         #self.pub2motors = rospy.Publisher('u2d2_comm/data2body', BodyMotorsData, queue_size=100)  (10)
-        self.pub2motors = self.node.create_subscription(BodyMotorsData, 'u2d2_comm/data2body', queue_size=100)  #(10)
+        self.pub2motors = self.node.create_subscription(BodyMotorsData, 'u2d2_comm/data2body', 100)  #(10)
         self.pub2motorsMsg = BodyMotorsData()
 
         
@@ -106,7 +106,7 @@ class Core:
         if self.PUB2VIS:
             self.queuevis = []
             #self.pub2vis = rospy.Publisher('/joint_states', JointState, queue_size=100)    (15)
-            self.pub2vis = self.node.create_subscription(JointState, '/joint_states', queue_size=100)#(15)
+            self.pub2vis = self.node.create_subscription(JointState, '/joint_states', 100)#(15)
             self.pub2vismsg = JointState()
             self.pub2vismsg.name = ['COM_height_slider','COM_pitch_joint','RHIP_UX_joint','RHIP_UY_joint','RKNEE_joint',
             'RANKLE_UY_joint','RANKLE_UX_joint','LHIP_UX_joint','LHIP_UY_joint',

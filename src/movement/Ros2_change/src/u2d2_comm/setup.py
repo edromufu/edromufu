@@ -20,6 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+        	'dynamixel_sdk_test = u2d2_comm.dynamixel_sdk_test:main',
+        	'dynamixel_sdk_comm = u2d2_comm.dynamixel_sdk_comm:main',
         ],
     },
 )

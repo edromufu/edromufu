@@ -278,7 +278,9 @@ class u2d2Control():
         #rospy.spin() (9)
         rclpy.spin(u2d2.node) #(9)
 
-if __name__ == '__main__':
-
+def main():
     u2d2 = u2d2Control()
     u2d2.run()
+    
+if __name__ == '__main__':
+   main()

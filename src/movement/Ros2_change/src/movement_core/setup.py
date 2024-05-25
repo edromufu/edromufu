@@ -20,6 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+        	'core = movement_core.core:main',
+        	'core_head = movement_core.core_head:main',
         ],
     },
 )

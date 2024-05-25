@@ -157,8 +157,10 @@ class CoreHead:
                     #lastTime = rospy.Time.now().nsecs (9)
                     last_time = self.node.get_clock().now().nanoseconds #(9)
 
-
-if __name__ == '__main__':
+def main():
     movement_head = CoreHead()
     movement_head.run()
     rclpy.spin()
+
+if __name__ == '__main__':
+    main()

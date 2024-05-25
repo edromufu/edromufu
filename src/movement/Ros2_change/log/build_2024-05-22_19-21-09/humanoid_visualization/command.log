@@ -1,4 +1,0 @@
-Invoking command in '/home/certezas/edromufu/src/movement/Ros2_change/build/humanoid_visualization': /usr/bin/cmake --build /home/certezas/edromufu/src/movement/Ros2_change/build/humanoid_visualization -- -j12 -l12
-Invoked command in '/home/certezas/edromufu/src/movement/Ros2_change/build/humanoid_visualization' returned '0': /usr/bin/cmake --build /home/certezas/edromufu/src/movement/Ros2_change/build/humanoid_visualization -- -j12 -l12
-Invoking command in '/home/certezas/edromufu/src/movement/Ros2_change/build/humanoid_visualization': /usr/bin/cmake --install /home/certezas/edromufu/src/movement/Ros2_change/build/humanoid_visualization
-Invoked command in '/home/certezas/edromufu/src/movement/Ros2_change/build/humanoid_visualization' returned '0': /usr/bin/cmake --install /home/certezas/edromufu/src/movement/Ros2_change/build/humanoid_visualization

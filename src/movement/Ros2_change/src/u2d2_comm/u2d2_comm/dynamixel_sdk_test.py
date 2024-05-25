@@ -47,7 +47,7 @@ class u2d2Control():
         #rospy.init_node('u2d2') (3)
 
         rclpy.init(args=sys.argv) #(3)
-        self.node = rclpy.create_node('u2d2') #(3)
+        self.node = rclpy.create_node('u2d2_false') #(3)
 
         #rospy.Subscriber('u2d2_comm/data2body', body_motors_data, self.data2body) (4)
         self.node.create_subscription(BodyMotorsData, 'u2d2_comm/data2body', self.data2body, rclpy.qos.QoSProfile()) #(4)
@@ -146,7 +146,10 @@ class u2d2Control():
         #rospy.spin() (9)
         rlcpy.spin(u2d2.node) #(9)
 
-if __name__ == '__main__':
 
+def main():
     u2d2 = u2d2Control()
     u2d2.run()
+
+if __name__ == '__main__':
+   main()
