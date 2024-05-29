@@ -169,17 +169,6 @@ Se a variável *self.output_img* for *True*, a função *self.show_result_frame*
 
 Por fim, a função *self.publish_results* é chamada para publicar os resultados da detecção de objetos. O loop é repetido até que a tecla __"q"__ seja pressionada, momento em que o recurso da webcam é liberado e todas as janelas do OpenCV são destruídas.
 
-## Show_result_frame()
-
-```py title="object_finder/src/connecting_and_showing.py"
-def show_result_frame(self):
-    '''Mostra o resultado do frame obtido pela rede neural em um janela do OpenCV.'''
-    ri.draw_results(self.current_frame, self.classes, self.scores, self.boxes)
-    cv2.imshow("Current Frame", self.current_frame)
-```
-
-Função que manda o frame, as *classes*, os *scores* e as *boxes* para a função *draw_results* do código *running_inference* e mostra o resultado na tela
-
 ## Publish_result_frame()
 
 ```py title="object_finder/src/connecting_and_showing.py"
