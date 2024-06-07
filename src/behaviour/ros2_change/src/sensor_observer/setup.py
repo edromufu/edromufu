@@ -20,7 +20,10 @@ setup(
     tests_require=['pytest'],
     entry_points={
      'console_scripts': [
-             'IMU_node = imu_ros_arduino.IMU_node:main'
+             'ball_interpreter = sensor_observer.ball_interpreter:main',
+             'fall_interpreter = sensor_observer.fall_interpreter:main',
+             'neck_interpreter = sensor_observer.neck_interpreter:main',
+             'ros_packer = sensor_observer.ros_packer:main'
      ],
     },
 )
