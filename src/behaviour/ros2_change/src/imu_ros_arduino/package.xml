@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>imu_ros_arduino</name>
+  <version>0.0.0</version>
+  <description>The imu_ros_arduino package</description>
+  <maintainer email="edrom@todo.todo">edrom</maintainer>
+  <license>TODO</license>
+
+  <depend>std_msgs</depend>
+  <depend>rclpy</depend>
+
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
