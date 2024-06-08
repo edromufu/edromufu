@@ -6,7 +6,7 @@ slug: /train_visao
 sidebar_position: 7
 ---
 
-O arquivo a ser alterado para realizar o treinamento personalizado é o [TrainYolov8CustomDataset.ipynb](https://colab.research.google.com/drive/1Lv6hiIDyZOJj6Hee8C2NmSgl4f0gProb#scrollTo=oyZJX6PVfE7J)
+O arquivo a ser alterado para realizar o treinamento personalizado é o [TrainYolov8CustomDataset.ipynb](https://github.com/edromufu/edromufu/tree/master/src/vision/robocup_cnn_files)
 
 
 Antes de iniciar o treinamento, é importante garantir que os nomes das pastas estejam configurados corretamente no arquivo TrainYolov8 do Google Colab. Caso os nomes das pastas tenham sido alterados, os seguintes trechos devem ser ajustados:
@@ -40,9 +40,9 @@ No bloco de código onde ocorre o treinamento, é importante manter a variável 
 Para aprimorar o treinamento, utilize:
 ```py
 # Carrega um modelo pré-treinado
-model = YOLO("/content/gdrive/MyDrive/Teste/best.pt")
+model = YOLO("/content/gdrive/MyDrive/EDROM/best.pt")
 ```
-Em que "best.pt" é o arquivo na pasta "Teste". Certifique-se de ajustar o caminho conforme necessário, dependendo de onde best.pt está salvo.
+Em que "best.pt" é o arquivo na pasta "EDROM". Certifique-se de ajustar o caminho conforme necessário, dependendo de onde best.pt está salvo.
 
 Para treinar do zero, utilize:
 ```py

@@ -65,7 +65,7 @@ def detect_model(model, current_frame):
                             conf=0.25,  
                             imgsz=(640,448), 
                             max_det=10, 
-                            device='cpu', 
+                            device=0, 
                             verbose=False) 
     
     classes = results[0].boxes.cls.tolist()
@@ -85,4 +85,4 @@ def detect_model(model, current_frame):
     return classes, scores, boxes, inference_frame
 ```
 
-Esta função detecta objetos em uma imagem utilizando um modelo de rede neural convolucional (CNN) previamente configurado. Ela recebe dois argumentos: o modelo configurado (model) e o quadro atual (current_frame). A função inicia uma contagem de tempo para medir o desempenho do modelo utilizando a função time.time(). Em seguida, a função chama o método predict() do modelo para realizar a detecção de objetos na imagem atual. Os parâmetros fornecidos para predict() incluem o quadro de origem (source), o limiar de confiança mínima (conf), o tamanho da imagem (imgsz), o número máximo de detecções por imagem (max_det), o dispositivo de execução (device) e a opção de verbose (verbose). A função então extrai as classes, scores e caixas delimitadoras das detecções realizadas. Posteriormente, calcula a taxa de quadros por segundo (FPS) como o inverso da diferença entre o tempo final e o tempo inicial. Por fim, a função retorna as classes, scores, caixas delimitadoras e uma representação visual do resultado da inferência.
+Esta função detecta objetos em uma imagem utilizando um modelo de rede neural convolucional (CNN) previamente configurado. Ela recebe dois argumentos: o modelo configurado (model) e o quadro atual (current_frame). A função inicia uma contagem de tempo para medir o desempenho do modelo utilizando a função time.time(). Em seguida, a função chama o método predict() do modelo para realizar a detecção de objetos na imagem atual. Os parâmetros fornecidos para predict() incluem o quadro de origem (source), o limiar de confiança mínima (conf), o tamanho da imagem (imgsz), o número máximo de detecções por imagem (max_det), o dispositivo de execução (device) e a opção de verbose (verbose). A função então extrai as classes (índices de cada objeto identificado), scores (nível de confiança respectivo a cada objeto identificado) e caixas delimitadoras (coordenadas x e y do centro, altura e comprimeto para cada objeto) das detecções realizadas. Posteriormente, calcula a taxa de quadros por segundo (FPS) como o inverso da diferença entre o tempo final e o tempo inicial. Por fim, a função retorna as classes, scores, caixas delimitadoras e uma representação visual do resultado da inferência.

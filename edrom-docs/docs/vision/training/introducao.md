@@ -19,5 +19,5 @@ O passo a passo do treinamento é:
 2. [Dividir os vídeos em imagens (denominadas "frames")](./spliting_video_in_frames.md)
 3. [Separar os frames em treinamento, validação e avaliação](./organizing_dataset.md)
 4. [Marcar os frames para o treinamento](./marcando_labels.md)
-5. Organização do dataset
-6. Treinamento em si
+5. [Organização do dataset](./criando_txts_dataset.md)
+6. [Treinamento em si](./treinamento_visao.md)

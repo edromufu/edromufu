@@ -6,10 +6,10 @@ slug: /vision_launch
 sidebar_position: 1
 ---
 
-Nesta seção teremos um explicação detalhada sobre o código vision.launch
+Nesta seção teremos um explicação detalhada sobre o código vision.launch.py
   
 
-```jsx title="object_finder/launch/vision.launch"
+```jsx title="object_finder/launch/vision.launch.py"
 from launch import LaunchDescription
 from launch_ros.actions import Node	
 from launch.actions import DeclareLaunchArgument
