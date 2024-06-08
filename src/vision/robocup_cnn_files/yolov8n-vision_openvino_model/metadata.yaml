@@ -1,14 +1,14 @@
 description: Ultralytics YOLOv8n-vision model trained on /content/gdrive/MyDrive/novo_treinamento/ball/google_colab_config.yaml
 author: Ultralytics
-date: '2024-05-29T22:15:53.522417'
-version: 8.2.25
+date: '2024-06-08T14:44:54.497526'
+version: 8.2.28
 license: AGPL-3.0 License (https://ultralytics.com/license)
 docs: https://docs.ultralytics.com
 stride: 32
 task: detect
 batch: 1
 imgsz:
-- 640
-- 640
+- 320
+- 320
 names:
   0: ball

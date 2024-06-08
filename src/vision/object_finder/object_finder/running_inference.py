@@ -9,6 +9,7 @@ import time
 
 
 outline_color_list = [(255, 0, 0), (0, 0, 255), (0, 0, 255)]
+size=320
 
 def set_model_input():
         
@@ -17,15 +18,16 @@ def set_model_input():
     #Forçando o path dos arquivos e passando o nome do modelo pré-treinado para uma variável
     robocup_folder = os.path.join(os.path.expanduser('~'), "edromufu/src/vision/robocup_cnn_files")
     
-    #net = os.path.join(robocup_folder, "yolov8n-vision.pt")    #Modelo padrão
-    net = os.path.join(robocup_folder, "yolov8n-vision_openvino_model")    #Modelo convertido para openvino
-
-    #Converte o modelo para openvino com tamanho de imagem definido, caso já não tenho sido convertido 
-    #model.export(format="openvino",imgsz=640) 
+    net = os.path.join(robocup_folder, "yolov8n-vision.pt")    #Modelo padrão
+    #net = os.path.join(robocup_folder, "yolov8n-vision_openvino_model")    #Modelo convertido para openvino
 
     #Recebe o modelo no YOLO 
     model = YOLO(net)
     
+    #Converte o modelo para openvino com tamanho de imagem definido, caso já não tenho sido convertido 
+    model.export(format="openvino",imgsz=size) 
+    model = YOLO(os.path.join(robocup_folder, "yolov8n-vision_openvino_model"))
+
     
     return model
 
@@ -38,7 +40,7 @@ def detect_model(model, current_frame):
 
     results = model.predict(source=current_frame,
                             conf=0.25,   #conf = limiar de confiança mínima
-                            imgsz=640, #imgsz = Tamanho da imagem (h, w) 
+                            imgsz=size, #imgsz = Tamanho da imagem (h, w) 
                             max_det=10, #max_det = número máximo de detecções por imagem
                             #device='cpu', #device = Escolhe qual dispositivo rodar a detecção (cpu, gpu, cuda)
                             verbose=False) #verbose = Não imprime a saída da função na tela
