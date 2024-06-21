@@ -1,16 +1,54 @@
 
-const int POT_PINS[] = {34, 35, 32, 33};
-const int pot_size = 4;
-int pot_values[pot_size];
-int current_pos = 0;
-const int n_size = 15;
-int MAT_POT[pot_size][n_size];
-int POT_INDEX = 0;
+const int POT_PINS[] = {34, 35, 32, 33}; // vetor de portas de potenciômetros
+const int ACTUATOR_EN_PINS[] =  {23,  5, 27,  4}; //vetor de PWM
+const int ACTUATOR_INA_PINS[] = {22, 19, 26, 15}; //vetor de pino de avanço
+const int ACTUATOR_INB_PINS[] = {21, 18, 25,  2}; //vetor de pino de recuo
+const int pot_size = 4; //número de juntas
+int pot_values[pot_size]; // valores lidos na junta
+const int n_size = 15; // quantidade de média móvel
+
+int dt = 100; // tempo de amostragem em milisegundos
+
+float readJoint(int id){
+  // THIS IS JUST AVERAGE
+  // TODO: implement moving average
+  double acc = 0;
+  for (int i = 0; i<n_size; i++){
+    acc+= analogRead(POT_PINS[id]);
+  }
+  acc = acc/n_size;
+  float degrees = 0.0699*acc-143.775;
+  return degrees;
+}
+
+void writeActuator (int id, int signal){
+  // id: id da junta
+  // signal: valor de -10000 10000 para escrever na junta
+  if (signal >= 0){
+    digitalWrite(ACTUATOR_INA_PINS[id], HIGH);
+    digitalWrite(ACTUATOR_INB_PINS[id], LOW);
+    analogWrite(ACTUATOR_EN_PINS[id], signal);
+  }
+  if (signal < 0){
+    digitalWrite(ACTUATOR_INA_PINS[id], LOW);
+    digitalWrite(ACTUATOR_INB_PINS[id], HIGH);
+    analogWrite(ACTUATOR_EN_PINS[id], -signal);
+  }
+}
+
+void initJoint(int id){
+  pinMode(POT_PINS[id], INPUT);
+  pinMode(ACTUATOR_EN_PINS[id], OUTPUT);
+  pinMode(ACTUATOR_INA_PINS[id], OUTPUT);
+  pinMode(ACTUATOR_INB_PINS[id], OUTPUT);
+}
+
+
 
 
 void setup() {
   for (int i = 0; i < pot_size; i++){
-    pinMode(POT_PINS[i], INPUT);
+    initJoint(i);
   }
   Serial.begin(9600);
 
@@ -19,20 +57,11 @@ void setup() {
 
 void loop() {
 
-  for (int i = 0; i < pot_size; i++){
-    MAT_POT[i][POT_INDEX] = analogRead(POT_PINS[i]);
-    
-    int acc = 0;
-    for(int j = 0; j < n_size; j++) {
-      acc += MAT_POT[i][j];
-    }
-    pot_values[i] = acc / n_size;
-    int printavel = 0.0699*pot_values[i]-143.775;
-    Serial.print(printavel);
+  for (int j = 0; j<pot_size; j++){
+    float value = readJoint(j);
+    Serial.print(value);
     Serial.print("\t");
   }
-
-  POT_INDEX = (POT_INDEX + 1) % n_size;
 
   Serial.println("\t");
   
