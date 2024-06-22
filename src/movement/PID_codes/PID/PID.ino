@@ -1,12 +1,21 @@
 
+//-------declaração de pinos-------
 const int POT_PINS[] = {34, 35, 32, 33}; // vetor de portas de potenciômetros
 const int ACTUATOR_EN_PINS[] =  {23,  5, 27,  4}; //vetor de PWM
 const int ACTUATOR_INA_PINS[] = {22, 19, 26, 15}; //vetor de pino de avanço
 const int ACTUATOR_INB_PINS[] = {21, 18, 25,  2}; //vetor de pino de recuo
 const int pot_size = 4; //número de juntas
+
+//----------variáveis----------
 int pot_values[pot_size]; // valores lidos na junta
 const int n_size = 15; // quantidade de média móvel
 
+//--------constantes PID--------
+const float Kp[] = {10, 10, 10, 10};
+const float Ki[] = {0, 0, 0, 0};
+const float Kd[] = {0, 0, 0, 0};
+float lastError[] = {0, 0, 0, 0};
+float accError[] = {0, 0, 0, 0};
 int dt = 100; // tempo de amostragem em milisegundos
 
 float readJoint(int id){
@@ -43,7 +52,16 @@ void initJoint(int id){
   pinMode(ACTUATOR_INB_PINS[id], OUTPUT);
 }
 
+int calculatePID(int id, int setpoint, float current){
+  float erro = setpoint - current;
 
+  float derro = 1000*(erro - lastError[id])/dt;
+  
+  accError[id]+= erro*dt/1000;
+
+  int u = Kp[id]*erro +Ki[id]*accError[id]+ Kd[id]*derro;
+  return u;
+}
 
 
 void setup() {
@@ -56,29 +74,40 @@ void setup() {
 }
 
 void loop() {
+  int now = millis();
 
-  for (int j = 0; j<pot_size; j++){
-    float value = readJoint(j);
-    Serial.print(value);
-    Serial.print("\t");
-  }
+  // [
+  //   ((alfa, gama), (0, 1)),
+  //   ((beta, epsilon), (2, 3))
+  // ]
 
-  Serial.println("\t");
+
+  float yalfa = readJoint(1);
+  int ualfa = calculatePID(1, 10, yalfa);
+
+  float ygama = readJoint(0);
+  int ugama = calculatePID(0, 5, ygama);
+
+
+  writeActuator(0, ualfa + yalfa);
+  writeActuator(1, ugama - ygama);
+
+
+
+
+  float ybeta = readJoint(2);
+  int ubeta = calculatePID(1, 10, ybeta);
+
+  float yepsilon = readJoint(3);
+  int uepsilon = calculatePID(0, 5, yepsilon);
+
+
+  writeActuator(2, ubeta + ybeta);
+  writeActuator(3, uepsilon - yepsilon);
   
 
-  // val2 = analogRead(P2);
-  // val3 = analogRead(P3);
-  // val4 = analogRead(P4);
-  // Serial.print(val1);
-  // Serial.print("\t");
-  // Serial.print(val2);
-  // Serial.print("\t");
-  // Serial.print(val3);
-  // Serial.print("\t");
-  // Serial.print(rintln("\t");
-  // Serial.println("\t");
-  delay(50);
-
-  // put your main code here, to run repeatedly:
+  while (now - millis()<dt){
+    now = millis();
+  }
 
 }
