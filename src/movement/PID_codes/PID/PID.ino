@@ -33,15 +33,17 @@ float readJoint(int id){
 void writeActuator (int id, int signal){
   // id: id da junta
   // signal: valor de -10000 10000 para escrever na junta
+  int newSignal = constrain(signa, -10000, 10000)
+  newSignal = 255*newSignal/10000
   if (signal >= 0){
     digitalWrite(ACTUATOR_INA_PINS[id], HIGH);
     digitalWrite(ACTUATOR_INB_PINS[id], LOW);
-    analogWrite(ACTUATOR_EN_PINS[id], signal);
+    analogWrite(ACTUATOR_EN_PINS[id], newSignal);
   }
   if (signal < 0){
     digitalWrite(ACTUATOR_INA_PINS[id], LOW);
     digitalWrite(ACTUATOR_INB_PINS[id], HIGH);
-    analogWrite(ACTUATOR_EN_PINS[id], -signal);
+    analogWrite(ACTUATOR_EN_PINS[id], -newSignal);
   }
 }
 
@@ -80,6 +82,7 @@ void loop() {
   //   ((alfa, gama), (0, 1)),
   //   ((beta, epsilon), (2, 3))
   // ]
+
 
 
   float yalfa = readJoint(1);
