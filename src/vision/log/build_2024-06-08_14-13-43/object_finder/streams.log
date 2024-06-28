@@ -1,0 +1,39 @@
+[0.765s] Invoking command in '/home/edrom-mini/edromufu/src/vision/object_finder': PYTHONPATH=/home/edrom-mini/edromufu/src/vision/build/object_finder/prefix_override:/home/edrom-mini/edromufu/src/vision/install/object_finder/lib/python3.10/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/object_finder build --build-base /home/edrom-mini/edromufu/src/vision/build/object_finder/build install --record /home/edrom-mini/edromufu/src/vision/build/object_finder/install.log --single-version-externally-managed install_data
+[1.054s] running egg_info
+[1.055s] creating ../build/object_finder/object_finder.egg-info
+[1.055s] writing ../build/object_finder/object_finder.egg-info/PKG-INFO
+[1.055s] writing dependency_links to ../build/object_finder/object_finder.egg-info/dependency_links.txt
+[1.055s] writing entry points to ../build/object_finder/object_finder.egg-info/entry_points.txt
+[1.055s] writing requirements to ../build/object_finder/object_finder.egg-info/requires.txt
+[1.055s] writing top-level names to ../build/object_finder/object_finder.egg-info/top_level.txt
+[1.056s] writing manifest file '../build/object_finder/object_finder.egg-info/SOURCES.txt'
+[1.057s] reading manifest file '../build/object_finder/object_finder.egg-info/SOURCES.txt'
+[1.058s] writing manifest file '../build/object_finder/object_finder.egg-info/SOURCES.txt'
+[1.058s] running build
+[1.059s] running build_py
+[1.059s] creating /home/edrom-mini/edromufu/src/vision/build/object_finder/build
+[1.059s] creating /home/edrom-mini/edromufu/src/vision/build/object_finder/build/lib
+[1.059s] creating /home/edrom-mini/edromufu/src/vision/build/object_finder/build/lib/object_finder
+[1.059s] copying object_finder/__init__.py -> /home/edrom-mini/edromufu/src/vision/build/object_finder/build/lib/object_finder
+[1.059s] copying object_finder/connecting_and_showing.py -> /home/edrom-mini/edromufu/src/vision/build/object_finder/build/lib/object_finder
+[1.059s] copying object_finder/running_inference.py -> /home/edrom-mini/edromufu/src/vision/build/object_finder/build/lib/object_finder
+[1.059s] running install
+[1.060s] running install_lib
+[1.061s] creating /home/edrom-mini/edromufu/src/vision/install/object_finder/lib/python3.10/site-packages/object_finder
+[1.061s] copying /home/edrom-mini/edromufu/src/vision/build/object_finder/build/lib/object_finder/__init__.py -> /home/edrom-mini/edromufu/src/vision/install/object_finder/lib/python3.10/site-packages/object_finder
+[1.061s] copying /home/edrom-mini/edromufu/src/vision/build/object_finder/build/lib/object_finder/connecting_and_showing.py -> /home/edrom-mini/edromufu/src/vision/install/object_finder/lib/python3.10/site-packages/object_finder
+[1.061s] copying /home/edrom-mini/edromufu/src/vision/build/object_finder/build/lib/object_finder/running_inference.py -> /home/edrom-mini/edromufu/src/vision/install/object_finder/lib/python3.10/site-packages/object_finder
+[1.062s] byte-compiling /home/edrom-mini/edromufu/src/vision/install/object_finder/lib/python3.10/site-packages/object_finder/__init__.py to __init__.cpython-310.pyc
+[1.062s] byte-compiling /home/edrom-mini/edromufu/src/vision/install/object_finder/lib/python3.10/site-packages/object_finder/connecting_and_showing.py to connecting_and_showing.cpython-310.pyc
+[1.064s] byte-compiling /home/edrom-mini/edromufu/src/vision/install/object_finder/lib/python3.10/site-packages/object_finder/running_inference.py to running_inference.cpython-310.pyc
+[1.064s] running install_data
+[1.064s] creating /home/edrom-mini/edromufu/src/vision/install/object_finder/share/ament_index
+[1.065s] creating /home/edrom-mini/edromufu/src/vision/install/object_finder/share/ament_index/resource_index
+[1.065s] creating /home/edrom-mini/edromufu/src/vision/install/object_finder/share/ament_index/resource_index/packages
+[1.065s] copying resource/object_finder -> /home/edrom-mini/edromufu/src/vision/install/object_finder/share/ament_index/resource_index/packages
+[1.065s] copying package.xml -> /home/edrom-mini/edromufu/src/vision/install/object_finder/share/object_finder
+[1.065s] running install_egg_info
+[1.067s] Copying ../build/object_finder/object_finder.egg-info to /home/edrom-mini/edromufu/src/vision/install/object_finder/lib/python3.10/site-packages/object_finder-0.0.1-py3.10.egg-info
+[1.068s] running install_scripts
+[1.093s] Installing vision script to /home/edrom-mini/edromufu/src/vision/install/object_finder/lib/object_finder
+[1.094s] writing list of installed files to '/home/edrom-mini/edromufu/src/vision/build/object_finder/install.log'

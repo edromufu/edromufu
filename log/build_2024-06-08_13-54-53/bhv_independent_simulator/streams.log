@@ -1,0 +1,40 @@
+[0.018s] Invoking command in '/home/edrom-mini/edromufu/build/bhv_independent_simulator': /home/edrom-mini/.local/bin/cmake /home/edrom-mini/edromufu/src/behaviour/bhv_independent_simulator -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/install/bhv_independent_simulator
+[0.109s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.109s]   Compatibility with CMake < 3.5 will be removed from a future version of
+[0.109s]   CMake.
+[0.109s] 
+[0.109s]   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[0.109s]   CMake that the project does not need compatibility with older versions.
+[0.109s] 
+[0.109s] [0m
+[0.181s] -- The C compiler identification is GNU 11.4.0
+[0.259s] -- The CXX compiler identification is GNU 11.4.0
+[0.273s] -- Detecting C compiler ABI info
+[0.353s] -- Detecting C compiler ABI info - done
+[0.381s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.382s] -- Detecting C compile features
+[0.382s] -- Detecting C compile features - done
+[0.389s] -- Detecting CXX compiler ABI info
+[0.483s] -- Detecting CXX compiler ABI info - done
+[0.510s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.511s] -- Detecting CXX compile features
+[0.512s] -- Detecting CXX compile features - done
+[0.529s] [31mCMake Error at CMakeLists.txt:10 (find_package):
+[0.529s]   By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has
+[0.529s]   asked CMake to find a package configuration file provided by "catkin", but
+[0.541s]   CMake did not find one.
+[0.542s] 
+[0.542s]   Could not find a package configuration file provided by "catkin" with any
+[0.542s]   of the following names:
+[0.542s] 
+[0.542s]     catkinConfig.cmake
+[0.542s]     catkin-config.cmake
+[0.542s] 
+[0.542s]   Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set
+[0.542s]   "catkin_DIR" to a directory containing one of the above files.  If "catkin"
+[0.542s]   provides a separate development package or SDK, be sure it has been
+[0.542s]   installed.
+[0.543s] 
+[0.543s] [0m
+[0.543s] -- Configuring incomplete, errors occurred!
+[0.559s] Invoked command in '/home/edrom-mini/edromufu/build/bhv_independent_simulator' returned '1': /home/edrom-mini/.local/bin/cmake /home/edrom-mini/edromufu/src/behaviour/bhv_independent_simulator -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/install/bhv_independent_simulator

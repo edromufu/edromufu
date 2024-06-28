@@ -1,0 +1,28 @@
+[0.032s] Invoking command in '/home/edrom-mini/edromufu/build/imu_ros_arduino': /home/edrom-mini/.local/bin/cmake /home/edrom-mini/edromufu/src/behaviour/imu_ros_arduino -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/install/imu_ros_arduino
+[0.124s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.125s]   Compatibility with CMake < 3.5 will be removed from a future version of
+[0.125s]   CMake.
+[0.125s] 
+[0.125s]   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[0.125s]   CMake that the project does not need compatibility with older versions.
+[0.125s] 
+[0.125s] [0m
+[0.145s] [31mCMake Error at CMakeLists.txt:10 (find_package):
+[0.145s]   By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has
+[0.145s]   asked CMake to find a package configuration file provided by "catkin", but
+[0.145s]   CMake did not find one.
+[0.145s] 
+[0.145s]   Could not find a package configuration file provided by "catkin" with any
+[0.145s]   of the following names:
+[0.145s] 
+[0.145s]     catkinConfig.cmake
+[0.146s]     catkin-config.cmake
+[0.146s] 
+[0.146s]   Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set
+[0.146s]   "catkin_DIR" to a directory containing one of the above files.  If "catkin"
+[0.146s]   provides a separate development package or SDK, be sure it has been
+[0.146s]   installed.
+[0.146s] 
+[0.146s] [0m
+[0.146s] -- Configuring incomplete, errors occurred!
+[0.167s] Invoked command in '/home/edrom-mini/edromufu/build/imu_ros_arduino' returned '1': /home/edrom-mini/.local/bin/cmake /home/edrom-mini/edromufu/src/behaviour/imu_ros_arduino -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/install/imu_ros_arduino

@@ -1,0 +1,561 @@
+[0.000000] (-) TimerEvent: {}
+[0.000217] (object_finder) JobQueued: {'identifier': 'object_finder', 'dependencies': OrderedDict()}
+[0.000323] (vision_msgs) JobQueued: {'identifier': 'vision_msgs', 'dependencies': OrderedDict()}
+[0.000347] (object_finder) JobStarted: {'identifier': 'object_finder'}
+[0.007631] (vision_msgs) JobStarted: {'identifier': 'vision_msgs'}
+[0.099437] (-) TimerEvent: {}
+[0.199692] (-) TimerEvent: {}
+[0.269458] (vision_msgs) JobProgress: {'identifier': 'vision_msgs', 'progress': 'cmake'}
+[0.270033] (vision_msgs) Command: {'cmd': ['/home/edrom-mini/.local/bin/cmake', '/home/edrom-mini/edromufu/src/vision/vision_msgs', '-DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/src/vision/install/vision_msgs'], 'cwd': '/home/edrom-mini/edromufu/src/vision/build/vision_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'edrom-mini'), ('LC_TIME', 'pt_BR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/edrom-mini'), ('OLDPWD', '/home/edrom-mini'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1280'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('SYSTEMD_EXEC_PID', '1638'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4127'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'edrom-mini'), ('JOURNAL_STREAM', '8:29270'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'edrom-mini'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/edrom-mini/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/edrom-mini:@/tmp/.ICE-unix/1420,unix/edrom-mini:/tmp/.ICE-unix/1420'), ('INVOCATION_ID', 'a1da990ee55a4d27b0b784555588fff0'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.XM5DP2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:edaf4e01-b2fe-4824-8c96-7b31910534f2'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/edrom-mini/edromufu/src/vision/build/vision_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.299793] (-) TimerEvent: {}
+[0.354037] (vision_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.399888] (-) TimerEvent: {}
+[0.500302] (-) TimerEvent: {}
+[0.507499] (vision_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter\n'}
+[0.600426] (-) TimerEvent: {}
+[0.614733] (vision_msgs) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[0.619135] (object_finder) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/object_finder', 'build', '--build-base', '/home/edrom-mini/edromufu/src/vision/build/object_finder/build', 'install', '--record', '/home/edrom-mini/edromufu/src/vision/build/object_finder/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/edrom-mini/edromufu/src/vision/object_finder', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'edrom-mini', 'LC_TIME': 'pt_BR.UTF-8', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/edrom-mini', 'OLDPWD': '/home/edrom-mini', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'pt_BR.UTF-8', 'MANAGERPID': '1280', 'LC_CTYPE': 'pt_BR.UTF-8', 'SYSTEMD_EXEC_PID': '1638', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '4127', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'humble', 'LOGNAME': 'edrom-mini', 'JOURNAL_STREAM': '8:29270', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'edrom-mini', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/edrom-mini/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/edrom-mini:@/tmp/.ICE-unix/1420,unix/edrom-mini:/tmp/.ICE-unix/1420', 'INVOCATION_ID': 'a1da990ee55a4d27b0b784555588fff0', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'pt_BR.UTF-8', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'IBUS_DISABLE_SNOOPER': '1', 'LC_TELEPHONE': 'pt_BR.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.XM5DP2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'pt_BR.UTF-8', 'TERMINATOR_UUID': 'urn:uuid:edaf4e01-b2fe-4824-8c96-7b31910534f2', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'pt_BR.UTF-8', 'LC_IDENTIFICATION': 'pt_BR.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/edrom-mini/edromufu/src/vision/build/object_finder', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/edrom-mini/edromufu/src/vision/build/object_finder/prefix_override:/home/edrom-mini/edromufu/src/vision/install/object_finder/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'pt_BR.UTF-8', 'LC_PAPER': 'pt_BR.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6800'}, 'shell': False}
+[0.670961] (vision_msgs) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.678181] (vision_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.691419] (vision_msgs) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.700535] (-) TimerEvent: {}
+[0.712779] (vision_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.741549] (vision_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.800633] (-) TimerEvent: {}
+[0.894102] (object_finder) StdoutLine: {'line': b'running egg_info\n'}
+[0.895159] (object_finder) StdoutLine: {'line': b'writing ../build/object_finder/object_finder.egg-info/PKG-INFO\n'}
+[0.895562] (object_finder) StdoutLine: {'line': b'writing dependency_links to ../build/object_finder/object_finder.egg-info/dependency_links.txt\n'}
+[0.895838] (object_finder) StdoutLine: {'line': b'writing entry points to ../build/object_finder/object_finder.egg-info/entry_points.txt\n'}
+[0.896065] (object_finder) StdoutLine: {'line': b'writing requirements to ../build/object_finder/object_finder.egg-info/requires.txt\n'}
+[0.896258] (object_finder) StdoutLine: {'line': b'writing top-level names to ../build/object_finder/object_finder.egg-info/top_level.txt\n'}
+[0.898448] (object_finder) StdoutLine: {'line': b"reading manifest file '../build/object_finder/object_finder.egg-info/SOURCES.txt'\n"}
+[0.899286] (object_finder) StdoutLine: {'line': b"writing manifest file '../build/object_finder/object_finder.egg-info/SOURCES.txt'\n"}
+[0.899423] (object_finder) StdoutLine: {'line': b'running build\n'}
+[0.899507] (object_finder) StdoutLine: {'line': b'running build_py\n'}
+[0.899774] (object_finder) StdoutLine: {'line': b'running install\n'}
+[0.900124] (object_finder) StdoutLine: {'line': b'running install_lib\n'}
+[0.900691] (-) TimerEvent: {}
+[0.901579] (object_finder) StdoutLine: {'line': b'running install_data\n'}
+[0.901748] (object_finder) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.903308] (object_finder) StdoutLine: {'line': b"removing '/home/edrom-mini/edromufu/src/vision/install/object_finder/lib/python3.10/site-packages/object_finder-0.0.1-py3.10.egg-info' (and everything under it)\n"}
+[0.903653] (object_finder) StdoutLine: {'line': b'Copying ../build/object_finder/object_finder.egg-info to /home/edrom-mini/edromufu/src/vision/install/object_finder/lib/python3.10/site-packages/object_finder-0.0.1-py3.10.egg-info\n'}
+[0.904495] (object_finder) StdoutLine: {'line': b'running install_scripts\n'}
+[0.927261] (object_finder) StdoutLine: {'line': b'Installing vision script to /home/edrom-mini/edromufu/src/vision/install/object_finder/lib/object_finder\n'}
+[0.927799] (object_finder) StdoutLine: {'line': b"writing list of installed files to '/home/edrom-mini/edromufu/src/vision/build/object_finder/install.log'\n"}
+[0.958073] (object_finder) CommandEnded: {'returncode': 0}
+[0.968702] (object_finder) JobEnded: {'identifier': 'object_finder', 'rc': 0}
+[1.000806] (-) TimerEvent: {}
+[1.041341] (vision_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[1.100940] (-) TimerEvent: {}
+[1.201211] (-) TimerEvent: {}
+[1.301441] (-) TimerEvent: {}
+[1.401723] (-) TimerEvent: {}
+[1.502007] (-) TimerEvent: {}
+[1.527338] (vision_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[1.602098] (-) TimerEvent: {}
+[1.702361] (-) TimerEvent: {}
+[1.802648] (-) TimerEvent: {}
+[1.902944] (-) TimerEvent: {}
+[2.003243] (-) TimerEvent: {}
+[2.103561] (-) TimerEvent: {}
+[2.203851] (-) TimerEvent: {}
+[2.304095] (-) TimerEvent: {}
+[2.404404] (-) TimerEvent: {}
+[2.427252] (vision_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.504534] (-) TimerEvent: {}
+[2.604804] (-) TimerEvent: {}
+[2.705161] (-) TimerEvent: {}
+[2.805549] (-) TimerEvent: {}
+[2.854654] (vision_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.857261] (vision_msgs) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:20 (find_package):\n'}
+[2.857411] (vision_msgs) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[2.857477] (vision_msgs) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[2.857538] (vision_msgs) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[2.857595] (vision_msgs) StderrLine: {'line': b'\n'}
+[2.857652] (vision_msgs) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.857708] (vision_msgs) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[2.857765] (vision_msgs) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)\n'}
+[2.857821] (vision_msgs) StderrLine: {'line': b'  CMakeLists.txt:18 (rosidl_generate_interfaces)\n'}
+[2.857877] (vision_msgs) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.857933] (vision_msgs) StderrLine: {'line': b'\x1b[0m\n'}
+[2.875969] (vision_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6")\n'}
+[2.877753] (vision_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[2.878755] (vision_msgs) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/humble/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:52 (find_package):\n'}
+[2.878862] (vision_msgs) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[2.878927] (vision_msgs) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[2.878988] (vision_msgs) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[2.879046] (vision_msgs) StderrLine: {'line': b'\n'}
+[2.879106] (vision_msgs) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.879172] (vision_msgs) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)\n'}
+[2.879256] (vision_msgs) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[2.879338] (vision_msgs) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)\n'}
+[2.879432] (vision_msgs) StderrLine: {'line': b'  CMakeLists.txt:18 (rosidl_generate_interfaces)\n'}
+[2.879526] (vision_msgs) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.879608] (vision_msgs) StderrLine: {'line': b'\x1b[0m\n'}
+[2.900820] (vision_msgs) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/humble/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:140 (find_package):\n'}
+[2.901063] (vision_msgs) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[2.901132] (vision_msgs) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[2.901192] (vision_msgs) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[2.901252] (vision_msgs) StderrLine: {'line': b'\n'}
+[2.901309] (vision_msgs) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.901365] (vision_msgs) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)\n'}
+[2.901430] (vision_msgs) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[2.901495] (vision_msgs) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)\n'}
+[2.901552] (vision_msgs) StderrLine: {'line': b'  CMakeLists.txt:18 (rosidl_generate_interfaces)\n'}
+[2.901612] (vision_msgs) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.901704] (vision_msgs) StderrLine: {'line': b'\x1b[0m\n'}
+[2.905628] (-) TimerEvent: {}
+[2.908909] (vision_msgs) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5")\n'}
+[2.909193] (vision_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[2.909277] (vision_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[2.909347] (vision_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[2.930723] (vision_msgs) StdoutLine: {'line': b'-- Found PythonExtra: .so\n'}
+[3.005729] (-) TimerEvent: {}
+[3.023916] (vision_msgs) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[3.034386] (vision_msgs) StdoutLine: {'line': b'-- Configuring done (2.7s)\n'}
+[3.082761] (vision_msgs) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[3.086897] (vision_msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/edrom-mini/edromufu/src/vision/build/vision_msgs\n'}
+[3.106012] (-) TimerEvent: {}
+[3.106444] (vision_msgs) CommandEnded: {'returncode': 0}
+[3.106940] (vision_msgs) JobProgress: {'identifier': 'vision_msgs', 'progress': 'build'}
+[3.107536] (vision_msgs) Command: {'cmd': ['/home/edrom-mini/.local/bin/cmake', '--build', '/home/edrom-mini/edromufu/src/vision/build/vision_msgs', '--', '-j4', '-l4'], 'cwd': '/home/edrom-mini/edromufu/src/vision/build/vision_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'edrom-mini'), ('LC_TIME', 'pt_BR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/edrom-mini'), ('OLDPWD', '/home/edrom-mini'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1280'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('SYSTEMD_EXEC_PID', '1638'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4127'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'edrom-mini'), ('JOURNAL_STREAM', '8:29270'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'edrom-mini'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/edrom-mini/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/edrom-mini:@/tmp/.ICE-unix/1420,unix/edrom-mini:/tmp/.ICE-unix/1420'), ('INVOCATION_ID', 'a1da990ee55a4d27b0b784555588fff0'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.XM5DP2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:edaf4e01-b2fe-4824-8c96-7b31910534f2'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/edrom-mini/edromufu/src/vision/build/vision_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[3.195548] (vision_msgs) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[3.204331] (vision_msgs) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[3.206214] (-) TimerEvent: {}
+[3.209183] (vision_msgs) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_copy_vision_msgs\n'}
+[3.306308] (-) TimerEvent: {}
+[3.406571] (-) TimerEvent: {}
+[3.506854] (-) TimerEvent: {}
+[3.519177] (vision_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[3.520166] (vision_msgs) StdoutLine: {'line': b'creating vision_msgs.egg-info\n'}
+[3.520376] (vision_msgs) StdoutLine: {'line': b'writing vision_msgs.egg-info/PKG-INFO\n'}
+[3.520605] (vision_msgs) StdoutLine: {'line': b'writing dependency_links to vision_msgs.egg-info/dependency_links.txt\n'}
+[3.520806] (vision_msgs) StdoutLine: {'line': b'writing top-level names to vision_msgs.egg-info/top_level.txt\n'}
+[3.521118] (vision_msgs) StdoutLine: {'line': b"writing manifest file 'vision_msgs.egg-info/SOURCES.txt'\n"}
+[3.523954] (vision_msgs) StdoutLine: {'line': b"reading manifest file 'vision_msgs.egg-info/SOURCES.txt'\n"}
+[3.524636] (vision_msgs) StdoutLine: {'line': b"writing manifest file 'vision_msgs.egg-info/SOURCES.txt'\n"}
+[3.555357] (vision_msgs) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_build_vision_msgs_egg\n'}
+[3.606955] (-) TimerEvent: {}
+[3.707221] (-) TimerEvent: {}
+[3.802107] (vision_msgs) StdoutLine: {'line': b'[  2%] Built target vision_msgs__cpp\n'}
+[3.807345] (-) TimerEvent: {}
+[3.808842] (vision_msgs) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[3.809318] (vision_msgs) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[3.810748] (vision_msgs) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[3.907448] (-) TimerEvent: {}
+[3.928559] (vision_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/vision_msgs__rosidl_generator_c.dir/rosidl_generator_c/vision_msgs/msg/detail/objects__functions.c.o\x1b[0m\n'}
+[4.007555] (-) TimerEvent: {}
+[4.010877] (vision_msgs) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/vision_msgs__rosidl_generator_c.dir/rosidl_generator_c/vision_msgs/msg/detail/ball__functions.c.o\x1b[0m\n'}
+[4.067368] (vision_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/vision_msgs__rosidl_generator_c.dir/rosidl_generator_c/vision_msgs/msg/detail/goal__functions.c.o\x1b[0m\n'}
+[4.107668] (-) TimerEvent: {}
+[4.118547] (vision_msgs) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/vision_msgs__rosidl_generator_c.dir/rosidl_generator_c/vision_msgs/msg/detail/robot__functions.c.o\x1b[0m\n'}
+[4.171623] (vision_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/vision_msgs__rosidl_generator_c.dir/rosidl_generator_c/vision_msgs/msg/detail/leftgoalpost__functions.c.o\x1b[0m\n'}
+[4.207777] (-) TimerEvent: {}
+[4.223321] (vision_msgs) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding C object CMakeFiles/vision_msgs__rosidl_generator_c.dir/rosidl_generator_c/vision_msgs/msg/detail/rightgoalpost__functions.c.o\x1b[0m\n'}
+[4.279968] (vision_msgs) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding C object CMakeFiles/vision_msgs__rosidl_generator_c.dir/rosidl_generator_c/vision_msgs/msg/detail/webotsmsg__functions.c.o\x1b[0m\n'}
+[4.307998] (-) TimerEvent: {}
+[4.325260] (vision_msgs) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/vision_msgs/msg/objects__type_support.cpp.o\x1b[0m\n'}
+[4.338884] (vision_msgs) StdoutLine: {'line': b'[ 17%] \x1b[32m\x1b[1mLinking C shared library libvision_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[4.385779] (vision_msgs) StdoutLine: {'line': b'[ 17%] Built target vision_msgs__rosidl_generator_c\n'}
+[4.406794] (vision_msgs) StdoutLine: {'line': b'[ 18%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[4.407975] (-) TimerEvent: {}
+[4.416952] (vision_msgs) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/vision_msgs/msg/detail/objects__type_support.cpp.o\x1b[0m\n'}
+[4.508090] (-) TimerEvent: {}
+[4.519415] (vision_msgs) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/vision_msgs/msg/detail/dds_fastrtps/objects__type_support.cpp.o\x1b[0m\n'}
+[4.608209] (-) TimerEvent: {}
+[4.708535] (-) TimerEvent: {}
+[4.808926] (-) TimerEvent: {}
+[4.816327] (vision_msgs) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/vision_msgs/msg/ball__type_support.cpp.o\x1b[0m\n'}
+[4.909039] (-) TimerEvent: {}
+[5.009463] (-) TimerEvent: {}
+[5.109884] (-) TimerEvent: {}
+[5.168037] (vision_msgs) StdoutLine: {'line': b'[ 24%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/vision_msgs/msg/detail/objects__type_support_c.cpp.o\x1b[0m\n'}
+[5.172425] (vision_msgs) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/vision_msgs/msg/detail/ball__type_support.cpp.o\x1b[0m\n'}
+[5.210007] (-) TimerEvent: {}
+[5.247307] (vision_msgs) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/vision_msgs/msg/goal__type_support.cpp.o\x1b[0m\n'}
+[5.263382] (vision_msgs) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/vision_msgs/msg/detail/dds_fastrtps/ball__type_support.cpp.o\x1b[0m\n'}
+[5.310127] (-) TimerEvent: {}
+[5.410609] (-) TimerEvent: {}
+[5.511023] (-) TimerEvent: {}
+[5.611396] (-) TimerEvent: {}
+[5.658183] (vision_msgs) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/vision_msgs/msg/robot__type_support.cpp.o\x1b[0m\n'}
+[5.670937] (vision_msgs) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/vision_msgs/msg/detail/ball__type_support_c.cpp.o\x1b[0m\n'}
+[5.711521] (-) TimerEvent: {}
+[5.748220] (vision_msgs) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/vision_msgs/msg/detail/goal__type_support.cpp.o\x1b[0m\n'}
+[5.811643] (-) TimerEvent: {}
+[5.841875] (vision_msgs) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/vision_msgs/msg/detail/dds_fastrtps/goal__type_support.cpp.o\x1b[0m\n'}
+[5.911766] (-) TimerEvent: {}
+[6.012236] (-) TimerEvent: {}
+[6.033399] (vision_msgs) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/vision_msgs/msg/leftgoalpost__type_support.cpp.o\x1b[0m\n'}
+[6.112349] (-) TimerEvent: {}
+[6.210596] (vision_msgs) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/vision_msgs/msg/detail/goal__type_support_c.cpp.o\x1b[0m\n'}
+[6.212467] (-) TimerEvent: {}
+[6.312968] (-) TimerEvent: {}
+[6.355392] (vision_msgs) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/vision_msgs/msg/detail/robot__type_support.cpp.o\x1b[0m\n'}
+[6.413082] (-) TimerEvent: {}
+[6.462844] (vision_msgs) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/vision_msgs/msg/detail/dds_fastrtps/robot__type_support.cpp.o\x1b[0m\n'}
+[6.478365] (vision_msgs) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/vision_msgs/msg/rightgoalpost__type_support.cpp.o\x1b[0m\n'}
+[6.513202] (-) TimerEvent: {}
+[6.613692] (-) TimerEvent: {}
+[6.714076] (-) TimerEvent: {}
+[6.737900] (vision_msgs) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/vision_msgs/msg/detail/robot__type_support_c.cpp.o\x1b[0m\n'}
+[6.814198] (-) TimerEvent: {}
+[6.894399] (vision_msgs) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/vision_msgs/msg/webotsmsg__type_support.cpp.o\x1b[0m\n'}
+[6.914314] (-) TimerEvent: {}
+[6.940023] (vision_msgs) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/vision_msgs/msg/detail/leftgoalpost__type_support.cpp.o\x1b[0m\n'}
+[7.014436] (-) TimerEvent: {}
+[7.067668] (vision_msgs) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/vision_msgs/msg/detail/dds_fastrtps/leftgoalpost__type_support.cpp.o\x1b[0m\n'}
+[7.114562] (-) TimerEvent: {}
+[7.214976] (-) TimerEvent: {}
+[7.255370] (vision_msgs) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/vision_msgs/msg/detail/leftgoalpost__type_support_c.cpp.o\x1b[0m\n'}
+[7.299415] (vision_msgs) StdoutLine: {'line': b'[ 46%] \x1b[32m\x1b[1mLinking CXX shared library libvision_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[7.315094] (-) TimerEvent: {}
+[7.344957] (vision_msgs) StdoutLine: {'line': b'[ 46%] Built target vision_msgs__rosidl_typesupport_cpp\n'}
+[7.352906] (vision_msgs) StdoutLine: {'line': b'[ 48%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[7.415406] (-) TimerEvent: {}
+[7.518102] (-) TimerEvent: {}
+[7.534937] (vision_msgs) StdoutLine: {'line': b'[ 49%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/vision_msgs/msg/detail/rightgoalpost__type_support.cpp.o\x1b[0m\n'}
+[7.618224] (-) TimerEvent: {}
+[7.704109] (vision_msgs) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/vision_msgs/msg/detail/dds_fastrtps/rightgoalpost__type_support.cpp.o\x1b[0m\n'}
+[7.718335] (-) TimerEvent: {}
+[7.782456] (vision_msgs) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/vision_msgs/msg/detail/rightgoalpost__type_support_c.cpp.o\x1b[0m\n'}
+[7.818444] (-) TimerEvent: {}
+[7.918790] (-) TimerEvent: {}
+[8.019171] (-) TimerEvent: {}
+[8.112279] (vision_msgs) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding C object CMakeFiles/vision_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/vision_msgs/msg/detail/objects__type_support.c.o\x1b[0m\n'}
+[8.119298] (-) TimerEvent: {}
+[8.145253] (vision_msgs) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/vision_msgs/msg/detail/webotsmsg__type_support.cpp.o\x1b[0m\n'}
+[8.165975] (vision_msgs) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding C object CMakeFiles/vision_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/vision_msgs/msg/detail/ball__type_support.c.o\x1b[0m\n'}
+[8.204821] (vision_msgs) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding C object CMakeFiles/vision_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/vision_msgs/msg/detail/goal__type_support.c.o\x1b[0m\n'}
+[8.219429] (-) TimerEvent: {}
+[8.243697] (vision_msgs) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding C object CMakeFiles/vision_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/vision_msgs/msg/detail/robot__type_support.c.o\x1b[0m\n'}
+[8.286745] (vision_msgs) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding C object CMakeFiles/vision_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/vision_msgs/msg/detail/leftgoalpost__type_support.c.o\x1b[0m\n'}
+[8.310540] (vision_msgs) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/vision_msgs/msg/detail/dds_fastrtps/webotsmsg__type_support.cpp.o\x1b[0m\n'}
+[8.319549] (-) TimerEvent: {}
+[8.325364] (vision_msgs) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/vision_msgs/msg/detail/webotsmsg__type_support_c.cpp.o\x1b[0m\n'}
+[8.329620] (vision_msgs) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding C object CMakeFiles/vision_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/vision_msgs/msg/detail/rightgoalpost__type_support.c.o\x1b[0m\n'}
+[8.364698] (vision_msgs) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding C object CMakeFiles/vision_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/vision_msgs/msg/detail/webotsmsg__type_support.c.o\x1b[0m\n'}
+[8.409852] (vision_msgs) StdoutLine: {'line': b'[ 65%] \x1b[32m\x1b[1mLinking C shared library libvision_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[8.419666] (-) TimerEvent: {}
+[8.442974] (vision_msgs) StdoutLine: {'line': b'[ 65%] Built target vision_msgs__rosidl_typesupport_introspection_c\n'}
+[8.449931] (vision_msgs) StdoutLine: {'line': b'[ 67%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[8.519793] (-) TimerEvent: {}
+[8.620177] (-) TimerEvent: {}
+[8.720538] (-) TimerEvent: {}
+[8.772841] (vision_msgs) StdoutLine: {'line': b'[ 68%] \x1b[32m\x1b[1mLinking CXX shared library libvision_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[8.820668] (-) TimerEvent: {}
+[8.888288] (vision_msgs) StdoutLine: {'line': b'[ 69%] \x1b[32m\x1b[1mLinking CXX shared library libvision_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[8.896163] (vision_msgs) StdoutLine: {'line': b'[ 69%] Built target vision_msgs__rosidl_typesupport_introspection_cpp\n'}
+[8.920771] (-) TimerEvent: {}
+[9.008700] (vision_msgs) StdoutLine: {'line': b'[ 69%] Built target vision_msgs__rosidl_typesupport_fastrtps_c\n'}
+[9.020933] (-) TimerEvent: {}
+[9.021840] (vision_msgs) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX shared library libvision_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[9.055380] (vision_msgs) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/vision_msgs/msg/objects__type_support.cpp.o\x1b[0m\n'}
+[9.055700] (vision_msgs) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/vision_msgs/msg/ball__type_support.cpp.o\x1b[0m\n'}
+[9.055927] (vision_msgs) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/vision_msgs/msg/goal__type_support.cpp.o\x1b[0m\n'}
+[9.090325] (vision_msgs) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/vision_msgs/msg/robot__type_support.cpp.o\x1b[0m\n'}
+[9.093182] (vision_msgs) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/vision_msgs/msg/rightgoalpost__type_support.cpp.o\x1b[0m\n'}
+[9.093415] (vision_msgs) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/vision_msgs/msg/leftgoalpost__type_support.cpp.o\x1b[0m\n'}
+[9.120994] (-) TimerEvent: {}
+[9.125450] (vision_msgs) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding CXX object CMakeFiles/vision_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/vision_msgs/msg/webotsmsg__type_support.cpp.o\x1b[0m\n'}
+[9.132096] (vision_msgs) StdoutLine: {'line': b'[ 79%] Built target vision_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[9.153702] (vision_msgs) StdoutLine: {'line': b'[ 81%] \x1b[32m\x1b[1mLinking CXX shared library libvision_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[9.186904] (vision_msgs) StdoutLine: {'line': b'[ 81%] Built target vision_msgs__rosidl_typesupport_c\n'}
+[9.195783] (vision_msgs) StdoutLine: {'line': b'[ 81%] Built target vision_msgs\n'}
+[9.207115] (vision_msgs) StdoutLine: {'line': b'[ 82%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[9.221081] (-) TimerEvent: {}
+[9.321365] (-) TimerEvent: {}
+[9.421622] (-) TimerEvent: {}
+[9.521872] (-) TimerEvent: {}
+[9.622113] (-) TimerEvent: {}
+[9.722369] (-) TimerEvent: {}
+[9.822627] (-) TimerEvent: {}
+[9.922896] (-) TimerEvent: {}
+[10.020734] (vision_msgs) StdoutLine: {'line': b'[ 82%] Built target vision_msgs__py\n'}
+[10.022985] (-) TimerEvent: {}
+[10.030012] (vision_msgs) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding C object CMakeFiles/vision_msgs__rosidl_generator_py.dir/rosidl_generator_py/vision_msgs/msg/_ball_s.c.o\x1b[0m\n'}
+[10.030467] (vision_msgs) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding C object CMakeFiles/vision_msgs__rosidl_generator_py.dir/rosidl_generator_py/vision_msgs/msg/_goal_s.c.o\x1b[0m\n'}
+[10.031122] (vision_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/vision_msgs__rosidl_generator_py.dir/rosidl_generator_py/vision_msgs/msg/_robot_s.c.o\x1b[0m\n'}
+[10.031315] (vision_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/vision_msgs__rosidl_generator_py.dir/rosidl_generator_py/vision_msgs/msg/_objects_s.c.o\x1b[0m\n'}
+[10.123277] (-) TimerEvent: {}
+[10.159431] (vision_msgs) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/vision_msgs__rosidl_generator_py.dir/rosidl_generator_py/vision_msgs/msg/_leftgoalpost_s.c.o\x1b[0m\n'}
+[10.163432] (vision_msgs) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/vision_msgs__rosidl_generator_py.dir/rosidl_generator_py/vision_msgs/msg/_rightgoalpost_s.c.o\x1b[0m\n'}
+[10.164135] (vision_msgs) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/vision_msgs__rosidl_generator_py.dir/rosidl_generator_py/vision_msgs/msg/_webotsmsg_s.c.o\x1b[0m\n'}
+[10.223438] (-) TimerEvent: {}
+[10.281416] (vision_msgs) StdoutLine: {'line': b'[ 92%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/vision_msgs/libvision_msgs__rosidl_generator_py.so\x1b[0m\n'}
+[10.316143] (vision_msgs) StdoutLine: {'line': b'[ 92%] Built target vision_msgs__rosidl_generator_py\n'}
+[10.323616] (-) TimerEvent: {}
+[10.329936] (vision_msgs) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/vision_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/vision_msgs/_vision_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[10.330380] (vision_msgs) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/vision_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/vision_msgs/_vision_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[10.330852] (vision_msgs) StdoutLine: {'line': b'[ 96%] \x1b[32mBuilding C object CMakeFiles/vision_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/vision_msgs/_vision_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[10.423728] (-) TimerEvent: {}
+[10.467134] (vision_msgs) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/vision_msgs/vision_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[10.468187] (vision_msgs) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/vision_msgs/vision_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[10.477198] (vision_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/vision_msgs/vision_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[10.506175] (vision_msgs) StdoutLine: {'line': b'[100%] Built target vision_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[10.507326] (vision_msgs) StdoutLine: {'line': b'[100%] Built target vision_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[10.514175] (vision_msgs) StdoutLine: {'line': b'[100%] Built target vision_msgs__rosidl_typesupport_c__pyext\n'}
+[10.523894] (-) TimerEvent: {}
+[10.532747] (vision_msgs) CommandEnded: {'returncode': 0}
+[10.623985] (-) TimerEvent: {}
+[10.724274] (-) TimerEvent: {}
+[10.779793] (vision_msgs) JobProgress: {'identifier': 'vision_msgs', 'progress': 'install'}
+[10.824367] (-) TimerEvent: {}
+[10.866744] (vision_msgs) Command: {'cmd': ['/home/edrom-mini/.local/bin/cmake', '--install', '/home/edrom-mini/edromufu/src/vision/build/vision_msgs'], 'cwd': '/home/edrom-mini/edromufu/src/vision/build/vision_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'edrom-mini'), ('LC_TIME', 'pt_BR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/edrom-mini'), ('OLDPWD', '/home/edrom-mini'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1280'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('SYSTEMD_EXEC_PID', '1638'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4127'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'edrom-mini'), ('JOURNAL_STREAM', '8:29270'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'edrom-mini'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/edrom-mini/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/edrom-mini:@/tmp/.ICE-unix/1420,unix/edrom-mini:/tmp/.ICE-unix/1420'), ('INVOCATION_ID', 'a1da990ee55a4d27b0b784555588fff0'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.XM5DP2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:edaf4e01-b2fe-4824-8c96-7b31910534f2'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/edrom-mini/edromufu/src/vision/build/vision_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[10.924469] (-) TimerEvent: {}
+[10.943676] (vision_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[10.943959] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/ament_index/resource_index/rosidl_interfaces/vision_msgs\n'}
+[10.944134] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs\n'}
+[10.944256] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg\n'}
+[10.944355] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/robot.h\n'}
+[10.944455] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/ball.h\n'}
+[10.944561] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[10.944660] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail\n'}
+[10.945163] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/objects__functions.h\n'}
+[10.945332] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/webotsmsg__struct.h\n'}
+[10.945447] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/ball__functions.c\n'}
+[10.945519] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/webotsmsg__type_support.h\n'}
+[10.945605] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/ball__type_support.h\n'}
+[10.945690] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/leftgoalpost__type_support.h\n'}
+[10.945787] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/robot__struct.h\n'}
+[10.945870] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/goal__functions.h\n'}
+[10.945941] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/goal__type_support.h\n'}
+[10.946022] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/robot__functions.c\n'}
+[10.946106] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/ball__functions.h\n'}
+[10.946188] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/webotsmsg__functions.c\n'}
+[10.946271] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/leftgoalpost__struct.h\n'}
+[10.946353] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/leftgoalpost__functions.c\n'}
+[10.946432] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/leftgoalpost__functions.h\n'}
+[10.946520] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/robot__functions.h\n'}
+[10.946617] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/rightgoalpost__type_support.h\n'}
+[10.946706] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/rightgoalpost__struct.h\n'}
+[10.947087] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/robot__type_support.h\n'}
+[10.947284] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/webotsmsg__functions.h\n'}
+[10.947379] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/rightgoalpost__functions.c\n'}
+[10.947463] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/goal__struct.h\n'}
+[10.947537] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/rightgoalpost__functions.h\n'}
+[10.947608] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/goal__functions.c\n'}
+[10.947703] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/ball__struct.h\n'}
+[10.947779] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/objects__struct.h\n'}
+[10.947851] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/objects__type_support.h\n'}
+[10.947961] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/objects__functions.c\n'}
+[10.948086] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/rightgoalpost.h\n'}
+[10.948191] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/webotsmsg.h\n'}
+[10.948285] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/goal.h\n'}
+[10.948372] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/leftgoalpost.h\n'}
+[10.948458] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/objects.h\n'}
+[10.948684] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/environment/library_path.sh\n'}
+[10.948821] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/environment/library_path.dsv\n'}
+[10.949017] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/lib/libvision_msgs__rosidl_generator_c.so\n'}
+[10.949351] (vision_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/edrom-mini/edromufu/src/vision/install/vision_msgs/lib/libvision_msgs__rosidl_generator_c.so" to ""\n'}
+[10.949437] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs\n'}
+[10.949528] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg\n'}
+[10.949632] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail\n'}
+[10.949702] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/webotsmsg__rosidl_typesupport_fastrtps_c.h\n'}
+[10.949772] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/rightgoalpost__rosidl_typesupport_fastrtps_c.h\n'}
+[10.949861] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/objects__rosidl_typesupport_fastrtps_c.h\n'}
+[10.949950] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/ball__rosidl_typesupport_fastrtps_c.h\n'}
+[10.950037] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/goal__rosidl_typesupport_fastrtps_c.h\n'}
+[10.950125] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/leftgoalpost__rosidl_typesupport_fastrtps_c.h\n'}
+[10.950220] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/robot__rosidl_typesupport_fastrtps_c.h\n'}
+[10.950288] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[10.950380] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/lib/libvision_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[10.950655] (vision_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/edrom-mini/edromufu/src/vision/install/vision_msgs/lib/libvision_msgs__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[10.950748] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs\n'}
+[10.950819] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg\n'}
+[10.950906] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/leftgoalpost.hpp\n'}
+[10.950994] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/robot.hpp\n'}
+[10.951080] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail\n'}
+[10.951183] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/objects__builder.hpp\n'}
+[10.951278] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/leftgoalpost__struct.hpp\n'}
+[10.951374] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/robot__traits.hpp\n'}
+[10.951462] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/robot__builder.hpp\n'}
+[10.951549] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/goal__builder.hpp\n'}
+[10.951629] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/rightgoalpost__struct.hpp\n'}
+[10.951706] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/leftgoalpost__traits.hpp\n'}
+[10.951793] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/rightgoalpost__traits.hpp\n'}
+[10.951871] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/webotsmsg__builder.hpp\n'}
+[10.951955] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/webotsmsg__struct.hpp\n'}
+[10.952050] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/goal__struct.hpp\n'}
+[10.952150] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/goal__traits.hpp\n'}
+[10.952246] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/ball__traits.hpp\n'}
+[10.952340] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/leftgoalpost__builder.hpp\n'}
+[10.952435] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/robot__struct.hpp\n'}
+[10.952532] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/objects__traits.hpp\n'}
+[10.952627] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/webotsmsg__traits.hpp\n'}
+[10.952740] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/ball__builder.hpp\n'}
+[10.952838] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/objects__struct.hpp\n'}
+[10.952950] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/rightgoalpost__builder.hpp\n'}
+[10.953049] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/ball__struct.hpp\n'}
+[10.953150] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/ball.hpp\n'}
+[10.953247] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/objects.hpp\n'}
+[10.953335] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/goal.hpp\n'}
+[10.953431] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/rightgoalpost.hpp\n'}
+[10.953520] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/webotsmsg.hpp\n'}
+[10.953647] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs\n'}
+[10.953736] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg\n'}
+[10.953828] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail\n'}
+[10.953911] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/leftgoalpost__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[10.953982] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/rightgoalpost__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[10.954068] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/webotsmsg__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[10.954157] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/dds_fastrtps\n'}
+[10.954245] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/objects__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[10.954333] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/robot__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[10.954415] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/ball__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[10.954494] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/goal__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[10.954580] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[10.954673] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/lib/libvision_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[10.955027] (vision_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/edrom-mini/edromufu/src/vision/install/vision_msgs/lib/libvision_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[10.955170] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs\n'}
+[10.955256] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg\n'}
+[10.955353] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[10.955423] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail\n'}
+[10.955493] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/ball__rosidl_typesupport_introspection_c.h\n'}
+[10.955580] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/leftgoalpost__rosidl_typesupport_introspection_c.h\n'}
+[10.955649] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/objects__type_support.c\n'}
+[10.955744] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/rightgoalpost__rosidl_typesupport_introspection_c.h\n'}
+[10.955813] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/goal__type_support.c\n'}
+[10.955901] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/ball__type_support.c\n'}
+[10.955989] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/robot__rosidl_typesupport_introspection_c.h\n'}
+[10.956069] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/objects__rosidl_typesupport_introspection_c.h\n'}
+[10.956152] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/webotsmsg__rosidl_typesupport_introspection_c.h\n'}
+[10.956241] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/leftgoalpost__type_support.c\n'}
+[10.956339] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/robot__type_support.c\n'}
+[10.956444] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/rightgoalpost__type_support.c\n'}
+[10.956557] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/goal__rosidl_typesupport_introspection_c.h\n'}
+[10.956656] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/webotsmsg__type_support.c\n'}
+[10.956817] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/lib/libvision_msgs__rosidl_typesupport_introspection_c.so\n'}
+[10.957214] (vision_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/edrom-mini/edromufu/src/vision/install/vision_msgs/lib/libvision_msgs__rosidl_typesupport_introspection_c.so" to ""\n'}
+[10.957359] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/lib/libvision_msgs__rosidl_typesupport_c.so\n'}
+[10.957657] (vision_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/edrom-mini/edromufu/src/vision/install/vision_msgs/lib/libvision_msgs__rosidl_typesupport_c.so" to ""\n'}
+[10.957742] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs\n'}
+[10.957829] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg\n'}
+[10.957934] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail\n'}
+[10.958020] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/goal__rosidl_typesupport_introspection_cpp.hpp\n'}
+[10.958087] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/rightgoalpost__type_support.cpp\n'}
+[10.958175] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/ball__rosidl_typesupport_introspection_cpp.hpp\n'}
+[10.958262] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/robot__rosidl_typesupport_introspection_cpp.hpp\n'}
+[10.958344] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/rightgoalpost__rosidl_typesupport_introspection_cpp.hpp\n'}
+[10.958466] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/robot__type_support.cpp\n'}
+[10.958574] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/leftgoalpost__rosidl_typesupport_introspection_cpp.hpp\n'}
+[10.958675] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/goal__type_support.cpp\n'}
+[10.958782] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/objects__rosidl_typesupport_introspection_cpp.hpp\n'}
+[10.958936] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/webotsmsg__type_support.cpp\n'}
+[10.959124] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/leftgoalpost__type_support.cpp\n'}
+[10.959242] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/webotsmsg__rosidl_typesupport_introspection_cpp.hpp\n'}
+[10.959398] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/objects__type_support.cpp\n'}
+[10.959506] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/ball__type_support.cpp\n'}
+[10.959707] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/lib/libvision_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[10.960105] (vision_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/edrom-mini/edromufu/src/vision/install/vision_msgs/lib/libvision_msgs__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[10.960198] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/lib/libvision_msgs__rosidl_typesupport_cpp.so\n'}
+[10.960510] (vision_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/edrom-mini/edromufu/src/vision/install/vision_msgs/lib/libvision_msgs__rosidl_typesupport_cpp.so" to ""\n'}
+[10.960598] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/environment/pythonpath.sh\n'}
+[10.960687] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/environment/pythonpath.dsv\n'}
+[10.960801] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs-0.0.1-py3.10.egg-info\n'}
+[10.961016] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs-0.0.1-py3.10.egg-info/dependency_links.txt\n'}
+[10.961163] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs-0.0.1-py3.10.egg-info/PKG-INFO\n'}
+[10.961259] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs-0.0.1-py3.10.egg-info/top_level.txt\n'}
+[10.961393] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs-0.0.1-py3.10.egg-info/SOURCES.txt\n'}
+[10.961529] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs\n'}
+[10.961648] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/__init__.py\n'}
+[10.961741] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/vision_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[10.961903] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg\n'}
+[10.961992] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg/_ball.py\n'}
+[10.962157] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg/__init__.py\n'}
+[10.962255] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg/_ball_s.c\n'}
+[10.962396] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg/_robot.py\n'}
+[10.962503] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg/_leftgoalpost.py\n'}
+[10.962637] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg/_objects.py\n'}
+[10.962744] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg/_webotsmsg.py\n'}
+[10.962888] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg/_rightgoalpost_s.c\n'}
+[10.963040] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg/_objects_s.c\n'}
+[10.963261] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg/_goal.py\n'}
+[10.963426] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg/_leftgoalpost_s.c\n'}
+[10.963557] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg/_rightgoalpost.py\n'}
+[10.963668] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg/_robot_s.c\n'}
+[10.963775] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg/_goal_s.c\n'}
+[10.963923] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg/_webotsmsg_s.c\n'}
+[10.964041] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/_vision_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[10.964276] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/vision_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[10.964432] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/vision_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[10.964627] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/_vision_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[10.964756] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/libvision_msgs__rosidl_generator_py.so\n'}
+[10.965058] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/_vision_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[11.004041] (vision_msgs) StdoutLine: {'line': b"Listing '/home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs'...\n"}
+[11.004244] (vision_msgs) StdoutLine: {'line': b"Compiling '/home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/__init__.py'...\n"}
+[11.004344] (vision_msgs) StdoutLine: {'line': b"Listing '/home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg'...\n"}
+[11.004446] (vision_msgs) StdoutLine: {'line': b"Compiling '/home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg/__init__.py'...\n"}
+[11.004527] (vision_msgs) StdoutLine: {'line': b"Compiling '/home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg/_ball.py'...\n"}
+[11.004607] (vision_msgs) StdoutLine: {'line': b"Compiling '/home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg/_goal.py'...\n"}
+[11.004684] (vision_msgs) StdoutLine: {'line': b"Compiling '/home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg/_leftgoalpost.py'...\n"}
+[11.004755] (vision_msgs) StdoutLine: {'line': b"Compiling '/home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg/_objects.py'...\n"}
+[11.004824] (vision_msgs) StdoutLine: {'line': b"Compiling '/home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg/_rightgoalpost.py'...\n"}
+[11.004893] (vision_msgs) StdoutLine: {'line': b"Compiling '/home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg/_robot.py'...\n"}
+[11.004985] (vision_msgs) StdoutLine: {'line': b"Compiling '/home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg/_webotsmsg.py'...\n"}
+[11.009472] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/vision_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[11.009739] (vision_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/vision_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[11.010043] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/vision_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[11.010352] (vision_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/vision_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[11.010592] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/vision_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[11.010901] (vision_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/edrom-mini/edromufu/src/vision/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/vision_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[11.011268] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/lib/libvision_msgs__rosidl_generator_py.so\n'}
+[11.011424] (vision_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/edrom-mini/edromufu/src/vision/install/vision_msgs/lib/libvision_msgs__rosidl_generator_py.so" to ""\n'}
+[11.011601] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/msg/Objects.idl\n'}
+[11.011788] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/msg/Ball.idl\n'}
+[11.011897] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/msg/Goal.idl\n'}
+[11.011995] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/msg/Robot.idl\n'}
+[11.012147] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/msg/Leftgoalpost.idl\n'}
+[11.012257] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/msg/Rightgoalpost.idl\n'}
+[11.012356] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/msg/Webotsmsg.idl\n'}
+[11.012452] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/msg/Objects.msg\n'}
+[11.012548] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/msg/Ball.msg\n'}
+[11.012639] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/msg/Goal.msg\n'}
+[11.012748] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/msg/Robot.msg\n'}
+[11.012860] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/msg/Leftgoalpost.msg\n'}
+[11.013013] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/msg/Rightgoalpost.msg\n'}
+[11.013126] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/msg/Webotsmsg.msg\n'}
+[11.013315] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/ament_index/resource_index/package_run_dependencies/vision_msgs\n'}
+[11.013498] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/ament_index/resource_index/parent_prefix_path/vision_msgs\n'}
+[11.013623] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/environment/ament_prefix_path.sh\n'}
+[11.013766] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/environment/ament_prefix_path.dsv\n'}
+[11.013878] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/environment/path.sh\n'}
+[11.014017] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/environment/path.dsv\n'}
+[11.014129] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/local_setup.bash\n'}
+[11.014268] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/local_setup.sh\n'}
+[11.014381] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/local_setup.zsh\n'}
+[11.014525] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/local_setup.dsv\n'}
+[11.014633] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/package.dsv\n'}
+[11.014816] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/ament_index/resource_index/packages/vision_msgs\n'}
+[11.015001] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/cmake/export_vision_msgs__rosidl_generator_cExport.cmake\n'}
+[11.015135] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/cmake/export_vision_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[11.015302] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/cmake/export_vision_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[11.015455] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/cmake/export_vision_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[11.015586] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/cmake/export_vision_msgs__rosidl_generator_cppExport.cmake\n'}
+[11.015755] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/cmake/export_vision_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[11.015905] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/cmake/export_vision_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[11.016042] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/cmake/vision_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[11.016192] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/cmake/vision_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[11.016321] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/cmake/vision_msgs__rosidl_typesupport_cExport.cmake\n'}
+[11.016471] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/cmake/vision_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[11.016600] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/cmake/vision_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[11.016718] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/cmake/vision_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[11.016845] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/cmake/vision_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[11.017048] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/cmake/vision_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[11.017247] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/cmake/export_vision_msgs__rosidl_generator_pyExport.cmake\n'}
+[11.017454] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/cmake/export_vision_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[11.017578] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[11.017747] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[11.017937] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[11.018203] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[11.018341] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[11.018509] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[11.018666] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[11.018786] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/cmake/vision_msgsConfig.cmake\n'}
+[11.018916] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/cmake/vision_msgsConfig-version.cmake\n'}
+[11.019053] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/vision/install/vision_msgs/share/vision_msgs/package.xml\n'}
+[11.024585] (-) TimerEvent: {}
+[11.034370] (vision_msgs) CommandEnded: {'returncode': 0}
+[11.124744] (-) TimerEvent: {}
+[11.225244] (-) TimerEvent: {}
+[11.295469] (vision_msgs) JobEnded: {'identifier': 'vision_msgs', 'rc': 0}
+[11.296372] (-) EventReactorShutdown: {}

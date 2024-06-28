@@ -1,0 +1,14 @@
+setup.py
+vision_msgs/__init__.py
+vision_msgs.egg-info/PKG-INFO
+vision_msgs.egg-info/SOURCES.txt
+vision_msgs.egg-info/dependency_links.txt
+vision_msgs.egg-info/top_level.txt
+vision_msgs/msg/__init__.py
+vision_msgs/msg/_ball.py
+vision_msgs/msg/_goal.py
+vision_msgs/msg/_leftgoalpost.py
+vision_msgs/msg/_objects.py
+vision_msgs/msg/_rightgoalpost.py
+vision_msgs/msg/_robot.py
+vision_msgs/msg/_webotsmsg.py

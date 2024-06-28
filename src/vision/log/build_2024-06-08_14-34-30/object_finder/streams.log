@@ -1,0 +1,24 @@
+[0.649s] Invoking command in '/home/edrom-mini/edromufu/src/vision/object_finder': PYTHONPATH=/home/edrom-mini/edromufu/src/vision/build/object_finder/prefix_override:/home/edrom-mini/edromufu/src/vision/install/object_finder/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/object_finder build --build-base /home/edrom-mini/edromufu/src/vision/build/object_finder/build install --record /home/edrom-mini/edromufu/src/vision/build/object_finder/install.log --single-version-externally-managed install_data
+[0.918s] running egg_info
+[0.918s] writing ../build/object_finder/object_finder.egg-info/PKG-INFO
+[0.919s] writing dependency_links to ../build/object_finder/object_finder.egg-info/dependency_links.txt
+[0.920s] writing entry points to ../build/object_finder/object_finder.egg-info/entry_points.txt
+[0.920s] writing requirements to ../build/object_finder/object_finder.egg-info/requires.txt
+[0.920s] writing top-level names to ../build/object_finder/object_finder.egg-info/top_level.txt
+[0.921s] reading manifest file '../build/object_finder/object_finder.egg-info/SOURCES.txt'
+[0.923s] writing manifest file '../build/object_finder/object_finder.egg-info/SOURCES.txt'
+[0.923s] running build
+[0.923s] running build_py
+[0.923s] copying object_finder/running_inference.py -> /home/edrom-mini/edromufu/src/vision/build/object_finder/build/lib/object_finder
+[0.924s] running install
+[0.924s] running install_lib
+[0.925s] copying /home/edrom-mini/edromufu/src/vision/build/object_finder/build/lib/object_finder/running_inference.py -> /home/edrom-mini/edromufu/src/vision/install/object_finder/lib/python3.10/site-packages/object_finder
+[0.926s] byte-compiling /home/edrom-mini/edromufu/src/vision/install/object_finder/lib/python3.10/site-packages/object_finder/running_inference.py to running_inference.cpython-310.pyc
+[0.928s] running install_data
+[0.928s] running install_egg_info
+[0.929s] removing '/home/edrom-mini/edromufu/src/vision/install/object_finder/lib/python3.10/site-packages/object_finder-0.0.1-py3.10.egg-info' (and everything under it)
+[0.929s] Copying ../build/object_finder/object_finder.egg-info to /home/edrom-mini/edromufu/src/vision/install/object_finder/lib/python3.10/site-packages/object_finder-0.0.1-py3.10.egg-info
+[0.930s] running install_scripts
+[0.955s] Installing finder script to /home/edrom-mini/edromufu/src/vision/install/object_finder/lib/object_finder
+[0.956s] writing list of installed files to '/home/edrom-mini/edromufu/src/vision/build/object_finder/install.log'
+[1.056s] Invoked command in '/home/edrom-mini/edromufu/src/vision/object_finder' returned '0': PYTHONPATH=/home/edrom-mini/edromufu/src/vision/build/object_finder/prefix_override:/home/edrom-mini/edromufu/src/vision/install/object_finder/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/object_finder build --build-base /home/edrom-mini/edromufu/src/vision/build/object_finder/build install --record /home/edrom-mini/edromufu/src/vision/build/object_finder/install.log --single-version-externally-managed install_data

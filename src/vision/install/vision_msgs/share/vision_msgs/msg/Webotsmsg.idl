@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from vision_msgs/msg/Webotsmsg.msg
+// generated code does not contain a copyright notice
+
+#include "vision_msgs/msg/Ball.idl"
+#include "vision_msgs/msg/Leftgoalpost.idl"
+#include "vision_msgs/msg/Rightgoalpost.idl"
+
+module vision_msgs {
+  module msg {
+    struct Webotsmsg {
+      boolean searching;
+
+      uint8 fps;
+
+      vision_msgs::msg::Ball ball;
+
+      vision_msgs::msg::Leftgoalpost leftgoalpost;
+
+      vision_msgs::msg::Rightgoalpost rightgoalpost;
+    };
+  };
+};

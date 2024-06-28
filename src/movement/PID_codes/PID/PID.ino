@@ -16,7 +16,7 @@ const float Ki[] = {0, 0, 0, 0};
 const float Kd[] = {0, 0, 0, 0};
 float lastError[] = {0, 0, 0, 0};
 float accError[] = {0, 0, 0, 0};
-int dt = 100; // tempo de amostragem em milisegundos
+int dt = 1000; // tempo de amostragem em milisegundos
 
 float readJoint(int id){
   // THIS IS JUST AVERAGE
@@ -25,16 +25,16 @@ float readJoint(int id){
   for (int i = 0; i<n_size; i++){
     acc+= analogRead(POT_PINS[id]);
   }
-  acc = acc/n_size;
-  float degrees = 0.0699*acc-143.775;
+  acc = acc/(n_size*1.0);
+  float degrees = acc;//0.0699*acc-143.775;
   return degrees;
 }
 
 void writeActuator (int id, int signal){
   // id: id da junta
   // signal: valor de -10000 10000 para escrever na junta
-  int newSignal = constrain(signa, -10000, 10000)
-  newSignal = 255*newSignal/10000
+  int newSignal = constrain(signal, -10000, 10000);
+  newSignal = 255*newSignal/10000;
   if (signal >= 0){
     digitalWrite(ACTUATOR_INA_PINS[id], HIGH);
     digitalWrite(ACTUATOR_INB_PINS[id], LOW);
@@ -76,7 +76,7 @@ void setup() {
 }
 
 void loop() {
-  int now = millis();
+  unsigned long now = millis();
 
   // [
   //   ((alfa, gama), (0, 1)),
@@ -85,32 +85,39 @@ void loop() {
 
 
 
-  float yalfa = readJoint(1);
-  int ualfa = calculatePID(1, 10, yalfa);
+  // float yalfa = readJoint(1);
+  // int ualfa = calculatePID(1, 10, yalfa);
 
-  float ygama = readJoint(0);
-  int ugama = calculatePID(0, 5, ygama);
-
-
-  writeActuator(0, ualfa + yalfa);
-  writeActuator(1, ugama - ygama);
+  // float ygama = readJoint(0);
+  // int ugama = calculatePID(0, 5, ygama);
 
 
+  // writeActuator(0, ualfa + yalfa);
+  // writeActuator(1, ugama - ygama);
 
 
-  float ybeta = readJoint(2);
-  int ubeta = calculatePID(1, 10, ybeta);
-
-  float yepsilon = readJoint(3);
-  int uepsilon = calculatePID(0, 5, yepsilon);
 
 
-  writeActuator(2, ubeta + ybeta);
-  writeActuator(3, uepsilon - yepsilon);
+  // float ybeta = readJoint(2);
+  // int ubeta = calculatePID(1, 10, ybeta);
+
+  // float yepsilon = readJoint(3);
+  // int uepsilon = calculatePID(0, 5, yepsilon);
+
+
+  // writeActuator(2, ubeta + ybeta);
+  // writeActuator(3, uepsilon - yepsilon);
+  for (int i = 0 ; i < pot_size ; i++){
+    Serial.print(readJoint(i));
+    writeActuator(3, -4000);
+    Serial.print("\t");
+  }
+  Serial.println(" ");
+
   
 
-  while (now - millis()<dt){
-    now = millis();
+  while (millis()-now<dt){
+    // now = millis();
   }
 
 }

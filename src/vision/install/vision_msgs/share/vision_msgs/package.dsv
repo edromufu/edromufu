@@ -1,0 +1,11 @@
+source;share/vision_msgs/hook/cmake_prefix_path.ps1
+source;share/vision_msgs/hook/cmake_prefix_path.dsv
+source;share/vision_msgs/hook/cmake_prefix_path.sh
+source;share/vision_msgs/hook/ld_library_path_lib.ps1
+source;share/vision_msgs/hook/ld_library_path_lib.dsv
+source;share/vision_msgs/hook/ld_library_path_lib.sh
+source;share/vision_msgs/local_setup.bash
+source;share/vision_msgs/local_setup.dsv
+source;share/vision_msgs/local_setup.ps1
+source;share/vision_msgs/local_setup.sh
+source;share/vision_msgs/local_setup.zsh

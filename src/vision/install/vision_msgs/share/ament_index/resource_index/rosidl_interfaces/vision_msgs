@@ -1,0 +1,14 @@
+msg/Ball.idl
+msg/Ball.msg
+msg/Goal.idl
+msg/Goal.msg
+msg/Leftgoalpost.idl
+msg/Leftgoalpost.msg
+msg/Objects.idl
+msg/Objects.msg
+msg/Rightgoalpost.idl
+msg/Rightgoalpost.msg
+msg/Robot.idl
+msg/Robot.msg
+msg/Webotsmsg.idl
+msg/Webotsmsg.msg

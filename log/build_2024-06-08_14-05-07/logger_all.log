@@ -1,0 +1,1122 @@
+[0.100s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.100s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7dd9a89424d0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7dd9a8941f00>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7dd9a8941f00>>, mixin_verb=('build',))
+[0.254s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.254s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.254s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.254s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.254s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.254s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.254s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/edrom-mini/edromufu'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs) by extensions ['ignore', 'ignore_ament_install']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs) by extension 'ignore'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs) by extension 'ignore_ament_install'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs) by extensions ['colcon_pkg']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs) by extension 'colcon_pkg'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs) by extensions ['colcon_meta']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs) by extension 'colcon_meta'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs) by extensions ['ros']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs) by extension 'ros'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs) by extensions ['cmake', 'python']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs) by extension 'cmake'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs) by extension 'python'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs) by extensions ['python_setup_py']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs) by extension 'python_setup_py'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/blog) by extensions ['ignore', 'ignore_ament_install']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/blog) by extension 'ignore'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/blog) by extension 'ignore_ament_install'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/blog) by extensions ['colcon_pkg']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/blog) by extension 'colcon_pkg'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/blog) by extensions ['colcon_meta']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/blog) by extension 'colcon_meta'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/blog) by extensions ['ros']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/blog) by extension 'ros'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/blog) by extensions ['cmake', 'python']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/blog) by extension 'cmake'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/blog) by extension 'python'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/blog) by extensions ['python_setup_py']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/blog) by extension 'python_setup_py'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/blog/2021-08-26-welcome) by extensions ['ignore', 'ignore_ament_install']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/blog/2021-08-26-welcome) by extension 'ignore'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/blog/2021-08-26-welcome) by extension 'ignore_ament_install'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/blog/2021-08-26-welcome) by extensions ['colcon_pkg']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/blog/2021-08-26-welcome) by extension 'colcon_pkg'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/blog/2021-08-26-welcome) by extensions ['colcon_meta']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/blog/2021-08-26-welcome) by extension 'colcon_meta'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/blog/2021-08-26-welcome) by extensions ['ros']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/blog/2021-08-26-welcome) by extension 'ros'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/blog/2021-08-26-welcome) by extensions ['cmake', 'python']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/blog/2021-08-26-welcome) by extension 'cmake'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/blog/2021-08-26-welcome) by extension 'python'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/blog/2021-08-26-welcome) by extensions ['python_setup_py']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/blog/2021-08-26-welcome) by extension 'python_setup_py'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs) by extensions ['ignore', 'ignore_ament_install']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs) by extension 'ignore'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs) by extension 'ignore_ament_install'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs) by extensions ['colcon_pkg']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs) by extension 'colcon_pkg'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs) by extensions ['colcon_meta']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs) by extension 'colcon_meta'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs) by extensions ['ros']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs) by extension 'ros'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs) by extensions ['cmake', 'python']
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs) by extension 'cmake'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs) by extension 'python'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs) by extensions ['python_setup_py']
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs) by extension 'python_setup_py'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/novidades-em-breve) by extensions ['ignore', 'ignore_ament_install']
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/novidades-em-breve) by extension 'ignore'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/novidades-em-breve) by extension 'ignore_ament_install'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/novidades-em-breve) by extensions ['colcon_pkg']
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/novidades-em-breve) by extension 'colcon_pkg'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/novidades-em-breve) by extensions ['colcon_meta']
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/novidades-em-breve) by extension 'colcon_meta'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/novidades-em-breve) by extensions ['ros']
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/novidades-em-breve) by extension 'ros'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/novidades-em-breve) by extensions ['cmake', 'python']
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/novidades-em-breve) by extension 'cmake'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/novidades-em-breve) by extension 'python'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/novidades-em-breve) by extensions ['python_setup_py']
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/novidades-em-breve) by extension 'python_setup_py'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/novidades-em-breve/img) by extensions ['ignore', 'ignore_ament_install']
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/novidades-em-breve/img) by extension 'ignore'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/novidades-em-breve/img) by extension 'ignore_ament_install'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/novidades-em-breve/img) by extensions ['colcon_pkg']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/novidades-em-breve/img) by extension 'colcon_pkg'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/novidades-em-breve/img) by extensions ['colcon_meta']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/novidades-em-breve/img) by extension 'colcon_meta'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/novidades-em-breve/img) by extensions ['ros']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/novidades-em-breve/img) by extension 'ros'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/novidades-em-breve/img) by extensions ['cmake', 'python']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/novidades-em-breve/img) by extension 'cmake'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/novidades-em-breve/img) by extension 'python'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/novidades-em-breve/img) by extensions ['python_setup_py']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/novidades-em-breve/img) by extension 'python_setup_py'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision) by extensions ['ignore', 'ignore_ament_install']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision) by extension 'ignore'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision) by extension 'ignore_ament_install'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision) by extensions ['colcon_pkg']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision) by extension 'colcon_pkg'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision) by extensions ['colcon_meta']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision) by extension 'colcon_meta'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision) by extensions ['ros']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision) by extension 'ros'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision) by extensions ['cmake', 'python']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision) by extension 'cmake'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision) by extension 'python'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision) by extensions ['python_setup_py']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision) by extension 'python_setup_py'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/codes) by extensions ['ignore', 'ignore_ament_install']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/codes) by extension 'ignore'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/codes) by extension 'ignore_ament_install'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/codes) by extensions ['colcon_pkg']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/codes) by extension 'colcon_pkg'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/codes) by extensions ['colcon_meta']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/codes) by extension 'colcon_meta'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/codes) by extensions ['ros']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/codes) by extension 'ros'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/codes) by extensions ['cmake', 'python']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/codes) by extension 'cmake'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/codes) by extension 'python'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/codes) by extensions ['python_setup_py']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/codes) by extension 'python_setup_py'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/training) by extensions ['ignore', 'ignore_ament_install']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/training) by extension 'ignore'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/training) by extension 'ignore_ament_install'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/training) by extensions ['colcon_pkg']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/training) by extension 'colcon_pkg'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/training) by extensions ['colcon_meta']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/training) by extension 'colcon_meta'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/training) by extensions ['ros']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/training) by extension 'ros'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/training) by extensions ['cmake', 'python']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/training) by extension 'cmake'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/training) by extension 'python'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/training) by extensions ['python_setup_py']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/training) by extension 'python_setup_py'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/training/img) by extensions ['ignore', 'ignore_ament_install']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/training/img) by extension 'ignore'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/training/img) by extension 'ignore_ament_install'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/training/img) by extensions ['colcon_pkg']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/training/img) by extension 'colcon_pkg'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/training/img) by extensions ['colcon_meta']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/training/img) by extension 'colcon_meta'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/training/img) by extensions ['ros']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/training/img) by extension 'ros'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/training/img) by extensions ['cmake', 'python']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/training/img) by extension 'cmake'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/training/img) by extension 'python'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/training/img) by extensions ['python_setup_py']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/docs/vision/training/img) by extension 'python_setup_py'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src) by extensions ['ignore', 'ignore_ament_install']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src) by extension 'ignore'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src) by extension 'ignore_ament_install'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src) by extensions ['colcon_pkg']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src) by extension 'colcon_pkg'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src) by extensions ['colcon_meta']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src) by extension 'colcon_meta'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src) by extensions ['ros']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src) by extension 'ros'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src) by extensions ['cmake', 'python']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src) by extension 'cmake'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src) by extension 'python'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src) by extensions ['python_setup_py']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src) by extension 'python_setup_py'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/components) by extensions ['ignore', 'ignore_ament_install']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/components) by extension 'ignore'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/components) by extension 'ignore_ament_install'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/components) by extensions ['colcon_pkg']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/components) by extension 'colcon_pkg'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/components) by extensions ['colcon_meta']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/components) by extension 'colcon_meta'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/components) by extensions ['ros']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/components) by extension 'ros'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/components) by extensions ['cmake', 'python']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/components) by extension 'cmake'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/components) by extension 'python'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/components) by extensions ['python_setup_py']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/components) by extension 'python_setup_py'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/components/HomepageFeatures) by extensions ['ignore', 'ignore_ament_install']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/components/HomepageFeatures) by extension 'ignore'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/components/HomepageFeatures) by extension 'ignore_ament_install'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/components/HomepageFeatures) by extensions ['colcon_pkg']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/components/HomepageFeatures) by extension 'colcon_pkg'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/components/HomepageFeatures) by extensions ['colcon_meta']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/components/HomepageFeatures) by extension 'colcon_meta'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/components/HomepageFeatures) by extensions ['ros']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/components/HomepageFeatures) by extension 'ros'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/components/HomepageFeatures) by extensions ['cmake', 'python']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/components/HomepageFeatures) by extension 'cmake'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/components/HomepageFeatures) by extension 'python'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/components/HomepageFeatures) by extensions ['python_setup_py']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/components/HomepageFeatures) by extension 'python_setup_py'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/css) by extensions ['ignore', 'ignore_ament_install']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/css) by extension 'ignore'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/css) by extension 'ignore_ament_install'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/css) by extensions ['colcon_pkg']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/css) by extension 'colcon_pkg'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/css) by extensions ['colcon_meta']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/css) by extension 'colcon_meta'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/css) by extensions ['ros']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/css) by extension 'ros'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/css) by extensions ['cmake', 'python']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/css) by extension 'cmake'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/css) by extension 'python'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/css) by extensions ['python_setup_py']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/css) by extension 'python_setup_py'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/pages) by extensions ['ignore', 'ignore_ament_install']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/pages) by extension 'ignore'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/pages) by extension 'ignore_ament_install'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/pages) by extensions ['colcon_pkg']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/pages) by extension 'colcon_pkg'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/pages) by extensions ['colcon_meta']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/pages) by extension 'colcon_meta'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/pages) by extensions ['ros']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/pages) by extension 'ros'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/pages) by extensions ['cmake', 'python']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/pages) by extension 'cmake'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/pages) by extension 'python'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/pages) by extensions ['python_setup_py']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/src/pages) by extension 'python_setup_py'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/static) by extensions ['ignore', 'ignore_ament_install']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/static) by extension 'ignore'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/static) by extension 'ignore_ament_install'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/static) by extensions ['colcon_pkg']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/static) by extension 'colcon_pkg'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/static) by extensions ['colcon_meta']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/static) by extension 'colcon_meta'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/static) by extensions ['ros']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/static) by extension 'ros'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/static) by extensions ['cmake', 'python']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/static) by extension 'cmake'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/static) by extension 'python'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/static) by extensions ['python_setup_py']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/static) by extension 'python_setup_py'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/static/img) by extensions ['ignore', 'ignore_ament_install']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/static/img) by extension 'ignore'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/static/img) by extension 'ignore_ament_install'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/static/img) by extensions ['colcon_pkg']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/static/img) by extension 'colcon_pkg'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/static/img) by extensions ['colcon_meta']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/static/img) by extension 'colcon_meta'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/static/img) by extensions ['ros']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/static/img) by extension 'ros'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/static/img) by extensions ['cmake', 'python']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/static/img) by extension 'cmake'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/static/img) by extension 'python'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/static/img) by extensions ['python_setup_py']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(edrom-docs/static/img) by extension 'python_setup_py'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour) by extensions ['ignore', 'ignore_ament_install']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour) by extension 'ignore'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour) by extension 'ignore_ament_install'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour) by extensions ['colcon_pkg']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour) by extension 'colcon_pkg'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour) by extensions ['colcon_meta']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour) by extension 'colcon_meta'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour) by extensions ['ros']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour) by extension 'ros'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour) by extensions ['cmake', 'python']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour) by extension 'cmake'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour) by extension 'python'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour) by extensions ['python_setup_py']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour) by extension 'python_setup_py'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/bhv_independent_simulator) by extensions ['ignore', 'ignore_ament_install']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/bhv_independent_simulator) by extension 'ignore'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/bhv_independent_simulator) by extension 'ignore_ament_install'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/bhv_independent_simulator) by extensions ['colcon_pkg']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/bhv_independent_simulator) by extension 'colcon_pkg'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/bhv_independent_simulator) by extensions ['colcon_meta']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/bhv_independent_simulator) by extension 'colcon_meta'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/bhv_independent_simulator) by extensions ['ros']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/bhv_independent_simulator) by extension 'ros'
+[0.280s] DEBUG:colcon.colcon_core.package_identification:Package 'src/behaviour/bhv_independent_simulator' with type 'ros.catkin' and name 'bhv_independent_simulator'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/imu_ros_arduino) by extensions ['ignore', 'ignore_ament_install']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/imu_ros_arduino) by extension 'ignore'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/imu_ros_arduino) by extension 'ignore_ament_install'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/imu_ros_arduino) by extensions ['colcon_pkg']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/imu_ros_arduino) by extension 'colcon_pkg'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/imu_ros_arduino) by extensions ['colcon_meta']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/imu_ros_arduino) by extension 'colcon_meta'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/imu_ros_arduino) by extensions ['ros']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/imu_ros_arduino) by extension 'ros'
+[0.281s] DEBUG:colcon.colcon_core.package_identification:Package 'src/behaviour/imu_ros_arduino' with type 'ros.catkin' and name 'imu_ros_arduino'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/modularized_bhv_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/modularized_bhv_msgs) by extension 'ignore'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/modularized_bhv_msgs) by extension 'ignore_ament_install'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/modularized_bhv_msgs) by extensions ['colcon_pkg']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/modularized_bhv_msgs) by extension 'colcon_pkg'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/modularized_bhv_msgs) by extensions ['colcon_meta']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/modularized_bhv_msgs) by extension 'colcon_meta'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/modularized_bhv_msgs) by extensions ['ros']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/modularized_bhv_msgs) by extension 'ros'
+[0.282s] DEBUG:colcon.colcon_core.package_identification:Package 'src/behaviour/modularized_bhv_msgs' with type 'ros.catkin' and name 'modularized_bhv_msgs'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/sensor_observer) by extensions ['ignore', 'ignore_ament_install']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/sensor_observer) by extension 'ignore'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/sensor_observer) by extension 'ignore_ament_install'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/sensor_observer) by extensions ['colcon_pkg']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/sensor_observer) by extension 'colcon_pkg'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/sensor_observer) by extensions ['colcon_meta']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/sensor_observer) by extension 'colcon_meta'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/sensor_observer) by extensions ['ros']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/sensor_observer) by extension 'ros'
+[0.283s] DEBUG:colcon.colcon_core.package_identification:Package 'src/behaviour/sensor_observer' with type 'ros.catkin' and name 'sensor_observer'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/states_routine) by extensions ['ignore', 'ignore_ament_install']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/states_routine) by extension 'ignore'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/states_routine) by extension 'ignore_ament_install'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/states_routine) by extensions ['colcon_pkg']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/states_routine) by extension 'colcon_pkg'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/states_routine) by extensions ['colcon_meta']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/states_routine) by extension 'colcon_meta'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/states_routine) by extensions ['ros']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/states_routine) by extension 'ros'
+[0.284s] DEBUG:colcon.colcon_core.package_identification:Package 'src/behaviour/states_routine' with type 'ros.catkin' and name 'states_routine'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/transitions_and_states) by extensions ['ignore', 'ignore_ament_install']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/transitions_and_states) by extension 'ignore'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/transitions_and_states) by extension 'ignore_ament_install'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/transitions_and_states) by extensions ['colcon_pkg']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/transitions_and_states) by extension 'colcon_pkg'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/transitions_and_states) by extensions ['colcon_meta']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/transitions_and_states) by extension 'colcon_meta'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/transitions_and_states) by extensions ['ros']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/behaviour/transitions_and_states) by extension 'ros'
+[0.285s] DEBUG:colcon.colcon_core.package_identification:Package 'src/behaviour/transitions_and_states' with type 'ros.catkin' and name 'transitions_and_states'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica) by extensions ['ignore', 'ignore_ament_install']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica) by extension 'ignore'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica) by extension 'ignore_ament_install'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica) by extensions ['colcon_pkg']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica) by extension 'colcon_pkg'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica) by extensions ['colcon_meta']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica) by extension 'colcon_meta'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica) by extensions ['ros']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica) by extension 'ros'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica) by extensions ['cmake', 'python']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica) by extension 'cmake'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica) by extension 'python'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica) by extensions ['python_setup_py']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica) by extension 'python_setup_py'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/global_libs) by extensions ['ignore', 'ignore_ament_install']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/global_libs) by extension 'ignore'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/global_libs) by extension 'ignore_ament_install'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/global_libs) by extensions ['colcon_pkg']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/global_libs) by extension 'colcon_pkg'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/global_libs) by extensions ['colcon_meta']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/global_libs) by extension 'colcon_meta'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/global_libs) by extensions ['ros']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/global_libs) by extension 'ros'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/global_libs) by extensions ['cmake', 'python']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/global_libs) by extension 'cmake'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/global_libs) by extension 'python'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/global_libs) by extensions ['python_setup_py']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/global_libs) by extension 'python_setup_py'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/global_libs/TTL) by extensions ['ignore', 'ignore_ament_install']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/global_libs/TTL) by extension 'ignore'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/global_libs/TTL) by extension 'ignore_ament_install'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/global_libs/TTL) by extensions ['colcon_pkg']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/global_libs/TTL) by extension 'colcon_pkg'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/global_libs/TTL) by extensions ['colcon_meta']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/global_libs/TTL) by extension 'colcon_meta'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/global_libs/TTL) by extensions ['ros']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/global_libs/TTL) by extension 'ros'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/global_libs/TTL) by extensions ['cmake', 'python']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/global_libs/TTL) by extension 'cmake'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/global_libs/TTL) by extension 'python'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/global_libs/TTL) by extensions ['python_setup_py']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/global_libs/TTL) by extension 'python_setup_py'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação) by extensions ['ignore', 'ignore_ament_install']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação) by extension 'ignore'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação) by extension 'ignore_ament_install'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação) by extensions ['colcon_pkg']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação) by extension 'colcon_pkg'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação) by extensions ['colcon_meta']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação) by extension 'colcon_meta'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação) by extensions ['ros']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação) by extension 'ros'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação) by extensions ['cmake', 'python']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação) by extension 'cmake'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação) by extension 'python'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação) by extensions ['python_setup_py']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação) by extension 'python_setup_py'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/Impressoes) by extensions ['ignore', 'ignore_ament_install']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/Impressoes) by extension 'ignore'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/Impressoes) by extension 'ignore_ament_install'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/Impressoes) by extensions ['colcon_pkg']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/Impressoes) by extension 'colcon_pkg'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/Impressoes) by extensions ['colcon_meta']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/Impressoes) by extension 'colcon_meta'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/Impressoes) by extensions ['ros']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/Impressoes) by extension 'ros'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/Impressoes) by extensions ['cmake', 'python']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/Impressoes) by extension 'cmake'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/Impressoes) by extension 'python'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/Impressoes) by extensions ['python_setup_py']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/Impressoes) by extension 'python_setup_py'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs) by extensions ['ignore', 'ignore_ament_install']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs) by extension 'ignore'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs) by extension 'ignore_ament_install'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs) by extensions ['colcon_pkg']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs) by extension 'colcon_pkg'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs) by extensions ['colcon_meta']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs) by extension 'colcon_meta'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs) by extensions ['ros']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs) by extension 'ros'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs) by extensions ['cmake', 'python']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs) by extension 'cmake'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs) by extension 'python'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs) by extensions ['python_setup_py']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs) by extension 'python_setup_py'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C) by extensions ['ignore', 'ignore_ament_install']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C) by extension 'ignore'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C) by extension 'ignore_ament_install'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C) by extensions ['colcon_pkg']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C) by extension 'colcon_pkg'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C) by extensions ['colcon_meta']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C) by extension 'colcon_meta'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C) by extensions ['ros']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C) by extension 'ros'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C) by extensions ['cmake', 'python']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C) by extension 'cmake'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C) by extension 'python'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C) by extensions ['python_setup_py']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C) by extension 'python_setup_py'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C/eec.models) by extensions ['ignore', 'ignore_ament_install']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C/eec.models) by extension 'ignore'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C/eec.models) by extension 'ignore_ament_install'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C/eec.models) by extensions ['colcon_pkg']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C/eec.models) by extension 'colcon_pkg'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C/eec.models) by extensions ['colcon_meta']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C/eec.models) by extension 'colcon_meta'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C/eec.models) by extensions ['ros']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C/eec.models) by extension 'ros'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C/eec.models) by extensions ['cmake', 'python']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C/eec.models) by extension 'cmake'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C/eec.models) by extension 'python'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C/eec.models) by extensions ['python_setup_py']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C/eec.models) by extension 'python_setup_py'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C/eec.pretty) by extensions ['ignore', 'ignore_ament_install']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C/eec.pretty) by extension 'ignore'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C/eec.pretty) by extension 'ignore_ament_install'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C/eec.pretty) by extensions ['colcon_pkg']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C/eec.pretty) by extension 'colcon_pkg'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C/eec.pretty) by extensions ['colcon_meta']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C/eec.pretty) by extension 'colcon_meta'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C/eec.pretty) by extensions ['ros']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C/eec.pretty) by extension 'ros'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C/eec.pretty) by extensions ['cmake', 'python']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C/eec.pretty) by extension 'cmake'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C/eec.pretty) by extension 'python'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C/eec.pretty) by extensions ['python_setup_py']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/Trans_STMicroelectronics_TIP35C/eec.pretty) by extension 'python_setup_py'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/eec.models) by extensions ['ignore', 'ignore_ament_install']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/eec.models) by extension 'ignore'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/eec.models) by extension 'ignore_ament_install'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/eec.models) by extensions ['colcon_pkg']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/eec.models) by extension 'colcon_pkg'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/eec.models) by extensions ['colcon_meta']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/eec.models) by extension 'colcon_meta'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/eec.models) by extensions ['ros']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/eec.models) by extension 'ros'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/eec.models) by extensions ['cmake', 'python']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/eec.models) by extension 'cmake'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/eec.models) by extension 'python'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/eec.models) by extensions ['python_setup_py']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/eec.models) by extension 'python_setup_py'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/eec.pretty) by extensions ['ignore', 'ignore_ament_install']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/eec.pretty) by extension 'ignore'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/eec.pretty) by extension 'ignore_ament_install'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/eec.pretty) by extensions ['colcon_pkg']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/eec.pretty) by extension 'colcon_pkg'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/eec.pretty) by extensions ['colcon_meta']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/eec.pretty) by extension 'colcon_meta'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/eec.pretty) by extensions ['ros']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/eec.pretty) by extension 'ros'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/eec.pretty) by extensions ['cmake', 'python']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/eec.pretty) by extension 'cmake'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/eec.pretty) by extension 'python'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/eec.pretty) by extensions ['python_setup_py']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/libs/eec.pretty) by extension 'python_setup_py'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/placa_alimentacao) by extensions ['ignore', 'ignore_ament_install']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/placa_alimentacao) by extension 'ignore'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/placa_alimentacao) by extension 'ignore_ament_install'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/placa_alimentacao) by extensions ['colcon_pkg']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/placa_alimentacao) by extension 'colcon_pkg'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/placa_alimentacao) by extensions ['colcon_meta']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/placa_alimentacao) by extension 'colcon_meta'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/placa_alimentacao) by extensions ['ros']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/placa_alimentacao) by extension 'ros'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/placa_alimentacao) by extensions ['cmake', 'python']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/placa_alimentacao) by extension 'cmake'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/placa_alimentacao) by extension 'python'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/placa_alimentacao) by extensions ['python_setup_py']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/placa_alimentacao) by extension 'python_setup_py'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/placa_alimentacao/placa_alimentacao-backups) by extensions ['ignore', 'ignore_ament_install']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/placa_alimentacao/placa_alimentacao-backups) by extension 'ignore'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/placa_alimentacao/placa_alimentacao-backups) by extension 'ignore_ament_install'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/placa_alimentacao/placa_alimentacao-backups) by extensions ['colcon_pkg']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/placa_alimentacao/placa_alimentacao-backups) by extension 'colcon_pkg'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/placa_alimentacao/placa_alimentacao-backups) by extensions ['colcon_meta']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/placa_alimentacao/placa_alimentacao-backups) by extension 'colcon_meta'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/placa_alimentacao/placa_alimentacao-backups) by extensions ['ros']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/placa_alimentacao/placa_alimentacao-backups) by extension 'ros'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/placa_alimentacao/placa_alimentacao-backups) by extensions ['cmake', 'python']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/placa_alimentacao/placa_alimentacao-backups) by extension 'cmake'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/placa_alimentacao/placa_alimentacao-backups) by extension 'python'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/placa_alimentacao/placa_alimentacao-backups) by extensions ['python_setup_py']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/eletrica/placa-alimentação/placa_alimentacao/placa_alimentacao-backups) by extension 'python_setup_py'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization) by extensions ['ignore', 'ignore_ament_install']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization) by extension 'ignore'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization) by extension 'ignore_ament_install'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization) by extensions ['colcon_pkg']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization) by extension 'colcon_pkg'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization) by extensions ['colcon_meta']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization) by extension 'colcon_meta'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization) by extensions ['ros']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization) by extension 'ros'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization) by extensions ['cmake', 'python']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization) by extension 'cmake'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization) by extension 'python'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization) by extensions ['python_setup_py']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization) by extension 'python_setup_py'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/localization_real) by extensions ['ignore', 'ignore_ament_install']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/localization_real) by extension 'ignore'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/localization_real) by extension 'ignore_ament_install'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/localization_real) by extensions ['colcon_pkg']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/localization_real) by extension 'colcon_pkg'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/localization_real) by extensions ['colcon_meta']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/localization_real) by extension 'colcon_meta'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/localization_real) by extensions ['ros']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/localization_real) by extension 'ros'
+[0.294s] DEBUG:colcon.colcon_core.package_identification:Package 'src/localization/localization_real' with type 'ros.catkin' and name 'localization_real'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/localization_sim) by extensions ['ignore', 'ignore_ament_install']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/localization_sim) by extension 'ignore'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/localization_sim) by extension 'ignore_ament_install'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/localization_sim) by extensions ['colcon_pkg']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/localization_sim) by extension 'colcon_pkg'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/localization_sim) by extensions ['colcon_meta']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/localization_sim) by extension 'colcon_meta'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/localization_sim) by extensions ['ros']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/localization_sim) by extension 'ros'
+[0.295s] DEBUG:colcon.colcon_core.package_identification:Package 'src/localization/localization_sim' with type 'ros.catkin' and name 'localization_sim'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement) by extensions ['ignore', 'ignore_ament_install']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement) by extension 'ignore'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement) by extension 'ignore_ament_install'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement) by extensions ['colcon_pkg']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement) by extension 'colcon_pkg'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement) by extensions ['colcon_meta']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement) by extension 'colcon_meta'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement) by extensions ['ros']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement) by extension 'ros'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement) by extensions ['cmake', 'python']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement) by extension 'cmake'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement) by extension 'python'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement) by extensions ['python_setup_py']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement) by extension 'python_setup_py'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/humanoid_definition) by extensions ['ignore', 'ignore_ament_install']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/humanoid_definition) by extension 'ignore'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/humanoid_definition) by extension 'ignore_ament_install'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/humanoid_definition) by extensions ['colcon_pkg']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/humanoid_definition) by extension 'colcon_pkg'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/humanoid_definition) by extensions ['colcon_meta']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/humanoid_definition) by extension 'colcon_meta'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/humanoid_definition) by extensions ['ros']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/humanoid_definition) by extension 'ros'
+[0.297s] DEBUG:colcon.colcon_core.package_identification:Package 'src/movement/humanoid_definition' with type 'ros.catkin' and name 'humanoid_definition'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/humanoid_visualization) by extensions ['ignore', 'ignore_ament_install']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/humanoid_visualization) by extension 'ignore'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/humanoid_visualization) by extension 'ignore_ament_install'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/humanoid_visualization) by extensions ['colcon_pkg']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/humanoid_visualization) by extension 'colcon_pkg'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/humanoid_visualization) by extensions ['colcon_meta']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/humanoid_visualization) by extension 'colcon_meta'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/humanoid_visualization) by extensions ['ros']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/humanoid_visualization) by extension 'ros'
+[0.298s] DEBUG:colcon.colcon_core.package_identification:Package 'src/movement/humanoid_visualization' with type 'ros.catkin' and name 'humanoid_visualization'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/kinematic_functions) by extensions ['ignore', 'ignore_ament_install']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/kinematic_functions) by extension 'ignore'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/kinematic_functions) by extension 'ignore_ament_install'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/kinematic_functions) by extensions ['colcon_pkg']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/kinematic_functions) by extension 'colcon_pkg'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/kinematic_functions) by extensions ['colcon_meta']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/kinematic_functions) by extension 'colcon_meta'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/kinematic_functions) by extensions ['ros']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/kinematic_functions) by extension 'ros'
+[0.299s] DEBUG:colcon.colcon_core.package_identification:Package 'src/movement/kinematic_functions' with type 'ros.catkin' and name 'kinematic_functions'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/matlab_codes) by extensions ['ignore', 'ignore_ament_install']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/matlab_codes) by extension 'ignore'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/matlab_codes) by extension 'ignore_ament_install'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/matlab_codes) by extensions ['colcon_pkg']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/matlab_codes) by extension 'colcon_pkg'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/matlab_codes) by extensions ['colcon_meta']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/matlab_codes) by extension 'colcon_meta'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/matlab_codes) by extensions ['ros']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/matlab_codes) by extension 'ros'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/matlab_codes) by extensions ['cmake', 'python']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/matlab_codes) by extension 'cmake'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/matlab_codes) by extension 'python'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/matlab_codes) by extensions ['python_setup_py']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/matlab_codes) by extension 'python_setup_py'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_core) by extensions ['ignore', 'ignore_ament_install']
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_core) by extension 'ignore'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_core) by extension 'ignore_ament_install'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_core) by extensions ['colcon_pkg']
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_core) by extension 'colcon_pkg'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_core) by extensions ['colcon_meta']
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_core) by extension 'colcon_meta'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_core) by extensions ['ros']
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_core) by extension 'ros'
+[0.300s] DEBUG:colcon.colcon_core.package_identification:Package 'src/movement/movement_core' with type 'ros.catkin' and name 'movement_core'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_functions) by extensions ['ignore', 'ignore_ament_install']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_functions) by extension 'ignore'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_functions) by extension 'ignore_ament_install'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_functions) by extensions ['colcon_pkg']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_functions) by extension 'colcon_pkg'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_functions) by extensions ['colcon_meta']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_functions) by extension 'colcon_meta'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_functions) by extensions ['ros']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_functions) by extension 'ros'
+[0.301s] DEBUG:colcon.colcon_core.package_identification:Package 'src/movement/movement_functions' with type 'ros.catkin' and name 'movement_functions'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_pages) by extensions ['ignore', 'ignore_ament_install']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_pages) by extension 'ignore'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_pages) by extension 'ignore_ament_install'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_pages) by extensions ['colcon_pkg']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_pages) by extension 'colcon_pkg'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_pages) by extensions ['colcon_meta']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_pages) by extension 'colcon_meta'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_pages) by extensions ['ros']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_pages) by extension 'ros'
+[0.303s] DEBUG:colcon.colcon_core.package_identification:Package 'src/movement/movement_pages' with type 'ros.catkin' and name 'movement_pages'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_utils) by extensions ['ignore', 'ignore_ament_install']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_utils) by extension 'ignore'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_utils) by extension 'ignore_ament_install'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_utils) by extensions ['colcon_pkg']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_utils) by extension 'colcon_pkg'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_utils) by extensions ['colcon_meta']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_utils) by extension 'colcon_meta'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_utils) by extensions ['ros']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/movement_utils) by extension 'ros'
+[0.304s] DEBUG:colcon.colcon_core.package_identification:Package 'src/movement/movement_utils' with type 'ros.catkin' and name 'movement_utils'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/u2d2_comm) by extensions ['ignore', 'ignore_ament_install']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/u2d2_comm) by extension 'ignore'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/u2d2_comm) by extension 'ignore_ament_install'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/u2d2_comm) by extensions ['colcon_pkg']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/u2d2_comm) by extension 'colcon_pkg'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/u2d2_comm) by extensions ['colcon_meta']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/u2d2_comm) by extension 'colcon_meta'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/u2d2_comm) by extensions ['ros']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement/u2d2_comm) by extension 'ros'
+[0.305s] DEBUG:colcon.colcon_core.package_identification:Package 'src/movement/u2d2_comm' with type 'ros.catkin' and name 'u2d2_comm'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao) by extensions ['ignore', 'ignore_ament_install']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao) by extension 'ignore'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao) by extension 'ignore_ament_install'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao) by extensions ['colcon_pkg']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao) by extension 'colcon_pkg'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao) by extensions ['colcon_meta']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao) by extension 'colcon_meta'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao) by extensions ['ros']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao) by extension 'ros'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao) by extensions ['cmake', 'python']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao) by extension 'cmake'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao) by extension 'python'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao) by extensions ['python_setup_py']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao) by extension 'python_setup_py'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao/movement_predefined) by extensions ['ignore', 'ignore_ament_install']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao/movement_predefined) by extension 'ignore'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao/movement_predefined) by extension 'ignore_ament_install'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao/movement_predefined) by extensions ['colcon_pkg']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao/movement_predefined) by extension 'colcon_pkg'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao/movement_predefined) by extensions ['colcon_meta']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao/movement_predefined) by extension 'colcon_meta'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao/movement_predefined) by extensions ['ros']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao/movement_predefined) by extension 'ros'
+[0.307s] DEBUG:colcon.colcon_core.package_identification:Package 'src/simulacao/movement_predefined' with type 'ros.catkin' and name 'movement_predefined'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao/numerical_optimization) by extensions ['ignore', 'ignore_ament_install']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao/numerical_optimization) by extension 'ignore'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao/numerical_optimization) by extension 'ignore_ament_install'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao/numerical_optimization) by extensions ['colcon_pkg']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao/numerical_optimization) by extension 'colcon_pkg'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao/numerical_optimization) by extensions ['colcon_meta']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao/numerical_optimization) by extension 'colcon_meta'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao/numerical_optimization) by extensions ['ros']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao/numerical_optimization) by extension 'ros'
+[0.318s] DEBUG:colcon.colcon_core.package_identification:Package 'src/simulacao/numerical_optimization' with type 'ros.catkin' and name 'numerical_optimization'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao/webots_natasha) by extensions ['ignore', 'ignore_ament_install']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao/webots_natasha) by extension 'ignore'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao/webots_natasha) by extension 'ignore_ament_install'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao/webots_natasha) by extensions ['colcon_pkg']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao/webots_natasha) by extension 'colcon_pkg'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao/webots_natasha) by extensions ['colcon_meta']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao/webots_natasha) by extension 'colcon_meta'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao/webots_natasha) by extensions ['ros']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulacao/webots_natasha) by extension 'ros'
+[0.319s] DEBUG:colcon.colcon_core.package_identification:Package 'src/simulacao/webots_natasha' with type 'ros.catkin' and name 'webots_natasha'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision) by extensions ['ignore', 'ignore_ament_install']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision) by extension 'ignore'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision) by extension 'ignore_ament_install'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision) by extensions ['colcon_pkg']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision) by extension 'colcon_pkg'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision) by extensions ['colcon_meta']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision) by extension 'colcon_meta'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision) by extensions ['ros']
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision) by extension 'ros'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision) by extensions ['cmake', 'python']
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision) by extension 'cmake'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision) by extension 'python'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision) by extensions ['python_setup_py']
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision) by extension 'python_setup_py'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision/build) by extensions ['ignore', 'ignore_ament_install']
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision/build) by extension 'ignore'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision/build) ignored
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision/install) by extensions ['ignore', 'ignore_ament_install']
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision/install) by extension 'ignore'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision/install) ignored
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision/log) by extensions ['ignore', 'ignore_ament_install']
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision/log) by extension 'ignore'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision/log) ignored
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision/object_finder) by extensions ['ignore', 'ignore_ament_install']
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision/object_finder) by extension 'ignore'
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision/object_finder) by extension 'ignore_ament_install'
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision/object_finder) by extensions ['colcon_pkg']
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision/object_finder) by extension 'colcon_pkg'
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision/object_finder) by extensions ['colcon_meta']
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision/object_finder) by extension 'colcon_meta'
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision/object_finder) by extensions ['ros']
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision/object_finder) by extension 'ros'
+[0.322s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vision/object_finder' with type 'ros.ament_python' and name 'object_finder'
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision/robocup_cnn_files) by extensions ['ignore', 'ignore_ament_install']
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision/robocup_cnn_files) by extension 'ignore'
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision/robocup_cnn_files) ignored
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision/robocup_videos) by extensions ['ignore', 'ignore_ament_install']
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision/robocup_videos) by extension 'ignore'
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision/robocup_videos) ignored
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision/vision_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision/vision_msgs) by extension 'ignore'
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision/vision_msgs) by extension 'ignore_ament_install'
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision/vision_msgs) by extensions ['colcon_pkg']
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision/vision_msgs) by extension 'colcon_pkg'
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision/vision_msgs) by extensions ['colcon_meta']
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision/vision_msgs) by extension 'colcon_meta'
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision/vision_msgs) by extensions ['ros']
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision/vision_msgs) by extension 'ros'
+[0.323s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vision/vision_msgs' with type 'ros.ament_cmake' and name 'vision_msgs'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(util) by extensions ['ignore', 'ignore_ament_install']
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(util) by extension 'ignore'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(util) by extension 'ignore_ament_install'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(util) by extensions ['colcon_pkg']
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(util) by extension 'colcon_pkg'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(util) by extensions ['colcon_meta']
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(util) by extension 'colcon_meta'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(util) by extensions ['ros']
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(util) by extension 'ros'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(util) by extensions ['cmake', 'python']
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(util) by extension 'cmake'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(util) by extension 'python'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(util) by extensions ['python_setup_py']
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(util) by extension 'python_setup_py'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(util/dependencies) by extensions ['ignore', 'ignore_ament_install']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(util/dependencies) by extension 'ignore'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(util/dependencies) by extension 'ignore_ament_install'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(util/dependencies) by extensions ['colcon_pkg']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(util/dependencies) by extension 'colcon_pkg'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(util/dependencies) by extensions ['colcon_meta']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(util/dependencies) by extension 'colcon_meta'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(util/dependencies) by extensions ['ros']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(util/dependencies) by extension 'ros'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(util/dependencies) by extensions ['cmake', 'python']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(util/dependencies) by extension 'cmake'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(util/dependencies) by extension 'python'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(util/dependencies) by extensions ['python_setup_py']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(util/dependencies) by extension 'python_setup_py'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation) by extensions ['ignore', 'ignore_ament_install']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation) by extension 'ignore'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation) by extension 'ignore_ament_install'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation) by extensions ['colcon_pkg']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation) by extension 'colcon_pkg'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation) by extensions ['colcon_meta']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation) by extension 'colcon_meta'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation) by extensions ['ros']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation) by extension 'ros'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation) by extensions ['cmake', 'python']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation) by extension 'cmake'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation) by extension 'python'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation) by extensions ['python_setup_py']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation) by extension 'python_setup_py'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation/robocup) by extensions ['ignore', 'ignore_ament_install']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation/robocup) by extension 'ignore'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation/robocup) by extension 'ignore_ament_install'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation/robocup) by extensions ['colcon_pkg']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation/robocup) by extension 'colcon_pkg'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation/robocup) by extensions ['colcon_meta']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation/robocup) by extension 'colcon_meta'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation/robocup) by extensions ['ros']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation/robocup) by extension 'ros'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation/robocup) by extensions ['cmake', 'python']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation/robocup) by extension 'cmake'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation/robocup) by extension 'python'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation/robocup) by extensions ['python_setup_py']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation/robocup) by extension 'python_setup_py'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation/tutorial) by extensions ['ignore', 'ignore_ament_install']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation/tutorial) by extension 'ignore'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation/tutorial) by extension 'ignore_ament_install'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation/tutorial) by extensions ['colcon_pkg']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation/tutorial) by extension 'colcon_pkg'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation/tutorial) by extensions ['colcon_meta']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation/tutorial) by extension 'colcon_meta'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation/tutorial) by extensions ['ros']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation/tutorial) by extension 'ros'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation/tutorial) by extensions ['cmake', 'python']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation/tutorial) by extension 'cmake'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation/tutorial) by extension 'python'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation/tutorial) by extensions ['python_setup_py']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(util/documentation/tutorial) by extension 'python_setup_py'
+[0.326s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.326s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.326s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.326s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.326s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.346s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.346s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.348s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 270 installed packages in /opt/ros/humble
+[0.349s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.384s] Level 5:colcon.colcon_core.verb:set package 'bhv_independent_simulator' build argument 'cmake_args' from command line to 'None'
+[0.384s] Level 5:colcon.colcon_core.verb:set package 'bhv_independent_simulator' build argument 'cmake_target' from command line to 'None'
+[0.384s] Level 5:colcon.colcon_core.verb:set package 'bhv_independent_simulator' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.384s] Level 5:colcon.colcon_core.verb:set package 'bhv_independent_simulator' build argument 'cmake_clean_cache' from command line to 'False'
+[0.384s] Level 5:colcon.colcon_core.verb:set package 'bhv_independent_simulator' build argument 'cmake_clean_first' from command line to 'False'
+[0.384s] Level 5:colcon.colcon_core.verb:set package 'bhv_independent_simulator' build argument 'cmake_force_configure' from command line to 'False'
+[0.384s] Level 5:colcon.colcon_core.verb:set package 'bhv_independent_simulator' build argument 'ament_cmake_args' from command line to 'None'
+[0.384s] Level 5:colcon.colcon_core.verb:set package 'bhv_independent_simulator' build argument 'catkin_cmake_args' from command line to 'None'
+[0.384s] Level 5:colcon.colcon_core.verb:set package 'bhv_independent_simulator' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.384s] DEBUG:colcon.colcon_core.verb:Building package 'bhv_independent_simulator' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/edrom-mini/edromufu/build/bhv_independent_simulator', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/edrom-mini/edromufu/install/bhv_independent_simulator', 'merge_install': False, 'path': '/home/edrom-mini/edromufu/src/behaviour/bhv_independent_simulator', 'symlink_install': False, 'test_result_base': None}
+[0.384s] Level 5:colcon.colcon_core.verb:set package 'humanoid_definition' build argument 'cmake_args' from command line to 'None'
+[0.384s] Level 5:colcon.colcon_core.verb:set package 'humanoid_definition' build argument 'cmake_target' from command line to 'None'
+[0.384s] Level 5:colcon.colcon_core.verb:set package 'humanoid_definition' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.384s] Level 5:colcon.colcon_core.verb:set package 'humanoid_definition' build argument 'cmake_clean_cache' from command line to 'False'
+[0.384s] Level 5:colcon.colcon_core.verb:set package 'humanoid_definition' build argument 'cmake_clean_first' from command line to 'False'
+[0.385s] Level 5:colcon.colcon_core.verb:set package 'humanoid_definition' build argument 'cmake_force_configure' from command line to 'False'
+[0.385s] Level 5:colcon.colcon_core.verb:set package 'humanoid_definition' build argument 'ament_cmake_args' from command line to 'None'
+[0.385s] Level 5:colcon.colcon_core.verb:set package 'humanoid_definition' build argument 'catkin_cmake_args' from command line to 'None'
+[0.385s] Level 5:colcon.colcon_core.verb:set package 'humanoid_definition' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.385s] DEBUG:colcon.colcon_core.verb:Building package 'humanoid_definition' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/edrom-mini/edromufu/build/humanoid_definition', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/edrom-mini/edromufu/install/humanoid_definition', 'merge_install': False, 'path': '/home/edrom-mini/edromufu/src/movement/humanoid_definition', 'symlink_install': False, 'test_result_base': None}
+[0.385s] Level 5:colcon.colcon_core.verb:set package 'humanoid_visualization' build argument 'cmake_args' from command line to 'None'
+[0.385s] Level 5:colcon.colcon_core.verb:set package 'humanoid_visualization' build argument 'cmake_target' from command line to 'None'
+[0.385s] Level 5:colcon.colcon_core.verb:set package 'humanoid_visualization' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.385s] Level 5:colcon.colcon_core.verb:set package 'humanoid_visualization' build argument 'cmake_clean_cache' from command line to 'False'
+[0.385s] Level 5:colcon.colcon_core.verb:set package 'humanoid_visualization' build argument 'cmake_clean_first' from command line to 'False'
+[0.385s] Level 5:colcon.colcon_core.verb:set package 'humanoid_visualization' build argument 'cmake_force_configure' from command line to 'False'
+[0.385s] Level 5:colcon.colcon_core.verb:set package 'humanoid_visualization' build argument 'ament_cmake_args' from command line to 'None'
+[0.385s] Level 5:colcon.colcon_core.verb:set package 'humanoid_visualization' build argument 'catkin_cmake_args' from command line to 'None'
+[0.385s] Level 5:colcon.colcon_core.verb:set package 'humanoid_visualization' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.385s] DEBUG:colcon.colcon_core.verb:Building package 'humanoid_visualization' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/edrom-mini/edromufu/build/humanoid_visualization', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/edrom-mini/edromufu/install/humanoid_visualization', 'merge_install': False, 'path': '/home/edrom-mini/edromufu/src/movement/humanoid_visualization', 'symlink_install': False, 'test_result_base': None}
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino' build argument 'cmake_args' from command line to 'None'
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino' build argument 'cmake_target' from command line to 'None'
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino' build argument 'cmake_clean_cache' from command line to 'False'
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino' build argument 'cmake_clean_first' from command line to 'False'
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino' build argument 'cmake_force_configure' from command line to 'False'
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino' build argument 'ament_cmake_args' from command line to 'None'
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino' build argument 'catkin_cmake_args' from command line to 'None'
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.386s] DEBUG:colcon.colcon_core.verb:Building package 'imu_ros_arduino' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/edrom-mini/edromufu/build/imu_ros_arduino', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/edrom-mini/edromufu/install/imu_ros_arduino', 'merge_install': False, 'path': '/home/edrom-mini/edromufu/src/behaviour/imu_ros_arduino', 'symlink_install': False, 'test_result_base': None}
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'kinematic_functions' build argument 'cmake_args' from command line to 'None'
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'kinematic_functions' build argument 'cmake_target' from command line to 'None'
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'kinematic_functions' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'kinematic_functions' build argument 'cmake_clean_cache' from command line to 'False'
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'kinematic_functions' build argument 'cmake_clean_first' from command line to 'False'
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'kinematic_functions' build argument 'cmake_force_configure' from command line to 'False'
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'kinematic_functions' build argument 'ament_cmake_args' from command line to 'None'
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'kinematic_functions' build argument 'catkin_cmake_args' from command line to 'None'
+[0.386s] Level 5:colcon.colcon_core.verb:set package 'kinematic_functions' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.386s] DEBUG:colcon.colcon_core.verb:Building package 'kinematic_functions' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/edrom-mini/edromufu/build/kinematic_functions', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/edrom-mini/edromufu/install/kinematic_functions', 'merge_install': False, 'path': '/home/edrom-mini/edromufu/src/movement/kinematic_functions', 'symlink_install': False, 'test_result_base': None}
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'localization_real' build argument 'cmake_args' from command line to 'None'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'localization_real' build argument 'cmake_target' from command line to 'None'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'localization_real' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'localization_real' build argument 'cmake_clean_cache' from command line to 'False'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'localization_real' build argument 'cmake_clean_first' from command line to 'False'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'localization_real' build argument 'cmake_force_configure' from command line to 'False'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'localization_real' build argument 'ament_cmake_args' from command line to 'None'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'localization_real' build argument 'catkin_cmake_args' from command line to 'None'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'localization_real' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.387s] DEBUG:colcon.colcon_core.verb:Building package 'localization_real' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/edrom-mini/edromufu/build/localization_real', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/edrom-mini/edromufu/install/localization_real', 'merge_install': False, 'path': '/home/edrom-mini/edromufu/src/localization/localization_real', 'symlink_install': False, 'test_result_base': None}
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'localization_sim' build argument 'cmake_args' from command line to 'None'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'localization_sim' build argument 'cmake_target' from command line to 'None'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'localization_sim' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'localization_sim' build argument 'cmake_clean_cache' from command line to 'False'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'localization_sim' build argument 'cmake_clean_first' from command line to 'False'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'localization_sim' build argument 'cmake_force_configure' from command line to 'False'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'localization_sim' build argument 'ament_cmake_args' from command line to 'None'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'localization_sim' build argument 'catkin_cmake_args' from command line to 'None'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'localization_sim' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.387s] DEBUG:colcon.colcon_core.verb:Building package 'localization_sim' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/edrom-mini/edromufu/build/localization_sim', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/edrom-mini/edromufu/install/localization_sim', 'merge_install': False, 'path': '/home/edrom-mini/edromufu/src/localization/localization_sim', 'symlink_install': False, 'test_result_base': None}
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'modularized_bhv_msgs' build argument 'cmake_args' from command line to 'None'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'modularized_bhv_msgs' build argument 'cmake_target' from command line to 'None'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'modularized_bhv_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'modularized_bhv_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'modularized_bhv_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'modularized_bhv_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'modularized_bhv_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'modularized_bhv_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'modularized_bhv_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.388s] DEBUG:colcon.colcon_core.verb:Building package 'modularized_bhv_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/edrom-mini/edromufu/build/modularized_bhv_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/edrom-mini/edromufu/install/modularized_bhv_msgs', 'merge_install': False, 'path': '/home/edrom-mini/edromufu/src/behaviour/modularized_bhv_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'movement_core' build argument 'cmake_args' from command line to 'None'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'movement_core' build argument 'cmake_target' from command line to 'None'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'movement_core' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'movement_core' build argument 'cmake_clean_cache' from command line to 'False'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'movement_core' build argument 'cmake_clean_first' from command line to 'False'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'movement_core' build argument 'cmake_force_configure' from command line to 'False'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'movement_core' build argument 'ament_cmake_args' from command line to 'None'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'movement_core' build argument 'catkin_cmake_args' from command line to 'None'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'movement_core' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.388s] DEBUG:colcon.colcon_core.verb:Building package 'movement_core' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/edrom-mini/edromufu/build/movement_core', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/edrom-mini/edromufu/install/movement_core', 'merge_install': False, 'path': '/home/edrom-mini/edromufu/src/movement/movement_core', 'symlink_install': False, 'test_result_base': None}
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'movement_functions' build argument 'cmake_args' from command line to 'None'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'movement_functions' build argument 'cmake_target' from command line to 'None'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'movement_functions' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'movement_functions' build argument 'cmake_clean_cache' from command line to 'False'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'movement_functions' build argument 'cmake_clean_first' from command line to 'False'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'movement_functions' build argument 'cmake_force_configure' from command line to 'False'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'movement_functions' build argument 'ament_cmake_args' from command line to 'None'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'movement_functions' build argument 'catkin_cmake_args' from command line to 'None'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'movement_functions' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.389s] DEBUG:colcon.colcon_core.verb:Building package 'movement_functions' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/edrom-mini/edromufu/build/movement_functions', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/edrom-mini/edromufu/install/movement_functions', 'merge_install': False, 'path': '/home/edrom-mini/edromufu/src/movement/movement_functions', 'symlink_install': False, 'test_result_base': None}
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'movement_pages' build argument 'cmake_args' from command line to 'None'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'movement_pages' build argument 'cmake_target' from command line to 'None'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'movement_pages' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'movement_pages' build argument 'cmake_clean_cache' from command line to 'False'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'movement_pages' build argument 'cmake_clean_first' from command line to 'False'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'movement_pages' build argument 'cmake_force_configure' from command line to 'False'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'movement_pages' build argument 'ament_cmake_args' from command line to 'None'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'movement_pages' build argument 'catkin_cmake_args' from command line to 'None'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'movement_pages' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.390s] DEBUG:colcon.colcon_core.verb:Building package 'movement_pages' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/edrom-mini/edromufu/build/movement_pages', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/edrom-mini/edromufu/install/movement_pages', 'merge_install': False, 'path': '/home/edrom-mini/edromufu/src/movement/movement_pages', 'symlink_install': False, 'test_result_base': None}
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'movement_predefined' build argument 'cmake_args' from command line to 'None'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'movement_predefined' build argument 'cmake_target' from command line to 'None'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'movement_predefined' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'movement_predefined' build argument 'cmake_clean_cache' from command line to 'False'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'movement_predefined' build argument 'cmake_clean_first' from command line to 'False'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'movement_predefined' build argument 'cmake_force_configure' from command line to 'False'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'movement_predefined' build argument 'ament_cmake_args' from command line to 'None'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'movement_predefined' build argument 'catkin_cmake_args' from command line to 'None'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'movement_predefined' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.390s] DEBUG:colcon.colcon_core.verb:Building package 'movement_predefined' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/edrom-mini/edromufu/build/movement_predefined', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/edrom-mini/edromufu/install/movement_predefined', 'merge_install': False, 'path': '/home/edrom-mini/edromufu/src/simulacao/movement_predefined', 'symlink_install': False, 'test_result_base': None}
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'movement_utils' build argument 'cmake_args' from command line to 'None'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'movement_utils' build argument 'cmake_target' from command line to 'None'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'movement_utils' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'movement_utils' build argument 'cmake_clean_cache' from command line to 'False'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'movement_utils' build argument 'cmake_clean_first' from command line to 'False'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'movement_utils' build argument 'cmake_force_configure' from command line to 'False'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'movement_utils' build argument 'ament_cmake_args' from command line to 'None'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'movement_utils' build argument 'catkin_cmake_args' from command line to 'None'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'movement_utils' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.391s] DEBUG:colcon.colcon_core.verb:Building package 'movement_utils' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/edrom-mini/edromufu/build/movement_utils', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/edrom-mini/edromufu/install/movement_utils', 'merge_install': False, 'path': '/home/edrom-mini/edromufu/src/movement/movement_utils', 'symlink_install': False, 'test_result_base': None}
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'numerical_optimization' build argument 'cmake_args' from command line to 'None'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'numerical_optimization' build argument 'cmake_target' from command line to 'None'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'numerical_optimization' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'numerical_optimization' build argument 'cmake_clean_cache' from command line to 'False'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'numerical_optimization' build argument 'cmake_clean_first' from command line to 'False'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'numerical_optimization' build argument 'cmake_force_configure' from command line to 'False'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'numerical_optimization' build argument 'ament_cmake_args' from command line to 'None'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'numerical_optimization' build argument 'catkin_cmake_args' from command line to 'None'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'numerical_optimization' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.391s] DEBUG:colcon.colcon_core.verb:Building package 'numerical_optimization' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/edrom-mini/edromufu/build/numerical_optimization', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/edrom-mini/edromufu/install/numerical_optimization', 'merge_install': False, 'path': '/home/edrom-mini/edromufu/src/simulacao/numerical_optimization', 'symlink_install': False, 'test_result_base': None}
+[0.392s] Level 5:colcon.colcon_core.verb:set package 'object_finder' build argument 'cmake_args' from command line to 'None'
+[0.392s] Level 5:colcon.colcon_core.verb:set package 'object_finder' build argument 'cmake_target' from command line to 'None'
+[0.392s] Level 5:colcon.colcon_core.verb:set package 'object_finder' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.392s] Level 5:colcon.colcon_core.verb:set package 'object_finder' build argument 'cmake_clean_cache' from command line to 'False'
+[0.392s] Level 5:colcon.colcon_core.verb:set package 'object_finder' build argument 'cmake_clean_first' from command line to 'False'
+[0.392s] Level 5:colcon.colcon_core.verb:set package 'object_finder' build argument 'cmake_force_configure' from command line to 'False'
+[0.392s] Level 5:colcon.colcon_core.verb:set package 'object_finder' build argument 'ament_cmake_args' from command line to 'None'
+[0.392s] Level 5:colcon.colcon_core.verb:set package 'object_finder' build argument 'catkin_cmake_args' from command line to 'None'
+[0.392s] Level 5:colcon.colcon_core.verb:set package 'object_finder' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.392s] DEBUG:colcon.colcon_core.verb:Building package 'object_finder' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/edrom-mini/edromufu/build/object_finder', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/edrom-mini/edromufu/install/object_finder', 'merge_install': False, 'path': '/home/edrom-mini/edromufu/src/vision/object_finder', 'symlink_install': False, 'test_result_base': None}
+[0.392s] Level 5:colcon.colcon_core.verb:set package 'sensor_observer' build argument 'cmake_args' from command line to 'None'
+[0.392s] Level 5:colcon.colcon_core.verb:set package 'sensor_observer' build argument 'cmake_target' from command line to 'None'
+[0.392s] Level 5:colcon.colcon_core.verb:set package 'sensor_observer' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.392s] Level 5:colcon.colcon_core.verb:set package 'sensor_observer' build argument 'cmake_clean_cache' from command line to 'False'
+[0.392s] Level 5:colcon.colcon_core.verb:set package 'sensor_observer' build argument 'cmake_clean_first' from command line to 'False'
+[0.392s] Level 5:colcon.colcon_core.verb:set package 'sensor_observer' build argument 'cmake_force_configure' from command line to 'False'
+[0.392s] Level 5:colcon.colcon_core.verb:set package 'sensor_observer' build argument 'ament_cmake_args' from command line to 'None'
+[0.392s] Level 5:colcon.colcon_core.verb:set package 'sensor_observer' build argument 'catkin_cmake_args' from command line to 'None'
+[0.392s] Level 5:colcon.colcon_core.verb:set package 'sensor_observer' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.392s] DEBUG:colcon.colcon_core.verb:Building package 'sensor_observer' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/edrom-mini/edromufu/build/sensor_observer', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/edrom-mini/edromufu/install/sensor_observer', 'merge_install': False, 'path': '/home/edrom-mini/edromufu/src/behaviour/sensor_observer', 'symlink_install': False, 'test_result_base': None}
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'states_routine' build argument 'cmake_args' from command line to 'None'
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'states_routine' build argument 'cmake_target' from command line to 'None'
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'states_routine' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'states_routine' build argument 'cmake_clean_cache' from command line to 'False'
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'states_routine' build argument 'cmake_clean_first' from command line to 'False'
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'states_routine' build argument 'cmake_force_configure' from command line to 'False'
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'states_routine' build argument 'ament_cmake_args' from command line to 'None'
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'states_routine' build argument 'catkin_cmake_args' from command line to 'None'
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'states_routine' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.393s] DEBUG:colcon.colcon_core.verb:Building package 'states_routine' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/edrom-mini/edromufu/build/states_routine', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/edrom-mini/edromufu/install/states_routine', 'merge_install': False, 'path': '/home/edrom-mini/edromufu/src/behaviour/states_routine', 'symlink_install': False, 'test_result_base': None}
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'transitions_and_states' build argument 'cmake_args' from command line to 'None'
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'transitions_and_states' build argument 'cmake_target' from command line to 'None'
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'transitions_and_states' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'transitions_and_states' build argument 'cmake_clean_cache' from command line to 'False'
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'transitions_and_states' build argument 'cmake_clean_first' from command line to 'False'
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'transitions_and_states' build argument 'cmake_force_configure' from command line to 'False'
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'transitions_and_states' build argument 'ament_cmake_args' from command line to 'None'
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'transitions_and_states' build argument 'catkin_cmake_args' from command line to 'None'
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'transitions_and_states' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.393s] DEBUG:colcon.colcon_core.verb:Building package 'transitions_and_states' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/edrom-mini/edromufu/build/transitions_and_states', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/edrom-mini/edromufu/install/transitions_and_states', 'merge_install': False, 'path': '/home/edrom-mini/edromufu/src/behaviour/transitions_and_states', 'symlink_install': False, 'test_result_base': None}
+[0.394s] Level 5:colcon.colcon_core.verb:set package 'u2d2_comm' build argument 'cmake_args' from command line to 'None'
+[0.394s] Level 5:colcon.colcon_core.verb:set package 'u2d2_comm' build argument 'cmake_target' from command line to 'None'
+[0.394s] Level 5:colcon.colcon_core.verb:set package 'u2d2_comm' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.394s] Level 5:colcon.colcon_core.verb:set package 'u2d2_comm' build argument 'cmake_clean_cache' from command line to 'False'
+[0.394s] Level 5:colcon.colcon_core.verb:set package 'u2d2_comm' build argument 'cmake_clean_first' from command line to 'False'
+[0.394s] Level 5:colcon.colcon_core.verb:set package 'u2d2_comm' build argument 'cmake_force_configure' from command line to 'False'
+[0.394s] Level 5:colcon.colcon_core.verb:set package 'u2d2_comm' build argument 'ament_cmake_args' from command line to 'None'
+[0.394s] Level 5:colcon.colcon_core.verb:set package 'u2d2_comm' build argument 'catkin_cmake_args' from command line to 'None'
+[0.394s] Level 5:colcon.colcon_core.verb:set package 'u2d2_comm' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.394s] DEBUG:colcon.colcon_core.verb:Building package 'u2d2_comm' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/edrom-mini/edromufu/build/u2d2_comm', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/edrom-mini/edromufu/install/u2d2_comm', 'merge_install': False, 'path': '/home/edrom-mini/edromufu/src/movement/u2d2_comm', 'symlink_install': False, 'test_result_base': None}
+[0.394s] Level 5:colcon.colcon_core.verb:set package 'vision_msgs' build argument 'cmake_args' from command line to 'None'
+[0.394s] Level 5:colcon.colcon_core.verb:set package 'vision_msgs' build argument 'cmake_target' from command line to 'None'
+[0.394s] Level 5:colcon.colcon_core.verb:set package 'vision_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.394s] Level 5:colcon.colcon_core.verb:set package 'vision_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.394s] Level 5:colcon.colcon_core.verb:set package 'vision_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.394s] Level 5:colcon.colcon_core.verb:set package 'vision_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.394s] Level 5:colcon.colcon_core.verb:set package 'vision_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.394s] Level 5:colcon.colcon_core.verb:set package 'vision_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.394s] Level 5:colcon.colcon_core.verb:set package 'vision_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.394s] DEBUG:colcon.colcon_core.verb:Building package 'vision_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/edrom-mini/edromufu/build/vision_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/edrom-mini/edromufu/install/vision_msgs', 'merge_install': False, 'path': '/home/edrom-mini/edromufu/src/vision/vision_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.395s] Level 5:colcon.colcon_core.verb:set package 'webots_natasha' build argument 'cmake_args' from command line to 'None'
+[0.395s] Level 5:colcon.colcon_core.verb:set package 'webots_natasha' build argument 'cmake_target' from command line to 'None'
+[0.395s] Level 5:colcon.colcon_core.verb:set package 'webots_natasha' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.395s] Level 5:colcon.colcon_core.verb:set package 'webots_natasha' build argument 'cmake_clean_cache' from command line to 'False'
+[0.395s] Level 5:colcon.colcon_core.verb:set package 'webots_natasha' build argument 'cmake_clean_first' from command line to 'False'
+[0.395s] Level 5:colcon.colcon_core.verb:set package 'webots_natasha' build argument 'cmake_force_configure' from command line to 'False'
+[0.395s] Level 5:colcon.colcon_core.verb:set package 'webots_natasha' build argument 'ament_cmake_args' from command line to 'None'
+[0.395s] Level 5:colcon.colcon_core.verb:set package 'webots_natasha' build argument 'catkin_cmake_args' from command line to 'None'
+[0.395s] Level 5:colcon.colcon_core.verb:set package 'webots_natasha' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.395s] DEBUG:colcon.colcon_core.verb:Building package 'webots_natasha' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/edrom-mini/edromufu/build/webots_natasha', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/edrom-mini/edromufu/install/webots_natasha', 'merge_install': False, 'path': '/home/edrom-mini/edromufu/src/simulacao/webots_natasha', 'symlink_install': False, 'test_result_base': None}
+[0.395s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.396s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.396s] INFO:colcon.colcon_ros.task.catkin.build:Building ROS package in '/home/edrom-mini/edromufu/src/behaviour/bhv_independent_simulator' with build type 'catkin'
+[0.396s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/edrom-mini/edromufu/src/behaviour/bhv_independent_simulator'
+[0.399s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.399s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.399s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.401s] INFO:colcon.colcon_ros.task.catkin.build:Building ROS package in '/home/edrom-mini/edromufu/src/movement/humanoid_definition' with build type 'catkin'
+[0.401s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/edrom-mini/edromufu/src/movement/humanoid_definition'
+[0.402s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.402s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.404s] INFO:colcon.colcon_ros.task.catkin.build:Building ROS package in '/home/edrom-mini/edromufu/src/movement/humanoid_visualization' with build type 'catkin'
+[0.404s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/edrom-mini/edromufu/src/movement/humanoid_visualization'
+[0.404s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.404s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.407s] INFO:colcon.colcon_ros.task.catkin.build:Building ROS package in '/home/edrom-mini/edromufu/src/behaviour/imu_ros_arduino' with build type 'catkin'
+[0.407s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/edrom-mini/edromufu/src/behaviour/imu_ros_arduino'
+[0.407s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.407s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.414s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/edrom-mini/edromufu/build/bhv_independent_simulator': /home/edrom-mini/.local/bin/cmake /home/edrom-mini/edromufu/src/behaviour/bhv_independent_simulator -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/install/bhv_independent_simulator
+[0.416s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/edrom-mini/edromufu/build/humanoid_definition': /home/edrom-mini/.local/bin/cmake /home/edrom-mini/edromufu/src/movement/humanoid_definition -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/install/humanoid_definition
+[0.418s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/edrom-mini/edromufu/build/humanoid_visualization': /home/edrom-mini/.local/bin/cmake /home/edrom-mini/edromufu/src/movement/humanoid_visualization -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/install/humanoid_visualization
+[0.439s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/edrom-mini/edromufu/build/imu_ros_arduino': /home/edrom-mini/.local/bin/cmake /home/edrom-mini/edromufu/src/behaviour/imu_ros_arduino -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/install/imu_ros_arduino
+[0.546s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/edrom-mini/edromufu/build/humanoid_definition' returned '1': /home/edrom-mini/.local/bin/cmake /home/edrom-mini/edromufu/src/movement/humanoid_definition -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/install/humanoid_definition
+[0.558s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/edrom-mini/edromufu/build/bhv_independent_simulator' returned '1': /home/edrom-mini/.local/bin/cmake /home/edrom-mini/edromufu/src/behaviour/bhv_independent_simulator -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/install/bhv_independent_simulator
+[0.560s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/edrom-mini/edromufu/build/humanoid_visualization' returned '1': /home/edrom-mini/.local/bin/cmake /home/edrom-mini/edromufu/src/movement/humanoid_visualization -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/install/humanoid_visualization
+[0.573s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/edrom-mini/edromufu/build/imu_ros_arduino' returned '1': /home/edrom-mini/.local/bin/cmake /home/edrom-mini/edromufu/src/behaviour/imu_ros_arduino -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/install/imu_ros_arduino
+[0.665s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(humanoid_definition)
+[0.669s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/install/humanoid_definition' for CMake module files
+[0.669s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/install/humanoid_definition' for CMake config files
+[0.670s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/install/humanoid_definition/bin'
+[0.670s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/install/humanoid_definition/lib/pkgconfig/humanoid_definition.pc'
+[0.670s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/install/humanoid_definition/lib/python3.10/site-packages'
+[0.671s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/install/humanoid_definition/bin'
+[0.671s] INFO:colcon.colcon_core.shell:Creating package script '/home/edrom-mini/edromufu/install/humanoid_definition/share/humanoid_definition/package.ps1'
+[0.673s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/edrom-mini/edromufu/install/humanoid_definition/share/humanoid_definition/package.dsv'
+[0.674s] INFO:colcon.colcon_core.shell:Creating package script '/home/edrom-mini/edromufu/install/humanoid_definition/share/humanoid_definition/package.sh'
+[0.675s] INFO:colcon.colcon_core.shell:Creating package script '/home/edrom-mini/edromufu/install/humanoid_definition/share/humanoid_definition/package.bash'
+[0.676s] INFO:colcon.colcon_core.shell:Creating package script '/home/edrom-mini/edromufu/install/humanoid_definition/share/humanoid_definition/package.zsh'
+[0.677s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/edrom-mini/edromufu/install/humanoid_definition/share/colcon-core/packages/humanoid_definition)
+[0.710s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[0.710s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[0.710s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '1'
+[0.711s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[0.717s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[0.717s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[0.717s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[0.730s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[0.731s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/edrom-mini/edromufu/install/local_setup.ps1'
+[0.732s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/edrom-mini/edromufu/install/_local_setup_util_ps1.py'
+[0.733s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/edrom-mini/edromufu/install/setup.ps1'
+[0.734s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/edrom-mini/edromufu/install/local_setup.sh'
+[0.735s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/edrom-mini/edromufu/install/_local_setup_util_sh.py'
+[0.736s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/edrom-mini/edromufu/install/setup.sh'
+[0.738s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/edrom-mini/edromufu/install/local_setup.bash'
+[0.739s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/edrom-mini/edromufu/install/setup.bash'
+[0.741s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/edrom-mini/edromufu/install/local_setup.zsh'
+[0.742s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/edrom-mini/edromufu/install/setup.zsh'

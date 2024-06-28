@@ -1,0 +1,2 @@
+Invoking command in '/home/edrom-mini/edromufu/src/vision/build/vision_msgs': /home/edrom-mini/.local/bin/cmake /home/edrom-mini/edromufu/src/vision/vision_msgs -DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/src/vision/install/vision_msgs
+Invoked command in '/home/edrom-mini/edromufu/src/vision/build/vision_msgs' returned '1': /home/edrom-mini/.local/bin/cmake /home/edrom-mini/edromufu/src/vision/vision_msgs -DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/src/vision/install/vision_msgs

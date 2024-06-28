@@ -1,0 +1,20 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from vision_msgs/msg/Leftgoalpost.msg
+// generated code does not contain a copyright notice
+
+
+module vision_msgs {
+  module msg {
+    struct Leftgoalpost {
+      boolean found;
+
+      int32 x;
+
+      int32 y;
+
+      int32 roi_width;
+
+      int32 roi_height;
+    };
+  };
+};

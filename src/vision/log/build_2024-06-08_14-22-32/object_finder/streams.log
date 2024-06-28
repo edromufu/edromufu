@@ -1,0 +1,30 @@
+[0.763s] Invoking command in '/home/edrom-mini/edromufu/src/vision/object_finder': PYTHONPATH=/home/edrom-mini/edromufu/src/vision/build/object_finder/prefix_override:/home/edrom-mini/edromufu/src/vision/install/object_finder/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/object_finder build --build-base /home/edrom-mini/edromufu/src/vision/build/object_finder/build install --record /home/edrom-mini/edromufu/src/vision/build/object_finder/install.log --single-version-externally-managed install_data
+[1.081s] running egg_info
+[1.082s] writing ../build/object_finder/object_finder.egg-info/PKG-INFO
+[1.082s] writing dependency_links to ../build/object_finder/object_finder.egg-info/dependency_links.txt
+[1.083s] writing entry points to ../build/object_finder/object_finder.egg-info/entry_points.txt
+[1.083s] writing requirements to ../build/object_finder/object_finder.egg-info/requires.txt
+[1.083s] writing top-level names to ../build/object_finder/object_finder.egg-info/top_level.txt
+[1.085s] reading manifest file '../build/object_finder/object_finder.egg-info/SOURCES.txt'
+[1.086s] writing manifest file '../build/object_finder/object_finder.egg-info/SOURCES.txt'
+[1.087s] running build
+[1.087s] running build_py
+[1.087s] copying object_finder/connecting_and_showing.py -> /home/edrom-mini/edromufu/src/vision/build/object_finder/build/lib/object_finder
+[1.087s] copying object_finder/running_inference.py -> /home/edrom-mini/edromufu/src/vision/build/object_finder/build/lib/object_finder
+[1.088s] running install
+[1.088s] running install_lib
+[1.090s] copying /home/edrom-mini/edromufu/src/vision/build/object_finder/build/lib/object_finder/connecting_and_showing.py -> /home/edrom-mini/edromufu/src/vision/install/object_finder/lib/python3.10/site-packages/object_finder
+[1.090s] copying /home/edrom-mini/edromufu/src/vision/build/object_finder/build/lib/object_finder/running_inference.py -> /home/edrom-mini/edromufu/src/vision/install/object_finder/lib/python3.10/site-packages/object_finder
+[1.091s] byte-compiling /home/edrom-mini/edromufu/src/vision/install/object_finder/lib/python3.10/site-packages/object_finder/connecting_and_showing.py to connecting_and_showing.cpython-310.pyc
+[1.093s] byte-compiling /home/edrom-mini/edromufu/src/vision/install/object_finder/lib/python3.10/site-packages/object_finder/running_inference.py to running_inference.cpython-310.pyc
+[1.093s] running install_data
+[1.094s] copying package.xml -> /home/edrom-mini/edromufu/src/vision/install/object_finder/share/object_finder
+[1.094s] creating /home/edrom-mini/edromufu/src/vision/install/object_finder/share/object_finder/launch
+[1.094s] copying launch/vision.launch.py -> /home/edrom-mini/edromufu/src/vision/install/object_finder/share/object_finder/launch
+[1.094s] running install_egg_info
+[1.097s] removing '/home/edrom-mini/edromufu/src/vision/install/object_finder/lib/python3.10/site-packages/object_finder-0.0.1-py3.10.egg-info' (and everything under it)
+[1.097s] Copying ../build/object_finder/object_finder.egg-info to /home/edrom-mini/edromufu/src/vision/install/object_finder/lib/python3.10/site-packages/object_finder-0.0.1-py3.10.egg-info
+[1.098s] running install_scripts
+[1.126s] Installing finder script to /home/edrom-mini/edromufu/src/vision/install/object_finder/lib/object_finder
+[1.129s] writing list of installed files to '/home/edrom-mini/edromufu/src/vision/build/object_finder/install.log'
+[1.250s] Invoked command in '/home/edrom-mini/edromufu/src/vision/object_finder' returned '0': PYTHONPATH=/home/edrom-mini/edromufu/src/vision/build/object_finder/prefix_override:/home/edrom-mini/edromufu/src/vision/install/object_finder/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/object_finder build --build-base /home/edrom-mini/edromufu/src/vision/build/object_finder/build install --record /home/edrom-mini/edromufu/src/vision/build/object_finder/install.log --single-version-externally-managed install_data

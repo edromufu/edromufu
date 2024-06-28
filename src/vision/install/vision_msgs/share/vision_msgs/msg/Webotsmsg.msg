@@ -1,0 +1,5 @@
+bool searching
+uint8 fps
+vision_msgs/Ball ball
+vision_msgs/Leftgoalpost leftgoalpost
+vision_msgs/Rightgoalpost rightgoalpost

@@ -1,0 +1,40 @@
+[0.039s] Invoking command in '/home/edrom-mini/edromufu/build/imu_ros_arduino': /home/edrom-mini/.local/bin/cmake /home/edrom-mini/edromufu/src/behaviour/imu_ros_arduino -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/install/imu_ros_arduino
+[0.129s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.129s]   Compatibility with CMake < 3.5 will be removed from a future version of
+[0.129s]   CMake.
+[0.129s] 
+[0.129s]   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[0.129s]   CMake that the project does not need compatibility with older versions.
+[0.129s] 
+[0.129s] [0m
+[0.191s] -- The C compiler identification is GNU 11.4.0
+[0.275s] -- The CXX compiler identification is GNU 11.4.0
+[0.291s] -- Detecting C compiler ABI info
+[0.370s] -- Detecting C compiler ABI info - done
+[0.397s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.398s] -- Detecting C compile features
+[0.399s] -- Detecting C compile features - done
+[0.406s] -- Detecting CXX compiler ABI info
+[0.497s] -- Detecting CXX compiler ABI info - done
+[0.535s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.536s] -- Detecting CXX compile features
+[0.537s] -- Detecting CXX compile features - done
+[0.553s] -- Configuring incomplete, errors occurred!
+[0.553s] [31mCMake Error at CMakeLists.txt:10 (find_package):
+[0.553s]   By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has
+[0.553s]   asked CMake to find a package configuration file provided by "catkin", but
+[0.554s]   CMake did not find one.
+[0.554s] 
+[0.554s]   Could not find a package configuration file provided by "catkin" with any
+[0.554s]   of the following names:
+[0.554s] 
+[0.554s]     catkinConfig.cmake
+[0.554s]     catkin-config.cmake
+[0.554s] 
+[0.554s]   Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set
+[0.554s]   "catkin_DIR" to a directory containing one of the above files.  If "catkin"
+[0.554s]   provides a separate development package or SDK, be sure it has been
+[0.555s]   installed.
+[0.555s] 
+[0.555s] [0m
+[0.576s] Invoked command in '/home/edrom-mini/edromufu/build/imu_ros_arduino' returned '1': /home/edrom-mini/.local/bin/cmake /home/edrom-mini/edromufu/src/behaviour/imu_ros_arduino -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/install/imu_ros_arduino

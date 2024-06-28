@@ -1,0 +1,219 @@
+[0.000000] (-) TimerEvent: {}
+[0.000159] (bhv_independent_simulator) JobQueued: {'identifier': 'bhv_independent_simulator', 'dependencies': OrderedDict()}
+[0.000205] (humanoid_definition) JobQueued: {'identifier': 'humanoid_definition', 'dependencies': OrderedDict()}
+[0.000228] (humanoid_visualization) JobQueued: {'identifier': 'humanoid_visualization', 'dependencies': OrderedDict()}
+[0.000249] (imu_ros_arduino) JobQueued: {'identifier': 'imu_ros_arduino', 'dependencies': OrderedDict()}
+[0.000269] (kinematic_functions) JobQueued: {'identifier': 'kinematic_functions', 'dependencies': OrderedDict()}
+[0.000289] (localization_real) JobQueued: {'identifier': 'localization_real', 'dependencies': OrderedDict()}
+[0.000309] (localization_sim) JobQueued: {'identifier': 'localization_sim', 'dependencies': OrderedDict()}
+[0.000328] (modularized_bhv_msgs) JobQueued: {'identifier': 'modularized_bhv_msgs', 'dependencies': OrderedDict()}
+[0.000346] (movement_core) JobQueued: {'identifier': 'movement_core', 'dependencies': OrderedDict()}
+[0.000364] (movement_functions) JobQueued: {'identifier': 'movement_functions', 'dependencies': OrderedDict()}
+[0.000382] (movement_pages) JobQueued: {'identifier': 'movement_pages', 'dependencies': OrderedDict()}
+[0.000399] (movement_predefined) JobQueued: {'identifier': 'movement_predefined', 'dependencies': OrderedDict()}
+[0.000415] (movement_utils) JobQueued: {'identifier': 'movement_utils', 'dependencies': OrderedDict()}
+[0.000431] (numerical_optimization) JobQueued: {'identifier': 'numerical_optimization', 'dependencies': OrderedDict()}
+[0.000447] (object_finder) JobQueued: {'identifier': 'object_finder', 'dependencies': OrderedDict()}
+[0.000463] (sensor_observer) JobQueued: {'identifier': 'sensor_observer', 'dependencies': OrderedDict()}
+[0.000479] (states_routine) JobQueued: {'identifier': 'states_routine', 'dependencies': OrderedDict()}
+[0.000495] (transitions_and_states) JobQueued: {'identifier': 'transitions_and_states', 'dependencies': OrderedDict()}
+[0.000511] (u2d2_comm) JobQueued: {'identifier': 'u2d2_comm', 'dependencies': OrderedDict()}
+[0.000530] (vision_msgs) JobQueued: {'identifier': 'vision_msgs', 'dependencies': OrderedDict()}
+[0.000546] (webots_natasha) JobQueued: {'identifier': 'webots_natasha', 'dependencies': OrderedDict()}
+[0.000941] (bhv_independent_simulator) JobStarted: {'identifier': 'bhv_independent_simulator'}
+[0.005313] (humanoid_definition) JobStarted: {'identifier': 'humanoid_definition'}
+[0.008059] (humanoid_visualization) JobStarted: {'identifier': 'humanoid_visualization'}
+[0.011920] (imu_ros_arduino) JobStarted: {'identifier': 'imu_ros_arduino'}
+[0.016211] (bhv_independent_simulator) JobProgress: {'identifier': 'bhv_independent_simulator', 'progress': 'cmake'}
+[0.016398] (bhv_independent_simulator) Command: {'cmd': ['/home/edrom-mini/.local/bin/cmake', '/home/edrom-mini/edromufu/src/behaviour/bhv_independent_simulator', '-DCATKIN_INSTALL_INTO_PREFIX_ROOT=0', '-DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/install/bhv_independent_simulator'], 'cwd': '/home/edrom-mini/edromufu/build/bhv_independent_simulator', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'edrom-mini'), ('LC_TIME', 'pt_BR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/edrom-mini'), ('OLDPWD', '/home/edrom-mini'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1280'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('SYSTEMD_EXEC_PID', '1638'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4127'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'edrom-mini'), ('JOURNAL_STREAM', '8:29270'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'edrom-mini'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/edrom-mini/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/edrom-mini:@/tmp/.ICE-unix/1420,unix/edrom-mini:/tmp/.ICE-unix/1420'), ('INVOCATION_ID', 'a1da990ee55a4d27b0b784555588fff0'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.XM5DP2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:9b8b3bb3-cd4a-4efa-baf2-ffd0b6960cbd'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/edrom-mini/edromufu/build/bhv_independent_simulator'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800')]), 'shell': False}
+[0.019538] (humanoid_definition) JobProgress: {'identifier': 'humanoid_definition', 'progress': 'cmake'}
+[0.019578] (humanoid_definition) Command: {'cmd': ['/home/edrom-mini/.local/bin/cmake', '/home/edrom-mini/edromufu/src/movement/humanoid_definition', '-DCATKIN_INSTALL_INTO_PREFIX_ROOT=0', '-DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/install/humanoid_definition'], 'cwd': '/home/edrom-mini/edromufu/build/humanoid_definition', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'edrom-mini'), ('LC_TIME', 'pt_BR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/edrom-mini'), ('OLDPWD', '/home/edrom-mini'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1280'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('SYSTEMD_EXEC_PID', '1638'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4127'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'edrom-mini'), ('JOURNAL_STREAM', '8:29270'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'edrom-mini'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/edrom-mini/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/edrom-mini:@/tmp/.ICE-unix/1420,unix/edrom-mini:/tmp/.ICE-unix/1420'), ('INVOCATION_ID', 'a1da990ee55a4d27b0b784555588fff0'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.XM5DP2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:9b8b3bb3-cd4a-4efa-baf2-ffd0b6960cbd'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/edrom-mini/edromufu/build/humanoid_definition'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800')]), 'shell': False}
+[0.020884] (humanoid_visualization) JobProgress: {'identifier': 'humanoid_visualization', 'progress': 'cmake'}
+[0.021074] (humanoid_visualization) Command: {'cmd': ['/home/edrom-mini/.local/bin/cmake', '/home/edrom-mini/edromufu/src/movement/humanoid_visualization', '-DCATKIN_INSTALL_INTO_PREFIX_ROOT=0', '-DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/install/humanoid_visualization'], 'cwd': '/home/edrom-mini/edromufu/build/humanoid_visualization', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'edrom-mini'), ('LC_TIME', 'pt_BR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/edrom-mini'), ('OLDPWD', '/home/edrom-mini'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1280'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('SYSTEMD_EXEC_PID', '1638'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4127'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'edrom-mini'), ('JOURNAL_STREAM', '8:29270'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'edrom-mini'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/edrom-mini/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/edrom-mini:@/tmp/.ICE-unix/1420,unix/edrom-mini:/tmp/.ICE-unix/1420'), ('INVOCATION_ID', 'a1da990ee55a4d27b0b784555588fff0'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.XM5DP2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:9b8b3bb3-cd4a-4efa-baf2-ffd0b6960cbd'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/edrom-mini/edromufu/build/humanoid_visualization'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800')]), 'shell': False}
+[0.048486] (imu_ros_arduino) JobProgress: {'identifier': 'imu_ros_arduino', 'progress': 'cmake'}
+[0.049107] (imu_ros_arduino) Command: {'cmd': ['/home/edrom-mini/.local/bin/cmake', '/home/edrom-mini/edromufu/src/behaviour/imu_ros_arduino', '-DCATKIN_INSTALL_INTO_PREFIX_ROOT=0', '-DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/install/imu_ros_arduino'], 'cwd': '/home/edrom-mini/edromufu/build/imu_ros_arduino', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'edrom-mini'), ('LC_TIME', 'pt_BR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/edrom-mini'), ('OLDPWD', '/home/edrom-mini'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1280'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('SYSTEMD_EXEC_PID', '1638'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4127'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'edrom-mini'), ('JOURNAL_STREAM', '8:29270'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'edrom-mini'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/edrom-mini/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/edrom-mini:@/tmp/.ICE-unix/1420,unix/edrom-mini:/tmp/.ICE-unix/1420'), ('INVOCATION_ID', 'a1da990ee55a4d27b0b784555588fff0'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.XM5DP2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:9b8b3bb3-cd4a-4efa-baf2-ffd0b6960cbd'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/edrom-mini/edromufu/build/imu_ros_arduino'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800')]), 'shell': False}
+[0.099776] (-) TimerEvent: {}
+[0.109721] (bhv_independent_simulator) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):\n'}
+[0.109931] (bhv_independent_simulator) StderrLine: {'line': b'  Compatibility with CMake < 3.5 will be removed from a future version of\n'}
+[0.110021] (bhv_independent_simulator) StderrLine: {'line': b'  CMake.\n'}
+[0.110099] (bhv_independent_simulator) StderrLine: {'line': b'\n'}
+[0.110174] (bhv_independent_simulator) StderrLine: {'line': b'  Update the VERSION argument <min> value or use a ...<max> suffix to tell\n'}
+[0.110247] (bhv_independent_simulator) StderrLine: {'line': b'  CMake that the project does not need compatibility with older versions.\n'}
+[0.110335] (bhv_independent_simulator) StderrLine: {'line': b'\n'}
+[0.110408] (bhv_independent_simulator) StderrLine: {'line': b'\x1b[0m\n'}
+[0.115893] (humanoid_visualization) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):\n'}
+[0.116093] (humanoid_visualization) StderrLine: {'line': b'  Compatibility with CMake < 3.5 will be removed from a future version of\n'}
+[0.116178] (humanoid_visualization) StderrLine: {'line': b'  CMake.\n'}
+[0.116249] (humanoid_visualization) StderrLine: {'line': b'\n'}
+[0.116319] (humanoid_visualization) StderrLine: {'line': b'  Update the VERSION argument <min> value or use a ...<max> suffix to tell\n'}
+[0.116388] (humanoid_visualization) StderrLine: {'line': b'  CMake that the project does not need compatibility with older versions.\n'}
+[0.116457] (humanoid_visualization) StderrLine: {'line': b'\n'}
+[0.116524] (humanoid_visualization) StderrLine: {'line': b'\x1b[0m\n'}
+[0.121790] (humanoid_definition) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):\n'}
+[0.121998] (humanoid_definition) StderrLine: {'line': b'  Compatibility with CMake < 3.5 will be removed from a future version of\n'}
+[0.122084] (humanoid_definition) StderrLine: {'line': b'  CMake.\n'}
+[0.122158] (humanoid_definition) StderrLine: {'line': b'\n'}
+[0.122229] (humanoid_definition) StderrLine: {'line': b'  Update the VERSION argument <min> value or use a ...<max> suffix to tell\n'}
+[0.122363] (humanoid_definition) StderrLine: {'line': b'  CMake that the project does not need compatibility with older versions.\n'}
+[0.122442] (humanoid_definition) StderrLine: {'line': b'\n'}
+[0.122516] (humanoid_definition) StderrLine: {'line': b'\x1b[0m\n'}
+[0.140503] (imu_ros_arduino) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):\n'}
+[0.140741] (imu_ros_arduino) StderrLine: {'line': b'  Compatibility with CMake < 3.5 will be removed from a future version of\n'}
+[0.140842] (imu_ros_arduino) StderrLine: {'line': b'  CMake.\n'}
+[0.140920] (imu_ros_arduino) StderrLine: {'line': b'\n'}
+[0.140993] (imu_ros_arduino) StderrLine: {'line': b'  Update the VERSION argument <min> value or use a ...<max> suffix to tell\n'}
+[0.141064] (imu_ros_arduino) StderrLine: {'line': b'  CMake that the project does not need compatibility with older versions.\n'}
+[0.141133] (imu_ros_arduino) StderrLine: {'line': b'\n'}
+[0.141202] (imu_ros_arduino) StderrLine: {'line': b'\x1b[0m\n'}
+[0.174507] (humanoid_visualization) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.180568] (humanoid_definition) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.182399] (bhv_independent_simulator) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.199892] (-) TimerEvent: {}
+[0.203035] (imu_ros_arduino) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.253811] (humanoid_visualization) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.258758] (humanoid_definition) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.260083] (bhv_independent_simulator) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.268793] (humanoid_visualization) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.273849] (humanoid_definition) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.274222] (bhv_independent_simulator) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.287242] (imu_ros_arduino) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.300014] (-) TimerEvent: {}
+[0.302856] (imu_ros_arduino) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.349160] (humanoid_visualization) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.349645] (humanoid_definition) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.354522] (bhv_independent_simulator) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.375322] (humanoid_visualization) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.375805] (humanoid_visualization) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.376034] (humanoid_definition) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.376393] (humanoid_definition) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.377191] (humanoid_definition) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.377652] (humanoid_visualization) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.381951] (imu_ros_arduino) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.382400] (bhv_independent_simulator) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.382847] (bhv_independent_simulator) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.383517] (bhv_independent_simulator) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.383944] (humanoid_visualization) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.384124] (humanoid_definition) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.389617] (bhv_independent_simulator) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.400124] (-) TimerEvent: {}
+[0.409180] (imu_ros_arduino) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.410099] (imu_ros_arduino) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.411114] (imu_ros_arduino) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.418056] (imu_ros_arduino) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.482118] (humanoid_visualization) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.482485] (humanoid_definition) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.484200] (bhv_independent_simulator) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.500237] (-) TimerEvent: {}
+[0.508927] (imu_ros_arduino) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.511226] (bhv_independent_simulator) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.511702] (bhv_independent_simulator) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.511909] (humanoid_definition) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.512089] (humanoid_visualization) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.512408] (humanoid_definition) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.512617] (humanoid_visualization) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.512723] (bhv_independent_simulator) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.513272] (humanoid_definition) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.513455] (humanoid_visualization) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.525233] (humanoid_definition) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:10 (find_package):\n'}
+[0.525636] (humanoid_definition) StderrLine: {'line': b'  By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[0.525779] (humanoid_definition) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "catkin", but\n'}
+[0.525911] (humanoid_definition) StderrLine: {'line': b'  CMake did not find one.\n'}
+[0.527708] (humanoid_definition) StderrLine: {'line': b'\n'}
+[0.527836] (humanoid_definition) StderrLine: {'line': b'  Could not find a package configuration file provided by "catkin" with any\n'}
+[0.527937] (humanoid_definition) StderrLine: {'line': b'  of the following names:\n'}
+[0.528021] (humanoid_definition) StderrLine: {'line': b'\n'}
+[0.528103] (humanoid_definition) StderrLine: {'line': b'    catkinConfig.cmake\n'}
+[0.528188] (humanoid_definition) StderrLine: {'line': b'    catkin-config.cmake\n'}
+[0.528271] (humanoid_definition) StderrLine: {'line': b'\n'}
+[0.528356] (humanoid_definition) StderrLine: {'line': b'  Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set\n'}
+[0.528442] (humanoid_definition) StderrLine: {'line': b'  "catkin_DIR" to a directory containing one of the above files.  If "catkin"\n'}
+[0.528526] (humanoid_definition) StderrLine: {'line': b'  provides a separate development package or SDK, be sure it has been\n'}
+[0.528610] (humanoid_definition) StderrLine: {'line': b'  installed.\n'}
+[0.528698] (humanoid_definition) StderrLine: {'line': b'\n'}
+[0.528781] (humanoid_visualization) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:10 (find_package):\n'}
+[0.528873] (humanoid_visualization) StderrLine: {'line': b'  By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[0.528956] (humanoid_visualization) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "catkin", but\n'}
+[0.529034] (humanoid_visualization) StderrLine: {'line': b'  CMake did not find one.\n'}
+[0.529113] (humanoid_visualization) StderrLine: {'line': b'\n'}
+[0.529191] (humanoid_visualization) StderrLine: {'line': b'  Could not find a package configuration file provided by "catkin" with any\n'}
+[0.529272] (humanoid_visualization) StderrLine: {'line': b'  of the following names:\n'}
+[0.529353] (humanoid_visualization) StderrLine: {'line': b'\n'}
+[0.529433] (humanoid_visualization) StderrLine: {'line': b'    catkinConfig.cmake\n'}
+[0.529515] (humanoid_visualization) StderrLine: {'line': b'    catkin-config.cmake\n'}
+[0.529594] (humanoid_visualization) StderrLine: {'line': b'\n'}
+[0.529676] (humanoid_visualization) StderrLine: {'line': b'  Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set\n'}
+[0.529787] (humanoid_visualization) StderrLine: {'line': b'  "catkin_DIR" to a directory containing one of the above files.  If "catkin"\n'}
+[0.529868] (humanoid_visualization) StderrLine: {'line': b'  provides a separate development package or SDK, be sure it has been\n'}
+[0.529950] (humanoid_visualization) StderrLine: {'line': b'  installed.\n'}
+[0.530030] (humanoid_visualization) StderrLine: {'line': b'\n'}
+[0.530111] (humanoid_visualization) StderrLine: {'line': b'\x1b[0m\n'}
+[0.530194] (bhv_independent_simulator) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:10 (find_package):\n'}
+[0.530491] (bhv_independent_simulator) StderrLine: {'line': b'  By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[0.530615] (bhv_independent_simulator) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "catkin", but\n'}
+[0.530706] (bhv_independent_simulator) StderrLine: {'line': b'  CMake did not find one.\n'}
+[0.542610] (bhv_independent_simulator) StderrLine: {'line': b'\n'}
+[0.542766] (bhv_independent_simulator) StderrLine: {'line': b'  Could not find a package configuration file provided by "catkin" with any\n'}
+[0.542875] (bhv_independent_simulator) StderrLine: {'line': b'  of the following names:\n'}
+[0.542978] (bhv_independent_simulator) StderrLine: {'line': b'\n'}
+[0.543074] (bhv_independent_simulator) StderrLine: {'line': b'    catkinConfig.cmake\n'}
+[0.543170] (bhv_independent_simulator) StderrLine: {'line': b'    catkin-config.cmake\n'}
+[0.543263] (bhv_independent_simulator) StderrLine: {'line': b'\n'}
+[0.543357] (bhv_independent_simulator) StderrLine: {'line': b'  Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set\n'}
+[0.543455] (bhv_independent_simulator) StderrLine: {'line': b'  "catkin_DIR" to a directory containing one of the above files.  If "catkin"\n'}
+[0.543546] (bhv_independent_simulator) StderrLine: {'line': b'  provides a separate development package or SDK, be sure it has been\n'}
+[0.543630] (bhv_independent_simulator) StderrLine: {'line': b'  installed.\n'}
+[0.543716] (bhv_independent_simulator) StderrLine: {'line': b'\n'}
+[0.543799] (bhv_independent_simulator) StderrLine: {'line': b'\x1b[0m\n'}
+[0.543884] (humanoid_visualization) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.543998] (humanoid_definition) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.544104] (humanoid_definition) StderrLine: {'line': b'\x1b[0m\n'}
+[0.544199] (bhv_independent_simulator) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.546662] (imu_ros_arduino) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.547355] (imu_ros_arduino) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.548749] (imu_ros_arduino) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.559719] (bhv_independent_simulator) CommandEnded: {'returncode': 1}
+[0.563476] (humanoid_visualization) CommandEnded: {'returncode': 1}
+[0.564380] (imu_ros_arduino) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.565111] (imu_ros_arduino) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:10 (find_package):\n'}
+[0.565270] (imu_ros_arduino) StderrLine: {'line': b'  By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[0.565372] (imu_ros_arduino) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "catkin", but\n'}
+[0.565464] (imu_ros_arduino) StderrLine: {'line': b'  CMake did not find one.\n'}
+[0.565553] (imu_ros_arduino) StderrLine: {'line': b'\n'}
+[0.565641] (imu_ros_arduino) StderrLine: {'line': b'  Could not find a package configuration file provided by "catkin" with any\n'}
+[0.565728] (imu_ros_arduino) StderrLine: {'line': b'  of the following names:\n'}
+[0.565817] (imu_ros_arduino) StderrLine: {'line': b'\n'}
+[0.565900] (imu_ros_arduino) StderrLine: {'line': b'    catkinConfig.cmake\n'}
+[0.566000] (imu_ros_arduino) StderrLine: {'line': b'    catkin-config.cmake\n'}
+[0.566084] (imu_ros_arduino) StderrLine: {'line': b'\n'}
+[0.566167] (imu_ros_arduino) StderrLine: {'line': b'  Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set\n'}
+[0.566251] (imu_ros_arduino) StderrLine: {'line': b'  "catkin_DIR" to a directory containing one of the above files.  If "catkin"\n'}
+[0.566384] (imu_ros_arduino) StderrLine: {'line': b'  provides a separate development package or SDK, be sure it has been\n'}
+[0.566469] (imu_ros_arduino) StderrLine: {'line': b'  installed.\n'}
+[0.566554] (imu_ros_arduino) StderrLine: {'line': b'\n'}
+[0.566639] (imu_ros_arduino) StderrLine: {'line': b'\x1b[0m\n'}
+[0.568368] (humanoid_definition) CommandEnded: {'returncode': 1}
+[0.587826] (imu_ros_arduino) CommandEnded: {'returncode': 1}
+[0.600347] (-) TimerEvent: {}
+[0.700742] (-) TimerEvent: {}
+[0.714397] (humanoid_visualization) JobEnded: {'identifier': 'humanoid_visualization', 'rc': 1}
+[0.715813] (bhv_independent_simulator) JobEnded: {'identifier': 'bhv_independent_simulator', 'rc': 'SIGINT'}
+[0.716254] (humanoid_definition) JobEnded: {'identifier': 'humanoid_definition', 'rc': 'SIGINT'}
+[0.727338] (imu_ros_arduino) JobEnded: {'identifier': 'imu_ros_arduino', 'rc': 'SIGINT'}
+[0.738087] (kinematic_functions) JobSkipped: {'identifier': 'kinematic_functions'}
+[0.738165] (localization_real) JobSkipped: {'identifier': 'localization_real'}
+[0.738192] (localization_sim) JobSkipped: {'identifier': 'localization_sim'}
+[0.738214] (modularized_bhv_msgs) JobSkipped: {'identifier': 'modularized_bhv_msgs'}
+[0.738234] (movement_core) JobSkipped: {'identifier': 'movement_core'}
+[0.738254] (movement_functions) JobSkipped: {'identifier': 'movement_functions'}
+[0.738274] (movement_pages) JobSkipped: {'identifier': 'movement_pages'}
+[0.738385] (movement_predefined) JobSkipped: {'identifier': 'movement_predefined'}
+[0.738419] (movement_utils) JobSkipped: {'identifier': 'movement_utils'}
+[0.738442] (numerical_optimization) JobSkipped: {'identifier': 'numerical_optimization'}
+[0.738463] (object_finder) JobSkipped: {'identifier': 'object_finder'}
+[0.738484] (sensor_observer) JobSkipped: {'identifier': 'sensor_observer'}
+[0.738504] (states_routine) JobSkipped: {'identifier': 'states_routine'}
+[0.738524] (transitions_and_states) JobSkipped: {'identifier': 'transitions_and_states'}
+[0.738544] (u2d2_comm) JobSkipped: {'identifier': 'u2d2_comm'}
+[0.738565] (vision_msgs) JobSkipped: {'identifier': 'vision_msgs'}
+[0.738585] (webots_natasha) JobSkipped: {'identifier': 'webots_natasha'}
+[0.738605] (-) EventReactorShutdown: {}
