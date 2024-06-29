@@ -7,7 +7,7 @@ sidebar_position: 2
 ---
 
 ## Software de Pages
-1- o que é o software pages?
+1- o que é o Software Pages?
     O software Pages desempenha um papel fundamental no desenvolvimento dos movimentos da robô. É por meio deste software que são determinados
     não apenas os principais movimentos da robô, mas também o controle preciso de seus motores e atuadores. Com sua interface intuitiva e poderosas ferramentas de programação, o Pages possibilita a criação de sequências de movimentos complexos e coordenados, essenciais para o desempenho eficiente da robô em uma variedade de tarefas e ambientes, como no caso da EDROM, o ambiente de competições.
 
