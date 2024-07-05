@@ -6,17 +6,19 @@ slug: /introducao
 ---
 
 
+Na visão, é utilizada a YOLOv8, uma arquitetura de rede neural convolucional para detecção de objetos em tempo real. Para entender mais da bilbioteca é recomendado o vídeo a seguir: 
+[![YOLOv8](https://img.youtube.com/vi/wuZtUMEiKWY/0.jpg)](https://www.youtube.com/watch?v=wuZtUMEiKWY)
 
-Para realizar o treinamento da rede, utilizamos o tutorial do repositório [Darknet](https://github.com/AlexeyAB/darknet), que ensina o treinamento com o modelo YOLO. Na nossa aplicação, utilizamos o Tiny YOLOv4, que é uma versão do YOLOv4 menos precisa, porém mais leve, o que funciona muito bem em nosso projeto.
+O tutorial detalhado de [como realizar o treinamento de um dataset customizado](https://docs.ultralytics.com/) pode ser encontrado na documentação da Ultralytics, empresa responsável pelo desenvolvimento da YOLOv8.
 
-Para realizar o treinamento, primeiro é necessário preparar o dataset que será utilizado de base, seguindo as orientações do tutorial do Darknet. Dividimos isso em cinco etapas até o treinamento em si:
+
+Entretanto, as outras secções da documentação da Edrom explicam o passo a passo utilizado na equipe para a deteção dos objetos desejados, de forma a manter um padrão e evitar conflitos (Mas vale ressaltar que tudo se baseia na documentação oferecida pela Ultralytics).
+
+O passo a passo do treinamento é:
 
 1. [Gravar as imagens com a câmera utilizada](./recording_from_camera.md)
 2. [Dividir os vídeos em imagens (denominadas "frames")](./spliting_video_in_frames.md)
 3. [Separar os frames em treinamento, validação e avaliação](./organizing_dataset.md)
 4. [Marcar os frames para o treinamento](./marcando_labels.md)
-5. [Criar os arquivos auxiliares para o treinamento](./criando_txts_dataset.md)
-
-Com exceção do quarto passo, todos possuem scripts para auxiliar na preparação do dataset, porém acompanhar o tutorial do Darknet é fortemente aconselhado ao longo do de todas as etapas do processo.
-
-Nas próximas seções, serão apresentados os scripts, bem como explicada a maneira correta de utilizá-los.
+5. [Organização do dataset](./criando_txts_dataset.md)
+6. [Treinamento em si](./treinamento_visao.md)
