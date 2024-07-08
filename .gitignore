@@ -40,6 +40,7 @@ src/tools/gui_program/moc_parameters.cpp
 src/src/
 build/
 install/
+log/
 
 
 #Imagens
