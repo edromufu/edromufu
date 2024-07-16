@@ -1,0 +1,11 @@
+
+path: '/content/gdrive/My Drive/Teste/Ball' # Pasta do dataset ROOT_DIR
+train: train/images  # train images (relative to 'path')
+val: valid/images  # val images (relative to 'path')
+
+# Classes
+names:
+  0: ball
+  1: robot
+  2: right_goal
+  3: left_goal
