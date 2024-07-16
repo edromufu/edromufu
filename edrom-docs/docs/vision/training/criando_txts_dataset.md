@@ -7,44 +7,104 @@ sidebar_position: 6
 
 
 
-Durante o processo de treinamento, optamos por utilizar o Google Colab como nossa plataforma principal, aproveitando sua potente infraestrutura em nuvem, e utilizamos o Google Drive para organizar e armazenar nosso conjunto de dados, simplificando o gerenciamento e promovendo a colaboração eficiente.
+Por fim, para realizar o treinamento, é necessário informar quais os frames serão utilizados para treinamento e validação, bem como seu endereço no drive. Para isso, é utilizado o seguinte script:
 
-## Criação da estrutura de pastas no Google Drive:
+```py
+import os
 
-1. No seu Google Drive, crie uma pasta (por exemplo, chamada "EDROM").
+pastaFrames = "frames" # Pasta onde frames estão salvos
 
-2. Dentro da pasta "EDROM", crie uma subpasta para o conjunto de dados (por exemplo, "Ball").
+os.chdir(pastaFrames)
+lista_de_arquivo = os.listdir(os.getcwd())
+lista_de_imagens = []
+os.chdir('..')
 
-![Exemplo 1](./img/Exemplo%201.jpg)
+for arquivo in lista_de_arquivo:
+    if os.path.splitext(arquivo)[1] == ".jpg":
+        lista_de_imagens.append(arquivo)
 
-3. Dentro da subpasta "Ball", crie duas subpastas chamadas "train" e "valid".
-   - Na pasta "train" serão colocadas as imagens de treinamento.
-   - Na pasta "valid" serão colocadas as imagens de validação.
-   - Lembrando que nomeamos as imagens com prefixo “train” e “val” para facilitar a organização dos respectivos arquivos.
+if os.path.exists('train.txt'):
+    os.remove('train.txt')
+    
+if os.path.exists('valid.txt'):
+    os.remove('valid.txt')
 
-![Exemplo 2](./img/Exemplo%202.jpg)
+arquivo_train = open('train.txt', 'a')
+arquivo_val = open('valid.txt', 'a')
 
-4. Dentro de cada uma dessas subpastas ("train" e "valid"), crie duas subpastas adicionais chamadas "images" e "labels".
+line = 'data/obj/'
 
-![Exemplo 3](./img/Exemplo%203.jpg)
-![Exemplo 4](./img/Exemplo%204.jpg)
+for imagem in lista_de_imagens:
+    if imagem.__contains__('train'):
+        if lista_de_arquivo.__contains__(os.path.splitext(imagem)[0]+'.txt'):
+            arquivo_train.write(line + imagem + '\n')
+        else: os.remove(pastaFrames + '/' + imagem)
 
-## Organização dos dados dentro das pastas:
+    elif imagem.__contains__('eval'): pass
 
-- Na pasta "train":
-  - Coloque as imagens de treinamento com o prefixo "train" na subpasta "images".
+    elif imagem.__contains__('val'):
+        if lista_de_arquivo.__contains__(os.path.splitext(imagem)[0]+'.txt'):
+            arquivo_val.write(line + imagem + '\n')
+        else: os.remove(pastaFrames + '/' + imagem)
 
-  ![Exemplo 5](./img/Exemplo%205.jpg)
+arquivo_train.close()
+arquivo_val.close()
+```
 
-  - Coloque os arquivos de rótulos com o prefixo "train" na subpasta "labels", junto com o arquivo "classes.txt".
+O único parâmetro desse código é a pasta em que os frames estão.
 
-![Exemplo 6](./img/Exemplo%206.jpg)
+```py
+pastaFrames = "frames" # Pasta onde frames estão salvos
+```
 
-- Na pasta "valid":
-  - Coloque as imagens de validação com o prefixo "val" na subpasta "images".
+Em seguida, acessa a pasta dos frames e lê o nome de todos os arquivos para iterar sobre eles. Então, salva os que possuem a extensão .jpg em uma lista (para evitar erros com "lixo" na pasta).
 
-  ![Exemplo 7](./img/Exemplo%207.jpg)
-  
-  - Coloque os arquivos de rótulos com o prefixo "val" na subpasta "labels", junto com o arquivo "classes.txt".
+```py
+os.chdir(pastaFrames)
+lista_de_arquivo = os.listdir(os.getcwd())
+lista_de_imagens = []
+os.chdir('..')
 
-  ![Exemplo 8](./img/Exemplo%208.jpg)
+for arquivo in lista_de_arquivo:
+    if os.path.splitext(arquivo)[1] == ".jpg":
+        lista_de_imagens.append(arquivo)
+```
+
+Após isso, deleta os arquivos "train.txt" e "valid.txt", caso existam, e em seguida cria os novos.
+
+```py
+if os.path.exists('train.txt'):
+    os.remove('train.txt')
+    
+if os.path.exists('valid.txt'):
+    os.remove('valid.txt')
+
+arquivo_train = open('train.txt', 'a')
+arquivo_val = open('valid.txt', 'a')
+```
+
+Por fim, itera sobre todos os frames, registrando os marcados como train na "train.txt" e os marcados com val na "valid.txt". Os frames são registrados precedidos de 'data/obj/', pois é o endereço da pasta que estarão quando enviados para o drive para realizar o treinamento (seguindo o tutorial do Darknet).
+
+```py
+line = 'data/obj/'
+
+for imagem in lista_de_imagens:
+    if imagem.__contains__('train'):
+        if lista_de_arquivo.__contains__(os.path.splitext(imagem)[0]+'.txt'):
+            arquivo_train.write(line + imagem + '\n')
+        else: os.remove(pastaFrames + '/' + imagem)
+
+    elif imagem.__contains__('eval'): pass
+
+    elif imagem.__contains__('val'):
+        if lista_de_arquivo.__contains__(os.path.splitext(imagem)[0]+'.txt'):
+            arquivo_val.write(line + imagem + '\n')
+        else: os.remove(pastaFrames + '/' + imagem)
+
+arquivo_train.close()
+arquivo_val.close()
+```
+
+O resultado do script são os dois arquivos, "train.txt" e "valid.txt", com os nomes e endereços dos frames de treinamento de validação.
+
+Com isso, a etapa de preparação do dataset para treinamento foi concluída. Os próximos passos agora, seguindo o tutorial do [Darknet](https://github.com/AlexeyAB/darknet), é upar os arquivos para seus respectivos destinos no drive, e seguir o passo a passo do treinamento no Colab.
