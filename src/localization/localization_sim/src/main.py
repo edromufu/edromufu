@@ -65,10 +65,11 @@ class Localization:
 
         # Para debug de interseções
         if self.debug:
+            print('------------------------')
             for i in self.vision.getIntersections():
                 print(i)
-            cv.imshow("Tie break",self.vision.tieBreaker())
-        self.vision.showResults(mask=True, resultColored=True, dilatedMask=True, source=self.source)
+            #cv.imshow("Tie break",self.vision.tieBreaker())
+        self.vision.showResults(mask=False , resultColored=True, dilatedMask=False, source=self.source)
 
     def runParticleFilter(self):
         pass
@@ -76,5 +77,5 @@ class Localization:
 if __name__ == '__main__':
 
     rospy.init_node('localization_node', anonymous=False)
-    robotFinder = Localization(Localization.SIMULATION, debug=False)
+    robotFinder = Localization(Localization.SIMULATION, debug=True)
     rospy.spin()
