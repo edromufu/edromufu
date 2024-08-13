@@ -1,0 +1,1877 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="urdf_robox">
+  <link
+    name="Link_0">
+    <inertial>
+      <origin
+        xyz="-0.0009365 -0.0058418 0.099851"
+        rpy="0 0 0" />
+      <mass
+        value="2.1851" />
+      <inertia
+        ixx="0.0051732"
+        ixy="-1.2089E-06"
+        ixz="-9.3412E-06"
+        iyy="0.0017007"
+        iyz="-1.7834E-06"
+        izz="0.0052796" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/Link_0.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/Link_0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="RA_Link">
+    <inertial>
+      <origin
+        xyz="0.0045235 -0.026967 -0.098662"
+        rpy="0 0 0" />
+      <mass
+        value="0.5894" />
+      <inertia
+        ixx="0.00047468"
+        ixy="1.0799E-05"
+        ixz="6.4186E-05"
+        iyy="0.00049189"
+        iyz="-3.7707E-05"
+        izz="0.00019687" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/RA_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/RA_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R_SHLD"
+    type="revolute">
+    <origin
+      xyz="-0.010154 -0.1168 0.1415"
+      rpy="0 0 0" />
+    <parent
+      link="Link_0" />
+    <child
+      link="RA_Link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="330.0"
+      velocity="2.094" />
+    <dynamics
+      damping="1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="LA_Link">
+    <inertial>
+      <origin
+        xyz="0.0079324 0.026967 -0.098447"
+        rpy="0 0 0" />
+      <mass
+        value="0.5894" />
+      <inertia
+        ixx="0.00048631"
+        ixy="5.9665E-06"
+        ixz="-2.7459E-05"
+        iyy="0.00049189"
+        iyz="3.8767E-05"
+        izz="0.00018524" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/LA_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/LA_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L_SHLD"
+    type="revolute">
+    <origin
+      xyz="-0.010154 0.1168 0.1415"
+      rpy="0 0 0" />
+    <parent
+      link="Link_0" />
+    <child
+      link="LA_Link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="330.0"
+      velocity="2.094" />
+    <dynamics
+      damping="1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="RL_Link_1">
+    <inertial>
+      <origin
+        xyz="0.010497 -1.9422E-05 -0.022078"
+        rpy="0 0 0" />
+      <mass
+        value="0.058446" />
+      <inertia
+        ixx="6.2082E-06"
+        ixy="1.4991E-19"
+        ixz="-8.3541E-08"
+        iyy="2.7846E-05"
+        iyz="-2.1332E-10"
+        izz="2.7832E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/RL_Link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/RL_Link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RHIP_UX"
+    type="revolute">
+    <origin
+      xyz="0.0022959 -0.06 -0.0125"
+      rpy="0 0 0" />
+    <parent
+      link="Link_0" />
+    <child
+      link="RL_Link_1" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="330.0"
+      velocity="2.094" />
+    <dynamics
+      damping="1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="RL_Link_2.1">
+    <inertial>
+      <origin
+        xyz="0.001297 -0.016604 -0.064305"
+        rpy="0 0 0" />
+      <mass
+        value="0.040432" />
+      <inertia
+        ixx="1.6876E-05"
+        ixy="4.3029E-08"
+        ixz="1.8608E-07"
+        iyy="1.4459E-05"
+        iyz="5.4723E-07"
+        izz="5.337E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/RL_Link_2.1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/RL_Link_2.1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RHIP_UY1"
+    type="revolute">
+    <origin
+      xyz="0.0424 -0.0038 -0.04"
+      rpy="0 0 0" />
+    <parent
+      link="RL_Link_1" />
+    <child
+      link="RL_Link_2.1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="330.0"
+      velocity="2.094" />
+    <dynamics
+      damping="1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="RL_Link_3.1">
+    <inertial>
+      <origin
+        xyz="6.7896E-07 -0.015999 -0.02"
+        rpy="0 0 0" />
+      <mass
+        value="0.016354" />
+      <inertia
+        ixx="4.9553E-06"
+        ixy="5.8292E-21"
+        ixz="1.2594E-10"
+        iyy="5.6008E-06"
+        iyz="2.788E-20"
+        izz="1.2454E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/RL_Link_3.1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/RL_Link_3.1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RUKNEE_1"
+    type="revolute">
+    <origin
+      xyz="0.0033786 -0.0003 -0.11535"
+      rpy="0 0 0" />
+    <parent
+      link="RL_Link_2.1" />
+    <child
+      link="RL_Link_3.1" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="330.0"
+      velocity="2.094" />
+    <dynamics
+      damping="1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="RL_Link_4.1">
+    <inertial>
+      <origin
+        xyz="0.00086538 -0.016397 -0.051081"
+        rpy="0 0 0" />
+      <mass
+        value="0.040432" />
+      <inertia
+        ixx="1.6859E-05"
+        ixy="7.4512E-08"
+        ixz="4.7943E-07"
+        iyy="1.4459E-05"
+        iyz="-5.4384E-07"
+        izz="5.3539E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/RL_Link_4.1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/RL_Link_4.1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RLKNEE_1"
+    type="revolute">
+    <origin
+      xyz="0 -0.0002 -0.04"
+      rpy="0 0 0" />
+    <parent
+      link="RL_Link_3.1" />
+    <child
+      link="RL_Link_4.1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="330.0"
+      velocity="2.094" />
+    <dynamics
+      damping="1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="RL_Link_5.1">
+    <inertial>
+      <origin
+        xyz="4.8073E-14 -0.016301 -0.0069982"
+        rpy="0 0 0" />
+      <mass
+        value="0.009241" />
+      <inertia
+        ixx="9.2142E-07"
+        ixy="3.0343E-21"
+        ixz="7.5891E-22"
+        iyy="1.3392E-06"
+        iyz="-1.0666E-10"
+        izz="7.5801E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/RL_Link_5.1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/RL_Link_5.1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RANKLE_UY1"
+    type="revolute">
+    <origin
+      xyz="0.0032786 0.0001 -0.11535"
+      rpy="0 0 0" />
+    <parent
+      link="RL_Link_4.1" />
+    <child
+      link="RL_Link_5.1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="330.0"
+      velocity="2.094" />
+    <dynamics
+      damping="1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="RL_Link_2.2">
+    <inertial>
+      <origin
+        xyz="0.00129701081926098 -0.0157029579856645 -0.0643048494093886"
+        rpy="0 0 0" />
+      <mass
+        value="0.0404318537783237" />
+      <inertia
+        ixx="1.68760034867383E-05"
+        ixy="-4.30285594964813E-08"
+        ixz="1.86082751575579E-07"
+        iyy="1.44585123359687E-05"
+        iyz="-5.47228512891041E-07"
+        izz="5.33695846577938E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/RL_Link_2.2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/RL_Link_2.2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RHIP_UY2"
+    type="revolute">
+    <origin
+      xyz="0.0424 0.036 -0.04"
+      rpy="0 0 0" />
+    <parent
+      link="RL_Link_1" />
+    <child
+      link="RL_Link_2.2" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="330.0"
+      velocity="2.094" />
+    <dynamics
+      damping="1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="RL_Link_3.2">
+    <inertial>
+      <origin
+        xyz="6.78956644739603E-07 -0.015799498386574 -0.0199999999884836"
+        rpy="0 0 0" />
+      <mass
+        value="0.0163538818931416" />
+      <inertia
+        ixx="4.95531094113231E-06"
+        ixy="5.98101693181847E-21"
+        ixz="1.25942704734614E-10"
+        iyy="5.60081861240146E-06"
+        iyz="2.86776987999975E-20"
+        izz="1.2454214959182E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/RL_Link_3.2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/RL_Link_3.2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RUKNEE_2"
+    type="revolute">
+    <origin
+      xyz="0.0033786 -0.0001 -0.11535"
+      rpy="0 0 0" />
+    <parent
+      link="RL_Link_2.2" />
+    <child
+      link="RL_Link_3.2" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="330.0"
+      velocity="2.094" />
+    <dynamics
+      damping="1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="RL_Link_4.2">
+    <inertial>
+      <origin
+        xyz="0.0008653797056285 -0.0156960212988087 -0.0510807764099905"
+        rpy="0 0 0" />
+      <mass
+        value="0.0404318537783237" />
+      <inertia
+        ixx="1.68590600684294E-05"
+        ixy="-7.45119818241316E-08"
+        ixz="4.79427343489324E-07"
+        iyy="1.44585123359687E-05"
+        iyz="5.43836801640023E-07"
+        izz="5.35390188408828E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/RL_Link_4.2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/RL_Link_4.2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RLKNEE_2"
+    type="revolute">
+    <origin
+      xyz="0 0.0004 -0.04"
+      rpy="0 0 0" />
+    <parent
+      link="RL_Link_3.2" />
+    <child
+      link="RL_Link_4.2" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="330.0"
+      velocity="2.094" />
+    <dynamics
+      damping="1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="RL_Link_5.2">
+    <inertial>
+      <origin
+        xyz="4.77395900588817E-14 -0.0165008877061729 -0.00699824186844022"
+        rpy="0 0 0" />
+      <mass
+        value="0.00924103832110104" />
+      <inertia
+        ixx="9.21420088992823E-07"
+        ixy="3.03466802112824E-21"
+        ixz="6.84419065795441E-22"
+        iyy="1.33917870094116E-06"
+        iyz="-1.06657670106144E-10"
+        izz="7.58006220926266E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/RL_Link_5.2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/RL_Link_5.2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RANKLE_UY2"
+    type="revolute">
+    <origin
+      xyz="0.0032786 -0.0001 -0.11535"
+      rpy="0 0 0" />
+    <parent
+      link="RL_Link_4.2" />
+    <child
+      link="RL_Link_5.2" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="330.0"
+      velocity="2.094" />
+    <dynamics
+      damping="1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="RL_Link_2.3">
+    <inertial>
+      <origin
+        xyz="-0.00105974300885803 -0.016298977021328 -0.0575533394910568"
+        rpy="0 0 0" />
+      <mass
+        value="0.0412317441449817" />
+      <inertia
+        ixx="1.59936703445184E-05"
+        ixy="-2.19570111271258E-09"
+        ixz="3.15714987694653E-07"
+        iyy="1.38236234725518E-05"
+        iyz="7.72539548963771E-08"
+        izz="4.89446891063541E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/RL_Link_2.3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/RL_Link_2.3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RHIP_UY3"
+    type="revolute">
+    <origin
+      xyz="-0.042494 0.0163 -0.0402"
+      rpy="0 0 0" />
+    <parent
+      link="RL_Link_1" />
+    <child
+      link="RL_Link_2.3" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="330.0"
+      velocity="2.094" />
+    <dynamics
+      damping="1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="RL_Link_3.3">
+    <inertial>
+      <origin
+        xyz="0.0238882932525669 -0.0160985564575607 -0.0199991890557153"
+        rpy="0 0 0" />
+      <mass
+        value="0.031045429157865" />
+      <inertia
+        ixx="6.14227773632857E-06"
+        ixy="3.00783146519015E-20"
+        ixz="-6.08571658102752E-11"
+        iyy="9.47591658092724E-06"
+        iyz="6.95625537524271E-21"
+        izz="7.93494494642546E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/RL_Link_3.3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/RL_Link_3.3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RUKNEE_3"
+    type="revolute">
+    <origin
+      xyz="0.0032729 -0.0002 -0.11515"
+      rpy="0 0 0" />
+    <parent
+      link="RL_Link_2.3" />
+    <child
+      link="RL_Link_3.3" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="330.0"
+      velocity="2.094" />
+    <dynamics
+      damping="1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="RL_Link_4.3">
+    <inertial>
+      <origin
+        xyz="-0.00100984896855694 -0.0162989770213279 -0.0575542365675921"
+        rpy="0 0 0" />
+      <mass
+        value="0.0412317441449818" />
+      <inertia
+        ixx="1.59931146094832E-05"
+        ixy="-2.26267261641097E-09"
+        ixz="3.25336533014041E-07"
+        iyy="1.38236234725519E-05"
+        iyz="7.72520223886699E-08"
+        izz="4.89502464567067E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/RL_Link_4.3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/RL_Link_4.3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RLKNEE_3"
+    type="revolute">
+    <origin
+      xyz="0 -0.0001 -0.0402"
+      rpy="0 0 0" />
+    <parent
+      link="RL_Link_3.3" />
+    <child
+      link="RL_Link_4.3" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="330.0"
+      velocity="2.094" />
+    <dynamics
+      damping="1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="RL_Link_5.3">
+    <inertial>
+      <origin
+        xyz="0.0298989072595887 -0.0161511410398984 -0.015443014382013"
+        rpy="0 0 0" />
+      <mass
+        value="0.0235688927645475" />
+      <inertia
+        ixx="3.18317710905706E-06"
+        ixy="2.0360629761584E-20"
+        ixz="2.09805122338139E-07"
+        iyy="6.30493782909294E-06"
+        iyz="-9.46633933919088E-21"
+        izz="7.21398066364362E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/RL_Link_5.3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/RL_Link_5.3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RANKLE_UY3"
+    type="revolute">
+    <origin
+      xyz="0.0033727 -0.0002 -0.11515"
+      rpy="0 0 0" />
+    <parent
+      link="RL_Link_4.3" />
+    <child
+      link="RL_Link_5.3" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="330.0"
+      velocity="2.094" />
+    <dynamics
+      damping="1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="RL_Link_6">
+    <inertial>
+      <origin
+        xyz="-0.00425001163582861 1.06892399098779E-08 -0.00862791274632863"
+        rpy="0 0 0" />
+      <mass
+        value="0.122092184838629" />
+      <inertia
+        ixx="6.61430864823704E-05"
+        ixy="9.44434013054834E-11"
+        ixz="2.47785587116841E-06"
+        iyy="0.00019654550953647"
+        iyz="-8.89038306263689E-13"
+        izz="0.000254678125028926" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/RL_Link_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/RL_Link_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RANKLE_UX"
+    type="revolute">
+    <origin
+      xyz="0.0424 -0.0162 -0.04"
+      rpy="0 0 0" />
+    <parent
+      link="RL_Link_5.3" />
+    <child
+      link="RL_Link_6" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="330.0"
+      velocity="2.094" />
+    <dynamics
+      damping="1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="LL_Link_1">
+    <inertial>
+      <origin
+        xyz="0.0104966738017489 -1.94222189072966E-05 -0.0220775172507832"
+        rpy="0 0 0" />
+      <mass
+        value="0.0584456875525911" />
+      <inertia
+        ixx="6.20824218488489E-06"
+        ixy="1.54147872283643E-19"
+        ixz="-8.35410272686806E-08"
+        iyy="2.7846271525662E-05"
+        iyz="-2.13315340220774E-10"
+        izz="2.7832166607451E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/LL_Link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/LL_Link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LHIP_UX"
+    type="revolute">
+    <origin
+      xyz="0.0022959 0.06 -0.0125"
+      rpy="0 0 0" />
+    <parent
+      link="Link_0" />
+    <child
+      link="LL_Link_1" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="330.0"
+      velocity="2.094" />
+    <dynamics
+      damping="1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="LL_Link_2.1">
+    <inertial>
+      <origin
+        xyz="0.00129701081912853 -0.0166039787011905 -0.0643048494093913"
+        rpy="0 0 0" />
+      <mass
+        value="0.0404318537783237" />
+      <inertia
+        ixx="1.68760034867391E-05"
+        ixy="4.30285594975401E-08"
+        ixz="1.86082751551821E-07"
+        iyy="1.44585123359687E-05"
+        iyz="5.47228512891067E-07"
+        izz="5.33695846577863E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/LL_Link_2.1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/LL_Link_2.1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LHIP_UY1"
+    type="revolute">
+    <origin
+      xyz="0.0424 -0.0038 -0.04"
+      rpy="0 0 0" />
+    <parent
+      link="LL_Link_1" />
+    <child
+      link="LL_Link_2.1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="330.0"
+      velocity="2.094" />
+    <dynamics
+      damping="1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="LL_Link_3.1">
+    <inertial>
+      <origin
+        xyz="6.78956650068674E-07 -0.0159994983866224 -0.0199999999884959"
+        rpy="0 0 0" />
+      <mass
+        value="0.0163538818931416" />
+      <inertia
+        ixx="4.95531094113231E-06"
+        ixy="5.68521558621731E-21"
+        ixz="1.25942704784497E-10"
+        iyy="5.60081861240145E-06"
+        iyz="3.66868539567429E-20"
+        izz="1.24542149591819E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/LL_Link_3.1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/LL_Link_3.1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LUKNEE_1"
+    type="revolute">
+    <origin
+      xyz="0.0033786 -0.0003 -0.11535"
+      rpy="0 0 0" />
+    <parent
+      link="LL_Link_2.1" />
+    <child
+      link="LL_Link_3.1" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="330.0"
+      velocity="2.094" />
+    <dynamics
+      damping="1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="LL_Link_4.1">
+    <inertial>
+      <origin
+        xyz="0.000865379705914826 -0.0163970420143347 -0.0510807764099857"
+        rpy="0 0 0" />
+      <mass
+        value="0.0404318537783238" />
+      <inertia
+        ixx="1.68590600684241E-05"
+        ixy="7.45119818271308E-08"
+        ixz="4.79427343553835E-07"
+        iyy="1.44585123359688E-05"
+        iyz="-5.4383680163947E-07"
+        izz="5.35390188409365E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/LL_Link_4.1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/LL_Link_4.1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LLKNEE_1"
+    type="revolute">
+    <origin
+      xyz="0 -0.0002 -0.04"
+      rpy="0 0 0" />
+    <parent
+      link="LL_Link_3.1" />
+    <child
+      link="LL_Link_4.1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="330.0"
+      velocity="2.094" />
+    <dynamics
+      damping="1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="LL_Link_5.1">
+    <inertial>
+      <origin
+        xyz="-7.06656955173912E-14 -0.0163008877061722 -0.00699824186821957"
+        rpy="0 0 0" />
+      <mass
+        value="0.00924103832110104" />
+      <inertia
+        ixx="9.21420088992822E-07"
+        ixy="3.08590253910977E-21"
+        ixz="8.24214153912439E-22"
+        iyy="1.33917870094115E-06"
+        iyz="-1.06657670105934E-10"
+        izz="7.58006220926266E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/LL_Link_5.1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/LL_Link_5.1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LANKLE_UY1"
+    type="revolute">
+    <origin
+      xyz="0.0032786 0.0001 -0.11535"
+      rpy="0 0 0" />
+    <parent
+      link="LL_Link_4.1" />
+    <child
+      link="LL_Link_5.1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="330.0"
+      velocity="2.094" />
+    <dynamics
+      damping="1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="LL_Link_2.2">
+    <inertial>
+      <origin
+        xyz="0.00129701081912453 -0.0157029579856645 -0.0643048494093913"
+        rpy="0 0 0" />
+      <mass
+        value="0.0404318537783237" />
+      <inertia
+        ixx="1.68760034867391E-05"
+        ixy="-4.30285594976419E-08"
+        ixz="1.86082751551092E-07"
+        iyy="1.44585123359687E-05"
+        iyz="-5.47228512890948E-07"
+        izz="5.33695846577859E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/LL_Link_2.2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/LL_Link_2.2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LHIP_UY2"
+    type="revolute">
+    <origin
+      xyz="0.0424 0.036 -0.04"
+      rpy="0 0 0" />
+    <parent
+      link="LL_Link_1" />
+    <child
+      link="LL_Link_2.2" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="330.0"
+      velocity="2.094" />
+    <dynamics
+      damping="1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="LL_Link_3.2">
+    <inertial>
+      <origin
+        xyz="6.78956658006769E-07 -0.015799498386575 -0.0199999999885459"
+        rpy="0 0 0" />
+      <mass
+        value="0.0163538818931416" />
+      <inertia
+        ixx="4.95531094113231E-06"
+        ixy="5.79454157006428E-21"
+        ixz="1.25942704783724E-10"
+        iyy="5.60081861240146E-06"
+        iyz="3.72070463472879E-20"
+        izz="1.24542149591819E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/LL_Link_3.2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/LL_Link_3.2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LUKNEE_2"
+    type="revolute">
+    <origin
+      xyz="0.0033786 -0.0001 -0.11535"
+      rpy="0 0 0" />
+    <parent
+      link="LL_Link_2.2" />
+    <child
+      link="LL_Link_3.2" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="330.0"
+      velocity="2.094" />
+    <dynamics
+      damping="1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="LL_Link_4.2">
+    <inertial>
+      <origin
+        xyz="0.000865379705914826 -0.0156960212988087 -0.0510807764099857"
+        rpy="0 0 0" />
+      <mass
+        value="0.0404318537783237" />
+      <inertia
+        ixx="1.6859060068424E-05"
+        ixy="-7.45119818271785E-08"
+        ixz="4.79427343553844E-07"
+        iyy="1.44585123359687E-05"
+        iyz="5.43836801639605E-07"
+        izz="5.35390188409366E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/LL_Link_4.2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/LL_Link_4.2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LLKNEE_2"
+    type="revolute">
+    <origin
+      xyz="0 0.0004 -0.04"
+      rpy="0 0 0" />
+    <parent
+      link="LL_Link_3.2" />
+    <child
+      link="LL_Link_4.2" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="330.0"
+      velocity="2.094" />
+    <dynamics
+      damping="1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="LL_Link_5.2">
+    <inertial>
+      <origin
+        xyz="-7.061018436616E-14 -0.016500887706172 -0.00699824186822035"
+        rpy="0 0 0" />
+      <mass
+        value="0.00924103832110103" />
+      <inertia
+        ixx="9.21420088992821E-07"
+        ixy="2.99797087834705E-21"
+        ixz="5.89748752109786E-22"
+        iyy="1.33917870094115E-06"
+        iyz="-1.06657670105938E-10"
+        izz="7.58006220926265E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/LL_Link_5.2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/LL_Link_5.2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LANKLE_UY2"
+    type="revolute">
+    <origin
+      xyz="0.0032786 -0.0001 -0.11535"
+      rpy="0 0 0" />
+    <parent
+      link="LL_Link_4.2" />
+    <child
+      link="LL_Link_5.2" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="330.0"
+      velocity="2.094" />
+    <dynamics
+      damping="1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="LL_Link_2.3">
+    <inertial>
+      <origin
+        xyz="-0.00105974300898037 -0.0162989770213279 -0.0575533394910545"
+        rpy="0 0 0" />
+      <mass
+        value="0.0412317441449817" />
+      <inertia
+        ixx="1.59936703445197E-05"
+        ixy="-2.19570111254918E-09"
+        ixz="3.15714987671079E-07"
+        iyy="1.38236234725518E-05"
+        iyz="7.72539548963853E-08"
+        izz="4.89446891063407E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/LL_Link_2.3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/LL_Link_2.3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LHIP_UY3"
+    type="revolute">
+    <origin
+      xyz="-0.042494 0.0163 -0.0402"
+      rpy="0 0 0" />
+    <parent
+      link="LL_Link_1" />
+    <child
+      link="LL_Link_2.3" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="330.0"
+      velocity="2.094" />
+    <dynamics
+      damping="1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="LL_Link_3.3">
+    <inertial>
+      <origin
+        xyz="0.0238882932525806 -0.0160985564575617 -0.0199991890557802"
+        rpy="0 0 0" />
+      <mass
+        value="0.031045429157865" />
+      <inertia
+        ixx="6.14227773632858E-06"
+        ixy="2.83855444094917E-20"
+        ixz="-6.08571658372188E-11"
+        iyy="9.47591658092724E-06"
+        iyz="1.08377216521001E-20"
+        izz="7.93494494642544E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/LL_Link_3.3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/LL_Link_3.3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LUKNEE_3"
+    type="revolute">
+    <origin
+      xyz="0.0032729 -0.0002 -0.11515"
+      rpy="0 0 0" />
+    <parent
+      link="LL_Link_2.3" />
+    <child
+      link="LL_Link_3.3" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="330.0"
+      velocity="2.094" />
+    <dynamics
+      damping="1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="LL_Link_4.3">
+    <inertial>
+      <origin
+        xyz="-0.00100984896823408 -0.0162989770213278 -0.0575542365675978"
+        rpy="0 0 0" />
+      <mass
+        value="0.0412317441449815" />
+      <inertia
+        ixx="1.59931146094794E-05"
+        ixy="-2.26267261684684E-09"
+        ixz="3.25336533076271E-07"
+        iyy="1.38236234725517E-05"
+        iyz="7.72520223886805E-08"
+        izz="4.8950246456743E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/LL_Link_4.3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/LL_Link_4.3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LLKNEE_3"
+    type="revolute">
+    <origin
+      xyz="0 -0.0001 -0.0402"
+      rpy="0 0 0" />
+    <parent
+      link="LL_Link_3.3" />
+    <child
+      link="LL_Link_4.3" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="330.0"
+      velocity="2.094" />
+    <dynamics
+      damping="1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="LL_Link_5.3">
+    <inertial>
+      <origin
+        xyz="0.0298989072595921 -0.0161511410398961 -0.0154430143820583"
+        rpy="0 0 0" />
+      <mass
+        value="0.0235688927645474" />
+      <inertia
+        ixx="3.18317710905704E-06"
+        ixy="1.86048875773236E-20"
+        ixz="2.09805122338144E-07"
+        iyy="6.30493782909295E-06"
+        iyz="-1.01983947858494E-20"
+        izz="7.21398066364361E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/LL_Link_5.3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/LL_Link_5.3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LANKLE_UY3"
+    type="revolute">
+    <origin
+      xyz="0.0033727 -0.0002 -0.11515"
+      rpy="0 0 0" />
+    <parent
+      link="LL_Link_4.3" />
+    <child
+      link="LL_Link_5.3" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="330.0"
+      velocity="2.094" />
+    <dynamics
+      damping="1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="LL_Link_6">
+    <inertial>
+      <origin
+        xyz="-0.00425001163582872 1.06892412074511E-08 -0.00862791274632896"
+        rpy="0 0 0" />
+      <mass
+        value="0.122092184838629" />
+      <inertia
+        ixx="6.61430864823704E-05"
+        ixy="9.44434015376236E-11"
+        ixz="2.47785587116845E-06"
+        iyy="0.00019654550953647"
+        iyz="-8.89038325562251E-13"
+        izz="0.000254678125028926" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/LL_Link_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find urdf_robox)/meshes/LL_Link_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LANKLE_UY"
+    type="revolute">
+    <origin
+      xyz="0.0424 -0.0162 -0.04"
+      rpy="0 0 0" />
+    <parent
+      link="LL_Link_5.3" />
+    <child
+      link="LL_Link_6" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="330.0"
+      velocity="2.094" />
+    <dynamics
+      damping="1"
+      friction="0.1" />
+  </joint>
+</robot>
