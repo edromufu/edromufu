@@ -135,7 +135,7 @@ if __name__ == '__main__':
 
     robotFound = False  # Indica se o robô foi encontrado.
     showField = True    # Indica se o campo deve ser exibido.
-    viewRobot = False # Indica se a robô aparecerá na simulção
+    viewRobot = True # Indica se a robô aparecerá na simulção
 
     #limit = np.array([[fg.padding,fg.padding],[fg.padding + fg.fieldLenght,fg.padding+fg.fieldWidth]])    #Limites das particulas no campo
     limit = np.array([[0,0],[fg.padding*2 +fg.fieldLenght,fg.padding*2+fg.fieldWidth]])    #Limites das particulas na imagem
@@ -151,8 +151,8 @@ if __name__ == '__main__':
                         xRange = xRange, yRange = yRange, headingRange = [0,360])
  
     
-    particleFilter.reflect = False # Define se as partículas ficarão espelhadas em relação ao meio do campo
-    particleFilter.neckAngle = initNeck # Define se as partículas ficarão espelhadas em relação ao meio do campo
+    particleFilter.reflect = True # Define se as partículas ficarão espelhadas em relação ao meio do campo
+    particleFilter.neckAngle = initNeck 
 
     start_time = time.time()    # Armazena o tempo inicial para calcular o tempo de execução.
     key = 0     # Inicializa a variável que conterá a tecla perssionada na imagem

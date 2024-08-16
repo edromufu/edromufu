@@ -143,7 +143,6 @@ class ParticleFilter():
         mean_cos = np.average(np.cos(np.deg2rad(self.particles[:,2])), weights=self.weights, axis=0)
         mean_angle = np.rad2deg(np.arctan2(mean_sin,mean_cos))  # Converte as coordenas em ângulo em graus
         mean_angle %= 360 #Normaliza os ângulos para o intervalo [0, 360) graus.
-        print(mean_angle)
         
         self.mean = np.average(pos[:,0:2], weights=self.weights, axis=0)   #Calcula a média ponderada das posições das partículas.
         self.mean = np.concatenate((self.mean, [mean_angle]),axis=0).astype(int)    #Adiciona a média dos ângulos ao vetor
@@ -197,7 +196,7 @@ class ParticleFilter():
                     simulated_distance = np.sqrt(dx**2 + dy**2)
 
                     # Comparar as distâncias simuladas com as medidas e calcular o peso usando função densidade de probabilidade
-                    prob = np.exp(-((simulated_distance - measured_distance[0])**2) / (2 * sensor_noise**2) - 0.001*(landmark_angle - measured_distance[2])**2)
+                    prob = np.exp(-(0*(simulated_distance - measured_distance[0])**2) / (2 * sensor_noise**2) - 0.001*(landmark_angle - measured_distance[2])**2)
                     #prob = np.exp(- 0.0001*(landmark_angle - measured_distance[2])**2)
 
                     # Ajuste de probabilidade para partículas que detectam mais informação que a robô
