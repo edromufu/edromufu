@@ -1,7 +1,6 @@
 import cv2 as cv
 import numpy as np
 from numpy import sin, cos
-from Intersection import Intersection
 import ParticleFilter as pf
 import time
 
@@ -41,6 +40,10 @@ class FieldGenerator():
     middleN = [(int(padding+fieldLenght/2),padding),'midleN',3]                 # Interseção superior da linha central
     middleS = [(int(padding+fieldLenght/2),padding+fieldWidth),'midleS',3]      # Interseção inferior da linha central
     middle = [(int(padding+fieldLenght/2),int(padding+fieldWidth/2)),'middle',0]  # Ponto central do campo
+
+    # Define as coordenadas da interseção do círculo
+    NCenterCircle = [(int(padding+fieldLenght/2),int(padding+(fieldWidth+centralCircle)/2)),'upCenterCircle',6]
+    SCenterCircle = [(int(padding+fieldLenght/2),int(padding+(fieldWidth-centralCircle)/2)),'downCenterCircle',6]
 
     # Define as coordenadas das interseções da área do gol do lado esquerdo.
     nwLGoalArea = [(padding,int(padding+fieldWidth/2-goalAreaWidth/2)),'nwLGoalArea',3] # Interseção superior esquerda da área do gol esquerdo
@@ -90,6 +93,7 @@ class FieldGenerator():
         #nwLPenaltyArea, neLPenaltyArea, swLPenaltyArea, seLPenaltyArea, # Área do Penalty esquerdo
         #nwRPenaltyArea, neRPenaltyArea, swRPenaltyArea, seRPenaltyArea, # Área do Penalty direito
         middle, #Meio do campo
+        NCenterCircle, SCenterCircle # Interseções do círculo central
     ]
 
     # Cria uma representação visual do campo.
@@ -152,10 +156,10 @@ class FieldGenerator():
         return coloredField
     
     # Desenha múltiplas partículas no campo.
-    def drawParticles(coloredField, particles, drawFov=False, fov=0, minRange=0, maxRange=3):
+    def drawParticles(coloredField, particles, drawFov=False, fov=0, minRange=0, maxRange=3,neckAngle=0):
         # Chama drawParticle para cada partícula.
         for particle in particles:
-            coloredField = FieldGenerator.drawParticle(coloredField,particle,fov,minRange,maxRange,drawFov=drawFov)
+            coloredField = FieldGenerator.drawParticle(coloredField,(particle[0],particle[1],particle[2],neckAngle),fov,minRange,maxRange,drawFov=drawFov)
 
         return coloredField
     
@@ -172,24 +176,24 @@ class FieldGenerator():
         # Se drawFov for verdadeiro, desenha o campo de visão da partícula usando linhas e elipses.
         if drawFov:
             # Limites laterais mínimo e máximo do campo de visão 
-            cv.line(coloredField, (int(particle[0]+minRange*np.cos(particle[2]*np.pi/180+fov/2)),int(particle[1]+minRange*np.sin(particle[2]*np.pi/180+fov/2))),(int(particle[0]+maxRange*np.cos(particle[2]*np.pi/180+fov/2)),int(particle[1]+maxRange*np.sin(particle[2]*np.pi/180+fov/2))), [150,0,0],size)
-            cv.line(coloredField, (int(particle[0]+minRange*np.cos(particle[2]*np.pi/180-fov/2)),int(particle[1]+minRange*np.sin(particle[2]*np.pi/180-fov/2))),(int(particle[0]+maxRange*np.cos(particle[2]*np.pi/180-fov/2)),int(particle[1]+maxRange*np.sin(particle[2]*np.pi/180-fov/2))),[150,0,0],size)
+            cv.line(coloredField, (int(particle[0]+minRange*np.cos((particle[2]+particle[3])*np.pi/180+fov/2)),int(particle[1]+minRange*np.sin((particle[2]+particle[3])*np.pi/180+fov/2))),(int(particle[0]+maxRange*np.cos((particle[2]+particle[3])*np.pi/180+fov/2)),int(particle[1]+maxRange*np.sin((particle[2]+particle[3])*np.pi/180+fov/2))), [150,0,0],size)
+            cv.line(coloredField, (int(particle[0]+minRange*np.cos((particle[2]+particle[3])*np.pi/180-fov/2)),int(particle[1]+minRange*np.sin((particle[2]+particle[3])*np.pi/180-fov/2))),(int(particle[0]+maxRange*np.cos((particle[2]+particle[3])*np.pi/180-fov/2)),int(particle[1]+maxRange*np.sin((particle[2]+particle[3])*np.pi/180-fov/2))),[150,0,0],size)
             # Arcos que definem a distância minima e máxima do campo de visão
             cv.ellipse(coloredField, (particle[0],particle[1]), 
                        (minRange,minRange), 0,
-                       int(particle[2]-180*fov/(np.pi*2)), 
-                       int(particle[2]+180*fov/(np.pi*2)), 
+                       int((particle[2]+particle[3])-180*fov/(np.pi*2)), 
+                       int((particle[2]+particle[3])+180*fov/(np.pi*2)), 
                        [150,0,0], size)
             cv.ellipse(coloredField, (particle[0],particle[1]), 
                        (maxRange,maxRange), 0,
-                       int(particle[2]-180*fov/(np.pi*2)), 
-                       int(particle[2]+180*fov/(np.pi*2)), 
+                       int((particle[2]+particle[3])-180*fov/(np.pi*2)), 
+                       int((particle[2]+particle[3])+180*fov/(np.pi*2)), 
                        [150,0,0], size)  
-        else: # Se drawFov for falso, desenha uma linha representando a direção da partícula.
-            cv.line(coloredField,
-                    (particle[0],particle[1]),
-                    (int(particle[0]+size*3*np.cos(particle[2]*np.pi/180)),int(particle[1]+size*3*np.sin(particle[2]*np.pi/180))),
-                    color,
-                    size)
+         # Se drawFov for falso, desenha uma linha representando a direção da partícula.
+        cv.line(coloredField,
+                (particle[0],particle[1]),
+                (int(particle[0]+size*3*np.cos((particle[2])*np.pi/180)),int(particle[1]+size*3*np.sin((particle[2])*np.pi/180))),
+                color,
+                size)
 
         return coloredField # Retorna a imagem do campo com a partícula desenhada.

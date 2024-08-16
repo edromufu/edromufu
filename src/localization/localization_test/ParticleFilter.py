@@ -8,6 +8,7 @@ class ParticleFilter():
     def __init__(self, N, fov, minRange, maxRange, intersections, previousPositionKnown = False, mean = [0,0,0], standardDeviation = [0,0,0], xRange = [0,1000], yRange = [0,1000], headingRange = [0,360]):
         self.N = N  #Número de partículas.
         self.fov = fov  #Campo de visão do robô.
+        self.neckAngle = 0
         
         #Intervalo de distância para considerar uma interseção válida.
         self.minRange = minRange 
@@ -36,6 +37,7 @@ class ParticleFilter():
         
         particles[:, 2] += 360  #Adiciona 360 graus para garantir que os ângulos sejam positivos.
         particles[:, 2] %= 360  #Normaliza os ângulos para o intervalo [0, 360) graus.
+
         return particles.astype(int)    # Retorna as partículas convertidas para inteiros.
 
     # Gera partículas distribuídas segundo uma distribuição Gaussiana com a média (mean) e desvio padrão (standardDeviation) fornecidos.
@@ -82,6 +84,7 @@ class ParticleFilter():
 
     # Verifica quais interseções estão dentro do campo de visão (FOV) de uma partícula, considerando a posição e orientação da partícula.
     def checkFOV(self, particle):
+        
         seen = []   #Inicializa a lista de interseções vistas pela partícula.c
         for intersection in self.intersections:     #Itera sobre todas as interseções conhecidas no campo.
             distX = particle[0] - intersection[0][0]    #Calcula a diferença x entre a partícula e a interseção.
@@ -106,41 +109,51 @@ class ParticleFilter():
                     pass
 
                 angle = (angle + 2*np.pi)%(2*np.pi) #Normaliza o ângulo para o intervalo [0, 2π).
-
+                
                 #Verificação do campo de visão (FOV):
-                limLeft = (particle[2]*np.pi/180+self.fov/2)%(2*np.pi)  #Calcula o angulo de limite esquerdo do campo de visão.
-                limRight = (particle[2]*np.pi/180-self.fov/2)%(2*np.pi) #Calcula o angulo de limite direito do campo de visão.
+                limLeft = ((particle[2]+self.neckAngle)*np.pi/180+self.fov/2)%(2*np.pi)  #Calcula o angulo de limite esquerdo do campo de visão.
+                limRight = ((particle[2]+self.neckAngle)*np.pi/180-self.fov/2)%(2*np.pi) #Calcula o angulo de limite direito do campo de visão.
                 if limLeft >= limRight and angle <= limLeft and angle >= limRight:  #Verifica se o ângulo está dentro do campo de visão quando a particula não engloba o ângulo 0
-                    seen.append(intersection)   #Adiciona a interseção à lista de interseções vistas.
+                    angle_seen = angle*180/np.pi - particle[2]
+                    seen.append([intersection,angle_seen])   #Adiciona a interseção à lista de interseções vistas.
                 elif limLeft < limRight and (angle <= limLeft or angle >= limRight):    #Verifica se o ângulo está dentro do campo de visão quando a partícula engloba o angulo 0
-                    seen.append(intersection)   #Adiciona a interseção à lista de interseções vistas.
+                    angle_seen = angle*180/np.pi - particle[2]
+                    seen.append([intersection,angle_seen])   #Adiciona a interseção à lista de interseções vistas.
 
         return seen     #Retorna a lista de interseções vistas pela partícula.
 
     # Calcula o número efetivo de partículas para verificar a necessidade de reamostragem (resample).
     def neff(self):
         return 1. / np.sum(np.square(self.weights)) #Calcula o número efetivo de partículas como o inverso da soma dos quadrados dos pesos.
-
+    
     # Reamostra as partículas com base nos pesos, utilizando o método de reamostragem sistemática (systematic_resample).
     def resample_from_index(self):
         indexes = systematic_resample(self.weights) #Realiza a reamostragem sistemática com base nos pesos das partículas.
         # resample according to indexes
         self.particles[:] = self.particles[indexes]     #Atualiza as partículas com base nos índices reamostrados.
-        #self.weights.resize(len(self.particles))
         self.weights.fill(1.0 / self.N)     #Redefine os pesos das partículas para que cada partícula tenha um peso igual.
 
     # Estima a posição do robô calculando a média e a variância ponderada das partículas (nao estima a direcao)
     def estimate(self):
         #pos = self.particles[:, 0:2]    #Obtém as posições x e y das partículas.
         pos = self.particles
-        self.mean = np.average(pos, weights=self.weights, axis=0).astype(int)   #Calcula a média ponderada das posições das partículas.
+
+        #Calcula o seno e cosseno de cada angulo para fazer a média do angulo em coordenadas (x,y) e prevenir problemas com ângulos numericamente distantes, mas fisicamente pertos
+        mean_sin = np.average(np.sin(np.deg2rad(self.particles[:,2])), weights=self.weights, axis=0)
+        mean_cos = np.average(np.cos(np.deg2rad(self.particles[:,2])), weights=self.weights, axis=0)
+        mean_angle = np.rad2deg(np.arctan2(mean_sin,mean_cos))  # Converte as coordenas em ângulo em graus
+        mean_angle %= 360 #Normaliza os ângulos para o intervalo [0, 360) graus.
+        print(mean_angle)
+        
+        self.mean = np.average(pos[:,0:2], weights=self.weights, axis=0)   #Calcula a média ponderada das posições das partículas.
+        self.mean = np.concatenate((self.mean, [mean_angle]),axis=0).astype(int)    #Adiciona a média dos ângulos ao vetor
         self.var  = np.average((pos - self.mean)**2, weights=self.weights, axis=0)  #Calcula a variância ponderada das posições das partículas.
         self.deviation = (self.var)**0.5    #Calcula o desvio padrão a partir da variância.
 
     #### Utilities ####
 
     # Simula o movimento de um robô 2D aplicando um passo (passo).
-    def moveRobot(robot, passo):
+    def moveRobot(robot, passo,limit,reflect):
         robot[2] += passo[2]    #Atualiza o ângulo de orientação do robô com o passo de rotação (passo[1]).
         robot[0] += int(passo[0]*np.cos(robot[2]*np.pi/180) + passo[1]*np.sin(robot[2]*np.pi/180))    #Atualiza a posição x do robô com base no ângulo de orientação e na distância percorrida.
         robot[1] += int(passo[0]*np.sin(robot[2]*np.pi/180) - passo[1]*np.cos(robot[2]*np.pi/180))    #Atualiza a posição y do robô com base no ângulo de orientação e na distância percorrida.
@@ -148,11 +161,19 @@ class ParticleFilter():
         robot[2] += 360  #Adiciona 360 graus para garantir que os ângulos sejam positivos.
         robot[2] %= 360  #Normaliza os ângulos para o intervalo [0, 360) graus.
         
+        # Reflete a robô em relação ao meio do campo
+
+        if reflect and robot[0] < (limit[0][0]+limit[1][0])/2:
+            robot[0] = -robot[0]+limit[1][0]+limit[0][0]
+            robot[2] = (-robot[2]+180)%360
+            robot[1] = -robot[1]+limit[1][1]+limit[0][1]
+            robot[2] = (-robot[2]+360)%360
+        
         return robot    #Retorna a posição atualizada do robô.
 
     def calculate_weights(self, answer, sensor_noise,limit):
         #measured distances: Distancias medidas pela robo de possíveis landmarks
-        #landmarks: pontos de referência no mapa, dentro do campo de visão da particula?
+        #landmarks: pontos de referência no mapa, dentro do campo de visão da particula
         m = len(answer)
         
         for i, particle in enumerate(self.particles):
@@ -166,17 +187,18 @@ class ParticleFilter():
             total_prob = 1.0
             for measured_distance in answer:
                 best_prob = 0.0
-                for landmark in particleAnswer:
+                for landmark, landmark_angle in particleAnswer:
                     # Compara se o índice do landmark é diferente do da distância medida e se não é 6, índice que representa landmark desconhecido
                     if landmark[2]!=measured_distance[1]: continue
-                    
+
                     # Calcular a distância euclidiana entre a partícula e cada ponto de referência
                     dx = particle[0] - landmark[0][0]
                     dy = particle[1] - landmark[0][1]
                     simulated_distance = np.sqrt(dx**2 + dy**2)
 
                     # Comparar as distâncias simuladas com as medidas e calcular o peso usando função densidade de probabilidade
-                    prob = np.exp(-((simulated_distance - measured_distance[0])**2) / (2 * sensor_noise**2))
+                    prob = np.exp(-((simulated_distance - measured_distance[0])**2) / (2 * sensor_noise**2) - 0.001*(landmark_angle - measured_distance[2])**2)
+                    #prob = np.exp(- 0.0001*(landmark_angle - measured_distance[2])**2)
 
                     # Ajuste de probabilidade para partículas que detectam mais informação que a robô
                     if m<l: prob*=m/l
