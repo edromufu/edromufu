@@ -22,6 +22,7 @@ setup(
         'console_scripts': [
         	'core = movement_core.core:main',
         	'core_head = movement_core.core_head:main',
+        	'teste = movement_core.teste:main'
         ],
     },
 )
