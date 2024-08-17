@@ -17,27 +17,26 @@ def IKAnalitica(newFootRelPosition, currentFoot, robotik):
     #c = 0.11825
     d = 0.085
     e = 0.040
-    h_pe = 0.05656 #Distância da base do pé até o eixo do tornozelo
-    h_torso = 0.0525 #Distância da base do tronco até o eixo da cintura
 
-    #! Pegar valores do json, corrigir um dos pares de h de acordo com o vermelho e renomear as var
-    h_peY=0  # Distância do Ankle UY até a Ankle UX   #! ankleUX2UY
-    h_peX=0  # Distância do Ankle UX até a base do pé  #! ground2AnkleUX
-    h_troncoX=0 # Distância do Hip UX até o Hip UY #! hipUY2UX
-    h_troncoY=0 # Distância do Hip UY até o COM #!com2hipUY
+    #! Pegar valores do json
+    com2hipUX = 0 # Distância do Hip UX até o COM em z
+    hipUX2hipUY = -0.03598 # Distância do Hip UX até o Hiṕ UY em z
+    ankleUY2ankleUX = -0.03467  # Distância do Ankle UY até a Ankle UX em z
+    ankleUX2foot = -0.02004 # Distância do Ankle UX até a base do pé em z
+ 
+    yCOM = 0.06206  # Distância do COM até o HipUX em y
 
-    
 
     # Limites em ângulo
-    max_alfa = 130
-    max_beta = 127
-    max_gama = 30
-    max_epsilon = 6
+    max_alfa = 130*np.pi/180
+    max_beta = 127*np.pi/180
+    max_gama = 30*np.pi/180
+    max_epsilon = 6*np.pi/180
 
-    min_alfa = 90
-    min_beta = 90
-    min_gama = -30
-    min_epsilon = -6
+    min_alfa = 90*np.pi/180
+    min_beta = 90*np.pi/180
+    min_gama = -30*np.pi/180
+    min_epsilon = -6*np.pi/180
 
     vecb = robotik[3].__mother2SelfVec
     b = np.linalg.norm(vecb) # Calcula a norma/modulo do vector que expressa a distancia entre a junta mãe do joelho até a junta do joelho 
@@ -45,9 +44,8 @@ def IKAnalitica(newFootRelPosition, currentFoot, robotik):
 
     vecc = robotik[4].__mother2SelfVec
     c = np.linalg.norm(vecc) # Calcula a norma/modulo do vector que expressa a distancia entre a junta do joelho até a junta do tornozelo
-    
-    #! yCom distância do COM as pernas, pegar do json
-    yCOM = 0
+
+
 
 
     # Separa as coordenadas da nova posição
@@ -64,42 +62,43 @@ def IKAnalitica(newFootRelPosition, currentFoot, robotik):
     else:
         y=0
 
-    #! Limites do y, ysep=ycom
-    if y > ysep:
-        y=ysep
+    if y > yCOM:
+        y=yCOM
         print(f"Y acima do limite estipulado, corrigindo para {y}")
-    elif y < -ysep:
-        y=-ysep
+    elif y < -yCOM:
+        y=-yCOM
         print(f"Y abaixo do limite estipulado, corrigindo para {y}")
 
     
 
     # Cálculo de valores para a Cinemática Inversa
 
-    #! Terminar
-    #! zHip2AnkleUX, o z do desenho
-    z_relativo= z-h_troncoX-h_peX
+    # Subtrai as distâncias até o COM e o pé referentes as juntas UX, 
+    # O valor recebido pela função será do COM ao pé, o cálculo refere-se do Hip ao Ankle
+    zHip2AnkleUX = z + ankleUX2foot + com2hipUX
+    
+    z2Hip2AnkleUXmax = 0.34673 # Perna estendida, do Hip UY ao Ankle UY
+    z2Hip2AnkleUXmin = 0.29630 # Perna dobrada ao máximo
 
-    #! z2Hip2AnkleUX, o z' do desenho debaixo
-    z2 = np.sqrt(z_relativo**2+y**2)
-
-    #! z2Hip2AnkleUY, o z' do desenho de cima
-    zlinha_relativo=z2-h_troncoY-h_peY
-
-    #! limites do z
-    #! z debaixo, z'max debaixo e z'min debaixo que dependem do z' de cima
-    if y**2+z**2 > z_linhaMax**2:
-        z = np.sqrt(z_linhaMax**2-y**2)
-        print(f"Z acima do limite, corrigindo para {z}")
+    if y**2+zHip2AnkleUX**2 > z2Hip2AnkleUXmax**2:
+        zHip2AnkleUX = np.sqrt(z2Hip2AnkleUXmax**2-y**2)
+        print(f"Z acima do limite, corrigindo para {zHip2AnkleUX - ankleUX2foot - com2hipUX}")
         
-    elif y**2+z**2 < z_linhaMin**2:
-        z = np.sqrt(z_linhaMin**2-y**2)
-        print(f"Z abaixo do limite, corrigindo para {z}")
+    elif y**2+zHip2AnkleUX**2 < z2Hip2AnkleUXmin**2:
+        zHip2AnkleUX = np.sqrt(z2Hip2AnkleUXmin**2-y**2)
+        print(f"Z abaixo do limite, corrigindo para {zHip2AnkleUX - ankleUX2foot - com2hipUX}")
 
 
-    H = np.sqrt((z2-e)**2+x**2)
+    z2Hip2AnkleUX = np.sqrt(zHip2AnkleUX**2+y**2)
+    zHip2AnkleUY = z2Hip2AnkleUX + hipUX2hipUY + ankleUY2ankleUX
+  
+    H = np.sqrt((zHip2AnkleUY-e)**2+x**2)
 
     cos=-(b**2+c**2-H**2)/2*b*c
+    
+    #!    
+    cos = np.clip(-(b**2 + c**2 - H**2) / (2 * b * c), -1, 1)
+
 
     if cos>1: cos=1 
     elif cos<-1: cos=-1
@@ -110,28 +109,19 @@ def IKAnalitica(newFootRelPosition, currentFoot, robotik):
     phi = np.arcsin(b*np.sin(theta)/H)
 
     # Ângulos da robo, iguais a 0 quando perna reta
-    alpha = ro + np.arctan2(x,z2 - e)           #angulo do joelho superior
-    beta = phi + np.arctan2(z2-e,x)-np.pi*0.5   #angulo do joelho inferior
+    alfa = ro + np.arctan2(x,zHip2AnkleUY - e)           #angulo do joelho superior
+    beta = phi + np.arctan2(zHip2AnkleUY-e,x)-np.pi*0.5   #angulo do joelho inferior
 
 
-    #! Converter max angulos para radianos
     if alfa > max_alfa: alfa = max_alfa
     elif alfa < min_alfa: alfa = min_alfa
 
     if beta > max_beta: beta = max_beta
     elif beta < min_beta: beta = min_beta
 
-    #! Usar o z do desenho debaixo
-    gama = np.arctan2(y,z)   #angulo da cintura em torno de x
-    epsilon = - gama         #anuglo do tornozelo em torno de x
+    gama = np.arctan2(y,zHip2AnkleUX)   # Angulo da cintura em torno de x
+    epsilon = - gama         # Angulo do tornozelo em torno de x
 
-
-    #! Terminar
-    # Subtrai as distâncias até o COM e o pé referentes as juntas UX, 
-    # O valor recebido pela função será do COM ao pé, o cálculo refere-se do Hip ao Ankle
-    z=Z-h_peX-h_troncoX
-
-    #! converter max angulos para radianos
     if gama > max_gama: gama = max_gama
     elif gama < min_gama: gama = min_gama
 
@@ -139,45 +129,8 @@ def IKAnalitica(newFootRelPosition, currentFoot, robotik):
     elif epsilon < min_epsilon: epsilon = min_epsilon
 
 
-
-
-
-
-    print("angulos",np.rad2deg(alpha+np.pi*0.5),np.rad2deg(beta+np.pi*0.5),np.rad2deg(gama),np.rad2deg(epsilon),sep='\n')
+    pot = [gama,alfa-np.pi/2,beta-np.pi/2,epsilon]
     
-    '''
-    HipUY = - alpha ?
-    HipUX = gama
-    KneeSuperiorUY = alpha
-    KneeInferiorUY = beta
-    AnkleUX = epsilon
-    AnkleUY = - beta ?
-    '''
-   
-    #return 
+    return pot
 
 IKAnalitica([-0.0186,-0.157, 0.2764-0.08],0,0)
-
-
-'''
-#alpha e gama subtraem 90º
-angulos
-39.86991548933679
--7.256445781353683
-90.0
--90.0
-
-
-angulos
-32.268357994500555
-0.5145575910333139
-21.173074012510135
--21.173074012510135
-
-#Não subtrai 90º
-angulos
-111.1426976946338
-121.19724156534168
--38.63845579066379
-38.63845579066379
-'''
