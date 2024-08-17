@@ -11,8 +11,7 @@ class IKPublisher(Node):
         self.timer_ = self.create_timer(0.1, self.publish_solution)
 
         self.current_joint_states = JointState()
-        self.current_joint_states.name = ["R_SHLD","L_SHLD","RHIP_UX","RHIP_UY1"]  #! Nome das juntas
-        #"RUKNEE_1", "RLKNEE_1","RANKLE_UY1""RHIP_UY2","RUKNEE_2""RLKNEE_2""RANKLE_UY2""RHIP_UY3""RUKNEE_3""RLKNEE_3""RANKLE_UY3""RANKLE_UX""LHIP_UX""LHIP_UY1""LUKNEE_1""LLKNEE_1""LANKLE_UY1""LHIP_UY2""LUKNEE_2""LLKNEE_2""LANKLE_UY2""LHIP_UY3""LUKNEE_3""LLKNEE_3""LANKLE_UY3""LANKLE_UY"
+        self.current_joint_states.name = ["R_SHLD", "L_SHLD", "RHIP_UX", "RHIP_UY1", "RUKNEE_1", "RLKNEE_1", "RANKLE_UY1", "RHIP_UY2", "RUKNEE_2", "RLKNEE_2", "RANKLE_UY2", "RHIP_UY3", "RUKNEE_3", "RLKNEE_3", "RANKLE_UY3", "RANKLE_UX", "LHIP_UX", "LHIP_UY1", "LUKNEE_1", "LLKNEE_1", "LANKLE_UY1", "LHIP_UY2", "LUKNEE_2", "LLKNEE_2", "LANKLE_UY2", "LHIP_UY3", "LUKNEE_3", "LLKNEE_3", "LANKLE_UY3", "LANKLE_UY"]
         self.current_joint_states.position = [0.0, 0.0, 0.0]  # Posições iniciais das juntas
         self.ik_active = False
 
@@ -126,7 +125,7 @@ class IKPublisher(Node):
 
         pot = [gama,alfa-np.pi/2,beta-np.pi/2,epsilon]
         
-        return [gama,alfa,beta,epsilon]
+        return [gama,alfa,beta,epsilon,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
 def main(args=None):
     rclpy.init(args=args)
