@@ -1,1 +1,1 @@
-string currentState
+string current_state

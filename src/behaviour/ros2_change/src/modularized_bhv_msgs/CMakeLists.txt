@@ -4,7 +4,8 @@ project(modularized_bhv_msgs)
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
-
+find_package(rosidl_default_generators REQUIRED)
+find_package(std_msgs REQUIRED)
 # find dependencies
 find_package(ament_cmake REQUIRED
   message_generation  
@@ -28,4 +29,11 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
+rosidl_generate_interfaces(${PROJECT_NAME}
+  "msg/CurrentStateMsg.msg"
+  "msg/GameControllerMsg.msg"
+  "msg/StateMachineMsg.msg"
+  "srv/MoveRequest.srv"
+  DEPENDENCIES std_msgs
+)
 ament_package()

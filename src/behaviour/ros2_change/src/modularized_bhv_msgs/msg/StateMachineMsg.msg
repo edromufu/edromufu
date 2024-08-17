@@ -1,6 +1,6 @@
-string ballPosition
-bool ballClose
-bool ballFound
-string fallState
-string horMotorOutOfCenter
-bool headKickCheck
+string ball_position
+bool ball_close
+bool ball_found
+string fall_state
+string hor_motor_out_of_center
+bool head_kick_check
