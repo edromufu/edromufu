@@ -3,15 +3,6 @@
 
 from __future__ import unicode_literals, print_function
 
-"""
-This module shows how the GameController Communication protocol can be used
-in python and also allows to be changed such that every team using python to
-interface with the GC can utilize the new protocol.
-
-.. moduleauthor:: Nils Rokita <0rokita@informatik.uni-hamburg.de>
-.. moduleauthor:: Robert Kessler <8kessler@informatik.uni-hamburg.de>
-
-"""
 
 
 import socket
@@ -26,12 +17,7 @@ from construct import Container, ConstError
 from GameController.gamestate import GameState, ReturnData, GAME_CONTROLLER_RESPONSE_VERSION
 from modularized_bhv_msgs.msg import GameControllerMsg
 
-logger = logging.getLogger('game_controller')
-logger.setLevel(logging.DEBUG)
 
-console_handler = logging.StreamHandler()
-console_handler.setFormatter(logging.Formatter("%(asctime)s %(message)s"))
-logger.addHandler(console_handler)
 
 DEFAULT_LISTENING_HOST = '0.0.0.0'
 GAME_CONTROLLER_LISTEN_PORT = 3838
@@ -94,7 +80,7 @@ class GameStateReceiver(object):
                 logger.debug("Fehler beim Senden des KeepAlive: " + str(e))
 
     def receive_once(self):
-        """ Receives a package and interprets it.
+        """ Receives a package and interprets it.team
             Calls :func:`on_new_gamestate`
             Sends an answer to the GC """
         try:
@@ -146,8 +132,48 @@ class GameStateReceiver(object):
             Needs to be implemented or set
             :param state: Game State
         """
-        
+        if state.teams[1].team_number == self.team:
+            own_team = state.teams[1]
+            player = own_team.players[self.player -1]
+            rival_team = state.teams[0]
+        elif state.teams[0].team_number == self.team:
+            own_team = state.teams[0]
+            player = own_team.players[self.player -1]
+            rival_team = state.teams[1]
+        else:
+            own_team = 0
+            rival_team = 0
+            player = 0
 
+        msg = GameControllerMsg()
+        msg.header.stamp = self.node.get_clock().now().to_msg()
+        msg.game_state = state.game_state.intvalue
+        msg.secondary_state = state.secondary_state.intvalue
+        msg.secondary_state_mode = state.secondary_state_info[1]
+        msg.first_half = state.first_half
+        msg.own_score = own_team.score
+        msg.rival_score = rival_team.score
+        msg.seconds_remaining = state.seconds_remaining
+        msg.secondary_seconds_remaining = state.secondary_seconds_remaining
+        msg.has_kick_off = state.kickoff_team == self.team
+        msg.penalized = player.penalty != 0
+        msg.seconds_till_unpenalized = player.secs_till_unpenalized
+        msg.secondary_state_team = state.secondary_state_info[0]
+        msg.secondary_state_mode = state.secondary_state_info[1]
+        msg.team_color = own_team.team_color.intvalue
+        msg.drop_in_team = state.drop_in_team
+        msg.drop_in_time = state.drop_in_time
+        msg.penalty_shot = own_team.penalty_shot
+        msg.single_shots = own_team.single_shots
+        msg.coach_message = own_team.coach_message
+        penalties = []
+        red_cards = []
+        for i in range(6):
+            penalties.append(own_team.players[i].penalty != 0)
+            red_cards.append(own_team.players[i].number_of_red_cards != 0)
+        msg.team_mates_with_penalty = penalties
+        msg.team_mates_with_red_card = red_cards
+        self.publisher.publish(msg)
     def get_last_state(self):
         return self.state, self.time
 
