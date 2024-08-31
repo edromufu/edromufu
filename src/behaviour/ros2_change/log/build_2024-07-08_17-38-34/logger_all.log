@@ -1,0 +1,206 @@
+[0.117s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'imu_ros_arduino_cc']
+[0.117s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['imu_ros_arduino_cc'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7b34563674f0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7b3456477c10>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7b3456477c10>>, mixin_verb=('build',))
+[0.303s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.303s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.303s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.303s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.303s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.303s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.303s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/bhv_independent_simulator) by extensions ['ignore', 'ignore_ament_install']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/bhv_independent_simulator) by extension 'ignore'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/bhv_independent_simulator) by extension 'ignore_ament_install'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/bhv_independent_simulator) by extensions ['colcon_pkg']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/bhv_independent_simulator) by extension 'colcon_pkg'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/bhv_independent_simulator) by extensions ['colcon_meta']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/bhv_independent_simulator) by extension 'colcon_meta'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/bhv_independent_simulator) by extensions ['ros']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/bhv_independent_simulator) by extension 'ros'
+[0.321s] DEBUG:colcon.colcon_core.package_identification:Package 'src/bhv_independent_simulator' with type 'ros.ament_python' and name 'bhv_independent_simulator'
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_ros_arduino) by extensions ['ignore', 'ignore_ament_install']
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_ros_arduino) by extension 'ignore'
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_ros_arduino) by extension 'ignore_ament_install'
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_ros_arduino) by extensions ['colcon_pkg']
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_ros_arduino) by extension 'colcon_pkg'
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_ros_arduino) by extensions ['colcon_meta']
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_ros_arduino) by extension 'colcon_meta'
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_ros_arduino) by extensions ['ros']
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_ros_arduino) by extension 'ros'
+[0.323s] DEBUG:colcon.colcon_core.package_identification:Package 'src/imu_ros_arduino' with type 'ros.ament_python' and name 'imu_ros_arduino'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_ros_arduino_cc) by extensions ['ignore', 'ignore_ament_install']
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_ros_arduino_cc) by extension 'ignore'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_ros_arduino_cc) by extension 'ignore_ament_install'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_ros_arduino_cc) by extensions ['colcon_pkg']
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_ros_arduino_cc) by extension 'colcon_pkg'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_ros_arduino_cc) by extensions ['colcon_meta']
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_ros_arduino_cc) by extension 'colcon_meta'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_ros_arduino_cc) by extensions ['ros']
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_ros_arduino_cc) by extension 'ros'
+[0.324s] DEBUG:colcon.colcon_core.package_identification:Package 'src/imu_ros_arduino_cc' with type 'ros.ament_cmake' and name 'imu_ros_arduino_cc'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/modularized_bhv_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/modularized_bhv_msgs) by extension 'ignore'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/modularized_bhv_msgs) by extension 'ignore_ament_install'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/modularized_bhv_msgs) by extensions ['colcon_pkg']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/modularized_bhv_msgs) by extension 'colcon_pkg'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/modularized_bhv_msgs) by extensions ['colcon_meta']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/modularized_bhv_msgs) by extension 'colcon_meta'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/modularized_bhv_msgs) by extensions ['ros']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/modularized_bhv_msgs) by extension 'ros'
+[0.325s] DEBUG:colcon.colcon_core.package_identification:Package 'src/modularized_bhv_msgs' with type 'ros.ament_cmake' and name 'modularized_bhv_msgs'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src/sensor_observer) by extensions ['ignore', 'ignore_ament_install']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src/sensor_observer) by extension 'ignore'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src/sensor_observer) by extension 'ignore_ament_install'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src/sensor_observer) by extensions ['colcon_pkg']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src/sensor_observer) by extension 'colcon_pkg'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src/sensor_observer) by extensions ['colcon_meta']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src/sensor_observer) by extension 'colcon_meta'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src/sensor_observer) by extensions ['ros']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src/sensor_observer) by extension 'ros'
+[0.326s] DEBUG:colcon.colcon_core.package_identification:Package 'src/sensor_observer' with type 'ros.ament_python' and name 'sensor_observer'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/states_routine) by extensions ['ignore', 'ignore_ament_install']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/states_routine) by extension 'ignore'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/states_routine) by extension 'ignore_ament_install'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/states_routine) by extensions ['colcon_pkg']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/states_routine) by extension 'colcon_pkg'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/states_routine) by extensions ['colcon_meta']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/states_routine) by extension 'colcon_meta'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/states_routine) by extensions ['ros']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/states_routine) by extension 'ros'
+[0.327s] DEBUG:colcon.colcon_core.package_identification:Package 'src/states_routine' with type 'ros.ament_python' and name 'states_routine'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/transitions_and_states) by extensions ['ignore', 'ignore_ament_install']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/transitions_and_states) by extension 'ignore'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/transitions_and_states) by extension 'ignore_ament_install'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/transitions_and_states) by extensions ['colcon_pkg']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/transitions_and_states) by extension 'colcon_pkg'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/transitions_and_states) by extensions ['colcon_meta']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/transitions_and_states) by extension 'colcon_meta'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/transitions_and_states) by extensions ['ros']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/transitions_and_states) by extension 'ros'
+[0.328s] DEBUG:colcon.colcon_core.package_identification:Package 'src/transitions_and_states' with type 'ros.ament_python' and name 'transitions_and_states'
+[0.328s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.328s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.328s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.328s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.328s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.376s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'bhv_independent_simulator' in 'src/bhv_independent_simulator'
+[0.376s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'imu_ros_arduino' in 'src/imu_ros_arduino'
+[0.376s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'modularized_bhv_msgs' in 'src/modularized_bhv_msgs'
+[0.376s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'sensor_observer' in 'src/sensor_observer'
+[0.376s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'states_routine' in 'src/states_routine'
+[0.376s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'transitions_and_states' in 'src/transitions_and_states'
+[0.377s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.377s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.381s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 323 installed packages in /opt/ros/humble
+[0.383s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.422s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino_cc' build argument 'cmake_args' from command line to 'None'
+[0.422s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino_cc' build argument 'cmake_target' from command line to 'None'
+[0.422s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino_cc' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.422s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino_cc' build argument 'cmake_clean_cache' from command line to 'False'
+[0.422s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino_cc' build argument 'cmake_clean_first' from command line to 'False'
+[0.422s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino_cc' build argument 'cmake_force_configure' from command line to 'False'
+[0.422s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino_cc' build argument 'ament_cmake_args' from command line to 'None'
+[0.422s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino_cc' build argument 'catkin_cmake_args' from command line to 'None'
+[0.422s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino_cc' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.422s] DEBUG:colcon.colcon_core.verb:Building package 'imu_ros_arduino_cc' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/imu_ros_arduino_cc', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino_cc', 'merge_install': False, 'path': '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/src/imu_ros_arduino_cc', 'symlink_install': False, 'test_result_base': None}
+[0.422s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.423s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.424s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/src/imu_ros_arduino_cc' with build type 'ament_cmake'
+[0.424s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/src/imu_ros_arduino_cc'
+[0.425s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.426s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.426s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.434s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/imu_ros_arduino_cc': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/src/imu_ros_arduino_cc -DCMAKE_INSTALL_PREFIX=/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino_cc
+[1.265s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/imu_ros_arduino_cc' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/src/imu_ros_arduino_cc -DCMAKE_INSTALL_PREFIX=/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino_cc
+[1.267s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/imu_ros_arduino_cc': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/imu_ros_arduino_cc -- -j8 -l8
+[1.289s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/imu_ros_arduino_cc' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/imu_ros_arduino_cc -- -j8 -l8
+[1.314s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/imu_ros_arduino_cc': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/imu_ros_arduino_cc
+[1.321s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(imu_ros_arduino_cc)
+[1.322s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/imu_ros_arduino_cc' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/imu_ros_arduino_cc
+[1.325s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino_cc' for CMake module files
+[1.325s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino_cc' for CMake config files
+[1.325s] Level 1:colcon.colcon_core.shell:create_environment_hook('imu_ros_arduino_cc', 'cmake_prefix_path')
+[1.326s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino_cc/share/imu_ros_arduino_cc/hook/cmake_prefix_path.ps1'
+[1.327s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino_cc/share/imu_ros_arduino_cc/hook/cmake_prefix_path.dsv'
+[1.327s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino_cc/share/imu_ros_arduino_cc/hook/cmake_prefix_path.sh'
+[1.328s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino_cc/bin'
+[1.328s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino_cc/lib/pkgconfig/imu_ros_arduino_cc.pc'
+[1.328s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino_cc/lib/python3.10/site-packages'
+[1.328s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino_cc/bin'
+[1.329s] INFO:colcon.colcon_core.shell:Creating package script '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino_cc/share/imu_ros_arduino_cc/package.ps1'
+[1.330s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino_cc/share/imu_ros_arduino_cc/package.dsv'
+[1.331s] INFO:colcon.colcon_core.shell:Creating package script '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino_cc/share/imu_ros_arduino_cc/package.sh'
+[1.331s] INFO:colcon.colcon_core.shell:Creating package script '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino_cc/share/imu_ros_arduino_cc/package.bash'
+[1.332s] INFO:colcon.colcon_core.shell:Creating package script '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino_cc/share/imu_ros_arduino_cc/package.zsh'
+[1.333s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino_cc/share/colcon-core/packages/imu_ros_arduino_cc)
+[1.352s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(imu_ros_arduino_cc)
+[1.353s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino_cc' for CMake module files
+[1.353s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino_cc' for CMake config files
+[1.353s] Level 1:colcon.colcon_core.shell:create_environment_hook('imu_ros_arduino_cc', 'cmake_prefix_path')
+[1.353s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino_cc/share/imu_ros_arduino_cc/hook/cmake_prefix_path.ps1'
+[1.354s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino_cc/share/imu_ros_arduino_cc/hook/cmake_prefix_path.dsv'
+[1.354s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino_cc/share/imu_ros_arduino_cc/hook/cmake_prefix_path.sh'
+[1.355s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino_cc/bin'
+[1.355s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino_cc/lib/pkgconfig/imu_ros_arduino_cc.pc'
+[1.355s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino_cc/lib/python3.10/site-packages'
+[1.355s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino_cc/bin'
+[1.355s] INFO:colcon.colcon_core.shell:Creating package script '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino_cc/share/imu_ros_arduino_cc/package.ps1'
+[1.356s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino_cc/share/imu_ros_arduino_cc/package.dsv'
+[1.356s] INFO:colcon.colcon_core.shell:Creating package script '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino_cc/share/imu_ros_arduino_cc/package.sh'
+[1.356s] INFO:colcon.colcon_core.shell:Creating package script '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino_cc/share/imu_ros_arduino_cc/package.bash'
+[1.357s] INFO:colcon.colcon_core.shell:Creating package script '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino_cc/share/imu_ros_arduino_cc/package.zsh'
+[1.357s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino_cc/share/colcon-core/packages/imu_ros_arduino_cc)
+[1.357s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.357s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.357s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.357s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.363s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.363s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.363s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.366s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.366s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/local_setup.ps1'
+[1.367s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/_local_setup_util_ps1.py'
+[1.368s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/setup.ps1'
+[1.370s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/local_setup.sh'
+[1.371s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/_local_setup_util_sh.py'
+[1.373s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/setup.sh'
+[1.374s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/local_setup.bash'
+[1.375s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/setup.bash'
+[1.376s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/local_setup.zsh'
+[1.377s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/setup.zsh'

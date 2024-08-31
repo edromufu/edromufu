@@ -1,0 +1,39 @@
+running egg_info
+creating ../../build/sensor_observer/sensor_observer.egg-info
+writing ../../build/sensor_observer/sensor_observer.egg-info/PKG-INFO
+writing dependency_links to ../../build/sensor_observer/sensor_observer.egg-info/dependency_links.txt
+writing entry points to ../../build/sensor_observer/sensor_observer.egg-info/entry_points.txt
+writing requirements to ../../build/sensor_observer/sensor_observer.egg-info/requires.txt
+writing top-level names to ../../build/sensor_observer/sensor_observer.egg-info/top_level.txt
+writing manifest file '../../build/sensor_observer/sensor_observer.egg-info/SOURCES.txt'
+reading manifest file '../../build/sensor_observer/sensor_observer.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/sensor_observer/sensor_observer.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/sensor_observer/build
+creating /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/sensor_observer/build/lib
+creating /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/sensor_observer/build/lib/sensor_observer
+copying sensor_observer/neck_interpreter.py -> /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/sensor_observer/build/lib/sensor_observer
+copying sensor_observer/__init__.py -> /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/sensor_observer/build/lib/sensor_observer
+copying sensor_observer/ros_packer.py -> /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/sensor_observer/build/lib/sensor_observer
+copying sensor_observer/ball_interpreter.py -> /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/sensor_observer/build/lib/sensor_observer
+copying sensor_observer/fall_interpreter.py -> /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/sensor_observer/build/lib/sensor_observer
+running install
+running install_lib
+creating /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/sensor_observer/lib/python3.10/site-packages/sensor_observer
+copying /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/sensor_observer/build/lib/sensor_observer/neck_interpreter.py -> /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/sensor_observer/lib/python3.10/site-packages/sensor_observer
+copying /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/sensor_observer/build/lib/sensor_observer/__init__.py -> /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/sensor_observer/lib/python3.10/site-packages/sensor_observer
+copying /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/sensor_observer/build/lib/sensor_observer/ros_packer.py -> /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/sensor_observer/lib/python3.10/site-packages/sensor_observer
+copying /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/sensor_observer/build/lib/sensor_observer/ball_interpreter.py -> /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/sensor_observer/lib/python3.10/site-packages/sensor_observer
+copying /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/sensor_observer/build/lib/sensor_observer/fall_interpreter.py -> /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/sensor_observer/lib/python3.10/site-packages/sensor_observer
+byte-compiling /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/sensor_observer/lib/python3.10/site-packages/sensor_observer/neck_interpreter.py to neck_interpreter.cpython-310.pyc
+byte-compiling /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/sensor_observer/lib/python3.10/site-packages/sensor_observer/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/sensor_observer/lib/python3.10/site-packages/sensor_observer/ros_packer.py to ros_packer.cpython-310.pyc
+byte-compiling /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/sensor_observer/lib/python3.10/site-packages/sensor_observer/ball_interpreter.py to ball_interpreter.cpython-310.pyc
+byte-compiling /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/sensor_observer/lib/python3.10/site-packages/sensor_observer/fall_interpreter.py to fall_interpreter.cpython-310.pyc
+running install_data
+creating /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/sensor_observer/share/ament_index
+creating /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/sensor_observer/share/ament_index/resource_index
+creating /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/sensor_observer/share/ament_index/resource_index/packages
+error: can't copy 'resource/sensor_observer': doesn't exist or not a regular file

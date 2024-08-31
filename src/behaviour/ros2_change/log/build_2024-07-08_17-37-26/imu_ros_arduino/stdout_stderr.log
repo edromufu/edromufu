@@ -1,0 +1,15 @@
+running egg_info
+writing ../../build/imu_ros_arduino/imu_ros_arduino.egg-info/PKG-INFO
+writing dependency_links to ../../build/imu_ros_arduino/imu_ros_arduino.egg-info/dependency_links.txt
+writing entry points to ../../build/imu_ros_arduino/imu_ros_arduino.egg-info/entry_points.txt
+writing requirements to ../../build/imu_ros_arduino/imu_ros_arduino.egg-info/requires.txt
+writing top-level names to ../../build/imu_ros_arduino/imu_ros_arduino.egg-info/top_level.txt
+reading manifest file '../../build/imu_ros_arduino/imu_ros_arduino.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/imu_ros_arduino/imu_ros_arduino.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+error: can't copy 'resource/imu_ros_arduino': doesn't exist or not a regular file

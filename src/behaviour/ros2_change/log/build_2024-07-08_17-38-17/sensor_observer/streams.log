@@ -1,0 +1,41 @@
+[0.646s] Invoking command in '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/src/sensor_observer': PYTHONPATH=/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/sensor_observer/prefix_override:/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/sensor_observer/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/sensor_observer build --build-base /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/sensor_observer/build install --record /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/sensor_observer/install.log --single-version-externally-managed install_data
+[0.878s] running egg_info
+[0.878s] creating ../../build/sensor_observer/sensor_observer.egg-info
+[0.878s] writing ../../build/sensor_observer/sensor_observer.egg-info/PKG-INFO
+[0.879s] writing dependency_links to ../../build/sensor_observer/sensor_observer.egg-info/dependency_links.txt
+[0.879s] writing entry points to ../../build/sensor_observer/sensor_observer.egg-info/entry_points.txt
+[0.879s] writing requirements to ../../build/sensor_observer/sensor_observer.egg-info/requires.txt
+[0.879s] writing top-level names to ../../build/sensor_observer/sensor_observer.egg-info/top_level.txt
+[0.879s] writing manifest file '../../build/sensor_observer/sensor_observer.egg-info/SOURCES.txt'
+[0.881s] reading manifest file '../../build/sensor_observer/sensor_observer.egg-info/SOURCES.txt'
+[0.881s] adding license file 'LICENSE'
+[0.885s] writing manifest file '../../build/sensor_observer/sensor_observer.egg-info/SOURCES.txt'
+[0.885s] running build
+[0.885s] running build_py
+[0.885s] creating /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/sensor_observer/build
+[0.885s] creating /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/sensor_observer/build/lib
+[0.885s] creating /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/sensor_observer/build/lib/sensor_observer
+[0.886s] copying sensor_observer/neck_interpreter.py -> /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/sensor_observer/build/lib/sensor_observer
+[0.886s] copying sensor_observer/__init__.py -> /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/sensor_observer/build/lib/sensor_observer
+[0.886s] copying sensor_observer/ros_packer.py -> /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/sensor_observer/build/lib/sensor_observer
+[0.886s] copying sensor_observer/ball_interpreter.py -> /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/sensor_observer/build/lib/sensor_observer
+[0.886s] copying sensor_observer/fall_interpreter.py -> /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/sensor_observer/build/lib/sensor_observer
+[0.886s] running install
+[0.887s] running install_lib
+[0.888s] creating /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/sensor_observer/lib/python3.10/site-packages/sensor_observer
+[0.888s] copying /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/sensor_observer/build/lib/sensor_observer/neck_interpreter.py -> /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/sensor_observer/lib/python3.10/site-packages/sensor_observer
+[0.888s] copying /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/sensor_observer/build/lib/sensor_observer/__init__.py -> /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/sensor_observer/lib/python3.10/site-packages/sensor_observer
+[0.888s] copying /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/sensor_observer/build/lib/sensor_observer/ros_packer.py -> /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/sensor_observer/lib/python3.10/site-packages/sensor_observer
+[0.888s] copying /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/sensor_observer/build/lib/sensor_observer/ball_interpreter.py -> /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/sensor_observer/lib/python3.10/site-packages/sensor_observer
+[0.888s] copying /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/sensor_observer/build/lib/sensor_observer/fall_interpreter.py -> /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/sensor_observer/lib/python3.10/site-packages/sensor_observer
+[0.889s] byte-compiling /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/sensor_observer/lib/python3.10/site-packages/sensor_observer/neck_interpreter.py to neck_interpreter.cpython-310.pyc
+[0.889s] byte-compiling /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/sensor_observer/lib/python3.10/site-packages/sensor_observer/__init__.py to __init__.cpython-310.pyc
+[0.890s] byte-compiling /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/sensor_observer/lib/python3.10/site-packages/sensor_observer/ros_packer.py to ros_packer.cpython-310.pyc
+[0.891s] byte-compiling /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/sensor_observer/lib/python3.10/site-packages/sensor_observer/ball_interpreter.py to ball_interpreter.cpython-310.pyc
+[0.891s] byte-compiling /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/sensor_observer/lib/python3.10/site-packages/sensor_observer/fall_interpreter.py to fall_interpreter.cpython-310.pyc
+[0.892s] running install_data
+[0.892s] creating /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/sensor_observer/share/ament_index
+[0.892s] creating /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/sensor_observer/share/ament_index/resource_index
+[0.892s] creating /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/sensor_observer/share/ament_index/resource_index/packages
+[0.892s] error: can't copy 'resource/sensor_observer': doesn't exist or not a regular file
+[0.925s] Invoked command in '/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/src/sensor_observer' returned '1': PYTHONPATH=/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/sensor_observer/prefix_override:/home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/sensor_observer/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/sensor_observer build --build-base /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/sensor_observer/build install --record /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/sensor_observer/install.log --single-version-externally-managed install_data

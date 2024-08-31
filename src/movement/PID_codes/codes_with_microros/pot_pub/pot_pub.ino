@@ -9,6 +9,13 @@
 #include <potmessage/msg/potmsg.h>
 #include <buttonmessage/msg/buttonmsg.h>
 
+rcl_subscription_t subscriber;
+rclc_executor_t executor;
+rclc_support_t support;
+rcl_allocator_t allocator;
+rcl_node_t node;
+rcl_timer_t timer;
+
 //const int POT_PINS[] = {0}; // Tem que configurar os pinos (mudar pra oito)
 const int pot_size = 8;    // Mudar pra 8
 int pot_values[pot_size];  // valores lidos na junta

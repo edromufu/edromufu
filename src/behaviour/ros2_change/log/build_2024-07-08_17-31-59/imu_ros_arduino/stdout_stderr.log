@@ -1,0 +1,30 @@
+running egg_info
+creating ../../build/imu_ros_arduino/imu_ros_arduino.egg-info
+writing ../../build/imu_ros_arduino/imu_ros_arduino.egg-info/PKG-INFO
+writing dependency_links to ../../build/imu_ros_arduino/imu_ros_arduino.egg-info/dependency_links.txt
+writing entry points to ../../build/imu_ros_arduino/imu_ros_arduino.egg-info/entry_points.txt
+writing requirements to ../../build/imu_ros_arduino/imu_ros_arduino.egg-info/requires.txt
+writing top-level names to ../../build/imu_ros_arduino/imu_ros_arduino.egg-info/top_level.txt
+writing manifest file '../../build/imu_ros_arduino/imu_ros_arduino.egg-info/SOURCES.txt'
+reading manifest file '../../build/imu_ros_arduino/imu_ros_arduino.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/imu_ros_arduino/imu_ros_arduino.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/imu_ros_arduino/build
+creating /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/imu_ros_arduino/build/lib
+creating /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/imu_ros_arduino/build/lib/imu_ros_arduino
+copying imu_ros_arduino/imu_read.py -> /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/imu_ros_arduino/build/lib/imu_ros_arduino
+copying imu_ros_arduino/__init__.py -> /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/imu_ros_arduino/build/lib/imu_ros_arduino
+running install
+running install_lib
+creating /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino/lib/python3.10/site-packages/imu_ros_arduino
+copying /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/imu_ros_arduino/build/lib/imu_ros_arduino/imu_read.py -> /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino/lib/python3.10/site-packages/imu_ros_arduino
+copying /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/build/imu_ros_arduino/build/lib/imu_ros_arduino/__init__.py -> /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino/lib/python3.10/site-packages/imu_ros_arduino
+byte-compiling /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino/lib/python3.10/site-packages/imu_ros_arduino/imu_read.py to imu_read.cpython-310.pyc
+byte-compiling /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino/lib/python3.10/site-packages/imu_ros_arduino/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino/share/ament_index
+creating /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino/share/ament_index/resource_index
+creating /home/arthur/Documents/github/edromufu/src/behaviour/ros2_change/install/imu_ros_arduino/share/ament_index/resource_index/packages
+error: can't copy 'resource/imu_ros_arduino': doesn't exist or not a regular file
