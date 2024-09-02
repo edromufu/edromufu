@@ -63,13 +63,14 @@ class Node():
 
     def get_webcam(self):
 
-        
+
         if self.ajuste == True:
             print("Ajuste de Brilho '=' para aumentar e '-' para diminuir.\n")
             print("Para continuar a detecção. Aperte W.\n")
+                
+        while True:
 
-            self.current_frame = cv2.VideoCapture(f"/dev/video{self.camera}")
-            ret, self.current_frame = self.current_frame.read()
+            ret, self.current_frame =  self.cap.read()
             self.current_frame = cv2.resize(self.current_frame, (640,480))
             #self.current_frame = cv2.blur(self.current_frame, (10,10))
 
