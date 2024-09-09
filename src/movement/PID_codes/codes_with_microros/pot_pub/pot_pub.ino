@@ -5,11 +5,10 @@
 #include <rcl/error_handling.h>
 #include <rclc/rclc.h>
 #include <rclc/executor.h>
-
-#include <potmessage/msg/potmsg.h>
+#include <std_msgs/msg/float32_multi_array.h>
+// #include <potmessage/msg/potmsg.h>
 #include <buttonmessage/msg/buttonmsg.h>
 
-rcl_subscription_t subscriber;
 rclc_executor_t executor;
 rclc_support_t support;
 rcl_allocator_t allocator;
@@ -31,16 +30,11 @@ const int pinS2 = 4;
 
 rcl_publisher_t publisher;
 rcl_publisher_t publisher2;
-potmessage__msg__Potmsg potmsg;
+std_msgs__msg__Float32MultiArray msg;
+// potmessage__msg__Potmsg potmsg;
 buttonmessage__msg__Buttonmsg butmsg;
 
-
-rclc_executor_t executor;
-rclc_support_t support;
-rcl_allocator_t allocator;
-rcl_node_t node;
-rcl_timer_t timer;
-
+float data[8] = {0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0};
 
 #define RCCHECK(fn) \
   { \
@@ -53,7 +47,6 @@ rcl_timer_t timer;
     if ((temp_rc != RCL_RET_OK)) {} \
   }
 
-
 void error_loop() {
   Serial.println("ERROR LOOP");
 }
@@ -61,7 +54,7 @@ void error_loop() {
 void timer_callback(rcl_timer_t* timer, int64_t last_call_time) {
   RCLC_UNUSED(last_call_time);
   if (timer != NULL) {
-    RCSOFTCHECK(rcl_publish(&publisher, &potmsg, NULL));
+    RCSOFTCHECK(rcl_publish(&publisher, &msg, NULL));
     RCSOFTCHECK(rcl_publish(&publisher2, &butmsg, NULL));
   }
 }
@@ -107,7 +100,7 @@ void setup() {
   RCCHECK(rclc_publisher_init_default(
     &publisher,
     &node,
-    ROSIDL_GET_MSG_TYPE_SUPPORT(potmessage, msg, Potmsg),
+    ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Float32MultiArray),
     "pot_topic"));
   RCCHECK(rclc_publisher_init_default(
     &publisher2,
@@ -127,7 +120,11 @@ void setup() {
   RCCHECK(rclc_executor_init(&executor, &support.context, 2, &allocator));
   RCCHECK(rclc_executor_add_timer(&executor, &timer));
 
-  potmsg.pot1 = 2.2;
+  //potmsg.pot1 = 2.2;
+  msg.data.data = data;
+  msg.data.size = 8;
+  msg.data.capacity = 8;
+
 }
 
 void loop() {
@@ -143,12 +140,4 @@ void loop() {
     Serial.print(valor);
   }
 
-  potmsg.pot1 = readJoint(0);
-  potmsg.pot2 = readJoint(1);
-  potmsg.pot3 = readJoint(2);
-  potmsg.pot4 = readJoint(3);
-  potmsg.pot5 = readJoint(4);
-  potmsg.pot6 = readJoint(5);
-  potmsg.pot7 = readJoint(6);
-  potmsg.pot8 = readJoint(7);
 }
