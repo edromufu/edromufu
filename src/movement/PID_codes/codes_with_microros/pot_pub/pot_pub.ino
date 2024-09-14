@@ -6,7 +6,7 @@
 #include <rclc/rclc.h>
 #include <rclc/executor.h>
 #include <std_msgs/msg/float32_multi_array.h>
-// #include <potmessage/msg/potmsg.h>
+#include <potmessage/msg/potmsg.h>
 #include <buttonmessage/msg/buttonmsg.h>
 
 rclc_executor_t executor;
@@ -31,10 +31,10 @@ const int pinS2 = 4;
 rcl_publisher_t publisher;
 rcl_publisher_t publisher2;
 std_msgs__msg__Float32MultiArray msg;
-// potmessage__msg__Potmsg potmsg;
+potmessage__msg__Potmsg potmsg;
 buttonmessage__msg__Buttonmsg butmsg;
 
-float data[8] = {0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0};
+float data[8] = {3.14,1.0,2.0,3.0,4.0,5.0,6.0,7.0};
 
 #define RCCHECK(fn) \
   { \
@@ -100,7 +100,7 @@ void setup() {
   RCCHECK(rclc_publisher_init_default(
     &publisher,
     &node,
-    ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Float32MultiArray),
+    ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs ,msg, Float32MultiArray),
     "pot_topic"));
   RCCHECK(rclc_publisher_init_default(
     &publisher2,
@@ -120,7 +120,7 @@ void setup() {
   RCCHECK(rclc_executor_init(&executor, &support.context, 2, &allocator));
   RCCHECK(rclc_executor_add_timer(&executor, &timer));
 
-  //potmsg.pot1 = 2.2;
+  potmsg.pot1 = 2.2;
   msg.data.data = data;
   msg.data.size = 8;
   msg.data.capacity = 8;

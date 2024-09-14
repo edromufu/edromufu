@@ -7,12 +7,12 @@
 #include <rclc/executor.h>
 #include <std_msgs/msg/float32.h>
 #include <potmessage/msg/potmsg.h>
-
+#include <std_msgs/msg/float32_multi_array.h>
 //Usado no Subscriber
-potmessage__msg__Potmsg potmsg;
+//potmessage__msg__Potmsg potmsg;
 rcl_subscription_t subscriber;
 rclc_executor_t executor;
-
+std_msgs__msg__Float32MultiArray potmsg;
 //Usado no Publisher de Feedback
 std_msgs__msg__Float32 msg;
 rcl_publisher_t publisher;
@@ -64,10 +64,15 @@ void timer_callback(rcl_timer_t * timer, int64_t last_call_time)
 }
 
 void subscription_callback(const void * msgin){  
-  const potmessage__msg__Potmsg * potmsg = (const potmessage__msg__Potmsg *)msgin;
-  //Publisher de feedback
-  msg.data = (float)potmsg->pot1;
+  const std_msgs__msg__Float32MultiArray * potmsg = (const std_msgs__msg__Float32MultiArray *)msgin;
+  
+  // Exemplo de como acessar os elementos do array
+  if (potmsg->data.size > 0) {
+    float first_pot_value = potmsg->data.data[0];  // Acessa o primeiro valor
+    msg.data = first_pot_value;  // Publica o valor como feedback
+  }
 }
+
 
 void writeActuator (int id, int signal){
   // id: id da junta
@@ -118,7 +123,7 @@ void setup() {
   RCCHECK(rclc_subscription_init_default(
     &subscriber,
     &node,
-    ROSIDL_GET_MSG_TYPE_SUPPORT(potmessage, msg, Potmsg),
+    ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Float32MultiArray),
     "pot_topic"));
 
   // create publisher de feedback
