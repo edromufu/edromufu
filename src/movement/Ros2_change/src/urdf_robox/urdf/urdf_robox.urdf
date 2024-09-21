@@ -3,10 +3,20 @@
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
-  name="urdf_robox">
+  name="my_bot">
+
+    <link    name="world">    </link>
+    
+   <joint    name="base_joint" type="fixed">
+    <origin
+      xyz="0 0 0.40"
+       />
+    <parent     link="world" />
+    <child      link="Link_0" />
+  </joint>
   <link
     name="Link_0">
-    <inertial>
+    <inertial> 
       <origin
         xyz="-0.0009365 -0.0058418 0.099851"
         rpy="0 0 0" />
@@ -44,6 +54,7 @@
       </geometry>
     </collision>
   </link>
+  
   <link
     name="RA_Link">
     <inertial>
@@ -522,7 +533,7 @@
     <child
       link="RL_Link_2.2" />
     <axis
-      xyz="0 -1 0" />
+      xyz="0 1 0" />
     <limit
       lower="-6.28"
       upper="6.28"
@@ -531,6 +542,7 @@
     <dynamics
       damping="1"
       friction="0.1" />
+    <mimic joint="RHIP_UY1" multiplier="1" offset="0" />
   </joint>
   <link
     name="RL_Link_3.2">
@@ -592,6 +604,7 @@
     <dynamics
       damping="1"
       friction="0.1" />
+    <mimic joint="RUKNEE_1" multiplier="1" offset="0" />
   </joint>
   <link
     name="RL_Link_4.2">
@@ -653,6 +666,8 @@
     <dynamics
       damping="1"
       friction="0.1" />
+    <mimic joint="RLKNEE_1" multiplier="1" offset="0" />
+
   </joint>
   <link
     name="RL_Link_5.2">
@@ -714,6 +729,7 @@
     <dynamics
       damping="1"
       friction="0.1" />
+    <mimic joint="RANKLE_UY1" multiplier="1" offset="0" />
   </joint>
   <link
     name="RL_Link_2.3">
@@ -775,6 +791,7 @@
     <dynamics
       damping="1"
       friction="0.1" />
+    <mimic joint="RHIP_UY1" multiplier="1" offset="0" />
   </joint>
   <link
     name="RL_Link_3.3">
@@ -836,6 +853,7 @@
     <dynamics
       damping="1"
       friction="0.1" />
+    <mimic joint="RUKNEE_1" multiplier="1" offset="0" />
   </joint>
   <link
     name="RL_Link_4.3">
@@ -897,6 +915,7 @@
     <dynamics
       damping="1"
       friction="0.1" />
+    <mimic joint="RLKNEE_1" multiplier="1" offset="0" />
   </joint>
   <link
     name="RL_Link_5.3">
@@ -958,6 +977,7 @@
     <dynamics
       damping="1"
       friction="0.1" />
+    <mimic joint="RANKLE_UY1" multiplier="1" offset="0" />
   </joint>
   <link
     name="RL_Link_6">
@@ -1376,7 +1396,7 @@
     <child
       link="LL_Link_2.2" />
     <axis
-      xyz="0 -1 0" />
+      xyz="0 1 0" />
     <limit
       lower="-6.28"
       upper="6.28"
@@ -1385,6 +1405,7 @@
     <dynamics
       damping="1"
       friction="0.1" />
+    <mimic joint="LHIP_UY1" multiplier="1" offset="0" />
   </joint>
   <link
     name="LL_Link_3.2">
@@ -1446,6 +1467,7 @@
     <dynamics
       damping="1"
       friction="0.1" />
+    <mimic joint="LUKNEE_1" multiplier="1" offset="0" />
   </joint>
   <link
     name="LL_Link_4.2">
@@ -1507,6 +1529,7 @@
     <dynamics
       damping="1"
       friction="0.1" />
+    <mimic joint="LLKNEE_1" multiplier="1" offset="0" />
   </joint>
   <link
     name="LL_Link_5.2">
@@ -1568,6 +1591,7 @@
     <dynamics
       damping="1"
       friction="0.1" />
+    <mimic joint="LANKLE_UY1" multiplier="1" offset="0" />
   </joint>
   <link
     name="LL_Link_2.3">
@@ -1629,6 +1653,7 @@
     <dynamics
       damping="1"
       friction="0.1" />
+    <mimic joint="LHIP_UY1" multiplier="1" offset="0" />
   </joint>
   <link
     name="LL_Link_3.3">
@@ -1690,6 +1715,7 @@
     <dynamics
       damping="1"
       friction="0.1" />
+    <mimic joint="LUKNEE_1" multiplier="1" offset="0" />
   </joint>
   <link
     name="LL_Link_4.3">
@@ -1751,6 +1777,7 @@
     <dynamics
       damping="1"
       friction="0.1" />
+    <mimic joint="LLKNEE_1" multiplier="1" offset="0" />
   </joint>
   <link
     name="LL_Link_5.3">
@@ -1812,6 +1839,7 @@
     <dynamics
       damping="1"
       friction="0.1" />
+    <mimic joint="LANKLE_UY1" multiplier="1" offset="0" />
   </joint>
   <link
     name="LL_Link_6">
@@ -1874,4 +1902,179 @@
       damping="1"
       friction="0.1" />
   </joint>
+  
+  
+  
+  
+  
+<!--
+    <gazebo reference="base_link">
+        <material>Gazebo/Green</material>
+    </gazebo>
+    <gazebo reference="Link_0">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    <gazebo reference="Link_0">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    <gazebo reference="RA_Link">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    <gazebo reference="LA_Link">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    <gazebo reference="RL_Link_1">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    <gazebo reference="RL_Link_2.1">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    <gazebo reference="RL_Link_3.1">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    <gazebo reference="RL_Link_4.1">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    <gazebo reference="RL_Link_5.1">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    <gazebo reference="RL_Link_2.2">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    <gazebo reference="RL_Link_3.2">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    <gazebo reference="RL_Link_4.2">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    <gazebo reference="RL_Link_5.2">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    <gazebo reference="RL_Link_2.3">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    <gazebo reference="RL_Link_3.3">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    <gazebo reference="RL_Link_4.3">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    <gazebo reference="RL_Link_5.3">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    <gazebo reference="RL_Link_6">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    <gazebo reference="LL_Link_1">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    <gazebo reference="LL_Link_2.1">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    <gazebo reference="LL_Link_3.1">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    <gazebo reference="LL_Link_4.1">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    <gazebo reference="LL_Link_5.1">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    <gazebo reference="LL_Link_2.2">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    <gazebo reference="LL_Link_3.2">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    <gazebo reference="LL_Link_4.2">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    <gazebo reference="LL_Link_5.2">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    <gazebo reference="LL_Link_2.3">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    <gazebo reference="LL_Link_3.3">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    <gazebo reference="LL_Link_4.3">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    <gazebo reference="LL_Link_5.3">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    <gazebo reference="LL_Link_6">
+        <material>Gazebo/Blue</material>
+    </gazebo>  -->
+  
+  
+  
+    <gazebo>
+        <plugin name="gazebo_ros_joint_state_publisher"
+            filename="libgazebo_ros_joint_state_publisher.so">
+            <update_rate>20</update_rate>
+            <joint_name>base_joint</joint_name>
+            <joint_name>R_SHLD</joint_name>
+            <joint_name>L_SHLD</joint_name>
+            <joint_name>RHIP_UX</joint_name>
+            <joint_name>RHIP_UY1</joint_name>
+            <joint_name>RUKNEE_1</joint_name>            
+            <joint_name>RLKNEE_1</joint_name>
+            <joint_name>RANKLE_UY1</joint_name>
+            <joint_name>RHIP_UY2</joint_name>
+            <joint_name>RUKNEE_2</joint_name>            
+            <joint_name>RLKNEE_2</joint_name>
+            <joint_name>RANKLE_UY2</joint_name>
+            <joint_name>RHIP_UY3</joint_name>
+            <joint_name>RUKNEE_3</joint_name>            
+            <joint_name>RLKNEE_3</joint_name>
+            <joint_name>RANKLE_UY3</joint_name>
+            <joint_name>LHIP_UX</joint_name>
+            <joint_name>LHIP_UY1</joint_name>
+            <joint_name>LUKNEE_1</joint_name>            
+            <joint_name>LLKNEE_1</joint_name>
+            <joint_name>LANKLE_UY1</joint_name>
+            <joint_name>LHIP_UY2</joint_name>
+            <joint_name>LUKNEE_2</joint_name>            
+            <joint_name>LLKNEE_2</joint_name>
+            <joint_name>LANKLE_UY2</joint_name>
+            <joint_name>LHIP_UY3</joint_name>
+            <joint_name>LUKNEE_3</joint_name>            
+            <joint_name>LLKNEE_3</joint_name>
+            <joint_name>LANKLE_UY3</joint_name>
+            <joint_name>LANKLE_UY</joint_name>
+            <robotparam>my_bot</robotparam>
+        </plugin>
+    </gazebo>
+
+
+    <!-- This plugin will read a JointTrajectory message from the /set_joint_trajectory topic 
+            and move the machine accordingly. It's a bit clunky but it works. -->
+    <!-- You'll probably want to add damping to the joints to stop them it flopping around. 
+            e.g. <dynamics damping="10.0" friction="10.0"/> -->
+    <!-- Here's an example message to publish to test it:
+            ros2 topic pub -1 /set_joint_trajectory trajectory_msgs/msg/JointTrajectory  '{header: {frame_id: world}, joint_names: [slider_joint, arm_joint], points: [  {positions: {0.8,0.6}} ]}' -->
+    <gazebo>
+        <plugin name="gazebo_ros_joint_pose_trajectory"
+            filename="libgazebo_ros_joint_pose_trajectory.so">
+            <update_rate>20</update_rate>
+            <robotparam>my_bot</robotparam>
+        </plugin>
+    </gazebo> 
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 </robot>
