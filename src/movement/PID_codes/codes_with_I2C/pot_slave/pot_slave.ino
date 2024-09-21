@@ -1,5 +1,8 @@
 #include <Wire.h>
 
+#define SDA_PIN 20
+#define SCL_PIN 21
+
 //---------Pot----------------
 const int pot_size = 8;    // Mudar pra 8
 const int n_size = 15;     // quantidade de média móvel
@@ -22,7 +25,7 @@ void selecionarCanal(int canal) {
 }
 
 void setup() {
-  Wire.begin(0x08);                 // Configura o ESP32 como Slave com endereço 0x08
+  Wire.begin(0x08, SDA_PIN, SCL_PIN);                 // Configura o ESP32 como Slave com endereço 0x08
   Wire.onRequest(requestEvent);     // Configura a função de callback para envio de dados
   Serial.begin(115200);
   pinMode(pinSaidaMux, INPUT);
@@ -41,7 +44,7 @@ float readJoint() {
 void loop() { delay(100);}// Não há necessidade de ações no loop, o Slave só responde a solicitações
 
 
-// Função chamada quando o Master solicita dados
+// Função chamada quando o  solicita dados
 void requestEvent() {
   for (int i = 0; i < pot_size; i++) {
     selecionarCanal(i);

@@ -1,131 +1,3 @@
-/*#include <Wire.h>
-
-
-//-------declaração de pinos-------
-#define LED_PIN 13
-
-//-------declaração do endereço do slave-------
-#define SLAVE_ADDR 0x08 
-
-const int ACTUATOR_EN_PINS[] =  {23,  5, 27,  4}; //vetor de PWM
-const int ACTUATOR_INA_PINS[] = {22, 19, 26, 15}; //vetor de pino de avanço
-const int ACTUATOR_INB_PINS[] = {21, 18, 25,  2}; //vetor de pino de recuo
-const int pot_size = 4; //número de juntas
-
-
-//--------constantes PID--------
-const float Kp[] = {10, 10, 10, 10};
-const float Ki[] = {0, 0, 0, 0};
-const float Kd[] = {0, 0, 0, 0};
-float lastError[] = {0, 0, 0, 0};
-float accError[] = {0, 0, 0, 0};
-float angles[] = {0, 0, 0, 0, 0, 0, 0, 0};
-int dt = 1000; // tempo de amostragem em milisegundos
-
-
-
-
-
-void readJoint(){
-  Wire.requestFrom(SLAVE_ADDR,4);
-  Serial.print("Vetor de posições recebido: ");
-  while (Wire.available()) {        // Enquanto houver dados disponíveis
-    int posicao = Wire.read();      // Lê um byte de dados
-    Serial.print(posicao);
-    Serial.print(" ");
-  }
-  Serial.println("");
-}
-
-void writeActuator (int id, int signal){
-  // id: id da junta
-  // signal: valor de -10000 10000 para escrever na junta
-  int newSignal = constrain(signal, -10000, 10000);
-  newSignal = 255*newSignal/10000;
-  if (signal >= 0){
-    digitalWrite(ACTUATOR_INA_PINS[id], HIGH);
-    digitalWrite(ACTUATOR_INB_PINS[id], LOW);
-    analogWrite(ACTUATOR_EN_PINS[id], newSignal);
-  }
-  if (signal < 0){
-    digitalWrite(ACTUATOR_INA_PINS[id], LOW);
-    digitalWrite(ACTUATOR_INB_PINS[id], HIGH);
-    analogWrite(ACTUATOR_EN_PINS[id], -newSignal);
-  }
-}
-
-void initJoint(int id){
-  pinMode(ACTUATOR_EN_PINS[id], OUTPUT);
-  pinMode(ACTUATOR_INA_PINS[id], OUTPUT);
-  pinMode(ACTUATOR_INB_PINS[id], OUTPUT);
-}
-
-int calculatePID(int id, int setpoint, float current){
-  float erro = setpoint - current;
-
-  float derro = 1000*(erro - lastError[id])/dt;
-  
-  accError[id]+= erro*dt/1000;
-
-  int u = Kp[id]*erro +Ki[id]*accError[id]+ Kd[id]*derro;
-  return u;
-}
-
-
-void setup() {
-
-  Wire.begin();
-  for (int i = 0; i < pot_size; i++){
-    initJoint(i);
-  }
-  Serial.begin(19200);
-
-
-}
-
-void loop() {
-  unsigned long now = millis();
-
-  // [
-  //   ((alfa, gama), (0, 1)),
-  //   ((beta, epsilon), (2, 3))
-  // ]
-
-
-  // Serial.println(potmsg.pot1);
-  // float yalfa = readJoint(1);
-  // int ualfa = calculatePID(1, 10, yalfa);
-
-  // float ygama = readJoint(0);
-  // int ugama = calculatePID(0, 5, ygama);
-
-
-  // writeActuator(0, ualfa + yalfa);
-  // writeActuator(1, ugama - ygama);
-
-
-
-
-  // float ybeta = readJoint(2);
-  // int ubeta = calculatePID(1, 10, ybeta);
-
-  // float yepsilon = readJoint(3);
-  // int uepsilon = calculatePID(0, 5, yepsilon);
-
-
-  // writeActuator(2, ubeta + ybeta);
-  // writeActuator(3, uepsilon - yepsilon);
-  // for (int i = 0 ; i < pot_size ; i++){
-  //   Serial.print(readJoint(i));
-  //   writeActuator(3, -4000);
-  //   Serial.print("\t");
-  // }
-  // Serial.println(" ");
-  readJoint();
-  delay(500);
-  }*/
-
-
 #include <Wire.h>
 #define SLAVE_ADDR 0x08  // Endereço I2C do Slave
 
@@ -135,9 +7,9 @@ const int pot_size = 8;
 
 
 //--------constantes Drivers-------- ****TEM QUE PEGAR TUDO DO DIAGRAMA DA ELÉTRICA!!!!!!!****
-const int ACTUATOR_EN_PINS[] =  {23,  5, 27,  4}; //vetor de PWM
-const int ACTUATOR_INA_PINS[] = {22, 19, 26, 15}; //vetor de pino de avanço
-const int ACTUATOR_INB_PINS[] = {21, 18, 25,  2}; //vetor de pino de recuo
+const int ACTUATOR_EN_PINS[] =     {34, 27, 33, 13, 1, 2, 19, 17}; //vetor de PWM
+const int ACTUATOR_IN_IMP_PINS[] = {39, 26, 32, 12, 22, 4, 21, 5}; //vetor de pino de avanço
+const int ACTUATOR_IN_PAR_PINS[] = {36, 25, 35, 14, 23, 16, 3, 18}; //vetor de pino de recuo
 
 //--------constantes PID--------
 const float Kp[] =  {10, 10, 10, 10, 10, 10, 10, 10};
@@ -152,8 +24,8 @@ int dt = 1000;                                  // tempo de amostragem em milise
 
 void initJoint(int id){
   pinMode(ACTUATOR_EN_PINS[id], OUTPUT);
-  pinMode(ACTUATOR_INA_PINS[id], OUTPUT);
-  pinMode(ACTUATOR_INB_PINS[id], OUTPUT);
+  pinMode(ACTUATOR_IN_IMP_PINS[id], OUTPUT);
+  pinMode(ACTUATOR_IN_PAR_PINS[id], OUTPUT);
 }
 
 
@@ -174,15 +46,15 @@ void writeActuator (int id, int signal){
   // id: id da junta
   // signal: valor de -10000 10000 para escrever na junta
   int newSignal = constrain(signal, -10000, 10000);
-  newSignal = 255*newSignal/10000;
+  newSignal = 255*newSignal/10000; // olhar o 255
   if (signal >= 0){
-    digitalWrite(ACTUATOR_INA_PINS[id], HIGH);
-    digitalWrite(ACTUATOR_INB_PINS[id], LOW);
+    digitalWrite(ACTUATOR_IN_IMP_PINS[id], HIGH);
+    digitalWrite(ACTUATOR_IN_PAR_PINS[id], LOW);
     analogWrite(ACTUATOR_EN_PINS[id], newSignal);
   }
   if (signal < 0){
-    digitalWrite(ACTUATOR_INA_PINS[id], LOW);
-    digitalWrite(ACTUATOR_INB_PINS[id], HIGH);
+    digitalWrite(ACTUATOR_IN_IMP_PINS[id], LOW);
+    digitalWrite(ACTUATOR_IN_PAR_PINS[id], HIGH);
     analogWrite(ACTUATOR_EN_PINS[id], -newSignal);
   }
 }
@@ -221,8 +93,9 @@ void loop() {
 
 
   //--------Calculando Entrada do PWM--------
-  writeActuator(0, u_input[0]+u_input[1]);
-  writeActuator(1, u_input[0]-u_input[1]);
+  writeActuator(0, u_input[1]-u_input[0]); //Ang 
+  writeActuator(1, u_input[1]+u_input[0]);
+  
   writeActuator(2, u_input[2]+u_input[3]);
   writeActuator(3, u_input[2]-u_input[3]);  
   writeActuator(4, u_input[4]+u_input[5]);
