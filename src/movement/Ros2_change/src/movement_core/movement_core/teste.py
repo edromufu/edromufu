@@ -4,6 +4,10 @@ from sensor_msgs.msg import JointState
 import sys
 import numpy as np
 
+#! Mexer no currentfoot
+#! Desenhar variáveis
+#! Jogar o código para o pacote certo
+
 class IKPublisher(Node):
     def __init__(self):
         super().__init__('ik_publisher')
@@ -12,6 +16,7 @@ class IKPublisher(Node):
 
         self.current_joint_states = JointState()
         self.current_joint_states.name = ["R_SHLD", "L_SHLD", "RHIP_UX", "RHIP_UY1", "RUKNEE_1", "RLKNEE_1", "RANKLE_UY1", "RHIP_UY2", "RUKNEE_2", "RLKNEE_2", "RANKLE_UY2", "RHIP_UY3", "RUKNEE_3", "RLKNEE_3", "RANKLE_UY3", "RANKLE_UX", "LHIP_UX", "LHIP_UY1", "LUKNEE_1", "LLKNEE_1", "LANKLE_UY1", "LHIP_UY2", "LUKNEE_2", "LLKNEE_2", "LANKLE_UY2", "LHIP_UY3", "LUKNEE_3", "LLKNEE_3", "LANKLE_UY3", "LANKLE_UY"]
+        #todo: robo real tem R/L HIPUX, L/R U/L KNEE3, L/R ANKLEUX
         self.current_joint_states.position = [0.0, 0.0, 0.0]  # Posições iniciais das juntas
         self.ik_active = False
 
@@ -24,8 +29,9 @@ class IKPublisher(Node):
             self.publisher_.publish(self.current_joint_states)
 
     def process_input(self, input_vector):
-        # Chame sua função IKAnalitica aqui
+        
         if self.current_foot != -1 and self.current_foot != -2: self.current_foot=-1
+        
         self.current_joint_states.position = self.IKAnalitica(input_vector,self.current_foot)
         self.ik_active = True
 
@@ -36,6 +42,8 @@ class IKPublisher(Node):
         c = 0.11825
         d = 0.085
         e = 0.040
+
+
 
         #! Pegar valores do json
         com2hipUX = 0 # Distância do Hip UX até o COM em z
@@ -61,10 +69,14 @@ class IKPublisher(Node):
         y = newFootRelPosition[1]
         z = newFootRelPosition[2]
 
-        # Eixo Y cresce para a esquerda da robô
+        # Eixo Y cresce para a esquerda da robô #! Conferir lógica
         if currentFoot==-1: # Pé direito
+            R = 1
+            L = 0
             y=y+yCOM # Soma a distância do meio da perna direita (valor negativo de y) até o COM
         elif currentFoot==-2:    # Pé esquerdo
+            R = 0
+            L = 1
             y=y-yCOM # Subtrai a distância do meio da perna esquerda (valor positivo de y) até o COM
         else:
             y=0
@@ -93,20 +105,20 @@ class IKPublisher(Node):
         z2Hip2AnkleUX = np.sqrt(zHip2AnkleUX**2+y**2)
         zHip2AnkleUY = z2Hip2AnkleUX + hipUX2hipUY + ankleUY2ankleUX
         H = np.sqrt((zHip2AnkleUY-e)**2+x**2)
-        cos=-(b**2+c**2-H**2)/2*b*c
+        cos=-(b**2+c**2-H**2)/(2*b*c)
 
         if cos>1: cos=1 
         elif cos<-1: cos=-1
-
         theta = np.arccos(cos)
 
         ro = np.arcsin(c*np.sin(theta)/H)
         phi = np.arcsin(b*np.sin(theta)/H)
 
         # Ângulos da robo, iguais a 0 quando perna reta
-        alfa = ro + np.arctan2(x,zHip2AnkleUY - e)           #angulo do joelho superior
-        beta = phi + np.arctan2(zHip2AnkleUY-e,x)-np.pi*0.5   #angulo do joelho inferior
-
+        alfa = ro + np.arctan2(x,zHip2AnkleUY - e)+np.pi*0.5         #angulo do joelho superior
+        beta = phi + np.arctan2(zHip2AnkleUY-e,x)   #angulo do joelho inferior
+        
+        #! Conferir max e min e se a conta está certa para alfa e beta
         if alfa > max_alfa: alfa = max_alfa
         elif alfa < min_alfa: alfa = min_alfa
 
@@ -122,10 +134,14 @@ class IKPublisher(Node):
         if epsilon > max_epsilon: epsilon = max_epsilon
         elif epsilon < min_epsilon: epsilon = min_epsilon
 
-
         pot = [gama,alfa-np.pi/2,beta-np.pi/2,epsilon]
-        
-        return [gama,alfa,beta,epsilon,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+
+        alfa = alfa-np.pi/2
+        beta = beta-np.pi/2
+        #!epsilon sumiu de L
+        pot = [0.0, 0.0, R*gama , R*alfa, R*alfa, R*alfa, R*-beta, R*alfa, R*alfa, R*-beta, R*-beta, R*alfa, R*alfa, R*-beta, R*-beta, R*epsilon, L*gama, L*alfa, L*alfa, L*-beta, L*-beta, L*alfa, L*alfa, L*-beta, L*-beta, L*alfa, L*alfa, L*-beta, L*-beta, L*-beta]
+
+        return pot
 
 def main(args=None):
     rclpy.init(args=args)
@@ -136,9 +152,12 @@ def main(args=None):
         try:
             input_vector = list(map(float, input_str.strip('[]').split(',')))
             ik_publisher.process_input(input_vector)
-        except:
-            print("Entrada inválida! Por favor, digite no formato [x, y, z]")
-
+            
+            #Troca automática de pés
+            if ik_publisher.current_foot == -1: ik_publisher.current_foot = -2
+            elif ik_publisher.current_foot == -2: ik_publisher.current_foot = -1
+        except Exception as e:
+            print(f"Entrada inválida: {e}! Por favor, digite no formato [x, y, z]")
         rclpy.spin_once(ik_publisher, timeout_sec=0.1)
 
     ik_publisher.destroy_node()
