@@ -34,7 +34,7 @@ void setup() {
   WiFi.mode(WIFI_STA);
   if (esp_now_init() != ESP_OK) return;
 
-  uint8_t broadcastAddress[] = {"To sem os esps"};//Coloca o endereço MAC do esp com o ROS
+  uint8_t broadcastAddress[] = {0xD0,0xEF,0x76,0x34,0x78,0xAC};//Coloca o endereço MAC do esp com o ROS
   memcpy(peerInfo.peer_addr, broadcastAddress, 6);
   peerInfo.channel = 0;
   peerInfo.encrypt = false;
@@ -55,7 +55,7 @@ void loop() {
   if (result != ESP_OK) {
     Serial.println("Error sending data via ESP-NOW");
   }
-
+  delay(100);
 
 //Talvez adiciona delay caso esteja dando algum tipo de gargalo
 }

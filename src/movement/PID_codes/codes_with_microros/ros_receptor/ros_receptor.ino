@@ -71,12 +71,13 @@ void timer_callback(rcl_timer_t * timer, int64_t last_call_time) {
 // RECEBE OS DADOS AQUI
 void OnDataRecv(const uint8_t *mac, const uint8_t *incomingData, int len) {
   memcpy(&myData, incomingData, sizeof(myData));
-  
   // Recebe os valores dos pot e coloca todos nesse vetor
+
   for (int i = 0; i < 8; i++) {
     potmsg.data.data[i] = myData.potValue[i];
   }
   potmsg.data.size = 8;
+
 }
 
 void writeActuator(int id, int signal) {
@@ -182,5 +183,4 @@ void loop() {
   }
 
   RCSOFTCHECK(rclc_executor_spin_some(&executor, RCL_MS_TO_NS(100)));
-  RCSOFTCHECK(rclc_executor_spin_some(&executor2, RCL_MS_TO_NS(100)));
 }
