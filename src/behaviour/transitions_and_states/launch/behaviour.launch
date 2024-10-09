@@ -4,11 +4,11 @@
 
     
     <!-- Máquina de Estados  -->
-	<node name="behaviour_node" pkg="transitions_and_states" type="state_machine_receiver.py" output="screen" >   </node> 
-    <node name="walking" pkg="states_routine" type="walking_routine.py" output="screen" >    </node>
-    <node name="kick" pkg="states_routine" type="kick_routine.py" output="screen" >    </node>
-    <node name="stand_still" pkg="states_routine" type="stand_still_routine.py" output="screen" >    </node>
-    <node name="getting_up" pkg="states_routine" type="getting_up_routine.py" output="screen" >    </node>
+	<node name="behaviour_node" pkg="transitions_and_states" exec="state_machine_receiver.py" output="screen" >   </node> 
+    <node name="walking" pkg="states_routine" exec="walking_routine.py" output="screen" >    </node>
+    <node name="kick" pkg="states_routine" exec="kick_routine.py" output="screen" >    </node>
+    <node name="stand_still" pkg="states_routine" exec="stand_still_routine.py" output="screen" >    </node>
+    <node name="getting_up" pkg="states_routine" exec="getting_up_routine.py" output="screen" >    </node>
 
 
 	<!-- Webots 
@@ -16,11 +16,11 @@
     -->
 
     <!--Interpretação-->
-	<node name="ros_packer" pkg="sensor_observer" type="ros_packer.py" output="screen" >   
+	<node name="ros_packer" pkg="sensor_observer" exec="ros_packer.py" output="screen" >   
     </node>
 
     <!--Leitura do IMU-->
-	<node name="imu_ros_arduino" pkg="imu_ros_arduino" type="imu_read.py" output="screen" if="$(eval arg('imu_connected'))">   
+	<node name="imu_ros_arduino" pkg="imu_ros_arduino" exec="imu_read.py" output="screen" if="$(eval arg('imu_connected'))">   
         <param name="port" value="$(eval arg('imu_port'))" />
     </node>
 

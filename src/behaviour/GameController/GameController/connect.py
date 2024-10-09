@@ -3,11 +3,9 @@
 
 from __future__ import unicode_literals, print_function
 
-
-
 import socket
 import time
-import logging
+import logging  # Import logging module
 import argparse
 import sys
 import rclpy
@@ -17,7 +15,9 @@ from construct import Container, ConstError
 from GameController.gamestate import GameState, ReturnData, GAME_CONTROLLER_RESPONSE_VERSION
 from modularized_bhv_msgs.msg import GameControllerMsg
 
-
+# Set up logging
+logger = logging.getLogger('GameController')
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s [%(levelname)s] %(message)s')
 
 DEFAULT_LISTENING_HOST = '0.0.0.0'
 GAME_CONTROLLER_LISTEN_PORT = 3838
@@ -47,12 +47,12 @@ class GameStateReceiver(object):
         rclpy.init(args=sys.argv)                   #(5)
         self.node = rclpy.create_node('GameController')
 
-        self.publisher = self.node.create_publisher(GameControllerMsg,"Game_Controller",1)
+        self.publisher = self.node.create_publisher(GameControllerMsg, "Game_Controller", 1)
         # The address listening on and the port for sending back the robots meta data
         self.addr = addr
         self.answer_port = answer_port
 
-        # The state and time we received last form the GC
+        # The state and time we received last from the GC
         self.state = None
         self.time = None
 
@@ -80,7 +80,7 @@ class GameStateReceiver(object):
                 logger.debug("Fehler beim Senden des KeepAlive: " + str(e))
 
     def receive_once(self):
-        """ Receives a package and interprets it.team
+        """ Receives a package and interprets it.
             Calls :func:`on_new_gamestate`
             Sends an answer to the GC """
         try:
@@ -125,7 +125,7 @@ class GameStateReceiver(object):
             destination = peer[0], GAME_CONTROLLER_ANSWER_PORT
             self.socket.sendto(ReturnData.build(data), destination)
         except Exception as e:
-            logger.log("Network Error: %s" % str(e))
+            logger.error("Network Error: %s" % str(e))
 
     def on_new_gamestate(self, state):
         """ Is called with the new game state after receiving a package
@@ -134,11 +134,11 @@ class GameStateReceiver(object):
         """
         if state.teams[1].team_number == self.team:
             own_team = state.teams[1]
-            player = own_team.players[self.player -1]
+            player = own_team.players[self.player - 1]
             rival_team = state.teams[0]
         elif state.teams[0].team_number == self.team:
             own_team = state.teams[0]
-            player = own_team.players[self.player -1]
+            player = own_team.players[self.player - 1]
             rival_team = state.teams[1]
         else:
             own_team = 0
@@ -174,6 +174,7 @@ class GameStateReceiver(object):
         msg.team_mates_with_penalty = penalties
         msg.team_mates_with_red_card = red_cards
         self.publisher.publish(msg)
+
     def get_last_state(self):
         return self.state, self.time
 
@@ -187,11 +188,11 @@ class GameStateReceiver(object):
         self.man_penalize = flag
 
 
-
 def main():
     args = parser.parse_args(sys.argv[1:])
     rec = GameStateReceiver(team=args.team, player=args.player, is_goalkeeper=args.goalkeeper)
     rec.receive_forever()
+
 
 if __name__ == '__main__':
     main()
