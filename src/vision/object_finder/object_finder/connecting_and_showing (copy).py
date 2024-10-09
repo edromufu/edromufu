@@ -7,9 +7,7 @@ import time
 import cv2
 #from cv_bridge import CvBridge
 import sys
-import numpy as np
 
-import pyrealsense2 as rs
 import object_finder.running_inference as ri    #Importa o arquivo python do diretorio de execução para não acontecer erros devido a execução em ROS2 ou em python3
 
 
@@ -45,7 +43,7 @@ class Visao(Node):
 
         #Declara a existência dos parametros e recebe os valores padrões ou definidos pelo ros        
         self.camera = self.declare_parameter('vision/camera',0).get_parameter_value().integer_value
-        self.output_img = self.declare_parameter('vision/img_output',True).get_parameter_value().bool_value
+        self.output_img = self.declare_parameter('vision/img_output',False).get_parameter_value().bool_value
         self.ajuste = self.declare_parameter('vision/ajuste',False).get_parameter_value().bool_value
         self.bright = self.declare_parameter('vision/brilho',4).get_parameter_value().integer_value
         self.feedback = self.declare_parameter('vision/feedback',False).get_parameter_value().bool_value
@@ -74,19 +72,9 @@ class Visao(Node):
         
     def get_webcam(self):
 
-        #!self.cap = cv2.VideoCapture(self.camera,cv2.CAP_ANY)
-        #!self.cap.set(cv2.CAP_PROP_BRIGHTNESS, (self.bright))
+        self.cap = cv2.VideoCapture(self.camera,cv2.CAP_ANY)
+        self.cap.set(cv2.CAP_PROP_BRIGHTNESS, (self.bright))
         
-        # Configuração do pipeline
-        pipeline = rs.pipeline()
-        config = rs.config()
-
-        config.enable_stream(rs.stream.depth, 848, 480, rs.format.z16, 30)
-        config.enable_stream(rs.stream.color, 640, 480, rs.format.bgr8, 30)
-
-        # Começa a captura
-        pipeline.start(config)
-
         if self.ajuste == True:
             print("Ajuste de Brilho '=' para aumentar e '-' para diminuir.\n")
             print("Para continuar a detecção. Aperte W.\n")
@@ -96,39 +84,23 @@ class Visao(Node):
         while rclpy.ok():
             start_time=time.time()
             
-            #Lê um frame da camera monocular e redimensiona a imagem
-            #ret, self.current_frame = self.cap.read()
-
-
-            # Wait for a coherent pair of frames: depth and color
-            frames = pipeline.wait_for_frames()
-            self.depth_frame = frames.get_depth_frame()
-            color_frame = frames.get_color_frame()
-            
-            if not self.depth_frame or not color_frame:
-                print("\nError capturing frame\n")
-                continue
-
-            # Convert images to numpy arrays
-            depth_image = np.asanyarray(self.depth_frame.get_data())
-            self.current_frame = np.asanyarray(color_frame.get_data())
+            #Lê um frame da camera e redimensiona a imagem
+            ret, self.current_frame = self.cap.read()
+            #self.current_frame = cv2.resize(self.current_frame, (640,480))
+            #self.current_frame = cv2.blur(self.current_frame, (10,10))
+            #self.current_frame = cv2.resize(self.current_frame, (self.parameters.cameraWidth,self.parameters.cameraHeight))
             
             #Se a leitura da camera falhar imprime uma mensagem e tenta de novo
-            #!if not ret:
-            #!    print("\nError capturing frame\n")
-            #!    self.get_webcam()
+            if not ret:
+                print("\nError capturing frame\n")
+                self.get_webcam()
             
             self.classes, self.scores, self.boxes,self.inference_frame = ri.detect_model(self.model,self.current_frame)
             #Para testar a eficiencia da inferencia utiliza-se a linha abaixo e compara a execução a inferencia
             #self.classes, self.scores, self.boxes, self.fps,self.inference_frame = 1,1,1,1,self.current_frame
             
             if self.output_img:
-                # Apply colormap on depth image (image must be converted to 8-bit per pixel first)
-                depth_colormap = cv2.applyColorMap(cv2.convertScaleAbs(depth_image, alpha=0.03), cv2.COLORMAP_JET)
-
                 cv2.imshow("Current Frame", self.inference_frame)
-                cv2.imshow("Current Depth Frame", depth_colormap)
-
             
             #Calculo do fps de cada loop (envolve tanto o tempo da inferencia quanto o da camera)
             finish_time=time.time()
@@ -140,8 +112,7 @@ class Visao(Node):
 
             #Ao apertar a tecla 'q' libera a camera, destroi janelas do opencv abertas e desliga o nó
             if cv2.waitKey(1) == ord("q") :
-                #!self.cap.release()
-                pipeline.stop()
+                self.cap.release()
                 cv2.destroyAllWindows()
                 self.get_logger().warn('Tecla "q" pressionada. Encerrando.')
                 rclpy.shutdown()
@@ -172,10 +143,6 @@ class Visao(Node):
                 if self.classes[i]== 0: #0 é o indice da bola
                     ball = Ball()
                     [ball.found, ball.x, ball.y, ball.roi_width, ball.roi_height] = results
-
-                    depth_value = self.depth_frame.get_distance(ball.x, ball.y)
-                    print(depth_value)
-
                     objects_msg.ball = ball
 
             else:

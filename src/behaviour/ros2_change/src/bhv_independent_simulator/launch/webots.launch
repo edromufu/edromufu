@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<launch>
-  <arg name="world" default="" description="Path to the world to load"/>
-  <arg name="mode" default="realtime," description="Startup mode"/>
-  <arg name="no-gui" default="false," description="Start Webots with minimal GUI"/>
-  <node name="webots" pkg="webots_natasha" exec="webots_launcher.py" args="--world=$(arg world) --mode=$(arg mode) --no-gui=$(arg no-gui)" required="true"/>
-</launch>

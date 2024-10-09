@@ -18,14 +18,14 @@ def set_model_input():
     #Forçando o path dos arquivos e passando o nome do modelo pré-treinado para uma variável
     robocup_folder = os.path.join(os.path.expanduser('~'), "edromufu/src/vision/robocup_cnn_files")
     
-    net = os.path.join(robocup_folder, "yolov8n-vision.pt")    #Modelo padrão
-    #net = os.path.join(robocup_folder, "yolov8n-vision_openvino_model")    #Modelo convertido para openvino
+    #net = os.path.join(robocup_folder, "yolov8n-vision.pt")    #Modelo padrão
+    net = os.path.join(robocup_folder, "yolov8n-vision_openvino_model")    #Modelo convertido para openvino
 
     #Recebe o modelo no YOLO 
-    model = YOLO(net)
+    #!model = YOLO(net)
     
     #Converte o modelo para openvino com tamanho de imagem definido, caso já não tenho sido convertido 
-    model.export(format="openvino",imgsz=size) 
+    #!model.export(format="openvino",imgsz=size) 
     model = YOLO(os.path.join(robocup_folder, "yolov8n-vision_openvino_model"))
 
     

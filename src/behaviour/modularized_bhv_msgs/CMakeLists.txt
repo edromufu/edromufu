@@ -1,68 +1,39 @@
-################################################################################
-# CMake
-################################################################################
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.8)
 project(modularized_bhv_msgs)
 
-################################################################################
-# Packages
-################################################################################
-find_package(catkin REQUIRED COMPONENTS
-  message_generation
+if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  add_compile_options(-Wall -Wextra -Wpedantic)
+endif()
+find_package(rosidl_default_generators REQUIRED)
+find_package(std_msgs REQUIRED)
+# find dependencies
+find_package(ament_cmake REQUIRED
+  message_generation  
   std_msgs 
   geometry_msgs
   dynamic_reconfigure
 )  
+# uncomment the following section in order to fill in
+# further dependencies manually.
+# find_package(<dependency> REQUIRED)
 
-################################################################################
-# Declare ROS messages, services and actions
-################################################################################
-# Generate dynamic parameters
-generate_dynamic_reconfigure_options()
+if(BUILD_TESTING)
+  find_package(ament_lint_auto REQUIRED)
+  # the following line skips the linter which checks for copyrights
+  # comment the line when a copyright and license is added to all source files
+  set(ament_cmake_copyright_FOUND TRUE)
+  # the following line skips cpplint (only works in a git repo)
+  # comment the line when this package is in a git repo and when
+  # a copyright and license is added to all source files
+  set(ament_cmake_cpplint_FOUND TRUE)
+  ament_lint_auto_find_test_dependencies()
+endif()
 
-
-add_message_files(
-  FILES
-  stateMachineMsg.msg
-  currentStateMsg.msg
+rosidl_generate_interfaces(${PROJECT_NAME}
+  "msg/CurrentStateMsg.msg"
+  "msg/GameControllerMsg.msg"
+  "msg/StateMachineMsg.msg"
+  "srv/MoveRequest.srv"
+  DEPENDENCIES std_msgs
 )
-
-add_service_files(
-  FILES
-  moveRequest.srv
-)
-
-generate_messages(
-  DEPENDENCIES
-  std_msgs
-  geometry_msgs
-)
-
-################################################################################
-# Declare ROS dynamic reconfigure parameters
-################################################################################
-
-################################################################################
-# Catkin specific configuration
-################################################################################
-catkin_package(
-  #INCLUDE_DIRS include
-  CATKIN_DEPENDS message_generation std_msgs geometry_msgs dynamic_reconfigure
-)
-
-################################################################################
-# Build
-################################################################################
-include_directories(
-  include
-  ${catkin_INCLUDE_DIRS}
-)
-
-################################################################################
-# Install
-################################################################################
-
-
-################################################################################
-# Test
-################################################################################
+ament_package()
