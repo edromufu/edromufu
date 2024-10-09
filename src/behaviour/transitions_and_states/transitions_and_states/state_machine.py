@@ -79,12 +79,9 @@ class StateMachine():
 
         # Subscriber do GameController
         self.game_controller_sub = self.node.create_subscription(GameControllerMsg, 'Game_Controller', self.game_controller_callback, 10)
-        self.game_controller_status = None  # Status atual do GameController
+        self.game_controller_status = None 
 
     def game_controller_callback(self, msg):
-        """
-        Callback do GameController que atualiza o status da máquina de estados.
-        """
         self.game_controller_status = msg.game_state
         self.update_state()
 
