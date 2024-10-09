@@ -9,15 +9,23 @@
 #include <rclc/rclc.h>
 #include <rclc/executor.h>
 #include <potmessage/msg/potmsg.h>
+#include <potmessage/msg/imumsg.h>
+#include <potmessage/msg/buttonmsg.h>
 
 // MicroROS Variaveis
 rclc_executor_t executor;
+rclc_executor_t executor2;
 rclc_support_t support;
 rcl_allocator_t allocator;
+rcl_allocator_t allocator2;
 rcl_node_t node;
 rcl_timer_t timer;
 rcl_publisher_t publisher;
+rcl_subscription_t subscriber;
 potmessage__msg__Potmsg msg;
+potmessage__msg__Potmsg msg2;
+potmessage__msg__Imumsg msgImu;
+potmessage__msg__Buttonmsg msgBot;
 // ------------------
 
 esp_now_peer_info_t peerInfo;
@@ -155,11 +163,8 @@ void setup() {
   RCCHECK(rclc_node_init_default(&node, "micro_ros_pot_node", "", &support));
 
   // create publisher
-  RCCHECK(rclc_publisher_init_default(
-    &publisher,
-    &node,
-    ROSIDL_GET_MSG_TYPE_SUPPORT(potmessage ,msg, Potmsg),
-    "pot_topic"));
+  RCCHECK(rclc_publisher_init_default(&publisher,&node,ROSIDL_GET_MSG_TYPE_SUPPORT(potmessage ,msg, Potmsg),"pot_topic"));
+  RCCHECK(rclc_subscription_init_default(&subscriber,&node,ROSIDL_GET_MSG_TYPE_SUPPORT(potmessage, msg, Potmsg),"pot_sub"));
 
   // create timer,
   const unsigned int timer_timeout = 1000;
@@ -170,8 +175,10 @@ void setup() {
     timer_callback));
 
   // create executor
-  RCCHECK(rclc_executor_init(&executor, &support.context, 1, &allocator));
+  RCCHECK(rclc_executor_init(&executor, &support.context, 2, &allocator));
   RCCHECK(rclc_executor_add_timer(&executor, &timer));
+  RCCHECK(rclc_executor_add_subscription(&executor, &subscriber, &msg2, &subscription_callback, ON_NEW_DATA));
+
 }
 
 void loop() {
@@ -201,4 +208,9 @@ void loop() {
 
 void onDataReceived(const uint8_t * mac, const uint8_t* incomingData, int len) {
   memcpy(&myData, incomingData, sizeof(struct_message));
+}
+
+void subscription_callback(const void * msgin)
+{  
+  const potmessage__msg__Potmsg * msg2 = (const potmessage__msg__Potmsg *)msgin;
 }

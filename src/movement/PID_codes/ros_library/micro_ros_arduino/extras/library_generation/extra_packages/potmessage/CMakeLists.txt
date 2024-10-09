@@ -26,5 +26,7 @@ find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Potmsg.msg"
+  "msg/Buttonmsg.msg"
+  "msg/Imumsg.msg"
  )
 ament_package()

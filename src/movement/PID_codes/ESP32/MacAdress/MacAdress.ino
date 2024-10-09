@@ -14,7 +14,8 @@ void readMacAddress(){
     Serial.printf("%02x:%02x:%02x:%02x:%02x:%02x\n",
                   baseMac[0], baseMac[1], baseMac[2],
                   baseMac[3], baseMac[4], baseMac[5]);
-  } else {
+  }
+  else {
     Serial.println("Failed to read MAC address");
   }
 }
