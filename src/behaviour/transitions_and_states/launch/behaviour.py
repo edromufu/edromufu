@@ -23,7 +23,7 @@ def generate_launch_description():
         # Argumento para o estado inicial do GameController
         DeclareLaunchArgument(
             'game_controller_state',
-            default_value='3',  # Estado "Playing" por padrão
+            default_value='null',  # Estado "Playing" por padrão
             description='Estado inicial do GameController (0: Inicial, 1: Ready, 2: Set, 3: Playing, 4: Finished)'
         ),
 

@@ -1,5 +1,5 @@
 from setuptools import find_packages, setup
-
+#modificar o pacote para o IMU
 package_name = 'imu_ros_arduino'
 
 setup(
