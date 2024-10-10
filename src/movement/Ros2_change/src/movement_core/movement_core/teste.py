@@ -141,6 +141,7 @@ class IKPublisher(Node):
         alfa = alfa-np.pi/2
         beta = beta-np.pi/2
         #!epsilon sumiu de L
+        #self.current_joint_states.name = ["R_SHLD", "L_SHLD", "RHIP_UX", "RHIP_UY1", "RUKNEE_1", "RLKNEE_1", "RANKLE_UY1", "RHIP_UY2", "RUKNEE_2", "RLKNEE_2", "RANKLE_UY2", "RHIP_UY3", "RUKNEE_3", #"RLKNEE_3", "RANKLE_UY3", "RANKLE_UX", "LHIP_UX", "LHIP_UY1", "LUKNEE_1", "LLKNEE_1", "LANKLE_UY1", "LHIP_UY2", "LUKNEE_2", "LLKNEE_2", "LANKLE_UY2", "LHIP_UY3", "LUKNEE_3", "LLKNEE_3", "LANKLE_UY3", #"LANKLE_UX"]
         pot = [0.0, 0.0, R*gama , R*alfa, R*alfa, R*alfa, R*-beta, R*alfa, R*alfa, R*-beta, R*-beta, R*alfa, R*alfa, R*-beta, R*-beta, R*epsilon, L*gama, L*alfa, L*alfa, L*-beta, L*-beta, L*alfa, L*alfa, L*-beta, L*-beta, L*alfa, L*alfa, L*-beta, L*-beta, L*epsilon]
 
         return pot
