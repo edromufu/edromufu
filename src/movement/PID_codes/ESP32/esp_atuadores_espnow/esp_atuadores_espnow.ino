@@ -31,7 +31,11 @@ typedef struct struct_message {
 } struct_message;
 struct_message myData;
 
-void onDataReceived(const uint8_t * mac, const uint8_t* incomingData, int len);
+void OnDataRecv(const uint8_t * mac, const uint8_t *incomingData, int len) {
+  memcpy(&myData, incomingData, sizeof(myData));
+  Serial.print("Value ");
+  Serial.println(myData.potValue[0]);
+}
 //======================================
 
 //============== MicroROS ==============
@@ -122,6 +126,11 @@ int calculatePID(int id, int setpoint, float current){
 }
 // =====================================
 
+float pot2Degrees(int value){
+  float factor = 270/4096; //Alter o fator aqui
+  return value*factor;
+}
+
 void setup() {
   Serial.begin(115200);
   WiFi.mode(WIFI_STA);
@@ -132,7 +141,7 @@ void setup() {
 
   if (esp_now_init() != ESP_OK) return;
 
-  esp_now_register_recv_cb(onDataReceived);
+  esp_now_register_recv_cb(esp_now_recv_cb_t(OnDataRecv));
 
   uint8_t broadcastAddress[] = {0x70, 0x04, 0x1D, 0x91, 0x62, 0xF8}; 
   memcpy(peerInfo.peer_addr, broadcastAddress, 6);
@@ -176,22 +185,23 @@ void setup() {
 
 void loop() {
   unsigned long now = millis();
-
+/*
   Serial.print("Potentiometer Value: ");
   for (int i = 0; i < numPorts; i++){
       potPrint[i] = myData.potValue[i];
     Serial.print(String(potPrint[i]) + " ");
     }
+  
   Serial.println("Receiver");
-
-  msg.pot1 = myData.potValue[0];
-  msg.pot2 = myData.potValue[1];
-  msg.pot3 = myData.potValue[2];
-  msg.pot4 = myData.potValue[3];
-  msg.pot5 = myData.potValue[4];
-  msg.pot6 = myData.potValue[5];
-  msg.pot7 = myData.potValue[6];
-  msg.pot8 = myData.potValue[7];
+*/
+  msg.pot1 = pot2Degrees(myData.potValue[0]);
+  msg.pot2 = pot2Degrees(myData.potValue[1]);
+  msg.pot3 = pot2Degrees(myData.potValue[2]);
+  msg.pot4 = pot2Degrees(myData.potValue[3]);
+  msg.pot5 = pot2Degrees(myData.potValue[4]);
+  msg.pot6 = pot2Degrees(myData.potValue[5]);
+  msg.pot7 = pot2Degrees(myData.potValue[6]);
+  msg.pot8 = pot2Degrees(myData.potValue[7]);
 
   RCSOFTCHECK(rclc_executor_spin_some(&executor, RCL_MS_TO_NS(100)));
   while (millis()-now<dt){
@@ -199,6 +209,3 @@ void loop() {
   }
 }
 
-void onDataReceived(const uint8_t * mac, const uint8_t* incomingData, int len) {
-  memcpy(&myData, incomingData, sizeof(struct_message));
-}

@@ -33,7 +33,7 @@ void setup() {
 
   if (esp_now_init() != ESP_OK) return;
   
-  uint8_t broadcastAddress[] = {0xB0, 0xA7, 0x32, 0x17, 0x6E, 0xA0};
+  uint8_t broadcastAddress[] = {0x08, 0xD1, 0xF9, 0xE7, 0x2C, 0x3C};
   memcpy(peerInfo.peer_addr, broadcastAddress, 6);
   peerInfo.channel = 0;
   peerInfo.encrypt = false;
@@ -45,6 +45,7 @@ void setup() {
 }
 uint16_t j = 0;
 void loop() {
+  delay(300);
   for(int canal = 0; canal < 8; canal++){
     selecionarCanal(canal);
     int valor = analogRead(pinSaidaMux);
@@ -61,7 +62,7 @@ void loop() {
 
 
   if (result != ESP_OK) {
-    //Serial.println("Error sending data via ESP-NOW");
+    Serial.println("Error sending data via ESP-NOW");
   }
 
 }
