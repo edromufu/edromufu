@@ -7,7 +7,6 @@ actionlib_msgs/GoalStatus.msg
 actionlib_msgs/GoalStatusArray.msg
 builtin_interfaces/Duration.msg
 builtin_interfaces/Time.msg
-buttonmessage/Buttonmsg.msg
 composition_interfaces/ListNodes.srv
 composition_interfaces/LoadNode.srv
 composition_interfaces/UnloadNode.srv
@@ -98,7 +97,6 @@ geometry_msgs/Vector3Stamped.msg
 geometry_msgs/VelocityStamped.msg
 geometry_msgs/Wrench.msg
 geometry_msgs/WrenchStamped.msg
-imumessage/Imumsg.msg
 lifecycle_msgs/ChangeState.srv
 lifecycle_msgs/GetAvailableStates.srv
 lifecycle_msgs/GetAvailableTransitions.srv
@@ -116,6 +114,10 @@ nav_msgs/OccupancyGrid.msg
 nav_msgs/Odometry.msg
 nav_msgs/Path.msg
 nav_msgs/SetMap.srv
+potmessage/Button_msg.msg
+potmessage/Buttonmsg.msg
+potmessage/Imu_msg.msg
+potmessage/Imumsg.msg
 potmessage/Potmsg.msg
 rcl_interfaces/DescribeParameters.srv
 rcl_interfaces/FloatingPointRange.msg
