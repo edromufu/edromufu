@@ -15,7 +15,7 @@ class IKPublisher(Node):
         self.timer_ = self.create_timer(0.1, self.publish_solution)
 
         self.current_joint_states = JointState()
-        self.current_joint_states.name = ["R_SHLD", "L_SHLD", "RHIP_UX", "RHIP_UY1", "RUKNEE_1", "RLKNEE_1", "RANKLE_UY1", "RHIP_UY2", "RUKNEE_2", "RLKNEE_2", "RANKLE_UY2", "RHIP_UY3", "RUKNEE_3", "RLKNEE_3", "RANKLE_UY3", "RANKLE_UX", "LHIP_UX", "LHIP_UY1", "LUKNEE_1", "LLKNEE_1", "LANKLE_UY1", "LHIP_UY2", "LUKNEE_2", "LLKNEE_2", "LANKLE_UY2", "LHIP_UY3", "LUKNEE_3", "LLKNEE_3", "LANKLE_UY3", "LANKLE_UY"]
+        self.current_joint_states.name = ["R_SHLD", "L_SHLD", "RHIP_UX", "RHIP_UY1", "RUKNEE_1", "RLKNEE_1", "RANKLE_UY1", "RHIP_UY2", "RUKNEE_2", "RLKNEE_2", "RANKLE_UY2", "RHIP_UY3", "RUKNEE_3", "RLKNEE_3", "RANKLE_UY3", "RANKLE_UX", "LHIP_UX", "LHIP_UY1", "LUKNEE_1", "LLKNEE_1", "LANKLE_UY1", "LHIP_UY2", "LUKNEE_2", "LLKNEE_2", "LANKLE_UY2", "LHIP_UY3", "LUKNEE_3", "LLKNEE_3", "LANKLE_UY3", "LANKLE_UX"]
         #todo: robo real tem R/L HIPUX, L/R U/L KNEE3, L/R ANKLEUX
         self.current_joint_states.position = [0.0, 0.0, 0.0]  # Posições iniciais das juntas
         self.ik_active = False
@@ -73,10 +73,12 @@ class IKPublisher(Node):
         if currentFoot==-1: # Pé direito
             R = 1
             L = 0
+            print("Pé direito")
             y=y+yCOM # Soma a distância do meio da perna direita (valor negativo de y) até o COM
         elif currentFoot==-2:    # Pé esquerdo
             R = 0
             L = 1
+            print("Pé esquerdo")
             y=y-yCOM # Subtrai a distância do meio da perna esquerda (valor positivo de y) até o COM
         else:
             y=0
@@ -139,7 +141,7 @@ class IKPublisher(Node):
         alfa = alfa-np.pi/2
         beta = beta-np.pi/2
         #!epsilon sumiu de L
-        pot = [0.0, 0.0, R*gama , R*alfa, R*alfa, R*alfa, R*-beta, R*alfa, R*alfa, R*-beta, R*-beta, R*alfa, R*alfa, R*-beta, R*-beta, R*epsilon, L*gama, L*alfa, L*alfa, L*-beta, L*-beta, L*alfa, L*alfa, L*-beta, L*-beta, L*alfa, L*alfa, L*-beta, L*-beta, L*-beta]
+        pot = [0.0, 0.0, R*gama , R*alfa, R*alfa, R*alfa, R*-beta, R*alfa, R*alfa, R*-beta, R*-beta, R*alfa, R*alfa, R*-beta, R*-beta, R*epsilon, L*gama, L*alfa, L*alfa, L*-beta, L*-beta, L*alfa, L*alfa, L*-beta, L*-beta, L*alfa, L*alfa, L*-beta, L*-beta, L*epsilon]
 
         return pot
 
