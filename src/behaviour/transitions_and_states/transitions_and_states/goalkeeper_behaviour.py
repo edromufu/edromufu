@@ -75,6 +75,7 @@ class goalkeeper_brain:
 
                 elif self.found and self.ballClose:
                     # >0 Direita e <0 esquerda
+                    #Passo verifica roda page vê visão
                     if self.HorRotation < self.parameters.lookingLeftRad / 2:
                         self.pageCall('natasha_left_defense')
                         self.fall()

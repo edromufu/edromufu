@@ -112,8 +112,10 @@ class StateMachine():
             print("Estado Inicial do GameController, aguardando...\n-------------------\n")
         elif self.game_controller_status == GAME_STATE_READY:
             print("GameController está em READY, se prepare...\n-------------------\n")
+                #PAGE First pose
         elif self.game_controller_status == GAME_STATE_SET:
             print("GameController está em SET, aguarde início do jogo...\n-------------------\n")
+                #Page oaisndi
         elif self.game_controller_status == GAME_STATE_FINISHED:
             print("GameController está em FINISHED, jogo acabou.\n-------------------\n")
         else:
