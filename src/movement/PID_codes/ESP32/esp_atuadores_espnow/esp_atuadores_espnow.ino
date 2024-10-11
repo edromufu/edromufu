@@ -135,7 +135,8 @@ int calculatePID(int id, int setpoint, float current){
 // =====================================
 
 float pot2Degrees(int value){
-  float factor = 270/4096; //Alter o fator aqui
+  //float factor = 90/1384; //0.06502
+  float factor = 270/4096; //0.06491
   return value*factor;
 }
 
