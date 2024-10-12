@@ -8,25 +8,27 @@
 #include <rcl/error_handling.h>
 #include <rclc/rclc.h>
 #include <rclc/executor.h>
-#include <potmessage/msg/potmsg.h>
-#include <potmessage/msg/imumsg.h>
-#include <potmessage/msg/buttonmsg.h>
+//#include <potmessage/msg/imumsg.h>
+//#include <potmessage/msg/buttonmsg.h>
+#include <std_msgs/msg/float32_multi_array.h>
 
 // MicroROS Variaveis
 rclc_executor_t executor;
-rclc_executor_t executor2;
 rclc_support_t support;
 rcl_allocator_t allocator;
-rcl_allocator_t allocator2;
 rcl_node_t node;
 rcl_timer_t timer;
 rcl_publisher_t publisher;
+rcl_publisher_t publisher2;
 rcl_subscription_t subscriber;
-potmessage__msg__Potmsg msg;
-potmessage__msg__Potmsg msg2;
-potmessage__msg__Imumsg msgImu;
-potmessage__msg__Buttonmsg msgBot;
-// ------------------
+
+// !!! Não precisamos mais das mensagens customizadas !!!
+std_msgs__msg__Float32MultiArray feedbackMsg;
+std_msgs__msg__Float32MultiArray msg;
+
+//potmessage__msg__Imumsg msgImu;
+//potmessage__msg__Buttonmsg msgBot;
+// ------------------------------------
 
 esp_now_peer_info_t peerInfo;
 
@@ -41,8 +43,6 @@ struct_message myData;
 
 void OnDataRecv(const uint8_t * mac, const uint8_t *incomingData, int len) {
   memcpy(&myData, incomingData, sizeof(myData));
-  Serial.print("Value ");
-  Serial.println(myData.potValue[0]);
 }
 //======================================
 
@@ -64,6 +64,7 @@ void timer_callback(rcl_timer_t* timer, int64_t last_call_time) {
   RCLC_UNUSED(last_call_time);
   if (timer != NULL) {
     RCSOFTCHECK(rcl_publish(&publisher, &msg, NULL));
+
   }
 }
 //======================================
@@ -134,11 +135,14 @@ int calculatePID(int id, int setpoint, float current){
 }
 // =====================================
 
-float pot2Degrees(int value){
+float pot2Degrees(float value){
   //float factor = 90/1384; //0.06502
-  float factor = 270/4096; //0.06491
+  float factor = 0.06491; //0.06491
   return value*factor;
 }
+
+float data[8];
+float feedbackData[8];
 
 void setup() {
   Serial.begin(115200);
@@ -173,8 +177,9 @@ void setup() {
   RCCHECK(rclc_node_init_default(&node, "micro_ros_pot_node", "", &support));
 
   // create publisher
-  RCCHECK(rclc_publisher_init_default(&publisher,&node,ROSIDL_GET_MSG_TYPE_SUPPORT(potmessage ,msg, Potmsg),"pot_topic"));
-  RCCHECK(rclc_subscription_init_default(&subscriber,&node,ROSIDL_GET_MSG_TYPE_SUPPORT(potmessage, msg, Potmsg),"pot_sub"));
+  RCCHECK(rclc_publisher_init_default(&publisher,&node,ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs ,msg, Float32MultiArray),"pot_topic"));
+  RCCHECK(rclc_publisher_init_default(&publisher2,&node,ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Float32MultiArray),"pot_feedback_topic"));
+  RCCHECK(rclc_subscription_init_default(&subscriber,&node,ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Float32MultiArray),"pot_py_topic"));
 
   // create timer,
   const unsigned int timer_timeout = 1000;
@@ -184,11 +189,17 @@ void setup() {
     RCL_MS_TO_NS(timer_timeout),
     timer_callback));
 
-  // create executor
-  RCCHECK(rclc_executor_init(&executor, &support.context, 2, &allocator));
-  RCCHECK(rclc_executor_add_timer(&executor, &timer));
-  RCCHECK(rclc_executor_add_subscription(&executor, &subscriber, &msg2, &subscription_callback, ON_NEW_DATA));
 
+  // create executor
+  RCCHECK(rclc_executor_init(&executor, &support.context, 3, &allocator));
+  RCCHECK(rclc_executor_add_timer(&executor, &timer));
+  RCCHECK(rclc_executor_add_subscription(&executor, &subscriber, &feedbackMsg, &subscription_callback, ON_NEW_DATA));
+
+  msg.data.capacity = 8;  // Size of your array
+  msg.data.size = 8;
+  feedbackMsg.data.data = (float *) malloc(8 * sizeof(float));
+  feedbackMsg.data.size = 8;
+  feedbackMsg.data.capacity = 8;
 }
 
 void loop() {
@@ -202,14 +213,12 @@ void loop() {
   
   Serial.println("Receiver");
 */
-  msg.pot1 = pot2Degrees(myData.potValue[0]);
-  msg.pot2 = pot2Degrees(myData.potValue[1]);
-  msg.pot3 = pot2Degrees(myData.potValue[2]);
-  msg.pot4 = pot2Degrees(myData.potValue[3]);
-  msg.pot5 = pot2Degrees(myData.potValue[4]);
-  msg.pot6 = pot2Degrees(myData.potValue[5]);
-  msg.pot7 = pot2Degrees(myData.potValue[6]);
-  msg.pot8 = pot2Degrees(myData.potValue[7]);
+
+  for (size_t i = 0; i < 8; i++) {
+    data[i] = (float)pot2Degrees(myData.potValue[i]); 
+  }
+  
+  msg.data.data = data;
 
   RCSOFTCHECK(rclc_executor_spin_some(&executor, RCL_MS_TO_NS(100)));
   while (millis()-now<dt){
@@ -217,14 +226,16 @@ void loop() {
   }
 }
 
-<<<<<<< HEAD
-=======
-void onDataReceived(const uint8_t * mac, const uint8_t* incomingData, int len) {
-  memcpy(&myData, incomingData, sizeof(struct_message));
-}
-
 void subscription_callback(const void * msgin)
 {  
-  const potmessage__msg__Potmsg * msg2 = (const potmessage__msg__Potmsg *)msgin;
+  const std_msgs__msg__Float32MultiArray * feedback = (const std_msgs__msg__Float32MultiArray *)msgin;
+
+  for(int i = 0; i < 8; i++){
+    feedbackData[i] = pot2Degrees(feedback->data.data[i]);
+  }
+
+  feedbackMsg.data.data = feedbackData;
+
+  RCSOFTCHECK(rcl_publish(&publisher2, &feedbackMsg, NULL));
+
 }
->>>>>>> refs/remotes/origin/PID

@@ -57,7 +57,15 @@ void loop() {
     myData.potValue[canal] = valor;
   }
   Serial.println("   ");
-
+  // Para teste sem o Mux
+  /*for(int i = 0; i < 8;i++){
+    myData.potValue[i] = (i+1)*500;
+    Serial.print("Values: ");
+    Serial.print(myData.potValue[i]);
+    Serial.print("     ");
+  }
+  Serial.println("");*/
+  //---------------------
   esp_err_t result = esp_now_send(peerInfo.peer_addr, (uint8_t *)&myData, sizeof(myData));
 
 
