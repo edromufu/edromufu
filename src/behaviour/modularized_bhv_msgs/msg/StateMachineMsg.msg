@@ -1,0 +1,6 @@
+string ball_position
+bool ball_close
+bool ball_found
+string fall_state
+string hor_motor_out_of_center
+bool head_kick_check
