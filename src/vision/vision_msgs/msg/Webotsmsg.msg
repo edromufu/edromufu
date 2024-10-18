@@ -1,5 +1,10 @@
 bool searching
 uint8 fps
-vision_msgs/Ball ball
-vision_msgs/Leftgoalpost leftgoalpost
-vision_msgs/Rightgoalpost rightgoalpost
+vision_msgs/Objects ball
+vision_msgs/Objects leftgoal
+vision_msgs/Objects rightgoal
+vision_msgs/Objects robot
+vision_msgs/MultiObjects x_intersection
+vision_msgs/MultiObjects l_intersection
+vision_msgs/MultiObjects t_intersection
+vision_msgs/MultiObjects center

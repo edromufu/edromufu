@@ -17,11 +17,8 @@ find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Objects.msg"
-  "msg/Ball.msg"
   "msg/Goal.msg"
-  "msg/Robot.msg"
-  "msg/Leftgoalpost.msg"
-  "msg/Rightgoalpost.msg"
+  "msg/MultiObjects.msg"
   "msg/Webotsmsg.msg"
   DEPENDENCIES 
   sensor_msgs 

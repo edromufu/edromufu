@@ -18,8 +18,7 @@ sys.path.append(edrom_dir+'behaviour/transitions_and_states/src')
 #from behaviour_parameters import BehaviourParameters
 
 from sensor_msgs.msg import Image as ROS_Image
-from vision_msgs.msg import Ball
-from vision_msgs.msg import Webotsmsg
+from vision_msgs.msg import *
 
 sys.setrecursionlimit(100000)
 
@@ -44,11 +43,11 @@ class Visao(Node):
         #Capturar parametros (qual camera e se queremos output de imagem) do launch
 
         #Declara a existência dos parametros e recebe os valores padrões ou definidos pelo ros        
-        self.camera = self.declare_parameter('vision/camera',0).get_parameter_value().integer_value
-        self.output_img = self.declare_parameter('vision/img_output',True).get_parameter_value().bool_value
-        self.ajuste = self.declare_parameter('vision/ajuste',False).get_parameter_value().bool_value
-        self.bright = self.declare_parameter('vision/brilho',4).get_parameter_value().integer_value
-        self.feedback = self.declare_parameter('vision/feedback',False).get_parameter_value().bool_value
+        self.camera = self.declare_parameter('vision/camera',0).get_parameter_value().integer_value # Escolhe qual opção de camera usar, caso exista mais de uma conectada
+        self.output_img = self.declare_parameter('vision/img_output',True).get_parameter_value().bool_value # Escolhe se retorna a imagem na tela
+        self.ajuste = self.declare_parameter('vision/ajuste',False).get_parameter_value().bool_value # Ajuste manual de brilho
+        self.bright = self.declare_parameter('vision/brilho',4).get_parameter_value().integer_value # Definição do brilho de forma direta
+        self.feedback = self.declare_parameter('vision/feedback',False).get_parameter_value().bool_value # 
         
         #Retorna os valores para verificação
         print(f"\nCamera:{self.camera}\nOutput:{self.output_img}\nAjuste:{self.ajuste}\nBrilho:{self.bright}\n")
@@ -70,13 +69,8 @@ class Visao(Node):
 
         #SE FOR NO WEBOTS
         #self.connect_to_webots()
-        
-        
-    def get_webcam(self):
 
-        #!self.cap = cv2.VideoCapture(self.camera,cv2.CAP_ANY)
-        #!self.cap.set(cv2.CAP_PROP_BRIGHTNESS, (self.bright))
-        
+    def initialize_camera(self):
         # Configuração do pipeline
         pipeline = rs.pipeline()
         config = rs.config()
@@ -84,8 +78,20 @@ class Visao(Node):
         config.enable_stream(rs.stream.depth, 848, 480, rs.format.z16, 30)
         config.enable_stream(rs.stream.color, 640, 480, rs.format.bgr8, 30)
 
+        #config.enable_stream(rs.stream.accel)
+        #config.enable_stream(rs.stream.gyro)
+
         # Começa a captura
         pipeline.start(config)
+
+        return pipeline
+        
+    def get_webcam(self):
+
+        #!self.cap = cv2.VideoCapture(self.camera,cv2.CAP_ANY)
+        #!self.cap.set(cv2.CAP_PROP_BRIGHTNESS, (self.bright))
+        
+        pipeline = self.initialize_camera()
 
         if self.ajuste == True:
             print("Ajuste de Brilho '=' para aumentar e '-' para diminuir.\n")
@@ -103,6 +109,7 @@ class Visao(Node):
             # Wait for a coherent pair of frames: depth and color
             frames = pipeline.wait_for_frames()
             self.depth_frame = frames.get_depth_frame()
+            self.intrinsics = self.depth_frame.profile.as_video_stream_profile().intrinsics
             color_frame = frames.get_color_frame()
             
             if not self.depth_frame or not color_frame:
@@ -146,7 +153,14 @@ class Visao(Node):
                 self.get_logger().warn('Tecla "q" pressionada. Encerrando.')
                 rclpy.shutdown()
 
+    def pos_object_3d(self,x,y):
 
+        depth_value = self.depth_frame.get_distance(x, y) # retorna a distância em metros para o ponto específico (x, y) na imagem de profundidade.
+        print(depth_value)
+        # Converte para coordenadas 3D (utiliza a função rs.rs2_deproject_pixel_to_point)
+        point = rs.rs2_deproject_pixel_to_point(self.intrinsics, (x,y), depth_value) #  converte as coordenadas do pixel para coordenadas 3D, utilizando as informações de intrínsecos da câmera.
+        print('p',point)
+        return point
         
     def publish_results(self):
 
@@ -157,47 +171,159 @@ class Visao(Node):
         self.list_of_classes_in_current_frame = []
         self.dict_of_xs = dict()
 
+        ball_objects = []
+        robot_objects = []
+        right_goal_objects = []
+        left_goal_objects = []
+        x_intersection_objects = []
+        l_intersection_objects = []
+        t_intersection_objects = []
+        center_objects = []
+
         for i in range(len(self.boxes)):
-            
             [x, y, roi_width, roi_height] = self.boxes[i]
 
-            results = [True, int(x), int(y), int(roi_width), int(roi_height)]
+            results = [True, int(x), int(y), int(roi_width), int(roi_height), int(self.scores[i])]
 
             self.dict_of_xs[i] = {"classe": self.classes[i], "x": x}
-
 
             if self.classes[i] not in self.list_of_classes_in_current_frame:
                 self.list_of_classes_in_current_frame.append(self.classes[i])
 
-                if self.classes[i]== 0: #0 é o indice da bola
-                    ball = Ball()
-                    [ball.found, ball.x, ball.y, ball.roi_width, ball.roi_height] = results
+                if self.classes[i] == 0:
+                    ball_objects.append(results)
 
-                    depth_value = self.depth_frame.get_distance(ball.x, ball.y)
-                    print(depth_value)
+                elif self.classes[i] == 1:
+                    robot_objects.append(results)
 
-                    objects_msg.ball = ball
+                elif self.classes[i] == 2:
+                    right_goal_objects.append(results)
 
-            else:
-                self.maior_x = -1
-                self.menor_x = 500
-                for key in self.dict_of_xs.keys():
-                    if self.dict_of_xs[key]['x'] >= self.maior_x:
-                        self.maior_x = self.dict_of_xs[key]['x']
-                        self.pos_maior_x = key
+                elif self.classes[i] == 3:
+                    left_goal_objects.append(results)
 
-                    if self.dict_of_xs[key]['x'] < self.menor_x:
-                        self.menor_x = self.dict_of_xs[key]['x']
-                        self.pos_menor_x = key
+                elif self.classes[i] == 4:
+                    l_intersection_objects.append(results)
 
-                if self.dict_of_xs[self.pos_maior_x]['classe'] == 2:
-                    self.dict_of_xs[self.pos_menor_x]['classe'] = 1
+                elif self.classes[i] == 5:
+                    t_intersection_objects.append(results)
 
-                elif self.dict_of_xs[self.pos_maior_x]['classe'] == 1:
-                    self.dict_of_xs[self.pos_maior_x]['classe'] = 2
+                elif self.classes[i] == 6:
+                    x_intersection_objects.append(results)
 
-                
+                elif self.classes[i] == 3:
+                    center_objects.append(results)
+               
+
+        ball_objects.sort(key=lambda obj: obj[5])  # ordenar em relação ao nivel de confiança
+        robot_objects.sort(key=lambda obj: obj[5])  # ordenar em relação a posição x
+        right_goal_objects.sort(key=lambda obj: obj[1])  # ordenar em relação a posição x
+        left_goal_objects.sort(key=lambda obj: obj[1])  # ordenar em relação a posição x
+
+        #! int32[] x, y, roi_width, roi_height, float32[] x_position, y_position, z_position
+        if ball_objects:
+            highest_score_ball = ball_objects[-1]  # bola com maior nivel de confiança
+            ball = Objects()
+            [ball.found, ball.x, ball.y, ball.roi_width, ball.roi_height, _] = highest_score_ball
+
+            [ball.x_position, ball.y_position, ball.z_position] = self.pos_object_3d(ball.x,ball.y) 
+
+            objects_msg.ball = ball
+		#! Conferir o q fazer com essas mensagem
+        if robot_objects:
+            robot = Objects()
+            [robot.found, robot.x, robot.y, robot.roi_width, robot.roi_height, robot.score] = robot_objects[-1]
+
+            [robot.x_position, robot.y_position, robot.z_position] = self.pos_object_3d(robot.x,robot.y) 
+
+            objects_msg.robot = robot
+
+        if right_goal_objects:
+            rightmost_goal = right_goal_objects[-1]  # trave mais a direita
+            right_goal = Objects()
+            [right_goal.found, right_goal.x, right_goal.y, right_goal.roi_width, right_goal.roi_height,
+             right_goal.score] = rightmost_goal
+            
+            [right_goal.x_position, right_goal.y_position, right_goal.z_position] = self.pos_object_3d(right_goal.x,right_goal.y) 
+
+            objects_msg.right_goal = right_goal
+
+        if left_goal_objects:
+            leftmost_goal = left_goal_objects[0]  # trave mais a esquerda
+            left_goal = Objects()
+            [left_goal.found, left_goal.x, left_goal.y, left_goal.roi_width, left_goal.roi_height,
+             left_goal.score] = leftmost_goal
+            
+            [left_goal.x_position, left_goal.y_position, left_goal.z_position] = self.pos_object_3d(left_goal.x,left_goal.y) 
+
+            objects_msg.left_goal = left_goal
+		
+        #! Organizar vetores para enviar na msg
+        if x_intersection_objects:
+            
+            x_intersection = MultiObjects()
+            
+            #x, y, z, w = zip(lista)
+
+            [x_intersection.found, x_intersection.x, x_intersection.y, 
+             x_intersection.roi_width, x_intersection.roi_height] = x_intersection_objects
+            
+            [x_intersection.x_position, x_intersection.y_position, x_intersection.z_position] = self.pos_object_3d(x_intersection.x,x_intersection.y) 
+
+            objects_msg.x_intersection = x_intersection
+            
+            list(x), list(y), list(z), list(w)
+
+        #! Organizar vetores para enviar na msg
+        if l_intersection_objects:
+    
+            l_intersection = MultiObjects()
+            [l_intersection.found, l_intersection.x, l_intersection.y, 
+             l_intersection.roi_width, l_intersection.roi_height] = l_intersection_objects
+            
+            [l_intersection.x_position, l_intersection.y_position, l_intersection.z_position] = self.pos_object_3d(l_intersection.x,l_intersection.y) 
+            
+            objects_msg.l_intersection = l_intersection
+
+        #! Organizar vetores para enviar na msg
+        if t_intersection_objects:
+
+            t_intersection = MultiObjects()
+            [t_intersection.found, t_intersection.x, t_intersection.y, 
+             t_intersection.roi_width, t_intersection.roi_height] = t_intersection_objects
+            
+            [t_intersection.x_position, t_intersection.y_position, t_intersection.z_position] = self.pos_object_3d(t_intersection.x,t_intersection.y) 
+
+            objects_msg.t_intersection = t_intersection
+
+        #! Organizar vetores para enviar na msg
+        if center_objects:
+
+            center = MultiObjects()
+            [center.found, center.x, center.y, 
+             center.roi_width, center.roi_height] = center_objects
+            
+            [center.x_position, center.y_position, center.z_position] = self.pos_object_3d(center.x,center.y) 
+
+            objects_msg.center = center
+
+        # Cálculo da posição central do gol
+        if objects_msg.ball.found:
+            if objects_msg.rightgoal.found and objects_msg.leftgoal.found:
+                center_goal = (objects_msg.rightgoal.x + objects_msg.leftgoal.x) / 2
+                objects_msg.center_goal = center_goal
+            
+            elif objects_msg.rightgoal.found:
+                objects_msg.center_goal = objects_msg.rightgoal.x / 2  # suposição do centro do gol quando se encontra apenas a trave direita
+
+            elif objects_msg.leftgoal.found:
+                camera_rightmost_x = self.intrinsics.width  # exemplo, depende da resolução da câmera
+                objects_msg.center_goal = (camera_rightmost_x + objects_msg.leftgoal.x) / 2  # suposição do centro do gol quando se encontra apenas a trave esquerda
+
         self.publisher.publish(objects_msg)
+
+
+
 
     #Não está atualizado para Ros2
     def connect_to_webots(self):
