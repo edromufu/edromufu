@@ -71,61 +71,45 @@ void timer_callback(rcl_timer_t* timer, int64_t last_call_time) {
 
 // ================ PID ================
 //------- Pinos -------
-#define LED_PIN 13
-const int POT_PINS[] = {34, 35, 32, 33}; // vetor de portas de potenciômetros
-const int ACTUATOR_EN_PINS[] =  {23,  5, 27,  4}; //vetor de PWM
-const int ACTUATOR_INA_PINS[] = {22, 19, 26, 15}; //vetor de pino de avanço
-const int ACTUATOR_INB_PINS[] = {21, 18, 25,  2}; //vetor de pino de recuo
-const int pot_size = 4; //número de juntas
-//---------- Variaveis ----------
-int pot_values[pot_size]; // valores lidos na junta
-const int n_size = 15; // quantidade de média móvel
-//-------- Constantes PID --------
-const float Kp[] = {10, 10, 10, 10};
-const float Ki[] = {0, 0, 0, 0};
-const float Kd[] = {0, 0, 0, 0};
-float lastError[] = {0, 0, 0, 0};
-float accError[] = {0, 0, 0, 0};
-float angles[] = {0, 0, 0, 0, 0, 0, 0, 0};
-int dt = 1000; // tempo de amostragem em milisegundos
-// --------- Funçoes ---------
-float readJoint(int id){
-  // THIS IS JUST AVERAGE
-  // TODO: implement moving average
-  double acc = 0;
-  for (int i = 0; i<n_size; i++){
-    acc+= analogRead(POT_PINS[id]);
-  }
-  acc = acc/(n_size*1.0);
-  float degrees = acc;//0.0699*acc-143.775;
-  return degrees;
-}
+//--------constantes Graus--------
+float atualPos[8];
+const int pot_size = 8;
 
-void writeActuator (int id, int signal){
-  // id: id da junta
-  // signal: valor de -10000 10000 para escrever na junta
-  int newSignal = constrain(signal, -10000, 10000);
-  newSignal = 255*newSignal/10000;
-  if (signal >= 0){
-    digitalWrite(ACTUATOR_INA_PINS[id], HIGH);
-    digitalWrite(ACTUATOR_INB_PINS[id], LOW);
-    analogWrite(ACTUATOR_EN_PINS[id], newSignal);
-  }
-  if (signal < 0){
-    digitalWrite(ACTUATOR_INA_PINS[id], LOW);
-    digitalWrite(ACTUATOR_INB_PINS[id], HIGH);
-    analogWrite(ACTUATOR_EN_PINS[id], -newSignal);
-  }
-}
+
+//--------constantes Drivers-------- ****TEM QUE PEGAR TUDO DO DIAGRAMA DA ELÉTRICA!!!!!!!****
+const int ACTUATOR_EN_PINS[] =     {34, 27, 33, 13, 1, 2, 19, 17}; //vetor de PWM
+const int ACTUATOR_IN_IMP_PINS[] = {39, 26, 32, 12, 22, 4, 21, 5}; //vetor de pino de avanço
+const int ACTUATOR_IN_PAR_PINS[] = {36, 25, 35, 14, 23, 16, 3, 18}; //vetor de pino de recuo
+
+//--------constantes PID--------
+const float Kp[] =  {10, 10, 10, 10, 10, 10, 10, 10};
+const float Ki[] =  {0, 0, 0, 0, 0, 0, 0, 0};
+const float Kd[] =  {0, 0, 0, 0, 0, 0, 0, 0};
+float lastError[] = {0, 0, 0, 0, 0, 0, 0, 0};
+float accError[] =  {0, 0, 0, 0, 0, 0, 0, 0};
+float data[] =      {0, 0, 0, 0, 0, 0, 0, 0};   //Ângulos a serem recebidos por ROS da cinemática inversa
+int u_input[] =     {0, 0, 0, 0, 0, 0, 0, 0};   //Vetor de PWM a ser aplicado nos atuadores
+int dt = 1000;                                  // tempo de amostragem em milisegundos
+
 
 void initJoint(int id){
   pinMode(ACTUATOR_EN_PINS[id], OUTPUT);
-  pinMode(ACTUATOR_INA_PINS[id], OUTPUT);
-  pinMode(ACTUATOR_INB_PINS[id], OUTPUT);
+  pinMode(ACTUATOR_IN_IMP_PINS[id], OUTPUT);
+  pinMode(ACTUATOR_IN_PAR_PINS[id], OUTPUT);
 }
+
+// --------- Funçoes ---------
+
+void initJoint(int id){
+  pinMode(ACTUATOR_EN_PINS[id], OUTPUT);
+  pinMode(ACTUATOR_IN_IMP_PINS[id], OUTPUT);
+  pinMode(ACTUATOR_IN_PAR_PINS[id], OUTPUT);
+}
+
 
 int calculatePID(int id, int setpoint, float current){
   float erro = setpoint - current;
+
   float derro = 1000*(erro - lastError[id])/dt;
   
   accError[id]+= erro*dt/1000;
@@ -133,6 +117,27 @@ int calculatePID(int id, int setpoint, float current){
   int u = Kp[id]*erro +Ki[id]*accError[id]+ Kd[id]*derro;
   return u;
 }
+
+
+void writeActuator (int id, int signal){
+  // Pega o valor de u fornecido pelo PID e transforma em comandos para os drivers
+  // id: id da junta
+  // signal: valor de -10000 10000 para escrever na junta
+  int newSignal = constrain(signal, -10000, 10000);
+  newSignal = 255*newSignal/10000; // olhar o 255
+  if (signal >= 0){
+    digitalWrite(ACTUATOR_IN_IMP_PINS[id], HIGH);
+    digitalWrite(ACTUATOR_IN_PAR_PINS[id], LOW);
+    analogWrite(ACTUATOR_EN_PINS[id], newSignal);
+  }
+  if (signal < 0){
+    digitalWrite(ACTUATOR_IN_IMP_PINS[id], LOW);
+    digitalWrite(ACTUATOR_IN_PAR_PINS[id], HIGH);
+    analogWrite(ACTUATOR_EN_PINS[id], -newSignal);
+  }
+}
+
+
 // =====================================
 
 float pot2Degrees(float value){
@@ -141,7 +146,6 @@ float pot2Degrees(float value){
   return value*factor;
 }
 
-float data[8];
 float feedbackData[8];
 
 void setup() {
@@ -204,15 +208,6 @@ void setup() {
 
 void loop() {
   unsigned long now = millis();
-/*
-  Serial.print("Potentiometer Value: ");
-  for (int i = 0; i < numPorts; i++){
-      potPrint[i] = myData.potValue[i];
-    Serial.print(String(potPrint[i]) + " ");
-    }
-  
-  Serial.println("Receiver");
-*/
 
   for (size_t i = 0; i < 8; i++) {
     data[i] = (float)pot2Degrees(myData.potValue[i]); 
@@ -224,6 +219,28 @@ void loop() {
   while (millis()-now<dt){
     // now = millis();
   }
+  
+    //--------Calculando Saídas dos PID's--------
+  for (int i = 0; i < pot_size; i++){
+    u_input[i] = calculatePID(i , data[i], atualPos[i]);
+  }
+  
+
+
+  //--------Calculando Entrada do PWM--------
+  writeActuator(0, u_input[1]+u_input[0]); //Tem que ver
+  writeActuator(1, u_input[1]-u_input[0]);
+  
+  writeActuator(2, u_input[2]+u_input[3]);
+  writeActuator(3, u_input[2]-u_input[3]);
+  
+  writeActuator(4, u_input[5]+u_input[4]);
+  writeActuator(5, u_input[5]-u_input[4]);
+  
+  writeActuator(6, u_input[6]+u_input[7]);
+  writeActuator(7, u_input[6]-u_input[7]);
+  
+
 }
 
 void subscription_callback(const void * msgin)

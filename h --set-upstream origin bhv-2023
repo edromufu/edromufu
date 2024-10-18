@@ -1,0 +1,1525 @@
+[33mcommit 09d5faeb3f88a29ac4e7282ea905cc4f7c7fe130[m[33m ([m[1;36mHEAD -> [m[1;32mbhv-2023[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/bhv-2023[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Merge: 3eb83fe 8ee0c37
+Author: leorn037 <127167810+leorn037@users.noreply.github.com>
+Date:   Fri Jun 7 19:49:37 2024 -0300
+
+    Merge pull request #43 from edromufu/GabrielBuril-patch-3
+    
+    Update criando_txts_dataset.md
+
+[33mcommit 3eb83fe80650b3dccfb090ad107bff97f531b8bc[m
+Merge: 81e61e9 320e541
+Author: leorn037 <127167810+leorn037@users.noreply.github.com>
+Date:   Fri Jun 7 19:49:13 2024 -0300
+
+    Merge pull request #44 from edromufu/GabrielBuril-patch-4
+    
+    Update connecting_and_showing.md
+
+[33mcommit 320e541bfe3010d1bb749ae46441c85a67509335[m
+Author: GabrielBuril <127159233+GabrielBuril@users.noreply.github.com>
+Date:   Fri Jun 7 17:33:33 2024 -0300
+
+    Update connecting_and_showing.md
+    
+    Troca para nova estrutura de códigos, retirada do show result frame e atualização das funções para ROS2
+
+[33mcommit 8ee0c37ecf61b522bd05fce0f299a4d8846ee721[m
+Author: GabrielBuril <127159233+GabrielBuril@users.noreply.github.com>
+Date:   Fri Jun 7 17:06:47 2024 -0300
+
+    Update criando_txts_dataset.md
+    
+    Nova organização do dataseet
+    Não consegui adicionar os printes dos exemplos dos passos a serem seguidos
+    https://docs.google.com/document/d/1RCSKG2EgAhYPeM73om0e6j2ff42ELxX2zQ4pJqjIhng/edit?usp=sharing
+    esse link da acesso ao docs com os printes que estão ausentes
+
+[33mcommit 81e61e9ec4e617f60daa083f5bd1ad99a877d47e[m
+Merge: 071a21b e2ecc13
+Author: GabrielBuril <127159233+GabrielBuril@users.noreply.github.com>
+Date:   Wed May 29 13:56:33 2024 -0300
+
+    Merge pull request #41 from edromufu/GabrielBuril-patch-1
+    
+    Update connecting_and_showing.md
+
+[33mcommit e2ecc13f26c7ac5c5dc411f580b1f574397081b3[m
+Author: GabrielBuril <127159233+GabrielBuril@users.noreply.github.com>
+Date:   Wed May 29 13:54:04 2024 -0300
+
+    Update connecting_and_showing.md
+    
+    Apagar show result frame
+
+[33mcommit 071a21bc94def8edc6dc8fa721b2088f28050971[m
+Merge: 8f68253 ce035da
+Author: Lucas_Martins <110739318+Martins-Lucaas@users.noreply.github.com>
+Date:   Tue May 21 17:39:06 2024 -0300
+
+    Merge pull request #40 from anacastelhone/patch-1
+    
+    Update comandos_visao.md
+
+[33mcommit 8f682531574bee3bea3244287b261b7b4ccc6232[m
+Author: Bruno Augusto Gomes Coelho <110739524+OnurbAugusto@users.noreply.github.com>
+Date:   Tue May 21 16:45:54 2024 -0300
+
+    Software pages em andamento
+
+[33mcommit ce035da2c757f21fbd46991251c8c59fc406ff68[m
+Author: anacastelhone <127166049+anacastelhone@users.noreply.github.com>
+Date:   Tue May 21 14:15:18 2024 -0300
+
+    Update comandos_visao.md
+
+[33mcommit 3716725ee5e51a1c4ddef385dda829caee56d8a5[m
+Author: anacastelhone <127166049+anacastelhone@users.noreply.github.com>
+Date:   Wed May 15 21:16:15 2024 -0300
+
+    Update comandos_visao.md
+
+[33mcommit c5dc5135b87be939c1b50a3e7cbab0aae3da2019[m
+Author: anacastelhone <127166049+anacastelhone@users.noreply.github.com>
+Date:   Wed May 15 20:48:27 2024 -0300
+
+    Update comandos_visao.md
+
+[33mcommit 3fe427828330fbacfacf66e7d4f058e4d81488e1[m
+Author: anacastelhone <127166049+anacastelhone@users.noreply.github.com>
+Date:   Tue May 14 18:48:43 2024 -0300
+
+    Update comandos_visao.md
+
+[33mcommit 789374ab1a0c67b82aa48c5519ab3faa8e8af415[m
+Author: Martins-Lucaas <lucaspmartins14@gmail.com>
+Date:   Tue Dec 19 15:59:07 2023 -0300
+
+    correções do código + comentários de futuras atualizações
+
+[33mcommit de9e011120d91cc94206b8d684014e6188041b89[m
+Merge: 111e016 22f2452
+Author: Iuri Reis <40905287+ooiuri@users.noreply.github.com>
+Date:   Wed Dec 13 20:09:14 2023 -0300
+
+    Merge pull request #37 from edromufu/dev
+    
+    Dev
+
+[33mcommit 22f24528b225da4b62a192cd203c3c3066673fda[m
+Merge: 605a9fd 59aa3f3
+Author: Iuri Reis <40905287+ooiuri@users.noreply.github.com>
+Date:   Wed Dec 13 20:05:38 2023 -0300
+
+    Merge pull request #36 from edromufu/larc/aurea
+    
+    merge do behaviour
+
+[33mcommit 59aa3f396389123643fb6128d2f87307cf86c9f6[m
+Merge: c59bd4e ec31900
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Mon Oct 9 19:35:21 2023 -0300
+
+    Merge pull request #33 from edromufu/larc/behaviour
+    
+    Larc/behaviour
+
+[33mcommit ec31900fd877f03616942bb197a2cef5ff0539a3[m
+Author: leonardo.rodriguesn@hotmail.com <leorn037>
+Date:   Mon Oct 9 19:29:41 2023 -0300
+
+    behaviour incompleto
+
+[33mcommit c59bd4ead2b353820c091c9a9ee16554ca465cc4[m
+Author: Daniel Farlei <danielfss_20@hotmail.com>
+Date:   Mon Oct 9 19:26:27 2023 -0300
+
+    Page modificada de levantar de costas ainda não funcional.
+
+[33mcommit 2f6338378db7c56d3b9e0b78f88aced41ad19829[m
+Author: leonardo.rodriguesn@hotmail.com <leorn037>
+Date:   Mon Oct 9 19:25:52 2023 -0300
+
+    behaviour incompleto para a aurea
+
+[33mcommit 6fdf2ca0b51dd49d3c29b49ed4009d36d8a1c809[m
+Author: leonardo.rodriguesn@hotmail.com <leorn037>
+Date:   Mon Oct 9 17:00:21 2023 -0300
+
+    separacao dos codigos da aurea
+
+[33mcommit 605a9fdf4a2901a7104911c9ecbf36bcc9313fe6[m
+Merge: 843a53e 060e436
+Author: Lucas_Martins <110739318+Martins-Lucaas@users.noreply.github.com>
+Date:   Mon Oct 9 15:02:37 2023 -0300
+
+    Merge pull request #32 from edromufu/larc/aureapages
+    
+    Larc/aureapages
+
+[33mcommit 843a53e010384db2f4cb3d5cc664db1fba790a36[m
+Author: leonardo.rodriguesn@hotmail.com <leorn037>
+Date:   Mon Oct 9 14:58:14 2023 -0300
+
+    behaviour goleira pra testes
+
+[33mcommit 060e43624646d9d808ae0091326fc95099655b61[m
+Author: Daniel Farlei <danielfss_20@hotmail.com>
+Date:   Mon Oct 9 14:57:24 2023 -0300
+
+    Inicio de levantar de frente e parâmetros para caminhada convergir com limite dos motores.
+
+[33mcommit 255e4abe52cb810303b3ce3ca7ecdf9904032598[m
+Author: leonardo.rodriguesn@hotmail.com <leorn037>
+Date:   Mon Oct 9 14:50:17 2023 -0300
+
+    behaviour goleira pra testes
+
+[33mcommit 65d9db25fdb2f4028dcf6ea67e7320f9998fa998[m
+Merge: fb51016 278e348
+Author: Iuri Reis <40905287+ooiuri@users.noreply.github.com>
+Date:   Mon Oct 9 10:23:50 2023 -0300
+
+    Merge pull request #31 from edromufu/vision/localization
+    
+    Vision/localization
+
+[33mcommit 278e348f44a8b1e79677e8b04c79f0b169656fe0[m[33m ([m[1;31morigin/vision/localization[m[33m)[m
+Merge: cad3551 fb51016
+Author: Iuri Reis <oiuri@outlook.com>
+Date:   Mon Oct 9 10:23:11 2023 -0300
+
+    merge leo do pneu
+
+[33mcommit 3fa6684765cf97e114a029753449c391707ce7cf[m
+Author: Daniel Farlei <danielfss_20@hotmail.com>
+Date:   Mon Oct 9 10:17:10 2023 -0300
+
+    page levantar de costas
+
+[33mcommit cad3551cb1de4204cf69a8d90a02df12d3ac0bbb[m
+Author: Nuc <edromufu@gmail.com>
+Date:   Mon Oct 9 10:08:17 2023 -0300
+
+    Atualização da Visão
+
+[33mcommit fb51016d2c79f172f4f16d83ea30e9a0ebbf8b4f[m
+Author: Gustavo Brazilino <gustavobrazilino@gmail.com>
+Date:   Mon Oct 9 09:59:10 2023 -0300
+
+    behaviour ainda nao testado
+
+[33mcommit a497cef915e928ed8423fc92da65583f3ab3e9be[m
+Author: Nuc <edromufu@gmail.com>
+Date:   Mon Oct 9 09:58:58 2023 -0300
+
+    Correção de alteração de teste
+
+[33mcommit c221859c59b5c90396034538dc2e9332701a2409[m
+Author: Nuc <edromufu@gmail.com>
+Date:   Mon Oct 9 09:50:45 2023 -0300
+
+    Correção de alteração de teste
+
+[33mcommit c37141aa08834a7d88f75c1adb5fcd5b80da6821[m
+Author: Gustavo Brazilino <gustavobrazilino@gmail.com>
+Date:   Mon Oct 9 09:27:20 2023 -0300
+
+    bota essa porra
+
+[33mcommit 993d3871f95c8fed4b33706553467e6e96dc9f96[m
+Author: Gustavo Brazilino <gustavobrazilino@gmail.com>
+Date:   Mon Oct 9 09:23:55 2023 -0300
+
+    correeee (larc)
+
+[33mcommit e0e2501a901b1ae0236161d21a895c46f74329f1[m
+Author: leonardo.rodriguesn@hotmail.com <leorn037>
+Date:   Mon Oct 9 08:54:45 2023 -0300
+
+    visao
+
+[33mcommit 80f6c948fae3eed3e2794ee46547cde25df9eb77[m
+Author: Gustavo Brazilino <gustavobrazilino@gmail.com>
+Date:   Mon Oct 9 02:20:41 2023 -0300
+
+    behaviour, talvez ta pronto, sem testes
+
+[33mcommit d8500447e208bb8ddf219a94e30b05dae95ee6cc[m
+Author: Daniel Farlei <danielfss_20@hotmail.com>
+Date:   Sun Oct 8 23:40:54 2023 -0300
+
+    Atualizacoes dia 1
+
+[33mcommit 3e3e4e05dc48822938a684c24a7ce7d63af8d2a6[m
+Author: Daniel Farlei <danielfss_20@hotmail.com>
+Date:   Sun Oct 8 01:08:51 2023 -0300
+
+    Desenvolvimento dia 0 - Warm up.
+
+[33mcommit aa491c7d3945e12a796a1d76f374faf0846e8301[m
+Author: Daniel Farlei <danielfss_20@hotmail.com>
+Date:   Fri Oct 6 23:47:25 2023 -0300
+
+    rotacao da robo sem testes praticos
+
+[33mcommit 99505a2b6c6148541351c15a621f451ef9c44d13[m
+Author: Daniel Farlei <danielfss_20@hotmail.com>
+Date:   Fri Oct 6 05:38:18 2023 -0300
+
+    Separando os arquivos de geração de padrões para facilitar implementações.
+
+[33mcommit 8adbc8d55b975d3c6d7eb7b12c49847100ca2aa8[m
+Author: Daniel Farlei <danielfss_20@hotmail.com>
+Date:   Fri Oct 6 04:48:38 2023 -0300
+
+    Criação de código falso da u2d2 para eliminar necessidade de plugar a robô em testes básicos e/ou de visualização, implementação das correções aplicadas no COM do modelo (.json) da robô na visualização, alteração do esquema de funcionamento para atualização do modelo da robô na core (Agora é chamado após qualquer comando na core, utilizando a última posição enviada para os motores como base, antes da publicação para visualização para que esta siga o modelo instantaneamente). Ou seja, foi removida a necessidade de pedir feedback, o que DEVE ser avaliado, talvez parar de pedir o tempo todo e só eventualmente (timer) para acertar o modelo com o real.
+
+[33mcommit 35f319d30c7f6b9a29442bab71c015209ab799d2[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Thu Oct 5 00:41:33 2023 -0300
+
+    Tentativa de correção da caminhada com implemetação de velocidade pros motores, correção do Y do ZMP e Y do pé de balanço.
+
+[33mcommit 97aaf64a608672ba67af21c87962a77ba2bf87d2[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Wed Oct 4 18:45:55 2023 -0300
+
+    Revisão da caminhada - tunagem de parametros
+
+[33mcommit 15677eaf3d93090ec3bfa4ff9ae54cf308ebd064[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Wed Oct 4 08:48:18 2023 -0300
+
+    Update movement_patterns.py
+
+[33mcommit ed33fef531b94c0c71e06a777fe336a26c039082[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Tue Oct 3 23:05:55 2023 -0300
+
+    Desenvolvimento da caminhada pelo mestrado do marcos maximo.
+
+[33mcommit 45f0cceadc556b412b88153a8b46ed86f91a21c9[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Tue Oct 3 00:00:56 2023 -0300
+
+    Inicio do desenvolvimento da caminhada dinamica para aurea completamente montada e page de levantar de frente 95% pronta.
+
+[33mcommit 8fe00407d985029436203265cbb3cbe1d44fc06d[m
+Merge: 18ab6f2 2296aa1
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Sat Sep 30 21:14:47 2023 -0300
+
+    Merge pull request #30 from edromufu/movement/goalkeeper
+    
+    Movement/goalkeeper
+
+[33mcommit 18ab6f28b18096d82d87c8aa5aa17388b786296f[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Sat Sep 30 21:13:13 2023 -0300
+
+    Melhorias no dynamixel_sdk
+
+[33mcommit 2296aa1bd4fc15b9627191029b598e140e1b438c[m[33m ([m[1;31morigin/movement/goalkeeper[m[33m)[m
+Author: leonardo.rodriguesn@hotmail.com <leorn037>
+Date:   Sat Sep 30 19:08:17 2023 -0300
+
+    Pages da goleira funcional finalizando as defesas de costas,não há pages de se levantar.
+
+[33mcommit 301d1729c5540932c1dbc7b7de0e3e77ecd06cfe[m[33m ([m[1;32mmovement/goalkeeper[m[33m)[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Sat Sep 30 15:00:38 2023 -0300
+
+    Removendo interpolação no geral.
+
+[33mcommit ed1c8db9cc082e1473a7d048de5440141f666006[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Sat Sep 30 14:58:58 2023 -0300
+
+    First pose da nova montagem e inicio das defesas.
+
+[33mcommit a8f9f78d2f14bf9c43f8d1ae4d2159e380c85891[m
+Merge: 9e5aff3 13dfb5b
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Tue Sep 26 20:02:59 2023 -0300
+
+    Merge pull request #29 from edromufu/dev
+    
+    Dev
+
+[33mcommit 9e5aff3f3ab4fa6f9cfca8faa25d941d01903c7f[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Tue Sep 26 20:02:19 2023 -0300
+
+    First pose da Natasha
+
+[33mcommit 13dfb5b23128a366f1939f83e70f48c34a5b315c[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Tue Sep 26 20:01:41 2023 -0300
+
+    Alteração QOL na core.
+
+[33mcommit 33796d8201356cf54fd2242664e1565e48a6c68e[m
+Merge: 7414070 f54fce8
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Tue Sep 26 15:14:19 2023 -0300
+
+    Merge pull request #28 from edromufu/movement/goalkeeper
+    
+    Pages da Goleira
+
+[33mcommit 74140706fed450043554f41b1cee770810980a0b[m
+Merge: 922533d efc74fd
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Mon Sep 25 19:27:21 2023 -0300
+
+    Merge pull request #27 from edromufu/movement/balance_test
+    
+    Movement/balance test
+
+[33mcommit efc74fd6f6c47ebe950fe3eeb07fe6e14bd6d1d1[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Mon Sep 25 19:24:14 2023 -0300
+
+    First pose da aurea, teste do balanço funcional e interpolação para pose inicial.
+
+[33mcommit 922533deb8aeda6c7a0ccfba41bbf5753013c437[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Sun Sep 24 12:19:00 2023 -0300
+
+    Update connecting_and_showing.py
+
+[33mcommit e60e95b99046eb421fd5d3f5fac9524c146b4f13[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Sun Sep 24 12:18:19 2023 -0300
+
+    mudancas para que a visao pegue os parametros do behaviour
+
+[33mcommit 6464c4d90d2adeb3709f8692b714fe40114bed85[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Sun Sep 24 11:56:28 2023 -0300
+
+    mudando os parametros de largura e altura da imagem da visao e mudando o nome do topico da visao
+
+[33mcommit 29b9b7e6e65082704651c42c57f892c8c548d408[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Sun Sep 24 11:54:39 2023 -0300
+
+    Adicionando resize a visao para a melhora de FPS na jetson
+
+[33mcommit 0fab595de776b8de4c64ef4c5ee34c6826df5986[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Thu Sep 21 22:34:10 2023 -0300
+
+    balance_function
+
+[33mcommit c46204bb6d0dab1261b085949b963bee1434e078[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Thu Sep 21 15:38:41 2023 -0300
+
+    Calculador de poses do pé para caminhada pronto e não integrado (nem testado).
+
+[33mcommit f284d7d92feb90da2aad55be1574804fc4399fe4[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Thu Sep 21 14:38:40 2023 -0300
+
+    Melhorias e exclusões no movimento.
+
+[33mcommit f170a3496ce3637cf5d6fdd7267c4c08d9263467[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Wed Sep 20 21:23:03 2023 -0300
+
+    Tratamento de exceção no obtainMinMax.
+
+[33mcommit f54fce8818e1a2d6d56714d34b5ac1dc8e9f8ef2[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Wed Sep 20 20:49:55 2023 -0300
+
+    Pages da Goleira
+
+[33mcommit 9ffbf9a12939c93fc973e738a7183d3e281dfb3b[m
+Merge: d690341 1b5f2a7
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Sat Sep 16 22:04:50 2023 -0300
+
+    Merge pull request #25 from edromufu/movement/headSearch
+    
+    Movement/head search
+
+[33mcommit 1b5f2a77bba8c0ff318aa479c2f5e68a1e2bc4d4[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Sat Sep 16 21:58:05 2023 -0300
+
+    Movimentação de procura e centralização da robô com NUC funcional, testar no NUC e implementar possível segundo código para PID.
+
+[33mcommit 2b895c94a685f4f6626f2fa4c2ebc0ddd2c4dd3a[m
+Author: Daniel Farlei <danielfss_20@hotmail.com>
+Date:   Sat Sep 16 18:17:51 2023 -0300
+
+    Commitando para continuar de outro PC, nada funcional.
+
+[33mcommit 597b09c283917b0a58ae735076715159bd570d25[m
+Author: edrom <edrom@EDROM.myguest.virtualbox.org>
+Date:   Sat Sep 16 17:25:10 2023 -0300
+
+    atualizando
+
+[33mcommit ad5e3ef770ee7dd6ec77f49125a65819727304ad[m
+Merge: e46b5c3 9e78196
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Tue Sep 12 19:36:52 2023 -0300
+
+    Merge pull request #24 from edromufu/behaviour/IMU
+    
+    Behaviour/imu
+
+[33mcommit e46b5c346d60d8a4388377d8e79cf31b06820c45[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Tue Sep 12 19:34:38 2023 -0300
+
+    Inicio da branch.
+
+[33mcommit d6903410e1a714b8815b1408bf484721189f370d[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Mon Sep 11 19:58:01 2023 -0300
+
+    Inicio do desenvolvimento da caminhada, integrado na core o planejamento das posições do pé.
+
+[33mcommit aa28cc3413d950592c884bac6606eb346d6a215a[m
+Merge: d95b7d6 ea99082
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Mon Sep 11 15:01:56 2023 -0300
+
+    Merge pull request #23 from edromufu/movement/motorLimitObserver
+    
+    Movement/motor limit observer
+
+[33mcommit ea99082fc675a291a773e9d0ed2fe4bdb464946e[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Mon Sep 11 15:00:12 2023 -0300
+
+    Testado e funcional as implementações anteriores.
+
+[33mcommit fab5f25c3018cad6006e3dedba19dc4f7e5564d6[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Mon Sep 11 11:34:54 2023 -0300
+
+    Implementações de QOL na leitura do código da u2d2, além de avisador de limites de motor. Não testado.
+
+[33mcommit d95b7d63bd03ff7e0165db4e84b214e2d876bb68[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Mon Sep 11 10:56:24 2023 -0300
+
+    Atualizando nome de movement_bioloid -> movement
+
+[33mcommit 9e781966bfb5a6d453cd1b70e1be49761a650aa4[m[33m ([m[1;31morigin/behaviour/IMU[m[33m, [m[1;32mbehaviour/IMU[m[33m)[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Sat Sep 9 23:04:50 2023 -0300
+
+    IMU integrado com interpretações e testado, todas interpretações prontas sem teste.
+
+[33mcommit 99eb2f08b4a875f0eb46a1e4e2fb31479801d0c2[m
+Merge: f0baf2a 49d0aec
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Sat Sep 9 18:19:05 2023 -0300
+
+    Merge pull request #22 from edromufu/dev
+    
+    Atualizando a branch do Behaviour.
+
+[33mcommit f0baf2a0776a216cc80735270a57c4ac418501d1[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Sat Sep 9 18:17:05 2023 -0300
+
+    Atualizações do behaviour corujão dia 09/07 - parte 1.
+
+[33mcommit 49d0aec3725062788fc3e53187584d9e95246fe4[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Thu Sep 7 18:55:39 2023 -0300
+
+    Page da natasha e atualização na core de QOL.
+
+[33mcommit 1a19771c9fe5bad00ef7c0ba6e2c05ff67e46ffb[m
+Merge: aa0aa2f 4b43aa0
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Tue Sep 5 21:16:27 2023 -0300
+
+    Merge pull request #20 from edromufu/movement/aurea_test
+    
+    Movement/aurea test
+
+[33mcommit 4b43aa052810daabc406804cdc513c2658b23198[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Tue Sep 5 20:57:13 2023 -0300
+
+    Marcha funcional.
+
+[33mcommit 1898cefc1cb1cbac2708650f878c8780545baba4[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Sat Sep 2 18:14:58 2023 -0300
+
+    Código publicando aceleração convertida em angulo (?????????????????).[
+
+[33mcommit 478cafec76f0a860812a9e4a99c66a1aad4c10eb[m
+Author: edrom <edrom@EDROM.myguest.virtualbox.org>
+Date:   Sat Sep 2 18:11:16 2023 -0300
+
+    Separado corretamente e organizado o codigo, utilizando main temporaria para simulacao 2D
+
+[33mcommit 9043d0d0e9c9d66982c3fc48012fb6c6fbb525d7[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Sat Sep 2 17:49:06 2023 -0300
+
+    IMU no arduino.
+
+[33mcommit f2a43c626b1ec2d23aacdbbf4a8d29f903994378[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Fri Sep 1 21:15:49 2023 -0300
+
+    Atualização do modelo da robô nova e de seu urdf.
+
+[33mcommit bb988d2870f21271a6e8ece9be51b7aaefb7b216[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Thu Aug 31 02:24:43 2023 -0300
+
+    Visualizador funcional, pezinhos tortos na first_pose.
+
+[33mcommit c29477aa8abaed048904b70fe530344e18c95ea7[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Thu Aug 31 00:48:07 2023 -0300
+
+    Visualizador pronto não integrado com a core.
+
+[33mcommit 6c9620e13eae2df7a621806282346da2ffafc689[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Tue Aug 29 21:11:33 2023 -0300
+
+    Alterações do teste de marcha 29/08, software de pages funcional, conseguimos comandar posição pros motores, marcha não funcional.
+
+[33mcommit 0ebfa079fd6c39a418b1b614a5d6291e7b781939[m
+Merge: 46099b1 aa0aa2f
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Tue Aug 29 19:58:20 2023 -0300
+
+    Colocando dev no teste da aurea para poder utilizar o criador de pages.
+    
+    Colocando dev no teste da aurea para poder utilizar o criador de pages.
+
+[33mcommit 46099b1c45ea98fb644a983846598949524c473e[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Tue Aug 29 19:55:23 2023 -0300
+
+    Consertando bug de não conseguir mandar posição para motores de protocolo 2.
+
+[33mcommit aa0aa2fb1f4df8e1008362220da828dca0ff3a62[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Tue Aug 29 18:58:47 2023 -0300
+
+    Removendo movement antiga.
+
+[33mcommit 337bdb3121eacff2dfc0e93e7cca84b808a06f08[m
+Merge: 4ea0676 336d1fa
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Mon Aug 28 18:02:15 2023 -0300
+
+    Merge pull request #18 from edromufu/movement/page-integration
+    
+    Movement/page integration
+
+[33mcommit 336d1fa19ce73731ad24ff9626a5f8a42b2befdc[m
+Merge: 21602e4 4ea0676
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Mon Aug 28 18:02:08 2023 -0300
+
+    Merge branch 'dev' into movement/page-integration
+
+[33mcommit 21602e42a1fea45b9c405e7f2a56e581fab34a64[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Mon Aug 28 17:59:06 2023 -0300
+
+    Finalização da GUI de pages e do runner da pages, já integrado com a core para chamadas externas, testada apenas com o código de teste sem a u2d2, mas deve funcionar igualmente sem.
+
+[33mcommit e22628e509d4ba422b5324306b8505f07e06ce3a[m
+Author: edrom <edrom@EDROM.myguest.virtualbox.org>
+Date:   Fri Aug 25 20:12:15 2023 -0300
+
+    Codigo ligeiramente menos poluido
+
+[33mcommit 294a15fcb34648a3c8cab1994736be2ba4b59d0e[m
+Author: Jorge H. Marques <jorgehsm02@gmail.com>
+Date:   Tue Aug 22 19:55:54 2023 -0300
+
+    BUG MX-106/MX-64
+    
+    Possível solução para não envio de posição para motores MX
+
+[33mcommit 0f8feddf9b81f61349f483732c744b66bbc75cd5[m
+Merge: 5869f48 1ee5022
+Author: edrom <edrom@EDROM.myguest.virtualbox.org>
+Date:   Tue Aug 22 15:16:21 2023 -0300
+
+    Merge branch 'vision/localization' of https://github.com/edromufu/edromufu into vision/localization
+
+[33mcommit 5869f482484b72db847fcd14af8efaa835f39c4e[m
+Author: edrom <edrom@EDROM.myguest.virtualbox.org>
+Date:   Tue Aug 22 15:15:04 2023 -0300
+
+    Filtro de particulas 2D simplificado funcionando, codigo poluido, convergindo de maneira razoavel com inicial gaussiana, nao convergindo com uniforme, parametros a acertar
+
+[33mcommit 1ee5022d47cf73e5e1db5edb9bfcb3ce26695e90[m
+Author: leonardo.rodriguesn@hotmail.com <leorn037>
+Date:   Thu Aug 17 22:06:58 2023 -0300
+
+    Primeira tradução do código da simulação para o real
+
+[33mcommit 2dabe3d0dc85880615db92b94061916734e7ca81[m
+Author: edrom <edrom@EDROM.myguest.virtualbox.org>
+Date:   Thu Aug 17 15:05:54 2023 -0300
+
+    Iniciando desenvolvimento do filtro de particulas 2D, desenhando campo, pegando intersecoes, gerando particulas, obtendo o fov, desenhando e verificando as intersecoes
+
+[33mcommit d1c14019edc773a31199b3f189e91fa4a9f1afdc[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Sat Aug 12 02:53:49 2023 -0300
+
+    Robô nova descrita em seu json, aparentemente a informação não esta sendo transmitida quando solicita-se publicação nos motores (u2d2 não pisca).
+
+[33mcommit 4ea0676238d7da2e8e393d4c2615499f60a117db[m
+Merge: 87cca37 87cb225
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Fri Aug 11 23:32:18 2023 -0300
+
+    Merge pull request #17 from edromufu/movement/head
+    
+    Movement/head
+
+[33mcommit 87cb225bd9ee8a798a82aa165f2c8bbce820b24a[m
+Author: leonardo.rodriguesn@hotmail.com <leorn037>
+Date:   Fri Aug 11 23:29:21 2023 -0300
+
+    Cabeça funcional PARA A COMPETIÇÃO.
+
+[33mcommit 840961d28d50b9f79d7c24911f5a2882735d950c[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Thu Aug 10 16:09:32 2023 -0300
+
+    Alterações iniciais para executor de page.
+
+[33mcommit 1dbbd7751d3ffc399013aef7e2787db942b77ac1[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Thu Aug 10 10:32:08 2023 -0300
+
+    Funcionalidade de salvar page implementada tanto para save quanto para saveAs.
+
+[33mcommit 7850e07abe9173a16c922002f81aee61d45ba6f8[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Wed Aug 9 14:53:45 2023 -0300
+
+    Atalhos de copiar, colar, capturar e desfazer pose, atalho de undo captura de pose.
+
+[33mcommit 4e72c3c58e68cc284fa1163e3c35b7eb2ba835f7[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Wed Aug 9 02:23:56 2023 -0300
+
+    Pequena otimização na função de uncheck.
+
+[33mcommit cde5b82caa05475102bba2aaa92bce156ec20cd1[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Wed Aug 9 02:17:38 2023 -0300
+
+    Ferramenta de captura da posição atual integrada com a UI.
+
+[33mcommit 01336506ae7dbe9129ae8afc21dae86bd2eef826[m
+Author: leonardo.rodriguesn@hotmail.com <leorn037>
+Date:   Thu Aug 3 22:00:23 2023 -0300
+
+    Commit do Leo
+
+[33mcommit 082da332379bd39db6df506ce7f56fa64f2bd9ae[m
+Author: igorfranca1 <igornaogc@gmail.com>
+Date:   Thu Aug 3 20:34:15 2023 -0300
+
+    Commit do Igor
+
+[33mcommit 6f25302cb91d2e01748fd38289592922863f098c[m
+Author: edrom <edrom@EDROM.myguest.virtualbox.org>
+Date:   Wed Aug 2 16:09:49 2023 -0300
+
+    Desenhando somente intersecoes para melhor visualizacao
+
+[33mcommit 14c0ad55397d9f64473debf1339957b2950299b5[m
+Author: edrom <edrom@EDROM.myguest.virtualbox.org>
+Date:   Fri Jul 28 17:19:46 2023 -0300
+
+    Resolvido bug de nao atualizar os frames, logica para evitar gargalos adicionada, mudanca na maneira de encontrar e verificar vizinhos, ainda nao foi possivel modificar o tamanho da imagem vinda da simulacao
+
+[33mcommit 55f3a8e444854af79ba204ecf760ee3610471fc3[m
+Author: edrom <edrom@EDROM.myguest.virtualbox.org>
+Date:   Tue Jul 25 18:32:55 2023 -0300
+
+    Pacote da localizacao real criado, com erro para matar o codigo. Intersecao filtrando corretamente, porem ajustes devem ser feitos. Ainda sem atualizacao das imagens quando utilizando ros (simulacao ou camera)
+
+[33mcommit bc0145dbe0b3979f80f95b162d9901f22fd48f73[m
+Author: edrom <edrom@EDROM.myguest.virtualbox.org>
+Date:   Fri Jul 21 14:05:51 2023 -0300
+
+    Rodando com imagens da simulacao, mas nao atualiza a imagem
+
+[33mcommit b0db4e852089e8c5ce7ba0e07c387f8d3a6a08de[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Tue Jul 18 21:22:55 2023 -0300
+
+    Botões já responsivos para o torque, posição atual sendo capturada e mostrada na tela.
+
+[33mcommit a0f919dbb1a6e79b295ca785497d961f283cbfb0[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Tue Jul 18 19:42:04 2023 -0300
+
+    Upload do modelo do QtDesigner que SUMIU.
+
+[33mcommit 111e01630576b3bd789ef19a3f1f7ae5e9dd0dea[m
+Merge: 77052e3 a1c4eaa
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Tue Jul 18 19:36:00 2023 -0300
+
+    Merge pull request #16 from edromufu/movement/pages-GUI
+    
+    Início do desenvolvimento das pages, dando merge para pegar a compatibilidade de múltiplos motores
+
+[33mcommit a1c4eaa1a3a703177a6c48351c9c45eb08fdf19f[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Tue Jul 18 14:34:09 2023 -0300
+
+    Alterações restantes do QtDesigner.
+
+[33mcommit 87cca370712608a8d627b52e4cb0ffd53b563a75[m
+Merge: a125e1d 93843a0
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Mon Jul 17 20:08:04 2023 -0300
+
+    Merge pull request #15 from edromufu/movement/ax-mx-compatibility
+    
+    Compatibilidade de múltiplos motores através de descrição no Json
+
+[33mcommit c7f2d8db13a7e9c2c1d1a4a1e10756f48299f41f[m
+Author: edrom <edrom@EDROM.myguest.virtualbox.org>
+Date:   Mon Jul 17 17:38:25 2023 -0300
+
+    Funcionando para imagem, porem problemas na filtragem das interseccoes. Para testar no simulador, e necessario trocar o campo
+
+[33mcommit 93843a0584c5470e4240fe09749ec44dd9a8ecb7[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Mon Jul 17 17:14:39 2023 -0300
+
+    Alteração para suporte de multiplos motores na U2D2, não testado com multiplos motores ainda.
+
+[33mcommit cf1bd8a4eb998efd1e5d0a2b0c8992b427aba76c[m
+Author: edrom <edrom@EDROM.myguest.virtualbox.org>
+Date:   Mon Jul 17 16:21:42 2023 -0300
+
+    Pacote da localizacao utilizando simulacao criado, parte da visao organizada com POO, commit para salvar alteracoes, mais testes serao feitos
+
+[33mcommit c6aba7ded36a2ab7e7d3fc3343a2b83be6e9fdca[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Thu Jul 13 16:58:19 2023 -0300
+
+    Implementação de classe na cabeça, alterações de parâmetros confundidos, adição no launch do movimento e descoberta do bug de retorno -1.
+
+[33mcommit 7358856203553650b9b97d8248b3b0871a0d5822[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Tue Jul 11 22:11:36 2023 -0300
+
+    Correção.
+
+[33mcommit ac0cdeb5e010a43d5134ecf2e6d82552be1b951a[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Tue Jul 11 22:08:55 2023 -0300
+
+    Interface no QtDesigner finalizada.
+
+[33mcommit a125e1de7f9126a53d11c6311eca58b5b1bd13c0[m
+Author: Bruno <sierbruno001@gmail.com>
+Date:   Tue Jul 11 15:35:22 2023 -0300
+
+    adicionando Behaviour certo nesse repositorio
+
+[33mcommit 455583b0692fa52b7d6e805fc947d25e46d6440d[m
+Merge: 4a1990d 93c26c9
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Tue Jul 11 15:15:38 2023 -0300
+
+    Merge pull request #14 from edromufu/movement/gait
+    
+    Movement/gait
+
+[33mcommit 93c26c9f59c80cf147a6141b40ea021d90b52b4c[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Tue Jul 11 15:14:46 2023 -0300
+
+    Removendo README da visão que gera conflito no merge com a dev.
+
+[33mcommit a95a47cc01d47e86e9d88b6ad4684e858e1c9782[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Mon Jul 10 17:16:57 2023 -0300
+
+    Removendo interpolação temporariamente (?).
+
+[33mcommit bf2f06fd82d4627aa61eb24cf8f9dfff7d063cf6[m
+Merge: d9b04ea 8782f9a
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Mon Jul 10 17:12:25 2023 -0300
+
+    Merge pull request #12 from edromufu/movement/head_group_creation
+    
+    Movement/head group creation
+
+[33mcommit 8782f9ac2fe64c67eecbcff7c49a74243a8b8d85[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Mon Jul 10 17:11:50 2023 -0300
+
+    Alterações no append não funcional da coree  na comunicação com a u2d2.
+
+[33mcommit ed37888946856fefad41c4dd28f376dd313c5c52[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Sat Jul 8 23:44:12 2023 -0300
+
+    Update dynamixel_sdk_comm.py
+
+[33mcommit d9b04ea0525a5120a1506cac868f111cb70d1fce[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Wed Jul 5 16:07:26 2023 -0300
+
+    Alterando forma do feedback para otimizar a função de sorting.
+
+[33mcommit aa7956c57afd58db1e44205fe13440f467e9c20a[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Mon Jul 3 18:13:55 2023 -0300
+
+    Grupos funcionais e testado.
+
+[33mcommit b1345e5b1a74679d923dd3482159a39bdbdc0987[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Mon Jul 3 17:44:00 2023 -0300
+
+    Comunicação por grupos viável.
+
+[33mcommit b66335b922bffaa7a8230c338e0a829300d433ba[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Thu Jun 1 22:13:51 2023 -0300
+
+    Melhoria na velocidade de append na fila.
+
+[33mcommit e1f7e8503ea1de37525a0eb135b8cbd6e0772fc1[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Thu Jun 1 19:49:04 2023 -0300
+
+    Alteração na forma de identificar os joelhos e pés na cinemática inversa numérica
+
+[33mcommit 0e4f61f7af7683bbdeb2f06f9290690753bac225[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Thu May 25 21:03:08 2023 -0300
+
+    Marcha sem interpolação funcional com joelho pro lado certo com problema de velocidade.
+
+[33mcommit 434fcb95249e4fc41e8e10f6fec85156fcf02860[m
+Author: Paulo <paulo.barbosa.botelho@gmail.com>
+Date:   Thu May 18 20:39:50 2023 -0300
+
+    limitação dos joelhos para não quebrar
+
+[33mcommit 903218c89963b129564f6229018137c3fa5a0325[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Thu May 11 21:01:01 2023 -0300
+
+    Solução burra de não conseguir chamar 2 marchas seguidas.
+
+[33mcommit c9f3f27e2afe6398aa1d09cafb7cde2f6a88823f[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Fri May 5 02:34:23 2023 -0300
+
+    Interpolação funcional, pronto para teste de marcha.
+
+[33mcommit 5f5674624e0588d410e1707735f7bccdb56a8707[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Thu May 4 21:58:45 2023 -0300
+
+    Tentativa de interpolação.
+
+[33mcommit c25056aa266fa92b9ce36b74d611aee95d34c55f[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Thu May 4 20:51:08 2023 -0300
+
+    Marcha funcional sem interpolação.
+
+[33mcommit f0ab454db0edc58ad4499b48cf093f98ae7e9d11[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Fri Apr 28 10:18:52 2023 -0300
+
+    Adição da pasta para movement_core.
+
+[33mcommit 19ca07308b288e86aacf72d11a7e139450be6fdc[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Thu Apr 27 21:35:54 2023 -0300
+
+    Código da marcha funcional.
+
+[33mcommit 57d24b5880e9773827ffe27be3f4ebc68b121270[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Wed Apr 26 22:13:54 2023 -0300
+
+    Removendo arquivos criados indevidamente nessa branch na pressa do VemPraUFU (page_creator), já está na devida branch.
+
+[33mcommit e543ccc30ab34fba27048532aeb2b23a1d47bd97[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Wed Apr 26 22:11:50 2023 -0300
+
+    Cinemática Inversa numérica funcional, remoção de pacotes iniciados antes da hora, alteração no .json da bioloid para mais complexo.
+
+[33mcommit 309e7394755baacf1a6f2b87ec68a3f96e0e9da4[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Mon Apr 24 19:14:04 2023 -0300
+
+    Códigos MATLAB para caminhada.
+
+[33mcommit 883da3dfe5fe2983688a34b300f1210678df778e[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Wed Apr 12 23:24:35 2023 -0300
+
+    Page para VemPraUfu.
+
+[33mcommit bfca459bf612f4cffa38c5b99bddf05c976fc6eb[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Wed Mar 22 22:37:17 2023 -0300
+
+    Início do desenvolvimento da marcha.
+
+[33mcommit 1dca2aa596f8e5c37b1be50ab8ed8189fe1f7758[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Tue Mar 21 16:33:50 2023 -0300
+
+    Adição dos motores invertidos, medidas da bioloid e alterações na mensagem de envio de posição aos motores.
+
+[33mcommit 0d11af7a84ebbfa79b380bacef1cbe3b0aa0a3aa[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Thu Mar 16 17:02:10 2023 -0300
+
+    Alteração na mensagem do ROS de feedback para que seja da tipagem correta para radianos.
+
+[33mcommit 3418447fb83fb606cd5383de261d9fc9aa32c636[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Wed Mar 15 14:13:30 2023 -0300
+
+    Código da cinemática inversa.
+
+[33mcommit c9f6f62928653f162935326c9a7c227f76b36ed8[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Sat Mar 11 01:47:53 2023 -0300
+
+    Adicionando anotações nos códigos para próximos trabalhos.
+
+[33mcommit 057b459af1873328983e99fd93ade66806d9eab6[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Sat Mar 11 01:38:02 2023 -0300
+
+    Adição da cinemática direta funcional, com teste no setup_robot.py.
+
+[33mcommit 494b418264200298c6c5e7a02115894f85c40028[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Fri Mar 10 22:07:46 2023 -0300
+
+    Alterações de QOL para o movimeto.
+
+[33mcommit ceca7f1ea86fe253fe50237cba6a3d77c6b75cd3[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Fri Mar 10 21:19:24 2023 -0300
+
+    Mudança do local dos arquivos de definição em código de uma robô humanoide para novo pacote mais relacionado, com fins de organização
+
+[33mcommit d93f8b9dc2f0c3b18509eb8bf39c61366f5ac983[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Thu Mar 9 19:57:40 2023 -0300
+
+    Importação de .json no código de setup de robô, além de descrição da nova robô em .json.
+
+[33mcommit c7ff7e005aa500bfe167b2a19c549971a638a0b0[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Mon Feb 13 17:18:51 2023 -0300
+
+    Criação da classe padrão para juntas e início da classe padrão para robô.
+
+[33mcommit 77052e3d364ca150665f6752ec5962a67bb86a9c[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Fri May 12 20:44:10 2023 -0300
+
+    Add files via upload
+
+[33mcommit 594040f27dba68bfbd3bd76f62c6b7f83b023e6f[m
+Merge: 8df837d 8b9d5e4
+Author: Iuri Reis <40905287+ooiuri@users.noreply.github.com>
+Date:   Tue Apr 4 00:14:53 2023 -0300
+
+    Merge pull request #9 from edromufu/eletrica/placa
+    
+    feat: adding placa da eletrica
+
+[33mcommit 8b9d5e4ecb00727c3d694559c4a3b15007367b65[m
+Author: Iuri Reis <oiuri@outlook.com>
+Date:   Tue Apr 4 00:02:18 2023 -0300
+
+    feat: adding placa da eletrica
+
+[33mcommit 8df837d6daf06d830c61440407f3e14457425ce3[m
+Merge: 3927a5f cbef4dd
+Author: Iuri Reis <40905287+ooiuri@users.noreply.github.com>
+Date:   Sat Mar 4 13:25:37 2023 -0300
+
+    Merge pull request #8 from edromufu/docs/docusaurus
+    
+    feat: updating SEO info
+
+[33mcommit cbef4ddf931a8e774771b8fa4f049d4ea168e117[m
+Author: Iuri Reis <oiuri@outlook.com>
+Date:   Sat Mar 4 13:19:53 2023 -0300
+
+    feat: updating SEO info
+
+[33mcommit 3927a5f80aac86a664ac9377074125fa3db9a48a[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Mon Feb 20 14:48:05 2023 -0300
+
+    Update doc_cuda.md
+
+[33mcommit d8a2ea6733a53ca19b2a6712a3ca279a5b8a968f[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Mon Feb 20 14:38:42 2023 -0300
+
+    Update running_inference.md
+
+[33mcommit 4a1990d0a7da246b8ba19f0064bffd345d10d826[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Mon Feb 20 14:37:48 2023 -0300
+
+    Update running_inference.py
+
+[33mcommit 42a63d6a416a09aad2b3add332876e44b3aae464[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Tue Feb 14 01:06:34 2023 -0300
+
+    Update mapeamento.md
+
+[33mcommit bbd49b624365c741832aec8c1a0fafcbecfcb8ab[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Tue Feb 14 01:02:42 2023 -0300
+
+    Update intro.md
+
+[33mcommit 98613f089f9ebaefa4dee42c0cad0a9aa3d5c4ba[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Tue Feb 14 00:59:41 2023 -0300
+
+    Update coming_soon.md
+
+[33mcommit 4146fb2400f0b18fe0eb18ad26caa2ab87a82551[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Tue Feb 14 00:56:21 2023 -0300
+
+    Update intro.md
+
+[33mcommit 4de9c6e5df4c3db42db5b21f74cd72aa1c346978[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Tue Feb 14 00:52:48 2023 -0300
+
+    Create coming_soon.md
+
+[33mcommit 99ff4163e9dad4a71320df343409bc83a4da6019[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Tue Feb 14 00:21:33 2023 -0300
+
+    retirando o resto das paginas padrões
+
+[33mcommit 0eb595b54d45c95ece43a57ba4bc0b350bc9c805[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Mon Feb 13 21:16:34 2023 -0300
+
+    correções de comandos vision e resumo
+
+[33mcommit 5b3efdc28014b0bfbd9aea75ba17215394b0db85[m
+Merge: 6743cf6 6293231
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Mon Feb 13 15:43:28 2023 -0300
+
+    Merge pull request #7 from edromufu/movement/u2d2-motors
+    
+    Movement/u2d2 motors
+
+[33mcommit 62932311a8993e6069d982853396f21df3715683[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Mon Feb 13 15:42:18 2023 -0300
+
+    Feedback em radiano para código da marcha.
+
+[33mcommit 6743cf65491b7a9a39a1387c54eee66d46f420c9[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Mon Feb 13 00:19:31 2023 -0300
+
+    create cmd_vision
+
+[33mcommit 50072a2a73a32a618a5deb11f3aa783e8d6be9fa[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Sun Feb 12 16:36:23 2023 -0300
+
+    Update docusaurus.config.js
+
+[33mcommit 2fd806a7419871f8719d4efea3b241cac0e37e79[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Sun Feb 12 16:12:36 2023 -0300
+
+    Update index.js
+
+[33mcommit 96e13c39324a007b32b08721f26bb304be004350[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Sun Feb 12 16:12:16 2023 -0300
+
+    Update logo-edrom.svg
+
+[33mcommit dc02cae7fa935093fd3a22b343ae0361149eb354[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Sun Feb 12 16:07:30 2023 -0300
+
+    Update index.js
+
+[33mcommit cd2063a23468175250aeb4fa83c50c2dda9a4906[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Sun Feb 12 16:02:51 2023 -0300
+
+    Update custom.css
+
+[33mcommit 1df357a96e17de675dbe636d1838472976ae1d09[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Sun Feb 12 15:58:13 2023 -0300
+
+    Update index.js
+
+[33mcommit 94cdcc741c30002c900b701872f24a8d2879f67c[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Sun Feb 12 15:50:33 2023 -0300
+
+    correçao de erros
+
+[33mcommit 011c8a1813f14a317ecc348cbfd00b8e35ddd80f[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Sun Feb 12 15:43:46 2023 -0300
+
+    Update index.js
+
+[33mcommit f213ff5b6e1cb124c9d121a8a41adc81761cb8d7[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Sun Feb 12 15:43:27 2023 -0300
+
+    Add files via upload
+
+[33mcommit b4b529dd13cbed8c07868e22d24222c4e07cc3f3[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Sun Feb 12 15:33:02 2023 -0300
+
+    Update index.js
+
+[33mcommit f11d33eca0d8b6c52056e32f106e345a9273b259[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Sun Feb 12 15:08:58 2023 -0300
+
+    Update index.js
+
+[33mcommit 5d29e2fefc1c33c27c74949629ec94fdc8890ad0[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Sun Feb 12 15:08:43 2023 -0300
+
+    Add files via upload
+
+[33mcommit 28861e8dc4b2c24dd7b64a43063d4a6df223253e[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Sun Feb 12 14:59:33 2023 -0300
+
+    Add imgs to site
+
+[33mcommit df6fb524954f31d55d450a42ce9e98a32d108979[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Sun Feb 12 14:52:23 2023 -0300
+
+    Update index.js
+
+[33mcommit 9adec1f088fe50566774859f9b6882a5a3a88029[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Sun Feb 12 12:16:05 2023 -0300
+
+    correção dos testes
+
+[33mcommit e941c71867b33c0e103a83d76941d301f854da78[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Sun Feb 12 12:13:11 2023 -0300
+
+    Correção de alguns erros e testes de url
+
+[33mcommit e3b27c54d90b8bd96165ac27ed7f95c54476370c[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Sun Feb 12 11:55:29 2023 -0300
+
+    Delete markdown-features.mdx
+
+[33mcommit 70e140beb34f3160a20640efa35401a5bdc22e56[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Sun Feb 12 11:53:07 2023 -0300
+
+    create docs dos codigos principais
+
+[33mcommit 17f231034873f071ab70ca4e38026344571708c7[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Sun Feb 12 10:11:36 2023 -0300
+
+    create robocup_videos
+
+[33mcommit df273c169fc271a6c60e8239cd90a9486f6a5d91[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Sun Feb 12 01:47:45 2023 -0300
+
+    correcoes doc treinamento
+
+[33mcommit 5808a50574a7ffcc5b5e1a8bba0b3a2131a6397b[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Sun Feb 12 01:41:13 2023 -0300
+
+    create doc treinamento
+
+[33mcommit c81a7a96264002b0a6434ed9f797d941c167d6fd[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Fri Feb 10 12:59:55 2023 -0300
+
+    create img to doc_cuda
+
+[33mcommit 557c0bc6b937712d477c69b5a38925b8fc83efe9[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Fri Feb 10 12:49:16 2023 -0300
+
+    Create doc_cuda.md
+
+[33mcommit 55ff784173b23324862823aefd305af1a1d57dd1[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Thu Feb 9 22:19:29 2023 -0300
+
+    Update resumo-visao.md
+
+[33mcommit f2c6e3b1ec6288a4b98e9423eb543070a5d800b8[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Thu Feb 9 22:18:50 2023 -0300
+
+    Update create-a-page.md
+
+[33mcommit 7279081badbe6cffd5663ce95838f470fb6f967a[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Thu Feb 9 22:18:22 2023 -0300
+
+    Update _category_.json
+
+[33mcommit df6432827d2de9d60026d29e91f124e763104584[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Thu Feb 9 22:12:12 2023 -0300
+
+    Update resumo-visao.md
+
+[33mcommit 5188ab91974b14e462d602f6a976a4efad60ded6[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Thu Feb 9 22:06:01 2023 -0300
+
+    Update resumo-visao.md
+
+[33mcommit cdac3731f13f9ecf6c09a46f9ebcfd763efbb8cf[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Thu Feb 9 21:57:01 2023 -0300
+
+    Update resumo-visao.md
+
+[33mcommit 0580dc36bc7374e828df764bf87f56450dec020a[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Thu Feb 9 21:49:29 2023 -0300
+
+    Create resumo-visao.md
+
+[33mcommit 697880aba1498c9f6fcf4363ef9c4ccc52d577a1[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Thu Feb 9 16:55:20 2023 -0300
+
+    Separando conversão de rad para posição de motor da função de enviar posição aos motores.
+
+[33mcommit 751e0eb69c207c381fc04e9985c3b662a5976dc0[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Wed Feb 8 21:10:55 2023 -0300
+
+    Envio de posição para motores em radianos.
+
+[33mcommit 2ff2b2e38c482c857f8349896881035074ceb54c[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Wed Feb 8 16:23:53 2023 -0300
+
+    Fix issue #5.
+
+[33mcommit 56ae1d4a2b85667d6f4ad993b3e2a63756ae7169[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Wed Feb 8 16:21:50 2023 -0300
+
+    Função para feedback das posições dos motores e checar movimento de motores integrada no código de comunicação com a U2D2 com ROS.
+
+[33mcommit 6b65566aed9a7be55372dd0c4696233444686a43[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Wed Feb 8 14:49:04 2023 -0300
+
+    Adicionando alterações realizadas durante testes iniciais na sede.
+
+[33mcommit b86f1274ebb2b17d81f05a2806b828ae7c2c1729[m
+Author: Lucas_Martins <110739318+Martins-Lucaas@users.noreply.github.com>
+Date:   Sat Jan 21 19:39:30 2023 -0300
+
+    Update README.md
+
+[33mcommit b24315b3df61bcdf8c317735a7cdf669448495fc[m
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Thu Jan 19 20:11:46 2023 -0300
+
+    Update create-a-page.md
+
+[33mcommit a9fdb14a170f8c35ece1c444a31ae7a5f40eaf88[m
+Merge: e3578ae 676f6d1
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Tue Jan 10 14:49:23 2023 -0300
+
+    Merge pull request #6 from edromufu/vision_check
+    
+    Vision check
+
+[33mcommit 676f6d18314e438ec55278deb1d4ec53fd0cdc27[m
+Author: Paulo <paulo.barbosa.botelho@gmail.com>
+Date:   Sun Dec 18 17:38:49 2022 -0300
+
+    código final da visão (testado com a camera da robo) - 18/12/2022
+
+[33mcommit 5cc5eea9b8cda287d46358d3eb20659b7ad0f3b1[m
+Author: Paulo <paulo.barbosa.botelho@gmail.com>
+Date:   Sun Dec 18 17:31:47 2022 -0300
+
+    código final da visão (testado com a camera da robo) - 18/12/2022
+
+[33mcommit e3578ae060e0f4b779a04ec29a9edf1c6a04cb91[m
+Merge: 5de8518 cf69355
+Author: Iuri Reis <40905287+ooiuri@users.noreply.github.com>
+Date:   Fri Dec 9 10:08:00 2022 -0300
+
+    Merge pull request #3 from edromufu/vision
+    
+    Remoção de pastas e scripts que não estavam sendo usados na visão atual
+
+[33mcommit d0e686511596c2dbb3881efcf3375b5196a4f911[m
+Merge: e5285b4 f0093b5
+Author: Paulo Henrique Barbosa Botelho <70411064+Paulo-Botelho@users.noreply.github.com>
+Date:   Fri Dec 9 00:48:26 2022 -0300
+
+    Merge pull request #4 from edromufu/docs/docusaurus
+    
+    Docs/docusaurus
+
+[33mcommit f0093b5e4b0f2d01316514611a9b3a16901ad7e2[m
+Author: Iuri Reis <oiuri@outlook.com>
+Date:   Fri Dec 9 00:40:17 2022 -0300
+
+    docs: fixing test deploy pipeline
+
+[33mcommit 943a6e8c6478efda159677802e734e5b79588324[m
+Author: Iuri Reis <oiuri@outlook.com>
+Date:   Fri Dec 9 00:34:30 2022 -0300
+
+    docs: adding edrom logo assets
+
+[33mcommit 5fe05c1941328e23dd9669eebf43de303d9d3376[m
+Author: Iuri Reis <oiuri@outlook.com>
+Date:   Fri Dec 9 00:13:43 2022 -0300
+
+    docs: fixing docusaurus path
+
+[33mcommit cf693556baa494183660e3de606d00ecc7cb0926[m
+Author: Paulo <paulo.barbosa.botelho@gmail.com>
+Date:   Thu Dec 8 22:05:35 2022 -0300
+
+    Remoção de pastas e scripts que não estavam sendo usados na visão atual. Atualização do código principal
+
+[33mcommit 87d52445498d144b196bf2b337b13e589915125c[m
+Author: Iuri Reis <oiuri@outlook.com>
+Date:   Thu Dec 8 18:56:28 2022 -0300
+
+    docs: updating baseUrl
+
+[33mcommit 6f2a5cfcbc2178aa8aaf3489b36241641f6e3666[m
+Author: Iuri Reis <oiuri@outlook.com>
+Date:   Thu Dec 8 18:40:52 2022 -0300
+
+    docs: changing to docusaurus action
+
+[33mcommit 4efefe124f96a042e031a16bae866f8060103726[m
+Author: Iuri Reis <oiuri@outlook.com>
+Date:   Thu Dec 8 18:31:34 2022 -0300
+
+    docs: changing ref to master
+
+[33mcommit e5285b48d00c726808db4d0d4aa5a3d88f28df40[m
+Merge: 5de8518 6cb11f9
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Thu Dec 8 18:21:56 2022 -0300
+
+    Merge pull request #1 from edromufu/docs/docusaurus
+    
+    Docs/docusaurus
+
+[33mcommit 6cb11f911a13f51a7eefa566da9d1b28f61685e3[m
+Author: Iuri Reis <oiuri@outlook.com>
+Date:   Thu Dec 8 18:08:44 2022 -0300
+
+    docs: bump node version from 14 to 16
+
+[33mcommit 83a24afcd909d4c8ad7ae4b53e8faac1864f6f99[m
+Author: Iuri Reis <oiuri@outlook.com>
+Date:   Thu Dec 8 18:05:53 2022 -0300
+
+    docs: changing edrom-docs
+
+[33mcommit d21c3b270afab7b6efe5b2b85f15d6f4c6bb6566[m
+Author: Iuri Reis <oiuri@outlook.com>
+Date:   Thu Dec 8 18:03:45 2022 -0300
+
+    docs: fixing action to github pages
+
+[33mcommit c2dbe9e0b51d2401b6053a0331650c473f42b474[m
+Author: Iuri Reis <oiuri@outlook.com>
+Date:   Thu Dec 8 18:01:42 2022 -0300
+
+    docs: fixing action to github pages
+
+[33mcommit e8c5e1eb75741f8d8a47f7b7eb4c59ee4f7e5009[m
+Author: Iuri Reis <oiuri@outlook.com>
+Date:   Thu Dec 8 17:58:18 2022 -0300
+
+    docs: adding action to github pages
+
+[33mcommit f06b08932c2ba1d9b5877378c5d69cf29dc29059[m
+Author: Iuri Reis <oiuri@outlook.com>
+Date:   Thu Dec 8 17:49:59 2022 -0300
+
+    docs: initial docusaurus
+
+[33mcommit 5de8518719daf35609a8fc8443b7758eefbee0e0[m
+Author: Luis Costa <lipemenezescosta@gmail.com>
+Date:   Thu Dec 8 17:34:39 2022 -0300
+
+    Projeto até LARC 2022.
+
+[33mcommit 43903983e6fd5b22afef0e234039c18024dad64c[m
+Author: edromufu <81195706+edromufu@users.noreply.github.com>
+Date:   Thu Dec 8 17:19:55 2022 -0300
+
+    Initial commit
