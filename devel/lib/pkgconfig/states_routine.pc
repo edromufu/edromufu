@@ -1,0 +1,8 @@
+prefix=/home/edrom/edromufu/devel
+
+Name: states_routine
+Description: Description of states_routine
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

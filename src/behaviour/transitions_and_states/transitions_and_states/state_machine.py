@@ -19,6 +19,18 @@ GAME_STATE_READY = 1
 GAME_STATE_SET = 2
 GAME_STATE_PLAYING = 3
 GAME_STATE_FINISHED = 4
+#Parametros para GC completo
+"""STATE_NORMAL=0,
+                             STATE_PENALTYSHOOT=1,
+                             STATE_OVERTIME=2,
+                             STATE_TIMEOUT=3,
+                             STATE_DIRECT_FREEKICK=4,
+                             STATE_INDIRECT_FREEKICK=5,
+                             STATE_PENALTYKICK=6,
+                             STATE_CORNERKICK=7,
+                             STATE_GOALKICK=8,
+                             STATE_THROWIN=9,
+                             DROPBALL=128,"""
 
 edrom_dir = '/home/' + os.getlogin() + '/edromufu/src/'
 
@@ -66,6 +78,9 @@ class StateMachine():
             {'trigger': 'got_to_stand_still', 'source': '*', 'dest': 'impossible',
              'conditions': 'impossible_condition'}
         ]
+        #go_to penalty_kick
+
+        #go_to_start_game
 
         all_transitions = (go_to_walking_transitions
                            + go_to_getting_up_transitions + go_to_stand_still_transitions
@@ -121,7 +136,8 @@ class StateMachine():
         else:
             print('Aguardando o GameController para transicionar...')
             return False
-
+        #elif self.start_game == GAME_STATE_INITIAL:
+            #print("Estado Inicial do GameController, aguardando...\n--
     ########################################FUNÇÕES UPDATE CONDITION########################################
 
     def getting_up_condition_update(self, fall_state):

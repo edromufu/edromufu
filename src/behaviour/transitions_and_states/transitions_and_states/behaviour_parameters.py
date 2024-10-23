@@ -29,9 +29,11 @@ class BehaviourParameters():
 
         #Tópico do ROS IMU
         #Muda esse tópico igual gyro
+        #Tópico para o ROLL
         self.imuAccelTopic = '/behaviour/imu_accel'
 
         #Só da para arrumar com robo pronta
+        
         self.xGravitySecurity = 6 #Valor absoluto do qual a medida de x deve estar para queda
         self.xSensorFront     = 6 #Valor abaixo do qual a medida de x deve estar para queda de frente                           
         self.xSensorBack      = -6  #Valor acima do qual a medida de x deve estar para queda de costas                               

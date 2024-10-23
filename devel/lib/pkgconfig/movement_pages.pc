@@ -1,0 +1,8 @@
+prefix=/home/edrom/edromufu/devel
+
+Name: movement_pages
+Description: Description of movement_pages
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

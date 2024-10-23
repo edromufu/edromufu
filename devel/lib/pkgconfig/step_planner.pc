@@ -1,0 +1,8 @@
+prefix=/home/edrom/edromufu/devel
+
+Name: step_planner
+Description: Description of step_planner
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

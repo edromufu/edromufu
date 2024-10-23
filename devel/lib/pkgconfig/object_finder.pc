@@ -1,0 +1,8 @@
+prefix=/home/edrom/edromufu/devel
+
+Name: object_finder
+Description: Description of object_finder
+Version: 0.0.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: rospy message_runtime

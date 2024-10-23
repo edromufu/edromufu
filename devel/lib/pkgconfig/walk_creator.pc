@@ -1,0 +1,8 @@
+prefix=/home/edrom/edromufu/devel
+
+Name: walk_creator
+Description: Description of walk_creator
+Version: 0.0.0
+Cflags: -I/home/edrom/edromufu/src/movement/walk_creator/include
+Libs: -L${prefix}/lib -lwalk_creator
+Requires: roscpp

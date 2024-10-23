@@ -18,33 +18,53 @@ class ImuReader(Node):
         
         self.parameters = BehaviourParameters()
 
+            #
+            #pub para 
+                #AcX:
+                #AcY:
+                #AcZ:
+                #GyX:
+                #GyY:
+                #GyZ:
+                #RollC
+
         self.accelPub = self.create_publisher(Vector3, self.parameters.imuAccelTopic, 10)
         self.accelMsg = Vector3()
         self.gyroPub = self.create_publisher(Vector3, self.parameters.imuGyroTopic, 10)
         self.gyroMsg = Vector3()
-        
+
+        """
+        Isso não vai precisar mais
         self.imu = serial.Serial(self.get_parameter('imu_ros_arduino_port').get_parameter_value().string_value, 115200)
         self.create_timer(0.1, self.read_imu_data)
+        """
 
     def read_imu_data(self):
-        try:
-            if self.imu.inWaiting():
-                imu_output = self.imu.readline()
-                imu_output = imu_output.strip().split()
-                imu_output = [float(string) for string in imu_output]
+
+        imu_output = self.imu.readline()
+        imu_output = imu_output.strip().split()
+        imu_output = [float(string) for string in imu_output]
                 
-                if max(imu_output) < 10 and min(imu_output) > -10:
-                    self.accelMsg.x = imu_output[0]
-                    self.accelMsg.y = imu_output[1]
-                    self.accelMsg.z = imu_output[2]
+        if max(imu_output) < 10 and min(imu_output) > -10:
+
+            #mandar os valores atuais testar na áurea
+            self.accelMsg.x = imu_output[0]
+            self.accelMsg.y = imu_output[1]
+            self.accelMsg.z = imu_output[2]
+            #self. #AcX:
+                #AcY:
+                #AcZ:
+                #GyX:
+                #GyY:
+                #GyZ:
+                #RollC
                     
-                    self.accelPub.publish(self.accelMsg)
+        # essa msg não existe mis elf.accelPub.publish(self.accelMsg)
 
-        except Exception as e:
-            pass
-
+"""
     def close_serial(self):
         self.imu.close()
+"""
 
 def main(args=None):
     rclpy.init(args=args)
