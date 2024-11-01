@@ -65,15 +65,15 @@ class BehaviourParameters():
         self.vision2BhvTopic = '/vision/vision_inference'
 #######################################################Camera nova###############################3
         #Parâmetros da câmera
-        #Conferir com o Leo a camera nova
-        self.cameraWidth =  416
-        self.cameraHeight = 416
+        self.cameraWidth = 640
+        self.cameraHeight = 480
 
         #Parâmetros de interpretação da câmera
         self.xCenterLeftLimit = 4*self.cameraWidth/10
         self.xCenterRightLimit = 6*self.cameraWidth/10
         self.yCenterBottomLimit = 6*self.cameraHeight/10
         self.yCenterTopLimit = 4*self.cameraHeight/10
+        self.zCenterLimit = 0.8 # Altura da robô (Distancia que a bola esta da camera)
 
         self.closeSize = 80*80
 
