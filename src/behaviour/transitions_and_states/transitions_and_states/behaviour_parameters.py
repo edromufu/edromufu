@@ -29,9 +29,11 @@ class BehaviourParameters():
 
         #Tópico do ROS IMU
         #Muda esse tópico igual gyro
+        #Tópico para o ROLL
         self.imuAccelTopic = '/behaviour/imu_accel'
 
         #Só da para arrumar com robo pronta
+        
         self.xGravitySecurity = 6 #Valor absoluto do qual a medida de x deve estar para queda
         self.xSensorFront     = 6 #Valor abaixo do qual a medida de x deve estar para queda de frente                           
         self.xSensorBack      = -6  #Valor acima do qual a medida de x deve estar para queda de costas                               
@@ -63,15 +65,15 @@ class BehaviourParameters():
         self.vision2BhvTopic = '/vision/vision_inference'
 #######################################################Camera nova###############################3
         #Parâmetros da câmera
-        #Conferir com o Leo a camera nova
-        self.cameraWidth =  416
-        self.cameraHeight = 416
+        self.cameraWidth = 640
+        self.cameraHeight = 480
 
         #Parâmetros de interpretação da câmera
         self.xCenterLeftLimit = 4*self.cameraWidth/10
         self.xCenterRightLimit = 6*self.cameraWidth/10
         self.yCenterBottomLimit = 6*self.cameraHeight/10
         self.yCenterTopLimit = 4*self.cameraHeight/10
+        self.zCenterLimit = 0.8 # Altura da robô (Distancia que a bola esta da camera)
 
         self.closeSize = 80*80
 

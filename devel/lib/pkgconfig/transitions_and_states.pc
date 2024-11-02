@@ -1,0 +1,8 @@
+prefix=/home/edrom/edromufu/devel
+
+Name: transitions_and_states
+Description: Description of transitions_and_states
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
