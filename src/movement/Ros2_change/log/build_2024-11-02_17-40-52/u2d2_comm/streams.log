@@ -1,0 +1,23 @@
+[0.676s] Invoking command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/src/u2d2_comm': AMENT_PREFIX_PATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/movement_utils:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/movement_utils LD_LIBRARY_PATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/movement_utils/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/build/u2d2_comm/prefix_override:/home/edrom-mini/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages:/home/edrom-mini/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/u2d2_comm build --build-base /home/edrom-mini/edromufu/src/movement/Ros2_change/build/u2d2_comm/build install --record /home/edrom-mini/edromufu/src/movement/Ros2_change/build/u2d2_comm/install.log --single-version-externally-managed install_data
+[0.929s] running egg_info
+[0.930s] writing ../../build/u2d2_comm/u2d2_comm.egg-info/PKG-INFO
+[0.930s] writing dependency_links to ../../build/u2d2_comm/u2d2_comm.egg-info/dependency_links.txt
+[0.930s] writing entry points to ../../build/u2d2_comm/u2d2_comm.egg-info/entry_points.txt
+[0.931s] writing requirements to ../../build/u2d2_comm/u2d2_comm.egg-info/requires.txt
+[0.931s] writing top-level names to ../../build/u2d2_comm/u2d2_comm.egg-info/top_level.txt
+[0.932s] reading manifest file '../../build/u2d2_comm/u2d2_comm.egg-info/SOURCES.txt'
+[0.933s] adding license file 'LICENSE'
+[0.933s] writing manifest file '../../build/u2d2_comm/u2d2_comm.egg-info/SOURCES.txt'
+[0.933s] running build
+[0.934s] running build_py
+[0.934s] running install
+[0.934s] running install_lib
+[0.936s] running install_data
+[0.936s] running install_egg_info
+[0.939s] removing '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages/u2d2_comm-0.0.0-py3.10.egg-info' (and everything under it)
+[0.939s] Copying ../../build/u2d2_comm/u2d2_comm.egg-info to /home/edrom-mini/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages/u2d2_comm-0.0.0-py3.10.egg-info
+[0.940s] running install_scripts
+[0.965s] Installing dynamixel_sdk_comm script to /home/edrom-mini/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/u2d2_comm
+[0.965s] Installing dynamixel_sdk_test script to /home/edrom-mini/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/u2d2_comm
+[0.965s] writing list of installed files to '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/u2d2_comm/install.log'
+[0.999s] Invoked command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/src/u2d2_comm' returned '0': AMENT_PREFIX_PATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/movement_utils:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/movement_utils LD_LIBRARY_PATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/movement_utils/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/build/u2d2_comm/prefix_override:/home/edrom-mini/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages:/home/edrom-mini/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/u2d2_comm build --build-base /home/edrom-mini/edromufu/src/movement/Ros2_change/build/u2d2_comm/build install --record /home/edrom-mini/edromufu/src/movement/Ros2_change/build/u2d2_comm/install.log --single-version-externally-managed install_data

@@ -1,0 +1,6 @@
+source;share/tinyxml2/hook/cmake_prefix_path.ps1
+source;share/tinyxml2/hook/cmake_prefix_path.dsv
+source;share/tinyxml2/hook/cmake_prefix_path.sh
+source;share/tinyxml2/hook/pkg_config.ps1
+source;share/tinyxml2/hook/pkg_config.dsv
+source;share/tinyxml2/hook/pkg_config.sh

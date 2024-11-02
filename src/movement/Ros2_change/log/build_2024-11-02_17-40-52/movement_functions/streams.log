@@ -1,0 +1,20 @@
+[1.026s] Invoking command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/src/movement_functions': AMENT_PREFIX_PATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/kinematic_functions:${AMENT_PREFIX_PATH} PYTHONPATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/build/movement_functions/prefix_override:/home/edrom-mini/edromufu/src/movement/Ros2_change/install/movement_functions/lib/python3.10/site-packages:/home/edrom-mini/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/movement_functions build --build-base /home/edrom-mini/edromufu/src/movement/Ros2_change/build/movement_functions/build install --record /home/edrom-mini/edromufu/src/movement/Ros2_change/build/movement_functions/install.log --single-version-externally-managed install_data
+[1.362s] running egg_info
+[1.363s] writing ../../build/movement_functions/movement_functions.egg-info/PKG-INFO
+[1.364s] writing dependency_links to ../../build/movement_functions/movement_functions.egg-info/dependency_links.txt
+[1.364s] writing entry points to ../../build/movement_functions/movement_functions.egg-info/entry_points.txt
+[1.364s] writing requirements to ../../build/movement_functions/movement_functions.egg-info/requires.txt
+[1.364s] writing top-level names to ../../build/movement_functions/movement_functions.egg-info/top_level.txt
+[1.367s] reading manifest file '../../build/movement_functions/movement_functions.egg-info/SOURCES.txt'
+[1.368s] writing manifest file '../../build/movement_functions/movement_functions.egg-info/SOURCES.txt'
+[1.368s] running build
+[1.368s] running build_py
+[1.369s] running install
+[1.369s] running install_lib
+[1.371s] running install_data
+[1.372s] running install_egg_info
+[1.374s] removing '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/movement_functions/lib/python3.10/site-packages/movement_functions-0.0.0-py3.10.egg-info' (and everything under it)
+[1.374s] Copying ../../build/movement_functions/movement_functions.egg-info to /home/edrom-mini/edromufu/src/movement/Ros2_change/install/movement_functions/lib/python3.10/site-packages/movement_functions-0.0.0-py3.10.egg-info
+[1.376s] running install_scripts
+[1.409s] writing list of installed files to '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/movement_functions/install.log'
+[1.449s] Invoked command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/src/movement_functions' returned '0': AMENT_PREFIX_PATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/kinematic_functions:${AMENT_PREFIX_PATH} PYTHONPATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/build/movement_functions/prefix_override:/home/edrom-mini/edromufu/src/movement/Ros2_change/install/movement_functions/lib/python3.10/site-packages:/home/edrom-mini/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/movement_functions build --build-base /home/edrom-mini/edromufu/src/movement/Ros2_change/build/movement_functions/build install --record /home/edrom-mini/edromufu/src/movement/Ros2_change/build/movement_functions/install.log --single-version-externally-managed install_data

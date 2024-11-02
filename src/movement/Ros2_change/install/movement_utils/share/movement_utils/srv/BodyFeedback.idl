@@ -1,0 +1,16 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from movement_utils/srv/BodyFeedback.srv
+// generated code does not contain a copyright notice
+
+
+module movement_utils {
+  module srv {
+    struct BodyFeedback_Request {
+      boolean dont_use;
+    };
+    typedef float float__18[18];
+    struct BodyFeedback_Response {
+      float__18 pos_vector;
+    };
+  };
+};

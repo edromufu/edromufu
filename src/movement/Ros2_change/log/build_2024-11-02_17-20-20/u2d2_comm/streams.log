@@ -1,0 +1,42 @@
+[0.845s] Invoking command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/src/u2d2_comm': AMENT_PREFIX_PATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/movement_utils:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/movement_utils LD_LIBRARY_PATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/movement_utils/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/build/u2d2_comm/prefix_override:/home/edrom-mini/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages:/home/edrom-mini/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/u2d2_comm build --build-base /home/edrom-mini/edromufu/src/movement/Ros2_change/build/u2d2_comm/build install --record /home/edrom-mini/edromufu/src/movement/Ros2_change/build/u2d2_comm/install.log --single-version-externally-managed install_data
+[1.104s] running egg_info
+[1.105s] creating ../../build/u2d2_comm/u2d2_comm.egg-info
+[1.106s] writing ../../build/u2d2_comm/u2d2_comm.egg-info/PKG-INFO
+[1.106s] writing dependency_links to ../../build/u2d2_comm/u2d2_comm.egg-info/dependency_links.txt
+[1.106s] writing entry points to ../../build/u2d2_comm/u2d2_comm.egg-info/entry_points.txt
+[1.106s] writing requirements to ../../build/u2d2_comm/u2d2_comm.egg-info/requires.txt
+[1.106s] writing top-level names to ../../build/u2d2_comm/u2d2_comm.egg-info/top_level.txt
+[1.106s] writing manifest file '../../build/u2d2_comm/u2d2_comm.egg-info/SOURCES.txt'
+[1.108s] reading manifest file '../../build/u2d2_comm/u2d2_comm.egg-info/SOURCES.txt'
+[1.108s] adding license file 'LICENSE'
+[1.109s] writing manifest file '../../build/u2d2_comm/u2d2_comm.egg-info/SOURCES.txt'
+[1.109s] running build
+[1.109s] running build_py
+[1.109s] creating /home/edrom-mini/edromufu/src/movement/Ros2_change/build/u2d2_comm/build
+[1.109s] creating /home/edrom-mini/edromufu/src/movement/Ros2_change/build/u2d2_comm/build/lib
+[1.110s] creating /home/edrom-mini/edromufu/src/movement/Ros2_change/build/u2d2_comm/build/lib/u2d2_comm
+[1.110s] copying u2d2_comm/__init__.py -> /home/edrom-mini/edromufu/src/movement/Ros2_change/build/u2d2_comm/build/lib/u2d2_comm
+[1.110s] copying u2d2_comm/dynamixel_sdk_test.py -> /home/edrom-mini/edromufu/src/movement/Ros2_change/build/u2d2_comm/build/lib/u2d2_comm
+[1.110s] copying u2d2_comm/dynamixel_sdk_comm.py -> /home/edrom-mini/edromufu/src/movement/Ros2_change/build/u2d2_comm/build/lib/u2d2_comm
+[1.110s] running install
+[1.111s] running install_lib
+[1.112s] creating /home/edrom-mini/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages/u2d2_comm
+[1.112s] copying /home/edrom-mini/edromufu/src/movement/Ros2_change/build/u2d2_comm/build/lib/u2d2_comm/__init__.py -> /home/edrom-mini/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages/u2d2_comm
+[1.112s] copying /home/edrom-mini/edromufu/src/movement/Ros2_change/build/u2d2_comm/build/lib/u2d2_comm/dynamixel_sdk_test.py -> /home/edrom-mini/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages/u2d2_comm
+[1.112s] copying /home/edrom-mini/edromufu/src/movement/Ros2_change/build/u2d2_comm/build/lib/u2d2_comm/dynamixel_sdk_comm.py -> /home/edrom-mini/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages/u2d2_comm
+[1.113s] byte-compiling /home/edrom-mini/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages/u2d2_comm/__init__.py to __init__.cpython-310.pyc
+[1.113s] byte-compiling /home/edrom-mini/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages/u2d2_comm/dynamixel_sdk_test.py to dynamixel_sdk_test.cpython-310.pyc
+[1.114s] byte-compiling /home/edrom-mini/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages/u2d2_comm/dynamixel_sdk_comm.py to dynamixel_sdk_comm.cpython-310.pyc
+[1.116s] running install_data
+[1.116s] creating /home/edrom-mini/edromufu/src/movement/Ros2_change/install/u2d2_comm/share/ament_index
+[1.116s] creating /home/edrom-mini/edromufu/src/movement/Ros2_change/install/u2d2_comm/share/ament_index/resource_index
+[1.116s] creating /home/edrom-mini/edromufu/src/movement/Ros2_change/install/u2d2_comm/share/ament_index/resource_index/packages
+[1.116s] copying resource/u2d2_comm -> /home/edrom-mini/edromufu/src/movement/Ros2_change/install/u2d2_comm/share/ament_index/resource_index/packages
+[1.116s] copying package.xml -> /home/edrom-mini/edromufu/src/movement/Ros2_change/install/u2d2_comm/share/u2d2_comm
+[1.117s] running install_egg_info
+[1.120s] Copying ../../build/u2d2_comm/u2d2_comm.egg-info to /home/edrom-mini/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages/u2d2_comm-0.0.0-py3.10.egg-info
+[1.120s] running install_scripts
+[1.143s] Installing dynamixel_sdk_comm script to /home/edrom-mini/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/u2d2_comm
+[1.143s] Installing dynamixel_sdk_test script to /home/edrom-mini/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/u2d2_comm
+[1.144s] writing list of installed files to '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/u2d2_comm/install.log'
+[1.176s] Invoked command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/src/u2d2_comm' returned '0': AMENT_PREFIX_PATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/movement_utils:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/movement_utils LD_LIBRARY_PATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/movement_utils/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/build/u2d2_comm/prefix_override:/home/edrom-mini/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages:/home/edrom-mini/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/u2d2_comm build --build-base /home/edrom-mini/edromufu/src/movement/Ros2_change/build/u2d2_comm/build install --record /home/edrom-mini/edromufu/src/movement/Ros2_change/build/u2d2_comm/install.log --single-version-externally-managed install_data

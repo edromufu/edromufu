@@ -1,0 +1,31 @@
+-- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found rosidl_cmake: 3.1.5 (/opt/ros/humble/share/rosidl_cmake/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found fastrtps_cmake_module: 2.2.2 (/opt/ros/humble/share/fastrtps_cmake_module/cmake)
+-- Found rmw_dds_common: 1.6.0 (/opt/ros/humble/share/rmw_dds_common/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_fastrtps_shared_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_shared_cpp/cmake)
+-- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Found ament_cmake_gtest: 1.3.8 (/opt/ros/humble/share/ament_cmake_gtest/cmake)
+[31mCMake Error at CMakeLists.txt:51 (find_package):
+  By not providing "Findmicro_ros_msgs.cmake" in CMAKE_MODULE_PATH this
+  project has asked CMake to find a package configuration file provided by
+  "micro_ros_msgs", but CMake did not find one.
+
+  Could not find a package configuration file provided by "micro_ros_msgs"
+  with any of the following names:
+
+    micro_ros_msgsConfig.cmake
+    micro_ros_msgs-config.cmake
+
+  Add the installation prefix of "micro_ros_msgs" to CMAKE_PREFIX_PATH or set
+  "micro_ros_msgs_DIR" to a directory containing one of the above files.  If
+  "micro_ros_msgs" provides a separate development package or SDK, be sure it
+  has been installed.
+
+[0m
+-- Configuring incomplete, errors occurred!
+gmake: *** [Makefile:166: cmake_check_build_system] Error 1

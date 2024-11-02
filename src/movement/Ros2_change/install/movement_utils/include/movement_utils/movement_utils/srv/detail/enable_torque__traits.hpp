@@ -1,0 +1,294 @@
+// generated from rosidl_generator_cpp/resource/idl__traits.hpp.em
+// with input from movement_utils:srv/EnableTorque.idl
+// generated code does not contain a copyright notice
+
+#ifndef MOVEMENT_UTILS__SRV__DETAIL__ENABLE_TORQUE__TRAITS_HPP_
+#define MOVEMENT_UTILS__SRV__DETAIL__ENABLE_TORQUE__TRAITS_HPP_
+
+#include <stdint.h>
+
+#include <sstream>
+#include <string>
+#include <type_traits>
+
+#include "movement_utils/srv/detail/enable_torque__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
+
+namespace movement_utils
+{
+
+namespace srv
+{
+
+inline void to_flow_style_yaml(
+  const EnableTorque_Request & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: data
+  {
+    out << "data: ";
+    rosidl_generator_traits::value_to_yaml(msg.data, out);
+    out << ", ";
+  }
+
+  // member: motor_ids
+  {
+    if (msg.motor_ids.size() == 0) {
+      out << "motor_ids: []";
+    } else {
+      out << "motor_ids: [";
+      size_t pending_items = msg.motor_ids.size();
+      for (auto item : msg.motor_ids) {
+        rosidl_generator_traits::value_to_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const EnableTorque_Request & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  // member: data
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "data: ";
+    rosidl_generator_traits::value_to_yaml(msg.data, out);
+    out << "\n";
+  }
+
+  // member: motor_ids
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    if (msg.motor_ids.size() == 0) {
+      out << "motor_ids: []\n";
+    } else {
+      out << "motor_ids:\n";
+      for (auto item : msg.motor_ids) {
+        if (indentation > 0) {
+          out << std::string(indentation, ' ');
+        }
+        out << "- ";
+        rosidl_generator_traits::value_to_yaml(item, out);
+        out << "\n";
+      }
+    }
+  }
+}  // NOLINT(readability/fn_size)
+
+inline std::string to_yaml(const EnableTorque_Request & msg, bool use_flow_style = false)
+{
+  std::ostringstream out;
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
+  return out.str();
+}
+
+}  // namespace srv
+
+}  // namespace movement_utils
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use movement_utils::srv::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const movement_utils::srv::EnableTorque_Request & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  movement_utils::srv::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use movement_utils::srv::to_yaml() instead")]]
+inline std::string to_yaml(const movement_utils::srv::EnableTorque_Request & msg)
+{
+  return movement_utils::srv::to_yaml(msg);
+}
+
+template<>
+inline const char * data_type<movement_utils::srv::EnableTorque_Request>()
+{
+  return "movement_utils::srv::EnableTorque_Request";
+}
+
+template<>
+inline const char * name<movement_utils::srv::EnableTorque_Request>()
+{
+  return "movement_utils/srv/EnableTorque_Request";
+}
+
+template<>
+struct has_fixed_size<movement_utils::srv::EnableTorque_Request>
+  : std::integral_constant<bool, false> {};
+
+template<>
+struct has_bounded_size<movement_utils::srv::EnableTorque_Request>
+  : std::integral_constant<bool, false> {};
+
+template<>
+struct is_message<movement_utils::srv::EnableTorque_Request>
+  : std::true_type {};
+
+}  // namespace rosidl_generator_traits
+
+namespace movement_utils
+{
+
+namespace srv
+{
+
+inline void to_flow_style_yaml(
+  const EnableTorque_Response & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: success
+  {
+    out << "success: ";
+    rosidl_generator_traits::value_to_yaml(msg.success, out);
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const EnableTorque_Response & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  // member: success
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "success: ";
+    rosidl_generator_traits::value_to_yaml(msg.success, out);
+    out << "\n";
+  }
+}  // NOLINT(readability/fn_size)
+
+inline std::string to_yaml(const EnableTorque_Response & msg, bool use_flow_style = false)
+{
+  std::ostringstream out;
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
+  return out.str();
+}
+
+}  // namespace srv
+
+}  // namespace movement_utils
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use movement_utils::srv::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const movement_utils::srv::EnableTorque_Response & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  movement_utils::srv::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use movement_utils::srv::to_yaml() instead")]]
+inline std::string to_yaml(const movement_utils::srv::EnableTorque_Response & msg)
+{
+  return movement_utils::srv::to_yaml(msg);
+}
+
+template<>
+inline const char * data_type<movement_utils::srv::EnableTorque_Response>()
+{
+  return "movement_utils::srv::EnableTorque_Response";
+}
+
+template<>
+inline const char * name<movement_utils::srv::EnableTorque_Response>()
+{
+  return "movement_utils/srv/EnableTorque_Response";
+}
+
+template<>
+struct has_fixed_size<movement_utils::srv::EnableTorque_Response>
+  : std::integral_constant<bool, true> {};
+
+template<>
+struct has_bounded_size<movement_utils::srv::EnableTorque_Response>
+  : std::integral_constant<bool, true> {};
+
+template<>
+struct is_message<movement_utils::srv::EnableTorque_Response>
+  : std::true_type {};
+
+}  // namespace rosidl_generator_traits
+
+namespace rosidl_generator_traits
+{
+
+template<>
+inline const char * data_type<movement_utils::srv::EnableTorque>()
+{
+  return "movement_utils::srv::EnableTorque";
+}
+
+template<>
+inline const char * name<movement_utils::srv::EnableTorque>()
+{
+  return "movement_utils/srv/EnableTorque";
+}
+
+template<>
+struct has_fixed_size<movement_utils::srv::EnableTorque>
+  : std::integral_constant<
+    bool,
+    has_fixed_size<movement_utils::srv::EnableTorque_Request>::value &&
+    has_fixed_size<movement_utils::srv::EnableTorque_Response>::value
+  >
+{
+};
+
+template<>
+struct has_bounded_size<movement_utils::srv::EnableTorque>
+  : std::integral_constant<
+    bool,
+    has_bounded_size<movement_utils::srv::EnableTorque_Request>::value &&
+    has_bounded_size<movement_utils::srv::EnableTorque_Response>::value
+  >
+{
+};
+
+template<>
+struct is_service<movement_utils::srv::EnableTorque>
+  : std::true_type
+{
+};
+
+template<>
+struct is_service_request<movement_utils::srv::EnableTorque_Request>
+  : std::true_type
+{
+};
+
+template<>
+struct is_service_response<movement_utils::srv::EnableTorque_Response>
+  : std::true_type
+{
+};
+
+}  // namespace rosidl_generator_traits
+
+#endif  // MOVEMENT_UTILS__SRV__DETAIL__ENABLE_TORQUE__TRAITS_HPP_
