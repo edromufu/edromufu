@@ -25,13 +25,13 @@ _colcon_package_bash_source_script() {
 }
 
 # source sh script of this package
-_colcon_package_bash_source_script "$_colcon_package_bash_COLCON_CURRENT_PREFIX/share/micro_ros_agent/package.sh"
+_colcon_package_bash_source_script "$_colcon_package_bash_COLCON_CURRENT_PREFIX/share/micro_ros_msgs/package.sh"
 
 # setting COLCON_CURRENT_PREFIX avoids determining the prefix in the sourced scripts
 COLCON_CURRENT_PREFIX="$_colcon_package_bash_COLCON_CURRENT_PREFIX"
 
 # source bash hooks
-_colcon_package_bash_source_script "$COLCON_CURRENT_PREFIX/share/micro_ros_agent/local_setup.bash"
+_colcon_package_bash_source_script "$COLCON_CURRENT_PREFIX/share/micro_ros_msgs/local_setup.bash"
 
 unset COLCON_CURRENT_PREFIX
 

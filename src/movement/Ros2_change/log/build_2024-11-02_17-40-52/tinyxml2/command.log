@@ -1,4 +1,0 @@
-Invoking command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/tinyxml2': /home/edrom-mini/.local/bin/cmake --build /home/edrom-mini/edromufu/src/movement/Ros2_change/build/tinyxml2 -- -j4 -l4
-Invoked command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/tinyxml2' returned '0': /home/edrom-mini/.local/bin/cmake --build /home/edrom-mini/edromufu/src/movement/Ros2_change/build/tinyxml2 -- -j4 -l4
-Invoking command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/tinyxml2': /home/edrom-mini/.local/bin/cmake --install /home/edrom-mini/edromufu/src/movement/Ros2_change/build/tinyxml2
-Invoked command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/tinyxml2' returned '0': /home/edrom-mini/.local/bin/cmake --install /home/edrom-mini/edromufu/src/movement/Ros2_change/build/tinyxml2

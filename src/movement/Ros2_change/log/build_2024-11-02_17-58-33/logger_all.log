@@ -1,0 +1,334 @@
+[0.102s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.102s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7e6278d06830>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7e6278d06260>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7e6278d06260>>, mixin_verb=('build',))
+[0.262s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.262s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.262s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.262s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.262s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.262s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.262s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/edrom-mini/edromufu/src/movement/Ros2_change'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/Tinyxml2) by extensions ['ignore', 'ignore_ament_install']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/Tinyxml2) by extension 'ignore'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/Tinyxml2) by extension 'ignore_ament_install'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/Tinyxml2) by extensions ['colcon_pkg']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/Tinyxml2) by extension 'colcon_pkg'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/Tinyxml2) by extensions ['colcon_meta']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/Tinyxml2) by extension 'colcon_meta'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/Tinyxml2) by extensions ['ros']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/Tinyxml2) by extension 'ros'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/Tinyxml2) by extensions ['cmake', 'python']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/Tinyxml2) by extension 'cmake'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/Tinyxml2) by extension 'python'
+[0.277s] DEBUG:colcon.colcon_core.package_identification:Package 'src/Tinyxml2' with type 'cmake' and name 'tinyxml2'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent) by extensions ['ignore', 'ignore_ament_install']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent) by extension 'ignore'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent) by extension 'ignore_ament_install'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent) by extensions ['colcon_pkg']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent) by extension 'colcon_pkg'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent) by extensions ['colcon_meta']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent) by extension 'colcon_meta'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent) by extensions ['ros']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent) by extension 'ros'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent) by extensions ['cmake', 'python']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent) by extension 'cmake'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent) by extension 'python'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent) by extensions ['python_setup_py']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent) by extension 'python_setup_py'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/micro_ros_agent) by extensions ['ignore', 'ignore_ament_install']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/micro_ros_agent) by extension 'ignore'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/micro_ros_agent) by extension 'ignore_ament_install'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/micro_ros_agent) by extensions ['colcon_pkg']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/micro_ros_agent) by extension 'colcon_pkg'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/micro_ros_agent) by extensions ['colcon_meta']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/micro_ros_agent) by extension 'colcon_meta'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/micro_ros_agent) by extensions ['ros']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/micro_ros_agent) by extension 'ros'
+[0.281s] DEBUG:colcon.colcon_core.package_identification:Package 'src/micro-ROS-Agent/micro_ros_agent' with type 'ros.ament_cmake' and name 'micro_ros_agent'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap) by extensions ['ignore', 'ignore_ament_install']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap) by extension 'ignore'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap) by extension 'ignore_ament_install'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap) by extensions ['colcon_pkg']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap) by extension 'colcon_pkg'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap) by extensions ['colcon_meta']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap) by extension 'colcon_meta'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap) by extensions ['ros']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap) by extension 'ros'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap) by extensions ['cmake', 'python']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap) by extension 'cmake'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap) by extension 'python'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap) by extensions ['python_setup_py']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap) by extension 'python_setup_py'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap/hooks) by extensions ['ignore', 'ignore_ament_install']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap/hooks) by extension 'ignore'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap/hooks) by extension 'ignore_ament_install'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap/hooks) by extensions ['colcon_pkg']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap/hooks) by extension 'colcon_pkg'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap/hooks) by extensions ['colcon_meta']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap/hooks) by extension 'colcon_meta'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap/hooks) by extensions ['ros']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap/hooks) by extension 'ros'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap/hooks) by extensions ['cmake', 'python']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap/hooks) by extension 'cmake'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap/hooks) by extension 'python'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap/hooks) by extensions ['python_setup_py']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap/hooks) by extension 'python_setup_py'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap/local) by extensions ['ignore', 'ignore_ament_install']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap/local) by extension 'ignore'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap/local) by extension 'ignore_ament_install'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap/local) by extensions ['colcon_pkg']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap/local) by extension 'colcon_pkg'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap/local) by extensions ['colcon_meta']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap/local) by extension 'colcon_meta'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap/local) by extensions ['ros']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap/local) by extension 'ros'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap/local) by extensions ['cmake', 'python']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap/local) by extension 'cmake'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap/local) by extension 'python'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap/local) by extensions ['python_setup_py']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro-ROS-Agent/snap/local) by extension 'python_setup_py'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros_msgs) by extension 'ignore'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros_msgs) by extension 'ignore_ament_install'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros_msgs) by extensions ['colcon_pkg']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros_msgs) by extension 'colcon_pkg'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros_msgs) by extensions ['colcon_meta']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros_msgs) by extension 'colcon_meta'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros_msgs) by extensions ['ros']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros_msgs) by extension 'ros'
+[0.284s] DEBUG:colcon.colcon_core.package_identification:Package 'src/micro_ros_msgs' with type 'ros.ament_cmake' and name 'micro_ros_msgs'
+[0.284s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.284s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.284s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.284s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.284s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.313s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.313s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.316s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 270 installed packages in /opt/ros/humble
+[0.317s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.352s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'cmake_args' from command line to 'None'
+[0.352s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'cmake_target' from command line to 'None'
+[0.353s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.353s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.353s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.353s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.353s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.353s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.353s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.353s] DEBUG:colcon.colcon_core.verb:Building package 'micro_ros_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs', 'merge_install': False, 'path': '/home/edrom-mini/edromufu/src/movement/Ros2_change/src/micro_ros_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.353s] Level 5:colcon.colcon_core.verb:set package 'tinyxml2' build argument 'cmake_args' from command line to 'None'
+[0.353s] Level 5:colcon.colcon_core.verb:set package 'tinyxml2' build argument 'cmake_target' from command line to 'None'
+[0.353s] Level 5:colcon.colcon_core.verb:set package 'tinyxml2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.353s] Level 5:colcon.colcon_core.verb:set package 'tinyxml2' build argument 'cmake_clean_cache' from command line to 'False'
+[0.353s] Level 5:colcon.colcon_core.verb:set package 'tinyxml2' build argument 'cmake_clean_first' from command line to 'False'
+[0.353s] Level 5:colcon.colcon_core.verb:set package 'tinyxml2' build argument 'cmake_force_configure' from command line to 'False'
+[0.353s] Level 5:colcon.colcon_core.verb:set package 'tinyxml2' build argument 'ament_cmake_args' from command line to 'None'
+[0.353s] Level 5:colcon.colcon_core.verb:set package 'tinyxml2' build argument 'catkin_cmake_args' from command line to 'None'
+[0.353s] Level 5:colcon.colcon_core.verb:set package 'tinyxml2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.353s] DEBUG:colcon.colcon_core.verb:Building package 'tinyxml2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/tinyxml2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/tinyxml2', 'merge_install': False, 'path': '/home/edrom-mini/edromufu/src/movement/Ros2_change/src/Tinyxml2', 'symlink_install': False, 'test_result_base': None}
+[0.354s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'cmake_args' from command line to 'None'
+[0.354s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'cmake_target' from command line to 'None'
+[0.354s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.354s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'cmake_clean_cache' from command line to 'False'
+[0.354s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'cmake_clean_first' from command line to 'False'
+[0.354s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'cmake_force_configure' from command line to 'False'
+[0.354s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'ament_cmake_args' from command line to 'None'
+[0.354s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'catkin_cmake_args' from command line to 'None'
+[0.354s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.354s] DEBUG:colcon.colcon_core.verb:Building package 'micro_ros_agent' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_agent', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent', 'merge_install': False, 'path': '/home/edrom-mini/edromufu/src/movement/Ros2_change/src/micro-ROS-Agent/micro_ros_agent', 'symlink_install': False, 'test_result_base': None}
+[0.354s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.355s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.355s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/edrom-mini/edromufu/src/movement/Ros2_change/src/micro_ros_msgs' with build type 'ament_cmake'
+[0.355s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/edrom-mini/edromufu/src/movement/Ros2_change/src/micro_ros_msgs'
+[0.357s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.357s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.357s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.360s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/edrom-mini/edromufu/src/movement/Ros2_change/src/Tinyxml2'
+[0.360s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.360s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.367s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /home/edrom-mini/.local/bin/cmake /home/edrom-mini/edromufu/src/movement/Ros2_change/src/micro_ros_msgs -DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs
+[0.370s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/tinyxml2': /home/edrom-mini/.local/bin/cmake /home/edrom-mini/edromufu/src/movement/Ros2_change/src/Tinyxml2 -DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/tinyxml2
+[0.760s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/tinyxml2' returned '0': /home/edrom-mini/.local/bin/cmake /home/edrom-mini/edromufu/src/movement/Ros2_change/src/Tinyxml2 -DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/tinyxml2
+[0.762s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/tinyxml2': /home/edrom-mini/.local/bin/cmake --build /home/edrom-mini/edromufu/src/movement/Ros2_change/build/tinyxml2 -- -j4 -l4
+[1.626s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/tinyxml2' returned '0': /home/edrom-mini/.local/bin/cmake --build /home/edrom-mini/edromufu/src/movement/Ros2_change/build/tinyxml2 -- -j4 -l4
+[1.850s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/tinyxml2': /home/edrom-mini/.local/bin/cmake --install /home/edrom-mini/edromufu/src/movement/Ros2_change/build/tinyxml2
+[1.946s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tinyxml2)
+[1.946s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/tinyxml2' returned '0': /home/edrom-mini/.local/bin/cmake --install /home/edrom-mini/edromufu/src/movement/Ros2_change/build/tinyxml2
+[1.948s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/tinyxml2' for CMake module files
+[1.949s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/tinyxml2' for CMake config files
+[1.949s] Level 1:colcon.colcon_core.shell:create_environment_hook('tinyxml2', 'cmake_prefix_path')
+[1.949s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/tinyxml2/share/tinyxml2/hook/cmake_prefix_path.ps1'
+[1.950s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/tinyxml2/share/tinyxml2/hook/cmake_prefix_path.dsv'
+[1.950s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/tinyxml2/share/tinyxml2/hook/cmake_prefix_path.sh'
+[1.951s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/tinyxml2/lib'
+[1.951s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/tinyxml2/bin'
+[1.951s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/tinyxml2/lib/pkgconfig/tinyxml2.pc'
+[1.951s] Level 1:colcon.colcon_core.shell:create_environment_hook('tinyxml2', 'pkg_config')
+[1.952s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/tinyxml2/share/tinyxml2/hook/pkg_config.ps1'
+[1.952s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/tinyxml2/share/tinyxml2/hook/pkg_config.dsv'
+[1.952s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/tinyxml2/share/tinyxml2/hook/pkg_config.sh'
+[1.953s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/tinyxml2/lib/python3.10/site-packages'
+[1.953s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/tinyxml2/bin'
+[1.954s] INFO:colcon.colcon_core.shell:Creating package script '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/tinyxml2/share/tinyxml2/package.ps1'
+[1.954s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/tinyxml2/share/tinyxml2/package.dsv'
+[1.955s] INFO:colcon.colcon_core.shell:Creating package script '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/tinyxml2/share/tinyxml2/package.sh'
+[1.956s] INFO:colcon.colcon_core.shell:Creating package script '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/tinyxml2/share/tinyxml2/package.bash'
+[1.957s] INFO:colcon.colcon_core.shell:Creating package script '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/tinyxml2/share/tinyxml2/package.zsh'
+[1.957s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/edrom-mini/edromufu/src/movement/Ros2_change/install/tinyxml2/share/colcon-core/packages/tinyxml2)
+[2.575s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /home/edrom-mini/.local/bin/cmake /home/edrom-mini/edromufu/src/movement/Ros2_change/src/micro_ros_msgs -DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs
+[2.577s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /home/edrom-mini/.local/bin/cmake --build /home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_msgs -- -j4 -l4
+[6.615s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /home/edrom-mini/.local/bin/cmake --build /home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_msgs -- -j4 -l4
+[6.781s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /home/edrom-mini/.local/bin/cmake --install /home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_msgs
+[6.923s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(micro_ros_msgs)
+[6.923s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs' for CMake module files
+[6.924s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /home/edrom-mini/.local/bin/cmake --install /home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_msgs
+[6.924s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs' for CMake config files
+[6.925s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_msgs', 'cmake_prefix_path')
+[6.925s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/hook/cmake_prefix_path.ps1'
+[6.925s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/hook/cmake_prefix_path.dsv'
+[6.926s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/hook/cmake_prefix_path.sh'
+[6.926s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib'
+[6.926s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_msgs', 'ld_library_path_lib')
+[6.926s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/hook/ld_library_path_lib.ps1'
+[6.927s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/hook/ld_library_path_lib.dsv'
+[6.927s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/hook/ld_library_path_lib.sh'
+[6.927s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/bin'
+[6.928s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib/pkgconfig/micro_ros_msgs.pc'
+[6.928s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib/python3.10/site-packages'
+[6.928s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/bin'
+[6.929s] INFO:colcon.colcon_core.shell:Creating package script '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/package.ps1'
+[6.929s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/package.dsv'
+[6.930s] INFO:colcon.colcon_core.shell:Creating package script '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/package.sh'
+[6.930s] INFO:colcon.colcon_core.shell:Creating package script '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/package.bash'
+[6.931s] INFO:colcon.colcon_core.shell:Creating package script '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/package.zsh'
+[6.931s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/colcon-core/packages/micro_ros_msgs)
+[7.102s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(micro_ros_msgs)
+[7.102s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs' for CMake module files
+[7.103s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs' for CMake config files
+[7.103s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_msgs', 'cmake_prefix_path')
+[7.104s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/hook/cmake_prefix_path.ps1'
+[7.104s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/hook/cmake_prefix_path.dsv'
+[7.104s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/hook/cmake_prefix_path.sh'
+[7.105s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib'
+[7.105s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_msgs', 'ld_library_path_lib')
+[7.105s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/hook/ld_library_path_lib.ps1'
+[7.105s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/hook/ld_library_path_lib.dsv'
+[7.106s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/hook/ld_library_path_lib.sh'
+[7.106s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/bin'
+[7.106s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib/pkgconfig/micro_ros_msgs.pc'
+[7.106s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib/python3.10/site-packages'
+[7.106s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/bin'
+[7.107s] INFO:colcon.colcon_core.shell:Creating package script '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/package.ps1'
+[7.107s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/package.dsv'
+[7.108s] INFO:colcon.colcon_core.shell:Creating package script '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/package.sh'
+[7.108s] INFO:colcon.colcon_core.shell:Creating package script '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/package.bash'
+[7.109s] INFO:colcon.colcon_core.shell:Creating package script '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/package.zsh'
+[7.109s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/colcon-core/packages/micro_ros_msgs)
+[7.109s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/edrom-mini/edromufu/src/movement/Ros2_change/src/micro-ROS-Agent/micro_ros_agent' with build type 'ament_cmake'
+[7.110s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/edrom-mini/edromufu/src/movement/Ros2_change/src/micro-ROS-Agent/micro_ros_agent'
+[7.110s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.110s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.118s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_agent': AMENT_PREFIX_PATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /home/edrom-mini/.local/bin/cmake /home/edrom-mini/edromufu/src/movement/Ros2_change/src/micro-ROS-Agent/micro_ros_agent -DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent
+[7.526s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_agent' returned '0': AMENT_PREFIX_PATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /home/edrom-mini/.local/bin/cmake /home/edrom-mini/edromufu/src/movement/Ros2_change/src/micro-ROS-Agent/micro_ros_agent -DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent
+[7.528s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_agent': AMENT_PREFIX_PATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /home/edrom-mini/.local/bin/cmake --build /home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_agent -- -j4 -l4
+[77.578s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_agent' returned '0': AMENT_PREFIX_PATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /home/edrom-mini/.local/bin/cmake --build /home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_agent -- -j4 -l4
+[77.681s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_agent': AMENT_PREFIX_PATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /home/edrom-mini/.local/bin/cmake --install /home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_agent
+[77.766s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(micro_ros_agent)
+[77.767s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent' for CMake module files
+[77.767s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_agent' returned '0': AMENT_PREFIX_PATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /home/edrom-mini/.local/bin/cmake --install /home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_agent
+[77.768s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent' for CMake config files
+[77.769s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_agent', 'cmake_prefix_path')
+[77.769s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/hook/cmake_prefix_path.ps1'
+[77.769s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/hook/cmake_prefix_path.dsv'
+[77.769s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/hook/cmake_prefix_path.sh'
+[77.770s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/lib'
+[77.770s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_agent', 'ld_library_path_lib')
+[77.770s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/hook/ld_library_path_lib.ps1'
+[77.770s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/hook/ld_library_path_lib.dsv'
+[77.771s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/hook/ld_library_path_lib.sh'
+[77.771s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/bin'
+[77.771s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/lib/pkgconfig/micro_ros_agent.pc'
+[77.771s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/lib/python3.10/site-packages'
+[77.771s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/bin'
+[77.772s] INFO:colcon.colcon_core.shell:Creating package script '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/package.ps1'
+[77.772s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/package.dsv'
+[77.772s] INFO:colcon.colcon_core.shell:Creating package script '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/package.sh'
+[77.773s] INFO:colcon.colcon_core.shell:Creating package script '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/package.bash'
+[77.773s] INFO:colcon.colcon_core.shell:Creating package script '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/package.zsh'
+[77.773s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/colcon-core/packages/micro_ros_agent)
+[77.872s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(micro_ros_agent)
+[77.872s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent' for CMake module files
+[77.873s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent' for CMake config files
+[77.873s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_agent', 'cmake_prefix_path')
+[77.874s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/hook/cmake_prefix_path.ps1'
+[77.874s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/hook/cmake_prefix_path.dsv'
+[77.874s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/hook/cmake_prefix_path.sh'
+[77.875s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/lib'
+[77.875s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_agent', 'ld_library_path_lib')
+[77.875s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/hook/ld_library_path_lib.ps1'
+[77.876s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/hook/ld_library_path_lib.dsv'
+[77.876s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/hook/ld_library_path_lib.sh'
+[77.876s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/bin'
+[77.876s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/lib/pkgconfig/micro_ros_agent.pc'
+[77.877s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/lib/python3.10/site-packages'
+[77.877s] Level 1:colcon.colcon_core.environment:checking '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/bin'
+[77.877s] INFO:colcon.colcon_core.shell:Creating package script '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/package.ps1'
+[77.878s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/package.dsv'
+[77.878s] INFO:colcon.colcon_core.shell:Creating package script '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/package.sh'
+[77.878s] INFO:colcon.colcon_core.shell:Creating package script '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/package.bash'
+[77.879s] INFO:colcon.colcon_core.shell:Creating package script '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/package.zsh'
+[77.879s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/colcon-core/packages/micro_ros_agent)
+[77.880s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[77.880s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[77.880s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[77.880s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[77.886s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[77.886s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[77.887s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[77.906s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[77.906s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/local_setup.ps1'
+[77.907s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/_local_setup_util_ps1.py'
+[77.909s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/setup.ps1'
+[77.910s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/local_setup.sh'
+[77.911s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/_local_setup_util_sh.py'
+[77.912s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/setup.sh'
+[77.913s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/local_setup.bash'
+[77.913s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/setup.bash'
+[77.915s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/local_setup.zsh'
+[77.915s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/setup.zsh'

@@ -1,2 +1,0 @@
-Invoking command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_agent': CMAKE_PREFIX_PATH=/opt/ros/humble /home/edrom-mini/.local/bin/cmake --build /home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_agent -- -j4 -l4
-Invoked command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_agent' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /home/edrom-mini/.local/bin/cmake --build /home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_agent -- -j4 -l4

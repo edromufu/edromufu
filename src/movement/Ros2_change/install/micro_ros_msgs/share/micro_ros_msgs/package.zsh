@@ -35,14 +35,14 @@ colcon_zsh_convert_to_array() {
 }
 
 # source sh script of this package
-_colcon_package_zsh_source_script "$_colcon_package_zsh_COLCON_CURRENT_PREFIX/share/micro_ros_agent/package.sh"
+_colcon_package_zsh_source_script "$_colcon_package_zsh_COLCON_CURRENT_PREFIX/share/micro_ros_msgs/package.sh"
 unset convert_zsh_to_array
 
 # setting COLCON_CURRENT_PREFIX avoids determining the prefix in the sourced scripts
 COLCON_CURRENT_PREFIX="$_colcon_package_zsh_COLCON_CURRENT_PREFIX"
 
 # source zsh hooks
-_colcon_package_zsh_source_script "$COLCON_CURRENT_PREFIX/share/micro_ros_agent/local_setup.zsh"
+_colcon_package_zsh_source_script "$COLCON_CURRENT_PREFIX/share/micro_ros_msgs/local_setup.zsh"
 
 unset COLCON_CURRENT_PREFIX
 

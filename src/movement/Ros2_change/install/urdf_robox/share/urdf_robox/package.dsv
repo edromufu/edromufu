@@ -1,8 +1,0 @@
-source;share/urdf_robox/hook/cmake_prefix_path.ps1
-source;share/urdf_robox/hook/cmake_prefix_path.dsv
-source;share/urdf_robox/hook/cmake_prefix_path.sh
-source;share/urdf_robox/local_setup.bash
-source;share/urdf_robox/local_setup.dsv
-source;share/urdf_robox/local_setup.ps1
-source;share/urdf_robox/local_setup.sh
-source;share/urdf_robox/local_setup.zsh

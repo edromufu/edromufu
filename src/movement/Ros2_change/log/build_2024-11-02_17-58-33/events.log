@@ -1,0 +1,1460 @@
+[0.000000] (-) TimerEvent: {}
+[0.000134] (micro_ros_msgs) JobQueued: {'identifier': 'micro_ros_msgs', 'dependencies': OrderedDict()}
+[0.000374] (tinyxml2) JobQueued: {'identifier': 'tinyxml2', 'dependencies': OrderedDict()}
+[0.000762] (micro_ros_agent) JobQueued: {'identifier': 'micro_ros_agent', 'dependencies': OrderedDict([('micro_ros_msgs', '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs')])}
+[0.000864] (micro_ros_msgs) JobStarted: {'identifier': 'micro_ros_msgs'}
+[0.005101] (tinyxml2) JobStarted: {'identifier': 'tinyxml2'}
+[0.009245] (micro_ros_msgs) JobProgress: {'identifier': 'micro_ros_msgs', 'progress': 'cmake'}
+[0.009402] (micro_ros_msgs) Command: {'cmd': ['/home/edrom-mini/.local/bin/cmake', '/home/edrom-mini/edromufu/src/movement/Ros2_change/src/micro_ros_msgs', '-DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs'], 'cwd': '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'edrom-mini'), ('LC_TIME', 'pt_BR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/edrom-mini'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1424'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=efcb2744416a92cd88045c6a672654a5'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'edrom-mini'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'edrom-mini'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/edrom-mini/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/edrom-mini:@/tmp/.ICE-unix/1424,unix/edrom-mini:/tmp/.ICE-unix/1424'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/aecd7801_072f_4d4f_b8f3_4878e047cc4b'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.9UGXW2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.600'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=efcb2744416a92cd88045c6a672654a5'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.013908] (tinyxml2) JobProgress: {'identifier': 'tinyxml2', 'progress': 'cmake'}
+[0.014036] (tinyxml2) Command: {'cmd': ['/home/edrom-mini/.local/bin/cmake', '/home/edrom-mini/edromufu/src/movement/Ros2_change/src/Tinyxml2', '-DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/tinyxml2'], 'cwd': '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/tinyxml2', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'edrom-mini'), ('LC_TIME', 'pt_BR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/edrom-mini'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1424'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=efcb2744416a92cd88045c6a672654a5'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'edrom-mini'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'edrom-mini'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/edrom-mini/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/edrom-mini:@/tmp/.ICE-unix/1424,unix/edrom-mini:/tmp/.ICE-unix/1424'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/aecd7801_072f_4d4f_b8f3_4878e047cc4b'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.9UGXW2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.600'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/tinyxml2'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=efcb2744416a92cd88045c6a672654a5'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800')]), 'shell': False}
+[0.099859] (-) TimerEvent: {}
+[0.128668] (tinyxml2) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.129172] (micro_ros_msgs) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.182326] (tinyxml2) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.182534] (micro_ros_msgs) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.192894] (tinyxml2) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.193185] (micro_ros_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.199977] (-) TimerEvent: {}
+[0.250835] (micro_ros_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.251009] (tinyxml2) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.269006] (tinyxml2) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.269176] (micro_ros_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.269328] (micro_ros_msgs) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.269401] (tinyxml2) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.269746] (micro_ros_msgs) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.269856] (tinyxml2) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.273717] (micro_ros_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.273881] (tinyxml2) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.300091] (-) TimerEvent: {}
+[0.342163] (micro_ros_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.342505] (tinyxml2) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.360941] (tinyxml2) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.361222] (micro_ros_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.361445] (micro_ros_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.361526] (tinyxml2) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.361916] (micro_ros_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.362084] (tinyxml2) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.364159] (micro_ros_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.368970] (tinyxml2) StdoutLine: {'line': b'-- Configuring done (0.3s)\n'}
+[0.384298] (tinyxml2) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[0.387059] (tinyxml2) StdoutLine: {'line': b'-- Build files have been written to: /home/edrom-mini/edromufu/src/movement/Ros2_change/build/tinyxml2\n'}
+[0.400192] (-) TimerEvent: {}
+[0.404773] (tinyxml2) CommandEnded: {'returncode': 0}
+[0.405304] (tinyxml2) JobProgress: {'identifier': 'tinyxml2', 'progress': 'build'}
+[0.405958] (tinyxml2) Command: {'cmd': ['/home/edrom-mini/.local/bin/cmake', '--build', '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/tinyxml2', '--', '-j4', '-l4'], 'cwd': '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/tinyxml2', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'edrom-mini'), ('LC_TIME', 'pt_BR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/edrom-mini'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1424'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=efcb2744416a92cd88045c6a672654a5'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'edrom-mini'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'edrom-mini'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/edrom-mini/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/edrom-mini:@/tmp/.ICE-unix/1424,unix/edrom-mini:/tmp/.ICE-unix/1424'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/aecd7801_072f_4d4f_b8f3_4878e047cc4b'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.9UGXW2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.600'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/tinyxml2'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=efcb2744416a92cd88045c6a672654a5'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800')]), 'shell': False}
+[0.500226] (micro_ros_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter\n'}
+[0.500435] (-) TimerEvent: {}
+[0.501688] (tinyxml2) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/tinyxml2.dir/tinyxml2.cpp.o\x1b[0m\n'}
+[0.586713] (micro_ros_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.589451] (micro_ros_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.595821] (micro_ros_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.600537] (-) TimerEvent: {}
+[0.644297] (micro_ros_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.688517] (micro_ros_msgs) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[0.700639] (-) TimerEvent: {}
+[0.801049] (-) TimerEvent: {}
+[0.807567] (tinyxml2) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX static library libtinyxml2.a\x1b[0m\n'}
+[0.851978] (tinyxml2) StdoutLine: {'line': b'[ 50%] Built target tinyxml2\n'}
+[0.861165] (tinyxml2) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/xmltest.dir/xmltest.cpp.o\x1b[0m\n'}
+[0.901180] (-) TimerEvent: {}
+[1.001506] (-) TimerEvent: {}
+[1.101848] (-) TimerEvent: {}
+[1.128071] (micro_ros_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[1.165036] (tinyxml2) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable xmltest\x1b[0m\n'}
+[1.202005] (-) TimerEvent: {}
+[1.249752] (tinyxml2) StdoutLine: {'line': b'[100%] Built target xmltest\n'}
+[1.270224] (tinyxml2) CommandEnded: {'returncode': 0}
+[1.302132] (-) TimerEvent: {}
+[1.399459] (tinyxml2) JobProgress: {'identifier': 'tinyxml2', 'progress': 'install'}
+[1.402231] (-) TimerEvent: {}
+[1.494880] (tinyxml2) Command: {'cmd': ['/home/edrom-mini/.local/bin/cmake', '--install', '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/tinyxml2'], 'cwd': '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/tinyxml2', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'edrom-mini'), ('LC_TIME', 'pt_BR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/edrom-mini'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1424'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=efcb2744416a92cd88045c6a672654a5'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'edrom-mini'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'edrom-mini'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/edrom-mini/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/edrom-mini:@/tmp/.ICE-unix/1424,unix/edrom-mini:/tmp/.ICE-unix/1424'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/aecd7801_072f_4d4f_b8f3_4878e047cc4b'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.9UGXW2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.600'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/tinyxml2'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=efcb2744416a92cd88045c6a672654a5'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800')]), 'shell': False}
+[1.502363] (-) TimerEvent: {}
+[1.571136] (micro_ros_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.573960] (tinyxml2) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.574238] (tinyxml2) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/tinyxml2/lib/libtinyxml2.a\n'}
+[1.574596] (tinyxml2) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/tinyxml2/lib/cmake/tinyxml2/tinyxml2-static-targets.cmake\n'}
+[1.574748] (tinyxml2) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/tinyxml2/lib/cmake/tinyxml2/tinyxml2-static-targets-noconfig.cmake\n'}
+[1.574857] (tinyxml2) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/tinyxml2/lib/cmake/tinyxml2/tinyxml2-config.cmake\n'}
+[1.574953] (tinyxml2) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/tinyxml2/lib/cmake/tinyxml2/tinyxml2-config-version.cmake\n'}
+[1.575134] (tinyxml2) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/tinyxml2/include/tinyxml2.h\n'}
+[1.575335] (tinyxml2) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/tinyxml2/lib/pkgconfig/tinyxml2.pc\n'}
+[1.590852] (tinyxml2) CommandEnded: {'returncode': 0}
+[1.602473] (-) TimerEvent: {}
+[1.602897] (tinyxml2) JobEnded: {'identifier': 'tinyxml2', 'rc': 0}
+[1.702608] (-) TimerEvent: {}
+[1.802893] (-) TimerEvent: {}
+[1.903173] (-) TimerEvent: {}
+[2.003458] (-) TimerEvent: {}
+[2.059974] (micro_ros_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.061945] (micro_ros_msgs) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:20 (find_package):\n'}
+[2.062124] (micro_ros_msgs) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[2.062191] (micro_ros_msgs) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[2.062251] (micro_ros_msgs) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[2.062309] (micro_ros_msgs) StderrLine: {'line': b'\n'}
+[2.062367] (micro_ros_msgs) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.062426] (micro_ros_msgs) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[2.062482] (micro_ros_msgs) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)\n'}
+[2.062539] (micro_ros_msgs) StderrLine: {'line': b'  CMakeLists.txt:27 (rosidl_generate_interfaces)\n'}
+[2.062594] (micro_ros_msgs) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.062652] (micro_ros_msgs) StderrLine: {'line': b'\x1b[0m\n'}
+[2.080703] (micro_ros_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6")\n'}
+[2.081916] (micro_ros_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[2.082374] (micro_ros_msgs) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/humble/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:52 (find_package):\n'}
+[2.082474] (micro_ros_msgs) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[2.082539] (micro_ros_msgs) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[2.082598] (micro_ros_msgs) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[2.082657] (micro_ros_msgs) StderrLine: {'line': b'\n'}
+[2.082714] (micro_ros_msgs) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.082775] (micro_ros_msgs) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)\n'}
+[2.082837] (micro_ros_msgs) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[2.082911] (micro_ros_msgs) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)\n'}
+[2.082975] (micro_ros_msgs) StderrLine: {'line': b'  CMakeLists.txt:27 (rosidl_generate_interfaces)\n'}
+[2.083038] (micro_ros_msgs) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.083099] (micro_ros_msgs) StderrLine: {'line': b'\x1b[0m\n'}
+[2.100785] (micro_ros_msgs) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/humble/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:140 (find_package):\n'}
+[2.100949] (micro_ros_msgs) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[2.101030] (micro_ros_msgs) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[2.101091] (micro_ros_msgs) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[2.101149] (micro_ros_msgs) StderrLine: {'line': b'\n'}
+[2.101213] (micro_ros_msgs) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.101276] (micro_ros_msgs) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)\n'}
+[2.101335] (micro_ros_msgs) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[2.101391] (micro_ros_msgs) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)\n'}
+[2.101446] (micro_ros_msgs) StderrLine: {'line': b'  CMakeLists.txt:27 (rosidl_generate_interfaces)\n'}
+[2.101502] (micro_ros_msgs) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.101557] (micro_ros_msgs) StderrLine: {'line': b'\x1b[0m\n'}
+[2.103549] (-) TimerEvent: {}
+[2.107211] (micro_ros_msgs) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5")\n'}
+[2.107449] (micro_ros_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[2.107540] (micro_ros_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[2.107615] (micro_ros_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[2.127783] (micro_ros_msgs) StdoutLine: {'line': b'-- Found PythonExtra: .so\n'}
+[2.159420] (micro_ros_msgs) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[2.161248] (micro_ros_msgs) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[2.162237] (micro_ros_msgs) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[2.166515] (micro_ros_msgs) StdoutLine: {'line': b'-- Configuring done (2.1s)\n'}
+[2.196003] (micro_ros_msgs) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[2.198631] (micro_ros_msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_msgs\n'}
+[2.203709] (-) TimerEvent: {}
+[2.220277] (micro_ros_msgs) CommandEnded: {'returncode': 0}
+[2.220768] (micro_ros_msgs) JobProgress: {'identifier': 'micro_ros_msgs', 'progress': 'build'}
+[2.221544] (micro_ros_msgs) Command: {'cmd': ['/home/edrom-mini/.local/bin/cmake', '--build', '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_msgs', '--', '-j4', '-l4'], 'cwd': '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'edrom-mini'), ('LC_TIME', 'pt_BR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/edrom-mini'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1424'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=efcb2744416a92cd88045c6a672654a5'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'edrom-mini'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'edrom-mini'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/edrom-mini/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/edrom-mini:@/tmp/.ICE-unix/1424,unix/edrom-mini:/tmp/.ICE-unix/1424'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/aecd7801_072f_4d4f_b8f3_4878e047cc4b'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.9UGXW2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.600'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=efcb2744416a92cd88045c6a672654a5'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[2.303849] (-) TimerEvent: {}
+[2.304235] (micro_ros_msgs) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[2.313080] (micro_ros_msgs) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[2.316910] (micro_ros_msgs) StdoutLine: {'line': b'[  4%] Built target ament_cmake_python_copy_micro_ros_msgs\n'}
+[2.404013] (-) TimerEvent: {}
+[2.504389] (-) TimerEvent: {}
+[2.604770] (-) TimerEvent: {}
+[2.606460] (micro_ros_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[2.607380] (micro_ros_msgs) StdoutLine: {'line': b'creating micro_ros_msgs.egg-info\n'}
+[2.607588] (micro_ros_msgs) StdoutLine: {'line': b'writing micro_ros_msgs.egg-info/PKG-INFO\n'}
+[2.607804] (micro_ros_msgs) StdoutLine: {'line': b'writing dependency_links to micro_ros_msgs.egg-info/dependency_links.txt\n'}
+[2.608066] (micro_ros_msgs) StdoutLine: {'line': b'writing top-level names to micro_ros_msgs.egg-info/top_level.txt\n'}
+[2.608292] (micro_ros_msgs) StdoutLine: {'line': b"writing manifest file 'micro_ros_msgs.egg-info/SOURCES.txt'\n"}
+[2.610670] (micro_ros_msgs) StdoutLine: {'line': b"reading manifest file 'micro_ros_msgs.egg-info/SOURCES.txt'\n"}
+[2.611219] (micro_ros_msgs) StdoutLine: {'line': b"writing manifest file 'micro_ros_msgs.egg-info/SOURCES.txt'\n"}
+[2.638777] (micro_ros_msgs) StdoutLine: {'line': b'[  4%] Built target ament_cmake_python_build_micro_ros_msgs_egg\n'}
+[2.704939] (-) TimerEvent: {}
+[2.731722] (micro_ros_msgs) StdoutLine: {'line': b'[  4%] Built target micro_ros_msgs__cpp\n'}
+[2.736362] (micro_ros_msgs) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[2.741298] (micro_ros_msgs) StdoutLine: {'line': b'[  8%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[2.745501] (micro_ros_msgs) StdoutLine: {'line': b'[ 10%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[2.750929] (micro_ros_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_generator_c.dir/rosidl_generator_c/micro_ros_msgs/msg/detail/graph__functions.c.o\x1b[0m\n'}
+[2.804010] (micro_ros_msgs) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_generator_c.dir/rosidl_generator_c/micro_ros_msgs/msg/detail/node__functions.c.o\x1b[0m\n'}
+[2.805028] (-) TimerEvent: {}
+[2.859192] (micro_ros_msgs) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_generator_c.dir/rosidl_generator_c/micro_ros_msgs/msg/detail/entity__functions.c.o\x1b[0m\n'}
+[2.905147] (-) TimerEvent: {}
+[2.912032] (micro_ros_msgs) StdoutLine: {'line': b'[ 19%] \x1b[32m\x1b[1mLinking C shared library libmicro_ros_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[2.946322] (micro_ros_msgs) StdoutLine: {'line': b'[ 19%] Built target micro_ros_msgs__rosidl_generator_c\n'}
+[2.951744] (micro_ros_msgs) StdoutLine: {'line': b'[ 21%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[3.005261] (-) TimerEvent: {}
+[3.105607] (-) TimerEvent: {}
+[3.127473] (micro_ros_msgs) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/micro_ros_msgs/msg/graph__type_support.cpp.o\x1b[0m\n'}
+[3.202906] (micro_ros_msgs) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/micro_ros_msgs/msg/detail/graph__type_support.cpp.o\x1b[0m\n'}
+[3.205713] (-) TimerEvent: {}
+[3.225520] (micro_ros_msgs) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/micro_ros_msgs/msg/detail/dds_fastrtps/graph__type_support.cpp.o\x1b[0m\n'}
+[3.305833] (-) TimerEvent: {}
+[3.406209] (-) TimerEvent: {}
+[3.442915] (micro_ros_msgs) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/micro_ros_msgs/msg/detail/graph__type_support_c.cpp.o\x1b[0m\n'}
+[3.506336] (-) TimerEvent: {}
+[3.509128] (micro_ros_msgs) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/micro_ros_msgs/msg/node__type_support.cpp.o\x1b[0m\n'}
+[3.606465] (-) TimerEvent: {}
+[3.706981] (-) TimerEvent: {}
+[3.807500] (-) TimerEvent: {}
+[3.907901] (-) TimerEvent: {}
+[3.921701] (micro_ros_msgs) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/micro_ros_msgs/msg/detail/dds_fastrtps/node__type_support.cpp.o\x1b[0m\n'}
+[3.926613] (micro_ros_msgs) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/micro_ros_msgs/msg/detail/node__type_support_c.cpp.o\x1b[0m\n'}
+[3.950234] (micro_ros_msgs) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/micro_ros_msgs/msg/entity__type_support.cpp.o\x1b[0m\n'}
+[3.965793] (micro_ros_msgs) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/micro_ros_msgs/msg/detail/node__type_support.cpp.o\x1b[0m\n'}
+[4.008029] (-) TimerEvent: {}
+[4.108394] (-) TimerEvent: {}
+[4.208948] (-) TimerEvent: {}
+[4.309437] (-) TimerEvent: {}
+[4.333578] (micro_ros_msgs) StdoutLine: {'line': b'[ 42%] \x1b[32m\x1b[1mLinking CXX shared library libmicro_ros_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[4.376529] (micro_ros_msgs) StdoutLine: {'line': b'[ 42%] Built target micro_ros_msgs__rosidl_typesupport_cpp\n'}
+[4.382966] (micro_ros_msgs) StdoutLine: {'line': b'[ 44%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[4.409554] (-) TimerEvent: {}
+[4.417514] (micro_ros_msgs) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/micro_ros_msgs/msg/detail/entity__type_support_c.cpp.o\x1b[0m\n'}
+[4.509676] (-) TimerEvent: {}
+[4.608011] (micro_ros_msgs) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/micro_ros_msgs/msg/detail/dds_fastrtps/entity__type_support.cpp.o\x1b[0m\n'}
+[4.609798] (-) TimerEvent: {}
+[4.646114] (micro_ros_msgs) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/micro_ros_msgs/msg/detail/entity__type_support.cpp.o\x1b[0m\n'}
+[4.709914] (-) TimerEvent: {}
+[4.810292] (-) TimerEvent: {}
+[4.880159] (micro_ros_msgs) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/micro_ros_msgs/msg/detail/graph__type_support.c.o\x1b[0m\n'}
+[4.905504] (micro_ros_msgs) StdoutLine: {'line': b'[ 55%] \x1b[32m\x1b[1mLinking CXX shared library libmicro_ros_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[4.910422] (-) TimerEvent: {}
+[4.923930] (micro_ros_msgs) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/micro_ros_msgs/msg/detail/node__type_support.c.o\x1b[0m\n'}
+[4.971597] (micro_ros_msgs) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/micro_ros_msgs/msg/detail/entity__type_support.c.o\x1b[0m\n'}
+[5.010619] (micro_ros_msgs) StdoutLine: {'line': b'[ 59%] Built target micro_ros_msgs__rosidl_typesupport_fastrtps_c\n'}
+[5.010886] (-) TimerEvent: {}
+[5.016766] (micro_ros_msgs) StdoutLine: {'line': b'[ 61%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[5.018817] (micro_ros_msgs) StdoutLine: {'line': b'[ 63%] \x1b[32m\x1b[1mLinking C shared library libmicro_ros_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[5.046862] (micro_ros_msgs) StdoutLine: {'line': b'[ 63%] Built target micro_ros_msgs__rosidl_typesupport_introspection_c\n'}
+[5.111045] (-) TimerEvent: {}
+[5.211533] (-) TimerEvent: {}
+[5.233136] (micro_ros_msgs) StdoutLine: {'line': b'[ 65%] \x1b[32m\x1b[1mLinking CXX shared library libmicro_ros_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[5.262549] (micro_ros_msgs) StdoutLine: {'line': b'[ 68%] \x1b[32m\x1b[1mLinking CXX shared library libmicro_ros_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[5.311664] (-) TimerEvent: {}
+[5.337171] (micro_ros_msgs) StdoutLine: {'line': b'[ 68%] Built target micro_ros_msgs__rosidl_typesupport_introspection_cpp\n'}
+[5.362569] (micro_ros_msgs) StdoutLine: {'line': b'[ 68%] Built target micro_ros_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[5.391124] (micro_ros_msgs) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/micro_ros_msgs/msg/graph__type_support.cpp.o\x1b[0m\n'}
+[5.391383] (micro_ros_msgs) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/micro_ros_msgs/msg/node__type_support.cpp.o\x1b[0m\n'}
+[5.391494] (micro_ros_msgs) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/micro_ros_msgs/msg/entity__type_support.cpp.o\x1b[0m\n'}
+[5.411815] (-) TimerEvent: {}
+[5.429830] (micro_ros_msgs) StdoutLine: {'line': b'[ 76%] \x1b[32m\x1b[1mLinking CXX shared library libmicro_ros_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[5.455337] (micro_ros_msgs) StdoutLine: {'line': b'[ 76%] Built target micro_ros_msgs__rosidl_typesupport_c\n'}
+[5.463269] (micro_ros_msgs) StdoutLine: {'line': b'[ 76%] Built target micro_ros_msgs\n'}
+[5.470777] (micro_ros_msgs) StdoutLine: {'line': b'[ 78%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[5.511935] (-) TimerEvent: {}
+[5.612204] (-) TimerEvent: {}
+[5.712449] (-) TimerEvent: {}
+[5.812690] (-) TimerEvent: {}
+[5.912985] (-) TimerEvent: {}
+[5.927677] (micro_ros_msgs) StdoutLine: {'line': b'[ 78%] Built target micro_ros_msgs__py\n'}
+[5.935610] (micro_ros_msgs) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_generator_py.dir/rosidl_generator_py/micro_ros_msgs/msg/_graph_s.c.o\x1b[0m\n'}
+[5.935846] (micro_ros_msgs) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_generator_py.dir/rosidl_generator_py/micro_ros_msgs/msg/_node_s.c.o\x1b[0m\n'}
+[5.936048] (micro_ros_msgs) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_generator_py.dir/rosidl_generator_py/micro_ros_msgs/msg/_entity_s.c.o\x1b[0m\n'}
+[6.013128] (-) TimerEvent: {}
+[6.062051] (micro_ros_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/micro_ros_msgs/libmicro_ros_msgs__rosidl_generator_py.so\x1b[0m\n'}
+[6.087234] (micro_ros_msgs) StdoutLine: {'line': b'[ 87%] Built target micro_ros_msgs__rosidl_generator_py\n'}
+[6.098812] (micro_ros_msgs) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/micro_ros_msgs/_micro_ros_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[6.099069] (micro_ros_msgs) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/micro_ros_msgs/_micro_ros_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[6.099187] (micro_ros_msgs) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/micro_ros_msgs/_micro_ros_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[6.113287] (-) TimerEvent: {}
+[6.213722] (-) TimerEvent: {}
+[6.215645] (micro_ros_msgs) StdoutLine: {'line': b'[ 95%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[6.217349] (micro_ros_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[6.217558] (micro_ros_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[6.238558] (micro_ros_msgs) StdoutLine: {'line': b'[100%] Built target micro_ros_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[6.239982] (micro_ros_msgs) StdoutLine: {'line': b'[100%] Built target micro_ros_msgs__rosidl_typesupport_c__pyext\n'}
+[6.241705] (micro_ros_msgs) StdoutLine: {'line': b'[100%] Built target micro_ros_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[6.259775] (micro_ros_msgs) CommandEnded: {'returncode': 0}
+[6.313842] (-) TimerEvent: {}
+[6.414152] (-) TimerEvent: {}
+[6.425335] (micro_ros_msgs) JobProgress: {'identifier': 'micro_ros_msgs', 'progress': 'install'}
+[6.425806] (micro_ros_msgs) Command: {'cmd': ['/home/edrom-mini/.local/bin/cmake', '--install', '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_msgs'], 'cwd': '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'edrom-mini'), ('LC_TIME', 'pt_BR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/edrom-mini'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1424'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=efcb2744416a92cd88045c6a672654a5'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'edrom-mini'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'edrom-mini'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/edrom-mini/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/edrom-mini:@/tmp/.ICE-unix/1424,unix/edrom-mini:/tmp/.ICE-unix/1424'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/aecd7801_072f_4d4f_b8f3_4878e047cc4b'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.9UGXW2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.600'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=efcb2744416a92cd88045c6a672654a5'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[6.495539] (micro_ros_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[6.495744] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/ament_index/resource_index/rosidl_interfaces/micro_ros_msgs\n'}
+[6.495854] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs\n'}
+[6.495970] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg\n'}
+[6.496183] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/entity.h\n'}
+[6.496437] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[6.496555] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail\n'}
+[6.496636] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__functions.h\n'}
+[6.496826] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__functions.h\n'}
+[6.497012] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__struct.h\n'}
+[6.497110] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__type_support.h\n'}
+[6.497190] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__struct.h\n'}
+[6.497263] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__functions.c\n'}
+[6.497360] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__struct.h\n'}
+[6.497433] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__type_support.h\n'}
+[6.497530] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__functions.c\n'}
+[6.497601] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__type_support.h\n'}
+[6.497672] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__functions.h\n'}
+[6.497744] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__functions.c\n'}
+[6.497815] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/node.h\n'}
+[6.497909] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/graph.h\n'}
+[6.497995] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/environment/library_path.sh\n'}
+[6.498062] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/environment/library_path.dsv\n'}
+[6.498154] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_generator_c.so\n'}
+[6.498444] (micro_ros_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_generator_c.so" to ""\n'}
+[6.498540] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs\n'}
+[6.498632] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg\n'}
+[6.498724] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail\n'}
+[6.498806] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__rosidl_typesupport_fastrtps_c.h\n'}
+[6.498877] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__rosidl_typesupport_fastrtps_c.h\n'}
+[6.498979] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__rosidl_typesupport_fastrtps_c.h\n'}
+[6.499050] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[6.499133] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[6.499327] (micro_ros_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[6.499417] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs\n'}
+[6.499508] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg\n'}
+[6.499581] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[6.499685] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail\n'}
+[6.499794] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__type_support.c\n'}
+[6.499864] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__type_support.c\n'}
+[6.499935] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__rosidl_typesupport_introspection_c.h\n'}
+[6.500044] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__rosidl_typesupport_introspection_c.h\n'}
+[6.500128] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__type_support.c\n'}
+[6.500197] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__rosidl_typesupport_introspection_c.h\n'}
+[6.500278] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_introspection_c.so\n'}
+[6.500482] (micro_ros_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_introspection_c.so" to ""\n'}
+[6.500578] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_c.so\n'}
+[6.500790] (micro_ros_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_c.so" to ""\n'}
+[6.500905] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs\n'}
+[6.500999] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg\n'}
+[6.501070] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/entity.hpp\n'}
+[6.501160] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail\n'}
+[6.501256] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__struct.hpp\n'}
+[6.501337] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__traits.hpp\n'}
+[6.501405] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__builder.hpp\n'}
+[6.501476] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__struct.hpp\n'}
+[6.501573] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__traits.hpp\n'}
+[6.501647] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__builder.hpp\n'}
+[6.501737] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__builder.hpp\n'}
+[6.501808] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__struct.hpp\n'}
+[6.501896] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__traits.hpp\n'}
+[6.501987] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/node.hpp\n'}
+[6.502055] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/graph.hpp\n'}
+[6.502143] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs\n'}
+[6.502252] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg\n'}
+[6.502334] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail\n'}
+[6.502413] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[6.502482] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[6.502571] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/dds_fastrtps\n'}
+[6.502638] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[6.502712] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[6.502803] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[6.503089] (micro_ros_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[6.503249] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs\n'}
+[6.503332] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg\n'}
+[6.503408] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail\n'}
+[6.503482] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__rosidl_typesupport_introspection_cpp.hpp\n'}
+[6.503576] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__rosidl_typesupport_introspection_cpp.hpp\n'}
+[6.503672] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__type_support.cpp\n'}
+[6.503754] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__type_support.cpp\n'}
+[6.503823] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__type_support.cpp\n'}
+[6.503894] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__rosidl_typesupport_introspection_cpp.hpp\n'}
+[6.503988] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[6.504268] (micro_ros_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[6.504362] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_cpp.so\n'}
+[6.504574] (micro_ros_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_cpp.so" to ""\n'}
+[6.504659] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/environment/pythonpath.sh\n'}
+[6.504748] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/environment/pythonpath.dsv\n'}
+[6.504849] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs-5.0.2-py3.10.egg-info\n'}
+[6.504997] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs-5.0.2-py3.10.egg-info/dependency_links.txt\n'}
+[6.505092] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs-5.0.2-py3.10.egg-info/PKG-INFO\n'}
+[6.505181] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs-5.0.2-py3.10.egg-info/top_level.txt\n'}
+[6.505265] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs-5.0.2-py3.10.egg-info/SOURCES.txt\n'}
+[6.505375] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs\n'}
+[6.505464] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/__init__.py\n'}
+[6.505546] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[6.505649] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[6.505756] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[6.505855] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg\n'}
+[6.505934] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_node_s.c\n'}
+[6.506016] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/__init__.py\n'}
+[6.506104] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_node.py\n'}
+[6.506197] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_graph.py\n'}
+[6.506289] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_entity.py\n'}
+[6.506383] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_entity_s.c\n'}
+[6.506476] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_graph_s.c\n'}
+[6.506571] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/_micro_ros_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[6.506672] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/libmicro_ros_msgs__rosidl_generator_py.so\n'}
+[6.506791] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/_micro_ros_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[6.506914] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/_micro_ros_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[6.514222] (-) TimerEvent: {}
+[6.539712] (micro_ros_msgs) StdoutLine: {'line': b"Listing '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs'...\n"}
+[6.539936] (micro_ros_msgs) StdoutLine: {'line': b"Compiling '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/__init__.py'...\n"}
+[6.540067] (micro_ros_msgs) StdoutLine: {'line': b"Listing '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg'...\n"}
+[6.540148] (micro_ros_msgs) StdoutLine: {'line': b"Compiling '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/__init__.py'...\n"}
+[6.540224] (micro_ros_msgs) StdoutLine: {'line': b"Compiling '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_entity.py'...\n"}
+[6.540306] (micro_ros_msgs) StdoutLine: {'line': b"Compiling '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_graph.py'...\n"}
+[6.540389] (micro_ros_msgs) StdoutLine: {'line': b"Compiling '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_node.py'...\n"}
+[6.544937] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[6.545212] (micro_ros_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[6.545416] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[6.545695] (micro_ros_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[6.545890] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[6.546149] (micro_ros_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[6.546277] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_generator_py.so\n'}
+[6.546516] (micro_ros_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_generator_py.so" to ""\n'}
+[6.546664] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/msg/Graph.idl\n'}
+[6.546771] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/msg/Node.idl\n'}
+[6.546930] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/msg/Entity.idl\n'}
+[6.547055] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/msg/Graph.msg\n'}
+[6.547137] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/msg/Node.msg\n'}
+[6.547225] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/msg/Entity.msg\n'}
+[6.547308] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/ament_index/resource_index/package_run_dependencies/micro_ros_msgs\n'}
+[6.547453] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/ament_index/resource_index/parent_prefix_path/micro_ros_msgs\n'}
+[6.547573] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/environment/ament_prefix_path.sh\n'}
+[6.547687] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/environment/ament_prefix_path.dsv\n'}
+[6.547800] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/environment/path.sh\n'}
+[6.547912] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/environment/path.dsv\n'}
+[6.548045] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/local_setup.bash\n'}
+[6.548164] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/local_setup.sh\n'}
+[6.548280] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/local_setup.zsh\n'}
+[6.548399] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/local_setup.dsv\n'}
+[6.548511] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/package.dsv\n'}
+[6.548663] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/ament_index/resource_index/packages/micro_ros_msgs\n'}
+[6.548820] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_cExport.cmake\n'}
+[6.548958] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[6.549094] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[6.549219] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[6.549349] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[6.549471] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[6.549601] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_cExport.cmake\n'}
+[6.549722] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[6.549854] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_cppExport.cmake\n'}
+[6.549992] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[6.550114] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[6.550251] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[6.550375] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[6.550506] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[6.550631] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[6.550762] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_pyExport.cmake\n'}
+[6.550884] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[6.551001] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[6.551114] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[6.551230] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[6.551348] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[6.551460] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[6.551576] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[6.551697] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[6.551815] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgsConfig.cmake\n'}
+[6.551909] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgsConfig-version.cmake\n'}
+[6.552034] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/package.xml\n'}
+[6.567933] (micro_ros_msgs) CommandEnded: {'returncode': 0}
+[6.614354] (-) TimerEvent: {}
+[6.714610] (-) TimerEvent: {}
+[6.754513] (micro_ros_msgs) JobEnded: {'identifier': 'micro_ros_msgs', 'rc': 0}
+[6.755839] (micro_ros_agent) JobStarted: {'identifier': 'micro_ros_agent'}
+[6.762002] (micro_ros_agent) JobProgress: {'identifier': 'micro_ros_agent', 'progress': 'cmake'}
+[6.762127] (micro_ros_agent) Command: {'cmd': ['/home/edrom-mini/.local/bin/cmake', '/home/edrom-mini/edromufu/src/movement/Ros2_change/src/micro-ROS-Agent/micro_ros_agent', '-DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent'], 'cwd': '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_agent', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'edrom-mini'), ('LC_TIME', 'pt_BR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/edrom-mini'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1424'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=efcb2744416a92cd88045c6a672654a5'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'edrom-mini'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'edrom-mini'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/edrom-mini/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/edrom-mini:@/tmp/.ICE-unix/1424,unix/edrom-mini:/tmp/.ICE-unix/1424'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/aecd7801_072f_4d4f_b8f3_4878e047cc4b'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.9UGXW2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.600'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_agent'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=efcb2744416a92cd88045c6a672654a5'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs:/opt/ros/humble')]), 'shell': False}
+[6.814734] (-) TimerEvent: {}
+[6.887414] (micro_ros_agent) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[6.895761] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[6.914880] (-) TimerEvent: {}
+[6.954519] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[6.971864] (micro_ros_agent) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[6.972242] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[6.972702] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[7.015013] (-) TimerEvent: {}
+[7.023451] (micro_ros_agent) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[7.030585] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[7.099108] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[7.115121] (-) TimerEvent: {}
+[7.116639] (micro_ros_agent) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[7.117023] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[7.117549] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[7.150969] (micro_ros_agent) StdoutLine: {'line': b'-- Configuring done (0.3s)\n'}
+[7.154291] (micro_ros_agent) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[7.155250] (micro_ros_agent) StdoutLine: {'line': b'-- Build files have been written to: /home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_agent\n'}
+[7.171180] (micro_ros_agent) CommandEnded: {'returncode': 0}
+[7.171697] (micro_ros_agent) JobProgress: {'identifier': 'micro_ros_agent', 'progress': 'build'}
+[7.172387] (micro_ros_agent) Command: {'cmd': ['/home/edrom-mini/.local/bin/cmake', '--build', '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_agent', '--', '-j4', '-l4'], 'cwd': '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_agent', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'edrom-mini'), ('LC_TIME', 'pt_BR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/edrom-mini'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1424'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=efcb2744416a92cd88045c6a672654a5'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'edrom-mini'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'edrom-mini'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/edrom-mini/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/edrom-mini:@/tmp/.ICE-unix/1424,unix/edrom-mini:/tmp/.ICE-unix/1424'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/aecd7801_072f_4d4f_b8f3_4878e047cc4b'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.9UGXW2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.600'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_agent'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=efcb2744416a92cd88045c6a672654a5'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs:/opt/ros/humble')]), 'shell': False}
+[7.215256] (-) TimerEvent: {}
+[7.255262] (micro_ros_agent) StdoutLine: {'line': b"[  6%] \x1b[34m\x1b[1mCreating directories for 'xrceagent'\x1b[0m\n"}
+[7.267017] (micro_ros_agent) StdoutLine: {'line': b"[ 12%] \x1b[34m\x1b[1mPerforming download step (git clone) for 'xrceagent'\x1b[0m\n"}
+[7.276208] (micro_ros_agent) StderrLine: {'line': b"Cloning into 'xrceagent'...\n"}
+[7.315550] (-) TimerEvent: {}
+[7.416400] (-) TimerEvent: {}
+[7.517288] (-) TimerEvent: {}
+[7.617942] (-) TimerEvent: {}
+[7.718418] (-) TimerEvent: {}
+[7.819220] (-) TimerEvent: {}
+[7.919918] (-) TimerEvent: {}
+[8.020728] (-) TimerEvent: {}
+[8.121643] (-) TimerEvent: {}
+[8.222396] (-) TimerEvent: {}
+[8.323298] (-) TimerEvent: {}
+[8.424075] (-) TimerEvent: {}
+[8.524861] (-) TimerEvent: {}
+[8.625801] (-) TimerEvent: {}
+[8.726674] (-) TimerEvent: {}
+[8.827619] (-) TimerEvent: {}
+[8.928449] (-) TimerEvent: {}
+[9.029355] (-) TimerEvent: {}
+[9.130273] (-) TimerEvent: {}
+[9.231103] (-) TimerEvent: {}
+[9.331912] (-) TimerEvent: {}
+[9.432744] (-) TimerEvent: {}
+[9.533676] (-) TimerEvent: {}
+[9.634494] (-) TimerEvent: {}
+[9.735392] (-) TimerEvent: {}
+[9.836303] (-) TimerEvent: {}
+[9.937044] (-) TimerEvent: {}
+[10.037947] (-) TimerEvent: {}
+[10.138867] (-) TimerEvent: {}
+[10.239687] (-) TimerEvent: {}
+[10.340563] (-) TimerEvent: {}
+[10.441349] (-) TimerEvent: {}
+[10.542096] (-) TimerEvent: {}
+[10.642849] (-) TimerEvent: {}
+[10.743544] (-) TimerEvent: {}
+[10.844380] (-) TimerEvent: {}
+[10.945218] (-) TimerEvent: {}
+[11.046037] (-) TimerEvent: {}
+[11.146877] (-) TimerEvent: {}
+[11.247832] (-) TimerEvent: {}
+[11.348639] (-) TimerEvent: {}
+[11.449472] (-) TimerEvent: {}
+[11.550408] (-) TimerEvent: {}
+[11.651213] (-) TimerEvent: {}
+[11.751924] (-) TimerEvent: {}
+[11.852683] (-) TimerEvent: {}
+[11.953422] (-) TimerEvent: {}
+[12.054021] (-) TimerEvent: {}
+[12.154640] (-) TimerEvent: {}
+[12.255553] (-) TimerEvent: {}
+[12.356536] (-) TimerEvent: {}
+[12.457458] (-) TimerEvent: {}
+[12.558367] (-) TimerEvent: {}
+[12.659162] (-) TimerEvent: {}
+[12.760145] (-) TimerEvent: {}
+[12.860893] (-) TimerEvent: {}
+[12.961724] (-) TimerEvent: {}
+[13.062492] (-) TimerEvent: {}
+[13.163226] (-) TimerEvent: {}
+[13.263926] (-) TimerEvent: {}
+[13.364775] (-) TimerEvent: {}
+[13.465513] (-) TimerEvent: {}
+[13.566216] (-) TimerEvent: {}
+[13.667057] (-) TimerEvent: {}
+[13.767789] (-) TimerEvent: {}
+[13.868702] (-) TimerEvent: {}
+[13.969624] (-) TimerEvent: {}
+[14.070544] (-) TimerEvent: {}
+[14.171286] (-) TimerEvent: {}
+[14.271921] (-) TimerEvent: {}
+[14.372735] (-) TimerEvent: {}
+[14.473457] (-) TimerEvent: {}
+[14.574014] (-) TimerEvent: {}
+[14.660880] (micro_ros_agent) StderrLine: {'line': b"Switched to a new branch 'ros2'\n"}
+[14.661161] (micro_ros_agent) StdoutLine: {'line': b"Branch 'ros2' set up to track remote branch 'ros2' from 'origin'.\n"}
+[14.674113] (-) TimerEvent: {}
+[14.690556] (micro_ros_agent) StdoutLine: {'line': b"[ 18%] \x1b[34m\x1b[1mPerforming update step for 'xrceagent'\x1b[0m\n"}
+[14.774498] (-) TimerEvent: {}
+[14.875130] (-) TimerEvent: {}
+[14.975560] (-) TimerEvent: {}
+[15.076344] (-) TimerEvent: {}
+[15.177248] (-) TimerEvent: {}
+[15.278053] (-) TimerEvent: {}
+[15.378829] (-) TimerEvent: {}
+[15.479727] (-) TimerEvent: {}
+[15.580417] (-) TimerEvent: {}
+[15.623523] (micro_ros_agent) StdoutLine: {'line': b"[ 25%] \x1b[34m\x1b[1mNo patch step for 'xrceagent'\x1b[0m\n"}
+[15.636212] (micro_ros_agent) StdoutLine: {'line': b"[ 31%] \x1b[34m\x1b[1mPerforming configure step for 'xrceagent'\x1b[0m\n"}
+[15.640831] (micro_ros_agent) StdoutLine: {'line': b'loading initial cache file /home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_agent/agent/tmp/xrceagent-cache-.cmake\n'}
+[15.680579] (-) TimerEvent: {}
+[15.698505] (micro_ros_agent) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[15.705991] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[15.760664] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[15.777779] (micro_ros_agent) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[15.778070] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[15.778522] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[15.780638] (-) TimerEvent: {}
+[15.829567] (micro_ros_agent) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[15.836662] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[15.880770] (-) TimerEvent: {}
+[15.908975] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[15.927034] (micro_ros_agent) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[15.927424] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[15.928196] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[15.931273] (micro_ros_agent) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[15.980895] (-) TimerEvent: {}
+[15.986194] (micro_ros_agent) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[15.987024] (micro_ros_agent) StdoutLine: {'line': b'-- Found Threads: TRUE\n'}
+[15.999586] (micro_ros_agent) StdoutLine: {'line': b'-- Configuring done (0.4s)\n'}
+[16.001892] (micro_ros_agent) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[16.002623] (micro_ros_agent) StdoutLine: {'line': b'-- Build files have been written to: /home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_agent/agent/src/xrceagent-build\n'}
+[16.011140] (micro_ros_agent) StdoutLine: {'line': b"[ 37%] \x1b[34m\x1b[1mPerforming build step for 'xrceagent'\x1b[0m\n"}
+[16.026094] (micro_ros_agent) StdoutLine: {'line': b"[ 12%] \x1b[34m\x1b[1mCreating directories for 'uagent'\x1b[0m\n"}
+[16.033606] (micro_ros_agent) StdoutLine: {'line': b"[ 25%] \x1b[34m\x1b[1mNo download step for 'uagent'\x1b[0m\n"}
+[16.040212] (micro_ros_agent) StdoutLine: {'line': b"[ 37%] \x1b[34m\x1b[1mNo update step for 'uagent'\x1b[0m\n"}
+[16.047832] (micro_ros_agent) StdoutLine: {'line': b"[ 50%] \x1b[34m\x1b[1mNo patch step for 'uagent'\x1b[0m\n"}
+[16.057881] (micro_ros_agent) StdoutLine: {'line': b"[ 62%] \x1b[34m\x1b[1mPerforming configure step for 'uagent'\x1b[0m\n"}
+[16.062400] (micro_ros_agent) StdoutLine: {'line': b'loading initial cache file /home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_agent/agent/src/xrceagent-build/uagent-prefix/tmp/uagent-cache-.cmake\n'}
+[16.070151] (micro_ros_agent) StdoutLine: {'line': b"-- Setting build type to 'Release' as none was specified.\n"}
+[16.081001] (-) TimerEvent: {}
+[16.091145] (micro_ros_agent) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /home/edrom-mini/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[16.091308] (micro_ros_agent) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (tinyxml2)\n'}
+[16.091398] (micro_ros_agent) StderrLine: {'line': b'  does not match the name of the calling package (TinyXML2).  This can lead\n'}
+[16.091467] (micro_ros_agent) StderrLine: {'line': b'  to problems in calling code that expects `find_package` result variables\n'}
+[16.091534] (micro_ros_agent) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[16.091599] (micro_ros_agent) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[16.091663] (micro_ros_agent) StderrLine: {'line': b'  cmake/modules/FindTinyXML2.cmake:40 (find_package_handle_standard_args)\n'}
+[16.091728] (micro_ros_agent) StderrLine: {'line': b'  /opt/ros/humble/share/fastrtps/cmake/fastrtps-config.cmake:51 (find_package)\n'}
+[16.091794] (micro_ros_agent) StderrLine: {'line': b'  CMakeLists.txt:153 (find_package)\n'}
+[16.091859] (micro_ros_agent) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[16.091924] (micro_ros_agent) StderrLine: {'line': b'\x1b[0m\n'}
+[16.092002] (micro_ros_agent) StdoutLine: {'line': b'-- Found tinyxml2: /usr/lib/x86_64-linux-gnu/libtinyxml2.so\n'}
+[16.129876] (micro_ros_agent) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")\n'}
+[16.138192] (micro_ros_agent) StdoutLine: {'line': b'-- Configuring done (0.1s)\n'}
+[16.149115] (micro_ros_agent) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[16.149974] (micro_ros_agent) StdoutLine: {'line': b'-- Build files have been written to: /home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_agent/agent/src/xrceagent-build\n'}
+[16.156785] (micro_ros_agent) StdoutLine: {'line': b"[ 75%] \x1b[34m\x1b[1mPerforming build step for 'uagent'\x1b[0m\n"}
+[16.176063] (micro_ros_agent) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/Agent.cpp.o\x1b[0m\n'}
+[16.176504] (micro_ros_agent) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/AgentInstance.cpp.o\x1b[0m\n'}
+[16.176777] (micro_ros_agent) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/Root.cpp.o\x1b[0m\n'}
+[16.180574] (micro_ros_agent) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/processor/Processor.cpp.o\x1b[0m\n'}
+[16.181105] (-) TimerEvent: {}
+[16.281573] (-) TimerEvent: {}
+[16.382011] (-) TimerEvent: {}
+[16.482385] (-) TimerEvent: {}
+[16.582781] (-) TimerEvent: {}
+[16.683172] (-) TimerEvent: {}
+[16.783622] (-) TimerEvent: {}
+[16.884042] (-) TimerEvent: {}
+[16.984480] (-) TimerEvent: {}
+[17.084883] (-) TimerEvent: {}
+[17.185292] (-) TimerEvent: {}
+[17.285704] (-) TimerEvent: {}
+[17.386143] (-) TimerEvent: {}
+[17.486560] (-) TimerEvent: {}
+[17.586957] (-) TimerEvent: {}
+[17.687355] (-) TimerEvent: {}
+[17.787766] (-) TimerEvent: {}
+[17.888193] (-) TimerEvent: {}
+[17.988580] (-) TimerEvent: {}
+[18.089025] (-) TimerEvent: {}
+[18.189454] (-) TimerEvent: {}
+[18.289865] (-) TimerEvent: {}
+[18.390307] (-) TimerEvent: {}
+[18.490721] (-) TimerEvent: {}
+[18.591124] (-) TimerEvent: {}
+[18.691517] (-) TimerEvent: {}
+[18.791915] (-) TimerEvent: {}
+[18.892323] (-) TimerEvent: {}
+[18.992724] (-) TimerEvent: {}
+[19.093119] (-) TimerEvent: {}
+[19.193518] (-) TimerEvent: {}
+[19.293903] (-) TimerEvent: {}
+[19.394295] (-) TimerEvent: {}
+[19.494698] (-) TimerEvent: {}
+[19.595114] (-) TimerEvent: {}
+[19.695542] (-) TimerEvent: {}
+[19.798035] (-) TimerEvent: {}
+[19.898439] (-) TimerEvent: {}
+[19.998867] (-) TimerEvent: {}
+[20.099277] (-) TimerEvent: {}
+[20.199705] (-) TimerEvent: {}
+[20.300197] (-) TimerEvent: {}
+[20.400597] (-) TimerEvent: {}
+[20.501008] (-) TimerEvent: {}
+[20.601417] (-) TimerEvent: {}
+[20.701826] (-) TimerEvent: {}
+[20.802236] (-) TimerEvent: {}
+[20.902638] (-) TimerEvent: {}
+[21.003028] (-) TimerEvent: {}
+[21.103430] (-) TimerEvent: {}
+[21.203835] (-) TimerEvent: {}
+[21.304271] (-) TimerEvent: {}
+[21.404677] (-) TimerEvent: {}
+[21.483057] (micro_ros_agent) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/client/ProxyClient.cpp.o\x1b[0m\n'}
+[21.504797] (-) TimerEvent: {}
+[21.605201] (-) TimerEvent: {}
+[21.705608] (-) TimerEvent: {}
+[21.806034] (-) TimerEvent: {}
+[21.906468] (-) TimerEvent: {}
+[22.006893] (-) TimerEvent: {}
+[22.107308] (-) TimerEvent: {}
+[22.207733] (-) TimerEvent: {}
+[22.308155] (-) TimerEvent: {}
+[22.408538] (-) TimerEvent: {}
+[22.508935] (-) TimerEvent: {}
+[22.609341] (-) TimerEvent: {}
+[22.709738] (-) TimerEvent: {}
+[22.810144] (-) TimerEvent: {}
+[22.910546] (-) TimerEvent: {}
+[23.010955] (-) TimerEvent: {}
+[23.111361] (-) TimerEvent: {}
+[23.211771] (-) TimerEvent: {}
+[23.312200] (-) TimerEvent: {}
+[23.412630] (-) TimerEvent: {}
+[23.513039] (-) TimerEvent: {}
+[23.613450] (-) TimerEvent: {}
+[23.713873] (-) TimerEvent: {}
+[23.814278] (-) TimerEvent: {}
+[23.869749] (micro_ros_agent) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/participant/Participant.cpp.o\x1b[0m\n'}
+[23.914405] (-) TimerEvent: {}
+[24.014792] (-) TimerEvent: {}
+[24.115211] (-) TimerEvent: {}
+[24.215648] (-) TimerEvent: {}
+[24.316081] (-) TimerEvent: {}
+[24.416477] (-) TimerEvent: {}
+[24.516878] (-) TimerEvent: {}
+[24.617298] (-) TimerEvent: {}
+[24.717722] (-) TimerEvent: {}
+[24.818133] (-) TimerEvent: {}
+[24.918535] (-) TimerEvent: {}
+[25.018951] (-) TimerEvent: {}
+[25.119374] (-) TimerEvent: {}
+[25.219798] (-) TimerEvent: {}
+[25.320248] (-) TimerEvent: {}
+[25.420650] (-) TimerEvent: {}
+[25.475682] (micro_ros_agent) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/topic/Topic.cpp.o\x1b[0m\n'}
+[25.520788] (-) TimerEvent: {}
+[25.621284] (-) TimerEvent: {}
+[25.721804] (-) TimerEvent: {}
+[25.822312] (-) TimerEvent: {}
+[25.922842] (-) TimerEvent: {}
+[26.023376] (-) TimerEvent: {}
+[26.123911] (-) TimerEvent: {}
+[26.224460] (-) TimerEvent: {}
+[26.325009] (-) TimerEvent: {}
+[26.425530] (-) TimerEvent: {}
+[26.526033] (-) TimerEvent: {}
+[26.627151] (-) TimerEvent: {}
+[26.727716] (-) TimerEvent: {}
+[26.828335] (-) TimerEvent: {}
+[26.928885] (-) TimerEvent: {}
+[27.029509] (-) TimerEvent: {}
+[27.125743] (micro_ros_agent) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/publisher/Publisher.cpp.o\x1b[0m\n'}
+[27.129640] (-) TimerEvent: {}
+[27.230172] (-) TimerEvent: {}
+[27.330884] (-) TimerEvent: {}
+[27.431420] (-) TimerEvent: {}
+[27.531933] (-) TimerEvent: {}
+[27.632391] (-) TimerEvent: {}
+[27.732798] (-) TimerEvent: {}
+[27.833334] (-) TimerEvent: {}
+[27.933744] (-) TimerEvent: {}
+[28.034306] (-) TimerEvent: {}
+[28.134739] (-) TimerEvent: {}
+[28.235283] (-) TimerEvent: {}
+[28.335726] (-) TimerEvent: {}
+[28.436154] (-) TimerEvent: {}
+[28.536573] (-) TimerEvent: {}
+[28.636959] (-) TimerEvent: {}
+[28.687493] (micro_ros_agent) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/subscriber/Subscriber.cpp.o\x1b[0m\n'}
+[28.737085] (-) TimerEvent: {}
+[28.761526] (micro_ros_agent) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/datawriter/DataWriter.cpp.o\x1b[0m\n'}
+[28.837217] (-) TimerEvent: {}
+[28.937653] (-) TimerEvent: {}
+[29.038081] (-) TimerEvent: {}
+[29.138500] (-) TimerEvent: {}
+[29.238930] (-) TimerEvent: {}
+[29.339352] (-) TimerEvent: {}
+[29.439771] (-) TimerEvent: {}
+[29.540179] (-) TimerEvent: {}
+[29.640593] (-) TimerEvent: {}
+[29.740983] (-) TimerEvent: {}
+[29.841425] (-) TimerEvent: {}
+[29.941875] (-) TimerEvent: {}
+[30.042295] (-) TimerEvent: {}
+[30.142722] (-) TimerEvent: {}
+[30.243140] (-) TimerEvent: {}
+[30.343551] (-) TimerEvent: {}
+[30.360287] (micro_ros_agent) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/datareader/DataReader.cpp.o\x1b[0m\n'}
+[30.443676] (-) TimerEvent: {}
+[30.544042] (-) TimerEvent: {}
+[30.644455] (-) TimerEvent: {}
+[30.744911] (-) TimerEvent: {}
+[30.845339] (-) TimerEvent: {}
+[30.945772] (-) TimerEvent: {}
+[30.993221] (micro_ros_agent) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/requester/Requester.cpp.o\x1b[0m\n'}
+[31.045900] (-) TimerEvent: {}
+[31.146311] (-) TimerEvent: {}
+[31.246707] (-) TimerEvent: {}
+[31.347117] (-) TimerEvent: {}
+[31.447533] (-) TimerEvent: {}
+[31.547970] (-) TimerEvent: {}
+[31.648397] (-) TimerEvent: {}
+[31.748804] (-) TimerEvent: {}
+[31.849229] (-) TimerEvent: {}
+[31.949640] (-) TimerEvent: {}
+[32.050060] (-) TimerEvent: {}
+[32.150469] (-) TimerEvent: {}
+[32.250890] (-) TimerEvent: {}
+[32.351309] (-) TimerEvent: {}
+[32.451704] (-) TimerEvent: {}
+[32.552111] (-) TimerEvent: {}
+[32.652516] (-) TimerEvent: {}
+[32.752919] (-) TimerEvent: {}
+[32.853327] (-) TimerEvent: {}
+[32.870962] (micro_ros_agent) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/replier/Replier.cpp.o\x1b[0m\n'}
+[32.953472] (-) TimerEvent: {}
+[33.053912] (-) TimerEvent: {}
+[33.154324] (-) TimerEvent: {}
+[33.254735] (-) TimerEvent: {}
+[33.355180] (-) TimerEvent: {}
+[33.455583] (-) TimerEvent: {}
+[33.556007] (-) TimerEvent: {}
+[33.656408] (-) TimerEvent: {}
+[33.722575] (micro_ros_agent) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/object/XRCEObject.cpp.o\x1b[0m\n'}
+[33.756528] (-) TimerEvent: {}
+[33.856920] (-) TimerEvent: {}
+[33.957317] (-) TimerEvent: {}
+[34.057723] (-) TimerEvent: {}
+[34.158155] (-) TimerEvent: {}
+[34.258577] (-) TimerEvent: {}
+[34.359029] (-) TimerEvent: {}
+[34.459470] (-) TimerEvent: {}
+[34.466763] (micro_ros_agent) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/types/XRCETypes.cpp.o\x1b[0m\n'}
+[34.559603] (-) TimerEvent: {}
+[34.660035] (-) TimerEvent: {}
+[34.760486] (-) TimerEvent: {}
+[34.860906] (-) TimerEvent: {}
+[34.961326] (-) TimerEvent: {}
+[35.061748] (-) TimerEvent: {}
+[35.162175] (-) TimerEvent: {}
+[35.262592] (-) TimerEvent: {}
+[35.363030] (-) TimerEvent: {}
+[35.463434] (-) TimerEvent: {}
+[35.563822] (-) TimerEvent: {}
+[35.664228] (-) TimerEvent: {}
+[35.728959] (micro_ros_agent) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/types/MessageHeader.cpp.o\x1b[0m\n'}
+[35.764348] (-) TimerEvent: {}
+[35.864741] (-) TimerEvent: {}
+[35.965152] (-) TimerEvent: {}
+[36.065563] (-) TimerEvent: {}
+[36.165996] (-) TimerEvent: {}
+[36.198021] (micro_ros_agent) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/types/SubMessageHeader.cpp.o\x1b[0m\n'}
+[36.266128] (-) TimerEvent: {}
+[36.366565] (-) TimerEvent: {}
+[36.460400] (micro_ros_agent) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/message/InputMessage.cpp.o\x1b[0m\n'}
+[36.466693] (-) TimerEvent: {}
+[36.567211] (-) TimerEvent: {}
+[36.667728] (-) TimerEvent: {}
+[36.768262] (-) TimerEvent: {}
+[36.868793] (-) TimerEvent: {}
+[36.891377] (micro_ros_agent) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/message/OutputMessage.cpp.o\x1b[0m\n'}
+[36.968918] (-) TimerEvent: {}
+[37.069439] (-) TimerEvent: {}
+[37.169944] (-) TimerEvent: {}
+[37.270473] (-) TimerEvent: {}
+[37.371024] (-) TimerEvent: {}
+[37.471569] (-) TimerEvent: {}
+[37.572034] (-) TimerEvent: {}
+[37.672424] (-) TimerEvent: {}
+[37.772801] (-) TimerEvent: {}
+[37.873205] (-) TimerEvent: {}
+[37.973611] (-) TimerEvent: {}
+[38.074041] (-) TimerEvent: {}
+[38.079615] (micro_ros_agent) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/utils/ArgumentParser.cpp.o\x1b[0m\n'}
+[38.174186] (-) TimerEvent: {}
+[38.274592] (-) TimerEvent: {}
+[38.375018] (-) TimerEvent: {}
+[38.475403] (-) TimerEvent: {}
+[38.575796] (-) TimerEvent: {}
+[38.676211] (-) TimerEvent: {}
+[38.776609] (-) TimerEvent: {}
+[38.877015] (-) TimerEvent: {}
+[38.977434] (-) TimerEvent: {}
+[39.077851] (-) TimerEvent: {}
+[39.178275] (-) TimerEvent: {}
+[39.278660] (-) TimerEvent: {}
+[39.379099] (-) TimerEvent: {}
+[39.479552] (-) TimerEvent: {}
+[39.580018] (-) TimerEvent: {}
+[39.680437] (-) TimerEvent: {}
+[39.780852] (-) TimerEvent: {}
+[39.881281] (-) TimerEvent: {}
+[39.981726] (-) TimerEvent: {}
+[40.082176] (-) TimerEvent: {}
+[40.182590] (-) TimerEvent: {}
+[40.282983] (-) TimerEvent: {}
+[40.314370] (micro_ros_agent) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/Server.cpp.o\x1b[0m\n'}
+[40.383121] (-) TimerEvent: {}
+[40.483538] (-) TimerEvent: {}
+[40.583973] (-) TimerEvent: {}
+[40.684398] (-) TimerEvent: {}
+[40.784838] (-) TimerEvent: {}
+[40.885264] (-) TimerEvent: {}
+[40.985703] (-) TimerEvent: {}
+[41.014269] (micro_ros_agent) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/stream_framing/StreamFramingProtocol.cpp.o\x1b[0m\n'}
+[41.085835] (-) TimerEvent: {}
+[41.186248] (-) TimerEvent: {}
+[41.248033] (micro_ros_agent) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/custom/CustomAgent.cpp.o\x1b[0m\n'}
+[41.286378] (-) TimerEvent: {}
+[41.345988] (micro_ros_agent) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/udp/UDPv4AgentLinux.cpp.o\x1b[0m\n'}
+[41.352284] (micro_ros_agent) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/udp/UDPv6AgentLinux.cpp.o\x1b[0m\n'}
+[41.386502] (-) TimerEvent: {}
+[41.486913] (-) TimerEvent: {}
+[41.587337] (-) TimerEvent: {}
+[41.687786] (-) TimerEvent: {}
+[41.788248] (-) TimerEvent: {}
+[41.888696] (-) TimerEvent: {}
+[41.989141] (-) TimerEvent: {}
+[42.089584] (-) TimerEvent: {}
+[42.190004] (-) TimerEvent: {}
+[42.290417] (-) TimerEvent: {}
+[42.390859] (-) TimerEvent: {}
+[42.491285] (-) TimerEvent: {}
+[42.591695] (-) TimerEvent: {}
+[42.692106] (-) TimerEvent: {}
+[42.792509] (-) TimerEvent: {}
+[42.892923] (-) TimerEvent: {}
+[42.993344] (-) TimerEvent: {}
+[43.093771] (-) TimerEvent: {}
+[43.194216] (-) TimerEvent: {}
+[43.294652] (-) TimerEvent: {}
+[43.395079] (-) TimerEvent: {}
+[43.495504] (-) TimerEvent: {}
+[43.595904] (-) TimerEvent: {}
+[43.696326] (-) TimerEvent: {}
+[43.796755] (-) TimerEvent: {}
+[43.897161] (-) TimerEvent: {}
+[43.997580] (-) TimerEvent: {}
+[44.097984] (-) TimerEvent: {}
+[44.198386] (-) TimerEvent: {}
+[44.298808] (-) TimerEvent: {}
+[44.399245] (-) TimerEvent: {}
+[44.499661] (-) TimerEvent: {}
+[44.600042] (-) TimerEvent: {}
+[44.700456] (-) TimerEvent: {}
+[44.800875] (-) TimerEvent: {}
+[44.901289] (-) TimerEvent: {}
+[45.001907] (-) TimerEvent: {}
+[45.102343] (-) TimerEvent: {}
+[45.202741] (-) TimerEvent: {}
+[45.303165] (-) TimerEvent: {}
+[45.403596] (-) TimerEvent: {}
+[45.504031] (-) TimerEvent: {}
+[45.604420] (-) TimerEvent: {}
+[45.704828] (-) TimerEvent: {}
+[45.805256] (-) TimerEvent: {}
+[45.905662] (-) TimerEvent: {}
+[46.006085] (-) TimerEvent: {}
+[46.106491] (-) TimerEvent: {}
+[46.206908] (-) TimerEvent: {}
+[46.307314] (-) TimerEvent: {}
+[46.407732] (-) TimerEvent: {}
+[46.486261] (micro_ros_agent) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/tcp/TCPv4AgentLinux.cpp.o\x1b[0m\n'}
+[46.507860] (-) TimerEvent: {}
+[46.608262] (-) TimerEvent: {}
+[46.610041] (micro_ros_agent) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/tcp/TCPv6AgentLinux.cpp.o\x1b[0m\n'}
+[46.708385] (-) TimerEvent: {}
+[46.808806] (-) TimerEvent: {}
+[46.889877] (micro_ros_agent) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/serial/SerialAgentLinux.cpp.o\x1b[0m\n'}
+[46.908926] (-) TimerEvent: {}
+[47.009445] (-) TimerEvent: {}
+[47.109945] (-) TimerEvent: {}
+[47.210439] (-) TimerEvent: {}
+[47.310940] (-) TimerEvent: {}
+[47.411470] (-) TimerEvent: {}
+[47.512002] (-) TimerEvent: {}
+[47.612501] (-) TimerEvent: {}
+[47.713016] (-) TimerEvent: {}
+[47.813542] (-) TimerEvent: {}
+[47.914070] (-) TimerEvent: {}
+[48.014599] (-) TimerEvent: {}
+[48.115119] (-) TimerEvent: {}
+[48.215659] (-) TimerEvent: {}
+[48.283043] (micro_ros_agent) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/serial/TermiosAgentLinux.cpp.o\x1b[0m\n'}
+[48.315792] (-) TimerEvent: {}
+[48.416211] (-) TimerEvent: {}
+[48.516643] (-) TimerEvent: {}
+[48.617092] (-) TimerEvent: {}
+[48.717504] (-) TimerEvent: {}
+[48.817911] (-) TimerEvent: {}
+[48.918365] (-) TimerEvent: {}
+[49.018803] (-) TimerEvent: {}
+[49.119235] (-) TimerEvent: {}
+[49.219671] (-) TimerEvent: {}
+[49.320091] (-) TimerEvent: {}
+[49.420528] (-) TimerEvent: {}
+[49.520934] (-) TimerEvent: {}
+[49.621338] (-) TimerEvent: {}
+[49.721730] (-) TimerEvent: {}
+[49.822146] (-) TimerEvent: {}
+[49.922549] (-) TimerEvent: {}
+[50.022956] (-) TimerEvent: {}
+[50.123361] (-) TimerEvent: {}
+[50.223778] (-) TimerEvent: {}
+[50.324193] (-) TimerEvent: {}
+[50.424607] (-) TimerEvent: {}
+[50.525029] (-) TimerEvent: {}
+[50.625425] (-) TimerEvent: {}
+[50.725815] (-) TimerEvent: {}
+[50.826199] (-) TimerEvent: {}
+[50.926612] (-) TimerEvent: {}
+[51.027034] (-) TimerEvent: {}
+[51.127441] (-) TimerEvent: {}
+[51.227851] (-) TimerEvent: {}
+[51.328267] (-) TimerEvent: {}
+[51.428698] (-) TimerEvent: {}
+[51.529098] (-) TimerEvent: {}
+[51.621654] (micro_ros_agent) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/serial/MultiSerialAgentLinux.cpp.o\x1b[0m\n'}
+[51.629232] (-) TimerEvent: {}
+[51.729754] (-) TimerEvent: {}
+[51.830254] (-) TimerEvent: {}
+[51.930756] (-) TimerEvent: {}
+[52.031294] (-) TimerEvent: {}
+[52.131799] (-) TimerEvent: {}
+[52.232358] (-) TimerEvent: {}
+[52.332877] (-) TimerEvent: {}
+[52.433403] (-) TimerEvent: {}
+[52.533908] (-) TimerEvent: {}
+[52.634417] (-) TimerEvent: {}
+[52.734923] (-) TimerEvent: {}
+[52.835443] (-) TimerEvent: {}
+[52.935972] (-) TimerEvent: {}
+[52.949404] (micro_ros_agent) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/serial/MultiTermiosAgentLinux.cpp.o\x1b[0m\n'}
+[52.956985] (micro_ros_agent) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/serial/PseudoTerminalAgentLinux.cpp.o\x1b[0m\n'}
+[53.036146] (-) TimerEvent: {}
+[53.066414] (micro_ros_agent) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/can/CanAgentLinux.cpp.o\x1b[0m\n'}
+[53.136265] (-) TimerEvent: {}
+[53.236772] (-) TimerEvent: {}
+[53.337297] (-) TimerEvent: {}
+[53.437812] (-) TimerEvent: {}
+[53.538403] (-) TimerEvent: {}
+[53.638793] (-) TimerEvent: {}
+[53.739235] (-) TimerEvent: {}
+[53.839657] (-) TimerEvent: {}
+[53.940039] (-) TimerEvent: {}
+[54.040415] (-) TimerEvent: {}
+[54.140820] (-) TimerEvent: {}
+[54.241212] (-) TimerEvent: {}
+[54.341602] (-) TimerEvent: {}
+[54.442106] (-) TimerEvent: {}
+[54.542621] (-) TimerEvent: {}
+[54.643135] (-) TimerEvent: {}
+[54.743661] (-) TimerEvent: {}
+[54.844187] (-) TimerEvent: {}
+[54.944729] (-) TimerEvent: {}
+[55.045239] (-) TimerEvent: {}
+[55.145756] (-) TimerEvent: {}
+[55.246149] (-) TimerEvent: {}
+[55.346520] (-) TimerEvent: {}
+[55.446927] (-) TimerEvent: {}
+[55.547329] (-) TimerEvent: {}
+[55.647721] (-) TimerEvent: {}
+[55.748234] (-) TimerEvent: {}
+[55.848736] (-) TimerEvent: {}
+[55.949231] (-) TimerEvent: {}
+[56.049735] (-) TimerEvent: {}
+[56.151421] (-) TimerEvent: {}
+[56.251913] (-) TimerEvent: {}
+[56.352431] (-) TimerEvent: {}
+[56.452920] (-) TimerEvent: {}
+[56.553400] (-) TimerEvent: {}
+[56.653913] (-) TimerEvent: {}
+[56.742918] (micro_ros_agent) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/discovery/DiscoveryServerLinux.cpp.o\x1b[0m\n'}
+[56.754040] (-) TimerEvent: {}
+[56.854523] (-) TimerEvent: {}
+[56.955038] (-) TimerEvent: {}
+[57.055557] (-) TimerEvent: {}
+[57.156107] (-) TimerEvent: {}
+[57.256604] (-) TimerEvent: {}
+[57.357118] (-) TimerEvent: {}
+[57.403894] (micro_ros_agent) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/discovery/DiscoveryServer.cpp.o\x1b[0m\n'}
+[57.457253] (-) TimerEvent: {}
+[57.557650] (-) TimerEvent: {}
+[57.658056] (-) TimerEvent: {}
+[57.758436] (-) TimerEvent: {}
+[57.796082] (micro_ros_agent) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/types/TopicPubSubType.cpp.o\x1b[0m\n'}
+[57.858574] (-) TimerEvent: {}
+[57.958963] (-) TimerEvent: {}
+[58.059345] (-) TimerEvent: {}
+[58.159725] (-) TimerEvent: {}
+[58.260115] (-) TimerEvent: {}
+[58.283832] (micro_ros_agent) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/xmlobjects/xmlobjects.cpp.o\x1b[0m\n'}
+[58.360787] (-) TimerEvent: {}
+[58.412136] (micro_ros_agent) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/middleware/fast/FastEntities.cpp.o\x1b[0m\n'}
+[58.460933] (-) TimerEvent: {}
+[58.561588] (-) TimerEvent: {}
+[58.662073] (-) TimerEvent: {}
+[58.762450] (-) TimerEvent: {}
+[58.863007] (-) TimerEvent: {}
+[58.963380] (-) TimerEvent: {}
+[59.063777] (-) TimerEvent: {}
+[59.164196] (-) TimerEvent: {}
+[59.264594] (-) TimerEvent: {}
+[59.365025] (-) TimerEvent: {}
+[59.465400] (-) TimerEvent: {}
+[59.565776] (-) TimerEvent: {}
+[59.666154] (-) TimerEvent: {}
+[59.766609] (-) TimerEvent: {}
+[59.867045] (-) TimerEvent: {}
+[59.967445] (-) TimerEvent: {}
+[59.986688] (micro_ros_agent) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/middleware/fast/FastMiddleware.cpp.o\x1b[0m\n'}
+[60.067565] (-) TimerEvent: {}
+[60.167933] (-) TimerEvent: {}
+[60.268337] (-) TimerEvent: {}
+[60.368707] (-) TimerEvent: {}
+[60.469122] (-) TimerEvent: {}
+[60.569545] (-) TimerEvent: {}
+[60.669950] (-) TimerEvent: {}
+[60.770358] (-) TimerEvent: {}
+[60.870766] (-) TimerEvent: {}
+[60.971181] (-) TimerEvent: {}
+[61.071589] (-) TimerEvent: {}
+[61.172010] (-) TimerEvent: {}
+[61.272416] (-) TimerEvent: {}
+[61.372835] (-) TimerEvent: {}
+[61.473264] (-) TimerEvent: {}
+[61.573694] (-) TimerEvent: {}
+[61.637253] (micro_ros_agent) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/middleware/fastdds/FastDDSEntities.cpp.o\x1b[0m\n'}
+[61.673853] (-) TimerEvent: {}
+[61.748584] (micro_ros_agent) StdoutLine: {'line': b'[ 97%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/middleware/fastdds/FastDDSMiddleware.cpp.o\x1b[0m\n'}
+[61.773981] (-) TimerEvent: {}
+[61.874347] (-) TimerEvent: {}
+[61.974754] (-) TimerEvent: {}
+[62.075181] (-) TimerEvent: {}
+[62.175573] (-) TimerEvent: {}
+[62.275993] (-) TimerEvent: {}
+[62.376383] (-) TimerEvent: {}
+[62.476784] (-) TimerEvent: {}
+[62.577192] (-) TimerEvent: {}
+[62.677588] (-) TimerEvent: {}
+[62.777960] (-) TimerEvent: {}
+[62.878367] (-) TimerEvent: {}
+[62.978770] (-) TimerEvent: {}
+[63.079164] (-) TimerEvent: {}
+[63.179563] (-) TimerEvent: {}
+[63.279971] (-) TimerEvent: {}
+[63.380366] (-) TimerEvent: {}
+[63.480761] (-) TimerEvent: {}
+[63.581153] (-) TimerEvent: {}
+[63.681602] (-) TimerEvent: {}
+[63.781975] (-) TimerEvent: {}
+[63.882357] (-) TimerEvent: {}
+[63.982720] (-) TimerEvent: {}
+[64.083097] (-) TimerEvent: {}
+[64.183495] (-) TimerEvent: {}
+[64.283879] (-) TimerEvent: {}
+[64.384283] (-) TimerEvent: {}
+[64.484700] (-) TimerEvent: {}
+[64.585073] (-) TimerEvent: {}
+[64.685456] (-) TimerEvent: {}
+[64.785849] (-) TimerEvent: {}
+[64.886230] (-) TimerEvent: {}
+[64.986642] (-) TimerEvent: {}
+[65.087013] (-) TimerEvent: {}
+[65.187382] (-) TimerEvent: {}
+[65.287756] (-) TimerEvent: {}
+[65.388161] (-) TimerEvent: {}
+[65.488531] (-) TimerEvent: {}
+[65.588912] (-) TimerEvent: {}
+[65.689296] (-) TimerEvent: {}
+[65.789801] (-) TimerEvent: {}
+[65.890189] (-) TimerEvent: {}
+[65.990546] (-) TimerEvent: {}
+[66.090922] (-) TimerEvent: {}
+[66.191290] (-) TimerEvent: {}
+[66.291656] (-) TimerEvent: {}
+[66.392032] (-) TimerEvent: {}
+[66.492377] (-) TimerEvent: {}
+[66.592706] (-) TimerEvent: {}
+[66.693049] (-) TimerEvent: {}
+[66.793392] (-) TimerEvent: {}
+[66.893730] (-) TimerEvent: {}
+[66.994071] (-) TimerEvent: {}
+[67.094475] (-) TimerEvent: {}
+[67.194809] (-) TimerEvent: {}
+[67.295180] (-) TimerEvent: {}
+[67.395669] (-) TimerEvent: {}
+[67.496027] (-) TimerEvent: {}
+[67.596331] (-) TimerEvent: {}
+[67.696635] (-) TimerEvent: {}
+[67.796969] (-) TimerEvent: {}
+[67.897297] (-) TimerEvent: {}
+[67.997645] (-) TimerEvent: {}
+[68.097977] (-) TimerEvent: {}
+[68.198308] (-) TimerEvent: {}
+[68.298637] (-) TimerEvent: {}
+[68.398958] (-) TimerEvent: {}
+[68.499279] (-) TimerEvent: {}
+[68.599594] (-) TimerEvent: {}
+[68.699905] (-) TimerEvent: {}
+[68.800202] (-) TimerEvent: {}
+[68.900479] (-) TimerEvent: {}
+[69.000789] (-) TimerEvent: {}
+[69.101090] (-) TimerEvent: {}
+[69.201401] (-) TimerEvent: {}
+[69.301711] (-) TimerEvent: {}
+[69.402016] (-) TimerEvent: {}
+[69.502326] (-) TimerEvent: {}
+[69.602634] (-) TimerEvent: {}
+[69.702932] (-) TimerEvent: {}
+[69.803241] (-) TimerEvent: {}
+[69.903575] (-) TimerEvent: {}
+[70.003869] (-) TimerEvent: {}
+[70.104166] (-) TimerEvent: {}
+[70.204439] (-) TimerEvent: {}
+[70.304738] (-) TimerEvent: {}
+[70.405037] (-) TimerEvent: {}
+[70.505352] (-) TimerEvent: {}
+[70.597378] (micro_ros_agent) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library libmicroxrcedds_agent.so\x1b[0m\n'}
+[70.605490] (-) TimerEvent: {}
+[70.705920] (-) TimerEvent: {}
+[70.806321] (-) TimerEvent: {}
+[70.892492] (micro_ros_agent) StdoutLine: {'line': b'[100%] Built target microxrcedds_agent\n'}
+[70.900112] (micro_ros_agent) StdoutLine: {'line': b"\x1b[34m\x1b[1mNo install step for 'uagent'\x1b[0m\n"}
+[70.906450] (micro_ros_agent) StdoutLine: {'line': b"\x1b[34m\x1b[1mCompleted 'uagent'\x1b[0m\n"}
+[70.906640] (-) TimerEvent: {}
+[70.915160] (micro_ros_agent) StdoutLine: {'line': b'Built target uagent\n'}
+[70.925570] (micro_ros_agent) StdoutLine: {'line': b"[ 43%] \x1b[34m\x1b[1mPerforming install step for 'xrceagent'\x1b[0m\n"}
+[71.006786] (-) TimerEvent: {}
+[71.010887] (micro_ros_agent) StdoutLine: {'line': b'[100%] Built target microxrcedds_agent\n'}
+[71.017442] (micro_ros_agent) StdoutLine: {'line': b'\x1b[36mInstall the project...\x1b[0m\n'}
+[71.020770] (micro_ros_agent) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[71.021006] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/lib/libmicroxrcedds_agent.so.2.4.1\n'}
+[71.024222] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/lib/libmicroxrcedds_agent.so.2.4\n'}
+[71.024455] (micro_ros_agent) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/lib/libmicroxrcedds_agent.so.2.4.1" to ""\n'}
+[71.024645] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/lib/libmicroxrcedds_agent.so\n'}
+[71.024788] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent\n'}
+[71.024969] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/client\n'}
+[71.025068] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/client/ProxyClient.hpp\n'}
+[71.025145] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/client/session\n'}
+[71.025216] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/client/session/SessionInfo.hpp\n'}
+[71.025308] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/client/session/Session.hpp\n'}
+[71.025394] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/client/session/stream\n'}
+[71.025478] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/client/session/stream/InputStream.hpp\n'}
+[71.025545] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/client/session/stream/OutputStream.hpp\n'}
+[71.025638] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/utils\n'}
+[71.025730] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/utils/Conversion.hpp\n'}
+[71.025811] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/utils/Functions.hpp\n'}
+[71.025936] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/utils/SeqNum.hpp\n'}
+[71.026029] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/utils/SharedMutex.hpp\n'}
+[71.026116] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/utils/Color.hpp\n'}
+[71.026202] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/utils/ArgumentParser.hpp\n'}
+[71.026295] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/utils/Time.hpp\n'}
+[71.026394] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/utils/SharedMutexPriority.hpp\n'}
+[71.026505] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/utils/TokenBucket.hpp\n'}
+[71.026597] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/p2p\n'}
+[71.026682] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/p2p/InternalClient.hpp\n'}
+[71.026775] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/p2p/InternalClientManager.hpp\n'}
+[71.026876] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/Root.hpp\n'}
+[71.026969] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/requester\n'}
+[71.027045] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/requester/Requester.hpp\n'}
+[71.027138] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/scheduler\n'}
+[71.027214] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/scheduler/PacketScheduler.hpp\n'}
+[71.027302] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/scheduler/Scheduler.hpp\n'}
+[71.027398] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport\n'}
+[71.027479] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/endpoint\n'}
+[71.027562] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/endpoint/MultiSerialEndPoint.hpp\n'}
+[71.027646] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/endpoint/IPv6EndPoint.hpp\n'}
+[71.027737] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/endpoint/SerialEndPoint.hpp\n'}
+[71.027834] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/endpoint/CustomEndPoint.hpp\n'}
+[71.027961] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/endpoint/IPv4EndPoint.hpp\n'}
+[71.028062] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/endpoint/CanEndPoint.hpp\n'}
+[71.028156] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/custom\n'}
+[71.028265] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/custom/CustomAgent.hpp\n'}
+[71.028348] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/p2p\n'}
+[71.028434] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/p2p/AgentDiscovererLinux.hpp\n'}
+[71.028511] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/p2p/AgentDiscoverer.hpp\n'}
+[71.028594] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/udp\n'}
+[71.028677] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/udp/UDPv4AgentLinux.hpp\n'}
+[71.028761] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/udp/UDPv6AgentLinux.hpp\n'}
+[71.028863] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/udp/UDPv4AgentWindows.hpp\n'}
+[71.028961] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/udp/UDPv6AgentWindows.hpp\n'}
+[71.029062] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/SessionManager.hpp\n'}
+[71.029162] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/discovery\n'}
+[71.029245] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/discovery/DiscoveryServer.hpp\n'}
+[71.029349] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/discovery/DiscoveryServerLinux.hpp\n'}
+[71.029438] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/discovery/DiscoveryServerWindows.hpp\n'}
+[71.029535] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/util\n'}
+[71.029619] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/util/InterfaceWindows.hpp\n'}
+[71.029713] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/util/InterfaceLinux.hpp\n'}
+[71.029815] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/TransportRc.hpp\n'}
+[71.029908] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/stream_framing\n'}
+[71.029989] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/stream_framing/StreamFramingProtocol.hpp\n'}
+[71.030088] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/can\n'}
+[71.030173] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/can/CanAgentLinux.hpp\n'}
+[71.030254] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/tcp\n'}
+[71.030338] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/tcp/TCPv6AgentLinux.hpp\n'}
+[71.030425] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/tcp/TCPv6AgentWindows.hpp\n'}
+[71.030515] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/tcp/TCPConnection.hpp\n'}
+[71.030610] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/tcp/TCPv4AgentWindows.hpp\n'}
+[71.030711] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/tcp/TCPServerBase.hpp\n'}
+[71.030812] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/tcp/TCPv4AgentLinux.hpp\n'}
+[71.030908] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/Server.hpp\n'}
+[71.031004] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/serial\n'}
+[71.031086] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/serial/baud_rate_table_linux.h\n'}
+[71.031180] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/serial/MultiTermiosAgentLinux.hpp\n'}
+[71.031277] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/serial/MultiSerialAgentLinux.hpp\n'}
+[71.031375] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/serial/PseudoTerminalAgentLinux.hpp\n'}
+[71.031471] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/serial/SerialAgentLinux.hpp\n'}
+[71.031566] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/transport/serial/TermiosAgentLinux.hpp\n'}
+[71.031662] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/visibility.hpp\n'}
+[71.031754] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/middleware\n'}
+[71.031830] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/middleware/utils\n'}
+[71.031906] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/middleware/utils/Callbacks.hpp\n'}
+[71.032180] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/middleware/Middleware.hpp\n'}
+[71.032289] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/middleware/ced\n'}
+[71.032374] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/middleware/ced/CedMiddleware.hpp\n'}
+[71.032504] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/middleware/ced/CedEntities.hpp\n'}
+[71.032609] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/middleware/fastdds\n'}
+[71.033206] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/middleware/fastdds/FastDDSEntities.hpp\n'}
+[71.033324] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/middleware/fastdds/FastDDSMiddleware.hpp\n'}
+[71.033424] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/middleware/fast\n'}
+[71.033511] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/middleware/fast/FastMiddleware.hpp\n'}
+[71.033602] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/middleware/fast/FastEntities.hpp\n'}
+[71.033690] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/subscriber\n'}
+[71.033789] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/subscriber/Subscriber.hpp\n'}
+[71.033955] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/AgentInstance.hpp\n'}
+[71.034118] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/logger\n'}
+[71.034260] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/logger/Logger.hpp\n'}
+[71.034341] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/object\n'}
+[71.034419] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/object/XRCEObject.hpp\n'}
+[71.034498] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/topic\n'}
+[71.034575] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/topic/Topic.hpp\n'}
+[71.034663] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/message\n'}
+[71.034770] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/message/InputMessage.hpp\n'}
+[71.034836] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/message/Packet.hpp\n'}
+[71.034904] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/message/OutputMessage.hpp\n'}
+[71.034971] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/replier\n'}
+[71.035038] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/replier/Replier.hpp\n'}
+[71.035125] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/datareader\n'}
+[71.035226] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/datareader/DataReader.hpp\n'}
+[71.035292] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/Agent.hpp\n'}
+[71.035360] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/participant\n'}
+[71.035447] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/participant/Participant.hpp\n'}
+[71.035516] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/processor\n'}
+[71.035605] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/processor/Processor.hpp\n'}
+[71.035674] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/types\n'}
+[71.035744] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/types/SubMessageHeader.hpp\n'}
+[71.035877] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/types/MessageHeader.hpp\n'}
+[71.036080] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/types/XRCETypes.hpp\n'}
+[71.036324] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/types/Optional.hpp\n'}
+[71.036427] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/types/TopicPubSubType.hpp\n'}
+[71.036540] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/reader\n'}
+[71.036680] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/reader/Reader.hpp\n'}
+[71.036774] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/datawriter\n'}
+[71.036860] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/datawriter/DataWriter.hpp\n'}
+[71.036954] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/publisher\n'}
+[71.037037] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/publisher/Publisher.hpp\n'}
+[71.037179] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/microxrcedds_agent/cmake/microxrcedds_agentTargets.cmake\n'}
+[71.037337] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/microxrcedds_agent/cmake/microxrcedds_agentTargets-release.cmake\n'}
+[71.037478] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/include/uxr/agent/config.hpp\n'}
+[71.037610] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/microxrcedds_agent/LICENSE\n'}
+[71.037748] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/microxrcedds_agent/cmake/microxrcedds_agentConfig.cmake\n'}
+[71.037848] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/microxrcedds_agent/cmake/microxrcedds_agentConfigVersion.cmake\n'}
+[71.044751] (micro_ros_agent) StdoutLine: {'line': b"[ 50%] \x1b[34m\x1b[1mCompleted 'xrceagent'\x1b[0m\n"}
+[71.054332] (micro_ros_agent) StdoutLine: {'line': b'[ 50%] Built target xrceagent\n'}
+[71.062049] (micro_ros_agent) StdoutLine: {'line': b"[ 56%] \x1b[34m\x1b[1mCreating directories for 'micro_ros_agent'\x1b[0m\n"}
+[71.069309] (micro_ros_agent) StdoutLine: {'line': b"[ 62%] \x1b[34m\x1b[1mNo download step for 'micro_ros_agent'\x1b[0m\n"}
+[71.075886] (micro_ros_agent) StdoutLine: {'line': b"[ 68%] \x1b[34m\x1b[1mNo update step for 'micro_ros_agent'\x1b[0m\n"}
+[71.083286] (micro_ros_agent) StdoutLine: {'line': b"[ 75%] \x1b[34m\x1b[1mNo patch step for 'micro_ros_agent'\x1b[0m\n"}
+[71.091866] (micro_ros_agent) StdoutLine: {'line': b"[ 81%] \x1b[34m\x1b[1mPerforming configure step for 'micro_ros_agent'\x1b[0m\n"}
+[71.096379] (micro_ros_agent) StdoutLine: {'line': b'loading initial cache file /home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_agent/micro_ros_agent-prefix/tmp/micro_ros_agent-cache-.cmake\n'}
+[71.102472] (micro_ros_agent) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[71.106888] (-) TimerEvent: {}
+[71.207148] (-) TimerEvent: {}
+[71.224345] (micro_ros_agent) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter\n'}
+[71.307284] (-) TimerEvent: {}
+[71.359400] (micro_ros_agent) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")\n'}
+[71.363179] (micro_ros_agent) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[71.407417] (-) TimerEvent: {}
+[71.429775] (micro_ros_agent) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[71.430778] (micro_ros_agent) StdoutLine: {'line': b'-- Found Threads: TRUE\n'}
+[71.435193] (micro_ros_agent) StdoutLine: {'line': b'-- Found rosidl_cmake: 3.1.5 (/opt/ros/humble/share/rosidl_cmake/cmake)\n'}
+[71.436303] (micro_ros_agent) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[71.454598] (micro_ros_agent) StdoutLine: {'line': b'-- Found fastrtps_cmake_module: 2.2.2 (/opt/ros/humble/share/fastrtps_cmake_module/cmake)\n'}
+[71.455695] (micro_ros_agent) StdoutLine: {'line': b'-- Found rmw_dds_common: 1.6.0 (/opt/ros/humble/share/rmw_dds_common/cmake)\n'}
+[71.486383] (micro_ros_agent) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[71.496820] (micro_ros_agent) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[71.507313] (micro_ros_agent) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[71.507431] (-) TimerEvent: {}
+[71.525271] (micro_ros_agent) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[71.547279] (micro_ros_agent) StdoutLine: {'line': b'-- Found rmw_fastrtps_shared_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_shared_cpp/cmake)\n'}
+[71.600548] (micro_ros_agent) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include\n'}
+[71.601741] (micro_ros_agent) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[71.603823] (micro_ros_agent) StdoutLine: {'line': b'-- Found ament_cmake_gtest: 1.3.8 (/opt/ros/humble/share/ament_cmake_gtest/cmake)\n'}
+[71.604703] (micro_ros_agent) StdoutLine: {'line': b'-- Found micro_ros_msgs: 5.0.2 (/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake)\n'}
+[71.607536] (-) TimerEvent: {}
+[71.684939] (micro_ros_agent) StdoutLine: {'line': b'-- Configuring done (0.6s)\n'}
+[71.693162] (micro_ros_agent) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[71.694621] (micro_ros_agent) StdoutLine: {'line': b'-- Build files have been written to: /home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_agent\n'}
+[71.702940] (micro_ros_agent) StdoutLine: {'line': b"[ 87%] \x1b[34m\x1b[1mPerforming build step for 'micro_ros_agent'\x1b[0m\n"}
+[71.707681] (-) TimerEvent: {}
+[71.720591] (micro_ros_agent) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_agent.dir/src/main.cpp.o\x1b[0m\n'}
+[71.721183] (micro_ros_agent) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_agent.dir/src/agent/graph_manager/graph_manager.cpp.o\x1b[0m\n'}
+[71.721650] (micro_ros_agent) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_agent.dir/src/agent/Agent.cpp.o\x1b[0m\n'}
+[71.723425] (micro_ros_agent) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_agent.dir/src/agent/graph_manager/graph_typesupport.cpp.o\x1b[0m\n'}
+[71.807814] (-) TimerEvent: {}
+[71.908272] (-) TimerEvent: {}
+[72.008645] (-) TimerEvent: {}
+[72.109175] (-) TimerEvent: {}
+[72.209677] (-) TimerEvent: {}
+[72.310087] (-) TimerEvent: {}
+[72.410661] (-) TimerEvent: {}
+[72.511057] (-) TimerEvent: {}
+[72.611476] (-) TimerEvent: {}
+[72.711865] (-) TimerEvent: {}
+[72.812263] (-) TimerEvent: {}
+[72.912641] (-) TimerEvent: {}
+[73.013099] (-) TimerEvent: {}
+[73.113479] (-) TimerEvent: {}
+[73.213866] (-) TimerEvent: {}
+[73.314247] (-) TimerEvent: {}
+[73.414643] (-) TimerEvent: {}
+[73.515071] (-) TimerEvent: {}
+[73.615497] (-) TimerEvent: {}
+[73.715922] (-) TimerEvent: {}
+[73.816318] (-) TimerEvent: {}
+[73.916697] (-) TimerEvent: {}
+[74.017077] (-) TimerEvent: {}
+[74.117468] (-) TimerEvent: {}
+[74.217855] (-) TimerEvent: {}
+[74.318247] (-) TimerEvent: {}
+[74.418626] (-) TimerEvent: {}
+[74.509191] (micro_ros_agent) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_agent.dir/src/agent/utils/demangle.cpp.o\x1b[0m\n'}
+[74.518758] (-) TimerEvent: {}
+[74.619148] (-) TimerEvent: {}
+[74.719576] (-) TimerEvent: {}
+[74.820003] (-) TimerEvent: {}
+[74.920414] (-) TimerEvent: {}
+[75.020818] (-) TimerEvent: {}
+[75.121183] (-) TimerEvent: {}
+[75.221545] (-) TimerEvent: {}
+[75.321887] (-) TimerEvent: {}
+[75.422220] (-) TimerEvent: {}
+[75.522556] (-) TimerEvent: {}
+[75.622891] (-) TimerEvent: {}
+[75.723228] (-) TimerEvent: {}
+[75.823576] (-) TimerEvent: {}
+[75.923907] (-) TimerEvent: {}
+[76.024255] (-) TimerEvent: {}
+[76.124586] (-) TimerEvent: {}
+[76.225073] (-) TimerEvent: {}
+[76.325481] (-) TimerEvent: {}
+[76.425882] (-) TimerEvent: {}
+[76.526187] (-) TimerEvent: {}
+[76.626490] (-) TimerEvent: {}
+[76.726968] (-) TimerEvent: {}
+[76.790436] (micro_ros_agent) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable micro_ros_agent\x1b[0m\n'}
+[76.827111] (-) TimerEvent: {}
+[76.927484] (-) TimerEvent: {}
+[77.027897] (-) TimerEvent: {}
+[77.128291] (-) TimerEvent: {}
+[77.183956] (micro_ros_agent) StdoutLine: {'line': b'[100%] Built target micro_ros_agent\n'}
+[77.190914] (micro_ros_agent) StdoutLine: {'line': b"\x1b[34m\x1b[1mNo install step for 'micro_ros_agent'\x1b[0m\n"}
+[77.197286] (micro_ros_agent) StdoutLine: {'line': b"\x1b[34m\x1b[1mCompleted 'micro_ros_agent'\x1b[0m\n"}
+[77.205477] (micro_ros_agent) StdoutLine: {'line': b'Built target micro_ros_agent\n'}
+[77.222858] (micro_ros_agent) CommandEnded: {'returncode': 0}
+[77.228371] (-) TimerEvent: {}
+[77.324530] (micro_ros_agent) JobProgress: {'identifier': 'micro_ros_agent', 'progress': 'install'}
+[77.325454] (micro_ros_agent) Command: {'cmd': ['/home/edrom-mini/.local/bin/cmake', '--install', '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_agent'], 'cwd': '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_agent', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'edrom-mini'), ('LC_TIME', 'pt_BR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/edrom-mini'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1424'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=efcb2744416a92cd88045c6a672654a5'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'edrom-mini'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'edrom-mini'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/edrom-mini/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/edrom-mini:@/tmp/.ICE-unix/1424,unix/edrom-mini:/tmp/.ICE-unix/1424'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/aecd7801_072f_4d4f_b8f3_4878e047cc4b'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.9UGXW2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.600'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/micro_ros_agent'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=efcb2744416a92cd88045c6a672654a5'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs:/opt/ros/humble')]), 'shell': False}
+[77.328444] (-) TimerEvent: {}
+[77.394372] (micro_ros_agent) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[77.394640] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/ament_index/resource_index/package_run_dependencies/micro_ros_agent\n'}
+[77.394810] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/ament_index/resource_index/parent_prefix_path/micro_ros_agent\n'}
+[77.394919] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/environment/ament_prefix_path.sh\n'}
+[77.395079] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/environment/ament_prefix_path.dsv\n'}
+[77.395262] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/environment/path.sh\n'}
+[77.395373] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/environment/path.dsv\n'}
+[77.395469] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/local_setup.bash\n'}
+[77.395565] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/local_setup.sh\n'}
+[77.395650] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/local_setup.zsh\n'}
+[77.395753] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/local_setup.dsv\n'}
+[77.395864] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/package.dsv\n'}
+[77.396033] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/ament_index/resource_index/packages/micro_ros_agent\n'}
+[77.396198] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[77.396307] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/cmake/micro_ros_agentConfig.cmake\n'}
+[77.396398] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/cmake/micro_ros_agentConfig-version.cmake\n'}
+[77.396509] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/package.xml\n'}
+[77.396679] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/lib/micro_ros_agent/micro_ros_agent\n'}
+[77.397958] (micro_ros_agent) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/lib/micro_ros_agent/micro_ros_agent" to ""\n'}
+[77.398072] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/launch\n'}
+[77.398164] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/launch/micro_ros_agent_launch.py\n'}
+[77.411741] (micro_ros_agent) CommandEnded: {'returncode': 0}
+[77.428537] (-) TimerEvent: {}
+[77.524961] (micro_ros_agent) JobEnded: {'identifier': 'micro_ros_agent', 'rc': 0}
+[77.525695] (-) EventReactorShutdown: {}
