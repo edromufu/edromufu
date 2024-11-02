@@ -50,7 +50,8 @@ class IKPublisher(Node):
         hipUX2hipUY = -0.03598 # Distância do Hip UX até o Hiṕ UY em z
         ankleUY2ankleUX = -0.03467  # Distância do Ankle UY até a Ankle UX em z
         ankleUX2foot = -0.02004 # Distância do Ankle UX até a base do pé em z
-    
+
+        com_height = com2hipUX + hipUX2hipUY-b-e-c+ankleUY2ankleUX+ankleUX2foot # 0.3706
         yCOM = 0.06206  # Distância do COM até o HipUX em y
 
         max_alfa = 130*np.pi/180
@@ -67,19 +68,19 @@ class IKPublisher(Node):
         # Separa as coordenadas da nova posição
         x = newFootRelPosition[0]
         y = newFootRelPosition[1]
-        z = newFootRelPosition[2]
+        z = -newFootRelPosition[2] - com_height
 
-        # Eixo Y cresce para a esquerda da robô #! Conferir lógica
+        # Eixo Y cresce para a esquerda da robô #! Corrigir y depois
         if currentFoot==-1: # Pé direito
             R = 1
             L = 0
-            print("Pé direito")
-            y=y+yCOM # Soma a distância do meio da perna direita (valor negativo de y) até o COM
+            print("Mudando para pé esquerdo")
+            y=y#+yCOM # Soma a distância do meio da perna direita (valor negativo de y) até o COM
         elif currentFoot==-2:    # Pé esquerdo
             R = 0
             L = 1
-            print("Pé esquerdo")
-            y=y-yCOM # Subtrai a distância do meio da perna esquerda (valor positivo de y) até o COM
+            print("Mudando para pé direito")
+            y=y#-yCOM # Subtrai a distância do meio da perna esquerda (valor positivo de y) até o COM
         else:
             y=0
 
@@ -92,8 +93,8 @@ class IKPublisher(Node):
 
         zHip2AnkleUX = z + ankleUX2foot + com2hipUX
         
-        z2Hip2AnkleUXmax = 0.34673 # Perna estendida, do Hip UY ao Ankle UY
-        z2Hip2AnkleUXmin = 0.29630 # Perna dobrada ao máximo
+        z2Hip2AnkleUXmax = -com_height+com2hipUX+ankleUX2foot # Perna estendida, do Hip UY ao Ankle UY
+        z2Hip2AnkleUXmin = b*np.sin(max_alfa)+e+c*np.sin(max_beta) # Perna dobrada ao máximo
 
         if y**2+zHip2AnkleUX**2 > z2Hip2AnkleUXmax**2:
             zHip2AnkleUX = np.sqrt(z2Hip2AnkleUXmax**2-y**2)
@@ -140,9 +141,10 @@ class IKPublisher(Node):
 
         alfa = alfa-np.pi/2
         beta = beta-np.pi/2
-        #!epsilon sumiu de L
+        #! Talvez R*gamma esteja no sentido errado
+        print(alfa,beta,gama,epsilon)
         #self.current_joint_states.name = ["R_SHLD", "L_SHLD", "RHIP_UX", "RHIP_UY1", "RUKNEE_1", "RLKNEE_1", "RANKLE_UY1", "RHIP_UY2", "RUKNEE_2", "RLKNEE_2", "RANKLE_UY2", "RHIP_UY3", "RUKNEE_3", #"RLKNEE_3", "RANKLE_UY3", "RANKLE_UX", "LHIP_UX", "LHIP_UY1", "LUKNEE_1", "LLKNEE_1", "LANKLE_UY1", "LHIP_UY2", "LUKNEE_2", "LLKNEE_2", "LANKLE_UY2", "LHIP_UY3", "LUKNEE_3", "LLKNEE_3", "LANKLE_UY3", #"LANKLE_UX"]
-        pot = [0.0, 0.0, R*gama , R*alfa, R*alfa, R*alfa, R*-beta, R*alfa, R*alfa, R*-beta, R*-beta, R*alfa, R*alfa, R*-beta, R*-beta, R*epsilon, L*gama, L*alfa, L*alfa, L*-beta, L*-beta, L*alfa, L*alfa, L*-beta, L*-beta, L*alfa, L*alfa, L*-beta, L*-beta, L*epsilon]
+        pot = [0.0, 0.0, R*gama , R*alfa, R*alfa, R*beta, R*beta, R*alfa, R*alfa, R*beta, R*beta, R*alfa, R*alfa, R*beta, R*beta, R*epsilon, L*gama, L*alfa, L*alfa, L*beta, L*beta, L*alfa, L*alfa, L*beta, L*beta, L*alfa, L*alfa, L*beta, L*beta, L*epsilon]
 
         return pot
 

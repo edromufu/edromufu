@@ -8,3 +8,4 @@ vision_msgs/MultiObjects x_intersection
 vision_msgs/MultiObjects l_intersection
 vision_msgs/MultiObjects t_intersection
 vision_msgs/MultiObjects center
+float32 center_goal

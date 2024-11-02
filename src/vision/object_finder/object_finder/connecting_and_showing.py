@@ -60,7 +60,6 @@ class Visao(Node):
         self.model = ri.set_model_input()
         self.searching = True
 
-
         self.publisher = self.create_publisher(Webotsmsg,'vision2BhvTopic', 100)
 
         #SE FOR NO REAL
@@ -153,15 +152,68 @@ class Visao(Node):
                 self.get_logger().warn('Tecla "q" pressionada. Encerrando.')
                 rclpy.shutdown()
 
+    def setup_object(self, obj_data):
+        obj = Objects()
+        [obj.found, obj.x, obj.y, obj.roi_width, obj.roi_height, _] = obj_data
+        [obj.x_position, obj.y_position, obj.z_position] = self.pos_object_3d(obj.x, obj.y)
+        return obj
+    
     def pos_object_3d(self,x,y):
 
         depth_value = self.depth_frame.get_distance(x, y) # retorna a distância em metros para o ponto específico (x, y) na imagem de profundidade.
-        print(depth_value)
         # Converte para coordenadas 3D (utiliza a função rs.rs2_deproject_pixel_to_point)
         point = rs.rs2_deproject_pixel_to_point(self.intrinsics, (x,y), depth_value) #  converte as coordenadas do pixel para coordenadas 3D, utilizando as informações de intrínsecos da câmera.
-        print('p',point)
         return point
         
+    def pos_multi_objects_3d(self, x_coords, y_coords):
+        # Inicializa listas para armazenar as posições x, y e z
+        x_positions = []
+        y_positions = []
+        z_positions = []
+
+        # Itera sobre as coordenadas de pixel e calcula a posição 3D para cada par
+        for x, y in zip(x_coords, y_coords):
+            point = self.pos_object_3d(x, y)  # Retorna [x_position, y_position, z_position] para cada par (x, y)
+            x_positions.append(point[0])
+            y_positions.append(point[1])
+            z_positions.append(point[2])
+
+        # Retorna três listas: x_positions, y_positions, z_positions
+        return x_positions, y_positions, z_positions
+
+
+    # Função de preenchimento de MultiObjects
+    def create_multi_objects(self,detection_list):
+        # Inicializa a mensagem MultiObjects
+        multi_objects = MultiObjects()
+        multi_objects.found = True  # Define como encontrado (True)
+
+        # Desempacota os valores para atribuir aos vetores
+        multi_objects.x = [obj[1] for obj in detection_list]
+        multi_objects.y = [obj[2] for obj in detection_list]
+        multi_objects.roi_width = [obj[3] for obj in detection_list]
+        multi_objects.roi_height = [obj[4] for obj in detection_list]
+        
+        multi_objects.x_position, multi_objects.y_position, multi_objects.z_position = self.pos_multi_objects_3d(multi_objects.x,multi_objects.y) 
+
+
+        return multi_objects
+
+    '''
+    # Exemplo de uso para cada tipo de objeto de interseção
+    if x_intersection_objects:
+        objects_msg.x_intersection = create_multi_objects(x_intersection_objects)
+    
+    if l_intersection_objects:
+        objects_msg.l_intersection = create_multi_objects(l_intersection_objects)
+    
+    if t_intersection_objects:
+        objects_msg.t_intersection = create_multi_objects(t_intersection_objects)
+    
+    if center_objects:
+        objects_msg.center = create_multi_objects(center_objects)'''
+
+
     def publish_results(self):
 
         objects_msg = Webotsmsg()
@@ -179,7 +231,7 @@ class Visao(Node):
         l_intersection_objects = []
         t_intersection_objects = []
         center_objects = []
-
+        
         for i in range(len(self.boxes)):
             [x, y, roi_width, roi_height] = self.boxes[i]
 
@@ -190,122 +242,53 @@ class Visao(Node):
             if self.classes[i] not in self.list_of_classes_in_current_frame:
                 self.list_of_classes_in_current_frame.append(self.classes[i])
 
-                if self.classes[i] == 0:
-                    ball_objects.append(results)
-
-                elif self.classes[i] == 1:
-                    robot_objects.append(results)
-
-                elif self.classes[i] == 2:
-                    right_goal_objects.append(results)
-
-                elif self.classes[i] == 3:
-                    left_goal_objects.append(results)
-
-                elif self.classes[i] == 4:
-                    l_intersection_objects.append(results)
-
-                elif self.classes[i] == 5:
-                    t_intersection_objects.append(results)
-
-                elif self.classes[i] == 6:
-                    x_intersection_objects.append(results)
-
-                elif self.classes[i] == 3:
-                    center_objects.append(results)
+            if self.classes[i] == 0:
+                ball_objects.append(results)
+            elif self.classes[i] == 1:
+                robot_objects.append(results)
+            elif self.classes[i] == 2:
+                right_goal_objects.append(results)
+            elif self.classes[i] == 3:
+                left_goal_objects.append(results)
+            elif self.classes[i] == 4:
+                l_intersection_objects.append(results)
+            elif self.classes[i] == 5:
+                t_intersection_objects.append(results)
+            elif self.classes[i] == 6:
+                x_intersection_objects.append(results)
+            elif self.classes[i] == 7:
+                center_objects.append(results)
                
-
         ball_objects.sort(key=lambda obj: obj[5])  # ordenar em relação ao nivel de confiança
         robot_objects.sort(key=lambda obj: obj[5])  # ordenar em relação a posição x
         right_goal_objects.sort(key=lambda obj: obj[1])  # ordenar em relação a posição x
         left_goal_objects.sort(key=lambda obj: obj[1])  # ordenar em relação a posição x
 
-        #! int32[] x, y, roi_width, roi_height, float32[] x_position, y_position, z_position
+        
         if ball_objects:
-            highest_score_ball = ball_objects[-1]  # bola com maior nivel de confiança
-            ball = Objects()
-            [ball.found, ball.x, ball.y, ball.roi_width, ball.roi_height, _] = highest_score_ball
+            objects_msg.ball = self.setup_object(ball_objects[-1]) # bola com maior nivel de confiança
 
-            [ball.x_position, ball.y_position, ball.z_position] = self.pos_object_3d(ball.x,ball.y) 
-
-            objects_msg.ball = ball
 		#! Conferir o q fazer com essas mensagem
         if robot_objects:
-            robot = Objects()
-            [robot.found, robot.x, robot.y, robot.roi_width, robot.roi_height, robot.score] = robot_objects[-1]
-
-            [robot.x_position, robot.y_position, robot.z_position] = self.pos_object_3d(robot.x,robot.y) 
-
-            objects_msg.robot = robot
-
+            objects_msg.robot = self.setup_object(robot_objects[-1])
+        
         if right_goal_objects:
-            rightmost_goal = right_goal_objects[-1]  # trave mais a direita
-            right_goal = Objects()
-            [right_goal.found, right_goal.x, right_goal.y, right_goal.roi_width, right_goal.roi_height,
-             right_goal.score] = rightmost_goal
-            
-            [right_goal.x_position, right_goal.y_position, right_goal.z_position] = self.pos_object_3d(right_goal.x,right_goal.y) 
-
-            objects_msg.right_goal = right_goal
+            objects_msg.rightgoal = self.setup_object(right_goal_objects[-1])
 
         if left_goal_objects:
-            leftmost_goal = left_goal_objects[0]  # trave mais a esquerda
-            left_goal = Objects()
-            [left_goal.found, left_goal.x, left_goal.y, left_goal.roi_width, left_goal.roi_height,
-             left_goal.score] = leftmost_goal
-            
-            [left_goal.x_position, left_goal.y_position, left_goal.z_position] = self.pos_object_3d(left_goal.x,left_goal.y) 
+            objects_msg.leftgoal = self.setup_object(left_goal_objects[0])  # trave mais a esquerda)
 
-            objects_msg.left_goal = left_goal
-		
-        #! Organizar vetores para enviar na msg
         if x_intersection_objects:
-            
-            x_intersection = MultiObjects()
-            
-            #x, y, z, w = zip(lista)
+            objects_msg.x_intersection = self.create_multi_objects(x_intersection_objects)
 
-            [x_intersection.found, x_intersection.x, x_intersection.y, 
-             x_intersection.roi_width, x_intersection.roi_height] = x_intersection_objects
-            
-            [x_intersection.x_position, x_intersection.y_position, x_intersection.z_position] = self.pos_object_3d(x_intersection.x,x_intersection.y) 
-
-            objects_msg.x_intersection = x_intersection
-            
-            list(x), list(y), list(z), list(w)
-
-        #! Organizar vetores para enviar na msg
         if l_intersection_objects:
-    
-            l_intersection = MultiObjects()
-            [l_intersection.found, l_intersection.x, l_intersection.y, 
-             l_intersection.roi_width, l_intersection.roi_height] = l_intersection_objects
-            
-            [l_intersection.x_position, l_intersection.y_position, l_intersection.z_position] = self.pos_object_3d(l_intersection.x,l_intersection.y) 
-            
-            objects_msg.l_intersection = l_intersection
+            objects_msg.l_intersection = self.create_multi_objects(l_intersection_objects)
 
-        #! Organizar vetores para enviar na msg
         if t_intersection_objects:
+            objects_msg.t_intersection = self.create_multi_objects(t_intersection_objects)
 
-            t_intersection = MultiObjects()
-            [t_intersection.found, t_intersection.x, t_intersection.y, 
-             t_intersection.roi_width, t_intersection.roi_height] = t_intersection_objects
-            
-            [t_intersection.x_position, t_intersection.y_position, t_intersection.z_position] = self.pos_object_3d(t_intersection.x,t_intersection.y) 
-
-            objects_msg.t_intersection = t_intersection
-
-        #! Organizar vetores para enviar na msg
         if center_objects:
-
-            center = MultiObjects()
-            [center.found, center.x, center.y, 
-             center.roi_width, center.roi_height] = center_objects
-            
-            [center.x_position, center.y_position, center.z_position] = self.pos_object_3d(center.x,center.y) 
-
-            objects_msg.center = center
+            objects_msg.center = self.create_multi_objects(center_objects)
 
         # Cálculo da posição central do gol
         if objects_msg.ball.found:
@@ -321,8 +304,6 @@ class Visao(Node):
                 objects_msg.center_goal = (camera_rightmost_x + objects_msg.leftgoal.x) / 2  # suposição do centro do gol quando se encontra apenas a trave esquerda
 
         self.publisher.publish(objects_msg)
-
-
 
 
     #Não está atualizado para Ros2
