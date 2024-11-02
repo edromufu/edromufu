@@ -1,0 +1,2 @@
+Invoking command in '/home/edrom-mini/edromufu/build/imu_ros_arduino': /home/edrom-mini/.local/bin/cmake /home/edrom-mini/edromufu/src/behaviour/imu_ros_arduino -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/install/imu_ros_arduino
+Invoked command in '/home/edrom-mini/edromufu/build/imu_ros_arduino' returned '1': /home/edrom-mini/.local/bin/cmake /home/edrom-mini/edromufu/src/behaviour/imu_ros_arduino -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/install/imu_ros_arduino

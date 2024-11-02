@@ -1,0 +1,40 @@
+[0.016s] Invoking command in '/home/edrom-mini/edromufu/src/movement/build/humanoid_visualization': /home/edrom-mini/.local/bin/cmake /home/edrom-mini/edromufu/src/movement/humanoid_visualization -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/src/movement/install/humanoid_visualization
+[0.106s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.107s]   Compatibility with CMake < 3.5 will be removed from a future version of
+[0.107s]   CMake.
+[0.107s] 
+[0.107s]   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[0.107s]   CMake that the project does not need compatibility with older versions.
+[0.107s] 
+[0.107s] [0m
+[0.267s] -- The C compiler identification is GNU 11.4.0
+[0.467s] -- The CXX compiler identification is GNU 11.4.0
+[0.481s] -- Detecting C compiler ABI info
+[0.568s] -- Detecting C compiler ABI info - done
+[0.590s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.596s] -- Detecting C compile features
+[0.596s] -- Detecting C compile features - done
+[0.597s] -- Detecting CXX compiler ABI info
+[0.686s] -- Detecting CXX compiler ABI info - done
+[0.708s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.709s] -- Detecting CXX compile features
+[0.710s] -- Detecting CXX compile features - done
+[0.724s] [31mCMake Error at CMakeLists.txt:10 (find_package):
+[0.724s]   By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has
+[0.724s]   asked CMake to find a package configuration file provided by "catkin", but
+[0.724s]   CMake did not find one.
+[0.724s] 
+[0.724s]   Could not find a package configuration file provided by "catkin" with any
+[0.724s]   of the following names:
+[0.725s] 
+[0.725s]     catkinConfig.cmake
+[0.725s]     catkin-config.cmake
+[0.725s] 
+[0.725s]   Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set
+[0.725s]   "catkin_DIR" to a directory containing one of the above files.  If "catkin"
+[0.725s]   provides a separate development package or SDK, be sure it has been
+[0.725s]   installed.
+[0.725s] 
+[0.725s] [0m
+[0.726s] -- Configuring incomplete, errors occurred!
+[0.759s] Invoked command in '/home/edrom-mini/edromufu/src/movement/build/humanoid_visualization' returned '1': /home/edrom-mini/.local/bin/cmake /home/edrom-mini/edromufu/src/movement/humanoid_visualization -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/src/movement/install/humanoid_visualization

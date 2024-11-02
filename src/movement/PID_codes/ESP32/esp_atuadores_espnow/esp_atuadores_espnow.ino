@@ -92,11 +92,7 @@ int u_input[] =     {0, 0, 0, 0, 0, 0, 0, 0};   //Vetor de PWM a ser aplicado no
 int dt = 1000;                                  // tempo de amostragem em milisegundos
 
 
-void initJoint(int id){
-  pinMode(ACTUATOR_EN_PINS[id], OUTPUT);
-  pinMode(ACTUATOR_IN_IMP_PINS[id], OUTPUT);
-  pinMode(ACTUATOR_IN_PAR_PINS[id], OUTPUT);
-}
+
 
 // --------- Funçoes ---------
 

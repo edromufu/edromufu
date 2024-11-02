@@ -1,0 +1,28 @@
+[0.019s] Invoking command in '/home/edrom-mini/edromufu/build/bhv_independent_simulator': /home/edrom-mini/.local/bin/cmake /home/edrom-mini/edromufu/src/behaviour/bhv_independent_simulator -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/install/bhv_independent_simulator
+[0.108s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.108s]   Compatibility with CMake < 3.5 will be removed from a future version of
+[0.108s]   CMake.
+[0.109s] 
+[0.109s]   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[0.109s]   CMake that the project does not need compatibility with older versions.
+[0.109s] 
+[0.109s] [0m
+[0.127s] [31mCMake Error at CMakeLists.txt:10 (find_package):
+[0.127s]   By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has
+[0.127s]   asked CMake to find a package configuration file provided by "catkin", but
+[0.128s]   CMake did not find one.
+[0.128s] 
+[0.128s]   Could not find a package configuration file provided by "catkin" with any
+[0.128s]   of the following names:
+[0.128s] 
+[0.128s]     catkinConfig.cmake
+[0.128s]     catkin-config.cmake
+[0.128s] 
+[0.128s]   Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set
+[0.128s]   "catkin_DIR" to a directory containing one of the above files.  If "catkin"
+[0.128s]   provides a separate development package or SDK, be sure it has been
+[0.128s]   installed.
+[0.128s] 
+[0.128s] [0m
+[0.129s] -- Configuring incomplete, errors occurred!
+[0.150s] Invoked command in '/home/edrom-mini/edromufu/build/bhv_independent_simulator' returned '1': /home/edrom-mini/.local/bin/cmake /home/edrom-mini/edromufu/src/behaviour/bhv_independent_simulator -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/install/bhv_independent_simulator

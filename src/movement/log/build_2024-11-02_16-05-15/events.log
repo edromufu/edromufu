@@ -1,0 +1,197 @@
+[0.000000] (-) TimerEvent: {}
+[0.000388] (humanoid_definition) JobQueued: {'identifier': 'humanoid_definition', 'dependencies': OrderedDict()}
+[0.000438] (humanoid_visualization) JobQueued: {'identifier': 'humanoid_visualization', 'dependencies': OrderedDict()}
+[0.000479] (kinematic_functions) JobQueued: {'identifier': 'kinematic_functions', 'dependencies': OrderedDict()}
+[0.000505] (movement_core) JobQueued: {'identifier': 'movement_core', 'dependencies': OrderedDict()}
+[0.000526] (movement_functions) JobQueued: {'identifier': 'movement_functions', 'dependencies': OrderedDict()}
+[0.000544] (movement_pages) JobQueued: {'identifier': 'movement_pages', 'dependencies': OrderedDict()}
+[0.000562] (movement_utils) JobQueued: {'identifier': 'movement_utils', 'dependencies': OrderedDict()}
+[0.000581] (potmessage) JobQueued: {'identifier': 'potmessage', 'dependencies': OrderedDict()}
+[0.000599] (u2d2_comm) JobQueued: {'identifier': 'u2d2_comm', 'dependencies': OrderedDict()}
+[0.000617] (humanoid_definition) JobStarted: {'identifier': 'humanoid_definition'}
+[0.005663] (humanoid_visualization) JobStarted: {'identifier': 'humanoid_visualization'}
+[0.008184] (kinematic_functions) JobStarted: {'identifier': 'kinematic_functions'}
+[0.011517] (movement_core) JobStarted: {'identifier': 'movement_core'}
+[0.017132] (humanoid_definition) JobProgress: {'identifier': 'humanoid_definition', 'progress': 'cmake'}
+[0.017548] (humanoid_definition) Command: {'cmd': ['/home/edrom-mini/.local/bin/cmake', '/home/edrom-mini/edromufu/src/movement/humanoid_definition', '-DCATKIN_INSTALL_INTO_PREFIX_ROOT=0', '-DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/src/movement/install/humanoid_definition'], 'cwd': '/home/edrom-mini/edromufu/src/movement/build/humanoid_definition', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'edrom-mini'), ('LC_TIME', 'pt_BR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/edrom-mini'), ('OLDPWD', '/home/edrom-mini/edromufu'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1291'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('SYSTEMD_EXEC_PID', '1461'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4021'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/edrom-mini/edromufu/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'edrom-mini'), ('JOURNAL_STREAM', '8:27644'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'edrom-mini'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/edrom-mini/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/edrom-mini:@/tmp/.ICE-unix/1424,unix/edrom-mini:/tmp/.ICE-unix/1424'), ('INVOCATION_ID', 'd0c99a8053b24c7abbd6ff993d1308de'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.9UGXW2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:f185394d-5d7d-4d28-ada7-a09c8b533e4a'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/edrom-mini/edromufu/src/movement/build/humanoid_definition'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800')]), 'shell': False}
+[0.020499] (humanoid_visualization) JobProgress: {'identifier': 'humanoid_visualization', 'progress': 'cmake'}
+[0.020672] (humanoid_visualization) Command: {'cmd': ['/home/edrom-mini/.local/bin/cmake', '/home/edrom-mini/edromufu/src/movement/humanoid_visualization', '-DCATKIN_INSTALL_INTO_PREFIX_ROOT=0', '-DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/src/movement/install/humanoid_visualization'], 'cwd': '/home/edrom-mini/edromufu/src/movement/build/humanoid_visualization', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'edrom-mini'), ('LC_TIME', 'pt_BR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/edrom-mini'), ('OLDPWD', '/home/edrom-mini/edromufu'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1291'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('SYSTEMD_EXEC_PID', '1461'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4021'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/edrom-mini/edromufu/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'edrom-mini'), ('JOURNAL_STREAM', '8:27644'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'edrom-mini'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/edrom-mini/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/edrom-mini:@/tmp/.ICE-unix/1424,unix/edrom-mini:/tmp/.ICE-unix/1424'), ('INVOCATION_ID', 'd0c99a8053b24c7abbd6ff993d1308de'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.9UGXW2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:f185394d-5d7d-4d28-ada7-a09c8b533e4a'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/edrom-mini/edromufu/src/movement/build/humanoid_visualization'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800')]), 'shell': False}
+[0.022033] (kinematic_functions) JobProgress: {'identifier': 'kinematic_functions', 'progress': 'cmake'}
+[0.022255] (kinematic_functions) Command: {'cmd': ['/home/edrom-mini/.local/bin/cmake', '/home/edrom-mini/edromufu/src/movement/kinematic_functions', '-DCATKIN_INSTALL_INTO_PREFIX_ROOT=0', '-DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/src/movement/install/kinematic_functions'], 'cwd': '/home/edrom-mini/edromufu/src/movement/build/kinematic_functions', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'edrom-mini'), ('LC_TIME', 'pt_BR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/edrom-mini'), ('OLDPWD', '/home/edrom-mini/edromufu'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1291'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('SYSTEMD_EXEC_PID', '1461'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4021'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/edrom-mini/edromufu/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'edrom-mini'), ('JOURNAL_STREAM', '8:27644'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'edrom-mini'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/edrom-mini/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/edrom-mini:@/tmp/.ICE-unix/1424,unix/edrom-mini:/tmp/.ICE-unix/1424'), ('INVOCATION_ID', 'd0c99a8053b24c7abbd6ff993d1308de'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.9UGXW2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:f185394d-5d7d-4d28-ada7-a09c8b533e4a'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/edrom-mini/edromufu/src/movement/build/kinematic_functions'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800')]), 'shell': False}
+[0.037014] (movement_core) JobProgress: {'identifier': 'movement_core', 'progress': 'cmake'}
+[0.037102] (movement_core) Command: {'cmd': ['/home/edrom-mini/.local/bin/cmake', '/home/edrom-mini/edromufu/src/movement/movement_core', '-DCATKIN_INSTALL_INTO_PREFIX_ROOT=0', '-DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/src/movement/install/movement_core'], 'cwd': '/home/edrom-mini/edromufu/src/movement/build/movement_core', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'edrom-mini'), ('LC_TIME', 'pt_BR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/edrom-mini'), ('OLDPWD', '/home/edrom-mini/edromufu'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1291'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('SYSTEMD_EXEC_PID', '1461'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4021'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/edrom-mini/edromufu/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'edrom-mini'), ('JOURNAL_STREAM', '8:27644'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'edrom-mini'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/edrom-mini/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/edrom-mini:@/tmp/.ICE-unix/1424,unix/edrom-mini:/tmp/.ICE-unix/1424'), ('INVOCATION_ID', 'd0c99a8053b24c7abbd6ff993d1308de'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.9UGXW2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:f185394d-5d7d-4d28-ada7-a09c8b533e4a'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/edrom-mini/edromufu/src/movement/build/movement_core'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800')]), 'shell': False}
+[0.099497] (-) TimerEvent: {}
+[0.108155] (humanoid_definition) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):\n'}
+[0.108384] (humanoid_definition) StderrLine: {'line': b'  Compatibility with CMake < 3.5 will be removed from a future version of\n'}
+[0.108558] (humanoid_definition) StderrLine: {'line': b'  CMake.\n'}
+[0.108655] (humanoid_definition) StderrLine: {'line': b'\n'}
+[0.108731] (humanoid_definition) StderrLine: {'line': b'  Update the VERSION argument <min> value or use a ...<max> suffix to tell\n'}
+[0.108804] (humanoid_definition) StderrLine: {'line': b'  CMake that the project does not need compatibility with older versions.\n'}
+[0.108878] (humanoid_definition) StderrLine: {'line': b'\n'}
+[0.108948] (humanoid_definition) StderrLine: {'line': b'\x1b[0m\n'}
+[0.111926] (humanoid_visualization) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):\n'}
+[0.112211] (humanoid_visualization) StderrLine: {'line': b'  Compatibility with CMake < 3.5 will be removed from a future version of\n'}
+[0.112316] (humanoid_visualization) StderrLine: {'line': b'  CMake.\n'}
+[0.112391] (humanoid_visualization) StderrLine: {'line': b'\n'}
+[0.112471] (humanoid_visualization) StderrLine: {'line': b'  Update the VERSION argument <min> value or use a ...<max> suffix to tell\n'}
+[0.112547] (humanoid_visualization) StderrLine: {'line': b'  CMake that the project does not need compatibility with older versions.\n'}
+[0.112617] (humanoid_visualization) StderrLine: {'line': b'\n'}
+[0.112687] (humanoid_visualization) StderrLine: {'line': b'\x1b[0m\n'}
+[0.121533] (kinematic_functions) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):\n'}
+[0.121804] (kinematic_functions) StderrLine: {'line': b'  Compatibility with CMake < 3.5 will be removed from a future version of\n'}
+[0.121962] (kinematic_functions) StderrLine: {'line': b'  CMake.\n'}
+[0.122091] (kinematic_functions) StderrLine: {'line': b'\n'}
+[0.122229] (kinematic_functions) StderrLine: {'line': b'  Update the VERSION argument <min> value or use a ...<max> suffix to tell\n'}
+[0.122373] (kinematic_functions) StderrLine: {'line': b'  CMake that the project does not need compatibility with older versions.\n'}
+[0.122501] (kinematic_functions) StderrLine: {'line': b'\n'}
+[0.122660] (kinematic_functions) StderrLine: {'line': b'\x1b[0m\n'}
+[0.130713] (movement_core) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):\n'}
+[0.130930] (movement_core) StderrLine: {'line': b'  Compatibility with CMake < 3.5 will be removed from a future version of\n'}
+[0.131018] (movement_core) StderrLine: {'line': b'  CMake.\n'}
+[0.131094] (movement_core) StderrLine: {'line': b'\n'}
+[0.131169] (movement_core) StderrLine: {'line': b'  Update the VERSION argument <min> value or use a ...<max> suffix to tell\n'}
+[0.131249] (movement_core) StderrLine: {'line': b'  CMake that the project does not need compatibility with older versions.\n'}
+[0.131323] (movement_core) StderrLine: {'line': b'\n'}
+[0.131438] (movement_core) StderrLine: {'line': b'\x1b[0m\n'}
+[0.199721] (-) TimerEvent: {}
+[0.271346] (movement_core) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.272771] (humanoid_definition) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.273007] (humanoid_visualization) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.274097] (kinematic_functions) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.299790] (-) TimerEvent: {}
+[0.400283] (-) TimerEvent: {}
+[0.472301] (movement_core) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.472627] (humanoid_definition) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.472839] (kinematic_functions) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.472955] (humanoid_visualization) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.486476] (humanoid_definition) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.486706] (movement_core) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.486814] (humanoid_visualization) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.486909] (kinematic_functions) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.500375] (-) TimerEvent: {}
+[0.573603] (kinematic_functions) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.573840] (humanoid_visualization) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.573990] (humanoid_definition) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.574427] (movement_core) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.595349] (humanoid_visualization) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.595659] (kinematic_functions) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.595777] (humanoid_definition) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.595863] (movement_core) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.596346] (movement_core) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.596500] (humanoid_definition) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.596602] (kinematic_functions) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.600529] (movement_core) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.600690] (-) TimerEvent: {}
+[0.600945] (humanoid_definition) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.601061] (kinematic_functions) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.601148] (humanoid_visualization) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.601228] (humanoid_visualization) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.602409] (humanoid_visualization) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.602543] (movement_core) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.602635] (kinematic_functions) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.603181] (humanoid_definition) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.691547] (kinematic_functions) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.691739] (humanoid_visualization) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.691905] (movement_core) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.693353] (humanoid_definition) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.700779] (-) TimerEvent: {}
+[0.713906] (humanoid_visualization) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.714159] (kinematic_functions) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.714323] (kinematic_functions) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.714418] (humanoid_visualization) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.715082] (kinematic_functions) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.715203] (humanoid_visualization) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.715505] (humanoid_definition) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.716047] (movement_core) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.716407] (humanoid_definition) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.716587] (movement_core) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.717266] (movement_core) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.717481] (humanoid_definition) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.728033] (kinematic_functions) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:10 (find_package):\n'}
+[0.728367] (kinematic_functions) StderrLine: {'line': b'  By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[0.728479] (kinematic_functions) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "catkin", but\n'}
+[0.728570] (kinematic_functions) StderrLine: {'line': b'  CMake did not find one.\n'}
+[0.728650] (kinematic_functions) StderrLine: {'line': b'\n'}
+[0.728729] (kinematic_functions) StderrLine: {'line': b'  Could not find a package configuration file provided by "catkin" with any\n'}
+[0.728807] (kinematic_functions) StderrLine: {'line': b'  of the following names:\n'}
+[0.728885] (kinematic_functions) StderrLine: {'line': b'\n'}
+[0.728958] (kinematic_functions) StderrLine: {'line': b'    catkinConfig.cmake\n'}
+[0.729032] (kinematic_functions) StderrLine: {'line': b'    catkin-config.cmake\n'}
+[0.729107] (kinematic_functions) StderrLine: {'line': b'\n'}
+[0.729181] (kinematic_functions) StderrLine: {'line': b'  Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set\n'}
+[0.729255] (kinematic_functions) StderrLine: {'line': b'  "catkin_DIR" to a directory containing one of the above files.  If "catkin"\n'}
+[0.729331] (kinematic_functions) StderrLine: {'line': b'  provides a separate development package or SDK, be sure it has been\n'}
+[0.729409] (kinematic_functions) StderrLine: {'line': b'  installed.\n'}
+[0.729489] (kinematic_functions) StderrLine: {'line': b'\n'}
+[0.729565] (kinematic_functions) StderrLine: {'line': b'\x1b[0m\n'}
+[0.729644] (humanoid_visualization) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:10 (find_package):\n'}
+[0.729731] (humanoid_visualization) StderrLine: {'line': b'  By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[0.729811] (humanoid_visualization) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "catkin", but\n'}
+[0.729887] (humanoid_visualization) StderrLine: {'line': b'  CMake did not find one.\n'}
+[0.729963] (humanoid_visualization) StderrLine: {'line': b'\n'}
+[0.730039] (humanoid_visualization) StderrLine: {'line': b'  Could not find a package configuration file provided by "catkin" with any\n'}
+[0.730112] (humanoid_visualization) StderrLine: {'line': b'  of the following names:\n'}
+[0.730187] (humanoid_visualization) StderrLine: {'line': b'\n'}
+[0.730262] (humanoid_visualization) StderrLine: {'line': b'    catkinConfig.cmake\n'}
+[0.730338] (humanoid_visualization) StderrLine: {'line': b'    catkin-config.cmake\n'}
+[0.730412] (humanoid_visualization) StderrLine: {'line': b'\n'}
+[0.730488] (humanoid_visualization) StderrLine: {'line': b'  Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set\n'}
+[0.730771] (humanoid_visualization) StderrLine: {'line': b'  "catkin_DIR" to a directory containing one of the above files.  If "catkin"\n'}
+[0.730854] (humanoid_visualization) StderrLine: {'line': b'  provides a separate development package or SDK, be sure it has been\n'}
+[0.730930] (humanoid_visualization) StderrLine: {'line': b'  installed.\n'}
+[0.731007] (humanoid_visualization) StderrLine: {'line': b'\n'}
+[0.731083] (humanoid_visualization) StderrLine: {'line': b'\x1b[0m\n'}
+[0.731164] (kinematic_functions) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.731267] (humanoid_visualization) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.733107] (humanoid_definition) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:10 (find_package):\n'}
+[0.736853] (humanoid_definition) StderrLine: {'line': b'  By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[0.737004] (humanoid_definition) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "catkin", but\n'}
+[0.737106] (humanoid_definition) StderrLine: {'line': b'  CMake did not find one.\n'}
+[0.737197] (humanoid_definition) StderrLine: {'line': b'\n'}
+[0.737282] (humanoid_definition) StderrLine: {'line': b'  Could not find a package configuration file provided by "catkin" with any\n'}
+[0.737364] (humanoid_definition) StderrLine: {'line': b'  of the following names:\n'}
+[0.737443] (humanoid_definition) StderrLine: {'line': b'\n'}
+[0.737523] (humanoid_definition) StderrLine: {'line': b'    catkinConfig.cmake\n'}
+[0.737603] (humanoid_definition) StderrLine: {'line': b'    catkin-config.cmake\n'}
+[0.737679] (humanoid_definition) StderrLine: {'line': b'\n'}
+[0.737754] (humanoid_definition) StderrLine: {'line': b'  Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set\n'}
+[0.737830] (humanoid_definition) StderrLine: {'line': b'  "catkin_DIR" to a directory containing one of the above files.  If "catkin"\n'}
+[0.737908] (humanoid_definition) StderrLine: {'line': b'  provides a separate development package or SDK, be sure it has been\n'}
+[0.737989] (humanoid_definition) StderrLine: {'line': b'  installed.\n'}
+[0.738064] (humanoid_definition) StderrLine: {'line': b'\n'}
+[0.738140] (humanoid_definition) StderrLine: {'line': b'\x1b[0m\n'}
+[0.738220] (humanoid_definition) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.738318] (movement_core) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:10 (find_package):\n'}
+[0.738417] (movement_core) StderrLine: {'line': b'  By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[0.738501] (movement_core) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "catkin", but\n'}
+[0.738581] (movement_core) StderrLine: {'line': b'  CMake did not find one.\n'}
+[0.738661] (movement_core) StderrLine: {'line': b'\n'}
+[0.738745] (movement_core) StderrLine: {'line': b'  Could not find a package configuration file provided by "catkin" with any\n'}
+[0.738829] (movement_core) StderrLine: {'line': b'  of the following names:\n'}
+[0.738911] (movement_core) StderrLine: {'line': b'\n'}
+[0.738991] (movement_core) StderrLine: {'line': b'    catkinConfig.cmake\n'}
+[0.739065] (movement_core) StderrLine: {'line': b'    catkin-config.cmake\n'}
+[0.739140] (movement_core) StderrLine: {'line': b'\n'}
+[0.739213] (movement_core) StderrLine: {'line': b'  Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set\n'}
+[0.739290] (movement_core) StderrLine: {'line': b'  "catkin_DIR" to a directory containing one of the above files.  If "catkin"\n'}
+[0.739365] (movement_core) StderrLine: {'line': b'  provides a separate development package or SDK, be sure it has been\n'}
+[0.739442] (movement_core) StderrLine: {'line': b'  installed.\n'}
+[0.739520] (movement_core) StderrLine: {'line': b'\n'}
+[0.739600] (movement_core) StderrLine: {'line': b'\x1b[0m\n'}
+[0.739680] (movement_core) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.764108] (humanoid_visualization) CommandEnded: {'returncode': 1}
+[0.770550] (humanoid_definition) CommandEnded: {'returncode': 1}
+[0.773008] (kinematic_functions) CommandEnded: {'returncode': 1}
+[0.786563] (movement_core) CommandEnded: {'returncode': 1}
+[0.801056] (-) TimerEvent: {}
+[0.903057] (-) TimerEvent: {}
+[0.911051] (humanoid_visualization) JobEnded: {'identifier': 'humanoid_visualization', 'rc': 1}
+[0.912431] (humanoid_definition) JobEnded: {'identifier': 'humanoid_definition', 'rc': 'SIGINT'}
+[0.912804] (kinematic_functions) JobEnded: {'identifier': 'kinematic_functions', 'rc': 'SIGINT'}
+[0.918251] (movement_core) JobEnded: {'identifier': 'movement_core', 'rc': 'SIGINT'}
+[0.929029] (movement_functions) JobSkipped: {'identifier': 'movement_functions'}
+[0.929083] (movement_pages) JobSkipped: {'identifier': 'movement_pages'}
+[0.929129] (movement_utils) JobSkipped: {'identifier': 'movement_utils'}
+[0.929153] (potmessage) JobSkipped: {'identifier': 'potmessage'}
+[0.929175] (u2d2_comm) JobSkipped: {'identifier': 'u2d2_comm'}
+[0.929200] (-) EventReactorShutdown: {}

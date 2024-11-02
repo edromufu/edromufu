@@ -1,0 +1,2 @@
+Invoking command in '/home/edrom-mini/edromufu/build/humanoid_definition': /home/edrom-mini/.local/bin/cmake /home/edrom-mini/edromufu/src/movement/humanoid_definition -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/install/humanoid_definition
+Invoked command in '/home/edrom-mini/edromufu/build/humanoid_definition' returned '1': /home/edrom-mini/.local/bin/cmake /home/edrom-mini/edromufu/src/movement/humanoid_definition -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/install/humanoid_definition

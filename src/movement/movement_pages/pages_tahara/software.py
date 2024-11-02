@@ -17,6 +17,8 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 
+MAIN_DIR = '/home/'+os.getlogin()+'/edromufu/src/movement/movement_pages/pages_tahara/'
+
 class MyPublisher(Node):
     def __init__(self):
         super().__init__('page_topic')
@@ -231,6 +233,21 @@ class Ui_MainWindow(object):
         self.savelabel.setAlignment(QtCore.Qt.AlignCenter)
         self.savelabel.setObjectName("savelabel")
 
+        self.createJsonBut = QtWidgets.QPushButton(self.centralwidget)
+        self.createJsonBut.setGeometry(QtCore.QRect(550, 50, 42, 36))
+        self.createJsonBut.setIcon(icon1)
+        self.createJsonBut.setIconSize(QtCore.QSize(30, 30))
+        self.createJsonBut.setAutoRepeat(True)
+        self.createJsonBut.setAutoRepeatDelay(300)
+        self.createJsonBut.setObjectName("createJsonBut")
+        self.createjsonLabel = QtWidgets.QLabel(self.centralwidget)
+        self.createjsonLabel.setGeometry(QtCore.QRect(450, 50, 100, 30))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        self.createjsonLabel.setFont(font)
+        self.createjsonLabel.setAlignment(QtCore.Qt.AlignCenter)
+        self.createjsonLabel.setObjectName("createjsonLabel")
+
 
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
@@ -244,6 +261,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         self.Save.clicked.connect(lambda: self.save())
+        self.createJsonBut.clicked.connect(lambda: self.createJson())
 
         self.AV_1.clicked.connect(lambda: self.incrementar(1))
         self.AV_2.clicked.connect(lambda: self.incrementar(2))
@@ -264,7 +282,12 @@ class Ui_MainWindow(object):
         self.RT_8.clicked.connect(lambda: self.decrementar(8))
     
         self.message = [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]
-        self.filename = ''
+        self.fileName = None
+        self.pageData = {'joints_positions': {}, 'time_between_poses': []}
+        for n in range(8):
+            self.pageData['joints_positions'][f'pot_{n}'] = []
+
+            
     def incrementar(self,pos):
         self.message[pos-1] += 0.1
         self.envio()
@@ -274,23 +297,26 @@ class Ui_MainWindow(object):
         self.envio()
 
     def envio(self):
-        print(self.message)
+
         self.publisher.msg.data = self.message
         self.publisher.timer_callback()
             
     def save(self):
-        if self.filename == '':             
-            self.fileName, _ = QFileDialog.getSaveFileName(None,"Abrir...", '/home/'+os.getlogin(), "Page Files (*.json)")
 
-        with open(self.fileName, 'r') as pageFile:
-            jsonData = json.loads(pageFile.read())
-            j=0
-        for i in jsonData['joints_positions']:
-            jsonData['joints_positions'][i].append(self.message[j])
+        j=0
+        for i in self.pageData['joints_positions']:
+            self.pageData['joints_positions'][i].append(self.message[j])
             j+=1
+
+        print(self.pageData)
+
+    def createJson(self):
+        if self.fileName is None:
+            self.fileName, _ = QFileDialog.getSaveFileName(None,"Salvar em", MAIN_DIR,"Page Files (*.json)")
+            if '.json' not in self.fileName:
+                self.fileName += '.json'
         with open(self.fileName, 'w') as f:
-            json.dump(jsonData,f)
-        #print(jsonData['joints_positions']['motor_7'])
+            json.dump(self.pageData,f)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -304,7 +330,7 @@ class Ui_MainWindow(object):
         self.label_7.setText(_translate("MainWindow", "ANG_7"))
         self.label_8.setText(_translate("MainWindow", "ANG_8"))
         self.savelabel.setText(_translate("MainWindow", "Save"))
-
+        self.createjsonLabel.setText(_translate("MainWindow", "Save in Json"))
     
     
 if __name__ == "__main__":
