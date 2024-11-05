@@ -16,12 +16,12 @@ typedef struct struct_message {
   uint16_t potValue[8];
 } struct_message;
 struct_message myData;
-
+/*
 void OnDataSent(const uint8_t *mac, const uint8_t *incomingData, int len);
-
+*/
 void setup() {
   Serial.begin(9600);
-  Wire.begin();
+  //Wire.begin();
   pinMode(pinS0, OUTPUT);
   pinMode(pinS1, OUTPUT);
   pinMode(pinS2, OUTPUT);
@@ -29,11 +29,11 @@ void setup() {
   analogSetPinAttenuation(33, ADC_0db);
 
 
-  WiFi.mode(WIFI_STA);
-
+  //WiFi.mode(WIFI_STA);
+  /*
   if (esp_now_init() != ESP_OK) return;
   
-  uint8_t broadcastAddress[] = {0x08, 0xD1, 0xF9, 0xE7, 0x2C, 0x3C};
+  uint8_t broadcastAddress[] = {0xCC, 0xDB, 0xA7, 0x3D, 0xC2, 0xC0};
   memcpy(peerInfo.peer_addr, broadcastAddress, 6);
   peerInfo.channel = 0;
   peerInfo.encrypt = false;
@@ -41,7 +41,7 @@ void setup() {
   if (esp_now_add_peer(&peerInfo) != ESP_OK) {
     Serial.println("Failed to add peer");
     return;
-  }
+  }*/
 }
 uint16_t j = 0;
 void loop() {
@@ -66,13 +66,13 @@ void loop() {
   }
   Serial.println("");*/
   //---------------------
-  esp_err_t result = esp_now_send(peerInfo.peer_addr, (uint8_t *)&myData, sizeof(myData));
+  /*esp_err_t result = esp_now_send(peerInfo.peer_addr, (uint8_t *)&myData, sizeof(myData));
 
 
   if (result != ESP_OK) {
     Serial.println("Error sending data via ESP-NOW");
   }
-
+*/
 }
 
 void selecionarCanal(int canal){
@@ -80,7 +80,8 @@ void selecionarCanal(int canal){
   digitalWrite(pinS1, (canal >> 1) & 0x01);
   digitalWrite(pinS2, (canal >> 2) & 0x01);
 }
-
+/*
 void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status) {
   Serial.println(status == ESP_NOW_SEND_SUCCESS ? "Delivery Success" : "Delivery Fail");
 }
+*/

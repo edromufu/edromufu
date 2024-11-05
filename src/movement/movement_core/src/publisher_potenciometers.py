@@ -21,7 +21,9 @@ class pagePublisher(Node):
         self.pageName = self.declare_parameter('movement/page',None).get_parameter_value().string_value
         self.publisher_ = self.create_publisher(Float32MultiArray, 'pot_py_topic', 10)
         timer_period = 3  # seconds
-        self.timer = self.create_timer(timer_period, self.timer_callback)
+        #self.timer = self.create_timer(timer_period, self.timer_callback)
+        self.timer_callback()
+
         
     def timer_callback(self):
         msg = Float32MultiArray()

@@ -145,24 +145,23 @@ float pot2Degrees(float value){
 float feedbackData[8];
 
 void setup() {
-  Serial.begin(115200);
   WiFi.mode(WIFI_STA);
-
+/*
   for (int i = 0; i < pot_size; i++){
     initJoint(i);
   }
-
+*/
   if (esp_now_init() != ESP_OK) return;
 
   esp_now_register_recv_cb(esp_now_recv_cb_t(OnDataRecv));
 
-  uint8_t broadcastAddress[] = {0x70, 0x04, 0x1D, 0x91, 0x62, 0xF8}; 
+  uint8_t broadcastAddress[] = {0xEC, 0xDA, 0x3B, 0xBF, 0x7F, 0x94};
   memcpy(peerInfo.peer_addr, broadcastAddress, 6);
   peerInfo.channel = 0;
   peerInfo.encrypt = false;
 
   if (esp_now_add_peer(&peerInfo) != ESP_OK) {
-    Serial.println("Failed to add peer");
+
     return;
   }
   set_microros_transports();
@@ -203,6 +202,8 @@ void setup() {
 }
 
 void loop() {
+
+
   unsigned long now = millis();
 
   for (size_t i = 0; i < 8; i++) {
@@ -215,7 +216,7 @@ void loop() {
   while (millis()-now<dt){
     // now = millis();
   }
-  
+  /*
     //--------Calculando Saídas dos PID's--------
   for (int i = 0; i < pot_size; i++){
     u_input[i] = calculatePID(i , data[i], atualPos[i]);
@@ -235,7 +236,7 @@ void loop() {
   
   writeActuator(6, u_input[6]+u_input[7]);
   writeActuator(7, u_input[6]-u_input[7]);
-  
+  */
 
 }
 

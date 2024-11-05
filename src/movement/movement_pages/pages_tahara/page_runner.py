@@ -16,8 +16,7 @@ class MyPublisher(Node):
         self.timer = self.create_timer(1.0, self.timer_callback)  # Chama a callback a cada 1 segundo
         self.msg = Float32MultiArray()
 
-    def timer_callback(self):
-        
+    def timer_callback(self):        
         self.publisher_.publish(self.msg)
 
 
@@ -26,7 +25,6 @@ def Page(page2Run, queueTime):
     with open(MAIN_DIR+page2Run+'.json', 'r') as pageFile:
         jsonData = json.loads(pageFile.read())
 
-    pagePoses = pageInterpol(jsonData['joints_positions'], jsonData['time_between_poses'], queueTime)
 
     return pagePoses
 

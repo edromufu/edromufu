@@ -288,7 +288,8 @@ class Ui_Form(object):
         self.motor13.setText(_translate("Form", "Atuador 13\n"
 "Mínima:\n"
 "Máxima:"))
-
+import appicons_rc
+import edrom_logo_rc
 
 
 if __name__ == "__main__":

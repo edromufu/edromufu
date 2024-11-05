@@ -2,7 +2,7 @@
     "joints_positions": {
         "motor_0": [
             0.2,
-            0.2
+            0           
         ],
         "motor_1": [
             0.0,
