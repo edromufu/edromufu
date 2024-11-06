@@ -1,0 +1,14 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from potmessage/msg/Buttonmsg.msg
+// generated code does not contain a copyright notice
+
+
+module potmessage {
+  module msg {
+    struct Buttonmsg {
+      boolean bot1;
+
+      boolean bot2;
+    };
+  };
+};

@@ -17,17 +17,15 @@ void setup() {
   pinMode(pinS2, OUTPUT);
   
   analogSetPinAttenuation(33, ADC_0db);
-
+}
 
 void loop() {
   delay(300);
   for(int canal = 0; canal < 8; canal++){
     selecionarCanal(canal);
     int valor = analogRead(pinSaidaMux);
-    Serial.print("              ");
-    Serial.print(canal);
-    Serial.print(":");
     Serial.print(valor);
+    Serial.print(",");
 
   }
   Serial.println("   ");

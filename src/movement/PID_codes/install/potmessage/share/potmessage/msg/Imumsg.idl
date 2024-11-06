@@ -1,0 +1,13 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from potmessage/msg/Imumsg.msg
+// generated code does not contain a copyright notice
+
+
+module potmessage {
+  module msg {
+    typedef float float__4[4];
+    struct Imumsg {
+      float__4 imu;
+    };
+  };
+};

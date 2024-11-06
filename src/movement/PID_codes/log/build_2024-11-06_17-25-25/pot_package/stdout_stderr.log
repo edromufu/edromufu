@@ -1,0 +1,35 @@
+running egg_info
+creating ../../build/pot_package/pot_package.egg-info
+writing ../../build/pot_package/pot_package.egg-info/PKG-INFO
+writing dependency_links to ../../build/pot_package/pot_package.egg-info/dependency_links.txt
+writing entry points to ../../build/pot_package/pot_package.egg-info/entry_points.txt
+writing requirements to ../../build/pot_package/pot_package.egg-info/requires.txt
+writing top-level names to ../../build/pot_package/pot_package.egg-info/top_level.txt
+writing manifest file '../../build/pot_package/pot_package.egg-info/SOURCES.txt'
+reading manifest file '../../build/pot_package/pot_package.egg-info/SOURCES.txt'
+writing manifest file '../../build/pot_package/pot_package.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/daniel/edromufu/src/movement/PID_codes/build/pot_package/build
+creating /home/daniel/edromufu/src/movement/PID_codes/build/pot_package/build/lib
+creating /home/daniel/edromufu/src/movement/PID_codes/build/pot_package/build/lib/pot_package
+copying pot_package/pot_values_publisher.py -> /home/daniel/edromufu/src/movement/PID_codes/build/pot_package/build/lib/pot_package
+copying pot_package/__init__.py -> /home/daniel/edromufu/src/movement/PID_codes/build/pot_package/build/lib/pot_package
+running install
+running install_lib
+creating /home/daniel/edromufu/src/movement/PID_codes/install/pot_package/lib/python3.10/site-packages/pot_package
+copying /home/daniel/edromufu/src/movement/PID_codes/build/pot_package/build/lib/pot_package/pot_values_publisher.py -> /home/daniel/edromufu/src/movement/PID_codes/install/pot_package/lib/python3.10/site-packages/pot_package
+copying /home/daniel/edromufu/src/movement/PID_codes/build/pot_package/build/lib/pot_package/__init__.py -> /home/daniel/edromufu/src/movement/PID_codes/install/pot_package/lib/python3.10/site-packages/pot_package
+byte-compiling /home/daniel/edromufu/src/movement/PID_codes/install/pot_package/lib/python3.10/site-packages/pot_package/pot_values_publisher.py to pot_values_publisher.cpython-310.pyc
+byte-compiling /home/daniel/edromufu/src/movement/PID_codes/install/pot_package/lib/python3.10/site-packages/pot_package/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/daniel/edromufu/src/movement/PID_codes/install/pot_package/share/ament_index
+creating /home/daniel/edromufu/src/movement/PID_codes/install/pot_package/share/ament_index/resource_index
+creating /home/daniel/edromufu/src/movement/PID_codes/install/pot_package/share/ament_index/resource_index/packages
+copying resource/pot_package -> /home/daniel/edromufu/src/movement/PID_codes/install/pot_package/share/ament_index/resource_index/packages
+copying package.xml -> /home/daniel/edromufu/src/movement/PID_codes/install/pot_package/share/pot_package
+running install_egg_info
+Copying ../../build/pot_package/pot_package.egg-info to /home/daniel/edromufu/src/movement/PID_codes/install/pot_package/lib/python3.10/site-packages/pot_package-0.0.0-py3.10.egg-info
+running install_scripts
+Installing pot_values_publisher script to /home/daniel/edromufu/src/movement/PID_codes/install/pot_package/lib/pot_package
+writing list of installed files to '/home/daniel/edromufu/src/movement/PID_codes/build/pot_package/install.log'
