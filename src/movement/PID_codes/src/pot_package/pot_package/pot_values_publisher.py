@@ -1,14 +1,15 @@
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import Float64MultiArray
+from std_msgs.msg import Float32MultiArray
 import serial
 import time
 
 class PotValuesPublisher(Node):
-    def __init__(self, serial_port='/dev/ttyACM1', baud_rate=9600):
+    def __init__(self, serial_port='/dev/ttyACM0', baud_rate=9600):
         super().__init__('pot_values_publisher')
-        self.publisher_ = self.create_publisher(Float64MultiArray, 'pot_values', 10)
-        
+        self.publisher_ = self.create_publisher(Float32MultiArray, 'pot_values', 10)
+        self.subscriber_ = self.create_subscription(Float32MultiArray,'pot_py_topic',self.listener,10)
+        self.pot_py_msg=[0,0,0,0,0,0,0,0]
         # Configuração da porta serial
         try:
             self.serial_connection = serial.Serial()
@@ -20,11 +21,16 @@ class PotValuesPublisher(Node):
             self.get_logger().info("Conexão serial estabelecida com sucesso.")
         except serial.SerialException as e:
             self.get_logger().error(f"Erro ao conectar com a porta serial: {e}")
+            serial_port = '/dev/ttyACM1'
+            
             self.serial_connection = None
             return
         
         # Configuração do timer para publicar os dados a cada segundo
-        self.timer = self.create_timer(1.0, self.timer_callback)
+        self.timer = self.create_timer(0.1, self.timer_callback)
+
+    def listener(self, msg):
+        self.pot_py_msg = msg.data
 
     def timer_callback(self):
         if self.serial_connection.in_waiting:
@@ -35,12 +41,13 @@ class PotValuesPublisher(Node):
                 values = line.split(',')
                 values.pop()
                 values = [float(val) for val in values]
-                
+                for i in range(len(values)):
+                    values[i] = values[i] - self.pot_py_msg[i]
                 
 
                 # Verifica se o vetor tem 8 valores antes de publicar
                 if len(values) == 8:
-                    msg = Float64MultiArray()
+                    msg = Float32MultiArray()
                     msg.data = values
                     self.publisher_.publish(msg)
                     self.get_logger().info(f"Valores publicados: {msg.data}")
@@ -52,7 +59,7 @@ class PotValuesPublisher(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    node = PotValuesPublisher(serial_port='/dev/ttyACM1', baud_rate=9600)
+    node = PotValuesPublisher()
     if node.serial_connection:
         rclpy.spin(node)
     node.destroy_node()

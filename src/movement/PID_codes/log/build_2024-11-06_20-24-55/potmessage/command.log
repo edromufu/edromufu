@@ -1,0 +1,4 @@
+Invoking command in '/home/edrom-mini/edromufu/src/movement/PID_codes/build/potmessage': CMAKE_PREFIX_PATH=/opt/ros/humble /home/edrom-mini/.local/bin/cmake --build /home/edrom-mini/edromufu/src/movement/PID_codes/build/potmessage -- -j4 -l4
+Invoked command in '/home/edrom-mini/edromufu/src/movement/PID_codes/build/potmessage' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /home/edrom-mini/.local/bin/cmake --build /home/edrom-mini/edromufu/src/movement/PID_codes/build/potmessage -- -j4 -l4
+Invoking command in '/home/edrom-mini/edromufu/src/movement/PID_codes/build/potmessage': CMAKE_PREFIX_PATH=/opt/ros/humble /home/edrom-mini/.local/bin/cmake --install /home/edrom-mini/edromufu/src/movement/PID_codes/build/potmessage
+Invoked command in '/home/edrom-mini/edromufu/src/movement/PID_codes/build/potmessage' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /home/edrom-mini/.local/bin/cmake --install /home/edrom-mini/edromufu/src/movement/PID_codes/build/potmessage

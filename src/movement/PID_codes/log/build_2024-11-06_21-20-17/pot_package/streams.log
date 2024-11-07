@@ -1,0 +1,21 @@
+[0.666s] Invoking command in '/home/edrom-mini/edromufu/src/movement/PID_codes/src/pot_package': PYTHONPATH=/home/edrom-mini/edromufu/src/movement/PID_codes/build/pot_package/prefix_override:/home/edrom-mini/edromufu/src/movement/PID_codes/install/pot_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/pot_package build --build-base /home/edrom-mini/edromufu/src/movement/PID_codes/build/pot_package/build install --record /home/edrom-mini/edromufu/src/movement/PID_codes/build/pot_package/install.log --single-version-externally-managed install_data
+[0.941s] running egg_info
+[0.941s] writing ../../build/pot_package/pot_package.egg-info/PKG-INFO
+[0.942s] writing dependency_links to ../../build/pot_package/pot_package.egg-info/dependency_links.txt
+[0.942s] writing entry points to ../../build/pot_package/pot_package.egg-info/entry_points.txt
+[0.942s] writing requirements to ../../build/pot_package/pot_package.egg-info/requires.txt
+[0.942s] writing top-level names to ../../build/pot_package/pot_package.egg-info/top_level.txt
+[0.944s] reading manifest file '../../build/pot_package/pot_package.egg-info/SOURCES.txt'
+[0.945s] writing manifest file '../../build/pot_package/pot_package.egg-info/SOURCES.txt'
+[0.945s] running build
+[0.945s] running build_py
+[0.946s] running install
+[0.946s] running install_lib
+[0.947s] running install_data
+[0.947s] running install_egg_info
+[0.950s] removing '/home/edrom-mini/edromufu/src/movement/PID_codes/install/pot_package/lib/python3.10/site-packages/pot_package-0.0.0-py3.10.egg-info' (and everything under it)
+[0.951s] Copying ../../build/pot_package/pot_package.egg-info to /home/edrom-mini/edromufu/src/movement/PID_codes/install/pot_package/lib/python3.10/site-packages/pot_package-0.0.0-py3.10.egg-info
+[0.952s] running install_scripts
+[0.973s] Installing pot_values_publisher script to /home/edrom-mini/edromufu/src/movement/PID_codes/install/pot_package/lib/pot_package
+[0.974s] writing list of installed files to '/home/edrom-mini/edromufu/src/movement/PID_codes/build/pot_package/install.log'
+[1.016s] Invoked command in '/home/edrom-mini/edromufu/src/movement/PID_codes/src/pot_package' returned '0': PYTHONPATH=/home/edrom-mini/edromufu/src/movement/PID_codes/build/pot_package/prefix_override:/home/edrom-mini/edromufu/src/movement/PID_codes/install/pot_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/pot_package build --build-base /home/edrom-mini/edromufu/src/movement/PID_codes/build/pot_package/build install --record /home/edrom-mini/edromufu/src/movement/PID_codes/build/pot_package/install.log --single-version-externally-managed install_data

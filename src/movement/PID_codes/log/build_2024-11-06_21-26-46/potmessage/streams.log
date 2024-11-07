@@ -1,0 +1,180 @@
+[0.289s] Invoking command in '/home/edrom-mini/edromufu/src/movement/PID_codes/build/potmessage': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/edrom-mini/edromufu/src/movement/PID_codes/install/pot_package:/opt/ros/humble /home/edrom-mini/.local/bin/cmake --build /home/edrom-mini/edromufu/src/movement/PID_codes/build/potmessage -- -j4 -l4
+[0.390s] [  2%] Built target potmessage__cpp
+[0.398s] [ 12%] Built target potmessage__rosidl_generator_c
+[0.401s] [ 12%] Built target ament_cmake_python_copy_potmessage
+[0.411s] [ 23%] Built target potmessage__rosidl_typesupport_introspection_cpp
+[0.412s] [ 34%] Built target potmessage__rosidl_typesupport_fastrtps_cpp
+[0.412s] [ 44%] Built target potmessage__rosidl_typesupport_cpp
+[0.414s] [ 55%] Built target potmessage__rosidl_typesupport_fastrtps_c
+[0.423s] [ 65%] Built target potmessage__rosidl_typesupport_introspection_c
+[0.427s] [ 76%] Built target potmessage__rosidl_typesupport_c
+[0.438s] [ 76%] Built target potmessage
+[0.449s] [ 78%] Built target potmessage__py
+[0.463s] [ 87%] Built target potmessage__rosidl_generator_py
+[0.481s] [ 93%] Built target potmessage__rosidl_typesupport_fastrtps_c__pyext
+[0.483s] [ 95%] Built target potmessage__rosidl_typesupport_introspection_c__pyext
+[0.487s] [100%] Built target potmessage__rosidl_typesupport_c__pyext
+[0.695s] running egg_info
+[0.696s] writing potmessage.egg-info/PKG-INFO
+[0.696s] writing dependency_links to potmessage.egg-info/dependency_links.txt
+[0.696s] writing top-level names to potmessage.egg-info/top_level.txt
+[0.699s] reading manifest file 'potmessage.egg-info/SOURCES.txt'
+[0.699s] writing manifest file 'potmessage.egg-info/SOURCES.txt'
+[0.726s] [100%] Built target ament_cmake_python_build_potmessage_egg
+[0.748s] Invoked command in '/home/edrom-mini/edromufu/src/movement/PID_codes/build/potmessage' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/edrom-mini/edromufu/src/movement/PID_codes/install/pot_package:/opt/ros/humble /home/edrom-mini/.local/bin/cmake --build /home/edrom-mini/edromufu/src/movement/PID_codes/build/potmessage -- -j4 -l4
+[1.022s] Invoking command in '/home/edrom-mini/edromufu/src/movement/PID_codes/build/potmessage': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/edrom-mini/edromufu/src/movement/PID_codes/install/pot_package:/opt/ros/humble /home/edrom-mini/.local/bin/cmake --install /home/edrom-mini/edromufu/src/movement/PID_codes/build/potmessage
+[1.100s] -- Install configuration: ""
+[1.100s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/ament_index/resource_index/rosidl_interfaces/potmessage
+[1.100s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage
+[1.100s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg
+[1.100s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/buttonmsg.h
+[1.100s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/rosidl_generator_c__visibility_control.h
+[1.100s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail
+[1.100s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/potmsg__type_support.h
+[1.100s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/imumsg__functions.h
+[1.100s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/buttonmsg__functions.c
+[1.101s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/buttonmsg__functions.h
+[1.101s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/potmsg__functions.h
+[1.101s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/potmsg__functions.c
+[1.101s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/imumsg__type_support.h
+[1.101s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/potmsg__struct.h
+[1.101s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/buttonmsg__type_support.h
+[1.101s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/buttonmsg__struct.h
+[1.101s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/imumsg__functions.c
+[1.101s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/imumsg__struct.h
+[1.101s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/imumsg.h
+[1.101s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/potmsg.h
+[1.101s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/environment/library_path.sh
+[1.102s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/environment/library_path.dsv
+[1.102s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/lib/libpotmessage__rosidl_generator_c.so
+[1.102s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage
+[1.102s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg
+[1.102s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail
+[1.102s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/buttonmsg__rosidl_typesupport_fastrtps_c.h
+[1.102s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/potmsg__rosidl_typesupport_fastrtps_c.h
+[1.102s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/imumsg__rosidl_typesupport_fastrtps_c.h
+[1.102s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[1.102s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/lib/libpotmessage__rosidl_typesupport_fastrtps_c.so
+[1.102s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage
+[1.102s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg
+[1.103s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[1.103s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail
+[1.103s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/imumsg__type_support.c
+[1.103s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/potmsg__type_support.c
+[1.103s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/imumsg__rosidl_typesupport_introspection_c.h
+[1.103s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/buttonmsg__type_support.c
+[1.103s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/potmsg__rosidl_typesupport_introspection_c.h
+[1.103s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/buttonmsg__rosidl_typesupport_introspection_c.h
+[1.103s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/lib/libpotmessage__rosidl_typesupport_introspection_c.so
+[1.103s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/lib/libpotmessage__rosidl_typesupport_c.so
+[1.103s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage
+[1.103s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg
+[1.103s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/imumsg.hpp
+[1.104s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/buttonmsg.hpp
+[1.104s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail
+[1.104s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/buttonmsg__traits.hpp
+[1.104s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/buttonmsg__struct.hpp
+[1.104s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/potmsg__struct.hpp
+[1.104s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/imumsg__struct.hpp
+[1.104s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/imumsg__traits.hpp
+[1.104s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/buttonmsg__builder.hpp
+[1.104s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/imumsg__builder.hpp
+[1.104s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/potmsg__traits.hpp
+[1.104s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/potmsg__builder.hpp
+[1.104s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/potmsg.hpp
+[1.104s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage
+[1.105s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg
+[1.105s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail
+[1.105s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/imumsg__rosidl_typesupport_fastrtps_cpp.hpp
+[1.105s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/potmsg__rosidl_typesupport_fastrtps_cpp.hpp
+[1.105s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/buttonmsg__rosidl_typesupport_fastrtps_cpp.hpp
+[1.105s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/dds_fastrtps
+[1.105s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[1.105s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/lib/libpotmessage__rosidl_typesupport_fastrtps_cpp.so
+[1.105s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage
+[1.105s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg
+[1.105s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail
+[1.105s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/buttonmsg__rosidl_typesupport_introspection_cpp.hpp
+[1.106s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/imumsg__rosidl_typesupport_introspection_cpp.hpp
+[1.106s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/potmsg__type_support.cpp
+[1.106s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/imumsg__type_support.cpp
+[1.106s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/potmsg__rosidl_typesupport_introspection_cpp.hpp
+[1.106s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/include/potmessage/potmessage/msg/detail/buttonmsg__type_support.cpp
+[1.106s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/lib/libpotmessage__rosidl_typesupport_introspection_cpp.so
+[1.106s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/lib/libpotmessage__rosidl_typesupport_cpp.so
+[1.106s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/environment/pythonpath.sh
+[1.106s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/environment/pythonpath.dsv
+[1.106s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/local/lib/python3.10/dist-packages/potmessage-0.0.0-py3.10.egg-info
+[1.106s] -- Installing: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/local/lib/python3.10/dist-packages/potmessage-0.0.0-py3.10.egg-info/dependency_links.txt
+[1.106s] -- Installing: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/local/lib/python3.10/dist-packages/potmessage-0.0.0-py3.10.egg-info/PKG-INFO
+[1.106s] -- Installing: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/local/lib/python3.10/dist-packages/potmessage-0.0.0-py3.10.egg-info/top_level.txt
+[1.107s] -- Installing: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/local/lib/python3.10/dist-packages/potmessage-0.0.0-py3.10.egg-info/SOURCES.txt
+[1.107s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/local/lib/python3.10/dist-packages/potmessage
+[1.107s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/local/lib/python3.10/dist-packages/potmessage/potmessage_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.107s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/local/lib/python3.10/dist-packages/potmessage/__init__.py
+[1.107s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/local/lib/python3.10/dist-packages/potmessage/msg
+[1.107s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/local/lib/python3.10/dist-packages/potmessage/msg/__init__.py
+[1.107s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/local/lib/python3.10/dist-packages/potmessage/msg/_imumsg_s.c
+[1.107s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/local/lib/python3.10/dist-packages/potmessage/msg/_buttonmsg.py
+[1.107s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/local/lib/python3.10/dist-packages/potmessage/msg/_potmsg_s.c
+[1.107s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/local/lib/python3.10/dist-packages/potmessage/msg/_potmsg.py
+[1.107s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/local/lib/python3.10/dist-packages/potmessage/msg/_imumsg.py
+[1.107s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/local/lib/python3.10/dist-packages/potmessage/msg/_buttonmsg_s.c
+[1.107s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/local/lib/python3.10/dist-packages/potmessage/potmessage_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.107s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/local/lib/python3.10/dist-packages/potmessage/_potmessage_s.ep.rosidl_typesupport_introspection_c.c
+[1.108s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/local/lib/python3.10/dist-packages/potmessage/_potmessage_s.ep.rosidl_typesupport_c.c
+[1.108s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/local/lib/python3.10/dist-packages/potmessage/_potmessage_s.ep.rosidl_typesupport_fastrtps_c.c
+[1.108s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/local/lib/python3.10/dist-packages/potmessage/libpotmessage__rosidl_generator_py.so
+[1.108s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/local/lib/python3.10/dist-packages/potmessage/potmessage_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.147s] Listing '/home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/local/lib/python3.10/dist-packages/potmessage'...
+[1.147s] Listing '/home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/local/lib/python3.10/dist-packages/potmessage/msg'...
+[1.154s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/local/lib/python3.10/dist-packages/potmessage/potmessage_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.154s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/local/lib/python3.10/dist-packages/potmessage/potmessage_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.154s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/local/lib/python3.10/dist-packages/potmessage/potmessage_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.155s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/lib/libpotmessage__rosidl_generator_py.so
+[1.155s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/msg/Potmsg.idl
+[1.155s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/msg/Buttonmsg.idl
+[1.155s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/msg/Imumsg.idl
+[1.155s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/msg/Potmsg.msg
+[1.155s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/msg/Buttonmsg.msg
+[1.156s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/msg/Imumsg.msg
+[1.156s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/ament_index/resource_index/package_run_dependencies/potmessage
+[1.156s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/ament_index/resource_index/parent_prefix_path/potmessage
+[1.156s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/environment/ament_prefix_path.sh
+[1.156s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/environment/ament_prefix_path.dsv
+[1.157s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/environment/path.sh
+[1.157s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/environment/path.dsv
+[1.157s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/local_setup.bash
+[1.157s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/local_setup.sh
+[1.157s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/local_setup.zsh
+[1.157s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/local_setup.dsv
+[1.157s] -- Installing: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/package.dsv
+[1.157s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/ament_index/resource_index/packages/potmessage
+[1.158s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/cmake/export_potmessage__rosidl_generator_cExport.cmake
+[1.158s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/cmake/export_potmessage__rosidl_generator_cExport-noconfig.cmake
+[1.158s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/cmake/export_potmessage__rosidl_typesupport_fastrtps_cExport.cmake
+[1.158s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/cmake/export_potmessage__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[1.158s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/cmake/potmessage__rosidl_typesupport_introspection_cExport.cmake
+[1.158s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/cmake/potmessage__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[1.158s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/cmake/potmessage__rosidl_typesupport_cExport.cmake
+[1.158s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/cmake/potmessage__rosidl_typesupport_cExport-noconfig.cmake
+[1.158s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/cmake/export_potmessage__rosidl_generator_cppExport.cmake
+[1.158s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/cmake/export_potmessage__rosidl_typesupport_fastrtps_cppExport.cmake
+[1.158s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/cmake/export_potmessage__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[1.158s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/cmake/potmessage__rosidl_typesupport_introspection_cppExport.cmake
+[1.159s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/cmake/potmessage__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[1.159s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/cmake/potmessage__rosidl_typesupport_cppExport.cmake
+[1.159s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/cmake/potmessage__rosidl_typesupport_cppExport-noconfig.cmake
+[1.159s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/cmake/export_potmessage__rosidl_generator_pyExport.cmake
+[1.159s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/cmake/export_potmessage__rosidl_generator_pyExport-noconfig.cmake
+[1.159s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/cmake/rosidl_cmake-extras.cmake
+[1.159s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.161s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/cmake/ament_cmake_export_libraries-extras.cmake
+[1.161s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/cmake/ament_cmake_export_targets-extras.cmake
+[1.161s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[1.161s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.161s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[1.161s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/cmake/potmessageConfig.cmake
+[1.161s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/cmake/potmessageConfig-version.cmake
+[1.161s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/PID_codes/install/potmessage/share/potmessage/package.xml
+[1.177s] Invoked command in '/home/edrom-mini/edromufu/src/movement/PID_codes/build/potmessage' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/edrom-mini/edromufu/src/movement/PID_codes/install/pot_package:/opt/ros/humble /home/edrom-mini/.local/bin/cmake --install /home/edrom-mini/edromufu/src/movement/PID_codes/build/potmessage
