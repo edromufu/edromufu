@@ -1,93 +1,112 @@
 #!/usr/bin/env python3
-#coding=utf-8
+# coding=utf-8
 
-import rospy, os, sys
-from geometry_msgs.msg import Vector3
+import rospy
+from geometry_msgs.msg import Vector3, PoseStamped
+import os
+import sys
 
-edrom_dir = '/home/'+os.getlogin()+'/edromufu/src/'
+edrom_dir = '/home/' + os.getlogin() + '/edromufu/src/'
 
-sys.path.append(edrom_dir+'behaviour/transitions_and_states/src')
+sys.path.append(edrom_dir + 'behaviour/transitions_and_states/src')
 from behaviour_parameters import BehaviourParameters
 
-class FallInterpreter():
+class FallInterpreter:
 
     def __init__(self):
         """
         Construtor:
-        - Define as variaveis do ROS
-        - Define e inicializa variaveis do código
+        - Define as variáveis do ROS
+        - Define e inicializa variáveis do código
         """
-        
         self.parameters = BehaviourParameters()
 
-        #Variaveis do ROS
-        rospy.Subscriber(self.parameters.imuAccelTopic, Vector3, self.callback_sensor)
+        # Variáveis do ROS
+        rospy.Subscriber(self.parameters.imuAccelTopic, Vector3, self.callback_sensor_accel)
+        rospy.Subscriber(self.parameters.imuGyroTopic, Vector3, self.callback_sensor_gyro)
+        rospy.Subscriber(self.parameters.imuRollTopic, Vector3, self.callback_sensor_roll)
+        
+        # Publicador para o estado de queda
+        self.fall_pub = rospy.Publisher(self.parameters.fallStateTopic, PoseStamped, queue_size=10)
 
-        #Variaveis de código
-        self.fallState = self.parameters.up #Estado da queda do robô, sendo up = em pé
-        self.countFalled = 0 #Contador de quedas interpretadas para segurança
-    
-    #Funcao chamada pelo agrupador ROS quando necessitar saber 
-    #a interpretacao da queda para alguma requisicao
-    def getValues(self):
-        """
-        -> Output:
-            - fallState: Estado de queda avaliado pelo código, Up = de pé
-        """
+        # Variáveis de estado do sistema de detecção de queda
+        self.fallState = self.parameters.up  # Estado da queda do robô (up = em pé)
+        self.countFalled = 0  # Contador de quedas interpretadas para segurança
+        self.accel_data = Vector3()
+        self.gyro_data = Vector3()
+        self.roll = 0.0
 
-        return self.fallState
-    
-    #Callback do tópico de infos do acelerometro do ROS
-    def callback_sensor(self, msg):
+    def callback_sensor_accel(self, msg):
         """
-        -> Funcao:
-        Avaliar se houve queda e para que lado atraves de:
-            - Recebe os dados do acelerometro do simulador no msg
-            - Interpreta a medição y retornando se houve queda
-            - Interpreta as medições x e z retornando a orientação da queda
-            - Confia mais no estar de pé do que na queda, evitando falsos positivos 
-            * A orientação só é interpretada se a queda for detectada mais vezes do que o timesSecurity estipula 
-            (lembrando que o timesSecurity é a variavel que estipula o numero de vezes para verificacoes de seguranca), poupando processamento
-        -> Input:
-            - msg: Variavel associada a mensagem recebida no topico do ROS, contem as
-            informacoes do acelerometro    
+        Callback do acelerômetro:
+        - Recebe os dados do acelerômetro e atualiza a variável de aceleração
         """
+        self.accel_data = msg
+        self.evaluate_fall()
 
-        #Contando quantas das ultimas medições detectou-se queda, 
-        #reseta quando apenas uma não conta, ou seja, confia em estar de pé
-        #desconfia de ter caido, pois durante a caminhada a acelaração efetuada
-        #pelo robô pode fazer com que o sensor tenha uma medida de "queda"
-        if (abs(msg.x) > self.parameters.xGravitySecurity) or (abs(msg.y) > self.parameters.xGravitySecurity):
+    def callback_sensor_gyro(self, msg):
+        """
+        Callback do giroscópio:
+        - Recebe os dados do giroscópio e atualiza a variável de rotação
+        """
+        self.gyro_data = msg
+
+    def callback_sensor_roll(self, msg):
+        """
+        Callback do roll:
+        - Recebe o valor de roll calculado e atualiza a variável de roll
+        """
+        self.roll = msg.x
+
+    def evaluate_fall(self):
+        """
+        Avalia se houve queda e determina a direção:
+        - Interpreta os dados do acelerômetro e giroscópio
+        - Interpreta o valor de roll para avaliar o estado de inclinação
+        """
+        # Contagem de quedas consecutivas para segurança
+        if abs(self.accel_data.x) > self.parameters.xGravitySecurity or abs(self.accel_data.y) > self.parameters.yGravitySecurity:
             self.countFalled += 1
         else:
             self.fallState = self.parameters.up
             self.countFalled = 0
 
-        #Situação na qual interpretou-se queda muitas vezes seguidas,
-        #realizará as verificações para determinar o lado de queda
-        if(self.countFalled > self.parameters.timerCountLimit):
-            #Verificação se caiu sobre algum lado é feita depois
-            #da verificação se caiu de frente ou de costas, pois os
-            #últimos são mais prováveis e eficientes (page costuma 
-            #levantar mesmo se não estiver)
-            if msg.x < self.parameters.xSensorBack:
-                #Caiu de costa
+        # Avaliação de queda após contagem para evitar falsos positivos
+        if self.countFalled > self.parameters.timerCountLimit:
+            if self.accel_data.x < self.parameters.xSensorBack:
+                # Caiu de costas
                 self.fallState = self.parameters.back
-
-            elif msg.x > self.parameters.xSensorFront:
-                #Caiu de frente     
+            elif self.accel_data.x > self.parameters.xSensorFront:
+                # Caiu de frente     
                 self.fallState = self.parameters.front
-
-            elif msg.y < self.parameters.ySensorRight:
-                #Caiu sobre o lado direito    
+            elif self.accel_data.y < self.parameters.ySensorRight:
+                # Caiu sobre o lado direito    
                 self.fallState = self.parameters.right
-
-            elif msg.y > self.parameters.ySensorLeft:
-                #Caiu sobre o lado esquerdo    
+            elif self.accel_data.y > self.parameters.ySensorLeft:
+                # Caiu sobre o lado esquerdo    
                 self.fallState = self.parameters.left
 
+            # Publicação do estado de queda
+            self.publish_fall_state()
 
+    def publish_fall_state(self):
+        """
+        Publica o estado de queda atual e os dados IMU associados
+        """
+        fall_msg = PoseStamped()
+        fall_msg.header.stamp = rospy.Time.now()
+        fall_msg.pose.position.x = self.accel_data.x
+        fall_msg.pose.position.y = self.accel_data.y
+        fall_msg.pose.position.z = self.accel_data.z
+        fall_msg.pose.orientation.x = self.gyro_data.x
+        fall_msg.pose.orientation.y = self.gyro_data.y
+        fall_msg.pose.orientation.z = self.gyro_data.z
+        fall_msg.pose.orientation.w = self.roll
 
+        self.fall_pub.publish(fall_msg)
 
-
+if __name__ == '__main__':
+    rospy.init_node('fall_interpreter', anonymous=False)
     
+    fall_interpreter = FallInterpreter()
+    rospy.spin()
