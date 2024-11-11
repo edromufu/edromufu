@@ -5,11 +5,12 @@ import serial
 import time
 
 class PotValuesPublisher(Node):
-    def __init__(self, serial_port='/dev/ttyACM0', baud_rate=9600):
+    def __init__(self, serial_port='/dev/ttyUSB0', baud_rate=9600):
         super().__init__('pot_values_publisher')
         self.publisher_ = self.create_publisher(Float32MultiArray, 'pot_values', 10)
         self.subscriber_ = self.create_subscription(Float32MultiArray,'pot_py_topic',self.listener,10)
         self.pot_py_msg=[0,0,0,0,0,0,0,0]
+        #[3,x,x,x,x,0,1,x]
         # Configuração da porta serial
         try:
             self.serial_connection = serial.Serial()
@@ -21,7 +22,7 @@ class PotValuesPublisher(Node):
             self.get_logger().info("Conexão serial estabelecida com sucesso.")
         except serial.SerialException as e:
             self.get_logger().error(f"Erro ao conectar com a porta serial: {e}")
-            serial_port = '/dev/ttyACM1'
+            serial_port = '/dev/ttyUSB1'
             
             self.serial_connection = None
             return
@@ -41,7 +42,7 @@ class PotValuesPublisher(Node):
                 values = line.split(',')
                 values.pop()
                 values = [float(val) for val in values]
-                for i in range(len(values)):
+                for i in (range(8) if len(values)>=8 else range(len(values))):
                     values[i] = values[i] - self.pot_py_msg[i]
                 
 

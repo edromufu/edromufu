@@ -77,19 +77,20 @@ const int pot_size = 8;
 
 
 //--------constantes Drivers-------- ****TEM QUE PEGAR TUDO DO DIAGRAMA DA ELÉTRICA!!!!!!!****
-const int ACTUATOR_EN_PINS[] =     {34, 27, 33, 13, 1, 2, 19, 17}; //vetor de PWM
+const int ACTUATOR_EN_PINS[] =     {34, 27, 33, 13, 15, 2, 19, 17}; //vetor de PWM
 const int ACTUATOR_IN_IMP_PINS[] = {39, 26, 32, 12, 22, 4, 21, 5}; //vetor de pino de avanço
 const int ACTUATOR_IN_PAR_PINS[] = {36, 25, 35, 14, 23, 16, 3, 18}; //vetor de pino de recuo
 
 //--------constantes PID--------
 
-const float Kp[] =  {1000, 1000, 1000, 10, 10, 10, 10, 10};
+const float Kp[] =  {10, 10, 10, 10, 10, 10, 10, 10};
 const float Ki[] =  {0, 0, 0, 0, 0, 0, 0, 0};
 const float Kd[] =  {0, 0, 0, 0, 0, 0, 0, 0};
 float lastError[] = {0, 0, 0, 0, 0, 0, 0, 0};
 float accError[] =  {0, 0, 0, 0, 0, 0, 0, 0};
 float data[] =      {0, 0, 0, 0, 0, 0, 0, 0};   //Ângulos a serem recebidos por ROS da cinemática inversa
 float u_input[] =     {0, 0, 0, 0, 0, 0, 0, 0};   //Vetor de PWM a ser aplicado nos atuadores
+float feedback[] =     {0, 0, 0, 0, 0, 0, 0, 0};   //Vetor de feedback
 int dt = 1000;                                  // tempo de amostragem em milisegundos
 
 
@@ -118,9 +119,9 @@ float calculatePID(int id, float erro){
 void writeActuator (int id, int signal){
   // Pega o valor de u fornecido pelo PID e transforma em comandos para os drivers
   // id: id da junta
-  // signal: valor de -10000 10000 para escrever na junta
-  int newSignal = constrain(signal, -10000, 10000);
-  newSignal = 255*newSignal/10000; // olhar o 255
+  // signal: valor de -4095 4095 para escrever na junta
+  int newSignal = constrain(signal, -4095.0, 4095.0);
+  feedback[id]=newSignal;
   if (signal >= 0){
     digitalWrite(ACTUATOR_IN_IMP_PINS[id], HIGH);
     digitalWrite(ACTUATOR_IN_PAR_PINS[id], LOW);
@@ -194,18 +195,18 @@ void loop() {
 
 void subscription_callback(const void * msgin)
 {  
-  const std_msgs__msg__Float32MultiArray * feedback = (const std_msgs__msg__Float32MultiArray *)msgin;
+  const std_msgs__msg__Float32MultiArray * feedbackSub = (const std_msgs__msg__Float32MultiArray *)msgin;
 
   for(int i = 0; i < 8; i++){
     //--------Recebendo o erro--------
-    erro[i] = feedback->data.data[i];
+    erro[i] = feedbackSub->data.data[i];
 
     //--------Calculando Saídas dos PID's--------
     u_input[i] = calculatePID(i, erro[i]);
   }
 
-  //CalculatePWM();
-  feedbackMsg.data.data = u_input;
+  CalculatePWM();
+  feedbackMsg.data.data = feedback;
 
   RCSOFTCHECK(rcl_publish(&publisher2, &feedbackMsg, NULL));
 
