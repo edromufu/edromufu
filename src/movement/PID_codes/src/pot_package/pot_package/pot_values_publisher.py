@@ -8,8 +8,8 @@ class PotValuesPublisher(Node):
     def __init__(self, serial_port='/dev/ttyUSB0', baud_rate=9600):
         super().__init__('pot_values_publisher')
         self.publisher_ = self.create_publisher(Float32MultiArray, 'pot_values', 10)
-        self.subscriber_ = self.create_subscription(Float32MultiArray,'pot_py_topic',self.listener,10)
-        self.pot_py_msg=[0,0,0,0,0,0,0,0]
+        self.subscriber_ = self.create_subscription(Float32MultiArray,'page_runner',self.listener,10)
+        self.pagePoses =[ 0,0,0,0,0,0,0,0]
         #[3,x,x,x,x,0,1,x]
         # Configuração da porta serial
         try:
@@ -31,7 +31,7 @@ class PotValuesPublisher(Node):
         self.timer = self.create_timer(0.1, self.timer_callback)
 
     def listener(self, msg):
-        self.pot_py_msg = msg.data
+        self.pagePoses.append(msg.data)
 
     def timer_callback(self):
         if self.serial_connection.in_waiting:
@@ -43,13 +43,15 @@ class PotValuesPublisher(Node):
                 values.pop()
                 values = [float(val) for val in values]
                 for i in (range(8) if len(values)>=8 else range(len(values))):
-                    values[i] = values[i] - self.pot_py_msg[i]
+                    errors[i] = values[i] - self.pagePoses[1][i]
+                if(sum(errors) <= 50):
+                    self.pagePoses.pop(1)
                 
 
                 # Verifica se o vetor tem 8 valores antes de publicar
                 if len(values) == 8:
                     msg = Float32MultiArray()
-                    msg.data = values
+                    msg.data = errors
                     self.publisher_.publish(msg)
                     self.get_logger().info(f"Valores publicados: {msg.data}")
                 else:

@@ -77,9 +77,9 @@ const int pot_size = 8;
 
 
 //--------constantes Drivers-------- ****TEM QUE PEGAR TUDO DO DIAGRAMA DA ELÉTRICA!!!!!!!****
-const int ACTUATOR_EN_PINS[] =     {34, 27, 33, 13, 15, 2, 19, 17}; //vetor de PWM
-const int ACTUATOR_IN_IMP_PINS[] = {39, 26, 32, 12, 22, 4, 21, 5}; //vetor de pino de avanço
-const int ACTUATOR_IN_PAR_PINS[] = {36, 25, 35, 14, 23, 16, 3, 18}; //vetor de pino de recuo
+const int ACTUATOR_EN_PINS[] =     {34, 33, 27, 13, 15, 19, 17, 2}; //vetor de PWM
+const int ACTUATOR_IN_IMP_PINS[] = {36, 35, 25, 14, 23, 3, 18, 16}; //vetor de pino de avanço
+const int ACTUATOR_IN_PAR_PINS[] = {39, 32, 26, 12, 22, 21, 5, 4}; //vetor de pino de recuo
 
 //--------constantes PID--------
 
@@ -123,13 +123,13 @@ void writeActuator (int id, int signal){
   int newSignal = constrain(signal, -4095.0, 4095.0);
   feedback[id]=newSignal;
   if (signal >= 0){
-    digitalWrite(ACTUATOR_IN_IMP_PINS[id], HIGH);
-    digitalWrite(ACTUATOR_IN_PAR_PINS[id], LOW);
+    digitalWrite(ACTUATOR_IN_IMP_PINS[id], LOW);
+    digitalWrite(ACTUATOR_IN_PAR_PINS[id], HIGH);
     analogWrite(ACTUATOR_EN_PINS[id], newSignal);
   }
   if (signal < 0){
-    digitalWrite(ACTUATOR_IN_IMP_PINS[id], LOW);
-    digitalWrite(ACTUATOR_IN_PAR_PINS[id], HIGH);
+    digitalWrite(ACTUATOR_IN_IMP_PINS[id], HIGH);
+    digitalWrite(ACTUATOR_IN_PAR_PINS[id], LOW);
     analogWrite(ACTUATOR_EN_PINS[id], -newSignal);
   }
 }
