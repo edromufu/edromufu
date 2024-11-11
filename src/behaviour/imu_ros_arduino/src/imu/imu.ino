@@ -54,14 +54,22 @@ void loop() {
 
   // Verifica se passou tempo suficiente para imprimir os dados
   if (currentTime - printTime >= 500) { // 500 ms
-    Serial.print("RollC: "); Serial.print(rollC);
-    Serial.print(" | AcX: "); Serial.print(AcX);
-    Serial.print(" | AcY: "); Serial.print(AcY);
-    Serial.print(" | AcZ: "); Serial.print(AcZ);
-    Serial.print(" | GyX: "); Serial.print(GyX);
-    Serial.print(" | GyY: "); Serial.print(GyY);
-    Serial.print(" | GyZ: "); Serial.print(GyZ);
-    Serial.print("\n");
+    Serial.print(rollC);
+    Serial.print('|');
+    Serial.print(AcX);
+    Serial.print('|');
+    Serial.print(AcY);
+    Serial.print('|');
+    Serial.print(AcZ);
+    Serial.print('|');
+    Serial.print(GyX);
+    Serial.print('|');
+    Serial.print(GyY);
+    Serial.print('|');
+    Serial.print(GyZ);
+    Serial.print('\n');
+
+    
     printTime = currentTime; // Atualiza o tempo de impressão
   }
 }
