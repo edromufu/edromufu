@@ -5,14 +5,14 @@ from numpy.random import randn, uniform
 class ParticleFilter():
 
     # Contructor
-    def __init__(self, N, fov, minRange, maxRange, intersections, previousPositionKnown = False, mean = [0,0,0], standardDeviation = [0,0,0], xRange = [0,1000], yRange = [0,1000], headingRange = [0,360]):
+    def __init__(self, N, fov, minRange, intersections, previousPositionKnown = False, mean = [0,0,0], standardDeviation = [0,0,0], xRange = [0,1000], yRange = [0,1000], headingRange = [0,360]):
         self.N = N  #Número de partículas.
         self.fov = fov  #Campo de visão do robô.
-        self.neckAngle = 0
+        self.previousPositionKnown = previousPositionKnown
+        self.phi0=0
         
         #Intervalo de distância para considerar uma interseção válida.
         self.minRange = minRange 
-        self.maxRange = maxRange
         self.intersections = intersections  #Lista de interseções conhecidas no mapa.
         self.reflect = False    # Variável que sinaliza se deve refletir o mapa ou não
 
@@ -24,6 +24,8 @@ class ParticleFilter():
 
         # Inicializa os pesos das partículas com valores iguais.
         self.weights = np.array([1/self.N]*self.N)
+
+        # Estima a média e variância inicial das partículas
         self.estimate()
 
     # Gera partículas distribuídas uniformemente dentro dos intervalos fornecidos (xRange, yRange, headingRange).
@@ -83,7 +85,7 @@ class ParticleFilter():
                 self.particles[i,2] = (-self.particles[i,2]+360)%360
 
     # Verifica quais interseções estão dentro do campo de visão (FOV) de uma partícula, considerando a posição e orientação da partícula.
-    def checkFOV(self, particle):
+    def checkFOV(self, particle, maxRange,neckAngle):
         
         seen = []   #Inicializa a lista de interseções vistas pela partícula.c
         for intersection in self.intersections:     #Itera sobre todas as interseções conhecidas no campo.
@@ -91,7 +93,7 @@ class ParticleFilter():
             distY = particle[1] - intersection[0][1]    #Calcula a diferença y entre a partícula e a interseção.
             distance = (distX**2 + distY**2)**0.5       #Calcula a distância euclidiana entre a partícula e a interseção.  
 
-            if distance <= self.maxRange and distance >= self.minRange: #Verifica se a interseção está dentro do intervalo de distância.
+            if distance <= maxRange and distance >= self.minRange: #Verifica se a interseção está dentro do intervalo de distância.
                 #Cálculo do ângulo entre a partícula e a interseção: 
                 if distX == 0 and distY<0:
                     angle = np.pi/2 #Se distX for 0 e distY for negativo, o ângulo é π/2.
@@ -111,8 +113,8 @@ class ParticleFilter():
                 angle = (angle + 2*np.pi)%(2*np.pi) #Normaliza o ângulo para o intervalo [0, 2π).
                 
                 #Verificação do campo de visão (FOV):
-                limLeft = ((particle[2]+self.neckAngle)*np.pi/180+self.fov/2)%(2*np.pi)  #Calcula o angulo de limite esquerdo do campo de visão.
-                limRight = ((particle[2]+self.neckAngle)*np.pi/180-self.fov/2)%(2*np.pi) #Calcula o angulo de limite direito do campo de visão.
+                limLeft = ((particle[2]+neckAngle)*np.pi/180+self.fov/2)%(2*np.pi)  #Calcula o angulo de limite esquerdo do campo de visão.
+                limRight = ((particle[2]+neckAngle)*np.pi/180-self.fov/2)%(2*np.pi) #Calcula o angulo de limite direito do campo de visão.
                 if limLeft >= limRight and angle <= limLeft and angle >= limRight:  #Verifica se o ângulo está dentro do campo de visão quando a particula não engloba o ângulo 0
                     angle_seen = angle*180/np.pi - particle[2]
                     seen.append([intersection,angle_seen])   #Adiciona a interseção à lista de interseções vistas.
@@ -170,7 +172,7 @@ class ParticleFilter():
         
         return robot    #Retorna a posição atualizada do robô.
 
-    def calculate_weights(self, answer, sensor_noise,limit):
+    def calculate_weights(self, answer, sensor_noise,angle_noise,IMU_noise,limit,newMaxRange,neckAngle, IMUangle,robotFound):
         #measured distances: Distancias medidas pela robo de possíveis landmarks
         #landmarks: pontos de referência no mapa, dentro do campo de visão da particula
         m = len(answer)
@@ -181,7 +183,7 @@ class ParticleFilter():
                 self.weights[i] = 0.0
                 continue
 
-            particleAnswer = self.checkFOV(particle) #Verifica quais interseções estão na linha de visão da partícula.
+            particleAnswer = self.checkFOV(particle, newMaxRange,neckAngle) #Verifica quais interseções estão na linha de visão da partícula.
             l = len(particleAnswer)
             total_prob = 1.0
             for measured_distance in answer:
@@ -195,9 +197,14 @@ class ParticleFilter():
                     dy = particle[1] - landmark[0][1]
                     simulated_distance = np.sqrt(dx**2 + dy**2)
 
-                    # Comparar as distâncias simuladas com as medidas e calcular o peso usando função densidade de probabilidade
-                    prob = np.exp(-(0*(simulated_distance - measured_distance[0])**2) / (2 * sensor_noise**2) - 0.001*(landmark_angle - measured_distance[2])**2)
-                    #prob = np.exp(- 0.0001*(landmark_angle - measured_distance[2])**2)
+                    # Comparar as distâncias simuladas com as medidas e calcular o peso usando função densidade de probabilidade #! Adicionar segundo ruido
+                    prob = np.exp(-((simulated_distance - measured_distance[0])**2) / (2 * sensor_noise**2) - (landmark_angle - measured_distance[2])**2/ (2 * angle_noise**2))
+
+                    
+                    # Se a posição inicial é conhecida calcula-se o peso das partículas usando o IMU
+                    if self.previousPositionKnown: 
+                        prob *= np.exp(-((particle[2] - IMUangle - self.phi0 )**2) / (2 * IMU_noise)*2)
+
 
                     # Ajuste de probabilidade para partículas que detectam mais informação que a robô
                     if m<l: prob*=m/l
