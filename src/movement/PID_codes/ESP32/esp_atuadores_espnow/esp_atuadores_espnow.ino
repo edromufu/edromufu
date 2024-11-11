@@ -106,12 +106,12 @@ void initJoint(int id){
 
 float calculatePID(int id, float erro){
 
-  //float derro = 1000*(erro - lastError[id])/dt;
+  float derro = 1000*(erro - lastError[id])/dt;
   
-  //accError[id]+= erro*dt/1000;
+  accError[id]+= erro*dt/1000;
 
-  //int u = Kp[id]*erro +Ki[id]*accError[id]+ Kd[id]*derro;
-  return id*0.5;
+  int u = Kp[id]*erro +Ki[id]*accError[id]+ Kd[id]*derro;
+  return u;
 }
 
 
@@ -145,11 +145,11 @@ float pot2Degrees(float value){
 float feedbackData[8];
 
 void setup() {
-/*
+
   for (int i = 0; i < pot_size; i++){
     initJoint(i);
   }
-*/
+
 
   set_microros_transports();
   delay(300);
@@ -190,15 +190,31 @@ void loop() {
   
   RCSOFTCHECK(rclc_executor_spin_some(&executor, RCL_MS_TO_NS(100)));
 
-    //--------Calculando Saídas dos PID's--------
-  /*for (int i = 0; i < pot_size; i++){
-    u_input[i] = 1;
-  }*/
-  
+}
 
-  /*
+void subscription_callback(const void * msgin)
+{  
+  const std_msgs__msg__Float32MultiArray * feedback = (const std_msgs__msg__Float32MultiArray *)msgin;
+
+  for(int i = 0; i < 8; i++){
+    //--------Recebendo o erro--------
+    erro[i] = feedback->data.data[i];
+
+    //--------Calculando Saídas dos PID's--------
+    u_input[i] = calculatePID(i, erro[i]);
+  }
+
+  //CalculatePWM();
+  feedbackMsg.data.data = u_input;
+
+  RCSOFTCHECK(rcl_publish(&publisher2, &feedbackMsg, NULL));
+
+}
+
+void CalculatePWM(){
+
   //--------Calculando Entrada do PWM--------
-  writeActuator(0, u_input[1]+u_input[0]); //Tem que ver
+  writeActuator(0, u_input[1]+u_input[0]); 
   writeActuator(1, u_input[1]-u_input[0]);
   
   writeActuator(2, u_input[2]+u_input[3]);
@@ -209,22 +225,4 @@ void loop() {
   
   writeActuator(6, u_input[6]+u_input[7]);
   writeActuator(7, u_input[6]-u_input[7]);
-  */
-
-}
-
-void subscription_callback(const void * msgin)
-{  
-  const std_msgs__msg__Float32MultiArray * feedback = (const std_msgs__msg__Float32MultiArray *)msgin;
-
-  for(int i = 0; i < 8; i++){
-    erro[i] = 1;  
-    //feedback->data.data[i];
-    u_input[i] = calculatePID(i, 1);
-  }
-
-  feedbackMsg.data.data = u_input;
-
-  RCSOFTCHECK(rcl_publish(&publisher2, &feedbackMsg, NULL));
-
 }
