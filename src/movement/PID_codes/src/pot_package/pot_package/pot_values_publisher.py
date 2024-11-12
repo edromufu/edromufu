@@ -5,12 +5,13 @@ import serial
 import time
 
 class PotValuesPublisher(Node):
-    def __init__(self, serial_port='/dev/ttyUSB0', baud_rate=9600):
+    def __init__(self, serial_port='/dev/ttyACM0', baud_rate=9600):
         super().__init__('pot_values_publisher')
-        self.publisher_ = self.create_publisher(Float32MultiArray, 'pot_values', 10)
-        self.subscriber_ = self.create_subscription(Float32MultiArray,'page_runner',self.listener,10)
+        self.publisher_ = self.create_publisher(Float32MultiArray, 'pot_values', 1)
+        self.subscriber_ = self.create_subscription(Float32MultiArray,'pot_py_topic',self.listener,1)
         self.pagePoses =[ 0,0,0,0,0,0,0,0]
-        #[3,x,x,x,x,0,1,x]
+        self.errors =[ 0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]
+        #[6,5,7,4,3,0,1,2]
         # Configuração da porta serial
         try:
             self.serial_connection = serial.Serial()
@@ -22,7 +23,7 @@ class PotValuesPublisher(Node):
             self.get_logger().info("Conexão serial estabelecida com sucesso.")
         except serial.SerialException as e:
             self.get_logger().error(f"Erro ao conectar com a porta serial: {e}")
-            serial_port = '/dev/ttyUSB1'
+            serial_port = '/dev/ttyACM1'
             
             self.serial_connection = None
             return
@@ -31,7 +32,7 @@ class PotValuesPublisher(Node):
         self.timer = self.create_timer(0.1, self.timer_callback)
 
     def listener(self, msg):
-        self.pagePoses.append(msg.data)
+        self.pagePoses = msg.data
 
     def timer_callback(self):
         if self.serial_connection.in_waiting:
@@ -43,15 +44,15 @@ class PotValuesPublisher(Node):
                 values.pop()
                 values = [float(val) for val in values]
                 for i in (range(8) if len(values)>=8 else range(len(values))):
-                    errors[i] = values[i] - self.pagePoses[1][i]
-                if(sum(errors) <= 50):
-                    self.pagePoses.pop(1)
+                    self.errors[i] = values[i] - self.pagePoses[i]
+                #if(sum(self.errors) <= 50):
+                #    self.pagePoses.pop(1)
                 
 
                 # Verifica se o vetor tem 8 valores antes de publicar
                 if len(values) == 8:
                     msg = Float32MultiArray()
-                    msg.data = errors
+                    msg.data = self.errors
                     self.publisher_.publish(msg)
                     self.get_logger().info(f"Valores publicados: {msg.data}")
                 else:

@@ -1,0 +1,94 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from modularized_bhv_msgs/msg/GameControllerMsg.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module modularized_bhv_msgs {
+  module msg {
+    module GameControllerMsg_Constants {
+      const uint8 GAMESTATE_INITAL = 0;
+      const uint8 GAMESTATE_READY = 1;
+      const uint8 GAMESTATE_SET = 2;
+      const uint8 GAMESTATE_PLAYING = 3;
+      const uint8 GAMESTATE_FINISHED = 4;
+      @verbatim (language="comment", text=
+        "Secondary state, penaltyshoot is penalty shootout at the end of the game," "\n"        "penaltykick is a kick during the game")
+      const uint8 STATE_NORMAL = 0;
+      const uint8 STATE_PENALTYSHOOT = 1;
+      const uint8 STATE_OVERTIME = 2;
+      const uint8 STATE_TIMEOUT = 3;
+      const uint8 STATE_DIRECT_FREEKICK = 4;
+      const uint8 STATE_INDIRECT_FREEKICK = 5;
+      const uint8 STATE_PENALTYKICK = 6;
+      const uint8 STATE_CORNER_KICK = 7;
+      const uint8 STATE_GOAL_KICK = 8;
+      const uint8 STATE_THROW_IN = 9;
+      @verbatim (language="comment", text=
+        "The secondary state contains a sub mode in which phase of execution the secondary state is")
+      const uint8 MODE_PREPARATION = 0;
+      const uint8 MODE_PLACING = 1;
+      const uint8 MODE_END = 2;
+      @verbatim (language="comment", text=
+        "Team colors")
+      const uint8 BLUE = 0;
+      const uint8 RED = 1;
+    };
+    struct GameControllerMsg {
+      std_msgs::msg::Header header;
+
+      @default (value=3)
+      uint8 game_state;
+
+      @default (value=0)
+      uint8 secondary_state;
+
+      @verbatim (language="comment", text=
+        "For newest version of game controller" "\n"
+        "Tells which team has the free kick or penalty kick")
+      uint8 secondary_state_team;
+
+      uint8 secondary_state_mode;
+
+      boolean first_half;
+
+      uint8 own_score;
+
+      uint8 rival_score;
+
+      @verbatim (language="comment", text=
+        "Seconds remaining for the game half")
+      int16 seconds_remaining;
+
+      @verbatim (language="comment", text=
+        "Seconds remaining for things like kickoff")
+      int16 secondary_seconds_remaining;
+
+      boolean has_kick_off;
+
+      boolean penalized;
+
+      uint16 seconds_till_unpenalized;
+
+      uint8 team_color;
+
+      boolean drop_in_team;
+
+      uint16 drop_in_time;
+
+      @verbatim (language="comment", text=
+        "The number of the current penalty shot during penalty shootout")
+      uint8 penalty_shot;
+
+      @verbatim (language="comment", text=
+        "a binary pattern indicating the successful penalty shots (1 for successful, 0 for unsuccessful)")
+      uint16 single_shots;
+
+      string coach_message;
+
+      sequence<boolean> team_mates_with_penalty;
+
+      sequence<boolean> team_mates_with_red_card;
+    };
+  };
+};

@@ -1,0 +1,55 @@
+[1.692s] Invoking command in '/home/paulo/edromufu/src/behaviour/bhv_independent_simulator': PYTHONPATH=/home/paulo/edromufu/src/behaviour/build/bhv_independent_simulator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/bhv_independent_simulator build --build-base /home/paulo/edromufu/src/behaviour/build/bhv_independent_simulator/build install --record /home/paulo/edromufu/src/behaviour/build/bhv_independent_simulator/install.log --single-version-externally-managed install_data
+[2.040s] running egg_info
+[2.041s] creating ../build/bhv_independent_simulator/bhv_independent_simulator.egg-info
+[2.041s] writing ../build/bhv_independent_simulator/bhv_independent_simulator.egg-info/PKG-INFO
+[2.041s] writing dependency_links to ../build/bhv_independent_simulator/bhv_independent_simulator.egg-info/dependency_links.txt
+[2.041s] writing entry points to ../build/bhv_independent_simulator/bhv_independent_simulator.egg-info/entry_points.txt
+[2.041s] writing requirements to ../build/bhv_independent_simulator/bhv_independent_simulator.egg-info/requires.txt
+[2.041s] writing top-level names to ../build/bhv_independent_simulator/bhv_independent_simulator.egg-info/top_level.txt
+[2.042s] writing manifest file '../build/bhv_independent_simulator/bhv_independent_simulator.egg-info/SOURCES.txt'
+[2.043s] reading manifest file '../build/bhv_independent_simulator/bhv_independent_simulator.egg-info/SOURCES.txt'
+[2.043s] adding license file 'LICENSE'
+[2.043s] writing manifest file '../build/bhv_independent_simulator/bhv_independent_simulator.egg-info/SOURCES.txt'
+[2.044s] running build
+[2.044s] running build_py
+[2.044s] creating /home/paulo/edromufu/src/behaviour/build/bhv_independent_simulator/build
+[2.044s] creating /home/paulo/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib
+[2.044s] creating /home/paulo/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator
+[2.044s] copying bhv_independent_simulator/__init__.py -> /home/paulo/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator
+[2.044s] copying bhv_independent_simulator/move_head.py -> /home/paulo/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator
+[2.045s] copying bhv_independent_simulator/color_based_vision_for_sim.py -> /home/paulo/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator
+[2.045s] copying bhv_independent_simulator/hsv.py -> /home/paulo/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator
+[2.045s] copying bhv_independent_simulator/sensors_update.py -> /home/paulo/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator
+[2.045s] copying bhv_independent_simulator/robot_3D_moves.py -> /home/paulo/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator
+[2.045s] copying bhv_independent_simulator/sim_page_exec.py -> /home/paulo/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator
+[2.046s] copying bhv_independent_simulator/bhv_sim.py -> /home/paulo/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator
+[2.046s] running install
+[2.046s] running install_lib
+[2.047s] creating /home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator
+[2.047s] copying /home/paulo/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator/__init__.py -> /home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator
+[2.047s] copying /home/paulo/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator/move_head.py -> /home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator
+[2.047s] copying /home/paulo/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator/color_based_vision_for_sim.py -> /home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator
+[2.047s] copying /home/paulo/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator/hsv.py -> /home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator
+[2.047s] copying /home/paulo/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator/sensors_update.py -> /home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator
+[2.047s] copying /home/paulo/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator/robot_3D_moves.py -> /home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator
+[2.048s] copying /home/paulo/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator/sim_page_exec.py -> /home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator
+[2.048s] copying /home/paulo/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator/bhv_sim.py -> /home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator
+[2.048s] byte-compiling /home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator/__init__.py to __init__.cpython-310.pyc
+[2.048s] byte-compiling /home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator/move_head.py to move_head.cpython-310.pyc
+[2.049s] byte-compiling /home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator/color_based_vision_for_sim.py to color_based_vision_for_sim.cpython-310.pyc
+[2.050s] byte-compiling /home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator/hsv.py to hsv.cpython-310.pyc
+[2.050s] byte-compiling /home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator/sensors_update.py to sensors_update.cpython-310.pyc
+[2.051s] byte-compiling /home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator/robot_3D_moves.py to robot_3D_moves.cpython-310.pyc
+[2.051s] byte-compiling /home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator/sim_page_exec.py to sim_page_exec.cpython-310.pyc
+[2.052s] byte-compiling /home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator/bhv_sim.py to bhv_sim.cpython-310.pyc
+[2.052s] running install_data
+[2.053s] creating /home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/share/ament_index
+[2.053s] creating /home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/share/ament_index/resource_index
+[2.053s] creating /home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/share/ament_index/resource_index/packages
+[2.053s] copying resource/bhv_independent_simulator -> /home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/share/ament_index/resource_index/packages
+[2.053s] copying package.xml -> /home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator
+[2.053s] running install_egg_info
+[2.055s] Copying ../build/bhv_independent_simulator/bhv_independent_simulator.egg-info to /home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator-0.0.0-py3.10.egg-info
+[2.056s] running install_scripts
+[2.078s] writing list of installed files to '/home/paulo/edromufu/src/behaviour/build/bhv_independent_simulator/install.log'
+[2.104s] Invoked command in '/home/paulo/edromufu/src/behaviour/bhv_independent_simulator' returned '0': PYTHONPATH=/home/paulo/edromufu/src/behaviour/build/bhv_independent_simulator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/bhv_independent_simulator build --build-base /home/paulo/edromufu/src/behaviour/build/bhv_independent_simulator/build install --record /home/paulo/edromufu/src/behaviour/build/bhv_independent_simulator/install.log --single-version-externally-managed install_data

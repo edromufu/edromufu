@@ -12,58 +12,7 @@
 //#include <potmessage/msg/buttonmsg.h>
 #include <std_msgs/msg/float32_multi_array.h>
 
-// MicroROS Variaveis
-rclc_executor_t executor;
-rclc_support_t support;
-rcl_allocator_t allocator;
-rcl_node_t node;
-rcl_timer_t timer;
-//rcl_publisher_t publisher;
-rcl_publisher_t publisher2;
-rcl_subscription_t subscriber;
-
-// !!! Não precisamos mais das mensagens customizadas !!!
-std_msgs__msg__Float32MultiArray feedbackMsg;
-//std_msgs__msg__Float32MultiArray msg;
-
-//potmessage__msg__Imumsg msgImu;
-//potmessage__msg__Buttonmsg msgBot;
-// ------------------------------------
-
-esp_now_peer_info_t peerInfo;
-
-int potPrint[8];
-int numPorts=8;
-
-//============== ESPNOW ================
-typedef struct struct_message {
-  uint16_t potValue[8];
-} struct_message;
-struct_message myData;
-
-void OnDataRecv(const uint8_t * mac, const uint8_t *incomingData, int len) {
-  memcpy(&myData, incomingData, sizeof(myData));
-}
-//======================================
-
-//============== MicroROS ==============
-#define RCCHECK(fn) \
-  { \
-    rcl_ret_t temp_rc = fn; \
-    if ((temp_rc != RCL_RET_OK)) { error_loop(); } \
-  }
-#define RCSOFTCHECK(fn) \
-  { \
-    rcl_ret_t temp_rc = fn; \
-    if ((temp_rc != RCL_RET_OK)) {} \
-  }
-void error_loop() {
-  Serial.println("ERROR LOOP");
-}
-void timer_callback(rcl_timer_t* timer, int64_t last_call_time) {
-  RCLC_UNUSED(last_call_time);
-  if (timer != NULL) {
-    //RCSOFTCHECK(rcl_publish(&publisher, &msg, NULL));
+100l_publish(&publisher, &msg, NULL));
 
   }
 }

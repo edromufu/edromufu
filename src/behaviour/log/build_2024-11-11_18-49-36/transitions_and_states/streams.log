@@ -1,0 +1,21 @@
+[1.531s] Invoking command in '/home/paulo/edromufu/src/behaviour/transitions_and_states': PYTHONPATH=/home/paulo/edromufu/src/behaviour/build/transitions_and_states/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/behaviour/install/transitions_and_states/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/transitions_and_states build --build-base /home/paulo/edromufu/src/behaviour/build/transitions_and_states/build install --record /home/paulo/edromufu/src/behaviour/build/transitions_and_states/install.log --single-version-externally-managed install_data
+[1.754s] running egg_info
+[1.754s] writing ../build/transitions_and_states/transitions_and_states.egg-info/PKG-INFO
+[1.754s] writing dependency_links to ../build/transitions_and_states/transitions_and_states.egg-info/dependency_links.txt
+[1.755s] writing entry points to ../build/transitions_and_states/transitions_and_states.egg-info/entry_points.txt
+[1.755s] writing requirements to ../build/transitions_and_states/transitions_and_states.egg-info/requires.txt
+[1.755s] writing top-level names to ../build/transitions_and_states/transitions_and_states.egg-info/top_level.txt
+[1.757s] reading manifest file '../build/transitions_and_states/transitions_and_states.egg-info/SOURCES.txt'
+[1.757s] adding license file 'LICENSE'
+[1.757s] writing manifest file '../build/transitions_and_states/transitions_and_states.egg-info/SOURCES.txt'
+[1.758s] running build
+[1.758s] running build_py
+[1.760s] running install
+[1.760s] running install_lib
+[1.760s] running install_data
+[1.760s] running install_egg_info
+[1.762s] removing '/home/paulo/edromufu/src/behaviour/install/transitions_and_states/lib/python3.10/site-packages/transitions_and_states-0.0.0-py3.10.egg-info' (and everything under it)
+[1.762s] Copying ../build/transitions_and_states/transitions_and_states.egg-info to /home/paulo/edromufu/src/behaviour/install/transitions_and_states/lib/python3.10/site-packages/transitions_and_states-0.0.0-py3.10.egg-info
+[1.763s] running install_scripts
+[1.783s] writing list of installed files to '/home/paulo/edromufu/src/behaviour/build/transitions_and_states/install.log'
+[1.822s] Invoked command in '/home/paulo/edromufu/src/behaviour/transitions_and_states' returned '0': PYTHONPATH=/home/paulo/edromufu/src/behaviour/build/transitions_and_states/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/behaviour/install/transitions_and_states/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/transitions_and_states build --build-base /home/paulo/edromufu/src/behaviour/build/transitions_and_states/build install --record /home/paulo/edromufu/src/behaviour/build/transitions_and_states/install.log --single-version-externally-managed install_data

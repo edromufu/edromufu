@@ -1,0 +1,22 @@
+running egg_info
+writing ../build/GameController/GameController.egg-info/PKG-INFO
+writing dependency_links to ../build/GameController/GameController.egg-info/dependency_links.txt
+writing entry points to ../build/GameController/GameController.egg-info/entry_points.txt
+writing requirements to ../build/GameController/GameController.egg-info/requires.txt
+writing top-level names to ../build/GameController/GameController.egg-info/top_level.txt
+reading manifest file '../build/GameController/GameController.egg-info/SOURCES.txt'
+writing manifest file '../build/GameController/GameController.egg-info/SOURCES.txt'
+running build
+running build_py
+copying GameController/connect.py -> /home/paulo/edromufu/src/behaviour/build/GameController/build/lib/GameController
+running install
+running install_lib
+copying /home/paulo/edromufu/src/behaviour/build/GameController/build/lib/GameController/connect.py -> /home/paulo/edromufu/src/behaviour/install/GameController/lib/python3.10/site-packages/GameController
+byte-compiling /home/paulo/edromufu/src/behaviour/install/GameController/lib/python3.10/site-packages/GameController/connect.py to connect.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/paulo/edromufu/src/behaviour/install/GameController/lib/python3.10/site-packages/GameController-1.0.0-py3.10.egg-info' (and everything under it)
+Copying ../build/GameController/GameController.egg-info to /home/paulo/edromufu/src/behaviour/install/GameController/lib/python3.10/site-packages/GameController-1.0.0-py3.10.egg-info
+running install_scripts
+Installing gameController script to /home/paulo/edromufu/src/behaviour/install/GameController/lib/GameController
+writing list of installed files to '/home/paulo/edromufu/src/behaviour/build/GameController/install.log'

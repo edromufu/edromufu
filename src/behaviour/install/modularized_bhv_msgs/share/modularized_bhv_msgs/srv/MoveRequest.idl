@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from modularized_bhv_msgs/srv/MoveRequest.srv
+// generated code does not contain a copyright notice
+
+
+module modularized_bhv_msgs {
+  module srv {
+    struct MoveRequest_Request {
+      string move_request;
+    };
+    struct MoveRequest_Response {
+      boolean success;
+    };
+  };
+};

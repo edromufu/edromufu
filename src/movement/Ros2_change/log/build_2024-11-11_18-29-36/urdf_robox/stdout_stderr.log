@@ -1,0 +1,70 @@
+-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/paulo/edromufu/src/movement/Ros2_change/build/urdf_robox
+-- Install configuration: ""
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/urdf
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/urdf/urdf_robox.urdf
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/urdf/urdf_robox.csv
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/launch
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/launch/rsp.launch.py
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/launch/rsp_sim.launch.py
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/launch/display.launch
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/launch/gazebo.launch
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_3.3.STL
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_5.1.STL
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LA_Link.STL
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_4.3.STL
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_1.STL
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_5.3.STL
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_3.1.STL
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_2.3.STL
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_4.1.STL
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_5.3.STL
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_3.2.STL
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_5.2.STL
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_6.STL
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_5.2.STL
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_2.2.STL
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_2.3.STL
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_5.1.STL
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_3.2.STL
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_3.3.STL
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_4.1.STL
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_4.2.STL
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_2.2.STL
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_4.3.STL
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_2.1.STL
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_4.2.STL
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/Link_0.STL
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_6.STL
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_3.1.STL
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_1.STL
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_2.1.STL
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RA_Link.STL
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/config
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/config/joint_names_urdf_robox.yaml
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/worlds
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/worlds/test_world.world
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/ament_index/resource_index/package_run_dependencies/urdf_robox
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/ament_index/resource_index/parent_prefix_path/urdf_robox
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/environment/ament_prefix_path.sh
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/environment/ament_prefix_path.dsv
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/environment/path.sh
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/environment/path.dsv
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/local_setup.bash
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/local_setup.sh
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/local_setup.zsh
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/local_setup.dsv
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/package.dsv
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/ament_index/resource_index/packages/urdf_robox
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/cmake/urdf_roboxConfig.cmake
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/cmake/urdf_roboxConfig-version.cmake
+-- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/package.xml

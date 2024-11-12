@@ -1,0 +1,31 @@
+[0.226s] Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_visualization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --build /home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_visualization -- -j12 -l12
+[0.655s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.655s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.024s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.025s] -- Added test 'lint_cmake' to check CMake code style
+[1.030s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.032s] -- Added test 'xmllint' to check XML markup files
+[1.034s] -- Configuring done
+[1.052s] -- Generating done
+[1.056s] -- Build files have been written to: /home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_visualization
+[1.178s] Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_visualization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --build /home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_visualization -- -j12 -l12
+[1.276s] Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_visualization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --install /home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_visualization
+[1.289s] -- Install configuration: ""
+[1.290s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization//launch
+[1.290s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization//launch/display.launch.py
+[1.294s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/ament_index/resource_index/package_run_dependencies/humanoid_visualization
+[1.295s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/ament_index/resource_index/parent_prefix_path/humanoid_visualization
+[1.295s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/environment/ament_prefix_path.sh
+[1.295s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/environment/ament_prefix_path.dsv
+[1.296s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/environment/path.sh
+[1.296s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/environment/path.dsv
+[1.296s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/local_setup.bash
+[1.296s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/local_setup.sh
+[1.297s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/local_setup.zsh
+[1.297s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/local_setup.dsv
+[1.297s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/package.dsv
+[1.297s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/ament_index/resource_index/packages/humanoid_visualization
+[1.308s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/cmake/humanoid_visualizationConfig.cmake
+[1.308s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/cmake/humanoid_visualizationConfig-version.cmake
+[1.309s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/package.xml
+[1.319s] Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_visualization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --install /home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_visualization

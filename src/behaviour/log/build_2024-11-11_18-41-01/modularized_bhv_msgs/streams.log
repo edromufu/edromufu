@@ -1,0 +1,329 @@
+[0.558s] Invoking command in '/home/paulo/edromufu/src/behaviour/build/modularized_bhv_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions:/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher:/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake /home/paulo/edromufu/src/behaviour/modularized_bhv_msgs -DCMAKE_INSTALL_PREFIX=/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs
+[1.003s] -- The C compiler identification is GNU 11.4.0
+[1.003s] -- The CXX compiler identification is GNU 11.4.0
+[1.004s] -- Detecting C compiler ABI info
+[1.004s] -- Detecting C compiler ABI info - done
+[1.004s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.004s] -- Detecting C compile features
+[1.004s] -- Detecting C compile features - done
+[1.004s] -- Detecting CXX compiler ABI info
+[1.004s] -- Detecting CXX compiler ABI info - done
+[1.004s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.005s] -- Detecting CXX compile features
+[1.005s] -- Detecting CXX compile features - done
+[1.005s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[1.005s] -- Found ament_cmake_core: 1.3.10 (/opt/ros/humble/share/ament_cmake_core/cmake)
+[1.011s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.081s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.092s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.171s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.203s] -- Found std_msgs: 4.2.4 (/opt/ros/humble/share/std_msgs/cmake)
+[1.227s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.756s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[2.092s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.342s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.362s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[2.364s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[2.391s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[2.392s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.392s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[2.392s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[2.408s] -- Found PythonExtra: .so  
+[2.447s] -- Added test 'lint_cmake' to check CMake code style
+[2.447s] -- Added test 'xmllint' to check XML markup files
+[2.450s] -- Configuring done
+[2.469s] -- Generating done
+[2.471s] -- Build files have been written to: /home/paulo/edromufu/src/behaviour/build/modularized_bhv_msgs
+[2.475s] Invoked command in '/home/paulo/edromufu/src/behaviour/build/modularized_bhv_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions:/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher:/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake /home/paulo/edromufu/src/behaviour/modularized_bhv_msgs -DCMAKE_INSTALL_PREFIX=/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs
+[2.477s] Invoking command in '/home/paulo/edromufu/src/behaviour/build/modularized_bhv_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions:/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher:/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --build /home/paulo/edromufu/src/behaviour/build/modularized_bhv_msgs -- -j12 -l12
+[2.513s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[2.525s] [  3%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[2.530s] [  3%] Built target ament_cmake_python_copy_modularized_bhv_msgs
+[2.739s] running egg_info
+[2.740s] creating modularized_bhv_msgs.egg-info
+[2.740s] writing modularized_bhv_msgs.egg-info/PKG-INFO
+[2.740s] writing dependency_links to modularized_bhv_msgs.egg-info/dependency_links.txt
+[2.740s] writing top-level names to modularized_bhv_msgs.egg-info/top_level.txt
+[2.740s] writing manifest file 'modularized_bhv_msgs.egg-info/SOURCES.txt'
+[2.742s] reading manifest file 'modularized_bhv_msgs.egg-info/SOURCES.txt'
+[2.742s] writing manifest file 'modularized_bhv_msgs.egg-info/SOURCES.txt'
+[2.764s] [  3%] Built target ament_cmake_python_build_modularized_bhv_msgs_egg
+[2.980s] [  7%] [32mBuilding C object CMakeFiles/modularized_bhv_msgs__rosidl_generator_c.dir/rosidl_generator_c/modularized_bhv_msgs/srv/detail/move_request__functions.c.o[0m
+[2.980s] [  7%] [32mBuilding C object CMakeFiles/modularized_bhv_msgs__rosidl_generator_c.dir/rosidl_generator_c/modularized_bhv_msgs/msg/detail/state_machine_msg__functions.c.o[0m
+[2.980s] [  9%] [32mBuilding C object CMakeFiles/modularized_bhv_msgs__rosidl_generator_c.dir/rosidl_generator_c/modularized_bhv_msgs/msg/detail/current_state_msg__functions.c.o[0m
+[2.981s] [ 10%] [32mBuilding C object CMakeFiles/modularized_bhv_msgs__rosidl_generator_c.dir/rosidl_generator_c/modularized_bhv_msgs/msg/detail/game_controller_msg__functions.c.o[0m
+[2.986s] [ 10%] Built target modularized_bhv_msgs__cpp
+[2.997s] [ 12%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[3.000s] [ 14%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[3.000s] [ 16%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[3.061s] [ 18%] [32m[1mLinking C shared library libmodularized_bhv_msgs__rosidl_generator_c.so[0m
+[3.114s] [ 18%] Built target modularized_bhv_msgs__rosidl_generator_c
+[3.128s] [ 20%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[3.129s] [ 23%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[3.130s] [ 23%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[3.469s] [ 27%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/modularized_bhv_msgs/msg/state_machine_msg__type_support.cpp.o[0m
+[3.469s] [ 27%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/modularized_bhv_msgs/msg/game_controller_msg__type_support.cpp.o[0m
+[3.469s] [ 29%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/modularized_bhv_msgs/srv/move_request__type_support.cpp.o[0m
+[3.469s] [ 30%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/modularized_bhv_msgs/msg/current_state_msg__type_support.cpp.o[0m
+[3.522s] [ 34%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/modularized_bhv_msgs/msg/detail/current_state_msg__type_support.cpp.o[0m
+[3.526s] [ 32%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/modularized_bhv_msgs/msg/detail/game_controller_msg__type_support.cpp.o[0m
+[3.527s] [ 36%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/modularized_bhv_msgs/msg/detail/state_machine_msg__type_support.cpp.o[0m
+[3.529s] [ 38%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/modularized_bhv_msgs/srv/detail/move_request__type_support.cpp.o[0m
+[3.683s] [ 40%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/modularized_bhv_msgs/msg/detail/dds_fastrtps/current_state_msg__type_support.cpp.o[0m
+[3.809s] [ 41%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/modularized_bhv_msgs/msg/current_state_msg__type_support.cpp.o[0m
+[3.867s] [ 43%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/modularized_bhv_msgs/msg/game_controller_msg__type_support.cpp.o[0m
+[3.884s] [ 45%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/modularized_bhv_msgs/msg/detail/dds_fastrtps/game_controller_msg__type_support.cpp.o[0m
+[3.896s] [ 47%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/modularized_bhv_msgs/msg/state_machine_msg__type_support.cpp.o[0m
+[3.922s] [ 49%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/modularized_bhv_msgs/msg/detail/dds_fastrtps/state_machine_msg__type_support.cpp.o[0m
+[3.958s] [ 50%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/modularized_bhv_msgs/srv/move_request__type_support.cpp.o[0m
+[4.022s] [ 52%] [32m[1mLinking CXX shared library libmodularized_bhv_msgs__rosidl_typesupport_cpp.so[0m
+[4.032s] [ 54%] [32m[1mLinking CXX shared library libmodularized_bhv_msgs__rosidl_typesupport_c.so[0m
+[4.033s] [ 56%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/modularized_bhv_msgs/srv/detail/dds_fastrtps/move_request__type_support.cpp.o[0m
+[4.112s] [ 56%] Built target modularized_bhv_msgs__rosidl_typesupport_cpp
+[4.125s] [ 56%] Built target modularized_bhv_msgs__rosidl_typesupport_c
+[4.137s] [ 58%] [32mBuilding C object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/modularized_bhv_msgs/msg/detail/current_state_msg__type_support.c.o[0m
+[4.158s] [ 60%] [32mBuilding C object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/modularized_bhv_msgs/msg/detail/game_controller_msg__type_support.c.o[0m
+[4.158s] [ 61%] [32mBuilding C object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/modularized_bhv_msgs/msg/detail/state_machine_msg__type_support.c.o[0m
+[4.172s] [ 63%] [32mBuilding C object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/modularized_bhv_msgs/srv/detail/move_request__type_support.c.o[0m
+[4.192s] [ 65%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/modularized_bhv_msgs/msg/detail/current_state_msg__type_support_c.cpp.o[0m
+[4.215s] [ 69%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/modularized_bhv_msgs/msg/detail/game_controller_msg__type_support_c.cpp.o[0m
+[4.216s] [ 69%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/modularized_bhv_msgs/msg/detail/state_machine_msg__type_support_c.cpp.o[0m
+[4.233s] [ 70%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/modularized_bhv_msgs/srv/detail/move_request__type_support_c.cpp.o[0m
+[4.264s] [ 72%] [32m[1mLinking C shared library libmodularized_bhv_msgs__rosidl_typesupport_introspection_c.so[0m
+[4.317s] [ 72%] Built target modularized_bhv_msgs__rosidl_typesupport_introspection_c
+[4.333s] [ 74%] [32m[1mLinking CXX shared library libmodularized_bhv_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[4.421s] [ 74%] Built target modularized_bhv_msgs__rosidl_typesupport_introspection_cpp
+[4.571s] [ 76%] [32m[1mLinking CXX shared library libmodularized_bhv_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[4.658s] [ 76%] Built target modularized_bhv_msgs__rosidl_typesupport_fastrtps_cpp
+[4.719s] [ 78%] [32m[1mLinking CXX shared library libmodularized_bhv_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[4.771s] [ 78%] Built target modularized_bhv_msgs__rosidl_typesupport_fastrtps_c
+[4.789s] [ 78%] Built target modularized_bhv_msgs
+[4.806s] [ 80%] [34m[1mGenerating Python code for ROS interfaces[0m
+[5.418s] [ 80%] Built target modularized_bhv_msgs__py
+[5.435s] [ 85%] [32mBuilding C object CMakeFiles/modularized_bhv_msgs__rosidl_generator_py.dir/rosidl_generator_py/modularized_bhv_msgs/srv/_move_request_s.c.o[0m
+[5.435s] [ 85%] [32mBuilding C object CMakeFiles/modularized_bhv_msgs__rosidl_generator_py.dir/rosidl_generator_py/modularized_bhv_msgs/msg/_game_controller_msg_s.c.o[0m
+[5.436s] [ 85%] [32mBuilding C object CMakeFiles/modularized_bhv_msgs__rosidl_generator_py.dir/rosidl_generator_py/modularized_bhv_msgs/msg/_current_state_msg_s.c.o[0m
+[5.438s] [ 87%] [32mBuilding C object CMakeFiles/modularized_bhv_msgs__rosidl_generator_py.dir/rosidl_generator_py/modularized_bhv_msgs/msg/_state_machine_msg_s.c.o[0m
+[5.558s] [ 89%] [32m[1mLinking C shared library rosidl_generator_py/modularized_bhv_msgs/libmodularized_bhv_msgs__rosidl_generator_py.so[0m
+[5.598s] [ 89%] Built target modularized_bhv_msgs__rosidl_generator_py
+[5.614s] [ 90%] [32mBuilding C object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/modularized_bhv_msgs/_modularized_bhv_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[5.615s] [ 92%] [32mBuilding C object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/modularized_bhv_msgs/_modularized_bhv_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[5.616s] [ 94%] [32mBuilding C object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/modularized_bhv_msgs/_modularized_bhv_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[5.695s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/modularized_bhv_msgs/modularized_bhv_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[5.697s] [ 98%] [32m[1mLinking C shared library rosidl_generator_py/modularized_bhv_msgs/modularized_bhv_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[5.697s] [100%] [32m[1mLinking C shared library rosidl_generator_py/modularized_bhv_msgs/modularized_bhv_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[5.727s] [100%] Built target modularized_bhv_msgs__rosidl_typesupport_introspection_c__pyext
+[5.729s] [100%] Built target modularized_bhv_msgs__rosidl_typesupport_fastrtps_c__pyext
+[5.729s] [100%] Built target modularized_bhv_msgs__rosidl_typesupport_c__pyext
+[5.738s] Invoked command in '/home/paulo/edromufu/src/behaviour/build/modularized_bhv_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions:/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher:/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --build /home/paulo/edromufu/src/behaviour/build/modularized_bhv_msgs -- -j12 -l12
+[5.845s] Invoking command in '/home/paulo/edromufu/src/behaviour/build/modularized_bhv_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions:/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher:/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --install /home/paulo/edromufu/src/behaviour/build/modularized_bhv_msgs
+[5.855s] -- Install configuration: ""
+[5.855s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/ament_index/resource_index/rosidl_interfaces/modularized_bhv_msgs
+[5.855s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs
+[5.855s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg
+[5.855s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/current_state_msg.h
+[5.855s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/game_controller_msg.h
+[5.855s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/rosidl_generator_c__visibility_control.h
+[5.855s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail
+[5.855s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/game_controller_msg__functions.c
+[5.856s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/game_controller_msg__type_support.h
+[5.856s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/state_machine_msg__functions.h
+[5.856s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/current_state_msg__struct.h
+[5.856s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/game_controller_msg__struct.h
+[5.856s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/game_controller_msg__functions.h
+[5.856s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/current_state_msg__type_support.h
+[5.856s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/current_state_msg__functions.c
+[5.856s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/state_machine_msg__type_support.h
+[5.856s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/state_machine_msg__functions.c
+[5.856s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/state_machine_msg__struct.h
+[5.856s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/current_state_msg__functions.h
+[5.856s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/state_machine_msg.h
+[5.857s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv
+[5.857s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/move_request.h
+[5.857s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail
+[5.857s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail/move_request__functions.c
+[5.857s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail/move_request__struct.h
+[5.857s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail/move_request__type_support.h
+[5.857s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail/move_request__functions.h
+[5.857s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/environment/library_path.sh
+[5.857s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/environment/library_path.dsv
+[5.857s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/lib/libmodularized_bhv_msgs__rosidl_generator_c.so
+[5.857s] -- Set runtime path of "/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/lib/libmodularized_bhv_msgs__rosidl_generator_c.so" to ""
+[5.857s] -- Up-to-date: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs
+[5.857s] -- Up-to-date: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg
+[5.857s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[5.857s] -- Up-to-date: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail
+[5.857s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/current_state_msg__rosidl_typesupport_fastrtps_c.h
+[5.857s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/state_machine_msg__rosidl_typesupport_fastrtps_c.h
+[5.857s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/game_controller_msg__rosidl_typesupport_fastrtps_c.h
+[5.858s] -- Up-to-date: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv
+[5.858s] -- Up-to-date: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail
+[5.858s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail/move_request__rosidl_typesupport_fastrtps_c.h
+[5.858s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/lib/libmodularized_bhv_msgs__rosidl_typesupport_fastrtps_c.so
+[5.858s] -- Set runtime path of "/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/lib/libmodularized_bhv_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[5.858s] -- Up-to-date: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs
+[5.858s] -- Up-to-date: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg
+[5.858s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[5.858s] -- Up-to-date: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail
+[5.858s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/current_state_msg__type_support.c
+[5.858s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/game_controller_msg__type_support.c
+[5.858s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/game_controller_msg__rosidl_typesupport_introspection_c.h
+[5.858s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/current_state_msg__rosidl_typesupport_introspection_c.h
+[5.858s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/state_machine_msg__rosidl_typesupport_introspection_c.h
+[5.858s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/state_machine_msg__type_support.c
+[5.858s] -- Up-to-date: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv
+[5.858s] -- Up-to-date: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail
+[5.858s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail/move_request__type_support.c
+[5.858s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail/move_request__rosidl_typesupport_introspection_c.h
+[5.858s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/lib/libmodularized_bhv_msgs__rosidl_typesupport_introspection_c.so
+[5.858s] -- Set runtime path of "/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/lib/libmodularized_bhv_msgs__rosidl_typesupport_introspection_c.so" to ""
+[5.859s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/lib/libmodularized_bhv_msgs__rosidl_typesupport_c.so
+[5.859s] -- Set runtime path of "/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/lib/libmodularized_bhv_msgs__rosidl_typesupport_c.so" to ""
+[5.859s] -- Up-to-date: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs
+[5.859s] -- Up-to-date: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg
+[5.859s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/state_machine_msg.hpp
+[5.859s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/game_controller_msg.hpp
+[5.859s] -- Up-to-date: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail
+[5.859s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/game_controller_msg__traits.hpp
+[5.859s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/current_state_msg__builder.hpp
+[5.859s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/current_state_msg__struct.hpp
+[5.859s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/state_machine_msg__builder.hpp
+[5.859s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/state_machine_msg__struct.hpp
+[5.859s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/game_controller_msg__struct.hpp
+[5.859s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/state_machine_msg__traits.hpp
+[5.859s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/current_state_msg__traits.hpp
+[5.859s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/game_controller_msg__builder.hpp
+[5.860s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/current_state_msg.hpp
+[5.860s] -- Up-to-date: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv
+[5.860s] -- Up-to-date: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail
+[5.860s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail/move_request__struct.hpp
+[5.860s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail/move_request__builder.hpp
+[5.860s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail/move_request__traits.hpp
+[5.860s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/move_request.hpp
+[5.860s] -- Up-to-date: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs
+[5.860s] -- Up-to-date: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg
+[5.860s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[5.860s] -- Up-to-date: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail
+[5.860s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/dds_fastrtps
+[5.860s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/game_controller_msg__rosidl_typesupport_fastrtps_cpp.hpp
+[5.860s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/current_state_msg__rosidl_typesupport_fastrtps_cpp.hpp
+[5.860s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/state_machine_msg__rosidl_typesupport_fastrtps_cpp.hpp
+[5.860s] -- Up-to-date: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv
+[5.860s] -- Up-to-date: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail
+[5.860s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail/dds_fastrtps
+[5.860s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail/move_request__rosidl_typesupport_fastrtps_cpp.hpp
+[5.860s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/lib/libmodularized_bhv_msgs__rosidl_typesupport_fastrtps_cpp.so
+[5.860s] -- Set runtime path of "/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/lib/libmodularized_bhv_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[5.861s] -- Up-to-date: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs
+[5.861s] -- Up-to-date: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg
+[5.861s] -- Up-to-date: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail
+[5.861s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/state_machine_msg__type_support.cpp
+[5.861s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/game_controller_msg__rosidl_typesupport_introspection_cpp.hpp
+[5.861s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/current_state_msg__rosidl_typesupport_introspection_cpp.hpp
+[5.861s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/state_machine_msg__rosidl_typesupport_introspection_cpp.hpp
+[5.861s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/current_state_msg__type_support.cpp
+[5.861s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/game_controller_msg__type_support.cpp
+[5.861s] -- Up-to-date: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv
+[5.861s] -- Up-to-date: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail
+[5.861s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail/move_request__rosidl_typesupport_introspection_cpp.hpp
+[5.861s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail/move_request__type_support.cpp
+[5.861s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/lib/libmodularized_bhv_msgs__rosidl_typesupport_introspection_cpp.so
+[5.861s] -- Set runtime path of "/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/lib/libmodularized_bhv_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[5.861s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/lib/libmodularized_bhv_msgs__rosidl_typesupport_cpp.so
+[5.861s] -- Set runtime path of "/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/lib/libmodularized_bhv_msgs__rosidl_typesupport_cpp.so" to ""
+[5.861s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/environment/pythonpath.sh
+[5.862s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/environment/pythonpath.dsv
+[5.862s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs-0.0.0-py3.10.egg-info
+[5.862s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs-0.0.0-py3.10.egg-info/top_level.txt
+[5.862s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs-0.0.0-py3.10.egg-info/PKG-INFO
+[5.862s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs-0.0.0-py3.10.egg-info/SOURCES.txt
+[5.862s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs-0.0.0-py3.10.egg-info/dependency_links.txt
+[5.862s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs
+[5.862s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/__init__.py
+[5.862s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/msg
+[5.862s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/msg/__init__.py
+[5.862s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/msg/_state_machine_msg.py
+[5.862s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/msg/_state_machine_msg_s.c
+[5.862s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/msg/_current_state_msg_s.c
+[5.862s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/msg/_game_controller_msg.py
+[5.862s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/msg/_game_controller_msg_s.c
+[5.862s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/msg/_current_state_msg.py
+[5.862s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/libmodularized_bhv_msgs__rosidl_generator_py.so
+[5.862s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/modularized_bhv_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[5.862s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/modularized_bhv_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[5.862s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/srv
+[5.862s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/srv/__init__.py
+[5.863s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/srv/_move_request.py
+[5.863s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/srv/_move_request_s.c
+[5.863s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/_modularized_bhv_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[5.863s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/_modularized_bhv_msgs_s.ep.rosidl_typesupport_c.c
+[5.863s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/_modularized_bhv_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[5.863s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/modularized_bhv_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[5.891s] Listing '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs'...
+[5.891s] Compiling '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/__init__.py'...
+[5.891s] Listing '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/msg'...
+[5.891s] Compiling '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/msg/__init__.py'...
+[5.891s] Compiling '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/msg/_current_state_msg.py'...
+[5.891s] Compiling '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/msg/_game_controller_msg.py'...
+[5.891s] Compiling '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/msg/_state_machine_msg.py'...
+[5.891s] Listing '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/srv'...
+[5.891s] Compiling '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/srv/__init__.py'...
+[5.891s] Compiling '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/srv/_move_request.py'...
+[5.894s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/modularized_bhv_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[5.895s] -- Set runtime path of "/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/modularized_bhv_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[5.895s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/modularized_bhv_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[5.895s] -- Set runtime path of "/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/modularized_bhv_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[5.895s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/modularized_bhv_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[5.895s] -- Set runtime path of "/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/local/lib/python3.10/dist-packages/modularized_bhv_msgs/modularized_bhv_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[5.895s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/lib/libmodularized_bhv_msgs__rosidl_generator_py.so
+[5.895s] -- Set runtime path of "/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/lib/libmodularized_bhv_msgs__rosidl_generator_py.so" to ""
+[5.895s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/msg/CurrentStateMsg.idl
+[5.895s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/msg/GameControllerMsg.idl
+[5.895s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/msg/StateMachineMsg.idl
+[5.895s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/srv/MoveRequest.idl
+[5.895s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/msg/CurrentStateMsg.msg
+[5.895s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/msg/GameControllerMsg.msg
+[5.895s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/msg/StateMachineMsg.msg
+[5.895s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/srv/MoveRequest.srv
+[5.896s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/srv/MoveRequest_Request.msg
+[5.896s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/srv/MoveRequest_Response.msg
+[5.896s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/ament_index/resource_index/package_run_dependencies/modularized_bhv_msgs
+[5.896s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/ament_index/resource_index/parent_prefix_path/modularized_bhv_msgs
+[5.896s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/environment/ament_prefix_path.sh
+[5.896s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/environment/ament_prefix_path.dsv
+[5.896s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/environment/path.sh
+[5.896s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/environment/path.dsv
+[5.896s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/local_setup.bash
+[5.896s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/local_setup.sh
+[5.896s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/local_setup.zsh
+[5.896s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/local_setup.dsv
+[5.896s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/package.dsv
+[5.896s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/ament_index/resource_index/packages/modularized_bhv_msgs
+[5.896s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/export_modularized_bhv_msgs__rosidl_generator_cExport.cmake
+[5.896s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/export_modularized_bhv_msgs__rosidl_generator_cExport-noconfig.cmake
+[5.896s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/export_modularized_bhv_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[5.896s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/export_modularized_bhv_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[5.896s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/modularized_bhv_msgs__rosidl_typesupport_introspection_cExport.cmake
+[5.897s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/modularized_bhv_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[5.897s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/modularized_bhv_msgs__rosidl_typesupport_cExport.cmake
+[5.897s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/modularized_bhv_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[5.897s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/export_modularized_bhv_msgs__rosidl_generator_cppExport.cmake
+[5.897s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/export_modularized_bhv_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[5.897s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/export_modularized_bhv_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[5.897s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/modularized_bhv_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[5.897s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/modularized_bhv_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[5.897s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/modularized_bhv_msgs__rosidl_typesupport_cppExport.cmake
+[5.897s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/modularized_bhv_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[5.897s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/export_modularized_bhv_msgs__rosidl_generator_pyExport.cmake
+[5.897s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/export_modularized_bhv_msgs__rosidl_generator_pyExport-noconfig.cmake
+[5.897s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/rosidl_cmake-extras.cmake
+[5.897s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[5.897s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[5.897s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[5.897s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[5.897s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[5.898s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[5.898s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/modularized_bhv_msgsConfig.cmake
+[5.898s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/modularized_bhv_msgsConfig-version.cmake
+[5.898s] -- Installing: /home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/package.xml
+[5.900s] Invoked command in '/home/paulo/edromufu/src/behaviour/build/modularized_bhv_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions:/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher:/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --install /home/paulo/edromufu/src/behaviour/build/modularized_bhv_msgs

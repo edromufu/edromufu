@@ -1,0 +1,8 @@
+setup.py
+potmessage/__init__.py
+potmessage.egg-info/PKG-INFO
+potmessage.egg-info/SOURCES.txt
+potmessage.egg-info/dependency_links.txt
+potmessage.egg-info/top_level.txt
+potmessage/msg/__init__.py
+potmessage/msg/_potmsg.py

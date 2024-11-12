@@ -1,0 +1,194 @@
+[0.600s] Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/build/potmessage': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --build /home/paulo/edromufu/src/movement/Ros2_change/build/potmessage -- -j12 -l12
+[0.706s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.151s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.564s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[1.577s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.581s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.645s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.094s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[2.340s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.685s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.738s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[2.766s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.766s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[2.766s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[2.790s] -- Added test 'lint_cmake' to check CMake code style
+[2.791s] -- Added test 'xmllint' to check XML markup files
+[2.810s] -- Configuring done
+[2.843s] -- Generating done
+[2.845s] -- Build files have been written to: /home/paulo/edromufu/src/movement/Ros2_change/build/potmessage
+[2.877s] [35m[1mConsolidate compiler generated dependencies of target potmessage__rosidl_generator_c[0m
+[2.888s] [  3%] Built target potmessage__cpp
+[2.895s] [ 12%] Built target potmessage__rosidl_generator_c
+[2.900s] [ 12%] Built target ament_cmake_python_copy_potmessage
+[2.902s] [35m[1mConsolidate compiler generated dependencies of target potmessage__rosidl_typesupport_introspection_cpp[0m
+[2.902s] [35m[1mConsolidate compiler generated dependencies of target potmessage__rosidl_typesupport_fastrtps_cpp[0m
+[2.906s] [35m[1mConsolidate compiler generated dependencies of target potmessage__rosidl_typesupport_cpp[0m
+[2.907s] [35m[1mConsolidate compiler generated dependencies of target potmessage__rosidl_typesupport_introspection_c[0m
+[2.908s] [35m[1mConsolidate compiler generated dependencies of target potmessage__rosidl_typesupport_fastrtps_c[0m
+[2.908s] [35m[1mConsolidate compiler generated dependencies of target potmessage__rosidl_typesupport_c[0m
+[2.926s] [ 16%] [32mBuilding CXX object CMakeFiles/potmessage__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/potmessage/msg/detail/potmsg__type_support.cpp.o[0m
+[2.926s] [ 25%] Built target potmessage__rosidl_typesupport_introspection_c
+[2.927s] [ 35%] Built target potmessage__rosidl_typesupport_c
+[2.927s] [ 38%] [32mBuilding CXX object CMakeFiles/potmessage__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/potmessage/msg/detail/potmsg__type_support_c.cpp.o[0m
+[2.929s] [ 41%] [32mBuilding CXX object CMakeFiles/potmessage__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/potmessage/msg/potmsg__type_support.cpp.o[0m
+[2.932s] [ 45%] [32mBuilding CXX object CMakeFiles/potmessage__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/potmessage/msg/detail/dds_fastrtps/potmsg__type_support.cpp.o[0m
+[3.489s] running egg_info
+[3.490s] writing potmessage.egg-info/PKG-INFO
+[3.490s] writing dependency_links to potmessage.egg-info/dependency_links.txt
+[3.490s] writing top-level names to potmessage.egg-info/top_level.txt
+[3.503s] reading manifest file 'potmessage.egg-info/SOURCES.txt'
+[3.508s] writing manifest file 'potmessage.egg-info/SOURCES.txt'
+[3.612s] [ 48%] [32m[1mLinking CXX shared library libpotmessage__rosidl_typesupport_cpp.so[0m
+[3.650s] [ 48%] Built target ament_cmake_python_build_potmessage_egg
+[3.750s] [ 51%] Built target potmessage__rosidl_typesupport_cpp
+[3.915s] [ 54%] [32m[1mLinking CXX shared library libpotmessage__rosidl_typesupport_fastrtps_c.so[0m
+[4.012s] [ 58%] [32m[1mLinking CXX shared library libpotmessage__rosidl_typesupport_introspection_cpp.so[0m
+[4.212s] [ 61%] Built target potmessage__rosidl_typesupport_introspection_cpp
+[4.218s] [ 64%] [32m[1mLinking CXX shared library libpotmessage__rosidl_typesupport_fastrtps_cpp.so[0m
+[4.231s] [ 67%] Built target potmessage__rosidl_typesupport_fastrtps_c
+[4.517s] [ 70%] Built target potmessage__rosidl_typesupport_fastrtps_cpp
+[4.587s] [ 70%] Built target potmessage
+[4.656s] [ 74%] Built target potmessage__py
+[4.695s] [35m[1mConsolidate compiler generated dependencies of target potmessage__rosidl_generator_py[0m
+[4.741s] [ 80%] Built target potmessage__rosidl_generator_py
+[4.774s] [35m[1mConsolidate compiler generated dependencies of target potmessage__rosidl_typesupport_introspection_c__pyext[0m
+[4.778s] [35m[1mConsolidate compiler generated dependencies of target potmessage__rosidl_typesupport_c__pyext[0m
+[4.781s] [35m[1mConsolidate compiler generated dependencies of target potmessage__rosidl_typesupport_fastrtps_c__pyext[0m
+[4.826s] [ 87%] Built target potmessage__rosidl_typesupport_c__pyext
+[4.827s] [ 93%] Built target potmessage__rosidl_typesupport_introspection_c__pyext
+[4.849s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/potmessage/potmessage_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.976s] [100%] Built target potmessage__rosidl_typesupport_fastrtps_c__pyext
+[5.028s] Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/build/potmessage' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --build /home/paulo/edromufu/src/movement/Ros2_change/build/potmessage -- -j12 -l12
+[5.326s] Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/build/potmessage': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --install /home/paulo/edromufu/src/movement/Ros2_change/build/potmessage
+[5.356s] -- Install configuration: ""
+[5.356s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/ament_index/resource_index/rosidl_interfaces/potmessage
+[5.356s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage
+[5.357s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage/msg
+[5.357s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage/msg/potmsg.h
+[5.357s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage/msg/rosidl_generator_c__visibility_control.h
+[5.357s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage/msg/detail
+[5.358s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage/msg/detail/potmsg__struct.h
+[5.358s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage/msg/detail/potmsg__type_support.h
+[5.358s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage/msg/detail/potmsg__functions.c
+[5.359s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage/msg/detail/potmsg__functions.h
+[5.359s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/environment/library_path.sh
+[5.360s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/environment/library_path.dsv
+[5.360s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/lib/libpotmessage__rosidl_generator_c.so
+[5.365s] -- Set runtime path of "/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/lib/libpotmessage__rosidl_generator_c.so" to ""
+[5.366s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage
+[5.366s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage/msg
+[5.366s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[5.366s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage/msg/detail
+[5.366s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage/msg/detail/potmsg__rosidl_typesupport_fastrtps_c.h
+[5.366s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/lib/libpotmessage__rosidl_typesupport_fastrtps_c.so
+[5.367s] -- Set runtime path of "/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/lib/libpotmessage__rosidl_typesupport_fastrtps_c.so" to ""
+[5.368s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage
+[5.368s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage/msg
+[5.369s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[5.369s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage/msg/detail
+[5.370s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage/msg/detail/potmsg__type_support.c
+[5.373s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage/msg/detail/potmsg__rosidl_typesupport_introspection_c.h
+[5.373s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/lib/libpotmessage__rosidl_typesupport_introspection_c.so
+[5.379s] -- Set runtime path of "/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/lib/libpotmessage__rosidl_typesupport_introspection_c.so" to ""
+[5.379s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/lib/libpotmessage__rosidl_typesupport_c.so
+[5.380s] -- Set runtime path of "/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/lib/libpotmessage__rosidl_typesupport_c.so" to ""
+[5.380s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage
+[5.380s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage/msg
+[5.380s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage/msg/potmsg.hpp
+[5.380s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage/msg/detail
+[5.380s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage/msg/detail/potmsg__builder.hpp
+[5.380s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage/msg/detail/potmsg__traits.hpp
+[5.380s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage/msg/detail/potmsg__struct.hpp
+[5.380s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage
+[5.381s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage/msg
+[5.381s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[5.387s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage/msg/detail
+[5.387s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage/msg/detail/dds_fastrtps
+[5.387s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage/msg/detail/potmsg__rosidl_typesupport_fastrtps_cpp.hpp
+[5.387s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/lib/libpotmessage__rosidl_typesupport_fastrtps_cpp.so
+[5.388s] -- Set runtime path of "/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/lib/libpotmessage__rosidl_typesupport_fastrtps_cpp.so" to ""
+[5.388s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage
+[5.388s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage/msg
+[5.388s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage/msg/detail
+[5.390s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage/msg/detail/potmsg__type_support.cpp
+[5.391s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/include/potmessage/potmessage/msg/detail/potmsg__rosidl_typesupport_introspection_cpp.hpp
+[5.391s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/lib/libpotmessage__rosidl_typesupport_introspection_cpp.so
+[5.391s] -- Set runtime path of "/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/lib/libpotmessage__rosidl_typesupport_introspection_cpp.so" to ""
+[5.391s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/lib/libpotmessage__rosidl_typesupport_cpp.so
+[5.391s] -- Set runtime path of "/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/lib/libpotmessage__rosidl_typesupport_cpp.so" to ""
+[5.392s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/environment/pythonpath.sh
+[5.392s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/environment/pythonpath.dsv
+[5.393s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/local/lib/python3.10/dist-packages/potmessage-0.0.0-py3.10.egg-info
+[5.393s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/local/lib/python3.10/dist-packages/potmessage-0.0.0-py3.10.egg-info/top_level.txt
+[5.393s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/local/lib/python3.10/dist-packages/potmessage-0.0.0-py3.10.egg-info/PKG-INFO
+[5.393s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/local/lib/python3.10/dist-packages/potmessage-0.0.0-py3.10.egg-info/SOURCES.txt
+[5.402s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/local/lib/python3.10/dist-packages/potmessage-0.0.0-py3.10.egg-info/dependency_links.txt
+[5.402s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/local/lib/python3.10/dist-packages/potmessage
+[5.402s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/local/lib/python3.10/dist-packages/potmessage/__init__.py
+[5.402s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/local/lib/python3.10/dist-packages/potmessage/potmessage_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[5.402s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/local/lib/python3.10/dist-packages/potmessage/msg
+[5.402s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/local/lib/python3.10/dist-packages/potmessage/msg/__init__.py
+[5.402s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/local/lib/python3.10/dist-packages/potmessage/msg/_potmsg_s.c
+[5.402s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/local/lib/python3.10/dist-packages/potmessage/msg/_potmsg.py
+[5.402s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/local/lib/python3.10/dist-packages/potmessage/libpotmessage__rosidl_generator_py.so
+[5.402s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/local/lib/python3.10/dist-packages/potmessage/_potmessage_s.ep.rosidl_typesupport_introspection_c.c
+[5.403s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/local/lib/python3.10/dist-packages/potmessage/_potmessage_s.ep.rosidl_typesupport_c.c
+[5.403s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/local/lib/python3.10/dist-packages/potmessage/potmessage_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[5.403s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/local/lib/python3.10/dist-packages/potmessage/_potmessage_s.ep.rosidl_typesupport_fastrtps_c.c
+[5.403s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/local/lib/python3.10/dist-packages/potmessage/potmessage_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[5.527s] Listing '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/local/lib/python3.10/dist-packages/potmessage'...
+[5.527s] Compiling '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/local/lib/python3.10/dist-packages/potmessage/__init__.py'...
+[5.527s] Listing '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/local/lib/python3.10/dist-packages/potmessage/msg'...
+[5.527s] Compiling '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/local/lib/python3.10/dist-packages/potmessage/msg/__init__.py'...
+[5.528s] Compiling '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/local/lib/python3.10/dist-packages/potmessage/msg/_potmsg.py'...
+[5.543s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/local/lib/python3.10/dist-packages/potmessage/potmessage_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[5.546s] -- Set runtime path of "/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/local/lib/python3.10/dist-packages/potmessage/potmessage_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[5.548s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/local/lib/python3.10/dist-packages/potmessage/potmessage_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[5.550s] -- Set runtime path of "/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/local/lib/python3.10/dist-packages/potmessage/potmessage_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[5.552s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/local/lib/python3.10/dist-packages/potmessage/potmessage_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[5.555s] -- Set runtime path of "/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/local/lib/python3.10/dist-packages/potmessage/potmessage_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[5.556s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/lib/libpotmessage__rosidl_generator_py.so
+[5.557s] -- Set runtime path of "/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/lib/libpotmessage__rosidl_generator_py.so" to ""
+[5.557s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/msg/Potmsg.idl
+[5.562s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/msg/Potmsg.msg
+[5.562s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/ament_index/resource_index/package_run_dependencies/potmessage
+[5.563s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/ament_index/resource_index/parent_prefix_path/potmessage
+[5.564s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/environment/ament_prefix_path.sh
+[5.569s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/environment/ament_prefix_path.dsv
+[5.569s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/environment/path.sh
+[5.570s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/environment/path.dsv
+[5.570s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/local_setup.bash
+[5.570s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/local_setup.sh
+[5.571s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/local_setup.zsh
+[5.571s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/local_setup.dsv
+[5.584s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/package.dsv
+[5.584s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/ament_index/resource_index/packages/potmessage
+[5.584s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/cmake/export_potmessage__rosidl_generator_cExport.cmake
+[5.584s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/cmake/export_potmessage__rosidl_generator_cExport-noconfig.cmake
+[5.584s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/cmake/export_potmessage__rosidl_typesupport_fastrtps_cExport.cmake
+[5.584s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/cmake/export_potmessage__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[5.584s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/cmake/potmessage__rosidl_typesupport_introspection_cExport.cmake
+[5.585s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/cmake/potmessage__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[5.585s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/cmake/potmessage__rosidl_typesupport_cExport.cmake
+[5.585s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/cmake/potmessage__rosidl_typesupport_cExport-noconfig.cmake
+[5.585s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/cmake/export_potmessage__rosidl_generator_cppExport.cmake
+[5.585s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/cmake/export_potmessage__rosidl_typesupport_fastrtps_cppExport.cmake
+[5.585s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/cmake/export_potmessage__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[5.590s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/cmake/potmessage__rosidl_typesupport_introspection_cppExport.cmake
+[5.590s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/cmake/potmessage__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[5.590s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/cmake/potmessage__rosidl_typesupport_cppExport.cmake
+[5.592s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/cmake/potmessage__rosidl_typesupport_cppExport-noconfig.cmake
+[5.593s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/cmake/export_potmessage__rosidl_generator_pyExport.cmake
+[5.593s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/cmake/export_potmessage__rosidl_generator_pyExport-noconfig.cmake
+[5.593s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/cmake/rosidl_cmake-extras.cmake
+[5.593s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/cmake/ament_cmake_export_include_directories-extras.cmake
+[5.593s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/cmake/ament_cmake_export_libraries-extras.cmake
+[5.593s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/cmake/ament_cmake_export_targets-extras.cmake
+[5.593s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[5.593s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/cmake/ament_cmake_export_dependencies-extras.cmake
+[5.594s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[5.594s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/cmake/potmessageConfig.cmake
+[5.594s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/cmake/potmessageConfig-version.cmake
+[5.594s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/package.xml
+[5.617s] Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/build/potmessage' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --install /home/paulo/edromufu/src/movement/Ros2_change/build/potmessage

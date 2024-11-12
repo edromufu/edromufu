@@ -1,0 +1,50 @@
+[1.875s] Invoking command in '/home/paulo/edromufu/src/behaviour/sensor_observer': PYTHONPATH=/home/paulo/edromufu/src/behaviour/build/sensor_observer/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/behaviour/install/sensor_observer/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/sensor_observer build --build-base /home/paulo/edromufu/src/behaviour/build/sensor_observer/build install --record /home/paulo/edromufu/src/behaviour/build/sensor_observer/install.log --single-version-externally-managed install_data
+[2.144s] running egg_info
+[2.145s] creating ../build/sensor_observer/sensor_observer.egg-info
+[2.145s] writing ../build/sensor_observer/sensor_observer.egg-info/PKG-INFO
+[2.145s] writing dependency_links to ../build/sensor_observer/sensor_observer.egg-info/dependency_links.txt
+[2.145s] writing entry points to ../build/sensor_observer/sensor_observer.egg-info/entry_points.txt
+[2.145s] writing requirements to ../build/sensor_observer/sensor_observer.egg-info/requires.txt
+[2.145s] writing top-level names to ../build/sensor_observer/sensor_observer.egg-info/top_level.txt
+[2.145s] writing manifest file '../build/sensor_observer/sensor_observer.egg-info/SOURCES.txt'
+[2.147s] reading manifest file '../build/sensor_observer/sensor_observer.egg-info/SOURCES.txt'
+[2.147s] adding license file 'LICENSE'
+[2.147s] writing manifest file '../build/sensor_observer/sensor_observer.egg-info/SOURCES.txt'
+[2.147s] running build
+[2.147s] running build_py
+[2.148s] creating /home/paulo/edromufu/src/behaviour/build/sensor_observer/build
+[2.148s] creating /home/paulo/edromufu/src/behaviour/build/sensor_observer/build/lib
+[2.148s] creating /home/paulo/edromufu/src/behaviour/build/sensor_observer/build/lib/sensor_observer
+[2.148s] copying sensor_observer/__init__.py -> /home/paulo/edromufu/src/behaviour/build/sensor_observer/build/lib/sensor_observer
+[2.148s] copying sensor_observer/ros_packer.py -> /home/paulo/edromufu/src/behaviour/build/sensor_observer/build/lib/sensor_observer
+[2.150s] copying sensor_observer/neck_interpreter.py -> /home/paulo/edromufu/src/behaviour/build/sensor_observer/build/lib/sensor_observer
+[2.151s] copying sensor_observer/fall_interpreter.py -> /home/paulo/edromufu/src/behaviour/build/sensor_observer/build/lib/sensor_observer
+[2.151s] copying sensor_observer/ball_interpreter.py -> /home/paulo/edromufu/src/behaviour/build/sensor_observer/build/lib/sensor_observer
+[2.152s] running install
+[2.152s] running install_lib
+[2.152s] creating /home/paulo/edromufu/src/behaviour/install/sensor_observer/lib/python3.10/site-packages/sensor_observer
+[2.152s] copying /home/paulo/edromufu/src/behaviour/build/sensor_observer/build/lib/sensor_observer/__init__.py -> /home/paulo/edromufu/src/behaviour/install/sensor_observer/lib/python3.10/site-packages/sensor_observer
+[2.153s] copying /home/paulo/edromufu/src/behaviour/build/sensor_observer/build/lib/sensor_observer/ros_packer.py -> /home/paulo/edromufu/src/behaviour/install/sensor_observer/lib/python3.10/site-packages/sensor_observer
+[2.153s] copying /home/paulo/edromufu/src/behaviour/build/sensor_observer/build/lib/sensor_observer/neck_interpreter.py -> /home/paulo/edromufu/src/behaviour/install/sensor_observer/lib/python3.10/site-packages/sensor_observer
+[2.153s] copying /home/paulo/edromufu/src/behaviour/build/sensor_observer/build/lib/sensor_observer/fall_interpreter.py -> /home/paulo/edromufu/src/behaviour/install/sensor_observer/lib/python3.10/site-packages/sensor_observer
+[2.153s] copying /home/paulo/edromufu/src/behaviour/build/sensor_observer/build/lib/sensor_observer/ball_interpreter.py -> /home/paulo/edromufu/src/behaviour/install/sensor_observer/lib/python3.10/site-packages/sensor_observer
+[2.153s] byte-compiling /home/paulo/edromufu/src/behaviour/install/sensor_observer/lib/python3.10/site-packages/sensor_observer/__init__.py to __init__.cpython-310.pyc
+[2.153s] byte-compiling /home/paulo/edromufu/src/behaviour/install/sensor_observer/lib/python3.10/site-packages/sensor_observer/ros_packer.py to ros_packer.cpython-310.pyc
+[2.154s] byte-compiling /home/paulo/edromufu/src/behaviour/install/sensor_observer/lib/python3.10/site-packages/sensor_observer/neck_interpreter.py to neck_interpreter.cpython-310.pyc
+[2.154s] byte-compiling /home/paulo/edromufu/src/behaviour/install/sensor_observer/lib/python3.10/site-packages/sensor_observer/fall_interpreter.py to fall_interpreter.cpython-310.pyc
+[2.155s] byte-compiling /home/paulo/edromufu/src/behaviour/install/sensor_observer/lib/python3.10/site-packages/sensor_observer/ball_interpreter.py to ball_interpreter.cpython-310.pyc
+[2.155s] running install_data
+[2.155s] creating /home/paulo/edromufu/src/behaviour/install/sensor_observer/share/ament_index
+[2.155s] creating /home/paulo/edromufu/src/behaviour/install/sensor_observer/share/ament_index/resource_index
+[2.155s] creating /home/paulo/edromufu/src/behaviour/install/sensor_observer/share/ament_index/resource_index/packages
+[2.156s] copying resource/sensor_observer -> /home/paulo/edromufu/src/behaviour/install/sensor_observer/share/ament_index/resource_index/packages
+[2.156s] copying package.xml -> /home/paulo/edromufu/src/behaviour/install/sensor_observer/share/sensor_observer
+[2.156s] running install_egg_info
+[2.157s] Copying ../build/sensor_observer/sensor_observer.egg-info to /home/paulo/edromufu/src/behaviour/install/sensor_observer/lib/python3.10/site-packages/sensor_observer-0.0.0-py3.10.egg-info
+[2.157s] running install_scripts
+[2.175s] Installing ball_interpreter script to /home/paulo/edromufu/src/behaviour/install/sensor_observer/lib/sensor_observer
+[2.175s] Installing fall_interpreter script to /home/paulo/edromufu/src/behaviour/install/sensor_observer/lib/sensor_observer
+[2.175s] Installing neck_interpreter script to /home/paulo/edromufu/src/behaviour/install/sensor_observer/lib/sensor_observer
+[2.175s] Installing ros_packer script to /home/paulo/edromufu/src/behaviour/install/sensor_observer/lib/sensor_observer
+[2.175s] writing list of installed files to '/home/paulo/edromufu/src/behaviour/build/sensor_observer/install.log'
+[2.196s] Invoked command in '/home/paulo/edromufu/src/behaviour/sensor_observer' returned '0': PYTHONPATH=/home/paulo/edromufu/src/behaviour/build/sensor_observer/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/behaviour/install/sensor_observer/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/sensor_observer build --build-base /home/paulo/edromufu/src/behaviour/build/sensor_observer/build install --record /home/paulo/edromufu/src/behaviour/build/sensor_observer/install.log --single-version-externally-managed install_data

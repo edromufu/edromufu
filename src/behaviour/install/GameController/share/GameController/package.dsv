@@ -1,0 +1,6 @@
+source;share/GameController/hook/pythonpath.ps1
+source;share/GameController/hook/pythonpath.dsv
+source;share/GameController/hook/pythonpath.sh
+source;share/GameController/hook/ament_prefix_path.ps1
+source;share/GameController/hook/ament_prefix_path.dsv
+source;share/GameController/hook/ament_prefix_path.sh

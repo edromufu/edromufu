@@ -1,0 +1,39 @@
+[0.619s] Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/build/urdf_example': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --build /home/paulo/edromufu/src/movement/Ros2_change/build/urdf_example -- -j12 -l12
+[0.685s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.274s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.629s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.640s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.641s] -- Added test 'lint_cmake' to check CMake code style
+[1.641s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.650s] -- Added test 'xmllint' to check XML markup files
+[1.651s] -- Configuring done
+[1.665s] -- Generating done
+[1.678s] -- Build files have been written to: /home/paulo/edromufu/src/movement/Ros2_change/build/urdf_example
+[1.724s] Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/build/urdf_example' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --build /home/paulo/edromufu/src/movement/Ros2_change/build/urdf_example -- -j12 -l12
+[1.801s] Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/build/urdf_example': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --install /home/paulo/edromufu/src/movement/Ros2_change/build/urdf_example
+[1.813s] -- Install configuration: ""
+[1.813s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/description
+[1.815s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/description/example_include.xacro
+[1.815s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/description/example_robot.urdf.xacro
+[1.815s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/description/example_gazebo.xacro
+[1.815s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/launch
+[1.815s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/launch/rsp.launch.py
+[1.816s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/launch/rsp_sim.launch.py
+[1.818s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/worlds
+[1.819s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/worlds/test_world.world
+[1.820s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/ament_index/resource_index/package_run_dependencies/urdf_example
+[1.820s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/ament_index/resource_index/parent_prefix_path/urdf_example
+[1.820s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/environment/ament_prefix_path.sh
+[1.820s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/environment/ament_prefix_path.dsv
+[1.821s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/environment/path.sh
+[1.822s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/environment/path.dsv
+[1.822s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/local_setup.bash
+[1.822s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/local_setup.sh
+[1.822s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/local_setup.zsh
+[1.822s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/local_setup.dsv
+[1.822s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/package.dsv
+[1.823s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/ament_index/resource_index/packages/urdf_example
+[1.824s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/cmake/urdf_exampleConfig.cmake
+[1.824s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/cmake/urdf_exampleConfig-version.cmake
+[1.825s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/package.xml
+[1.838s] Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/build/urdf_example' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --install /home/paulo/edromufu/src/movement/Ros2_change/build/urdf_example

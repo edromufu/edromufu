@@ -1,0 +1,1100 @@
+[0.104s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.104s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x762a78746410>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x762a78745e40>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x762a78745e40>>)
+[0.264s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.265s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.265s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.265s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.265s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.265s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.265s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/paulo/edromufu/src/movement/Ros2_change'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_definition) by extensions ['ignore', 'ignore_ament_install']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_definition) by extension 'ignore'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_definition) by extension 'ignore_ament_install'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_definition) by extensions ['colcon_pkg']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_definition) by extension 'colcon_pkg'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_definition) by extensions ['colcon_meta']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_definition) by extension 'colcon_meta'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_definition) by extensions ['ros']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_definition) by extension 'ros'
+[0.291s] DEBUG:colcon.colcon_core.package_identification:Package 'src/humanoid_definition' with type 'ros.ament_python' and name 'humanoid_definition'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_visualization) by extensions ['ignore', 'ignore_ament_install']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_visualization) by extension 'ignore'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_visualization) by extension 'ignore_ament_install'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_visualization) by extensions ['colcon_pkg']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_visualization) by extension 'colcon_pkg'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_visualization) by extensions ['colcon_meta']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_visualization) by extension 'colcon_meta'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_visualization) by extensions ['ros']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/humanoid_visualization) by extension 'ros'
+[0.292s] DEBUG:colcon.colcon_core.package_identification:Package 'src/humanoid_visualization' with type 'ros.ament_cmake' and name 'humanoid_visualization'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematic_functions) by extensions ['ignore', 'ignore_ament_install']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematic_functions) by extension 'ignore'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematic_functions) by extension 'ignore_ament_install'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematic_functions) by extensions ['colcon_pkg']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematic_functions) by extension 'colcon_pkg'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematic_functions) by extensions ['colcon_meta']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematic_functions) by extension 'colcon_meta'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematic_functions) by extensions ['ros']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematic_functions) by extension 'ros'
+[0.293s] DEBUG:colcon.colcon_core.package_identification:Package 'src/kinematic_functions' with type 'ros.ament_python' and name 'kinematic_functions'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/matlab_codes) by extensions ['ignore', 'ignore_ament_install']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/matlab_codes) by extension 'ignore'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/matlab_codes) by extension 'ignore_ament_install'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/matlab_codes) by extensions ['colcon_pkg']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/matlab_codes) by extension 'colcon_pkg'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/matlab_codes) by extensions ['colcon_meta']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/matlab_codes) by extension 'colcon_meta'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/matlab_codes) by extensions ['ros']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/matlab_codes) by extension 'ros'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/matlab_codes) by extensions ['cmake', 'python']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/matlab_codes) by extension 'cmake'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/matlab_codes) by extension 'python'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/matlab_codes) by extensions ['python_setup_py']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/matlab_codes) by extension 'python_setup_py'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros) by extensions ['ignore', 'ignore_ament_install']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros) by extension 'ignore'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros) by extension 'ignore_ament_install'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros) by extensions ['colcon_pkg']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros) by extension 'colcon_pkg'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros) by extensions ['colcon_meta']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros) by extension 'colcon_meta'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros) by extensions ['ros']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros) by extension 'ros'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros) by extensions ['cmake', 'python']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros) by extension 'cmake'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros) by extension 'python'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros) by extensions ['python_setup_py']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros) by extension 'python_setup_py'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/Tinyxml2) by extensions ['ignore', 'ignore_ament_install']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/Tinyxml2) by extension 'ignore'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/Tinyxml2) by extension 'ignore_ament_install'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/Tinyxml2) by extensions ['colcon_pkg']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/Tinyxml2) by extension 'colcon_pkg'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/Tinyxml2) by extensions ['colcon_meta']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/Tinyxml2) by extension 'colcon_meta'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/Tinyxml2) by extensions ['ros']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/Tinyxml2) by extension 'ros'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/Tinyxml2) by extensions ['cmake', 'python']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/Tinyxml2) by extension 'cmake'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/Tinyxml2) by extension 'python'
+[0.296s] DEBUG:colcon.colcon_core.package_identification:Package 'src/micro_ros/Tinyxml2' with type 'cmake' and name 'tinyxml2'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/esp_code) by extensions ['ignore', 'ignore_ament_install']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/esp_code) by extension 'ignore'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/esp_code) by extension 'ignore_ament_install'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/esp_code) by extensions ['colcon_pkg']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/esp_code) by extension 'colcon_pkg'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/esp_code) by extensions ['colcon_meta']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/esp_code) by extension 'colcon_meta'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/esp_code) by extensions ['ros']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/esp_code) by extension 'ros'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/esp_code) by extensions ['cmake', 'python']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/esp_code) by extension 'cmake'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/esp_code) by extension 'python'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/esp_code) by extensions ['python_setup_py']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/esp_code) by extension 'python_setup_py'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/esp_code/micro_ros_pub_sub) by extensions ['ignore', 'ignore_ament_install']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/esp_code/micro_ros_pub_sub) by extension 'ignore'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/esp_code/micro_ros_pub_sub) by extension 'ignore_ament_install'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/esp_code/micro_ros_pub_sub) by extensions ['colcon_pkg']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/esp_code/micro_ros_pub_sub) by extension 'colcon_pkg'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/esp_code/micro_ros_pub_sub) by extensions ['colcon_meta']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/esp_code/micro_ros_pub_sub) by extension 'colcon_meta'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/esp_code/micro_ros_pub_sub) by extensions ['ros']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/esp_code/micro_ros_pub_sub) by extension 'ros'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/esp_code/micro_ros_pub_sub) by extensions ['cmake', 'python']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/esp_code/micro_ros_pub_sub) by extension 'cmake'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/esp_code/micro_ros_pub_sub) by extension 'python'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/esp_code/micro_ros_pub_sub) by extensions ['python_setup_py']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/esp_code/micro_ros_pub_sub) by extension 'python_setup_py'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/micro_publisher) by extensions ['ignore', 'ignore_ament_install']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/micro_publisher) by extension 'ignore'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/micro_publisher) by extension 'ignore_ament_install'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/micro_publisher) by extensions ['colcon_pkg']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/micro_publisher) by extension 'colcon_pkg'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/micro_publisher) by extensions ['colcon_meta']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/micro_publisher) by extension 'colcon_meta'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/micro_publisher) by extensions ['ros']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/micro_publisher) by extension 'ros'
+[0.298s] DEBUG:colcon.colcon_core.package_identification:Package 'src/micro_ros/micro_publisher' with type 'ros.ament_python' and name 'micro_publisher'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/micro_ros_setup) by extensions ['ignore', 'ignore_ament_install']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/micro_ros_setup) by extension 'ignore'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/micro_ros_setup) by extension 'ignore_ament_install'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/micro_ros_setup) by extensions ['colcon_pkg']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/micro_ros_setup) by extension 'colcon_pkg'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/micro_ros_setup) by extensions ['colcon_meta']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/micro_ros_setup) by extension 'colcon_meta'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/micro_ros_setup) by extensions ['ros']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/micro_ros_setup) by extension 'ros'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/micro_ros_setup) by extensions ['cmake', 'python']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/micro_ros_setup) by extension 'cmake'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/micro_ros_setup) by extension 'python'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/micro_ros_setup) by extensions ['python_setup_py']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/micro_ros_setup) by extension 'python_setup_py'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/potmessage) by extensions ['ignore', 'ignore_ament_install']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/potmessage) by extension 'ignore'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/potmessage) by extension 'ignore_ament_install'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/potmessage) by extensions ['colcon_pkg']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/potmessage) by extension 'colcon_pkg'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/potmessage) by extensions ['colcon_meta']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/potmessage) by extension 'colcon_meta'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/potmessage) by extensions ['ros']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/potmessage) by extension 'ros'
+[0.299s] DEBUG:colcon.colcon_core.package_identification:Package 'src/micro_ros/potmessage' with type 'ros.ament_cmake' and name 'potmessage'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros) by extensions ['ignore', 'ignore_ament_install']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros) by extension 'ignore'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros) by extension 'ignore_ament_install'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros) by extensions ['colcon_pkg']
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros) by extension 'colcon_pkg'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros) by extensions ['colcon_meta']
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros) by extension 'colcon_meta'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros) by extensions ['ros']
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros) by extension 'ros'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros) by extensions ['cmake', 'python']
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros) by extension 'cmake'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros) by extension 'python'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros) by extensions ['python_setup_py']
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros) by extension 'python_setup_py'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent) by extensions ['ignore', 'ignore_ament_install']
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent) by extension 'ignore'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent) by extension 'ignore_ament_install'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent) by extensions ['colcon_pkg']
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent) by extension 'colcon_pkg'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent) by extensions ['colcon_meta']
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent) by extension 'colcon_meta'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent) by extensions ['ros']
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent) by extension 'ros'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent) by extensions ['cmake', 'python']
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent) by extension 'cmake'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent) by extension 'python'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent) by extensions ['python_setup_py']
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent) by extension 'python_setup_py'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/micro_ros_agent) by extensions ['ignore', 'ignore_ament_install']
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/micro_ros_agent) by extension 'ignore'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/micro_ros_agent) by extension 'ignore_ament_install'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/micro_ros_agent) by extensions ['colcon_pkg']
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/micro_ros_agent) by extension 'colcon_pkg'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/micro_ros_agent) by extensions ['colcon_meta']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/micro_ros_agent) by extension 'colcon_meta'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/micro_ros_agent) by extensions ['ros']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/micro_ros_agent) by extension 'ros'
+[0.301s] DEBUG:colcon.colcon_core.package_identification:Package 'src/micro_ros/uros/micro-ROS-Agent/micro_ros_agent' with type 'ros.ament_cmake' and name 'micro_ros_agent'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap) by extensions ['ignore', 'ignore_ament_install']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap) by extension 'ignore'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap) by extension 'ignore_ament_install'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap) by extensions ['colcon_pkg']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap) by extension 'colcon_pkg'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap) by extensions ['colcon_meta']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap) by extension 'colcon_meta'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap) by extensions ['ros']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap) by extension 'ros'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap) by extensions ['cmake', 'python']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap) by extension 'cmake'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap) by extension 'python'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap) by extensions ['python_setup_py']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap) by extension 'python_setup_py'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap/hooks) by extensions ['ignore', 'ignore_ament_install']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap/hooks) by extension 'ignore'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap/hooks) by extension 'ignore_ament_install'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap/hooks) by extensions ['colcon_pkg']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap/hooks) by extension 'colcon_pkg'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap/hooks) by extensions ['colcon_meta']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap/hooks) by extension 'colcon_meta'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap/hooks) by extensions ['ros']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap/hooks) by extension 'ros'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap/hooks) by extensions ['cmake', 'python']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap/hooks) by extension 'cmake'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap/hooks) by extension 'python'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap/hooks) by extensions ['python_setup_py']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap/hooks) by extension 'python_setup_py'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap/local) by extensions ['ignore', 'ignore_ament_install']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap/local) by extension 'ignore'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap/local) by extension 'ignore_ament_install'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap/local) by extensions ['colcon_pkg']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap/local) by extension 'colcon_pkg'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap/local) by extensions ['colcon_meta']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap/local) by extension 'colcon_meta'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap/local) by extensions ['ros']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap/local) by extension 'ros'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap/local) by extensions ['cmake', 'python']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap/local) by extension 'cmake'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap/local) by extension 'python'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap/local) by extensions ['python_setup_py']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro-ROS-Agent/snap/local) by extension 'python_setup_py'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro_ros_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro_ros_msgs) by extension 'ignore'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro_ros_msgs) by extension 'ignore_ament_install'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro_ros_msgs) by extensions ['colcon_pkg']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro_ros_msgs) by extension 'colcon_pkg'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro_ros_msgs) by extensions ['colcon_meta']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro_ros_msgs) by extension 'colcon_meta'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro_ros_msgs) by extensions ['ros']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros/uros/micro_ros_msgs) by extension 'ros'
+[0.303s] DEBUG:colcon.colcon_core.package_identification:Package 'src/micro_ros/uros/micro_ros_msgs' with type 'ros.ament_cmake' and name 'micro_ros_msgs'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_core) by extensions ['ignore', 'ignore_ament_install']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_core) by extension 'ignore'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_core) by extension 'ignore_ament_install'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_core) by extensions ['colcon_pkg']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_core) by extension 'colcon_pkg'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_core) by extensions ['colcon_meta']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_core) by extension 'colcon_meta'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_core) by extensions ['ros']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_core) by extension 'ros'
+[0.304s] DEBUG:colcon.colcon_core.package_identification:Package 'src/movement_core' with type 'ros.ament_python' and name 'movement_core'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_functions) by extensions ['ignore', 'ignore_ament_install']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_functions) by extension 'ignore'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_functions) by extension 'ignore_ament_install'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_functions) by extensions ['colcon_pkg']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_functions) by extension 'colcon_pkg'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_functions) by extensions ['colcon_meta']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_functions) by extension 'colcon_meta'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_functions) by extensions ['ros']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_functions) by extension 'ros'
+[0.305s] DEBUG:colcon.colcon_core.package_identification:Package 'src/movement_functions' with type 'ros.ament_python' and name 'movement_functions'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_pages) by extensions ['ignore', 'ignore_ament_install']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_pages) by extension 'ignore'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_pages) by extension 'ignore_ament_install'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_pages) by extensions ['colcon_pkg']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_pages) by extension 'colcon_pkg'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_pages) by extensions ['colcon_meta']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_pages) by extension 'colcon_meta'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_pages) by extensions ['ros']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_pages) by extension 'ros'
+[0.306s] DEBUG:colcon.colcon_core.package_identification:Package 'src/movement_pages' with type 'ros.ament_python' and name 'movement_pages'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_utils) by extensions ['ignore', 'ignore_ament_install']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_utils) by extension 'ignore'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_utils) by extension 'ignore_ament_install'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_utils) by extensions ['colcon_pkg']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_utils) by extension 'colcon_pkg'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_utils) by extensions ['colcon_meta']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_utils) by extension 'colcon_meta'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_utils) by extensions ['ros']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/movement_utils) by extension 'ros'
+[0.307s] DEBUG:colcon.colcon_core.package_identification:Package 'src/movement_utils' with type 'ros.ament_cmake' and name 'movement_utils'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(src/u2d2_comm) by extensions ['ignore', 'ignore_ament_install']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(src/u2d2_comm) by extension 'ignore'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(src/u2d2_comm) by extension 'ignore_ament_install'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(src/u2d2_comm) by extensions ['colcon_pkg']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(src/u2d2_comm) by extension 'colcon_pkg'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(src/u2d2_comm) by extensions ['colcon_meta']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(src/u2d2_comm) by extension 'colcon_meta'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(src/u2d2_comm) by extensions ['ros']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(src/u2d2_comm) by extension 'ros'
+[0.308s] DEBUG:colcon.colcon_core.package_identification:Package 'src/u2d2_comm' with type 'ros.ament_python' and name 'u2d2_comm'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_example) by extensions ['ignore', 'ignore_ament_install']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_example) by extension 'ignore'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_example) by extension 'ignore_ament_install'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_example) by extensions ['colcon_pkg']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_example) by extension 'colcon_pkg'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_example) by extensions ['colcon_meta']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_example) by extension 'colcon_meta'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_example) by extensions ['ros']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_example) by extension 'ros'
+[0.309s] DEBUG:colcon.colcon_core.package_identification:Package 'src/urdf_example' with type 'ros.ament_cmake' and name 'urdf_example'
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_robox) by extensions ['ignore', 'ignore_ament_install']
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_robox) by extension 'ignore'
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_robox) by extension 'ignore_ament_install'
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_robox) by extensions ['colcon_pkg']
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_robox) by extension 'colcon_pkg'
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_robox) by extensions ['colcon_meta']
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_robox) by extension 'colcon_meta'
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_robox) by extensions ['ros']
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_robox) by extension 'ros'
+[0.310s] DEBUG:colcon.colcon_core.package_identification:Package 'src/urdf_robox' with type 'ros.ament_cmake' and name 'urdf_robox'
+[0.310s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.310s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.310s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.310s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.310s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.334s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.334s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.337s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.337s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.338s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/paulo/edromufu/src/movement/Ros2_change/install/tinyxml2' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.338s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.338s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.340s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 6 installed packages in /home/paulo/micros/install
+[0.340s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 0 installed packages in /home/paulo/edromufu/src/movement/Ros2_change/install
+[0.341s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 295 installed packages in /opt/ros/humble
+[0.342s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.370s] WARNING:colcon.colcon_core.package_selection:Some selected packages are already built in one or more underlay workspaces:
+	'tinyxml2' is in: /home/paulo/micros/install/tinyxml2
+If a package in a merged underlay workspace is overridden and it installs headers, then all packages in the overlay must sort their include directories by workspace order. Failure to do so may result in build failures or undefined behavior at run time.
+If the overridden package is used by another package in any underlay, then the overriding package in the overlay must be API and ABI compatible or undefined behavior at run time may occur.
+
+If you understand the risks and want to override a package anyways, add the following to the command line:
+	--allow-overriding tinyxml2
+
+This may be promoted to an error in a future release of colcon-override-check.
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'humanoid_visualization' build argument 'cmake_args' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'humanoid_visualization' build argument 'cmake_target' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'humanoid_visualization' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'humanoid_visualization' build argument 'cmake_clean_cache' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'humanoid_visualization' build argument 'cmake_clean_first' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'humanoid_visualization' build argument 'cmake_force_configure' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'humanoid_visualization' build argument 'ament_cmake_args' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'humanoid_visualization' build argument 'catkin_cmake_args' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'humanoid_visualization' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.371s] DEBUG:colcon.colcon_core.verb:Building package 'humanoid_visualization' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_visualization', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization', 'merge_install': False, 'path': '/home/paulo/edromufu/src/movement/Ros2_change/src/humanoid_visualization', 'symlink_install': False, 'test_result_base': None}
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'kinematic_functions' build argument 'cmake_args' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'kinematic_functions' build argument 'cmake_target' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'kinematic_functions' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'kinematic_functions' build argument 'cmake_clean_cache' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'kinematic_functions' build argument 'cmake_clean_first' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'kinematic_functions' build argument 'cmake_force_configure' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'kinematic_functions' build argument 'ament_cmake_args' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'kinematic_functions' build argument 'catkin_cmake_args' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'kinematic_functions' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.371s] DEBUG:colcon.colcon_core.verb:Building package 'kinematic_functions' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/paulo/edromufu/src/movement/Ros2_change/build/kinematic_functions', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions', 'merge_install': False, 'path': '/home/paulo/edromufu/src/movement/Ros2_change/src/kinematic_functions', 'symlink_install': False, 'test_result_base': None}
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'micro_publisher' build argument 'cmake_args' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'micro_publisher' build argument 'cmake_target' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'micro_publisher' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'micro_publisher' build argument 'cmake_clean_cache' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'micro_publisher' build argument 'cmake_clean_first' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'micro_publisher' build argument 'cmake_force_configure' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'micro_publisher' build argument 'ament_cmake_args' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'micro_publisher' build argument 'catkin_cmake_args' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'micro_publisher' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.372s] DEBUG:colcon.colcon_core.verb:Building package 'micro_publisher' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/paulo/edromufu/src/movement/Ros2_change/build/micro_publisher', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher', 'merge_install': False, 'path': '/home/paulo/edromufu/src/movement/Ros2_change/src/micro_ros/micro_publisher', 'symlink_install': False, 'test_result_base': None}
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'cmake_args' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'cmake_target' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.372s] DEBUG:colcon.colcon_core.verb:Building package 'micro_ros_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs', 'merge_install': False, 'path': '/home/paulo/edromufu/src/movement/Ros2_change/src/micro_ros/uros/micro_ros_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'movement_utils' build argument 'cmake_args' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'movement_utils' build argument 'cmake_target' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'movement_utils' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'movement_utils' build argument 'cmake_clean_cache' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'movement_utils' build argument 'cmake_clean_first' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'movement_utils' build argument 'cmake_force_configure' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'movement_utils' build argument 'ament_cmake_args' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'movement_utils' build argument 'catkin_cmake_args' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'movement_utils' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.372s] DEBUG:colcon.colcon_core.verb:Building package 'movement_utils' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/paulo/edromufu/src/movement/Ros2_change/build/movement_utils', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils', 'merge_install': False, 'path': '/home/paulo/edromufu/src/movement/Ros2_change/src/movement_utils', 'symlink_install': False, 'test_result_base': None}
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'potmessage' build argument 'cmake_args' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'potmessage' build argument 'cmake_target' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'potmessage' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'potmessage' build argument 'cmake_clean_cache' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'potmessage' build argument 'cmake_clean_first' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'potmessage' build argument 'cmake_force_configure' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'potmessage' build argument 'ament_cmake_args' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'potmessage' build argument 'catkin_cmake_args' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'potmessage' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.373s] DEBUG:colcon.colcon_core.verb:Building package 'potmessage' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/paulo/edromufu/src/movement/Ros2_change/build/potmessage', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage', 'merge_install': False, 'path': '/home/paulo/edromufu/src/movement/Ros2_change/src/micro_ros/potmessage', 'symlink_install': False, 'test_result_base': None}
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'tinyxml2' build argument 'cmake_args' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'tinyxml2' build argument 'cmake_target' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'tinyxml2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'tinyxml2' build argument 'cmake_clean_cache' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'tinyxml2' build argument 'cmake_clean_first' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'tinyxml2' build argument 'cmake_force_configure' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'tinyxml2' build argument 'ament_cmake_args' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'tinyxml2' build argument 'catkin_cmake_args' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'tinyxml2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.373s] DEBUG:colcon.colcon_core.verb:Building package 'tinyxml2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/paulo/edromufu/src/movement/Ros2_change/build/tinyxml2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/paulo/edromufu/src/movement/Ros2_change/install/tinyxml2', 'merge_install': False, 'path': '/home/paulo/edromufu/src/movement/Ros2_change/src/micro_ros/Tinyxml2', 'symlink_install': False, 'test_result_base': None}
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'urdf_example' build argument 'cmake_args' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'urdf_example' build argument 'cmake_target' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'urdf_example' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'urdf_example' build argument 'cmake_clean_cache' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'urdf_example' build argument 'cmake_clean_first' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'urdf_example' build argument 'cmake_force_configure' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'urdf_example' build argument 'ament_cmake_args' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'urdf_example' build argument 'catkin_cmake_args' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'urdf_example' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.373s] DEBUG:colcon.colcon_core.verb:Building package 'urdf_example' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/paulo/edromufu/src/movement/Ros2_change/build/urdf_example', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example', 'merge_install': False, 'path': '/home/paulo/edromufu/src/movement/Ros2_change/src/urdf_example', 'symlink_install': False, 'test_result_base': None}
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'urdf_robox' build argument 'cmake_args' from command line to 'None'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'urdf_robox' build argument 'cmake_target' from command line to 'None'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'urdf_robox' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'urdf_robox' build argument 'cmake_clean_cache' from command line to 'False'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'urdf_robox' build argument 'cmake_clean_first' from command line to 'False'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'urdf_robox' build argument 'cmake_force_configure' from command line to 'False'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'urdf_robox' build argument 'ament_cmake_args' from command line to 'None'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'urdf_robox' build argument 'catkin_cmake_args' from command line to 'None'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'urdf_robox' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.374s] DEBUG:colcon.colcon_core.verb:Building package 'urdf_robox' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/paulo/edromufu/src/movement/Ros2_change/build/urdf_robox', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox', 'merge_install': False, 'path': '/home/paulo/edromufu/src/movement/Ros2_change/src/urdf_robox', 'symlink_install': False, 'test_result_base': None}
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'humanoid_definition' build argument 'cmake_args' from command line to 'None'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'humanoid_definition' build argument 'cmake_target' from command line to 'None'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'humanoid_definition' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'humanoid_definition' build argument 'cmake_clean_cache' from command line to 'False'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'humanoid_definition' build argument 'cmake_clean_first' from command line to 'False'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'humanoid_definition' build argument 'cmake_force_configure' from command line to 'False'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'humanoid_definition' build argument 'ament_cmake_args' from command line to 'None'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'humanoid_definition' build argument 'catkin_cmake_args' from command line to 'None'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'humanoid_definition' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.374s] DEBUG:colcon.colcon_core.verb:Building package 'humanoid_definition' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_definition', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition', 'merge_install': False, 'path': '/home/paulo/edromufu/src/movement/Ros2_change/src/humanoid_definition', 'symlink_install': False, 'test_result_base': None}
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'cmake_args' from command line to 'None'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'cmake_target' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'cmake_clean_cache' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'cmake_clean_first' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'cmake_force_configure' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'ament_cmake_args' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'catkin_cmake_args' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.375s] DEBUG:colcon.colcon_core.verb:Building package 'micro_ros_agent' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_agent', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent', 'merge_install': False, 'path': '/home/paulo/edromufu/src/movement/Ros2_change/src/micro_ros/uros/micro-ROS-Agent/micro_ros_agent', 'symlink_install': False, 'test_result_base': None}
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'movement_functions' build argument 'cmake_args' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'movement_functions' build argument 'cmake_target' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'movement_functions' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'movement_functions' build argument 'cmake_clean_cache' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'movement_functions' build argument 'cmake_clean_first' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'movement_functions' build argument 'cmake_force_configure' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'movement_functions' build argument 'ament_cmake_args' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'movement_functions' build argument 'catkin_cmake_args' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'movement_functions' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.375s] DEBUG:colcon.colcon_core.verb:Building package 'movement_functions' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/paulo/edromufu/src/movement/Ros2_change/build/movement_functions', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions', 'merge_install': False, 'path': '/home/paulo/edromufu/src/movement/Ros2_change/src/movement_functions', 'symlink_install': False, 'test_result_base': None}
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'movement_pages' build argument 'cmake_args' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'movement_pages' build argument 'cmake_target' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'movement_pages' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'movement_pages' build argument 'cmake_clean_cache' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'movement_pages' build argument 'cmake_clean_first' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'movement_pages' build argument 'cmake_force_configure' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'movement_pages' build argument 'ament_cmake_args' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'movement_pages' build argument 'catkin_cmake_args' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'movement_pages' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.375s] DEBUG:colcon.colcon_core.verb:Building package 'movement_pages' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/paulo/edromufu/src/movement/Ros2_change/build/movement_pages', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages', 'merge_install': False, 'path': '/home/paulo/edromufu/src/movement/Ros2_change/src/movement_pages', 'symlink_install': False, 'test_result_base': None}
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'u2d2_comm' build argument 'cmake_args' from command line to 'None'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'u2d2_comm' build argument 'cmake_target' from command line to 'None'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'u2d2_comm' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'u2d2_comm' build argument 'cmake_clean_cache' from command line to 'False'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'u2d2_comm' build argument 'cmake_clean_first' from command line to 'False'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'u2d2_comm' build argument 'cmake_force_configure' from command line to 'False'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'u2d2_comm' build argument 'ament_cmake_args' from command line to 'None'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'u2d2_comm' build argument 'catkin_cmake_args' from command line to 'None'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'u2d2_comm' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.376s] DEBUG:colcon.colcon_core.verb:Building package 'u2d2_comm' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm', 'merge_install': False, 'path': '/home/paulo/edromufu/src/movement/Ros2_change/src/u2d2_comm', 'symlink_install': False, 'test_result_base': None}
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'movement_core' build argument 'cmake_args' from command line to 'None'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'movement_core' build argument 'cmake_target' from command line to 'None'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'movement_core' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'movement_core' build argument 'cmake_clean_cache' from command line to 'False'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'movement_core' build argument 'cmake_clean_first' from command line to 'False'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'movement_core' build argument 'cmake_force_configure' from command line to 'False'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'movement_core' build argument 'ament_cmake_args' from command line to 'None'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'movement_core' build argument 'catkin_cmake_args' from command line to 'None'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'movement_core' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.376s] DEBUG:colcon.colcon_core.verb:Building package 'movement_core' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/paulo/edromufu/src/movement/Ros2_change/build/movement_core', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core', 'merge_install': False, 'path': '/home/paulo/edromufu/src/movement/Ros2_change/src/movement_core', 'symlink_install': False, 'test_result_base': None}
+[0.376s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.378s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.378s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/paulo/edromufu/src/movement/Ros2_change/src/kinematic_functions' with build type 'ament_python'
+[0.378s] Level 1:colcon.colcon_core.shell:create_environment_hook('kinematic_functions', 'ament_prefix_path')
+[0.382s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.382s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/share/kinematic_functions/hook/ament_prefix_path.ps1'
+[0.383s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/share/kinematic_functions/hook/ament_prefix_path.dsv'
+[0.384s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/share/kinematic_functions/hook/ament_prefix_path.sh'
+[0.384s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.384s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.387s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/paulo/edromufu/src/movement/Ros2_change/src/movement_utils' with build type 'ament_cmake'
+[0.387s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/paulo/edromufu/src/movement/Ros2_change/src/movement_utils'
+[0.387s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.387s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.389s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/paulo/edromufu/src/movement/Ros2_change/src/micro_ros/uros/micro_ros_msgs' with build type 'ament_cmake'
+[0.389s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/paulo/edromufu/src/movement/Ros2_change/src/micro_ros/uros/micro_ros_msgs'
+[0.390s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.390s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.392s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/paulo/edromufu/src/movement/Ros2_change/src/humanoid_visualization' with build type 'ament_cmake'
+[0.392s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/paulo/edromufu/src/movement/Ros2_change/src/humanoid_visualization'
+[0.392s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.392s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.395s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/paulo/edromufu/src/movement/Ros2_change/src/micro_ros/micro_publisher' with build type 'ament_python'
+[0.395s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_publisher', 'ament_prefix_path')
+[0.396s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher/share/micro_publisher/hook/ament_prefix_path.ps1'
+[0.396s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher/share/micro_publisher/hook/ament_prefix_path.dsv'
+[0.396s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher/share/micro_publisher/hook/ament_prefix_path.sh'
+[0.397s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.397s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.400s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/paulo/edromufu/src/movement/Ros2_change/src/micro_ros/potmessage' with build type 'ament_cmake'
+[0.400s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/paulo/edromufu/src/movement/Ros2_change/src/micro_ros/potmessage'
+[0.400s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.400s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.404s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/paulo/edromufu/src/movement/Ros2_change/src/micro_ros/Tinyxml2'
+[0.404s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.404s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.407s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/paulo/edromufu/src/movement/Ros2_change/src/urdf_example' with build type 'ament_cmake'
+[0.407s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/paulo/edromufu/src/movement/Ros2_change/src/urdf_example'
+[0.408s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.408s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.411s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/paulo/edromufu/src/movement/Ros2_change/src/urdf_robox' with build type 'ament_cmake'
+[0.411s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/paulo/edromufu/src/movement/Ros2_change/src/urdf_robox'
+[0.412s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.412s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.607s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/paulo/edromufu/src/movement/Ros2_change/src/kinematic_functions'
+[0.608s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.608s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.615s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/build/movement_utils': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --build /home/paulo/edromufu/src/movement/Ros2_change/build/movement_utils -- -j12 -l12
+[0.617s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --build /home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_msgs -- -j12 -l12
+[0.619s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_visualization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --build /home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_visualization -- -j12 -l12
+[0.983s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/paulo/edromufu/src/movement/Ros2_change/src/micro_ros/micro_publisher'
+[0.984s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.984s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.001s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/build/potmessage': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --build /home/paulo/edromufu/src/movement/Ros2_change/build/potmessage -- -j12 -l12
+[1.009s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/build/tinyxml2': /usr/bin/cmake --build /home/paulo/edromufu/src/movement/Ros2_change/build/tinyxml2 -- -j12 -l12
+[1.027s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/build/urdf_example': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --build /home/paulo/edromufu/src/movement/Ros2_change/build/urdf_example -- -j12 -l12
+[1.070s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/build/urdf_robox': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --build /home/paulo/edromufu/src/movement/Ros2_change/build/urdf_robox -- -j12 -l12
+[1.570s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_visualization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --build /home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_visualization -- -j12 -l12
+[1.669s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_visualization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --install /home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_visualization
+[1.710s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(humanoid_visualization)
+[1.711s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_visualization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --install /home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_visualization
+[1.752s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization' for CMake module files
+[1.752s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization' for CMake config files
+[1.753s] Level 1:colcon.colcon_core.shell:create_environment_hook('humanoid_visualization', 'cmake_prefix_path')
+[1.753s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/hook/cmake_prefix_path.ps1'
+[1.754s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/hook/cmake_prefix_path.dsv'
+[1.754s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/hook/cmake_prefix_path.sh'
+[1.763s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/bin'
+[1.763s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/lib/pkgconfig/humanoid_visualization.pc'
+[1.763s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/lib/python3.10/site-packages'
+[1.764s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/bin'
+[1.764s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/package.ps1'
+[1.773s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/package.dsv'
+[1.778s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/package.sh'
+[1.779s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/package.bash'
+[1.788s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/package.zsh'
+[1.793s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/colcon-core/packages/humanoid_visualization)
+[1.890s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(humanoid_visualization)
+[1.891s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization' for CMake module files
+[1.892s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization' for CMake config files
+[1.892s] Level 1:colcon.colcon_core.shell:create_environment_hook('humanoid_visualization', 'cmake_prefix_path')
+[1.893s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/hook/cmake_prefix_path.ps1'
+[1.897s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/hook/cmake_prefix_path.dsv'
+[1.898s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/hook/cmake_prefix_path.sh'
+[1.902s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/bin'
+[1.903s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/lib/pkgconfig/humanoid_visualization.pc'
+[1.903s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/lib/python3.10/site-packages'
+[1.904s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/bin'
+[1.904s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/package.ps1'
+[1.905s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/package.dsv'
+[1.911s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/package.sh'
+[1.914s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/package.bash'
+[1.919s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/package.zsh'
+[1.922s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/colcon-core/packages/humanoid_visualization)
+[2.085s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/build/urdf_robox' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --build /home/paulo/edromufu/src/movement/Ros2_change/build/urdf_robox -- -j12 -l12
+[2.132s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/build/urdf_example' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --build /home/paulo/edromufu/src/movement/Ros2_change/build/urdf_example -- -j12 -l12
+[2.179s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/build/urdf_robox': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --install /home/paulo/edromufu/src/movement/Ros2_change/build/urdf_robox
+[2.209s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/build/urdf_example': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --install /home/paulo/edromufu/src/movement/Ros2_change/build/urdf_example
+[2.241s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(urdf_example)
+[2.242s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example' for CMake module files
+[2.242s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example' for CMake config files
+[2.243s] Level 1:colcon.colcon_core.shell:create_environment_hook('urdf_example', 'cmake_prefix_path')
+[2.243s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/hook/cmake_prefix_path.ps1'
+[2.244s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/hook/cmake_prefix_path.dsv'
+[2.244s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/hook/cmake_prefix_path.sh'
+[2.246s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/build/urdf_example' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --install /home/paulo/edromufu/src/movement/Ros2_change/build/urdf_example
+[2.254s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/bin'
+[2.254s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/lib/pkgconfig/urdf_example.pc'
+[2.255s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/lib/python3.10/site-packages'
+[2.255s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/bin'
+[2.256s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/package.ps1'
+[2.257s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/package.dsv'
+[2.258s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/package.sh'
+[2.260s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/package.bash'
+[2.261s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/package.zsh'
+[2.261s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/colcon-core/packages/urdf_example)
+[2.306s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(urdf_example)
+[2.306s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example' for CMake module files
+[2.307s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example' for CMake config files
+[2.307s] Level 1:colcon.colcon_core.shell:create_environment_hook('urdf_example', 'cmake_prefix_path')
+[2.308s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/hook/cmake_prefix_path.ps1'
+[2.309s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/hook/cmake_prefix_path.dsv'
+[2.310s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/hook/cmake_prefix_path.sh'
+[2.311s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/bin'
+[2.311s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/lib/pkgconfig/urdf_example.pc'
+[2.311s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/lib/python3.10/site-packages'
+[2.312s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/bin'
+[2.312s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/package.ps1'
+[2.313s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/package.dsv'
+[2.314s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/package.sh'
+[2.315s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/package.bash'
+[2.315s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/package.zsh'
+[2.316s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/colcon-core/packages/urdf_example)
+[2.384s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(urdf_robox)
+[2.384s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox' for CMake module files
+[2.385s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/build/urdf_robox' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --install /home/paulo/edromufu/src/movement/Ros2_change/build/urdf_robox
+[2.386s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox' for CMake config files
+[2.387s] Level 1:colcon.colcon_core.shell:create_environment_hook('urdf_robox', 'cmake_prefix_path')
+[2.387s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/hook/cmake_prefix_path.ps1'
+[2.388s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/hook/cmake_prefix_path.dsv'
+[2.389s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/hook/cmake_prefix_path.sh'
+[2.390s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/bin'
+[2.390s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/lib/pkgconfig/urdf_robox.pc'
+[2.390s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/lib/python3.10/site-packages'
+[2.391s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/bin'
+[2.391s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/package.ps1'
+[2.393s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/package.dsv'
+[2.394s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/package.sh'
+[2.394s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/package.bash'
+[2.395s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/package.zsh'
+[2.395s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/colcon-core/packages/urdf_robox)
+[2.428s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(urdf_robox)
+[2.428s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox' for CMake module files
+[2.428s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox' for CMake config files
+[2.429s] Level 1:colcon.colcon_core.shell:create_environment_hook('urdf_robox', 'cmake_prefix_path')
+[2.429s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/hook/cmake_prefix_path.ps1'
+[2.430s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/hook/cmake_prefix_path.dsv'
+[2.430s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/hook/cmake_prefix_path.sh'
+[2.431s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/bin'
+[2.431s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/lib/pkgconfig/urdf_robox.pc'
+[2.432s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/lib/python3.10/site-packages'
+[2.432s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/bin'
+[2.432s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/package.ps1'
+[2.433s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/package.dsv'
+[2.434s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/package.sh'
+[2.435s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/package.bash'
+[2.435s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/package.zsh'
+[2.436s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox/share/colcon-core/packages/urdf_robox)
+[2.493s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/src/kinematic_functions': PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/build/kinematic_functions/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/kinematic_functions build --build-base /home/paulo/edromufu/src/movement/Ros2_change/build/kinematic_functions/build install --record /home/paulo/edromufu/src/movement/Ros2_change/build/kinematic_functions/install.log --single-version-externally-managed install_data
+[2.494s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/src/micro_ros/micro_publisher': PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/build/micro_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/micro_publisher build --build-base /home/paulo/edromufu/src/movement/Ros2_change/build/micro_publisher/build install --record /home/paulo/edromufu/src/movement/Ros2_change/build/micro_publisher/install.log --single-version-externally-managed install_data
+[2.859s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --build /home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_msgs -- -j12 -l12
+[2.869s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher' for CMake module files
+[2.870s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/src/micro_ros/micro_publisher' returned '0': PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/build/micro_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/micro_publisher build --build-base /home/paulo/edromufu/src/movement/Ros2_change/build/micro_publisher/build install --record /home/paulo/edromufu/src/movement/Ros2_change/build/micro_publisher/install.log --single-version-externally-managed install_data
+[2.870s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher' for CMake config files
+[2.871s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher/lib'
+[2.872s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher/bin'
+[2.872s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher/lib/pkgconfig/micro_publisher.pc'
+[2.873s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher/lib/python3.10/site-packages'
+[2.873s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_publisher', 'pythonpath')
+[2.873s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher/share/micro_publisher/hook/pythonpath.ps1'
+[2.874s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher/share/micro_publisher/hook/pythonpath.dsv'
+[2.875s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher/share/micro_publisher/hook/pythonpath.sh'
+[2.876s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher/bin'
+[2.876s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(micro_publisher)
+[2.877s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher/share/micro_publisher/package.ps1'
+[2.878s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher/share/micro_publisher/package.dsv'
+[2.879s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher/share/micro_publisher/package.sh'
+[2.880s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher/share/micro_publisher/package.bash'
+[2.881s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher/share/micro_publisher/package.zsh'
+[2.882s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher/share/colcon-core/packages/micro_publisher)
+[2.957s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/build/tinyxml2' returned '0': /usr/bin/cmake --build /home/paulo/edromufu/src/movement/Ros2_change/build/tinyxml2 -- -j12 -l12
+[2.984s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --install /home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_msgs
+[2.997s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions' for CMake module files
+[2.998s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/src/kinematic_functions' returned '0': PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/build/kinematic_functions/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/kinematic_functions build --build-base /home/paulo/edromufu/src/movement/Ros2_change/build/kinematic_functions/build install --record /home/paulo/edromufu/src/movement/Ros2_change/build/kinematic_functions/install.log --single-version-externally-managed install_data
+[3.000s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions' for CMake config files
+[3.009s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib'
+[3.010s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/bin'
+[3.010s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/pkgconfig/kinematic_functions.pc'
+[3.010s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages'
+[3.011s] Level 1:colcon.colcon_core.shell:create_environment_hook('kinematic_functions', 'pythonpath')
+[3.011s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/share/kinematic_functions/hook/pythonpath.ps1'
+[3.012s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/share/kinematic_functions/hook/pythonpath.dsv'
+[3.014s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/share/kinematic_functions/hook/pythonpath.sh'
+[3.014s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/bin'
+[3.015s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(kinematic_functions)
+[3.015s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/share/kinematic_functions/package.ps1'
+[3.016s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/share/kinematic_functions/package.dsv'
+[3.016s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/share/kinematic_functions/package.sh'
+[3.017s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/share/kinematic_functions/package.bash'
+[3.017s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/share/kinematic_functions/package.zsh'
+[3.018s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/share/colcon-core/packages/kinematic_functions)
+[3.019s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/paulo/edromufu/src/movement/Ros2_change/src/humanoid_definition' with build type 'ament_python'
+[3.019s] Level 1:colcon.colcon_core.shell:create_environment_hook('humanoid_definition', 'ament_prefix_path')
+[3.019s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/share/humanoid_definition/hook/ament_prefix_path.ps1'
+[3.021s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/share/humanoid_definition/hook/ament_prefix_path.dsv'
+[3.021s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/share/humanoid_definition/hook/ament_prefix_path.sh'
+[3.022s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.022s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.030s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/paulo/edromufu/src/movement/Ros2_change/src/movement_functions' with build type 'ament_python'
+[3.030s] Level 1:colcon.colcon_core.shell:create_environment_hook('movement_functions', 'ament_prefix_path')
+[3.031s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/share/movement_functions/hook/ament_prefix_path.ps1'
+[3.032s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/share/movement_functions/hook/ament_prefix_path.dsv'
+[3.032s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/share/movement_functions/hook/ament_prefix_path.sh'
+[3.033s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.033s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.040s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/build/tinyxml2': /usr/bin/cmake --install /home/paulo/edromufu/src/movement/Ros2_change/build/tinyxml2
+[3.349s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/paulo/edromufu/src/movement/Ros2_change/src/humanoid_definition'
+[3.349s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.350s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.971s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/paulo/edromufu/src/movement/Ros2_change/src/movement_functions'
+[3.972s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.973s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.011s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tinyxml2)
+[4.011s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/tinyxml2' for CMake module files
+[4.012s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/tinyxml2' for CMake config files
+[4.014s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/build/tinyxml2' returned '0': /usr/bin/cmake --install /home/paulo/edromufu/src/movement/Ros2_change/build/tinyxml2
+[4.016s] Level 1:colcon.colcon_core.shell:create_environment_hook('tinyxml2', 'cmake_prefix_path')
+[4.021s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/tinyxml2/share/tinyxml2/hook/cmake_prefix_path.ps1'
+[4.022s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/tinyxml2/share/tinyxml2/hook/cmake_prefix_path.dsv'
+[4.023s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/tinyxml2/share/tinyxml2/hook/cmake_prefix_path.sh'
+[4.024s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/tinyxml2/lib'
+[4.026s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/tinyxml2/bin'
+[4.030s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/tinyxml2/lib/pkgconfig/tinyxml2.pc'
+[4.030s] Level 1:colcon.colcon_core.shell:create_environment_hook('tinyxml2', 'pkg_config')
+[4.030s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/tinyxml2/share/tinyxml2/hook/pkg_config.ps1'
+[4.031s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/tinyxml2/share/tinyxml2/hook/pkg_config.dsv'
+[4.032s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/tinyxml2/share/tinyxml2/hook/pkg_config.sh'
+[4.034s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/tinyxml2/lib/python3.10/site-packages'
+[4.035s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/tinyxml2/bin'
+[4.036s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/tinyxml2/share/tinyxml2/package.ps1'
+[4.037s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/tinyxml2/share/tinyxml2/package.dsv'
+[4.038s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/tinyxml2/share/tinyxml2/package.sh'
+[4.046s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/tinyxml2/share/tinyxml2/package.bash'
+[4.047s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/tinyxml2/share/tinyxml2/package.zsh'
+[4.047s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/paulo/edromufu/src/movement/Ros2_change/install/tinyxml2/share/colcon-core/packages/tinyxml2)
+[4.048s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(micro_ros_msgs)
+[4.048s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs' for CMake module files
+[4.052s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --install /home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_msgs
+[4.054s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs' for CMake config files
+[4.055s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_msgs', 'cmake_prefix_path')
+[4.056s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/hook/cmake_prefix_path.ps1'
+[4.063s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/hook/cmake_prefix_path.dsv'
+[4.070s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/hook/cmake_prefix_path.sh'
+[4.071s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib'
+[4.071s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_msgs', 'ld_library_path_lib')
+[4.072s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/hook/ld_library_path_lib.ps1'
+[4.073s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/hook/ld_library_path_lib.dsv'
+[4.074s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/hook/ld_library_path_lib.sh'
+[4.083s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/bin'
+[4.083s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib/pkgconfig/micro_ros_msgs.pc'
+[4.083s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib/python3.10/site-packages'
+[4.084s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/bin'
+[4.085s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/package.ps1'
+[4.088s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/package.dsv'
+[4.091s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/package.sh'
+[4.096s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/package.bash'
+[4.097s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/package.zsh'
+[4.098s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/colcon-core/packages/micro_ros_msgs)
+[4.523s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(micro_ros_msgs)
+[4.524s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs' for CMake module files
+[4.526s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs' for CMake config files
+[4.527s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_msgs', 'cmake_prefix_path')
+[4.528s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/hook/cmake_prefix_path.ps1'
+[4.529s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/hook/cmake_prefix_path.dsv'
+[4.529s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/hook/cmake_prefix_path.sh'
+[4.540s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib'
+[4.540s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_msgs', 'ld_library_path_lib')
+[4.541s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/hook/ld_library_path_lib.ps1'
+[4.542s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/hook/ld_library_path_lib.dsv'
+[4.542s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/hook/ld_library_path_lib.sh'
+[4.544s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/bin'
+[4.548s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib/pkgconfig/micro_ros_msgs.pc'
+[4.548s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib/python3.10/site-packages'
+[4.549s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/bin'
+[4.549s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/package.ps1'
+[4.550s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/package.dsv'
+[4.556s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/package.sh'
+[4.557s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/package.bash'
+[4.558s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/package.zsh'
+[4.561s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/colcon-core/packages/micro_ros_msgs)
+[4.563s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/paulo/edromufu/src/movement/Ros2_change/src/micro_ros/uros/micro-ROS-Agent/micro_ros_agent' with build type 'ament_cmake'
+[4.564s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/paulo/edromufu/src/movement/Ros2_change/src/micro_ros/uros/micro-ROS-Agent/micro_ros_agent'
+[4.566s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.568s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.611s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_agent': CMAKE_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs:/home/paulo/micros/install/tinyxml2:/home/paulo/micros/install/potmessage:/home/paulo/micros/install/micro_ros_setup:/home/paulo/micros/install/micro_ros_agent:/home/paulo/micros/install/micro_ros_msgs:/home/paulo/edromufu/src/movement/Ros2_change/install/tinyxml2:/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent:/home/paulo/micros/install/micro_publisher:/opt/ros/humble LD_LIBRARY_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib:/home/paulo/micros/install/potmessage/lib:/home/paulo/micros/install/micro_ros_agent/lib:/home/paulo/micros/install/micro_ros_msgs/lib:/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_agent -- -j12 -l12
+[5.285s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/src/humanoid_definition': AMENT_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions:${AMENT_PREFIX_PATH} PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_definition/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/lib/python3.10/site-packages:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/humanoid_definition build --build-base /home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_definition/build install --record /home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_definition/install.log --single-version-externally-managed install_data
+[5.429s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/build/potmessage' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --build /home/paulo/edromufu/src/movement/Ros2_change/build/potmessage -- -j12 -l12
+[5.534s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/src/movement_functions': AMENT_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions:${AMENT_PREFIX_PATH} PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/build/movement_functions/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/lib/python3.10/site-packages:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/movement_functions build --build-base /home/paulo/edromufu/src/movement/Ros2_change/build/movement_functions/build install --record /home/paulo/edromufu/src/movement/Ros2_change/build/movement_functions/install.log --single-version-externally-managed install_data
+[5.727s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/build/potmessage': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --install /home/paulo/edromufu/src/movement/Ros2_change/build/potmessage
+[6.007s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(potmessage)
+[6.008s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage' for CMake module files
+[6.009s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage' for CMake config files
+[6.010s] Level 1:colcon.colcon_core.shell:create_environment_hook('potmessage', 'cmake_prefix_path')
+[6.010s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/hook/cmake_prefix_path.ps1'
+[6.015s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/hook/cmake_prefix_path.dsv'
+[6.016s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/hook/cmake_prefix_path.sh'
+[6.017s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/build/potmessage' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --install /home/paulo/edromufu/src/movement/Ros2_change/build/potmessage
+[6.018s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/lib'
+[6.018s] Level 1:colcon.colcon_core.shell:create_environment_hook('potmessage', 'ld_library_path_lib')
+[6.018s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/hook/ld_library_path_lib.ps1'
+[6.022s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/hook/ld_library_path_lib.dsv'
+[6.023s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/hook/ld_library_path_lib.sh'
+[6.024s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/bin'
+[6.024s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/lib/pkgconfig/potmessage.pc'
+[6.024s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/lib/python3.10/site-packages'
+[6.028s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/bin'
+[6.029s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/package.ps1'
+[6.030s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/package.dsv'
+[6.036s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/package.sh'
+[6.037s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/package.bash'
+[6.037s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/package.zsh'
+[6.038s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/colcon-core/packages/potmessage)
+[6.084s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_agent' returned '0': CMAKE_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs:/home/paulo/micros/install/tinyxml2:/home/paulo/micros/install/potmessage:/home/paulo/micros/install/micro_ros_setup:/home/paulo/micros/install/micro_ros_agent:/home/paulo/micros/install/micro_ros_msgs:/home/paulo/edromufu/src/movement/Ros2_change/install/tinyxml2:/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent:/home/paulo/micros/install/micro_publisher:/opt/ros/humble LD_LIBRARY_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib:/home/paulo/micros/install/potmessage/lib:/home/paulo/micros/install/micro_ros_agent/lib:/home/paulo/micros/install/micro_ros_msgs/lib:/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_agent -- -j12 -l12
+[6.247s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_agent': CMAKE_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs:/home/paulo/micros/install/tinyxml2:/home/paulo/micros/install/potmessage:/home/paulo/micros/install/micro_ros_setup:/home/paulo/micros/install/micro_ros_agent:/home/paulo/micros/install/micro_ros_msgs:/home/paulo/edromufu/src/movement/Ros2_change/install/tinyxml2:/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent:/home/paulo/micros/install/micro_publisher:/opt/ros/humble LD_LIBRARY_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib:/home/paulo/micros/install/potmessage/lib:/home/paulo/micros/install/micro_ros_agent/lib:/home/paulo/micros/install/micro_ros_msgs/lib:/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_agent
+[6.260s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition' for CMake module files
+[6.261s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition' for CMake config files
+[6.262s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/lib'
+[6.262s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/bin'
+[6.262s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/lib/pkgconfig/humanoid_definition.pc'
+[6.263s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/lib/python3.10/site-packages'
+[6.263s] Level 1:colcon.colcon_core.shell:create_environment_hook('humanoid_definition', 'pythonpath')
+[6.263s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/share/humanoid_definition/hook/pythonpath.ps1'
+[6.271s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/src/humanoid_definition' returned '0': AMENT_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions:${AMENT_PREFIX_PATH} PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_definition/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/lib/python3.10/site-packages:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/humanoid_definition build --build-base /home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_definition/build install --record /home/paulo/edromufu/src/movement/Ros2_change/build/humanoid_definition/install.log --single-version-externally-managed install_data
+[6.272s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/share/humanoid_definition/hook/pythonpath.dsv'
+[6.273s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/share/humanoid_definition/hook/pythonpath.sh'
+[6.273s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/bin'
+[6.276s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(humanoid_definition)
+[6.278s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/share/humanoid_definition/package.ps1'
+[6.279s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/share/humanoid_definition/package.dsv'
+[6.279s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/share/humanoid_definition/package.sh'
+[6.285s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/share/humanoid_definition/package.bash'
+[6.286s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/share/humanoid_definition/package.zsh'
+[6.286s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/share/colcon-core/packages/humanoid_definition)
+[6.295s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(micro_ros_agent)
+[6.295s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_agent' returned '0': CMAKE_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs:/home/paulo/micros/install/tinyxml2:/home/paulo/micros/install/potmessage:/home/paulo/micros/install/micro_ros_setup:/home/paulo/micros/install/micro_ros_agent:/home/paulo/micros/install/micro_ros_msgs:/home/paulo/edromufu/src/movement/Ros2_change/install/tinyxml2:/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent:/home/paulo/micros/install/micro_publisher:/opt/ros/humble LD_LIBRARY_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib:/home/paulo/micros/install/potmessage/lib:/home/paulo/micros/install/micro_ros_agent/lib:/home/paulo/micros/install/micro_ros_msgs/lib:/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_agent
+[6.296s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent' for CMake module files
+[6.297s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent' for CMake config files
+[6.297s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_agent', 'cmake_prefix_path')
+[6.298s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/hook/cmake_prefix_path.ps1'
+[6.299s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/hook/cmake_prefix_path.dsv'
+[6.299s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/hook/cmake_prefix_path.sh'
+[6.302s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/lib'
+[6.302s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/bin'
+[6.302s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/lib/pkgconfig/micro_ros_agent.pc'
+[6.303s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/lib/python3.10/site-packages'
+[6.303s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/bin'
+[6.304s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/package.ps1'
+[6.308s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/package.dsv'
+[6.309s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/package.sh'
+[6.310s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/package.bash'
+[6.311s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/package.zsh'
+[6.312s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/colcon-core/packages/micro_ros_agent)
+[6.319s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(potmessage)
+[6.319s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage' for CMake module files
+[6.321s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage' for CMake config files
+[6.322s] Level 1:colcon.colcon_core.shell:create_environment_hook('potmessage', 'cmake_prefix_path')
+[6.322s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/hook/cmake_prefix_path.ps1'
+[6.323s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/hook/cmake_prefix_path.dsv'
+[6.324s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/hook/cmake_prefix_path.sh'
+[6.325s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/lib'
+[6.325s] Level 1:colcon.colcon_core.shell:create_environment_hook('potmessage', 'ld_library_path_lib')
+[6.325s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/hook/ld_library_path_lib.ps1'
+[6.327s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/hook/ld_library_path_lib.dsv'
+[6.328s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/hook/ld_library_path_lib.sh'
+[6.329s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/bin'
+[6.329s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/lib/pkgconfig/potmessage.pc'
+[6.329s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/lib/python3.10/site-packages'
+[6.330s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/bin'
+[6.331s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/package.ps1'
+[6.332s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/package.dsv'
+[6.334s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/package.sh'
+[6.336s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/package.bash'
+[6.338s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/potmessage/package.zsh'
+[6.340s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/paulo/edromufu/src/movement/Ros2_change/install/potmessage/share/colcon-core/packages/potmessage)
+[6.430s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(micro_ros_agent)
+[6.433s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent' for CMake module files
+[6.437s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent' for CMake config files
+[6.437s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_agent', 'cmake_prefix_path')
+[6.437s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/hook/cmake_prefix_path.ps1'
+[6.442s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/hook/cmake_prefix_path.dsv'
+[6.447s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/hook/cmake_prefix_path.sh'
+[6.448s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/lib'
+[6.448s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/bin'
+[6.448s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/lib/pkgconfig/micro_ros_agent.pc'
+[6.450s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/lib/python3.10/site-packages'
+[6.452s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/bin'
+[6.453s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/package.ps1'
+[6.454s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/package.dsv'
+[6.455s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/package.sh'
+[6.456s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/package.bash'
+[6.457s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/package.zsh'
+[6.458s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/colcon-core/packages/micro_ros_agent)
+[6.515s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions' for CMake module files
+[6.516s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/src/movement_functions' returned '0': AMENT_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions:${AMENT_PREFIX_PATH} PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/build/movement_functions/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/lib/python3.10/site-packages:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/movement_functions build --build-base /home/paulo/edromufu/src/movement/Ros2_change/build/movement_functions/build install --record /home/paulo/edromufu/src/movement/Ros2_change/build/movement_functions/install.log --single-version-externally-managed install_data
+[6.516s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions' for CMake config files
+[6.517s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/lib'
+[6.517s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/bin'
+[6.517s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/lib/pkgconfig/movement_functions.pc'
+[6.518s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/lib/python3.10/site-packages'
+[6.518s] Level 1:colcon.colcon_core.shell:create_environment_hook('movement_functions', 'pythonpath')
+[6.518s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/share/movement_functions/hook/pythonpath.ps1'
+[6.519s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/share/movement_functions/hook/pythonpath.dsv'
+[6.519s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/share/movement_functions/hook/pythonpath.sh'
+[6.520s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/bin'
+[6.520s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(movement_functions)
+[6.521s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/share/movement_functions/package.ps1'
+[6.522s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/share/movement_functions/package.dsv'
+[6.523s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/share/movement_functions/package.sh'
+[6.523s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/share/movement_functions/package.bash'
+[6.524s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/share/movement_functions/package.zsh'
+[6.524s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/share/colcon-core/packages/movement_functions)
+[7.006s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/build/movement_utils' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --build /home/paulo/edromufu/src/movement/Ros2_change/build/movement_utils -- -j12 -l12
+[7.231s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/build/movement_utils': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --install /home/paulo/edromufu/src/movement/Ros2_change/build/movement_utils
+[7.309s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(movement_utils)
+[7.309s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils' for CMake module files
+[7.310s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/build/movement_utils' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --install /home/paulo/edromufu/src/movement/Ros2_change/build/movement_utils
+[7.310s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils' for CMake config files
+[7.311s] Level 1:colcon.colcon_core.shell:create_environment_hook('movement_utils', 'cmake_prefix_path')
+[7.312s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/hook/cmake_prefix_path.ps1'
+[7.312s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/hook/cmake_prefix_path.dsv'
+[7.313s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/hook/cmake_prefix_path.sh'
+[7.313s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/lib'
+[7.313s] Level 1:colcon.colcon_core.shell:create_environment_hook('movement_utils', 'ld_library_path_lib')
+[7.314s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/hook/ld_library_path_lib.ps1'
+[7.314s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/hook/ld_library_path_lib.dsv'
+[7.314s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/hook/ld_library_path_lib.sh'
+[7.314s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/bin'
+[7.314s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/lib/pkgconfig/movement_utils.pc'
+[7.315s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/lib/python3.10/site-packages'
+[7.315s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/bin'
+[7.315s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/package.ps1'
+[7.315s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/package.dsv'
+[7.316s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/package.sh'
+[7.316s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/package.bash'
+[7.316s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/package.zsh'
+[7.316s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/share/colcon-core/packages/movement_utils)
+[7.529s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(movement_utils)
+[7.529s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils' for CMake module files
+[7.529s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils' for CMake config files
+[7.530s] Level 1:colcon.colcon_core.shell:create_environment_hook('movement_utils', 'cmake_prefix_path')
+[7.530s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/hook/cmake_prefix_path.ps1'
+[7.530s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/hook/cmake_prefix_path.dsv'
+[7.531s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/hook/cmake_prefix_path.sh'
+[7.531s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/lib'
+[7.531s] Level 1:colcon.colcon_core.shell:create_environment_hook('movement_utils', 'ld_library_path_lib')
+[7.531s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/hook/ld_library_path_lib.ps1'
+[7.532s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/hook/ld_library_path_lib.dsv'
+[7.532s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/hook/ld_library_path_lib.sh'
+[7.532s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/bin'
+[7.532s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/lib/pkgconfig/movement_utils.pc'
+[7.533s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/lib/python3.10/site-packages'
+[7.533s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/bin'
+[7.533s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/package.ps1'
+[7.533s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/package.dsv'
+[7.534s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/package.sh'
+[7.534s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/package.bash'
+[7.534s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/package.zsh'
+[7.534s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/share/colcon-core/packages/movement_utils)
+[7.535s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/paulo/edromufu/src/movement/Ros2_change/src/movement_pages' with build type 'ament_python'
+[7.535s] Level 1:colcon.colcon_core.shell:create_environment_hook('movement_pages', 'ament_prefix_path')
+[7.535s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages/share/movement_pages/hook/ament_prefix_path.ps1'
+[7.536s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages/share/movement_pages/hook/ament_prefix_path.dsv'
+[7.536s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages/share/movement_pages/hook/ament_prefix_path.sh'
+[7.536s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.536s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.539s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/paulo/edromufu/src/movement/Ros2_change/src/u2d2_comm' with build type 'ament_python'
+[7.539s] Level 1:colcon.colcon_core.shell:create_environment_hook('u2d2_comm', 'ament_prefix_path')
+[7.539s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/share/u2d2_comm/hook/ament_prefix_path.ps1'
+[7.540s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/share/u2d2_comm/hook/ament_prefix_path.dsv'
+[7.540s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/share/u2d2_comm/hook/ament_prefix_path.sh'
+[7.540s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.540s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.756s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/paulo/edromufu/src/movement/Ros2_change/src/movement_pages'
+[7.757s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.757s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.983s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/paulo/edromufu/src/movement/Ros2_change/src/u2d2_comm'
+[7.983s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.983s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[8.290s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/src/u2d2_comm': AMENT_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/u2d2_comm build --build-base /home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/build install --record /home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/install.log --single-version-externally-managed install_data
+[8.293s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/src/movement_pages': AMENT_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/build/movement_pages/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/movement_pages build --build-base /home/paulo/edromufu/src/movement/Ros2_change/build/movement_pages/build install --record /home/paulo/edromufu/src/movement/Ros2_change/build/movement_pages/install.log --single-version-externally-managed install_data
+[8.560s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm' for CMake module files
+[8.561s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/src/u2d2_comm' returned '0': AMENT_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/u2d2_comm build --build-base /home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/build install --record /home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/install.log --single-version-externally-managed install_data
+[8.561s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm' for CMake config files
+[8.562s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib'
+[8.562s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/bin'
+[8.562s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/pkgconfig/u2d2_comm.pc'
+[8.562s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages'
+[8.563s] Level 1:colcon.colcon_core.shell:create_environment_hook('u2d2_comm', 'pythonpath')
+[8.563s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/share/u2d2_comm/hook/pythonpath.ps1'
+[8.563s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/share/u2d2_comm/hook/pythonpath.dsv'
+[8.564s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/share/u2d2_comm/hook/pythonpath.sh'
+[8.565s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/bin'
+[8.565s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(u2d2_comm)
+[8.565s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/share/u2d2_comm/package.ps1'
+[8.566s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/share/u2d2_comm/package.dsv'
+[8.566s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/share/u2d2_comm/package.sh'
+[8.566s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/share/u2d2_comm/package.bash'
+[8.567s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/share/u2d2_comm/package.zsh'
+[8.567s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/share/colcon-core/packages/u2d2_comm)
+[8.569s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages' for CMake module files
+[8.569s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages' for CMake config files
+[8.569s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/src/movement_pages' returned '0': AMENT_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/build/movement_pages/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/movement_pages build --build-base /home/paulo/edromufu/src/movement/Ros2_change/build/movement_pages/build install --record /home/paulo/edromufu/src/movement/Ros2_change/build/movement_pages/install.log --single-version-externally-managed install_data
+[8.570s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages/lib'
+[8.570s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages/bin'
+[8.570s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages/lib/pkgconfig/movement_pages.pc'
+[8.570s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages'
+[8.570s] Level 1:colcon.colcon_core.shell:create_environment_hook('movement_pages', 'pythonpath')
+[8.570s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages/share/movement_pages/hook/pythonpath.ps1'
+[8.571s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages/share/movement_pages/hook/pythonpath.dsv'
+[8.571s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages/share/movement_pages/hook/pythonpath.sh'
+[8.571s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages/bin'
+[8.571s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(movement_pages)
+[8.572s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages/share/movement_pages/package.ps1'
+[8.572s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages/share/movement_pages/package.dsv'
+[8.572s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages/share/movement_pages/package.sh'
+[8.573s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages/share/movement_pages/package.bash'
+[8.573s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages/share/movement_pages/package.zsh'
+[8.573s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages/share/colcon-core/packages/movement_pages)
+[8.573s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/paulo/edromufu/src/movement/Ros2_change/src/movement_core' with build type 'ament_python'
+[8.574s] Level 1:colcon.colcon_core.shell:create_environment_hook('movement_core', 'ament_prefix_path')
+[8.574s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core/share/movement_core/hook/ament_prefix_path.ps1'
+[8.574s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core/share/movement_core/hook/ament_prefix_path.dsv'
+[8.575s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core/share/movement_core/hook/ament_prefix_path.sh'
+[8.575s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[8.575s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[8.812s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/paulo/edromufu/src/movement/Ros2_change/src/movement_core'
+[8.812s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[8.812s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[9.084s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/src/movement_core': AMENT_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions:/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/build/movement_core/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core/lib/python3.10/site-packages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/lib/python3.10/site-packages:/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/lib/python3.10/site-packages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/movement_core build --build-base /home/paulo/edromufu/src/movement/Ros2_change/build/movement_core/build install --record /home/paulo/edromufu/src/movement/Ros2_change/build/movement_core/install.log --single-version-externally-managed install_data
+[9.317s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core' for CMake module files
+[9.317s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/src/movement_core' returned '0': AMENT_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions:/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/build/movement_core/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core/lib/python3.10/site-packages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions/lib/python3.10/site-packages:/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition/lib/python3.10/site-packages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/movement_core build --build-base /home/paulo/edromufu/src/movement/Ros2_change/build/movement_core/build install --record /home/paulo/edromufu/src/movement/Ros2_change/build/movement_core/install.log --single-version-externally-managed install_data
+[9.318s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core' for CMake config files
+[9.318s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core/lib'
+[9.318s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core/bin'
+[9.318s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core/lib/pkgconfig/movement_core.pc'
+[9.318s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core/lib/python3.10/site-packages'
+[9.318s] Level 1:colcon.colcon_core.shell:create_environment_hook('movement_core', 'pythonpath')
+[9.319s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core/share/movement_core/hook/pythonpath.ps1'
+[9.319s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core/share/movement_core/hook/pythonpath.dsv'
+[9.319s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core/share/movement_core/hook/pythonpath.sh'
+[9.320s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core/bin'
+[9.320s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(movement_core)
+[9.320s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core/share/movement_core/package.ps1'
+[9.320s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core/share/movement_core/package.dsv'
+[9.321s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core/share/movement_core/package.sh'
+[9.321s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core/share/movement_core/package.bash'
+[9.321s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core/share/movement_core/package.zsh'
+[9.321s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core/share/colcon-core/packages/movement_core)
+[9.322s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[9.322s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[9.322s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[9.322s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[9.340s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[9.340s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[9.340s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[9.351s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[9.351s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/paulo/edromufu/src/movement/Ros2_change/install/local_setup.ps1'
+[9.353s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/paulo/edromufu/src/movement/Ros2_change/install/_local_setup_util_ps1.py'
+[9.354s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/paulo/edromufu/src/movement/Ros2_change/install/setup.ps1'
+[9.355s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/paulo/edromufu/src/movement/Ros2_change/install/local_setup.sh'
+[9.356s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/paulo/edromufu/src/movement/Ros2_change/install/_local_setup_util_sh.py'
+[9.356s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/paulo/edromufu/src/movement/Ros2_change/install/setup.sh'
+[9.359s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/paulo/edromufu/src/movement/Ros2_change/install/local_setup.bash'
+[9.359s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/paulo/edromufu/src/movement/Ros2_change/install/setup.bash'
+[9.362s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/paulo/edromufu/src/movement/Ros2_change/install/local_setup.zsh'
+[9.362s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/paulo/edromufu/src/movement/Ros2_change/install/setup.zsh'

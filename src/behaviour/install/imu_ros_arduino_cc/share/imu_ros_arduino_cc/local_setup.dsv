@@ -1,0 +1,2 @@
+source;share/imu_ros_arduino_cc/environment/ament_prefix_path.sh
+source;share/imu_ros_arduino_cc/environment/path.sh

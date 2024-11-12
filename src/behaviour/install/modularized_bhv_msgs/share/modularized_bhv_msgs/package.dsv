@@ -1,0 +1,11 @@
+source;share/modularized_bhv_msgs/hook/cmake_prefix_path.ps1
+source;share/modularized_bhv_msgs/hook/cmake_prefix_path.dsv
+source;share/modularized_bhv_msgs/hook/cmake_prefix_path.sh
+source;share/modularized_bhv_msgs/hook/ld_library_path_lib.ps1
+source;share/modularized_bhv_msgs/hook/ld_library_path_lib.dsv
+source;share/modularized_bhv_msgs/hook/ld_library_path_lib.sh
+source;share/modularized_bhv_msgs/local_setup.bash
+source;share/modularized_bhv_msgs/local_setup.dsv
+source;share/modularized_bhv_msgs/local_setup.ps1
+source;share/modularized_bhv_msgs/local_setup.sh
+source;share/modularized_bhv_msgs/local_setup.zsh

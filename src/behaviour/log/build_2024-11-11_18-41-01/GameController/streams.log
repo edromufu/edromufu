@@ -1,0 +1,43 @@
+[1.664s] Invoking command in '/home/paulo/edromufu/src/behaviour/GameController': PYTHONPATH=/home/paulo/edromufu/src/behaviour/build/GameController/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/behaviour/install/GameController/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/GameController build --build-base /home/paulo/edromufu/src/behaviour/build/GameController/build install --record /home/paulo/edromufu/src/behaviour/build/GameController/install.log --single-version-externally-managed install_data
+[1.924s] running egg_info
+[1.924s] creating ../build/GameController/GameController.egg-info
+[1.924s] writing ../build/GameController/GameController.egg-info/PKG-INFO
+[1.924s] writing dependency_links to ../build/GameController/GameController.egg-info/dependency_links.txt
+[1.925s] writing entry points to ../build/GameController/GameController.egg-info/entry_points.txt
+[1.925s] writing requirements to ../build/GameController/GameController.egg-info/requires.txt
+[1.925s] writing top-level names to ../build/GameController/GameController.egg-info/top_level.txt
+[1.925s] writing manifest file '../build/GameController/GameController.egg-info/SOURCES.txt'
+[1.927s] reading manifest file '../build/GameController/GameController.egg-info/SOURCES.txt'
+[1.927s] writing manifest file '../build/GameController/GameController.egg-info/SOURCES.txt'
+[1.927s] running build
+[1.927s] running build_py
+[1.928s] creating /home/paulo/edromufu/src/behaviour/build/GameController/build
+[1.928s] creating /home/paulo/edromufu/src/behaviour/build/GameController/build/lib
+[1.928s] creating /home/paulo/edromufu/src/behaviour/build/GameController/build/lib/GameController
+[1.928s] copying GameController/__init__.py -> /home/paulo/edromufu/src/behaviour/build/GameController/build/lib/GameController
+[1.928s] copying GameController/connect.py -> /home/paulo/edromufu/src/behaviour/build/GameController/build/lib/GameController
+[1.928s] copying GameController/connect3.py -> /home/paulo/edromufu/src/behaviour/build/GameController/build/lib/GameController
+[1.930s] copying GameController/gamestate.py -> /home/paulo/edromufu/src/behaviour/build/GameController/build/lib/GameController
+[1.931s] running install
+[1.931s] running install_lib
+[1.932s] creating /home/paulo/edromufu/src/behaviour/install/GameController/lib/python3.10/site-packages/GameController
+[1.932s] copying /home/paulo/edromufu/src/behaviour/build/GameController/build/lib/GameController/__init__.py -> /home/paulo/edromufu/src/behaviour/install/GameController/lib/python3.10/site-packages/GameController
+[1.932s] copying /home/paulo/edromufu/src/behaviour/build/GameController/build/lib/GameController/connect.py -> /home/paulo/edromufu/src/behaviour/install/GameController/lib/python3.10/site-packages/GameController
+[1.932s] copying /home/paulo/edromufu/src/behaviour/build/GameController/build/lib/GameController/connect3.py -> /home/paulo/edromufu/src/behaviour/install/GameController/lib/python3.10/site-packages/GameController
+[1.933s] copying /home/paulo/edromufu/src/behaviour/build/GameController/build/lib/GameController/gamestate.py -> /home/paulo/edromufu/src/behaviour/install/GameController/lib/python3.10/site-packages/GameController
+[1.933s] byte-compiling /home/paulo/edromufu/src/behaviour/install/GameController/lib/python3.10/site-packages/GameController/__init__.py to __init__.cpython-310.pyc
+[1.933s] byte-compiling /home/paulo/edromufu/src/behaviour/install/GameController/lib/python3.10/site-packages/GameController/connect.py to connect.cpython-310.pyc
+[1.935s] byte-compiling /home/paulo/edromufu/src/behaviour/install/GameController/lib/python3.10/site-packages/GameController/connect3.py to connect3.cpython-310.pyc
+[1.937s] byte-compiling /home/paulo/edromufu/src/behaviour/install/GameController/lib/python3.10/site-packages/GameController/gamestate.py to gamestate.cpython-310.pyc
+[1.937s] running install_data
+[1.937s] creating /home/paulo/edromufu/src/behaviour/install/GameController/share/ament_index
+[1.938s] creating /home/paulo/edromufu/src/behaviour/install/GameController/share/ament_index/resource_index
+[1.938s] creating /home/paulo/edromufu/src/behaviour/install/GameController/share/ament_index/resource_index/packages
+[1.938s] copying resource/GameController -> /home/paulo/edromufu/src/behaviour/install/GameController/share/ament_index/resource_index/packages
+[1.938s] copying package.xml -> /home/paulo/edromufu/src/behaviour/install/GameController/share/GameController
+[1.938s] running install_egg_info
+[1.940s] Copying ../build/GameController/GameController.egg-info to /home/paulo/edromufu/src/behaviour/install/GameController/lib/python3.10/site-packages/GameController-1.0.0-py3.10.egg-info
+[1.940s] running install_scripts
+[1.964s] Installing gameController script to /home/paulo/edromufu/src/behaviour/install/GameController/lib/GameController
+[1.965s] writing list of installed files to '/home/paulo/edromufu/src/behaviour/build/GameController/install.log'
+[1.995s] Invoked command in '/home/paulo/edromufu/src/behaviour/GameController' returned '0': PYTHONPATH=/home/paulo/edromufu/src/behaviour/build/GameController/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/behaviour/install/GameController/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/GameController build --build-base /home/paulo/edromufu/src/behaviour/build/GameController/build install --record /home/paulo/edromufu/src/behaviour/build/GameController/install.log --single-version-externally-managed install_data

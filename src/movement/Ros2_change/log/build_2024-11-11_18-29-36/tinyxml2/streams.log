@@ -1,0 +1,23 @@
+[0.605s] Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/build/tinyxml2': /usr/bin/cmake --build /home/paulo/edromufu/src/movement/Ros2_change/build/tinyxml2 -- -j12 -l12
+[0.711s] -- Configuring done
+[0.832s] -- Generating done
+[0.858s] -- Build files have been written to: /home/paulo/edromufu/src/movement/Ros2_change/build/tinyxml2
+[0.930s] [35m[1mConsolidate compiler generated dependencies of target tinyxml2[0m
+[0.980s] [ 25%] [32mBuilding CXX object CMakeFiles/tinyxml2.dir/tinyxml2.cpp.o[0m
+[1.817s] [ 50%] [32m[1mLinking CXX static library libtinyxml2.a[0m
+[1.969s] [ 50%] Built target tinyxml2
+[1.989s] [35m[1mConsolidate compiler generated dependencies of target xmltest[0m
+[2.005s] [ 75%] [32mBuilding CXX object CMakeFiles/xmltest.dir/xmltest.cpp.o[0m
+[2.426s] [100%] [32m[1mLinking CXX executable xmltest[0m
+[2.540s] [100%] Built target xmltest
+[2.553s] Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/build/tinyxml2' returned '0': /usr/bin/cmake --build /home/paulo/edromufu/src/movement/Ros2_change/build/tinyxml2 -- -j12 -l12
+[2.636s] Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/build/tinyxml2': /usr/bin/cmake --install /home/paulo/edromufu/src/movement/Ros2_change/build/tinyxml2
+[2.643s] -- Install configuration: ""
+[2.643s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/tinyxml2/lib/libtinyxml2.a
+[2.644s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/tinyxml2/lib/cmake/tinyxml2/tinyxml2-static-targets.cmake
+[2.644s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/tinyxml2/lib/cmake/tinyxml2/tinyxml2-static-targets-noconfig.cmake
+[2.644s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/tinyxml2/lib/cmake/tinyxml2/tinyxml2-config.cmake
+[2.644s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/tinyxml2/lib/cmake/tinyxml2/tinyxml2-config-version.cmake
+[2.644s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/tinyxml2/include/tinyxml2.h
+[2.644s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/tinyxml2/lib/pkgconfig/tinyxml2.pc
+[3.609s] Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/build/tinyxml2' returned '0': /usr/bin/cmake --install /home/paulo/edromufu/src/movement/Ros2_change/build/tinyxml2

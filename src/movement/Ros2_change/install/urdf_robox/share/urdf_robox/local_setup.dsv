@@ -1,0 +1,2 @@
+source;share/urdf_robox/environment/ament_prefix_path.sh
+source;share/urdf_robox/environment/path.sh

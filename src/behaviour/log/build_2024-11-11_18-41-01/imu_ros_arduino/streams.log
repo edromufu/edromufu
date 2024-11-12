@@ -1,0 +1,38 @@
+[1.963s] Invoking command in '/home/paulo/edromufu/src/behaviour/imu_ros_arduino': PYTHONPATH=/home/paulo/edromufu/src/behaviour/build/imu_ros_arduino/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/imu_ros_arduino build --build-base /home/paulo/edromufu/src/behaviour/build/imu_ros_arduino/build install --record /home/paulo/edromufu/src/behaviour/build/imu_ros_arduino/install.log --single-version-externally-managed install_data
+[2.244s] running egg_info
+[2.245s] creating ../build/imu_ros_arduino/imu_ros_arduino.egg-info
+[2.245s] writing ../build/imu_ros_arduino/imu_ros_arduino.egg-info/PKG-INFO
+[2.245s] writing dependency_links to ../build/imu_ros_arduino/imu_ros_arduino.egg-info/dependency_links.txt
+[2.245s] writing entry points to ../build/imu_ros_arduino/imu_ros_arduino.egg-info/entry_points.txt
+[2.245s] writing requirements to ../build/imu_ros_arduino/imu_ros_arduino.egg-info/requires.txt
+[2.245s] writing top-level names to ../build/imu_ros_arduino/imu_ros_arduino.egg-info/top_level.txt
+[2.245s] writing manifest file '../build/imu_ros_arduino/imu_ros_arduino.egg-info/SOURCES.txt'
+[2.246s] reading manifest file '../build/imu_ros_arduino/imu_ros_arduino.egg-info/SOURCES.txt'
+[2.246s] adding license file 'LICENSE'
+[2.247s] writing manifest file '../build/imu_ros_arduino/imu_ros_arduino.egg-info/SOURCES.txt'
+[2.247s] running build
+[2.247s] running build_py
+[2.247s] creating /home/paulo/edromufu/src/behaviour/build/imu_ros_arduino/build
+[2.247s] creating /home/paulo/edromufu/src/behaviour/build/imu_ros_arduino/build/lib
+[2.247s] creating /home/paulo/edromufu/src/behaviour/build/imu_ros_arduino/build/lib/imu_ros_arduino
+[2.247s] copying imu_ros_arduino/__init__.py -> /home/paulo/edromufu/src/behaviour/build/imu_ros_arduino/build/lib/imu_ros_arduino
+[2.247s] copying imu_ros_arduino/imu_read.py -> /home/paulo/edromufu/src/behaviour/build/imu_ros_arduino/build/lib/imu_ros_arduino
+[2.247s] running install
+[2.248s] running install_lib
+[2.248s] creating /home/paulo/edromufu/src/behaviour/install/imu_ros_arduino/lib/python3.10/site-packages/imu_ros_arduino
+[2.248s] copying /home/paulo/edromufu/src/behaviour/build/imu_ros_arduino/build/lib/imu_ros_arduino/__init__.py -> /home/paulo/edromufu/src/behaviour/install/imu_ros_arduino/lib/python3.10/site-packages/imu_ros_arduino
+[2.248s] copying /home/paulo/edromufu/src/behaviour/build/imu_ros_arduino/build/lib/imu_ros_arduino/imu_read.py -> /home/paulo/edromufu/src/behaviour/install/imu_ros_arduino/lib/python3.10/site-packages/imu_ros_arduino
+[2.248s] byte-compiling /home/paulo/edromufu/src/behaviour/install/imu_ros_arduino/lib/python3.10/site-packages/imu_ros_arduino/__init__.py to __init__.cpython-310.pyc
+[2.249s] byte-compiling /home/paulo/edromufu/src/behaviour/install/imu_ros_arduino/lib/python3.10/site-packages/imu_ros_arduino/imu_read.py to imu_read.cpython-310.pyc
+[2.249s] running install_data
+[2.249s] creating /home/paulo/edromufu/src/behaviour/install/imu_ros_arduino/share/ament_index
+[2.249s] creating /home/paulo/edromufu/src/behaviour/install/imu_ros_arduino/share/ament_index/resource_index
+[2.249s] creating /home/paulo/edromufu/src/behaviour/install/imu_ros_arduino/share/ament_index/resource_index/packages
+[2.249s] copying resource/imu_ros_arduino -> /home/paulo/edromufu/src/behaviour/install/imu_ros_arduino/share/ament_index/resource_index/packages
+[2.249s] copying package.xml -> /home/paulo/edromufu/src/behaviour/install/imu_ros_arduino/share/imu_ros_arduino
+[2.250s] running install_egg_info
+[2.250s] Copying ../build/imu_ros_arduino/imu_ros_arduino.egg-info to /home/paulo/edromufu/src/behaviour/install/imu_ros_arduino/lib/python3.10/site-packages/imu_ros_arduino-0.0.0-py3.10.egg-info
+[2.251s] running install_scripts
+[2.266s] Installing IMU_node script to /home/paulo/edromufu/src/behaviour/install/imu_ros_arduino/lib/imu_ros_arduino
+[2.266s] writing list of installed files to '/home/paulo/edromufu/src/behaviour/build/imu_ros_arduino/install.log'
+[2.285s] Invoked command in '/home/paulo/edromufu/src/behaviour/imu_ros_arduino' returned '0': PYTHONPATH=/home/paulo/edromufu/src/behaviour/build/imu_ros_arduino/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/imu_ros_arduino build --build-base /home/paulo/edromufu/src/behaviour/build/imu_ros_arduino/build install --record /home/paulo/edromufu/src/behaviour/build/imu_ros_arduino/install.log --single-version-externally-managed install_data

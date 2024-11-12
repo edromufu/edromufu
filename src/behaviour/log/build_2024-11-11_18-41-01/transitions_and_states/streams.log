@@ -1,0 +1,49 @@
+[1.651s] Invoking command in '/home/paulo/edromufu/src/behaviour/transitions_and_states': PYTHONPATH=/home/paulo/edromufu/src/behaviour/build/transitions_and_states/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/behaviour/install/transitions_and_states/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/transitions_and_states build --build-base /home/paulo/edromufu/src/behaviour/build/transitions_and_states/build install --record /home/paulo/edromufu/src/behaviour/build/transitions_and_states/install.log --single-version-externally-managed install_data
+[1.922s] running egg_info
+[1.922s] creating ../build/transitions_and_states/transitions_and_states.egg-info
+[1.923s] writing ../build/transitions_and_states/transitions_and_states.egg-info/PKG-INFO
+[1.923s] writing dependency_links to ../build/transitions_and_states/transitions_and_states.egg-info/dependency_links.txt
+[1.923s] writing entry points to ../build/transitions_and_states/transitions_and_states.egg-info/entry_points.txt
+[1.923s] writing requirements to ../build/transitions_and_states/transitions_and_states.egg-info/requires.txt
+[1.923s] writing top-level names to ../build/transitions_and_states/transitions_and_states.egg-info/top_level.txt
+[1.924s] writing manifest file '../build/transitions_and_states/transitions_and_states.egg-info/SOURCES.txt'
+[1.925s] reading manifest file '../build/transitions_and_states/transitions_and_states.egg-info/SOURCES.txt'
+[1.925s] adding license file 'LICENSE'
+[1.926s] writing manifest file '../build/transitions_and_states/transitions_and_states.egg-info/SOURCES.txt'
+[1.926s] running build
+[1.926s] running build_py
+[1.926s] creating /home/paulo/edromufu/src/behaviour/build/transitions_and_states/build
+[1.927s] creating /home/paulo/edromufu/src/behaviour/build/transitions_and_states/build/lib
+[1.927s] creating /home/paulo/edromufu/src/behaviour/build/transitions_and_states/build/lib/transitions_and_states
+[1.927s] copying transitions_and_states/__init__.py -> /home/paulo/edromufu/src/behaviour/build/transitions_and_states/build/lib/transitions_and_states
+[1.927s] copying transitions_and_states/behaviour_parameters.py -> /home/paulo/edromufu/src/behaviour/build/transitions_and_states/build/lib/transitions_and_states
+[1.928s] copying transitions_and_states/goalkeeper_behaviour.py -> /home/paulo/edromufu/src/behaviour/build/transitions_and_states/build/lib/transitions_and_states
+[1.928s] copying transitions_and_states/striker_behaviour.py -> /home/paulo/edromufu/src/behaviour/build/transitions_and_states/build/lib/transitions_and_states
+[1.928s] copying transitions_and_states/state_machine.py -> /home/paulo/edromufu/src/behaviour/build/transitions_and_states/build/lib/transitions_and_states
+[1.929s] copying transitions_and_states/state_machine_receiver.py -> /home/paulo/edromufu/src/behaviour/build/transitions_and_states/build/lib/transitions_and_states
+[1.929s] running install
+[1.929s] running install_lib
+[1.931s] creating /home/paulo/edromufu/src/behaviour/install/transitions_and_states/lib/python3.10/site-packages/transitions_and_states
+[1.931s] copying /home/paulo/edromufu/src/behaviour/build/transitions_and_states/build/lib/transitions_and_states/__init__.py -> /home/paulo/edromufu/src/behaviour/install/transitions_and_states/lib/python3.10/site-packages/transitions_and_states
+[1.932s] copying /home/paulo/edromufu/src/behaviour/build/transitions_and_states/build/lib/transitions_and_states/behaviour_parameters.py -> /home/paulo/edromufu/src/behaviour/install/transitions_and_states/lib/python3.10/site-packages/transitions_and_states
+[1.932s] copying /home/paulo/edromufu/src/behaviour/build/transitions_and_states/build/lib/transitions_and_states/goalkeeper_behaviour.py -> /home/paulo/edromufu/src/behaviour/install/transitions_and_states/lib/python3.10/site-packages/transitions_and_states
+[1.933s] copying /home/paulo/edromufu/src/behaviour/build/transitions_and_states/build/lib/transitions_and_states/striker_behaviour.py -> /home/paulo/edromufu/src/behaviour/install/transitions_and_states/lib/python3.10/site-packages/transitions_and_states
+[1.933s] copying /home/paulo/edromufu/src/behaviour/build/transitions_and_states/build/lib/transitions_and_states/state_machine.py -> /home/paulo/edromufu/src/behaviour/install/transitions_and_states/lib/python3.10/site-packages/transitions_and_states
+[1.933s] copying /home/paulo/edromufu/src/behaviour/build/transitions_and_states/build/lib/transitions_and_states/state_machine_receiver.py -> /home/paulo/edromufu/src/behaviour/install/transitions_and_states/lib/python3.10/site-packages/transitions_and_states
+[1.933s] byte-compiling /home/paulo/edromufu/src/behaviour/install/transitions_and_states/lib/python3.10/site-packages/transitions_and_states/__init__.py to __init__.cpython-310.pyc
+[1.933s] byte-compiling /home/paulo/edromufu/src/behaviour/install/transitions_and_states/lib/python3.10/site-packages/transitions_and_states/behaviour_parameters.py to behaviour_parameters.cpython-310.pyc
+[1.934s] byte-compiling /home/paulo/edromufu/src/behaviour/install/transitions_and_states/lib/python3.10/site-packages/transitions_and_states/goalkeeper_behaviour.py to goalkeeper_behaviour.cpython-310.pyc
+[1.935s] byte-compiling /home/paulo/edromufu/src/behaviour/install/transitions_and_states/lib/python3.10/site-packages/transitions_and_states/striker_behaviour.py to striker_behaviour.cpython-310.pyc
+[1.937s] byte-compiling /home/paulo/edromufu/src/behaviour/install/transitions_and_states/lib/python3.10/site-packages/transitions_and_states/state_machine.py to state_machine.cpython-310.pyc
+[1.939s] byte-compiling /home/paulo/edromufu/src/behaviour/install/transitions_and_states/lib/python3.10/site-packages/transitions_and_states/state_machine_receiver.py to state_machine_receiver.cpython-310.pyc
+[1.939s] running install_data
+[1.939s] creating /home/paulo/edromufu/src/behaviour/install/transitions_and_states/share/ament_index
+[1.939s] creating /home/paulo/edromufu/src/behaviour/install/transitions_and_states/share/ament_index/resource_index
+[1.940s] creating /home/paulo/edromufu/src/behaviour/install/transitions_and_states/share/ament_index/resource_index/packages
+[1.940s] copying resource/transitions_and_states -> /home/paulo/edromufu/src/behaviour/install/transitions_and_states/share/ament_index/resource_index/packages
+[1.940s] copying package.xml -> /home/paulo/edromufu/src/behaviour/install/transitions_and_states/share/transitions_and_states
+[1.940s] running install_egg_info
+[1.945s] Copying ../build/transitions_and_states/transitions_and_states.egg-info to /home/paulo/edromufu/src/behaviour/install/transitions_and_states/lib/python3.10/site-packages/transitions_and_states-0.0.0-py3.10.egg-info
+[1.945s] running install_scripts
+[1.974s] writing list of installed files to '/home/paulo/edromufu/src/behaviour/build/transitions_and_states/install.log'
+[2.007s] Invoked command in '/home/paulo/edromufu/src/behaviour/transitions_and_states' returned '0': PYTHONPATH=/home/paulo/edromufu/src/behaviour/build/transitions_and_states/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/behaviour/install/transitions_and_states/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/transitions_and_states build --build-base /home/paulo/edromufu/src/behaviour/build/transitions_and_states/build install --record /home/paulo/edromufu/src/behaviour/build/transitions_and_states/install.log --single-version-externally-managed install_data

@@ -1,0 +1,522 @@
+[0.066s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.066s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x791df8723fa0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x791df87239d0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x791df87239d0>>)
+[0.182s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.182s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.182s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.182s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.182s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.182s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.182s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/paulo/edromufu/src/behaviour'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(GameController) by extensions ['ignore', 'ignore_ament_install']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(GameController) by extension 'ignore'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(GameController) by extension 'ignore_ament_install'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(GameController) by extensions ['colcon_pkg']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(GameController) by extension 'colcon_pkg'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(GameController) by extensions ['colcon_meta']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(GameController) by extension 'colcon_meta'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(GameController) by extensions ['ros']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(GameController) by extension 'ros'
+[0.204s] DEBUG:colcon.colcon_core.package_identification:Package 'GameController' with type 'ros.ament_python' and name 'GameController'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(bhv_independent_simulator) by extensions ['ignore', 'ignore_ament_install']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(bhv_independent_simulator) by extension 'ignore'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(bhv_independent_simulator) by extension 'ignore_ament_install'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(bhv_independent_simulator) by extensions ['colcon_pkg']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(bhv_independent_simulator) by extension 'colcon_pkg'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(bhv_independent_simulator) by extensions ['colcon_meta']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(bhv_independent_simulator) by extension 'colcon_meta'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(bhv_independent_simulator) by extensions ['ros']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(bhv_independent_simulator) by extension 'ros'
+[0.204s] DEBUG:colcon.colcon_core.package_identification:Package 'bhv_independent_simulator' with type 'ros.ament_python' and name 'bhv_independent_simulator'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(imu_ros_arduino) by extensions ['ignore', 'ignore_ament_install']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(imu_ros_arduino) by extension 'ignore'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(imu_ros_arduino) by extension 'ignore_ament_install'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(imu_ros_arduino) by extensions ['colcon_pkg']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(imu_ros_arduino) by extension 'colcon_pkg'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(imu_ros_arduino) by extensions ['colcon_meta']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(imu_ros_arduino) by extension 'colcon_meta'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(imu_ros_arduino) by extensions ['ros']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(imu_ros_arduino) by extension 'ros'
+[0.205s] DEBUG:colcon.colcon_core.package_identification:Package 'imu_ros_arduino' with type 'ros.ament_python' and name 'imu_ros_arduino'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(imu_ros_arduino_cc) by extensions ['ignore', 'ignore_ament_install']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(imu_ros_arduino_cc) by extension 'ignore'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(imu_ros_arduino_cc) by extension 'ignore_ament_install'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(imu_ros_arduino_cc) by extensions ['colcon_pkg']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(imu_ros_arduino_cc) by extension 'colcon_pkg'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(imu_ros_arduino_cc) by extensions ['colcon_meta']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(imu_ros_arduino_cc) by extension 'colcon_meta'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(imu_ros_arduino_cc) by extensions ['ros']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(imu_ros_arduino_cc) by extension 'ros'
+[0.206s] DEBUG:colcon.colcon_core.package_identification:Package 'imu_ros_arduino_cc' with type 'ros.ament_cmake' and name 'imu_ros_arduino_cc'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(modularized_bhv_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(modularized_bhv_msgs) by extension 'ignore'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(modularized_bhv_msgs) by extension 'ignore_ament_install'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(modularized_bhv_msgs) by extensions ['colcon_pkg']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(modularized_bhv_msgs) by extension 'colcon_pkg'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(modularized_bhv_msgs) by extensions ['colcon_meta']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(modularized_bhv_msgs) by extension 'colcon_meta'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(modularized_bhv_msgs) by extensions ['ros']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(modularized_bhv_msgs) by extension 'ros'
+[0.207s] DEBUG:colcon.colcon_core.package_identification:Package 'modularized_bhv_msgs' with type 'ros.ament_cmake' and name 'modularized_bhv_msgs'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_change) by extensions ['ignore', 'ignore_ament_install']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_change) by extension 'ignore'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_change) by extension 'ignore_ament_install'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_change) by extensions ['colcon_pkg']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_change) by extension 'colcon_pkg'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_change) by extensions ['colcon_meta']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_change) by extension 'colcon_meta'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_change) by extensions ['ros']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_change) by extension 'ros'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_change) by extensions ['cmake', 'python']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_change) by extension 'cmake'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_change) by extension 'python'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_change) by extensions ['python_setup_py']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_change) by extension 'python_setup_py'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_change/build) by extensions ['ignore', 'ignore_ament_install']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_change/build) by extension 'ignore'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_change/build) ignored
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_change/install) by extensions ['ignore', 'ignore_ament_install']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_change/install) by extension 'ignore'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_change/install) ignored
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_change/log) by extensions ['ignore', 'ignore_ament_install']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_change/log) by extension 'ignore'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_change/log) ignored
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(sensor_observer) by extensions ['ignore', 'ignore_ament_install']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(sensor_observer) by extension 'ignore'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(sensor_observer) by extension 'ignore_ament_install'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(sensor_observer) by extensions ['colcon_pkg']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(sensor_observer) by extension 'colcon_pkg'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(sensor_observer) by extensions ['colcon_meta']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(sensor_observer) by extension 'colcon_meta'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(sensor_observer) by extensions ['ros']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(sensor_observer) by extension 'ros'
+[0.208s] DEBUG:colcon.colcon_core.package_identification:Package 'sensor_observer' with type 'ros.ament_python' and name 'sensor_observer'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(states_routine) by extensions ['ignore', 'ignore_ament_install']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(states_routine) by extension 'ignore'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(states_routine) by extension 'ignore_ament_install'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(states_routine) by extensions ['colcon_pkg']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(states_routine) by extension 'colcon_pkg'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(states_routine) by extensions ['colcon_meta']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(states_routine) by extension 'colcon_meta'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(states_routine) by extensions ['ros']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(states_routine) by extension 'ros'
+[0.208s] DEBUG:colcon.colcon_core.package_identification:Package 'states_routine' with type 'ros.ament_python' and name 'states_routine'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(transitions_and_states) by extensions ['ignore', 'ignore_ament_install']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(transitions_and_states) by extension 'ignore'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(transitions_and_states) by extension 'ignore_ament_install'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(transitions_and_states) by extensions ['colcon_pkg']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(transitions_and_states) by extension 'colcon_pkg'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(transitions_and_states) by extensions ['colcon_meta']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(transitions_and_states) by extension 'colcon_meta'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(transitions_and_states) by extensions ['ros']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(transitions_and_states) by extension 'ros'
+[0.209s] DEBUG:colcon.colcon_core.package_identification:Package 'transitions_and_states' with type 'ros.ament_python' and name 'transitions_and_states'
+[0.209s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.209s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.209s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.209s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.209s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.224s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.224s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.226s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 8 installed packages in /home/paulo/edromufu/src/behaviour/install
+[0.226s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 6 installed packages in /home/paulo/micros/install
+[0.227s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 15 installed packages in /home/paulo/edromufu/src/movement/Ros2_change/install
+[0.228s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 295 installed packages in /opt/ros/humble
+[0.228s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.251s] Level 5:colcon.colcon_core.verb:set package 'GameController' build argument 'cmake_args' from command line to 'None'
+[0.251s] Level 5:colcon.colcon_core.verb:set package 'GameController' build argument 'cmake_target' from command line to 'None'
+[0.251s] Level 5:colcon.colcon_core.verb:set package 'GameController' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.251s] Level 5:colcon.colcon_core.verb:set package 'GameController' build argument 'cmake_clean_cache' from command line to 'False'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'GameController' build argument 'cmake_clean_first' from command line to 'False'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'GameController' build argument 'cmake_force_configure' from command line to 'False'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'GameController' build argument 'ament_cmake_args' from command line to 'None'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'GameController' build argument 'catkin_cmake_args' from command line to 'None'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'GameController' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.252s] DEBUG:colcon.colcon_core.verb:Building package 'GameController' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/paulo/edromufu/src/behaviour/build/GameController', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/paulo/edromufu/src/behaviour/install/GameController', 'merge_install': False, 'path': '/home/paulo/edromufu/src/behaviour/GameController', 'symlink_install': False, 'test_result_base': None}
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'bhv_independent_simulator' build argument 'cmake_args' from command line to 'None'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'bhv_independent_simulator' build argument 'cmake_target' from command line to 'None'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'bhv_independent_simulator' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'bhv_independent_simulator' build argument 'cmake_clean_cache' from command line to 'False'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'bhv_independent_simulator' build argument 'cmake_clean_first' from command line to 'False'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'bhv_independent_simulator' build argument 'cmake_force_configure' from command line to 'False'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'bhv_independent_simulator' build argument 'ament_cmake_args' from command line to 'None'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'bhv_independent_simulator' build argument 'catkin_cmake_args' from command line to 'None'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'bhv_independent_simulator' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.252s] DEBUG:colcon.colcon_core.verb:Building package 'bhv_independent_simulator' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/paulo/edromufu/src/behaviour/build/bhv_independent_simulator', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator', 'merge_install': False, 'path': '/home/paulo/edromufu/src/behaviour/bhv_independent_simulator', 'symlink_install': False, 'test_result_base': None}
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino' build argument 'cmake_args' from command line to 'None'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino' build argument 'cmake_target' from command line to 'None'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino' build argument 'cmake_clean_cache' from command line to 'False'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino' build argument 'cmake_clean_first' from command line to 'False'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino' build argument 'cmake_force_configure' from command line to 'False'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino' build argument 'ament_cmake_args' from command line to 'None'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino' build argument 'catkin_cmake_args' from command line to 'None'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.252s] DEBUG:colcon.colcon_core.verb:Building package 'imu_ros_arduino' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/paulo/edromufu/src/behaviour/build/imu_ros_arduino', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino', 'merge_install': False, 'path': '/home/paulo/edromufu/src/behaviour/imu_ros_arduino', 'symlink_install': False, 'test_result_base': None}
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino_cc' build argument 'cmake_args' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino_cc' build argument 'cmake_target' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino_cc' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino_cc' build argument 'cmake_clean_cache' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino_cc' build argument 'cmake_clean_first' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino_cc' build argument 'cmake_force_configure' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino_cc' build argument 'ament_cmake_args' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino_cc' build argument 'catkin_cmake_args' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'imu_ros_arduino_cc' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.253s] DEBUG:colcon.colcon_core.verb:Building package 'imu_ros_arduino_cc' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/paulo/edromufu/src/behaviour/build/imu_ros_arduino_cc', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino_cc', 'merge_install': False, 'path': '/home/paulo/edromufu/src/behaviour/imu_ros_arduino_cc', 'symlink_install': False, 'test_result_base': None}
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'modularized_bhv_msgs' build argument 'cmake_args' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'modularized_bhv_msgs' build argument 'cmake_target' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'modularized_bhv_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'modularized_bhv_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'modularized_bhv_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'modularized_bhv_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'modularized_bhv_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'modularized_bhv_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'modularized_bhv_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.253s] DEBUG:colcon.colcon_core.verb:Building package 'modularized_bhv_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/paulo/edromufu/src/behaviour/build/modularized_bhv_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs', 'merge_install': False, 'path': '/home/paulo/edromufu/src/behaviour/modularized_bhv_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'sensor_observer' build argument 'cmake_args' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'sensor_observer' build argument 'cmake_target' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'sensor_observer' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'sensor_observer' build argument 'cmake_clean_cache' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'sensor_observer' build argument 'cmake_clean_first' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'sensor_observer' build argument 'cmake_force_configure' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'sensor_observer' build argument 'ament_cmake_args' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'sensor_observer' build argument 'catkin_cmake_args' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'sensor_observer' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.254s] DEBUG:colcon.colcon_core.verb:Building package 'sensor_observer' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/paulo/edromufu/src/behaviour/build/sensor_observer', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/paulo/edromufu/src/behaviour/install/sensor_observer', 'merge_install': False, 'path': '/home/paulo/edromufu/src/behaviour/sensor_observer', 'symlink_install': False, 'test_result_base': None}
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'states_routine' build argument 'cmake_args' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'states_routine' build argument 'cmake_target' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'states_routine' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'states_routine' build argument 'cmake_clean_cache' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'states_routine' build argument 'cmake_clean_first' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'states_routine' build argument 'cmake_force_configure' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'states_routine' build argument 'ament_cmake_args' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'states_routine' build argument 'catkin_cmake_args' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'states_routine' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.254s] DEBUG:colcon.colcon_core.verb:Building package 'states_routine' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/paulo/edromufu/src/behaviour/build/states_routine', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/paulo/edromufu/src/behaviour/install/states_routine', 'merge_install': False, 'path': '/home/paulo/edromufu/src/behaviour/states_routine', 'symlink_install': False, 'test_result_base': None}
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'transitions_and_states' build argument 'cmake_args' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'transitions_and_states' build argument 'cmake_target' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'transitions_and_states' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'transitions_and_states' build argument 'cmake_clean_cache' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'transitions_and_states' build argument 'cmake_clean_first' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'transitions_and_states' build argument 'cmake_force_configure' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'transitions_and_states' build argument 'ament_cmake_args' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'transitions_and_states' build argument 'catkin_cmake_args' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'transitions_and_states' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.254s] DEBUG:colcon.colcon_core.verb:Building package 'transitions_and_states' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/paulo/edromufu/src/behaviour/build/transitions_and_states', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/paulo/edromufu/src/behaviour/install/transitions_and_states', 'merge_install': False, 'path': '/home/paulo/edromufu/src/behaviour/transitions_and_states', 'symlink_install': False, 'test_result_base': None}
+[0.254s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.255s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.255s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/paulo/edromufu/src/behaviour/GameController' with build type 'ament_python'
+[0.256s] Level 1:colcon.colcon_core.shell:create_environment_hook('GameController', 'ament_prefix_path')
+[0.257s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.257s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/GameController/share/GameController/hook/ament_prefix_path.ps1'
+[0.258s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/behaviour/install/GameController/share/GameController/hook/ament_prefix_path.dsv'
+[0.258s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/GameController/share/GameController/hook/ament_prefix_path.sh'
+[0.258s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.258s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.262s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/paulo/edromufu/src/behaviour/bhv_independent_simulator' with build type 'ament_python'
+[0.262s] Level 1:colcon.colcon_core.shell:create_environment_hook('bhv_independent_simulator', 'ament_prefix_path')
+[0.262s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/hook/ament_prefix_path.ps1'
+[0.262s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/hook/ament_prefix_path.dsv'
+[0.263s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/hook/ament_prefix_path.sh'
+[0.263s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.263s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.266s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/paulo/edromufu/src/behaviour/imu_ros_arduino' with build type 'ament_python'
+[0.266s] Level 1:colcon.colcon_core.shell:create_environment_hook('imu_ros_arduino', 'ament_prefix_path')
+[0.266s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino/share/imu_ros_arduino/hook/ament_prefix_path.ps1'
+[0.267s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino/share/imu_ros_arduino/hook/ament_prefix_path.dsv'
+[0.267s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino/share/imu_ros_arduino/hook/ament_prefix_path.sh'
+[0.267s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.267s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.270s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/paulo/edromufu/src/behaviour/imu_ros_arduino_cc' with build type 'ament_cmake'
+[0.270s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/paulo/edromufu/src/behaviour/imu_ros_arduino_cc'
+[0.270s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.270s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.274s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/paulo/edromufu/src/behaviour/modularized_bhv_msgs' with build type 'ament_cmake'
+[0.274s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/paulo/edromufu/src/behaviour/modularized_bhv_msgs'
+[0.274s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.274s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.277s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/paulo/edromufu/src/behaviour/sensor_observer' with build type 'ament_python'
+[0.277s] Level 1:colcon.colcon_core.shell:create_environment_hook('sensor_observer', 'ament_prefix_path')
+[0.278s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/sensor_observer/share/sensor_observer/hook/ament_prefix_path.ps1'
+[0.278s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/behaviour/install/sensor_observer/share/sensor_observer/hook/ament_prefix_path.dsv'
+[0.278s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/sensor_observer/share/sensor_observer/hook/ament_prefix_path.sh'
+[0.279s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.279s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.281s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/paulo/edromufu/src/behaviour/states_routine' with build type 'ament_python'
+[0.282s] Level 1:colcon.colcon_core.shell:create_environment_hook('states_routine', 'ament_prefix_path')
+[0.282s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/states_routine/share/states_routine/hook/ament_prefix_path.ps1'
+[0.282s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/behaviour/install/states_routine/share/states_routine/hook/ament_prefix_path.dsv'
+[0.282s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/states_routine/share/states_routine/hook/ament_prefix_path.sh'
+[0.283s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.283s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.286s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/paulo/edromufu/src/behaviour/transitions_and_states' with build type 'ament_python'
+[0.286s] Level 1:colcon.colcon_core.shell:create_environment_hook('transitions_and_states', 'ament_prefix_path')
+[0.286s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/transitions_and_states/share/transitions_and_states/hook/ament_prefix_path.ps1'
+[0.286s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/behaviour/install/transitions_and_states/share/transitions_and_states/hook/ament_prefix_path.dsv'
+[0.287s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/transitions_and_states/share/transitions_and_states/hook/ament_prefix_path.sh'
+[0.287s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.287s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.471s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/paulo/edromufu/src/behaviour/GameController'
+[0.471s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.471s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.657s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/paulo/edromufu/src/behaviour/bhv_independent_simulator'
+[0.657s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.657s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.837s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/paulo/edromufu/src/behaviour/imu_ros_arduino'
+[0.837s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.837s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.844s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paulo/edromufu/src/behaviour/build/imu_ros_arduino_cc': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/edromufu/src/behaviour/install/transitions_and_states:/home/paulo/edromufu/src/behaviour/install/states_routine:/home/paulo/edromufu/src/behaviour/install/sensor_observer:/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino:/home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator:/home/paulo/edromufu/src/behaviour/install/GameController:/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions:/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher:/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --build /home/paulo/edromufu/src/behaviour/build/imu_ros_arduino_cc -- -j12 -l12
+[0.847s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paulo/edromufu/src/behaviour/build/modularized_bhv_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/edromufu/src/behaviour/install/transitions_and_states:/home/paulo/edromufu/src/behaviour/install/states_routine:/home/paulo/edromufu/src/behaviour/install/sensor_observer:/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino:/home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator:/home/paulo/edromufu/src/behaviour/install/GameController:/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions:/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher:/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --build /home/paulo/edromufu/src/behaviour/build/modularized_bhv_msgs -- -j12 -l12
+[1.193s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/paulo/edromufu/src/behaviour/sensor_observer'
+[1.193s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.193s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.428s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/paulo/edromufu/src/behaviour/states_routine'
+[1.429s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.429s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.642s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/paulo/edromufu/src/behaviour/transitions_and_states'
+[1.643s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.643s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.647s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paulo/edromufu/src/behaviour/build/imu_ros_arduino_cc' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/edromufu/src/behaviour/install/transitions_and_states:/home/paulo/edromufu/src/behaviour/install/states_routine:/home/paulo/edromufu/src/behaviour/install/sensor_observer:/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino:/home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator:/home/paulo/edromufu/src/behaviour/install/GameController:/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions:/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher:/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --build /home/paulo/edromufu/src/behaviour/build/imu_ros_arduino_cc -- -j12 -l12
+[1.648s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paulo/edromufu/src/behaviour/build/modularized_bhv_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/edromufu/src/behaviour/install/transitions_and_states:/home/paulo/edromufu/src/behaviour/install/states_routine:/home/paulo/edromufu/src/behaviour/install/sensor_observer:/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino:/home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator:/home/paulo/edromufu/src/behaviour/install/GameController:/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions:/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher:/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --build /home/paulo/edromufu/src/behaviour/build/modularized_bhv_msgs -- -j12 -l12
+[1.684s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paulo/edromufu/src/behaviour/build/imu_ros_arduino_cc': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/edromufu/src/behaviour/install/transitions_and_states:/home/paulo/edromufu/src/behaviour/install/states_routine:/home/paulo/edromufu/src/behaviour/install/sensor_observer:/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino:/home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator:/home/paulo/edromufu/src/behaviour/install/GameController:/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions:/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher:/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --install /home/paulo/edromufu/src/behaviour/build/imu_ros_arduino_cc
+[1.698s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(imu_ros_arduino_cc)
+[1.703s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino_cc' for CMake module files
+[1.704s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paulo/edromufu/src/behaviour/build/imu_ros_arduino_cc' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/edromufu/src/behaviour/install/transitions_and_states:/home/paulo/edromufu/src/behaviour/install/states_routine:/home/paulo/edromufu/src/behaviour/install/sensor_observer:/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino:/home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator:/home/paulo/edromufu/src/behaviour/install/GameController:/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions:/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher:/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --install /home/paulo/edromufu/src/behaviour/build/imu_ros_arduino_cc
+[1.704s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino_cc' for CMake config files
+[1.704s] Level 1:colcon.colcon_core.shell:create_environment_hook('imu_ros_arduino_cc', 'cmake_prefix_path')
+[1.705s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino_cc/share/imu_ros_arduino_cc/hook/cmake_prefix_path.ps1'
+[1.705s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino_cc/share/imu_ros_arduino_cc/hook/cmake_prefix_path.dsv'
+[1.706s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino_cc/share/imu_ros_arduino_cc/hook/cmake_prefix_path.sh'
+[1.707s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino_cc/bin'
+[1.707s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino_cc/lib/pkgconfig/imu_ros_arduino_cc.pc'
+[1.707s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino_cc/lib/python3.10/site-packages'
+[1.707s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino_cc/bin'
+[1.708s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino_cc/share/imu_ros_arduino_cc/package.ps1'
+[1.709s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino_cc/share/imu_ros_arduino_cc/package.dsv'
+[1.710s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino_cc/share/imu_ros_arduino_cc/package.sh'
+[1.711s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino_cc/share/imu_ros_arduino_cc/package.bash'
+[1.712s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino_cc/share/imu_ros_arduino_cc/package.zsh'
+[1.713s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino_cc/share/colcon-core/packages/imu_ros_arduino_cc)
+[1.743s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(imu_ros_arduino_cc)
+[1.744s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino_cc' for CMake module files
+[1.744s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino_cc' for CMake config files
+[1.745s] Level 1:colcon.colcon_core.shell:create_environment_hook('imu_ros_arduino_cc', 'cmake_prefix_path')
+[1.745s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino_cc/share/imu_ros_arduino_cc/hook/cmake_prefix_path.ps1'
+[1.746s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino_cc/share/imu_ros_arduino_cc/hook/cmake_prefix_path.dsv'
+[1.746s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino_cc/share/imu_ros_arduino_cc/hook/cmake_prefix_path.sh'
+[1.747s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino_cc/bin'
+[1.747s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino_cc/lib/pkgconfig/imu_ros_arduino_cc.pc'
+[1.748s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino_cc/lib/python3.10/site-packages'
+[1.748s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino_cc/bin'
+[1.749s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino_cc/share/imu_ros_arduino_cc/package.ps1'
+[1.750s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino_cc/share/imu_ros_arduino_cc/package.dsv'
+[1.751s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino_cc/share/imu_ros_arduino_cc/package.sh'
+[1.751s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino_cc/share/imu_ros_arduino_cc/package.bash'
+[1.752s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino_cc/share/imu_ros_arduino_cc/package.zsh'
+[1.752s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino_cc/share/colcon-core/packages/imu_ros_arduino_cc)
+[1.799s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paulo/edromufu/src/behaviour/build/modularized_bhv_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/edromufu/src/behaviour/install/transitions_and_states:/home/paulo/edromufu/src/behaviour/install/states_routine:/home/paulo/edromufu/src/behaviour/install/sensor_observer:/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino:/home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator:/home/paulo/edromufu/src/behaviour/install/GameController:/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions:/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher:/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --install /home/paulo/edromufu/src/behaviour/build/modularized_bhv_msgs
+[1.893s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(modularized_bhv_msgs)
+[1.894s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs' for CMake module files
+[1.895s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs' for CMake config files
+[1.896s] Level 1:colcon.colcon_core.shell:create_environment_hook('modularized_bhv_msgs', 'cmake_prefix_path')
+[1.896s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/hook/cmake_prefix_path.ps1'
+[1.897s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/hook/cmake_prefix_path.dsv'
+[1.898s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/hook/cmake_prefix_path.sh'
+[1.898s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paulo/edromufu/src/behaviour/build/modularized_bhv_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/edromufu/src/behaviour/install/transitions_and_states:/home/paulo/edromufu/src/behaviour/install/states_routine:/home/paulo/edromufu/src/behaviour/install/sensor_observer:/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino:/home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator:/home/paulo/edromufu/src/behaviour/install/GameController:/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions:/home/paulo/edromufu/src/movement/Ros2_change/install/micro_publisher:/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions:/home/paulo/micros/install/micro_publisher:/opt/ros/humble /usr/bin/cmake --install /home/paulo/edromufu/src/behaviour/build/modularized_bhv_msgs
+[1.899s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/lib'
+[1.899s] Level 1:colcon.colcon_core.shell:create_environment_hook('modularized_bhv_msgs', 'ld_library_path_lib')
+[1.900s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/hook/ld_library_path_lib.ps1'
+[1.900s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/hook/ld_library_path_lib.dsv'
+[1.901s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/hook/ld_library_path_lib.sh'
+[1.901s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/bin'
+[1.902s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/lib/pkgconfig/modularized_bhv_msgs.pc'
+[1.902s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/lib/python3.10/site-packages'
+[1.902s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/bin'
+[1.903s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/package.ps1'
+[1.904s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/package.dsv'
+[1.905s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/package.sh'
+[1.905s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/package.bash'
+[1.906s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/package.zsh'
+[1.907s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/colcon-core/packages/modularized_bhv_msgs)
+[2.084s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(modularized_bhv_msgs)
+[2.085s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs' for CMake module files
+[2.086s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paulo/edromufu/src/behaviour/GameController': PYTHONPATH=/home/paulo/edromufu/src/behaviour/build/GameController/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/behaviour/install/GameController/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/GameController build --build-base /home/paulo/edromufu/src/behaviour/build/GameController/build install --record /home/paulo/edromufu/src/behaviour/build/GameController/install.log --single-version-externally-managed install_data
+[2.086s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs' for CMake config files
+[2.087s] Level 1:colcon.colcon_core.shell:create_environment_hook('modularized_bhv_msgs', 'cmake_prefix_path')
+[2.088s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/hook/cmake_prefix_path.ps1'
+[2.089s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/hook/cmake_prefix_path.dsv'
+[2.090s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/hook/cmake_prefix_path.sh'
+[2.091s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/lib'
+[2.092s] Level 1:colcon.colcon_core.shell:create_environment_hook('modularized_bhv_msgs', 'ld_library_path_lib')
+[2.092s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/hook/ld_library_path_lib.ps1'
+[2.093s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/hook/ld_library_path_lib.dsv'
+[2.094s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/hook/ld_library_path_lib.sh'
+[2.094s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/bin'
+[2.094s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/lib/pkgconfig/modularized_bhv_msgs.pc'
+[2.095s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/lib/python3.10/site-packages'
+[2.095s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/bin'
+[2.096s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/package.ps1'
+[2.097s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/package.dsv'
+[2.098s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/package.sh'
+[2.099s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/package.bash'
+[2.100s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/package.zsh'
+[2.101s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/paulo/edromufu/src/behaviour/install/modularized_bhv_msgs/share/colcon-core/packages/modularized_bhv_msgs)
+[2.105s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paulo/edromufu/src/behaviour/states_routine': PYTHONPATH=/home/paulo/edromufu/src/behaviour/build/states_routine/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/behaviour/install/states_routine/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/states_routine build --build-base /home/paulo/edromufu/src/behaviour/build/states_routine/build install --record /home/paulo/edromufu/src/behaviour/build/states_routine/install.log --single-version-externally-managed install_data
+[2.111s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paulo/edromufu/src/behaviour/transitions_and_states': PYTHONPATH=/home/paulo/edromufu/src/behaviour/build/transitions_and_states/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/behaviour/install/transitions_and_states/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/transitions_and_states build --build-base /home/paulo/edromufu/src/behaviour/build/transitions_and_states/build install --record /home/paulo/edromufu/src/behaviour/build/transitions_and_states/install.log --single-version-externally-managed install_data
+[2.214s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paulo/edromufu/src/behaviour/bhv_independent_simulator': PYTHONPATH=/home/paulo/edromufu/src/behaviour/build/bhv_independent_simulator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/bhv_independent_simulator build --build-base /home/paulo/edromufu/src/behaviour/build/bhv_independent_simulator/build install --record /home/paulo/edromufu/src/behaviour/build/bhv_independent_simulator/install.log --single-version-externally-managed install_data
+[2.241s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paulo/edromufu/src/behaviour/imu_ros_arduino': PYTHONPATH=/home/paulo/edromufu/src/behaviour/build/imu_ros_arduino/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/imu_ros_arduino build --build-base /home/paulo/edromufu/src/behaviour/build/imu_ros_arduino/build install --record /home/paulo/edromufu/src/behaviour/build/imu_ros_arduino/install.log --single-version-externally-managed install_data
+[2.252s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paulo/edromufu/src/behaviour/sensor_observer': PYTHONPATH=/home/paulo/edromufu/src/behaviour/build/sensor_observer/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/behaviour/install/sensor_observer/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/sensor_observer build --build-base /home/paulo/edromufu/src/behaviour/build/sensor_observer/build install --record /home/paulo/edromufu/src/behaviour/build/sensor_observer/install.log --single-version-externally-managed install_data
+[2.417s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/states_routine' for CMake module files
+[2.418s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paulo/edromufu/src/behaviour/states_routine' returned '0': PYTHONPATH=/home/paulo/edromufu/src/behaviour/build/states_routine/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/behaviour/install/states_routine/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/states_routine build --build-base /home/paulo/edromufu/src/behaviour/build/states_routine/build install --record /home/paulo/edromufu/src/behaviour/build/states_routine/install.log --single-version-externally-managed install_data
+[2.419s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/states_routine' for CMake config files
+[2.420s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/states_routine/lib'
+[2.420s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/states_routine/bin'
+[2.420s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/states_routine/lib/pkgconfig/states_routine.pc'
+[2.421s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/states_routine/lib/python3.10/site-packages'
+[2.421s] Level 1:colcon.colcon_core.shell:create_environment_hook('states_routine', 'pythonpath')
+[2.421s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/states_routine/share/states_routine/hook/pythonpath.ps1'
+[2.422s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/behaviour/install/states_routine/share/states_routine/hook/pythonpath.dsv'
+[2.423s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/states_routine/share/states_routine/hook/pythonpath.sh'
+[2.424s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/states_routine/bin'
+[2.424s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(states_routine)
+[2.425s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/states_routine/share/states_routine/package.ps1'
+[2.426s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/paulo/edromufu/src/behaviour/install/states_routine/share/states_routine/package.dsv'
+[2.426s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/states_routine/share/states_routine/package.sh'
+[2.426s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/states_routine/share/states_routine/package.bash'
+[2.427s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/states_routine/share/states_routine/package.zsh'
+[2.427s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/paulo/edromufu/src/behaviour/install/states_routine/share/colcon-core/packages/states_routine)
+[2.477s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/transitions_and_states' for CMake module files
+[2.478s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paulo/edromufu/src/behaviour/transitions_and_states' returned '0': PYTHONPATH=/home/paulo/edromufu/src/behaviour/build/transitions_and_states/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/behaviour/install/transitions_and_states/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/transitions_and_states build --build-base /home/paulo/edromufu/src/behaviour/build/transitions_and_states/build install --record /home/paulo/edromufu/src/behaviour/build/transitions_and_states/install.log --single-version-externally-managed install_data
+[2.478s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/transitions_and_states' for CMake config files
+[2.479s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/transitions_and_states/lib'
+[2.479s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/transitions_and_states/bin'
+[2.479s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/transitions_and_states/lib/pkgconfig/transitions_and_states.pc'
+[2.479s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/transitions_and_states/lib/python3.10/site-packages'
+[2.479s] Level 1:colcon.colcon_core.shell:create_environment_hook('transitions_and_states', 'pythonpath')
+[2.480s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/transitions_and_states/share/transitions_and_states/hook/pythonpath.ps1'
+[2.480s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/behaviour/install/transitions_and_states/share/transitions_and_states/hook/pythonpath.dsv'
+[2.481s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/transitions_and_states/share/transitions_and_states/hook/pythonpath.sh'
+[2.481s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/transitions_and_states/bin'
+[2.481s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(transitions_and_states)
+[2.482s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/transitions_and_states/share/transitions_and_states/package.ps1'
+[2.482s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/paulo/edromufu/src/behaviour/install/transitions_and_states/share/transitions_and_states/package.dsv'
+[2.483s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/transitions_and_states/share/transitions_and_states/package.sh'
+[2.483s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/transitions_and_states/share/transitions_and_states/package.bash'
+[2.483s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/transitions_and_states/share/transitions_and_states/package.zsh'
+[2.483s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/paulo/edromufu/src/behaviour/install/transitions_and_states/share/colcon-core/packages/transitions_and_states)
+[2.562s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino' for CMake module files
+[2.563s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paulo/edromufu/src/behaviour/imu_ros_arduino' returned '0': PYTHONPATH=/home/paulo/edromufu/src/behaviour/build/imu_ros_arduino/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/imu_ros_arduino build --build-base /home/paulo/edromufu/src/behaviour/build/imu_ros_arduino/build install --record /home/paulo/edromufu/src/behaviour/build/imu_ros_arduino/install.log --single-version-externally-managed install_data
+[2.563s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino' for CMake config files
+[2.564s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino/lib'
+[2.564s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino/bin'
+[2.564s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino/lib/pkgconfig/imu_ros_arduino.pc'
+[2.564s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino/lib/python3.10/site-packages'
+[2.564s] Level 1:colcon.colcon_core.shell:create_environment_hook('imu_ros_arduino', 'pythonpath')
+[2.565s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino/share/imu_ros_arduino/hook/pythonpath.ps1'
+[2.565s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino/share/imu_ros_arduino/hook/pythonpath.dsv'
+[2.566s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino/share/imu_ros_arduino/hook/pythonpath.sh'
+[2.567s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino/bin'
+[2.567s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(imu_ros_arduino)
+[2.567s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino/share/imu_ros_arduino/package.ps1'
+[2.568s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino/share/imu_ros_arduino/package.dsv'
+[2.568s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino/share/imu_ros_arduino/package.sh'
+[2.568s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino/share/imu_ros_arduino/package.bash'
+[2.569s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino/share/imu_ros_arduino/package.zsh'
+[2.569s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/paulo/edromufu/src/behaviour/install/imu_ros_arduino/share/colcon-core/packages/imu_ros_arduino)
+[2.600s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/GameController' for CMake module files
+[2.601s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paulo/edromufu/src/behaviour/GameController' returned '0': PYTHONPATH=/home/paulo/edromufu/src/behaviour/build/GameController/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/behaviour/install/GameController/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/GameController build --build-base /home/paulo/edromufu/src/behaviour/build/GameController/build install --record /home/paulo/edromufu/src/behaviour/build/GameController/install.log --single-version-externally-managed install_data
+[2.601s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/GameController' for CMake config files
+[2.602s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/GameController/lib'
+[2.602s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/GameController/bin'
+[2.602s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/GameController/lib/pkgconfig/GameController.pc'
+[2.603s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/GameController/lib/python3.10/site-packages'
+[2.603s] Level 1:colcon.colcon_core.shell:create_environment_hook('GameController', 'pythonpath')
+[2.603s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/GameController/share/GameController/hook/pythonpath.ps1'
+[2.604s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/behaviour/install/GameController/share/GameController/hook/pythonpath.dsv'
+[2.604s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/GameController/share/GameController/hook/pythonpath.sh'
+[2.605s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/GameController/bin'
+[2.606s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(GameController)
+[2.606s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/GameController/share/GameController/package.ps1'
+[2.607s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/paulo/edromufu/src/behaviour/install/GameController/share/GameController/package.dsv'
+[2.608s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/GameController/share/GameController/package.sh'
+[2.608s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/GameController/share/GameController/package.bash'
+[2.609s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/GameController/share/GameController/package.zsh'
+[2.609s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/paulo/edromufu/src/behaviour/install/GameController/share/colcon-core/packages/GameController)
+[2.623s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/sensor_observer' for CMake module files
+[2.624s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paulo/edromufu/src/behaviour/sensor_observer' returned '0': PYTHONPATH=/home/paulo/edromufu/src/behaviour/build/sensor_observer/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/behaviour/install/sensor_observer/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/sensor_observer build --build-base /home/paulo/edromufu/src/behaviour/build/sensor_observer/build install --record /home/paulo/edromufu/src/behaviour/build/sensor_observer/install.log --single-version-externally-managed install_data
+[2.624s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/sensor_observer' for CMake config files
+[2.624s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/sensor_observer/lib'
+[2.625s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/sensor_observer/bin'
+[2.625s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/sensor_observer/lib/pkgconfig/sensor_observer.pc'
+[2.625s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/sensor_observer/lib/python3.10/site-packages'
+[2.625s] Level 1:colcon.colcon_core.shell:create_environment_hook('sensor_observer', 'pythonpath')
+[2.625s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/sensor_observer/share/sensor_observer/hook/pythonpath.ps1'
+[2.625s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/behaviour/install/sensor_observer/share/sensor_observer/hook/pythonpath.dsv'
+[2.626s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/sensor_observer/share/sensor_observer/hook/pythonpath.sh'
+[2.626s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/sensor_observer/bin'
+[2.626s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sensor_observer)
+[2.627s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/sensor_observer/share/sensor_observer/package.ps1'
+[2.627s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/paulo/edromufu/src/behaviour/install/sensor_observer/share/sensor_observer/package.dsv'
+[2.627s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/sensor_observer/share/sensor_observer/package.sh'
+[2.628s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/sensor_observer/share/sensor_observer/package.bash'
+[2.628s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/sensor_observer/share/sensor_observer/package.zsh'
+[2.628s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/paulo/edromufu/src/behaviour/install/sensor_observer/share/colcon-core/packages/sensor_observer)
+[2.643s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator' for CMake module files
+[2.644s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paulo/edromufu/src/behaviour/bhv_independent_simulator' returned '0': PYTHONPATH=/home/paulo/edromufu/src/behaviour/build/bhv_independent_simulator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/bhv_independent_simulator build --build-base /home/paulo/edromufu/src/behaviour/build/bhv_independent_simulator/build install --record /home/paulo/edromufu/src/behaviour/build/bhv_independent_simulator/install.log --single-version-externally-managed install_data
+[2.644s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator' for CMake config files
+[2.644s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/lib'
+[2.645s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/bin'
+[2.645s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/lib/pkgconfig/bhv_independent_simulator.pc'
+[2.645s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages'
+[2.645s] Level 1:colcon.colcon_core.shell:create_environment_hook('bhv_independent_simulator', 'pythonpath')
+[2.645s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/hook/pythonpath.ps1'
+[2.645s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/hook/pythonpath.dsv'
+[2.645s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/hook/pythonpath.sh'
+[2.646s] Level 1:colcon.colcon_core.environment:checking '/home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/bin'
+[2.646s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(bhv_independent_simulator)
+[2.646s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/package.ps1'
+[2.646s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/package.dsv'
+[2.647s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/package.sh'
+[2.647s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/package.bash'
+[2.647s] INFO:colcon.colcon_core.shell:Creating package script '/home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/package.zsh'
+[2.647s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/paulo/edromufu/src/behaviour/install/bhv_independent_simulator/share/colcon-core/packages/bhv_independent_simulator)
+[2.647s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.648s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.648s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.648s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.653s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.653s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.653s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.662s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.663s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/paulo/edromufu/src/behaviour/install/local_setup.ps1'
+[2.664s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/paulo/edromufu/src/behaviour/install/_local_setup_util_ps1.py'
+[2.665s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/paulo/edromufu/src/behaviour/install/setup.ps1'
+[2.666s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/paulo/edromufu/src/behaviour/install/local_setup.sh'
+[2.667s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/paulo/edromufu/src/behaviour/install/_local_setup_util_sh.py'
+[2.667s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/paulo/edromufu/src/behaviour/install/setup.sh'
+[2.668s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/paulo/edromufu/src/behaviour/install/local_setup.bash'
+[2.669s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/paulo/edromufu/src/behaviour/install/setup.bash'
+[2.670s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/paulo/edromufu/src/behaviour/install/local_setup.zsh'
+[2.670s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/paulo/edromufu/src/behaviour/install/setup.zsh'

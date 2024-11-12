@@ -1,0 +1,23 @@
+running egg_info
+writing ../build/states_routine/states_routine.egg-info/PKG-INFO
+writing dependency_links to ../build/states_routine/states_routine.egg-info/dependency_links.txt
+writing entry points to ../build/states_routine/states_routine.egg-info/entry_points.txt
+writing requirements to ../build/states_routine/states_routine.egg-info/requires.txt
+writing top-level names to ../build/states_routine/states_routine.egg-info/top_level.txt
+reading manifest file '../build/states_routine/states_routine.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../build/states_routine/states_routine.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/paulo/edromufu/src/behaviour/install/states_routine/lib/python3.10/site-packages/states_routine-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../build/states_routine/states_routine.egg-info to /home/paulo/edromufu/src/behaviour/install/states_routine/lib/python3.10/site-packages/states_routine-0.0.0-py3.10.egg-info
+running install_scripts
+Installing getting_up_routine script to /home/paulo/edromufu/src/behaviour/install/states_routine/lib/states_routine
+Installing kick_routine script to /home/paulo/edromufu/src/behaviour/install/states_routine/lib/states_routine
+Installing stand_still_routine script to /home/paulo/edromufu/src/behaviour/install/states_routine/lib/states_routine
+Installing walking_routine script to /home/paulo/edromufu/src/behaviour/install/states_routine/lib/states_routine
+writing list of installed files to '/home/paulo/edromufu/src/behaviour/build/states_routine/install.log'

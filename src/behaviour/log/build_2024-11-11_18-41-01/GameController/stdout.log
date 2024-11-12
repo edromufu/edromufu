@@ -1,0 +1,41 @@
+running egg_info
+creating ../build/GameController/GameController.egg-info
+writing ../build/GameController/GameController.egg-info/PKG-INFO
+writing dependency_links to ../build/GameController/GameController.egg-info/dependency_links.txt
+writing entry points to ../build/GameController/GameController.egg-info/entry_points.txt
+writing requirements to ../build/GameController/GameController.egg-info/requires.txt
+writing top-level names to ../build/GameController/GameController.egg-info/top_level.txt
+writing manifest file '../build/GameController/GameController.egg-info/SOURCES.txt'
+reading manifest file '../build/GameController/GameController.egg-info/SOURCES.txt'
+writing manifest file '../build/GameController/GameController.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/paulo/edromufu/src/behaviour/build/GameController/build
+creating /home/paulo/edromufu/src/behaviour/build/GameController/build/lib
+creating /home/paulo/edromufu/src/behaviour/build/GameController/build/lib/GameController
+copying GameController/__init__.py -> /home/paulo/edromufu/src/behaviour/build/GameController/build/lib/GameController
+copying GameController/connect.py -> /home/paulo/edromufu/src/behaviour/build/GameController/build/lib/GameController
+copying GameController/connect3.py -> /home/paulo/edromufu/src/behaviour/build/GameController/build/lib/GameController
+copying GameController/gamestate.py -> /home/paulo/edromufu/src/behaviour/build/GameController/build/lib/GameController
+running install
+running install_lib
+creating /home/paulo/edromufu/src/behaviour/install/GameController/lib/python3.10/site-packages/GameController
+copying /home/paulo/edromufu/src/behaviour/build/GameController/build/lib/GameController/__init__.py -> /home/paulo/edromufu/src/behaviour/install/GameController/lib/python3.10/site-packages/GameController
+copying /home/paulo/edromufu/src/behaviour/build/GameController/build/lib/GameController/connect.py -> /home/paulo/edromufu/src/behaviour/install/GameController/lib/python3.10/site-packages/GameController
+copying /home/paulo/edromufu/src/behaviour/build/GameController/build/lib/GameController/connect3.py -> /home/paulo/edromufu/src/behaviour/install/GameController/lib/python3.10/site-packages/GameController
+copying /home/paulo/edromufu/src/behaviour/build/GameController/build/lib/GameController/gamestate.py -> /home/paulo/edromufu/src/behaviour/install/GameController/lib/python3.10/site-packages/GameController
+byte-compiling /home/paulo/edromufu/src/behaviour/install/GameController/lib/python3.10/site-packages/GameController/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/paulo/edromufu/src/behaviour/install/GameController/lib/python3.10/site-packages/GameController/connect.py to connect.cpython-310.pyc
+byte-compiling /home/paulo/edromufu/src/behaviour/install/GameController/lib/python3.10/site-packages/GameController/connect3.py to connect3.cpython-310.pyc
+byte-compiling /home/paulo/edromufu/src/behaviour/install/GameController/lib/python3.10/site-packages/GameController/gamestate.py to gamestate.cpython-310.pyc
+running install_data
+creating /home/paulo/edromufu/src/behaviour/install/GameController/share/ament_index
+creating /home/paulo/edromufu/src/behaviour/install/GameController/share/ament_index/resource_index
+creating /home/paulo/edromufu/src/behaviour/install/GameController/share/ament_index/resource_index/packages
+copying resource/GameController -> /home/paulo/edromufu/src/behaviour/install/GameController/share/ament_index/resource_index/packages
+copying package.xml -> /home/paulo/edromufu/src/behaviour/install/GameController/share/GameController
+running install_egg_info
+Copying ../build/GameController/GameController.egg-info to /home/paulo/edromufu/src/behaviour/install/GameController/lib/python3.10/site-packages/GameController-1.0.0-py3.10.egg-info
+running install_scripts
+Installing gameController script to /home/paulo/edromufu/src/behaviour/install/GameController/lib/GameController
+writing list of installed files to '/home/paulo/edromufu/src/behaviour/build/GameController/install.log'

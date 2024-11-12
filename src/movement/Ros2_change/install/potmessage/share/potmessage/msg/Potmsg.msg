@@ -1,0 +1,11 @@
+int32 pot1
+int32 pot2
+int32 pot3
+int32 pot4
+int32 pot5
+int32 pot6
+int32 pot7
+int32 pot8
+int32 imu1
+int32 imu2
+int32 imu3

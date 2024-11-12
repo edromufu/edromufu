@@ -1,0 +1,25 @@
+[1.823s] Invoking command in '/home/paulo/edromufu/src/behaviour/states_routine': PYTHONPATH=/home/paulo/edromufu/src/behaviour/build/states_routine/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/behaviour/install/states_routine/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/states_routine build --build-base /home/paulo/edromufu/src/behaviour/build/states_routine/build install --record /home/paulo/edromufu/src/behaviour/build/states_routine/install.log --single-version-externally-managed install_data
+[2.078s] running egg_info
+[2.079s] writing ../build/states_routine/states_routine.egg-info/PKG-INFO
+[2.079s] writing dependency_links to ../build/states_routine/states_routine.egg-info/dependency_links.txt
+[2.080s] writing entry points to ../build/states_routine/states_routine.egg-info/entry_points.txt
+[2.080s] writing requirements to ../build/states_routine/states_routine.egg-info/requires.txt
+[2.080s] writing top-level names to ../build/states_routine/states_routine.egg-info/top_level.txt
+[2.082s] reading manifest file '../build/states_routine/states_routine.egg-info/SOURCES.txt'
+[2.082s] adding license file 'LICENSE'
+[2.082s] writing manifest file '../build/states_routine/states_routine.egg-info/SOURCES.txt'
+[2.083s] running build
+[2.083s] running build_py
+[2.083s] running install
+[2.083s] running install_lib
+[2.085s] running install_data
+[2.085s] running install_egg_info
+[2.087s] removing '/home/paulo/edromufu/src/behaviour/install/states_routine/lib/python3.10/site-packages/states_routine-0.0.0-py3.10.egg-info' (and everything under it)
+[2.087s] Copying ../build/states_routine/states_routine.egg-info to /home/paulo/edromufu/src/behaviour/install/states_routine/lib/python3.10/site-packages/states_routine-0.0.0-py3.10.egg-info
+[2.087s] running install_scripts
+[2.110s] Installing getting_up_routine script to /home/paulo/edromufu/src/behaviour/install/states_routine/lib/states_routine
+[2.110s] Installing kick_routine script to /home/paulo/edromufu/src/behaviour/install/states_routine/lib/states_routine
+[2.110s] Installing stand_still_routine script to /home/paulo/edromufu/src/behaviour/install/states_routine/lib/states_routine
+[2.111s] Installing walking_routine script to /home/paulo/edromufu/src/behaviour/install/states_routine/lib/states_routine
+[2.111s] writing list of installed files to '/home/paulo/edromufu/src/behaviour/build/states_routine/install.log'
+[2.136s] Invoked command in '/home/paulo/edromufu/src/behaviour/states_routine' returned '0': PYTHONPATH=/home/paulo/edromufu/src/behaviour/build/states_routine/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/behaviour/install/states_routine/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/states_routine build --build-base /home/paulo/edromufu/src/behaviour/build/states_routine/build install --record /home/paulo/edromufu/src/behaviour/build/states_routine/install.log --single-version-externally-managed install_data

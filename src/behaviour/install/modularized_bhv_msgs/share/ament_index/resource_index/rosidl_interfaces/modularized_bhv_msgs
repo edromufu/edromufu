@@ -1,0 +1,10 @@
+msg/CurrentStateMsg.idl
+msg/CurrentStateMsg.msg
+msg/GameControllerMsg.idl
+msg/GameControllerMsg.msg
+msg/StateMachineMsg.idl
+msg/StateMachineMsg.msg
+srv/MoveRequest.idl
+srv/MoveRequest.srv
+srv/MoveRequest_Request.msg
+srv/MoveRequest_Response.msg
