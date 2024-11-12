@@ -16,7 +16,7 @@ set(_micro_ros_msgs_CONFIG_INCLUDED TRUE)
 
 # output package information
 if(NOT micro_ros_msgs_FIND_QUIETLY)
-  message(STATUS "Found micro_ros_msgs: 5.0.2 (${micro_ros_msgs_DIR})")
+  message(STATUS "Found micro_ros_msgs: 3.0.1 (${micro_ros_msgs_DIR})")
 endif()
 
 # warn when using a deprecated package

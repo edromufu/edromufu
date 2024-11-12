@@ -13,8 +13,8 @@ set_target_properties(micro_ros_msgs::micro_ros_msgs__rosidl_typesupport_cpp PRO
   IMPORTED_SONAME_NOCONFIG "libmicro_ros_msgs__rosidl_typesupport_cpp.so"
   )
 
-list(APPEND _cmake_import_check_targets micro_ros_msgs::micro_ros_msgs__rosidl_typesupport_cpp )
-list(APPEND _cmake_import_check_files_for_micro_ros_msgs::micro_ros_msgs__rosidl_typesupport_cpp "${_IMPORT_PREFIX}/lib/libmicro_ros_msgs__rosidl_typesupport_cpp.so" )
+list(APPEND _IMPORT_CHECK_TARGETS micro_ros_msgs::micro_ros_msgs__rosidl_typesupport_cpp )
+list(APPEND _IMPORT_CHECK_FILES_FOR_micro_ros_msgs::micro_ros_msgs__rosidl_typesupport_cpp "${_IMPORT_PREFIX}/lib/libmicro_ros_msgs__rosidl_typesupport_cpp.so" )
 
 # Commands beyond this point should not need to know the version.
 set(CMAKE_IMPORT_FILE_VERSION)

@@ -1,2 +1,0 @@
-int8 direction
-int8 steps_number

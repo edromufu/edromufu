@@ -1,6 +1,0 @@
-source;share/humanoid_definition/hook/pythonpath.ps1
-source;share/humanoid_definition/hook/pythonpath.dsv
-source;share/humanoid_definition/hook/pythonpath.sh
-source;share/humanoid_definition/hook/ament_prefix_path.ps1
-source;share/humanoid_definition/hook/ament_prefix_path.dsv
-source;share/humanoid_definition/hook/ament_prefix_path.sh

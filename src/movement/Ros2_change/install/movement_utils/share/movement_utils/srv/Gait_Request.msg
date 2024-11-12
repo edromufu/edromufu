@@ -1,2 +1,0 @@
-int8 steps_number
-float32 step_height

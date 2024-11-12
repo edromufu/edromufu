@@ -1,0 +1,21 @@
+[0.539s] Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/src/pot_package': PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/build/pot_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/movement/Ros2_change/install/pot_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/pot_package build --build-base /home/paulo/edromufu/src/movement/Ros2_change/build/pot_package/build install --record /home/paulo/edromufu/src/movement/Ros2_change/build/pot_package/install.log --single-version-externally-managed install_data
+[0.754s] running egg_info
+[0.755s] writing ../../build/pot_package/pot_package.egg-info/PKG-INFO
+[0.755s] writing dependency_links to ../../build/pot_package/pot_package.egg-info/dependency_links.txt
+[0.756s] writing entry points to ../../build/pot_package/pot_package.egg-info/entry_points.txt
+[0.756s] writing requirements to ../../build/pot_package/pot_package.egg-info/requires.txt
+[0.756s] writing top-level names to ../../build/pot_package/pot_package.egg-info/top_level.txt
+[0.757s] reading manifest file '../../build/pot_package/pot_package.egg-info/SOURCES.txt'
+[0.758s] writing manifest file '../../build/pot_package/pot_package.egg-info/SOURCES.txt'
+[0.758s] running build
+[0.758s] running build_py
+[0.758s] running install
+[0.759s] running install_lib
+[0.760s] running install_data
+[0.760s] running install_egg_info
+[0.762s] removing '/home/paulo/edromufu/src/movement/Ros2_change/install/pot_package/lib/python3.10/site-packages/pot_package-0.0.0-py3.10.egg-info' (and everything under it)
+[0.762s] Copying ../../build/pot_package/pot_package.egg-info to /home/paulo/edromufu/src/movement/Ros2_change/install/pot_package/lib/python3.10/site-packages/pot_package-0.0.0-py3.10.egg-info
+[0.762s] running install_scripts
+[0.782s] Installing pot_values_publisher script to /home/paulo/edromufu/src/movement/Ros2_change/install/pot_package/lib/pot_package
+[0.782s] writing list of installed files to '/home/paulo/edromufu/src/movement/Ros2_change/build/pot_package/install.log'
+[0.804s] Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/src/pot_package' returned '0': PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/build/pot_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/movement/Ros2_change/install/pot_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/pot_package build --build-base /home/paulo/edromufu/src/movement/Ros2_change/build/pot_package/build install --record /home/paulo/edromufu/src/movement/Ros2_change/build/pot_package/install.log --single-version-externally-managed install_data

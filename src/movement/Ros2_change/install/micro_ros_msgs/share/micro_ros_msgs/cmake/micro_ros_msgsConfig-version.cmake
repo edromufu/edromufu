@@ -1,5 +1,5 @@
 # generated from ament/cmake/core/templates/nameConfig-version.cmake.in
-set(PACKAGE_VERSION "5.0.2")
+set(PACKAGE_VERSION "3.0.1")
 
 set(PACKAGE_VERSION_EXACT False)
 set(PACKAGE_VERSION_COMPATIBLE False)

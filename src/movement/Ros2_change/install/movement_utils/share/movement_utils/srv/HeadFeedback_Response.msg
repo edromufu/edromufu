@@ -1,2 +1,0 @@
-
-float32[2] pos_vector

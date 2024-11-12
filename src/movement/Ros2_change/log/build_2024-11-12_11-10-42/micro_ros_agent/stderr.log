@@ -1,0 +1,14 @@
+Cloning into 'xrceagent'...
+fatal: não foi possível acessar 'https://github.com/eProsima/Micro-XRCE-DDS-Agent.git/': Could not resolve host: github.com
+Cloning into 'xrceagent'...
+fatal: não foi possível acessar 'https://github.com/eProsima/Micro-XRCE-DDS-Agent.git/': Could not resolve host: github.com
+Cloning into 'xrceagent'...
+fatal: não foi possível acessar 'https://github.com/eProsima/Micro-XRCE-DDS-Agent.git/': Could not resolve host: github.com
+[31mCMake Error at /home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_agent/agent/tmp/xrceagent-gitclone.cmake:31 (message):
+  Failed to clone repository:
+  'https://github.com/eProsima/Micro-XRCE-DDS-Agent.git'
+
+[0m
+gmake[2]: *** [CMakeFiles/xrceagent.dir/build.make:99: agent/src/xrceagent-stamp/xrceagent-download] Erro 1
+gmake[1]: *** [CMakeFiles/Makefile2:85: CMakeFiles/xrceagent.dir/all] Erro 2
+gmake: *** [Makefile:91: all] Erro 2

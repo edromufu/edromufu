@@ -1,2 +1,0 @@
-int8 support_foot
-int8 steps_number

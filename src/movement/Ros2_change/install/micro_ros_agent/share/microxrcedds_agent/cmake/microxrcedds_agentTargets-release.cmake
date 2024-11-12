@@ -13,8 +13,8 @@ set_target_properties(microxrcedds_agent PROPERTIES
   IMPORTED_SONAME_RELEASE "libmicroxrcedds_agent.so.2.4"
   )
 
-list(APPEND _cmake_import_check_targets microxrcedds_agent )
-list(APPEND _cmake_import_check_files_for_microxrcedds_agent "${_IMPORT_PREFIX}/lib/libmicroxrcedds_agent.so.2.4.1" )
+list(APPEND _IMPORT_CHECK_TARGETS microxrcedds_agent )
+list(APPEND _IMPORT_CHECK_FILES_FOR_microxrcedds_agent "${_IMPORT_PREFIX}/lib/libmicroxrcedds_agent.so.2.4.1" )
 
 # Commands beyond this point should not need to know the version.
 set(CMAKE_IMPORT_FILE_VERSION)

@@ -1,4 +1,0 @@
-# generated from rosidl_cmake/cmake/rosidl_cmake-extras.cmake.in
-
-set(movement_utils_IDL_FILES "msg/BodyMotorsData.idl;msg/HeadMotorsData.idl;srv/BodyFeedback.idl;srv/EnableTorque.idl;srv/Gait.idl;srv/HeadFeedback.idl;srv/Page.idl;srv/Rotate.idl;srv/WalkForward.idl")
-set(movement_utils_INTERFACE_FILES "msg/BodyMotorsData.msg;msg/HeadMotorsData.msg;srv/BodyFeedback.srv;srv/BodyFeedback_Request.msg;srv/BodyFeedback_Response.msg;srv/EnableTorque.srv;srv/EnableTorque_Request.msg;srv/EnableTorque_Response.msg;srv/Gait.srv;srv/Gait_Request.msg;srv/Gait_Response.msg;srv/HeadFeedback.srv;srv/HeadFeedback_Request.msg;srv/HeadFeedback_Response.msg;srv/Page.srv;srv/Page_Request.msg;srv/Page_Response.msg;srv/Rotate.srv;srv/Rotate_Request.msg;srv/Rotate_Response.msg;srv/WalkForward.srv;srv/WalkForward_Request.msg;srv/WalkForward_Response.msg")
