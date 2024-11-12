@@ -6,6 +6,7 @@ const int pinSaidaMux = 0;
 const int pinS0 = 2;
 const int pinS1 = 3;
 const int pinS2 = 4;
+float valor = 0.0;
 
 int values[8];
 
@@ -20,10 +21,14 @@ void setup() {
 }
 
 void loop() {
-  delay(30);
+  delay(100);
+  
   for (int canal = 0; canal < 8; canal++) {
     selecionarCanal(canal);
-    float valor = (analogRead(pinSaidaMux) - 2048) * 0.06491;
+    for (int j =0; j < 100; j++){
+    valor += (analogRead(pinSaidaMux) - 2048) * 0.06491;
+    }
+    valor = valor/100;
     Serial.print(valor);
     Serial.print(",");
   }
