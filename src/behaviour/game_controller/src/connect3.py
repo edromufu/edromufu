@@ -1,11 +1,21 @@
 import socket
 import time
 import rospy
+import os
+import sys
+
 
 from construct import Container, ConstError
 from std_msgs.msg import Bool
-from game_controller.gamestate import GameState, ReturnData, GAME_CONTROLLER_RESPONSE_VERSION
-from modularized_bhv_msgs.msg import GameControllerMsg
+
+edrom_dir = '/home/'+os.getlogin()+'/edromufu/src/'
+sys.path.append(edrom_dir+'behaviour')
+#sys.path.append(edrom_dir+'behaviour/modularized_bhv_msgs')
+
+from game_controller.src.gamestate import GameState, ReturnData, GAME_CONTROLLER_RESPONSE_VERSION
+
+sys.path.append(edrom_dir+'behaviour/modularized_bhv_msgs/msg')
+from modularized_bhv_msgs.msg import gameControllerMsg
 
 class GameStateReceiver:
     """ This class puts up a simple UDP Server which receives the
@@ -17,11 +27,11 @@ class GameStateReceiver:
     def __init__(self):
         rospy.init_node('game_controller')
 
-        self.team = rospy.get_param('~team_number', 1)
-        self.player_number = rospy.get_param('~robot_number', 2)
+        self.team = rospy.get_param('~team_number', 3)
+        self.player_number = rospy.get_param('~robot_number', 1)
         rospy.loginfo('We are playing as player {} in team {}'.format(self.player_number, self.team))
 
-        self.state_publisher = rospy.Publisher('gamestate', GameControllerMsg, queue_size=1)
+        self.state_publisher = rospy.Publisher('gamestate', gameControllerMsg, queue_size=1)
 
         self.man_penalize = False
         self.game_controller_lost_time = 20
@@ -96,7 +106,7 @@ class GameStateReceiver:
             if self.get_time_since_last_package() > self.game_controller_lost_time:
                 self.time += 5  # Resend message every five seconds
                 rospy.loginfo_throttle(5, "No GameController message received, allowing robot to move")
-                msg = GameControllerMsg()
+                msg = gameControllerMsg()
                 msg.game_state = 3  # PLAYING
                 self.state_publisher.publish(msg)
                 msg2 = Bool()
@@ -142,7 +152,7 @@ class GameStateReceiver:
             rospy.logerr('Robot {} not playing'.format(self.player_number))
             return
 
-        msg = GameControllerMsg()
+        msg = gameControllerMsg()
         msg.header.stamp = rospy.Time.now()
         msg.game_state = state.game_state.intvalue
         msg.secondary_state = state.secondary_state.intvalue

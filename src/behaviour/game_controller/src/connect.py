@@ -12,7 +12,6 @@ import sys
 import rospy  # Substituição de rclpy para ROS 1
 #Requires construct==2.5.3
 from construct import Container, ConstError
-from modularized_bhv_msgs import *
 
 edrom_dir = '/home/'+os.getlogin()+'/edromufu/src/'
 sys.path.append(edrom_dir+'behaviour')
@@ -31,7 +30,7 @@ GAME_CONTROLLER_LISTEN_PORT = 3838
 GAME_CONTROLLER_ANSWER_PORT = 3939
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--team', type=int, default=9, help="team ID, default is 1")
+parser.add_argument('--team', type=int, default=3, help="team ID, default is 1")
 parser.add_argument('--player', type=int, default=1, help="player ID, default is 1")
 parser.add_argument('--goalkeeper', action="store_true", help="if this flag is present, the player takes the role of the goalkeeper")
 
@@ -113,7 +112,7 @@ class GameStateReceiver(object):
         """ Sends a life sign to the game controller """
         return_message = 0 if self.man_penalize else 2
         if self.is_goalkeeper:
-            return_message = 3
+            return_message = 1 ## anterior 3
 
         data = Container(
             header=b"RGrt",

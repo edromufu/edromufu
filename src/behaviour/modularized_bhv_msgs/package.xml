@@ -4,15 +4,26 @@
   <version>0.0.0</version>
   <description>
     modularized_bhv_msgs package
-    This package includes ROS messages and services for humanoid_behaviour packages</description>
+    This package includes ROS messages and services for humanoid_behaviour packages
+  </description>
   <license>BSD</license>
   <maintainer email="edromufu@gmail.com">Equipe de Desenvolvimento em Robótica Móvel</maintainer>
+
+  <!-- Dependência da ferramenta de build -->
   <buildtool_depend>catkin</buildtool_depend>
-  
-  <depend>message_generation</depend>
-  <depend>std_msgs</depend>
-  <depend>dynamic_reconfigure</depend>
-  <depend>geometry_msgs</depend>
-  
+
+  <!-- Dependências de build -->
+  <build_depend>message_generation</build_depend>
+  <build_depend>message_runtime</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>dynamic_reconfigure</build_depend>
+
+  <!-- Dependências de execução -->
+  <exec_depend>message_runtime</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>dynamic_reconfigure</exec_depend>
+
   <export></export>
 </package>
