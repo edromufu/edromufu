@@ -1,6 +1,6 @@
 <launch>
-    <arg name="camera" default="0"/>
-    <arg name="img_output" default="false"/>
+    <arg name="camera" default="2"/>
+    <arg name="img_output" default="true"/>
     <arg name="ajuste" default="false"/>
     <arg name="brilho" default="4"/>
     

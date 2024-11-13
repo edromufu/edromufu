@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # coding=utf-8
 
+import time
 import rospy, os, sys
 
 
@@ -37,18 +38,17 @@ class Node():
         self.ajuste = rospy.get_param('vision/ajuste')
         self.bright = rospy.get_param('vision/brilho')
 
+        #Retorna os valores para verificação
+        print(f"\nCamera:{self.camera}\nOutput:{self.output_img}\nAjuste:{self.ajuste}\nBrilho:{self.bright}\n")
+
+
         #Pegando os parametros do behaviour
         self.parameters = BehaviourParameters()
         
         #Iniciando o nó e obtendo os arquivos que definem a rede neural
         rospy.init_node(nome_no, anonymous = True)
-        self.net = ri.get_cnn_files()
-        self.net.setPreferableBackend(cv2.dnn.DNN_BACKEND_CUDA)
-        self.net.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA)   
-        self.model = ri.set_model_input(self.net)
+        self.model = ri.set_model_input()
         self.searching = True
-        self.cap = cv2.VideoCapture(self.camera,cv2.CAP_ANY)
-        self.cap.set(cv2.CAP_PROP_BRIGHTNESS, (self.bright))
         self.publisher = rospy.Publisher(self.parameters.vision2BhvTopic, Webotsmsg, queue_size=100)
         
         #SE FOR NO REAL
@@ -63,29 +63,28 @@ class Node():
 
     def get_webcam(self):
 
-        
+        self.cap = cv2.VideoCapture(self.camera,cv2.CAP_ANY)
+        self.cap.set(cv2.CAP_PROP_BRIGHTNESS, (self.bright))
+
         if self.ajuste == True:
             print("Ajuste de Brilho '=' para aumentar e '-' para diminuir.\n")
             print("Para continuar a detecção. Aperte W.\n")
+            self.ajuste_camera()
 
-            self.current_frame = cv2.VideoCapture(f"/dev/video{self.camera}")
-            ret, self.current_frame = self.current_frame.read()
-            self.current_frame = cv2.resize(self.current_frame, (640,480))
-            #self.current_frame = cv2.blur(self.current_frame, (10,10))
+        while True:
+            start_time=time.time()
+            #Lê um frame da camera e redimensiona a imagem
+            ret, self.current_frame = self.cap.read()
 
             if not ret:
                 print("\nError capturing frame\n")
                 self.get_webcam()
 
                     
-            self.current_frame = cv2.resize(self.current_frame, (self.parameters.cameraWidth,self.parameters.cameraHeight))
-            self.classes, self.scores, self.boxes, self.fps = ri.detect_model(self.model,self.current_frame)
-                
+            #self.current_frame = cv2.resize(self.current_frame, (self.parameters.cameraWidth,self.parameters.cameraHeight))
+            self.classes, self.scores, self.boxes,self.inference_frame = ri.detect_model(self.model,self.current_frame)                
             if self.output_img == True:
-                self.show_result_frame()
-
-            if self.ajuste == True:
-                self.ajuste_camera()
+                cv2.imshow("Current Frame", self.inference_frame)
 
 
             self.publish_results()
@@ -93,13 +92,6 @@ class Node():
             if cv2.waitKey(1) == ord("q") :
                 self.cap.release()
                 cv2.destroyAllWindows()
-
-
-    def show_result_frame(self):
-        '''Shows the result frame obtained from neural network on OpenCV window.'''
-        ri.draw_results(self.current_frame, self.classes, self.scores, self.boxes)
-        cv2.imshow("Current Frame", self.current_frame)
-
 
         
     def publish_results(self):
@@ -112,14 +104,9 @@ class Node():
         self.dict_of_xs = dict()
 
         for i in range(len(self.boxes)):
-            [x_top, y_top, roi_width, roi_height] = self.boxes[i]
-
-            x = int(x_top + roi_width/2)
-            y = int(y_top + roi_height/2)
+            [x, y, roi_width, roi_height] = self.boxes[i]
             
             results = [True, x, y, roi_width, roi_height]
-
-            
 
             self.dict_of_xs[i] = {"classe": self.classes[i], "x": x}
 
@@ -127,7 +114,7 @@ class Node():
             if self.classes[i] not in self.list_of_classes_in_current_frame:
                 self.list_of_classes_in_current_frame.append(self.classes[i])
 
-                if self.classes[i]== 1:
+                if self.classes[i]== 0:
                     ball = Ball()
                     [ball.found, ball.x, ball.y, ball.roi_width, ball.roi_height] = results
                     objects_msg.ball = ball
