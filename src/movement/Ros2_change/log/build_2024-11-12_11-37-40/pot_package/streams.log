@@ -1,0 +1,37 @@
+[1.007s] Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/src/pot_package': PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/build/pot_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/movement/Ros2_change/install/pot_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/pot_package build --build-base /home/paulo/edromufu/src/movement/Ros2_change/build/pot_package/build install --record /home/paulo/edromufu/src/movement/Ros2_change/build/pot_package/install.log --single-version-externally-managed install_data
+[1.253s] running egg_info
+[1.253s] creating ../../build/pot_package/pot_package.egg-info
+[1.254s] writing ../../build/pot_package/pot_package.egg-info/PKG-INFO
+[1.254s] writing dependency_links to ../../build/pot_package/pot_package.egg-info/dependency_links.txt
+[1.254s] writing entry points to ../../build/pot_package/pot_package.egg-info/entry_points.txt
+[1.254s] writing requirements to ../../build/pot_package/pot_package.egg-info/requires.txt
+[1.254s] writing top-level names to ../../build/pot_package/pot_package.egg-info/top_level.txt
+[1.255s] writing manifest file '../../build/pot_package/pot_package.egg-info/SOURCES.txt'
+[1.256s] reading manifest file '../../build/pot_package/pot_package.egg-info/SOURCES.txt'
+[1.257s] writing manifest file '../../build/pot_package/pot_package.egg-info/SOURCES.txt'
+[1.257s] running build
+[1.257s] running build_py
+[1.257s] creating /home/paulo/edromufu/src/movement/Ros2_change/build/pot_package/build
+[1.257s] creating /home/paulo/edromufu/src/movement/Ros2_change/build/pot_package/build/lib
+[1.257s] creating /home/paulo/edromufu/src/movement/Ros2_change/build/pot_package/build/lib/pot_package
+[1.257s] copying pot_package/__init__.py -> /home/paulo/edromufu/src/movement/Ros2_change/build/pot_package/build/lib/pot_package
+[1.257s] copying pot_package/pot_values_publisher.py -> /home/paulo/edromufu/src/movement/Ros2_change/build/pot_package/build/lib/pot_package
+[1.258s] running install
+[1.259s] running install_lib
+[1.259s] creating /home/paulo/edromufu/src/movement/Ros2_change/install/pot_package/lib/python3.10/site-packages/pot_package
+[1.259s] copying /home/paulo/edromufu/src/movement/Ros2_change/build/pot_package/build/lib/pot_package/__init__.py -> /home/paulo/edromufu/src/movement/Ros2_change/install/pot_package/lib/python3.10/site-packages/pot_package
+[1.259s] copying /home/paulo/edromufu/src/movement/Ros2_change/build/pot_package/build/lib/pot_package/pot_values_publisher.py -> /home/paulo/edromufu/src/movement/Ros2_change/install/pot_package/lib/python3.10/site-packages/pot_package
+[1.260s] byte-compiling /home/paulo/edromufu/src/movement/Ros2_change/install/pot_package/lib/python3.10/site-packages/pot_package/__init__.py to __init__.cpython-310.pyc
+[1.261s] byte-compiling /home/paulo/edromufu/src/movement/Ros2_change/install/pot_package/lib/python3.10/site-packages/pot_package/pot_values_publisher.py to pot_values_publisher.cpython-310.pyc
+[1.262s] running install_data
+[1.262s] creating /home/paulo/edromufu/src/movement/Ros2_change/install/pot_package/share/ament_index
+[1.262s] creating /home/paulo/edromufu/src/movement/Ros2_change/install/pot_package/share/ament_index/resource_index
+[1.262s] creating /home/paulo/edromufu/src/movement/Ros2_change/install/pot_package/share/ament_index/resource_index/packages
+[1.263s] copying resource/pot_package -> /home/paulo/edromufu/src/movement/Ros2_change/install/pot_package/share/ament_index/resource_index/packages
+[1.263s] copying package.xml -> /home/paulo/edromufu/src/movement/Ros2_change/install/pot_package/share/pot_package
+[1.263s] running install_egg_info
+[1.265s] Copying ../../build/pot_package/pot_package.egg-info to /home/paulo/edromufu/src/movement/Ros2_change/install/pot_package/lib/python3.10/site-packages/pot_package-0.0.0-py3.10.egg-info
+[1.267s] running install_scripts
+[1.294s] Installing pot_values_publisher script to /home/paulo/edromufu/src/movement/Ros2_change/install/pot_package/lib/pot_package
+[1.294s] writing list of installed files to '/home/paulo/edromufu/src/movement/Ros2_change/build/pot_package/install.log'
+[1.330s] Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/src/pot_package' returned '0': PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/build/pot_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/movement/Ros2_change/install/pot_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/pot_package build --build-base /home/paulo/edromufu/src/movement/Ros2_change/build/pot_package/build install --record /home/paulo/edromufu/src/movement/Ros2_change/build/pot_package/install.log --single-version-externally-managed install_data

@@ -1,0 +1,20 @@
+[0.766s] Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/src/movement_pages': AMENT_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils LD_LIBRARY_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/build/movement_pages/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/movement_pages build --build-base /home/paulo/edromufu/src/movement/Ros2_change/build/movement_pages/build install --record /home/paulo/edromufu/src/movement/Ros2_change/build/movement_pages/install.log --single-version-externally-managed install_data
+[0.946s] running egg_info
+[0.946s] writing ../../build/movement_pages/movement_pages.egg-info/PKG-INFO
+[0.947s] writing dependency_links to ../../build/movement_pages/movement_pages.egg-info/dependency_links.txt
+[0.947s] writing entry points to ../../build/movement_pages/movement_pages.egg-info/entry_points.txt
+[0.947s] writing requirements to ../../build/movement_pages/movement_pages.egg-info/requires.txt
+[0.947s] writing top-level names to ../../build/movement_pages/movement_pages.egg-info/top_level.txt
+[0.948s] reading manifest file '../../build/movement_pages/movement_pages.egg-info/SOURCES.txt'
+[0.949s] writing manifest file '../../build/movement_pages/movement_pages.egg-info/SOURCES.txt'
+[0.949s] running build
+[0.949s] running build_py
+[0.949s] running install
+[0.949s] running install_lib
+[0.950s] running install_data
+[0.950s] running install_egg_info
+[0.952s] removing '/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages/movement_pages-0.0.0-py3.10.egg-info' (and everything under it)
+[0.952s] Copying ../../build/movement_pages/movement_pages.egg-info to /home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages/movement_pages-0.0.0-py3.10.egg-info
+[0.952s] running install_scripts
+[0.967s] writing list of installed files to '/home/paulo/edromufu/src/movement/Ros2_change/build/movement_pages/install.log'
+[0.997s] Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/src/movement_pages' returned '0': AMENT_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils LD_LIBRARY_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/build/movement_pages/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/movement_pages build --build-base /home/paulo/edromufu/src/movement/Ros2_change/build/movement_pages/build install --record /home/paulo/edromufu/src/movement/Ros2_change/build/movement_pages/install.log --single-version-externally-managed install_data

@@ -1,0 +1,54 @@
+[0.579s] Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/build/urdf_example': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm:/home/paulo/edromufu/src/movement/Ros2_change/install/tahara_pages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions:/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions:/home/paulo/edromufu/src/movement/Ros2_change/install/pot_package:/opt/ros/humble /usr/bin/cmake /home/paulo/edromufu/src/movement/Ros2_change/src/urdf_example -DCMAKE_INSTALL_PREFIX=/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example
+[0.641s] -- The C compiler identification is GNU 11.4.0
+[0.705s] -- The CXX compiler identification is GNU 11.4.0
+[0.717s] -- Detecting C compiler ABI info
+[0.814s] -- Detecting C compiler ABI info - done
+[0.824s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.824s] -- Detecting C compile features
+[0.825s] -- Detecting C compile features - done
+[0.829s] -- Detecting CXX compiler ABI info
+[0.941s] -- Detecting CXX compiler ABI info - done
+[0.954s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.954s] -- Detecting CXX compile features
+[0.955s] -- Detecting CXX compile features - done
+[0.958s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.121s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.205s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.296s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.298s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.299s] -- Added test 'lint_cmake' to check CMake code style
+[1.300s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.301s] -- Added test 'xmllint' to check XML markup files
+[1.304s] -- Configuring done
+[1.309s] -- Generating done
+[1.309s] -- Build files have been written to: /home/paulo/edromufu/src/movement/Ros2_change/build/urdf_example
+[1.313s] Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/build/urdf_example' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm:/home/paulo/edromufu/src/movement/Ros2_change/install/tahara_pages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions:/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions:/home/paulo/edromufu/src/movement/Ros2_change/install/pot_package:/opt/ros/humble /usr/bin/cmake /home/paulo/edromufu/src/movement/Ros2_change/src/urdf_example -DCMAKE_INSTALL_PREFIX=/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example
+[1.316s] Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/build/urdf_example': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm:/home/paulo/edromufu/src/movement/Ros2_change/install/tahara_pages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions:/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions:/home/paulo/edromufu/src/movement/Ros2_change/install/pot_package:/opt/ros/humble /usr/bin/cmake --build /home/paulo/edromufu/src/movement/Ros2_change/build/urdf_example -- -j12 -l12
+[1.355s] Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/build/urdf_example' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm:/home/paulo/edromufu/src/movement/Ros2_change/install/tahara_pages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions:/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions:/home/paulo/edromufu/src/movement/Ros2_change/install/pot_package:/opt/ros/humble /usr/bin/cmake --build /home/paulo/edromufu/src/movement/Ros2_change/build/urdf_example -- -j12 -l12
+[1.374s] Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/build/urdf_example': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm:/home/paulo/edromufu/src/movement/Ros2_change/install/tahara_pages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions:/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions:/home/paulo/edromufu/src/movement/Ros2_change/install/pot_package:/opt/ros/humble /usr/bin/cmake --install /home/paulo/edromufu/src/movement/Ros2_change/build/urdf_example
+[1.382s] -- Install configuration: ""
+[1.383s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/description
+[1.383s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/description/example_include.xacro
+[1.384s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/description/example_robot.urdf.xacro
+[1.384s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/description/example_gazebo.xacro
+[1.384s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/launch
+[1.384s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/launch/rsp.launch.py
+[1.385s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/launch/rsp_sim.launch.py
+[1.385s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/worlds
+[1.385s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/worlds/test_world.world
+[1.385s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/ament_index/resource_index/package_run_dependencies/urdf_example
+[1.385s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/ament_index/resource_index/parent_prefix_path/urdf_example
+[1.385s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/environment/ament_prefix_path.sh
+[1.385s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/environment/ament_prefix_path.dsv
+[1.385s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/environment/path.sh
+[1.385s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/environment/path.dsv
+[1.385s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/local_setup.bash
+[1.385s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/local_setup.sh
+[1.385s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/local_setup.zsh
+[1.385s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/local_setup.dsv
+[1.386s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/package.dsv
+[1.386s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/ament_index/resource_index/packages/urdf_example
+[1.386s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/cmake/urdf_exampleConfig.cmake
+[1.386s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/cmake/urdf_exampleConfig-version.cmake
+[1.386s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example/share/urdf_example/package.xml
+[1.397s] Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/build/urdf_example' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm:/home/paulo/edromufu/src/movement/Ros2_change/install/tahara_pages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_core:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_pages:/home/paulo/edromufu/src/movement/Ros2_change/install/movement_functions:/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/paulo/edromufu/src/movement/Ros2_change/install/kinematic_functions:/home/paulo/edromufu/src/movement/Ros2_change/install/pot_package:/opt/ros/humble /usr/bin/cmake --install /home/paulo/edromufu/src/movement/Ros2_change/build/urdf_example

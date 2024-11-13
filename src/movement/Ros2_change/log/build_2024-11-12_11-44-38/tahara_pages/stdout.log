@@ -1,0 +1,35 @@
+running egg_info
+writing ../../build/tahara_pages/tahara_pages.egg-info/PKG-INFO
+writing dependency_links to ../../build/tahara_pages/tahara_pages.egg-info/dependency_links.txt
+writing entry points to ../../build/tahara_pages/tahara_pages.egg-info/entry_points.txt
+writing requirements to ../../build/tahara_pages/tahara_pages.egg-info/requires.txt
+writing top-level names to ../../build/tahara_pages/tahara_pages.egg-info/top_level.txt
+reading manifest file '../../build/tahara_pages/tahara_pages.egg-info/SOURCES.txt'
+writing manifest file '../../build/tahara_pages/tahara_pages.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/paulo/edromufu/src/movement/Ros2_change/build/tahara_pages/build
+creating /home/paulo/edromufu/src/movement/Ros2_change/build/tahara_pages/build/lib
+creating /home/paulo/edromufu/src/movement/Ros2_change/build/tahara_pages/build/lib/tahara_pages
+copying tahara_pages/__init__.py -> /home/paulo/edromufu/src/movement/Ros2_change/build/tahara_pages/build/lib/tahara_pages
+copying tahara_pages/software.py -> /home/paulo/edromufu/src/movement/Ros2_change/build/tahara_pages/build/lib/tahara_pages
+copying tahara_pages/page_runner.py -> /home/paulo/edromufu/src/movement/Ros2_change/build/tahara_pages/build/lib/tahara_pages
+copying tahara_pages/test.py -> /home/paulo/edromufu/src/movement/Ros2_change/build/tahara_pages/build/lib/tahara_pages
+running install
+running install_lib
+creating /home/paulo/edromufu/src/movement/Ros2_change/install/tahara_pages/lib/python3.10/site-packages/tahara_pages
+copying /home/paulo/edromufu/src/movement/Ros2_change/build/tahara_pages/build/lib/tahara_pages/__init__.py -> /home/paulo/edromufu/src/movement/Ros2_change/install/tahara_pages/lib/python3.10/site-packages/tahara_pages
+copying /home/paulo/edromufu/src/movement/Ros2_change/build/tahara_pages/build/lib/tahara_pages/software.py -> /home/paulo/edromufu/src/movement/Ros2_change/install/tahara_pages/lib/python3.10/site-packages/tahara_pages
+copying /home/paulo/edromufu/src/movement/Ros2_change/build/tahara_pages/build/lib/tahara_pages/page_runner.py -> /home/paulo/edromufu/src/movement/Ros2_change/install/tahara_pages/lib/python3.10/site-packages/tahara_pages
+copying /home/paulo/edromufu/src/movement/Ros2_change/build/tahara_pages/build/lib/tahara_pages/test.py -> /home/paulo/edromufu/src/movement/Ros2_change/install/tahara_pages/lib/python3.10/site-packages/tahara_pages
+byte-compiling /home/paulo/edromufu/src/movement/Ros2_change/install/tahara_pages/lib/python3.10/site-packages/tahara_pages/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/paulo/edromufu/src/movement/Ros2_change/install/tahara_pages/lib/python3.10/site-packages/tahara_pages/software.py to software.cpython-310.pyc
+byte-compiling /home/paulo/edromufu/src/movement/Ros2_change/install/tahara_pages/lib/python3.10/site-packages/tahara_pages/page_runner.py to page_runner.cpython-310.pyc
+byte-compiling /home/paulo/edromufu/src/movement/Ros2_change/install/tahara_pages/lib/python3.10/site-packages/tahara_pages/test.py to test.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/paulo/edromufu/src/movement/Ros2_change/install/tahara_pages/lib/python3.10/site-packages/tahara_pages-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/tahara_pages/tahara_pages.egg-info to /home/paulo/edromufu/src/movement/Ros2_change/install/tahara_pages/lib/python3.10/site-packages/tahara_pages-0.0.0-py3.10.egg-info
+running install_scripts
+Installing software_pages script to /home/paulo/edromufu/src/movement/Ros2_change/install/tahara_pages/lib/tahara_pages
+writing list of installed files to '/home/paulo/edromufu/src/movement/Ros2_change/build/tahara_pages/install.log'

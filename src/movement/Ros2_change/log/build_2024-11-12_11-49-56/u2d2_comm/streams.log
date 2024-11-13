@@ -1,0 +1,23 @@
+[0.860s] Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/src/u2d2_comm': CMAKE_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils:/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox:/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example:/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization:/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent:/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/u2d2_comm build --build-base /home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/build install --record /home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/install.log --single-version-externally-managed install_data
+[1.044s] running egg_info
+[1.044s] writing ../../build/u2d2_comm/u2d2_comm.egg-info/PKG-INFO
+[1.044s] writing dependency_links to ../../build/u2d2_comm/u2d2_comm.egg-info/dependency_links.txt
+[1.044s] writing entry points to ../../build/u2d2_comm/u2d2_comm.egg-info/entry_points.txt
+[1.045s] writing requirements to ../../build/u2d2_comm/u2d2_comm.egg-info/requires.txt
+[1.045s] writing top-level names to ../../build/u2d2_comm/u2d2_comm.egg-info/top_level.txt
+[1.046s] reading manifest file '../../build/u2d2_comm/u2d2_comm.egg-info/SOURCES.txt'
+[1.046s] adding license file 'LICENSE'
+[1.047s] writing manifest file '../../build/u2d2_comm/u2d2_comm.egg-info/SOURCES.txt'
+[1.047s] running build
+[1.047s] running build_py
+[1.047s] running install
+[1.048s] running install_lib
+[1.049s] running install_data
+[1.049s] running install_egg_info
+[1.051s] removing '/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages/u2d2_comm-0.0.0-py3.10.egg-info' (and everything under it)
+[1.051s] Copying ../../build/u2d2_comm/u2d2_comm.egg-info to /home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages/u2d2_comm-0.0.0-py3.10.egg-info
+[1.052s] running install_scripts
+[1.068s] Installing dynamixel_sdk_comm script to /home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/u2d2_comm
+[1.068s] Installing dynamixel_sdk_test script to /home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/u2d2_comm
+[1.068s] writing list of installed files to '/home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/install.log'
+[1.096s] Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/src/u2d2_comm' returned '0': CMAKE_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/movement_utils:/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_robox:/home/paulo/edromufu/src/movement/Ros2_change/install/urdf_example:/home/paulo/edromufu/src/movement/Ros2_change/install/humanoid_visualization:/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent:/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paulo/edromufu/src/movement/Ros2_change/install/u2d2_comm/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/u2d2_comm build --build-base /home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/build install --record /home/paulo/edromufu/src/movement/Ros2_change/build/u2d2_comm/install.log --single-version-externally-managed install_data

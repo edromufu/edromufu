@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<package format="3">
+  <name>urdf_robox</name>
+  <version>1.0.0</version>
+  <description>
+    <p>URDF Description package for urdf_robox</p>
+    <p>This package contains configuration data, 3D models and launch files
+for urdf_robox robot</p>
+  </description>
+  <author>TODO</author>
+  <maintainer email="TODO@email.com" />
+  <license>BSD</license>
+    <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
