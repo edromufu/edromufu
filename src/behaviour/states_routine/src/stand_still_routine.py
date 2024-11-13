@@ -27,7 +27,7 @@ class stand_still_routine():
     def runStandStill(self, event):
         if self.flag:
             print('Routine Stand Still')
-            self.move_request('aurea_first_pose')
+            self.move_request('aurea_new_first_pose')
     
     def flagUpdate(self, msg):
         message = msg.currentState

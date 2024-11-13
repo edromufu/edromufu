@@ -120,7 +120,6 @@ class GameStateReceiver(object):
     def answer_to_gamecontroller(self, peer):
         """ Sends a life sign to the game controller """
         return_message = 0 if self.man_penalize else 2
-
         data = Container(
             header=b"RGrt",
             version=GAME_CONTROLLER_RESPONSE_VERSION,

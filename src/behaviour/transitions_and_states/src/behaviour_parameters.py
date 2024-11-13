@@ -58,8 +58,8 @@ class BehaviourParameters():
         self.vision2BhvTopic = '/vision/vision_inference'
 
         #Parâmetros da câmera
-        self.cameraWidth =  416
-        self.cameraHeight = 416
+        self.cameraWidth =  640
+        self.cameraHeight = 480
 
         #Parâmetros de interpretação da câmera
         self.xCenterLeftLimit = 4*self.cameraWidth/10

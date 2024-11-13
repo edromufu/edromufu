@@ -122,11 +122,14 @@ class CoreHead:
                         rotation = -1
 
                     [currentHorRotation, currentVerRotation] = self.motorsFeedback(True).pos_vector
+                    while currentHorRotation == -1.0 or currentVerRotation == -1.0:
+                        [currentHorRotation, currentVerRotation] = self.motorsFeedback(True).pos_vector
                     if abs(currentVerRotation-UP_Y_POSITION) < abs(currentVerRotation-BOTTOM_Y_POSITION):
                         startVer = UP_Y_POSITION
                     else:
                         startVer = BOTTOM_Y_POSITION
-                    
+                    print(currentHorRotation, currentVerRotation)
+
                     dists = np.sqrt((self.cwHeadPositions[:, 0] - currentHorRotation)**2 + (self.cwHeadPositions[:, 1] - currentVerRotation)**2)
                     i = np.argmin(dists)
 

@@ -71,7 +71,7 @@ class Node():
             print("Para continuar a detecção. Aperte W.\n")
             self.ajuste_camera()
 
-        while True:
+        while not rospy.is_shutdown():
             start_time=time.time()
             #Lê um frame da camera e redimensiona a imagem
             ret, self.current_frame = self.cap.read()
@@ -98,7 +98,7 @@ class Node():
 
         objects_msg = Webotsmsg()
         objects_msg.searching = self.searching
-        objects_msg.fps = self.fps
+        #objects_msg.fps = self.fps
 
         self.list_of_classes_in_current_frame = []
         self.dict_of_xs = dict()
@@ -106,7 +106,7 @@ class Node():
         for i in range(len(self.boxes)):
             [x, y, roi_width, roi_height] = self.boxes[i]
             
-            results = [True, x, y, roi_width, roi_height]
+            results = [True, int(x), int(y), int(roi_width), int(roi_height)]
 
             self.dict_of_xs[i] = {"classe": self.classes[i], "x": x}
 
@@ -119,6 +119,7 @@ class Node():
                     [ball.found, ball.x, ball.y, ball.roi_width, ball.roi_height] = results
                     objects_msg.ball = ball
             
+            '''
             else:
                 self.maior_x = -1
                 self.menor_x = 500
@@ -136,7 +137,7 @@ class Node():
                     self.dict_of_xs[self.pos_menor_x]['classe'] = 1
 
                 elif self.dict_of_xs[self.pos_maior_x]['classe'] == 1:
-                    self.dict_of_xs[self.pos_maior_x]['classe'] = 2
+                    self.dict_of_xs[self.pos_maior_x]['classe'] = 2'''
 
                 
         self.publisher.publish(objects_msg)

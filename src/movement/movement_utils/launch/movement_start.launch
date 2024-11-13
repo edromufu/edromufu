@@ -1,11 +1,11 @@
 <launch>
     <arg name="u2d2_connected" default="true"/>
-    <arg name="u2d2_port" default="/dev/ttyU2D2"/>
+    <arg name="u2d2_port" default="/dev/ttyUSB0"/>
     <arg name="robot_name" default="aurea"/>
-    <arg name="page_creation" default="true"/>
+    <arg name="page_creation" default="false"/>
     <arg name="queue_time" default="0.05"/>
     <arg name="visualization" default="false"/>
-    <arg name="head_plugged" default="false"/>
+    <arg name="head_plugged" default="true"/>
     <arg name="behaviour" default="false"/>
 
     <!-- Inicialização do movimento de caminhada e pages-->
@@ -32,10 +32,10 @@
 
     <!-- Inicialização da visão-->
     <include file="$(find object_finder)/launch/vision.launch" if="$(eval arg('head_plugged'))">
-        <arg name="img_output" value="false"/>
+        <arg name="img_output" value="true"/>
         <arg name="ajuste" value="false"/>
         <arg name="brilho" value="4"/>
-        <arg name="camera" value="0"/>
+        <arg name="camera" value="2"/>
     </include>
 
     <!-- Inicialização da interface de captura de page -->

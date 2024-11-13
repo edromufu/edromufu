@@ -55,7 +55,7 @@ class goalkeeper_brain:
     def updateHorRotation(self, msg):
         self.HorRotation,VerRotation = msg.pos_vector
     
-    def run():
+    def run(self):
         while not rospy.is_shutdown():
 
             if self.found:
@@ -65,17 +65,22 @@ class goalkeeper_brain:
                 # >0 Direita e <0 esquerda
                 
                 if self.HorRotation < self.parameters.lookingLeftRad/2:              
-                    self.pageCall('natasha_left_defense')
+                    self.pageCall('natasha_left_defense') #MUDAR AQUI
                     self.fall()
                 elif self.HorRotation > self.parameters.lookingRighttRad/2:
-                    self.pageCall('natasha_right_defense')
+                    self.pageCall('aurea_right_defense') #MUDAR AQUI
+                    self.fall()
+                elif self.HorRotation == self.parameters.minVerRad2Kick:
+                #    self.pageCall('codigo_natasha')   #MUDAR AQUI 
+                    print('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
                     self.fall()
                 else:
                     pass
     
-    def fall():
+    def fall(self):
         while not rospy.is_shutdown():
-            self.pageCall('fallen_natasha')
+            rospy.sleep(9)
+            self.pageCall('fallen_aurea')
                 
 if __name__ == '__main__':
     goalkeeper_brain = goalkeeper_brain()
