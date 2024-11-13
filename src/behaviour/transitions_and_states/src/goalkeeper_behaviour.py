@@ -58,14 +58,14 @@ class goalkeeper_brain:
     def run(self):
         while not rospy.is_shutdown():
 
-            if self.found:
+            if self.found: #Se quiser trocar para page infinita "IF not"
                 self.pageCall('natasha_squat')
 
             elif self.found and self.ballClose:
                 # >0 Direita e <0 esquerda
                 
                 if self.HorRotation < self.parameters.lookingLeftRad/2:              
-                    self.pageCall('natasha_left_defense') #MUDAR AQUI
+                    self.pageCall('natasha_left_defense') #Para a page de andar de lado trocar para while
                     self.fall()
                 elif self.HorRotation > self.parameters.lookingRighttRad/2:
                     self.pageCall('aurea_right_defense') #MUDAR AQUI
