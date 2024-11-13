@@ -19,14 +19,6 @@ def generate_launch_description():
             default_value='/dev/ttyIMU',
             description='Porta serial para o IMU'
         ),
-
-        # Argumento para o estado inicial do GameController
-        DeclareLaunchArgument(
-            'game_controller_state',
-            default_value='null',  # Estado "Playing" por padrão
-            description='Estado inicial do GameController (0: Inicial, 1: Ready, 2: Set, 3: Playing, 4: Finished)'
-        ),
-
         # Máquina de Estados
         Node(
             package='transitions_and_states',
@@ -77,13 +69,14 @@ def generate_launch_description():
             condition=LaunchConfiguration('imu_connected'),
             parameters=[{'port': LaunchConfiguration('imu_port')}],
         ),
-
-        # Nó do GameController para controlar o estado do jogo
+        
+        '''  # Nó do GameController para controlar o estado do jogo
         Node(
             package='game_controller_pkg',  # Substitua pelo nome do pacote correto do GameController
             executable='game_controller_node.py',  # Substitua pelo nome correto do executável
             name='game_controller',
             output='screen',
             parameters=[{'initial_state': LaunchConfiguration('game_controller_state')}],  # Parâmetro para definir o estado inicial
-        ),
+        ),'''
+      
     ])

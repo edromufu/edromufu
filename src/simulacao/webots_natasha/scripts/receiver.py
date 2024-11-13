@@ -15,11 +15,11 @@ import socket
 import time
 import rospy
 
-from construct import Container, ConstError
+#from construct import Container, ConstError
 
 from behaviour_msgs.msg import GameState as GameStateMsg
 from std_msgs.msg import Bool
-from gamestate import GameState, ReturnData, GAME_CONTROLLER_RESPONSE_VERSION
+#from gamestate import GameState, ReturnData, GAME_CONTROLLER_RESPONSE_VERSION
 
 
 class GameStateReceiver(object):
@@ -41,8 +41,8 @@ class GameStateReceiver(object):
         self.state_publisher = rospy.Publisher('gamestate', GameStateMsg, queue_size=1)
 
         self.man_penalize = False
-        self.game_controller_lost_time = 20
-        self.game_controller_connected_publisher = rospy.Publisher('game_controller_connected', Bool, queue_size=1)
+        #self.game_controller_lost_time = 20
+        #self.game_controller_connected_publisher = rospy.Publisher('game_controller_connected', Bool, queue_size=1)
 
         # The address listening on and the port for sending back the robots meta data
         self.addr = (rospy.get_param('~listen_host'), rospy.get_param('~listen_port'))
@@ -80,19 +80,19 @@ class GameStateReceiver(object):
             Calls :func:`on_new_gamestate`
             Sends an answer to the GC """
         try:
-            data, peer = self.socket.recvfrom(GameState.sizeof())
+            #data, peer = self.socket.recvfrom(GameState.sizeof())
 
             # Throws a ConstError if it doesn't work
-            parsed_state = GameState.parse(data)
+            #parsed_state = GameState.parse(data)
 
             # Assign the new package after it parsed successful to the state
-            self.state = parsed_state
+            #self.state = parsed_state
             self.time = time.time()
 
             # Publish that game controller received message
             msg = Bool()
             msg.data = True
-            self.game_controller_connected_publisher.publish(msg)
+            #self.game_controller_connected_publisher.publish(msg)
 
             # Call the handler for the package
             self.on_new_gamestate(self.state)
@@ -110,15 +110,16 @@ class GameStateReceiver(object):
             if self.get_time_since_last_package() > self.game_controller_lost_time:
                 self.time += 5  # Resend message every five seconds
                 rospy.logwarn_throttle(5.0, 'No game controller messages received, allowing robot to move')
-                msg = GameStateMsg()
+                #msg = GameStateMsg()
                 msg.gameState = 3  # PLAYING
                 self.state_publisher.publish(msg)
                 msg2 = Bool()
                 msg2.data = False
-                self.game_controller_connected_publisher.publish(msg2)
+                #self.game_controller_connected_publisher.publish(msg2)
 
+    """
     def answer_to_gamecontroller(self, peer):
-        """ Sends a life sign to the game controller """
+        # Sends a life sign to the game controller
         return_message = 0 if self.man_penalize else 2
 
         data = Container(
@@ -133,12 +134,13 @@ class GameStateReceiver(object):
             self.socket.sendto(ReturnData.build(data), destination)
         except Exception as e:
             rospy.logerr("Network Error: %s" % str(e))
+    """
 
-    def on_new_gamestate(self, state):
-        """ Is called with the new game state after receiving a package.
-            The information is processed and published as a standard message to a ROS topic.
-            :param state: Game State
-        """
+    """ def on_new_gamestate(self, state):
+        #Is called with the new game state after receiving a package.
+         #   The information is processed and published as a standard message to a ROS topic.
+          #  :param state: Game State
+        
         if state.teams[0].team_number == self.team:
             own_team = state.teams[0]
             rival_team = state.teams[1]
@@ -186,7 +188,7 @@ class GameStateReceiver(object):
         msg.teamMatesWithPenalty = penalties
         msg.teamMatesWithRedCard = red_cards
         self.state_publisher.publish(msg)
-
+ """
     def get_last_state(self):
         return self.state, self.time
 

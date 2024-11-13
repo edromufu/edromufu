@@ -6,7 +6,7 @@ import rclpy, os, sys, time
 from vision_msgs.msg import Webotsmsg
 from movement_utils.srv import *
 from movement_utils.msg import *
-from modularized_bhv_msgs.msg import GameControllerMsg  # Mensagem do GameController
+#from modularized_bhv_msgs.msg import GameControllerMsg  # Mensagem do GameController
 
 edrom_dir = '/home/' + os.getlogin() + '/edromufu/src/'
 
@@ -33,20 +33,20 @@ class striker_brain:
         self.node.create_subscription(HeadMotorsData, self.parameters.headPositionsTopic, self.updateHorRotation, 10)
 
         # Subscriber para o GameController
-        self.node.create_subscription(GameControllerMsg, 'Game_Controller', self.game_controller_callback, 10)
+        #self.node.create_subscription(GameControllerMsg, 'Game_Controller', self.game_controller_callback, 10)
 
         # Variáveis de estado
         self.found = False
         self.x = 0
         self.y = 0
         self.timesFoundFalse = 0
-        self.game_controller_state = None  #Variável para controlar o estado do gamecontroller
+        #self.game_controller_state = None  #Variável para controlar o estado do gamecontroller
     
-    def game_controller_callback(self, msg):
+    """def game_controller_callback(self, msg):
  
         self.game_controller_state = msg.game_state
         self.node.get_logger().info(f'Estado do GameController: {self.game_controller_state}')
-
+"""
     def updateBallParameters(self, msg):
         ballInfos = msg.ball
 
@@ -75,9 +75,9 @@ class striker_brain:
     def run(self):
         while rclpy.ok():
 
-            if self.game_controller_state == 3:  # Playing
-                if self.found:
-                    self.pageCall('natasha_squat') # !!!!Quando fizer a page da Tahara mudar o nome 'tahara_squat'
+            #if self.game_controller_state == 3:  # Playing
+            if self.found:
+                self.pageCall('natasha_squat') # !!!!Quando fizer a page da Tahara mudar o nome 'tahara_squat'
 
                 if self.found and self.ballClose:
                     # >0 Direita e <0 esquerda
@@ -99,14 +99,14 @@ class striker_brain:
 
 
                         #CONTROLADORES PARA INTERAÇÃO DO GAMECONTROLLER (ADICIONAR PAGES AQUI)
-            elif self.game_controller_state == 1:  # Ready
+            """elif self.game_controller_state == 1:  # Ready
                 self.node.get_logger().info('GameController: Ready - Preparando para começar')
 
             elif self.game_controller_state == 2:  # Set
                 self.node.get_logger().info('GameController: Set - Posicionando-se')
                 
             elif self.game_controller_state == 4:  # Finished
-                self.node.get_logger().info('GameController: Finished - Parando ações')
+                self.node.get_logger().info('GameController: Finished - Parando ações')"""
 
     def fall(self):
         while rclpy.ok():

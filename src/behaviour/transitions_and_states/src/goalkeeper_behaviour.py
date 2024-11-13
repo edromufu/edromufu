@@ -6,8 +6,7 @@ import rclpy, os, sys, time
 from vision_msgs.msg import Webotsmsg
 from movement_utils.srv import *
 from movement_utils.msg import *
-from modularized_bhv_msgs.msg import GameControllerMsg  # Mensagem do GameController
-
+#from modularized_bhv_msgs.msg import GameControllerMsg 
 edrom_dir = '/home/' + os.getlogin() + '/edromufu/src/'
 
 sys.path.append(edrom_dir + 'behaviour/transitions_and_states/src')
@@ -33,20 +32,20 @@ class goalkeeper_brain:
         self.node.create_subscription(HeadMotorsData, self.parameters.headPositionsTopic, self.updateHorRotation, 10)
 
         # Subscriber para o GameController
-        self.node.create_subscription(GameControllerMsg, 'Game_Controller', self.game_controller_callback, 10)
+        #self.node.create_subscription(GameControllerMsg, 'Game_Controller', self.game_controller_callback, 10)
 
         # Variáveis de estado
         self.found = False
         self.x = 0
         self.y = 0
         self.timesFoundFalse = 0
-        self.game_controller_state = None  #Variável para controlar o estado do gamecontroller
+        #self.game_controller_state = None  #Variável para controlar o estado do gamecontroller
     
-    def game_controller_callback(self, msg):
+    """ def game_controller_callback(self, msg):
  
         self.game_controller_state = msg.game_state
         self.node.get_logger().info(f'Estado do GameController: {self.game_controller_state}')
-
+ """
     def updateBallParameters(self, msg):
         ballInfos = msg.ball
 
@@ -69,36 +68,36 @@ class goalkeeper_brain:
     def run(self):
         while rclpy.ok():
 
-            if self.game_controller_state == 3:  # Playing
-                if self.found:
-                    self.pageCall('natasha_squat')
+            #if self.game_controller_state == 3:  # Playing
+            if self.found:
+                self.pageCall('natasha_squat')#Chamar as pages certas
 
-                elif self.found and self.ballClose:
-                    # >0 Direita e <0 esquerda
-                    #Passo verifica roda page vê visão
-                    if self.HorRotation < self.parameters.lookingLeftRad / 2:
-                        self.pageCall('natasha_left_defense')
-                        self.fall()
-                    elif self.HorRotation > self.parameters.lookingRightRad / 2:
-                        self.pageCall('natasha_right_defense')
-                        self.fall()
-                    else:
-                        pass
+            elif self.found and self.ballClose:
+                # >0 Direita e <0 esquerda
+                #Passo verifica roda page vê visão
+                if self.HorRotation < self.parameters.lookingLeftRad / 2:
+                    self.pageCall('natasha_left_defense')
+                    self.fall()
+                elif self.HorRotation > self.parameters.lookingRightRad / 2:
+                    self.pageCall('natasha_right_defense')
+                    self.fall()
+                else:
+                    pass
 
 
-                        #CONTROLADORES PARA INTERAÇÃO DO GAMECONTROLLER (ADICIONAR PAGES AQUI)
-            elif self.game_controller_state == 1:  # Ready
+                    #CONTROLADORES PARA INTERAÇÃO DO GAMECONTROLLER (ADICIONAR PAGES AQUI)
+            """elif self.game_controller_state == 1:  # Ready
                 self.node.get_logger().info('GameController: Ready - Preparando para começar')
 
             elif self.game_controller_state == 2:  # Set
                 self.node.get_logger().info('GameController: Set - Posicionando-se')
                 
             elif self.game_controller_state == 4:  # Finished
-                self.node.get_logger().info('GameController: Finished - Parando ações')
+                self.node.get_logger().info('GameController: Finished - Parando ações')"""
 
     def fall(self):
         while rclpy.ok():
-            self.pageCall('fallen_natasha')
+            self.pageCall('fallen_aurea')
                 
 
 if __name__ == '__main__':
