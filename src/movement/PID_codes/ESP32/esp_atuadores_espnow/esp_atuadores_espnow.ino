@@ -81,17 +81,20 @@ float accError[] =  {0, 0, 0, 0, 0, 0, 0, 0};
 float data[] =      {0, 0, 0, 0, 0, 0, 0, 0};   //Ângulos a serem recebidos por ROS da cinemática inversa
 float u_input[] =     {0, 0, 0, 0, 0, 0, 0, 0};   //Vetor de PWM a ser aplicado nos atuadores
 float feedback[] =     {0, 0, 0, 0, 0, 0, 0, 0};   //Vetor de feedback
-int dt = 1000;                                  // tempo de amostragem em milisegundos
+int dt = 1000;   
+float feedbackData[8];                               // tempo de amostragem em milisegundos
 
 
 
 
 // --------- Funçoes ---------
 
-void initJoint(int id){
-  pinMode(ACTUATOR_EN_PINS[id], OUTPUT);
-  pinMode(ACTUATOR_IN_IMP_PINS[id], OUTPUT);
-  pinMode(ACTUATOR_IN_PAR_PINS[id], OUTPUT);
+void initJoint(){
+  for (int i = 0; i < pot_size; i++){
+    pinMode(ACTUATOR_EN_PINS[i], OUTPUT);
+    pinMode(ACTUATOR_IN_IMP_PINS[i], OUTPUT);
+    pinMode(ACTUATOR_IN_PAR_PINS[i], OUTPUT);
+  }
 }
 
 
@@ -110,8 +113,8 @@ void writeActuator (int id, int signal){
   // Pega o valor de u fornecido pelo PID e transforma em comandos para os drivers
   // id: id da junta
   // signal: valor de -4095 4095 para escrever na junta
-  int newSignal = constrain(signal, -4095.0, 4095.0);
-  feedback[id]=newSignal;
+  int newSignal = constrain(signal, -255, 255);
+  feedback[id]=float(newSignal);
   if (signal >= 0){
     digitalWrite(ACTUATOR_IN_IMP_PINS[id], LOW);
     digitalWrite(ACTUATOR_IN_PAR_PINS[id], HIGH);
@@ -125,21 +128,16 @@ void writeActuator (int id, int signal){
 }
 
 
-// =====================================
 
-float pot2Degrees(float value){
-  //float factor = 90/1384; //0.06502
-  float factor = 0.06491; //0.06491
-  return value*factor;
-}
 
-float feedbackData[8];
+
 
 void setup() {
 
-  for (int i = 0; i < pot_size; i++){
-    initJoint(i);
-  }
+
+  initJoint();
+  
+
 
 
   set_microros_transports();
