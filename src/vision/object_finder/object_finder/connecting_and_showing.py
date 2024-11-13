@@ -14,8 +14,8 @@ import object_finder.running_inference as ri    #Importa o arquivo python do dir
 
 
 edrom_dir = '/home/'+os.getlogin()+'/edromufu/src/'
-sys.path.append(edrom_dir+'behaviour/transitions_and_states/src')
-#from behaviour_parameters import BehaviourParameters
+sys.path.append(edrom_dir+'behaviour/transitions_and_states/transitions_and_states')
+from behaviour_parameters import BehaviourParameters
 
 from sensor_msgs.msg import Image as ROS_Image
 from vision_msgs.msg import *
@@ -60,7 +60,9 @@ class Visao(Node):
         self.model = ri.set_model_input()
         self.searching = True
 
-        self.publisher = self.create_publisher(Webotsmsg,'vision2BhvTopic', 100)
+        self.parameters = BehaviourParameters()
+
+        self.publisher = self.create_publisher(Webotsmsg,self.parameters.vision2BhvTopic, 100)
 
         #SE FOR NO REAL
         print("\n==Visão Operante==\n")
@@ -76,9 +78,6 @@ class Visao(Node):
 
         config.enable_stream(rs.stream.depth, 848, 480, rs.format.z16, 30)
         config.enable_stream(rs.stream.color, 640, 480, rs.format.bgr8, 30)
-
-        #config.enable_stream(rs.stream.accel)
-        #config.enable_stream(rs.stream.gyro)
 
         # Começa a captura
         pipeline.start(config)

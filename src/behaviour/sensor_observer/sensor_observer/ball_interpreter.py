@@ -8,7 +8,7 @@ from vision_msgs.msg import Webotsmsg
 
 edrom_dir = '/home/'+os.getlogin()+'/edromufu/src/'
 
-sys.path.append(edrom_dir+'behaviour/transitions_and_states/src')
+sys.path.append(edrom_dir+'behaviour/transitions_and_states/transitions_and_states')
 from behaviour_parameters import BehaviourParameters
 
 class BallInterpreter(Node):
