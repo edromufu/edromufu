@@ -38,7 +38,7 @@ class StateMachineReceiver(StateMachine):
         """
 
         self.state_machine.request_state_machine_update(stateMachineVars.ballPosition, stateMachineVars.ballClose, stateMachineVars.ballFound,
-                                                        stateMachineVars.fallState,
+                                                        #stateMachineVars.fallState,
                                                         stateMachineVars.horMotorOutOfCenter, stateMachineVars.headKickCheck)
     
 if __name__ == '__main__':

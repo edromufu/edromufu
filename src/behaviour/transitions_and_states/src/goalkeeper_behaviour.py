@@ -18,7 +18,7 @@ class goalkeeper_brain:
     def __init__(self):
 
         rospy.init_node('goalkeeper_brain')
-
+        self.ballClose = False
         self.parameters = BehaviourParameters()
 
         rospy.wait_for_service('u2d2_comm/feedbackHead')
@@ -28,7 +28,7 @@ class goalkeeper_brain:
         rospy.Subscriber(self.parameters.vision2BhvTopic, Webotsmsg, self.updateBallParameters)
         rospy.Subscriber(self.parameters.headPositionsTopic, head_motors_data, self.updateHorRotation)
 
-
+        print("Goleira Iniciou")
         self.found = False
         self.x = 0
         self.y = 0
@@ -37,12 +37,12 @@ class goalkeeper_brain:
     
     def updateBallParameters(self, msg):
         ballInfos = msg.ball
-
         if not ballInfos.found:
             self.timesFoundFalse += 1
             if self.timesFoundFalse == 3:
                 self.found = False
                 self.timesFoundFalse = 0
+                self.ballClose = False
 
         else:
             self.found = True
@@ -57,32 +57,31 @@ class goalkeeper_brain:
     
     def run(self):
         while not rospy.is_shutdown():
-
             if self.found: #Se quiser trocar para page infinita "IF not"
-                self.pageCall('natasha_squat')
+                self.pageCall('aurea_new_first_pose')   
 
-            elif self.found and self.ballClose:
+            if  self.found and self.ballClose:
                 # >0 Direita e <0 esquerda
                 
-                if self.HorRotation < self.parameters.lookingLeftRad/2:              
-                    self.pageCall('natasha_left_defense') #Para a page de andar de lado trocar para while
-                    self.fall()
-                elif self.HorRotation > self.parameters.lookingRighttRad/2:
-                    self.pageCall('aurea_right_defense') #MUDAR AQUI
-                    self.fall()
+                if self.HorRotation < self.parameters.lookingLeftRad:              
+                    self.pageCall('aurea_new_first_pose') #Para a page de andar de lado trocar para while
+                    #self.fall()
+                elif self.HorRotation > self.parameters.lookingRightRad:
+                    self.pageCall('aurea_new_first_pose') #MUDAR AQUI
+
+                    #self.fall()
                 elif self.HorRotation == self.parameters.minVerRad2Kick:
                 #    self.pageCall('codigo_natasha')   #MUDAR AQUI 
-                    print('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
-                    self.fall()
+                    print('Chutou')
+                    #self.fall()
                 else:
                     pass
-    
+    '''
     def fall(self):
         while not rospy.is_shutdown():
             rospy.sleep(9)
             self.pageCall('fallen_aurea')
-                
+    '''            
 if __name__ == '__main__':
     goalkeeper_brain = goalkeeper_brain()
     goalkeeper_brain.run()
-    rospy.spin()

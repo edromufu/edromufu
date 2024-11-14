@@ -2,7 +2,7 @@
 #coding=utf-8
 
 import rospy, sys, os
-import fall_interpreter, ball_interpreter, neck_interpreter
+import ball_interpreter, neck_interpreter #,fall_interpreter
 
 #Importacao para os topicos ROS
 from modularized_bhv_msgs.msg import stateMachineMsg #Mensagem associada ao topico utilizado para receber info dos estados da robo
@@ -25,7 +25,7 @@ class RosPacker():
 
         #Inicialização dos interpretadores em variaveis deste objeto
         self.iBall = ball_interpreter.BallInterpreter() 
-        self.iFall = fall_interpreter.FallInterpreter() 
+        # self.iFall = fall_interpreter.FallInterpreter() 
         self.iNeck = neck_interpreter.NeckInterpreter() 
 
         #Inicialização das variáveis do ROS
@@ -34,11 +34,11 @@ class RosPacker():
 
         #Variáveis de interpretação para facilitação do fluxo
         [self.pBallPosition, self.pBallClose, self.pBallFound] = self.iBall.getValues()
-        self.pFallState = self.iFall.getValues()
+        # self.pFallState = self.iFall.getValues()
         [self.pHorMotorOutOfCenter, self.pHeadKickCheck] = self.iNeck.getValues() 
 
         self.smVarsLastValue = [self.pBallPosition, self.pBallClose, self.pBallFound,
-                                self.pFallState,
+                                # self.pFallState,
                                 self.pHorMotorOutOfCenter, self.pHeadKickCheck]
         
         while self.pub2StateMachine.get_num_connections() != NUM_CONNECTIONS:pass
@@ -51,12 +51,12 @@ class RosPacker():
         while not rospy.is_shutdown():
             self.runValuesUpdate()
             self.stateMachineFlagger([self.pBallPosition, self.pBallClose, self.pBallFound,
-                                  self.pFallState,
+                                  #self.pFallState,
                                   self.pHorMotorOutOfCenter, self.pHeadKickCheck])
 
     def runValuesUpdate(self):
         [self.pBallPosition, self.pBallClose, self.pBallFound] = self.iBall.getValues()
-        self.pFallState = self.iFall.getValues()
+        #self.pFallState = self.iFall.getValues()
         [self.pHorMotorOutOfCenter, self.pHeadKickCheck] = self.iNeck.getValues()         
 
     def stateMachineFlagger(self,smVarsCurrentValue):
@@ -69,7 +69,7 @@ class RosPacker():
         self.stateMachineVars.ballPosition = self.pBallPosition
         self.stateMachineVars.ballClose = self.pBallClose
         self.stateMachineVars.ballFound = self.pBallFound
-        self.stateMachineVars.fallState = self.pFallState
+        #self.stateMachineVars.fallState = self.pFallState
         self.stateMachineVars.horMotorOutOfCenter = self.pHorMotorOutOfCenter
         self.stateMachineVars.headKickCheck = self.pHeadKickCheck
 
@@ -79,7 +79,7 @@ class RosPacker():
         print("----------------------------")
         print("Posicao da bola: ", self.pBallPosition)
         print("Encontrada: ", self.pBallFound, "   | Bola proxima: ", self.pBallClose)
-        print("Posicao de robo (queda): ", self.pFallState)
+        #print("Posicao de robo (queda): ", self.pFallState)
         print("Posição horizontal da cabeça: ", self.pHorMotorOutOfCenter)
         print("Cabeca confirma o chute: ", self.pHeadKickCheck)
         print("----------------------------")

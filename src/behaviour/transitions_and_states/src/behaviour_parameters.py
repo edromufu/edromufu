@@ -24,7 +24,7 @@ class BehaviourParameters():
         self.timerFirstPose = 5 #s
         self.timerWalk = 15 #s
 
-        #Tópico do ROS IMU
+        '''#Tópico do ROS IMU
         self.imuAccelTopic = '/behaviour/imu_accel'
 
         #Parametros de avaliação de queda nos três eixos
@@ -33,7 +33,8 @@ class BehaviourParameters():
         self.xSensorBack      = -6  #Valor acima do qual a medida de x deve estar para queda de costas                               
         self.ySensorLeft      = 6 #Valor abaixo do qual a medida de y deve estar para queda sobre o lado esquerdo         
         self.ySensorRight     = -6  #Valor acima do qual a medida de y deve estar para queda sobre o lado direito                         
-
+        '''
+        
         #Retornos possíveis da interpretação de posição relativa da bola
         self.left = 'Left'
         self.right = 'Right'
@@ -43,15 +44,16 @@ class BehaviourParameters():
 
         #Retornos possíveis da interpretação de queda 
         #(faltam certos parametros como left e right pois serão os mesmos da bola)
-        self.front = 'Front'
+        '''self.front = 'Front'
         self.up = 'Up'
         self.back = 'Back'
+        '''
 
         #Tópico de conversa entre ros_packer e state_machine_receiver
         self.stateMachineTopic = '/sensor_observer/state_machine_vars'
 
         #Tópico de publicação do IMU (Gyro)
-        self.imuGyroTopic = '/behaviour/imu_gyro'
+        # self.imuGyroTopic = '/behaviour/imu_gyro'
 
     def visionwiseParameters(self):
         #Tópico do ROS
