@@ -1,0 +1,22 @@
+[0.562s] Invoking command in '/home/pedrohperes/edromufu/src/movement/Ros2_change/build/humanoid_visualization': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/pedrohperes/edromufu/src/movement/Ros2_change/build/humanoid_visualization -- -j12 -l12
+[0.846s] Invoked command in '/home/pedrohperes/edromufu/src/movement/Ros2_change/build/humanoid_visualization' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/pedrohperes/edromufu/src/movement/Ros2_change/build/humanoid_visualization -- -j12 -l12
+[0.872s] Invoking command in '/home/pedrohperes/edromufu/src/movement/Ros2_change/build/humanoid_visualization': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/pedrohperes/edromufu/src/movement/Ros2_change/build/humanoid_visualization
+[0.880s] -- Install configuration: ""
+[0.881s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization//launch
+[0.881s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization//launch/display.launch.py
+[0.881s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/ament_index/resource_index/package_run_dependencies/humanoid_visualization
+[0.881s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/ament_index/resource_index/parent_prefix_path/humanoid_visualization
+[0.881s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/environment/ament_prefix_path.sh
+[0.881s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/environment/ament_prefix_path.dsv
+[0.882s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/environment/path.sh
+[0.882s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/environment/path.dsv
+[0.882s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/local_setup.bash
+[0.882s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/local_setup.sh
+[0.882s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/local_setup.zsh
+[0.882s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/local_setup.dsv
+[0.882s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/package.dsv
+[0.882s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/ament_index/resource_index/packages/humanoid_visualization
+[0.882s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/cmake/humanoid_visualizationConfig.cmake
+[0.883s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/cmake/humanoid_visualizationConfig-version.cmake
+[0.883s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/humanoid_visualization/share/humanoid_visualization/package.xml
+[0.884s] Invoked command in '/home/pedrohperes/edromufu/src/movement/Ros2_change/build/humanoid_visualization' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/pedrohperes/edromufu/src/movement/Ros2_change/build/humanoid_visualization

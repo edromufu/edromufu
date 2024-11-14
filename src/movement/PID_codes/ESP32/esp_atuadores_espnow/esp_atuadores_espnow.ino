@@ -66,11 +66,12 @@ void timer_callback(rcl_timer_t* timer, int64_t last_call_time) {
 float erro[8];
 const int pot_size = 8;
 
-
 //--------constantes Drivers-------- ****TEM QUE PEGAR TUDO DO DIAGRAMA DA ELÉTRICA!!!!!!!****
-const int ACTUATOR_EN_PINS[] =     {34, 33, 27, 13, 15, 19, 17, 2}; //vetor de PWM
-const int ACTUATOR_IN_IMP_PINS[] = {36, 35, 25, 14, 23, 3, 18, 16}; //vetor de pino de avanço
-const int ACTUATOR_IN_PAR_PINS[] = {39, 32, 26, 12, 22, 21, 5, 4}; //vetor de pino de recuo
+//const int ACTUATOR_EN_PINS[] =     {x, 33, 27, 13, 15, 19, 17, 2}; //vetor de PWM
+//const int ACTUATOR_IN_IMP_PINS[] = {13, 33, 25, 14, 23, 15, 18, 16}; //vetor de pino de avanço
+//const int ACTUATOR_IN_PAR_PINS[] = {27, 32, 26, 12, 22, 21, 5, 4}; //vetor de pino de recuo
+const int ACTUATOR_IN_IMP_PINS[] = {15, 19, 2, 5, 32, 33, 12, 13}; //vetor de pino de avanço
+const int ACTUATOR_IN_PAR_PINS[] = {22, 21, 4, 17, 16, 18, 14, 25}; //vetor de pino de recuo
 
 //--------constantes PID--------
 
@@ -92,7 +93,7 @@ float feedbackData[8];                               // tempo de amostragem em m
 
 void initJoint(){
   for (int i = 0; i < pot_size; i++){
-    pinMode(ACTUATOR_EN_PINS[i], OUTPUT);
+    //pinMode(ACTUATOR_EN_PINS[i], OUTPUT);
     pinMode(ACTUATOR_IN_IMP_PINS[i], OUTPUT);
     pinMode(ACTUATOR_IN_PAR_PINS[i], OUTPUT);
   }
@@ -114,17 +115,20 @@ void writeActuator (int id, int signal){
   // Pega o valor de u fornecido pelo PID e transforma em comandos para os drivers
   // id: id da junta
   // signal: valor de -4095 4095 para escrever na junta
-  int newSignal = constrain(signal, -255, 255);
-  feedback[id]=float(newSignal);
-  if (signal >= 0){
+  //int newSignal = constrain(signal, -255, 255);
+  feedback[id]=float(signal);
+  if (signal > 5){
     digitalWrite(ACTUATOR_IN_IMP_PINS[id], LOW);
     digitalWrite(ACTUATOR_IN_PAR_PINS[id], HIGH);
-    analogWrite(ACTUATOR_EN_PINS[id], newSignal);
+    //analogWrite(ACTUATOR_EN_PINS[id], newSignal);
   }
-  if (signal < 0){
+  else if (signal < -5){
     digitalWrite(ACTUATOR_IN_IMP_PINS[id], HIGH);
     digitalWrite(ACTUATOR_IN_PAR_PINS[id], LOW);
-    analogWrite(ACTUATOR_EN_PINS[id], -newSignal);
+    //analogWrite(ACTUATOR_EN_PINS[id], -newSignal);
+  }else if(signal <= 5 && signal >= -5){
+    digitalWrite(ACTUATOR_IN_IMP_PINS[id], HIGH);
+    digitalWrite(ACTUATOR_IN_PAR_PINS[id], HIGH);
   }
 }
 
@@ -191,7 +195,6 @@ void subscription_callback(const void * msgin)
     erro[i] = feedbackSub->data.data[i];
 
     //--------Calculando Saídas dos PID's--------
-    u_input[i] = calculatePID(i, erro[i]);
   }
 
   CalculatePWM();
@@ -204,15 +207,15 @@ void subscription_callback(const void * msgin)
 void CalculatePWM(){
 
   //--------Calculando Entrada do PWM--------
-  writeActuator(0, u_input[1]+u_input[0]); 
-  writeActuator(1, u_input[1]-u_input[0]);
+  writeActuator(0, erro[1]+erro[0]); 
+  writeActuator(1, erro[1]-erro[0]);
   
-  writeActuator(2, u_input[2]+u_input[3]);
-  writeActuator(3, u_input[2]-u_input[3]);
+  writeActuator(2, erro[2]+erro[3]);
+  writeActuator(3, erro[2]-erro[3]);
   
-  writeActuator(4, u_input[5]+u_input[4]);
-  writeActuator(5, u_input[5]-u_input[4]);
+  writeActuator(4, erro[5]+erro[4]);
+  writeActuator(5, erro[5]-erro[4]);
   
-  writeActuator(6, u_input[6]+u_input[7]);
-  writeActuator(7, u_input[6]-u_input[7]);
+  writeActuator(6, erro[6]+erro[7]);
+  writeActuator(7, erro[6]-erro[7]);
 }

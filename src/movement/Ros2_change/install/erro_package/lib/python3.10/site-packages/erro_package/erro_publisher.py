@@ -5,7 +5,7 @@ import serial
 import time
 
 class PotValuesPublisher(Node):
-    def __init__(self, serial_port='/dev/ttyACM1', baud_rate=9600):
+    def __init__(self, serial_port='/dev/ttyACM0', baud_rate=9600):
         super().__init__('pot_values_publisher')
         self.publisher_ = self.create_publisher(Float32MultiArray, 'pot_values', 1)
         self.subscriber_ = self.create_subscription(Float32MultiArray,'pot_py_topic',self.listener,1)
