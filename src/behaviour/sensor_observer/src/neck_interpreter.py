@@ -54,11 +54,11 @@ class NeckInterpreter():
         verMotorValue = msg.pos_vector[1]
 
         if (horMotorValue < self.parameters.lookingLeftRad) and (horMotorValue > self.parameters.lookingRightRad):
-            self.horHeadPosition = self.center
+            self.horHeadPosition = self.parameters.center
         elif horMotorValue > self.parameters.lookingLeftRad:
-            self.horHeadPosition = self.left
+            self.horHeadPosition = self.parameters.left
         else:
-            self.horHeadPosition = self.right
+            self.horHeadPosition = self.parameters.right
 
         if verMotorValue < self.parameters.minVerRad2Kick:
             self.verAngleAccomplished = True

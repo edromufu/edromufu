@@ -1,14 +1,14 @@
 <launch>
-    <arg name="imu_connected" default="true"/>
-    <arg name="imu_port" default="/dev/ttyIMU"/>
+    <!-- <arg name="imu_connected" default="true"/>
+    <arg name="imu_port" default="/dev/ttyUSB1"/>  -->
 
     
     <!-- Máquina de Estados  -->
 	<node name="behaviour_node" pkg="transitions_and_states" type="state_machine_receiver.py" output="screen" >   </node> 
-    <node name="walking" pkg="states_routine" type="walking_routine.py" output="screen" >    </node>
-    <node name="kick" pkg="states_routine" type="kick_routine.py" output="screen" >    </node>
+    <!--<node name="walking" pkg="states_routine" type="walking_routine.py" output="screen" >    </node> -->
+    <!--<node name="kick" pkg="states_routine" type="kick_routine.py" output="screen" >    </node> -->
     <node name="stand_still" pkg="states_routine" type="stand_still_routine.py" output="screen" >    </node>
-    <node name="getting_up" pkg="states_routine" type="getting_up_routine.py" output="screen" >    </node>
+    <!--node name="getting_up" pkg="states_routine" type="getting_up_routine.py" output="screen" >    </node> -->
 
 
 	<!-- Webots 
@@ -20,8 +20,10 @@
     </node>
 
     <!--Leitura do IMU-->
-	<node name="imu_ros_arduino" pkg="imu_ros_arduino" type="imu_read.py" output="screen" if="$(eval arg('imu_connected'))">   
+	<!-- <node name="imu_ros_arduino" pkg="imu_ros_arduino" type="imu_read.py" output="screen" if="$(eval arg('imu_connected'))">   
         <param name="port" value="$(eval arg('imu_port'))" />
+    </node> -->
+    <!--Goleira-->
+    <node name="goalkeeper_brain" pkg="transitions_and_states" type="goalkeeper_behaviour.py" output="screen" >
     </node>
-
 </launch>

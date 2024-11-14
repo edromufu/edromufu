@@ -16,6 +16,7 @@ edrom_dir = '/home/'+os.getlogin()+'/edromufu/src/'
 sys.path.append(edrom_dir+'behaviour/transitions_and_states/src')
 from behaviour_parameters import BehaviourParameters
 
+print('a')
 class StateMachine():
 
     def __init__(self):
@@ -27,24 +28,25 @@ class StateMachine():
         - Inicializa a maquina de estados, utilizando as caracteristicas ja criadas
         """
 
-        states = ['walking','stand_still','getting_up', 'impossible']
+        #states = ['walking','stand_still','getting_up', 'impossible']
+        states = ['stand_still', 'impossible']
  
         go_to_walking_transitions = [
             { 'trigger': 'go_to_walking', 'source': 'walking', 'dest': 'walking',
              'conditions': 'walking_condition', 'unless': 'getting_up_condition'},
-            { 'trigger': 'go_to_walking', 'source': 'stand_still', 'dest': 'walking',
-             'conditions': 'walking_condition', 'unless': 'getting_up_condition'}
+            #{ 'trigger': 'go_to_walking', 'source': 'stand_still', 'dest': 'walking',
+            # 'conditions': 'walking_condition', 'unless': 'getting_up_condition'}
         ]
         
         go_to_stand_still_transitions = [
             { 'trigger': 'go_to_stand_still', 'source': 'stand_still', 'dest': 'stand_still',
-             'unless': 'getting_up_condition'},
-            { 'trigger': 'go_to_stand_still', 'source': 'getting_up', 'dest': 'stand_still',
-             'unless': 'getting_up_condition'}
+             'unless': 'impossible_condition'},
+            #{ 'trigger': 'go_to_stand_still', 'source': 'getting_up', 'dest': 'stand_still',
+            # 'unless': 'getting_up_condition'}
         ]
 
         go_to_getting_up_transitions = [
-            { 'trigger': 'go_to_getting_up', 'source': '*', 'dest': 'getting_up',
+            { 'trigger': 'go_to_getting_up', 'source': 'walking', 'dest': 'getting_up',
              'conditions': 'getting_up_condition'}
         ]
 
@@ -57,8 +59,8 @@ class StateMachine():
              'conditions': 'impossible_condition'}
             ]
 
-        all_transitions = (go_to_walking_transitions 
-                           + go_to_getting_up_transitions + go_to_stand_still_transitions
+        all_transitions = (#go_to_walking_transitions + go_to_getting_up_transitions + 
+                            go_to_stand_still_transitions
                            + go_to_impossible_transitions)
 
         self.robot_state_machine = Machine(self, states=states, transitions=all_transitions, initial='stand_still')
@@ -68,10 +70,10 @@ class StateMachine():
     
     #Funcao para chamada de atualizacao de cada uma das variaveis
     #que controlarao as transicoes de estados da maquina
-    def request_state_machine_update(self, ballPosition, ballClose, ballFound, fallState, horMotorOutOfCenter, headKickCheck):
-        
-        self.getting_up_condition_update(fallState)
-        self.walking_condition_update(ballFound)
+    #def request_state_machine_update(self, ballPosition, ballClose, ballFound, fallState, horMotorOutOfCenter, headKickCheck):
+    def request_state_machine_update(self, ballPosition, ballClose, ballFound, horMotorOutOfCenter, headKickCheck):
+        #self.getting_up_condition_update(fallState)
+        #self.walking_condition_update(ballFound)
 
         print(f'-------------------\nEstado {str(self.state)}')        
         self.update_state()
@@ -88,15 +90,17 @@ class StateMachine():
             inicializacao da maquina de estados em um logica de if's
             funcional
         """
-        if self.go_to_walking():
+        ''' if self.go_to_walking():
             print('Transição para o walking\n-------------------\n')
             return True
         
         elif self.go_to_getting_up():
             print('Transição para o getting_up\n-------------------\n')
             return True
+            '''
 
-        elif self.go_to_stand_still():
+        #el
+        if self.go_to_stand_still():
             print('Transição para o stand_still\n-------------------\n')
             return True
         
@@ -106,6 +110,7 @@ class StateMachine():
     ########################################FUNÇÕES UPDATE CONDITION########################################
 
     #Funcao para atualizar a variavel de codigo relacionada ao estado de getting_up
+    '''    
     def getting_up_condition_update(self, fall_state):
         """
         -> Funcao:
@@ -126,10 +131,11 @@ class StateMachine():
             self.walking_condition = True
         else:
             self.walking_condition = False
+            '''
     
 
     ########################################FUNÇÕES RETURN CONDITION########################################
     #Funcoes de retorno das variaveis de controle da forma necessitada pela state machine
-    def walking_condition(self): return False  
-    def getting_up_condition(self): return self.getting_up_condition  
+    #def walking_condition(self): return False  
+    #def getting_up_condition(self): return self.getting_up_condition  
     def impossible_condition(self): return False

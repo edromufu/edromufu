@@ -22,11 +22,11 @@ def set_model_input():
     net = os.path.join(robocup_folder, "yolov8n-vision.pt")    #Modelo convertido para openvino
 
     #Recebe o modelo no YOLO 
-    model = YOLO(net)
+    #model = YOLO(net)
     
     #Converte o modelo para openvino com tamanho de imagem definido, caso já não tenho sido convertido 
-    #model.export(format="openvino",imgsz=size) 
-    #model = YOLO(os.path.join(robocup_folder, "yolov8n-vision_openvino_model"))
+    #model.export(format="openvino",imgsz=size,task='detect') 
+    model = YOLO(os.path.join(robocup_folder, "yolov8n-vision_openvino_model"))
 
     
     return model

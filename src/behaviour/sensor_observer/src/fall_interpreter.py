@@ -21,7 +21,7 @@ class FallInterpreter():
         self.parameters = BehaviourParameters()
 
         #Variaveis do ROS
-        rospy.Subscriber(self.parameters.imuAccelTopic, Vector3, self.callback_sensor)
+        #rospy.Subscriber(self.parameters.imuAccelTopic, Vector3, self.callback_sensor)
 
         #Variaveis de código
         self.fallState = self.parameters.up #Estado da queda do robô, sendo up = em pé
