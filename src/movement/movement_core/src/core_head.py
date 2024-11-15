@@ -86,6 +86,7 @@ class CoreHead:
     
     def run(self):
         lastTime = rospy.Time.now().nsecs
+        print("procurou")
         justLoseTheBall = True
 
         while not rospy.is_shutdown():

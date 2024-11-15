@@ -60,22 +60,22 @@ class goalkeeper_brain:
             if self.found: #Se quiser trocar para page infinita "IF not"
                 self.pageCall('aurea_new_first_pose')   
 
-            if  self.found and self.ballClose:
-                # >0 Direita e <0 esquerda
-                
-                if self.HorRotation < self.parameters.lookingLeftRad:              
-                    self.pageCall('aurea_new_first_pose') #Para a page de andar de lado trocar para while
-                    #self.fall()
-                elif self.HorRotation > self.parameters.lookingRightRad:
-                    self.pageCall('aurea_new_first_pose') #MUDAR AQUI
+                if  self.found and self.ballClose:
+                    # >0 Direita e <0 esquerda
+                    
+                    if self.HorRotation < self.parameters.lookingLeftRad:              
+                        self.pageCall('aurea_levanta_bracos') #Para a page de andar de lado trocar para while
+                        #self.fall()
+                    elif self.HorRotation > self.parameters.lookingRightRad:
+                        self.pageCall('aurea_levanta_bracos') #MUDAR AQUI
 
-                    #self.fall()
-                elif self.HorRotation == self.parameters.minVerRad2Kick:
-                #    self.pageCall('codigo_natasha')   #MUDAR AQUI 
-                    print('Chutou')
-                    #self.fall()
-                else:
-                    pass
+                        #self.fall()
+                    elif self.HorRotation == self.parameters.minVerRad2Kick:
+                    #    self.pageCall('codigo_natasha')   #MUDAR AQUI 
+                        print('Chutou')
+                        #self.fall()
+                    else:
+                        pass
     '''
     def fall(self):
         while not rospy.is_shutdown():
