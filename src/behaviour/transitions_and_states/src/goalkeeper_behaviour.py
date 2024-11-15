@@ -54,28 +54,36 @@ class goalkeeper_brain:
     
     def updateHorRotation(self, msg):
         self.HorRotation,VerRotation = msg.pos_vector
-    
+
+
     def run(self):
         while not rospy.is_shutdown():
             if self.found: #Se quiser trocar para page infinita "IF not"
-                self.pageCall('aurea_new_first_pose')   
+                self.pageCall('aurea_left_walk')   
+                print("Correndo pra bola")
+                
 
-                if  self.found and self.ballClose:
-                    # >0 Direita e <0 esquerda
-                    
-                    if self.HorRotation < self.parameters.lookingLeftRad:              
-                        self.pageCall('aurea_levanta_bracos') #Para a page de andar de lado trocar para while
-                        #self.fall()
-                    elif self.HorRotation > self.parameters.lookingRightRad:
-                        self.pageCall('aurea_levanta_bracos') #MUDAR AQUI
+                
+            elif self.found and self.HorRotation < self.parameters.lookingLeftRad:              
+                self.pageCall('aurea_real_left_walk') #Para a page de andar de lado trocar para while
+                #self.fall()
+                print("LEFT WALK")
+                self.found = False
 
-                        #self.fall()
-                    elif self.HorRotation == self.parameters.minVerRad2Kick:
-                    #    self.pageCall('codigo_natasha')   #MUDAR AQUI 
-                        print('Chutou')
-                        #self.fall()
-                    else:
-                        pass
+            elif self.found and self.HorRotation > self.parameters.lookingRightRad:
+                self.pageCall('aurea_right_walk') #MUDAR AQUI
+                print("RIGHT WALK")
+                #self.fall()
+                self.found = False
+
+            elif self.found and self.ballClose:
+                self.HorRotation == self.parameters.minVerRad2Kick
+                self.pageCall('aurea_front_walk')   #MUDAR AQUI 
+                print('KICK')
+                #self.fall()
+                self.found = False
+            
+            
     '''
     def fall(self):
         while not rospy.is_shutdown():
