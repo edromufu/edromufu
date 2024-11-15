@@ -90,4 +90,4 @@ if __name__ == '__main__':
     packer = RosPacker() #Inicia o agrupador
     packer.run()  #Inicia o loop do agrupador
 
-    rospy.spin()
+    #rospy.spin()
