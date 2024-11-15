@@ -70,20 +70,20 @@ const int pot_size = 8;
 //const int ACTUATOR_EN_PINS[] =     {x, 33, 27, 13, 15, 19, 17, 2}; //vetor de PWM
 //const int ACTUATOR_IN_IMP_PINS[] = {13, 33, 25, 14, 23, 15, 18, 16}; //vetor de pino de avanço
 //const int ACTUATOR_IN_PAR_PINS[] = {27, 32, 26, 12, 22, 21, 5, 4}; //vetor de pino de recuo
-const int ACTUATOR_IN_IMP_PINS[] = {15, 19, 2, 5, 32, 33, 12, 13}; //vetor de pino de avanço
-const int ACTUATOR_IN_PAR_PINS[] = {22, 21, 4, 17, 16, 18, 14, 25}; //vetor de pino de recuo
+const int ACTUATOR_IN_IMP_PINS[] = {26, 19, 2, 5, 32, 33, 13, 12}; //vetor de pino de avanço
+const int ACTUATOR_IN_PAR_PINS[] = {22, 21, 4, 17, 16, 18, 25, 14}; //vetor de pino de recuo
 
 //--------constantes PID--------
 
-const float Kp[] =  {100, 100, 100, 100, 100, 100, 100, 100};
-const float Ki[] =  {0, 0, 0, 0, 0, 0, 0, 0};
-const float Kd[] =  {0, 0, 0, 0, 0, 0, 0, 0};
-float lastError[] = {0, 0, 0, 0, 0, 0, 0, 0};
-float accError[] =  {0, 0, 0, 0, 0, 0, 0, 0};
-float data[] =      {0, 0, 0, 0, 0, 0, 0, 0};   //Ângulos a serem recebidos por ROS da cinemática inversa
-float u_input[] =     {0, 0, 0, 0, 0, 0, 0, 0};   //Vetor de PWM a ser aplicado nos atuadores
-float feedback[] =     {0, 0, 0, 0, 0, 0, 0, 0};   //Vetor de feedback
-int dt = 1000;   
+const float Kp[]  =  {100, 100, 100, 100, 100, 100, 100, 100};
+const float Ki[]  =  {0, 0, 0, 0, 0, 0, 0, 0};
+const float Kd[]  =  {0, 0, 0, 0, 0, 0, 0, 0};
+float lastError[] =  {0, 0, 0, 0, 0, 0, 0, 0};
+float accError[]  =  {0, 0, 0, 0, 0, 0, 0, 0};
+float data[]      =  {0, 0, 0, 0, 0, 0, 0, 0};   //Ângulos a serem recebidos por ROS da cinemática inversa
+float u_input[]   =  {0, 0, 0, 0, 0, 0, 0, 0};   //Vetor de PWM a ser aplicado nos atuadores
+float feedback[]  =  {0, 0, 0, 0, 0, 0, 0, 0};   //Vetor de feedback
+int   dt = 1000;   
 float feedbackData[8];                               // tempo de amostragem em milisegundos
 
 
@@ -117,18 +117,23 @@ void writeActuator (int id, int signal){
   // signal: valor de -4095 4095 para escrever na junta
   //int newSignal = constrain(signal, -255, 255);
   feedback[id]=float(signal);
-  if (signal > 5){
+  if (signal < -5){
     digitalWrite(ACTUATOR_IN_IMP_PINS[id], LOW);
     digitalWrite(ACTUATOR_IN_PAR_PINS[id], HIGH);
     //analogWrite(ACTUATOR_EN_PINS[id], newSignal);
+    feedback[2]=float(100);
   }
-  else if (signal < -5){
+  else if (signal > 5){
     digitalWrite(ACTUATOR_IN_IMP_PINS[id], HIGH);
     digitalWrite(ACTUATOR_IN_PAR_PINS[id], LOW);
+    feedback[2]=float(200);
+
     //analogWrite(ACTUATOR_EN_PINS[id], -newSignal);
   }else if(signal <= 5 && signal >= -5){
-    digitalWrite(ACTUATOR_IN_IMP_PINS[id], HIGH);
-    digitalWrite(ACTUATOR_IN_PAR_PINS[id], HIGH);
+    digitalWrite(ACTUATOR_IN_IMP_PINS[id], LOW);
+    digitalWrite(ACTUATOR_IN_PAR_PINS[id], LOW);
+    feedback[2]=float(300);
+
   }
 }
 
@@ -207,15 +212,15 @@ void subscription_callback(const void * msgin)
 void CalculatePWM(){
 
   //--------Calculando Entrada do PWM--------
-  writeActuator(0, erro[1]+erro[0]); 
-  writeActuator(1, erro[1]-erro[0]);
+  //writeActuator(0, -erro[1]); //(erro[0]-erro[1])
+  //writeActuator(1, -erro[1]);//(-erro[0]-erro[1])
   
-  writeActuator(2, erro[2]+erro[3]);
-  writeActuator(3, erro[2]-erro[3]);
+  //writeActuator(2, -erro[3]);//(erro[2]-erro[3])
+  //writeActuator(3, erro[3]);//(erro[2]+erro[3])
   
-  writeActuator(4, erro[5]+erro[4]);
-  writeActuator(5, erro[5]-erro[4]);
+  //writeActuator(4, erro[5]);//(erro[5] + erro[4])
+  //writeActuator(5, erro[5]);//(erro[5] -erro[4])
   
-  writeActuator(6, erro[6]+erro[7]);
-  writeActuator(7, erro[6]-erro[7]);
+  //writeActuator(6, erro[6]);
+  //writeActuator(7, erro[6]);
 }

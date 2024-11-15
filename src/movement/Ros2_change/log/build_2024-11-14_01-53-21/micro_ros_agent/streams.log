@@ -1,0 +1,47 @@
+[0.009s] Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_agent': AMENT_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_agent -- -j12 -l12
+[0.034s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.179s] -- Found rosidl_cmake: 3.1.5 (/opt/ros/humble/share/rosidl_cmake/cmake)
+[0.179s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.201s] -- Found fastrtps_cmake_module: 2.2.2 (/opt/ros/humble/share/fastrtps_cmake_module/cmake)
+[0.202s] -- Found rmw_dds_common: 1.6.0 (/opt/ros/humble/share/rmw_dds_common/cmake)
+[0.225s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.230s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.235s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.242s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.255s] -- Found rmw_fastrtps_shared_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_shared_cpp/cmake)
+[0.304s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.305s] -- Found ament_cmake_gtest: 1.3.10 (/opt/ros/humble/share/ament_cmake_gtest/cmake)
+[0.306s] -- Found micro_ros_msgs: 3.0.1 (/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake)
+[0.383s] -- Configuring done
+[0.395s] -- Generating done
+[0.395s] -- Build files have been written to: /home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_agent
+[0.419s] [35m[1mConsolidate compiler generated dependencies of target micro_ros_agent[0m
+[0.445s] [ 33%] [32mBuilding CXX object CMakeFiles/micro_ros_agent.dir/src/agent/Agent.cpp.o[0m
+[0.445s] [ 33%] [32mBuilding CXX object CMakeFiles/micro_ros_agent.dir/src/agent/graph_manager/graph_manager.cpp.o[0m
+[0.446s] [ 50%] [32mBuilding CXX object CMakeFiles/micro_ros_agent.dir/src/main.cpp.o[0m
+[3.247s] [ 66%] [32m[1mLinking CXX executable micro_ros_agent[0m
+[3.507s] [100%] Built target micro_ros_agent
+[3.514s] Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_agent' returned '0': AMENT_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_agent -- -j12 -l12
+[3.539s] Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_agent': AMENT_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_agent
+[3.545s] -- Install configuration: ""
+[3.545s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/ament_index/resource_index/package_run_dependencies/micro_ros_agent
+[3.545s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/ament_index/resource_index/parent_prefix_path/micro_ros_agent
+[3.545s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/environment/ament_prefix_path.sh
+[3.545s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/environment/ament_prefix_path.dsv
+[3.545s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/environment/path.sh
+[3.545s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/environment/path.dsv
+[3.545s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/local_setup.bash
+[3.546s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/local_setup.sh
+[3.546s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/local_setup.zsh
+[3.546s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/local_setup.dsv
+[3.546s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/package.dsv
+[3.546s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/ament_index/resource_index/packages/micro_ros_agent
+[3.546s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/cmake/ament_cmake_export_dependencies-extras.cmake
+[3.546s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/cmake/micro_ros_agentConfig.cmake
+[3.546s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/cmake/micro_ros_agentConfig-version.cmake
+[3.546s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/package.xml
+[3.546s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/lib/micro_ros_agent/micro_ros_agent
+[3.547s] -- Set runtime path of "/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/lib/micro_ros_agent/micro_ros_agent" to ""
+[3.547s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/launch
+[3.547s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_agent/share/micro_ros_agent/launch/micro_ros_agent_launch.py
+[3.549s] Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_agent' returned '0': AMENT_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_agent

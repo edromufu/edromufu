@@ -1,0 +1,180 @@
+[0.186s] Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_msgs -- -j12 -l12
+[0.572s] [  2%] Built target micro_ros_msgs__cpp
+[0.573s] [  2%] Built target ament_cmake_python_copy_micro_ros_msgs
+[0.573s] [ 12%] Built target micro_ros_msgs__rosidl_generator_c
+[0.573s] [ 23%] Built target micro_ros_msgs__rosidl_typesupport_cpp
+[0.573s] [ 34%] Built target micro_ros_msgs__rosidl_typesupport_introspection_cpp
+[0.573s] [ 44%] Built target micro_ros_msgs__rosidl_typesupport_fastrtps_cpp
+[0.573s] [ 55%] Built target micro_ros_msgs__rosidl_typesupport_fastrtps_c
+[0.573s] [ 65%] Built target micro_ros_msgs__rosidl_typesupport_c
+[0.573s] [ 76%] Built target micro_ros_msgs__rosidl_typesupport_introspection_c
+[0.573s] [ 76%] Built target micro_ros_msgs
+[0.574s] [ 78%] Built target micro_ros_msgs__py
+[0.574s] [ 87%] Built target micro_ros_msgs__rosidl_generator_py
+[0.574s] [ 91%] Built target micro_ros_msgs__rosidl_typesupport_introspection_c__pyext
+[0.574s] [ 95%] Built target micro_ros_msgs__rosidl_typesupport_fastrtps_c__pyext
+[0.574s] [100%] Built target micro_ros_msgs__rosidl_typesupport_c__pyext
+[0.574s] running egg_info
+[0.574s] writing micro_ros_msgs.egg-info/PKG-INFO
+[0.574s] writing dependency_links to micro_ros_msgs.egg-info/dependency_links.txt
+[0.574s] writing top-level names to micro_ros_msgs.egg-info/top_level.txt
+[0.574s] reading manifest file 'micro_ros_msgs.egg-info/SOURCES.txt'
+[0.575s] writing manifest file 'micro_ros_msgs.egg-info/SOURCES.txt'
+[0.575s] [100%] Built target ament_cmake_python_build_micro_ros_msgs_egg
+[0.576s] Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_msgs -- -j12 -l12
+[0.643s] Invoking command in '/home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_msgs
+[0.653s] -- Install configuration: ""
+[0.653s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/ament_index/resource_index/rosidl_interfaces/micro_ros_msgs
+[0.654s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs
+[0.654s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg
+[0.654s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/graph.h
+[0.654s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/entity.h
+[0.654s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/rosidl_generator_c__visibility_control.h
+[0.654s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail
+[0.655s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__type_support.h
+[0.655s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__type_support.h
+[0.655s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__struct.h
+[0.656s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__functions.c
+[0.656s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__functions.c
+[0.656s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__functions.h
+[0.656s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__struct.h
+[0.657s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__type_support.h
+[0.657s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__functions.c
+[0.657s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__struct.h
+[0.657s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__functions.h
+[0.657s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__functions.h
+[0.657s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/node.h
+[0.658s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/environment/library_path.sh
+[0.658s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/environment/library_path.dsv
+[0.660s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_generator_c.so
+[0.660s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs
+[0.660s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg
+[0.660s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[0.660s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail
+[0.660s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__rosidl_typesupport_fastrtps_c.h
+[0.660s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__rosidl_typesupport_fastrtps_c.h
+[0.661s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__rosidl_typesupport_fastrtps_c.h
+[0.662s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_fastrtps_c.so
+[0.662s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs
+[0.662s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg
+[0.662s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[0.664s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail
+[0.664s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__type_support.c
+[0.665s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__rosidl_typesupport_introspection_c.h
+[0.665s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__rosidl_typesupport_introspection_c.h
+[0.666s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__type_support.c
+[0.666s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__type_support.c
+[0.666s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__rosidl_typesupport_introspection_c.h
+[0.667s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_introspection_c.so
+[0.667s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_c.so
+[0.667s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs
+[0.668s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg
+[0.668s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/entity.hpp
+[0.668s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/node.hpp
+[0.668s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail
+[0.668s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__traits.hpp
+[0.668s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__struct.hpp
+[0.669s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__builder.hpp
+[0.669s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__builder.hpp
+[0.669s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__traits.hpp
+[0.670s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__builder.hpp
+[0.670s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__struct.hpp
+[0.670s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__struct.hpp
+[0.670s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__traits.hpp
+[0.670s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/graph.hpp
+[0.671s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs
+[0.671s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg
+[0.671s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[0.671s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail
+[0.671s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/dds_fastrtps
+[0.671s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__rosidl_typesupport_fastrtps_cpp.hpp
+[0.671s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__rosidl_typesupport_fastrtps_cpp.hpp
+[0.672s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__rosidl_typesupport_fastrtps_cpp.hpp
+[0.673s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_fastrtps_cpp.so
+[0.673s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs
+[0.673s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg
+[0.673s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail
+[0.673s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__type_support.cpp
+[0.673s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__rosidl_typesupport_introspection_cpp.hpp
+[0.674s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__rosidl_typesupport_introspection_cpp.hpp
+[0.674s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__type_support.cpp
+[0.674s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__type_support.cpp
+[0.674s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__rosidl_typesupport_introspection_cpp.hpp
+[0.676s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_introspection_cpp.so
+[0.676s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_cpp.so
+[0.676s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/environment/pythonpath.sh
+[0.677s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/environment/pythonpath.dsv
+[0.677s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs-3.0.1-py3.10.egg-info
+[0.677s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs-3.0.1-py3.10.egg-info/top_level.txt
+[0.677s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs-3.0.1-py3.10.egg-info/PKG-INFO
+[0.677s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs-3.0.1-py3.10.egg-info/SOURCES.txt
+[0.677s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs-3.0.1-py3.10.egg-info/dependency_links.txt
+[0.677s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs
+[0.678s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/__init__.py
+[0.678s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg
+[0.678s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/__init__.py
+[0.678s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_graph.py
+[0.678s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_node_s.c
+[0.678s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_entity_s.c
+[0.678s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_graph_s.c
+[0.678s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_entity.py
+[0.678s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_node.py
+[0.678s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[0.679s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[0.679s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/_micro_ros_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[0.679s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/_micro_ros_msgs_s.ep.rosidl_typesupport_c.c
+[0.679s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/_micro_ros_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[0.679s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/libmicro_ros_msgs__rosidl_generator_py.so
+[0.679s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[0.712s] Listing '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs'...
+[0.712s] Listing '/home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg'...
+[0.718s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[0.718s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[0.718s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[0.718s] -- Up-to-date: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_generator_py.so
+[0.718s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/msg/Graph.idl
+[0.719s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/msg/Node.idl
+[0.719s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/msg/Entity.idl
+[0.719s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/msg/Graph.msg
+[0.719s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/msg/Node.msg
+[0.720s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/msg/Entity.msg
+[0.720s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/ament_index/resource_index/package_run_dependencies/micro_ros_msgs
+[0.720s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/ament_index/resource_index/parent_prefix_path/micro_ros_msgs
+[0.720s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/environment/ament_prefix_path.sh
+[0.720s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/environment/ament_prefix_path.dsv
+[0.721s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/environment/path.sh
+[0.721s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/environment/path.dsv
+[0.721s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/local_setup.bash
+[0.721s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/local_setup.sh
+[0.721s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/local_setup.zsh
+[0.721s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/local_setup.dsv
+[0.721s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/package.dsv
+[0.721s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/ament_index/resource_index/packages/micro_ros_msgs
+[0.722s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_cExport.cmake
+[0.722s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_cExport-noconfig.cmake
+[0.723s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[0.723s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[0.724s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_introspection_cExport.cmake
+[0.724s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[0.724s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_cExport.cmake
+[0.724s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[0.725s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_cppExport.cmake
+[0.725s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[0.725s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[0.726s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[0.726s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[0.726s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_cppExport.cmake
+[0.726s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[0.727s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_pyExport.cmake
+[0.727s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_pyExport-noconfig.cmake
+[0.727s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/rosidl_cmake-extras.cmake
+[0.727s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.728s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[0.728s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[0.728s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[0.728s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.728s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[0.729s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgsConfig.cmake
+[0.729s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgsConfig-version.cmake
+[0.729s] -- Installing: /home/paulo/edromufu/src/movement/Ros2_change/install/micro_ros_msgs/share/micro_ros_msgs/package.xml
+[0.732s] Invoked command in '/home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/paulo/edromufu/src/movement/Ros2_change/build/micro_ros_msgs

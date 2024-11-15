@@ -2,10 +2,10 @@
 
 
 const int addMux = 0x20;
-const int pinSaidaMux = 0;
-const int pinS0 = 2;
-const int pinS1 = 3;
-const int pinS2 = 4;
+const int pinSaidaMux = 15;
+const int pinS0 = 21;
+const int pinS1 = 22;
+const int pinS2 = 23;
 float valor = 0.0;
 
 int values[8];
@@ -16,6 +16,7 @@ void setup() {
   pinMode(pinS0, OUTPUT);
   pinMode(pinS1, OUTPUT);
   pinMode(pinS2, OUTPUT);
+  pinMode(pinSaidaMux,INPUT);
 
   analogSetPinAttenuation(33, ADC_0db);
 }
