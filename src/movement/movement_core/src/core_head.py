@@ -61,7 +61,7 @@ class CoreHead:
 
         if not ballInfos.found:
             self.timesFoundFalse += 1
-            if self.timesFoundFalse == 3:
+            if self.timesFoundFalse == 30:
                 self.found = False
                 self.timesFoundFalse = 0
 
@@ -98,10 +98,14 @@ class CoreHead:
 
                     if self.x > self.parameters.xCenterRightLimit or self.x < self.parameters.xCenterLeftLimit:
                         [currentHorRotation, currentVerRotation] = self.motorsFeedback(True).pos_vector
+                        while currentHorRotation == -1.0 or currentVerRotation == -1.0:
+                            [currentHorRotation, currentVerRotation] = self.motorsFeedback(True).pos_vector
                         dx = self.callPx(self.x)
 
                     if self.y > self.parameters.yCenterBottomLimit or self.y < self.parameters.yCenterTopLimit:
                         [currentHorRotation, currentVerRotation] = self.motorsFeedback(True).pos_vector
+                        while currentHorRotation == -1.0 or currentVerRotation == -1.0:
+                            [currentHorRotation, currentVerRotation] = self.motorsFeedback(True).pos_vector
                         dy = self.callPy(self.y)                        
 
                     if dx or dy:

@@ -58,31 +58,36 @@ class goalkeeper_brain:
 
     def run(self):
         while not rospy.is_shutdown():
-            if self.found: #Se quiser trocar para page infinita "IF not"
-                self.pageCall('aurea_left_walk')   
-                print("Correndo pra bola")
-                
 
-                
-            elif self.found and self.HorRotation < self.parameters.lookingLeftRad:              
-                self.pageCall('aurea_real_left_walk') #Para a page de andar de lado trocar para while
-                #self.fall()
-                print("LEFT WALK")
-                self.found = False
+            try: 
+                if self.found: #Se quiser trocar para page infinita "IF not"
+                    self.pageCall('aurea_front_walk2')   
+                    print("Correndo pra bola")
+                    rospy.sleep(5)
+                '''    
+                if self.found and self.HorRotation < self.parameters.lookingLeftRad:              
+                    self.pageCall('aurea_real_left_walk') #Para a page de andar de lado trocar para while
+                    #self.fall()
+                    print("LEFT WALK")
+                    self.found = False
+                    
 
-            elif self.found and self.HorRotation > self.parameters.lookingRightRad:
-                self.pageCall('aurea_right_walk') #MUDAR AQUI
-                print("RIGHT WALK")
-                #self.fall()
-                self.found = False
+                if self.found and self.HorRotation > self.parameters.lookingRightRad:
+                    self.pageCall('aurea_right_walk') #MUDAR AQUI
+                    print("RIGHT WALK")
+                    #self.fall()
+                    self.found = False
 
-            elif self.found and self.ballClose:
-                self.HorRotation == self.parameters.minVerRad2Kick
-                self.pageCall('aurea_front_walk')   #MUDAR AQUI 
-                print('KICK')
-                #self.fall()
-                self.found = False
-            
+                if self.found and self.ballClose:
+                    self.HorRotation == self.parameters.minVerRad2Kick
+                    self.pageCall('aurea_front_walk')   #MUDAR AQUI 
+                    print('KICK')
+                    #self.fall()
+                    self.found = False
+                    '''
+            except Exception as e:
+              # print(f"{e}")   
+              pass
             
     '''
     def fall(self):
