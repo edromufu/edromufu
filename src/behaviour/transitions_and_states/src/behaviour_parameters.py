@@ -23,7 +23,7 @@ class BehaviourParameters():
         self.timerPage = 60 #s
         self.timerFirstPose = 5 #s
         self.timerWalk = 15 #s
-
+    
         '''#Tópico do ROS IMU
         self.imuAccelTopic = '/behaviour/imu_accel'
 
@@ -62,6 +62,7 @@ class BehaviourParameters():
         #Parâmetros da câmera
         self.cameraWidth =  640
         self.cameraHeight = 480
+
 
         #Parâmetros de interpretação da câmera
         self.xCenterLeftLimit = 4*self.cameraWidth/10

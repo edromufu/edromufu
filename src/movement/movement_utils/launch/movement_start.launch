@@ -6,7 +6,7 @@
     <arg name="queue_time" default="0.05"/>
     <arg name="visualization" default="false"/>
     <arg name="head_plugged" default="true"/>
-    <arg name="behaviour" default="true"/>
+    <arg name="behaviour" default="false"/>
 
     <!-- Inicialização do movimento de caminhada e pages-->
     <node name="movement_core" pkg="movement_core" type="core.py" output="screen">
