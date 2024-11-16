@@ -1,0 +1,8 @@
+prefix=/home/edrom/edromufu/devel
+
+Name: ballsim
+Description: Description of ballsim
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/edrom/edromufu/devel
+
+Name: movement_endpoint_comm
+Description: Description of movement_endpoint_comm
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>movement_pages</name>
+  <version>0.0.0</version>
+  <description>The movement_pages package</description>
+  <maintainer email="kirlin@todo.todo">kirlin</maintainer>
+  <license>TODO</license>
+
+  <depend>ament_copyright</depend>
+  <depend>movement_utils</depend>
+  <depend>std_msgs</depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
+

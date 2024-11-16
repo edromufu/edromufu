@@ -1,0 +1,8 @@
+prefix=/home/edrom/edromufu/devel
+
+Name: humanoid_definition
+Description: Description of humanoid_definition
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

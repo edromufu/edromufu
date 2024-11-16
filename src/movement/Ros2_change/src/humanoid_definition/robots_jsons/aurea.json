@@ -1,0 +1,22 @@
+{
+    "leg_joints":
+    [
+        { "name":"COM"      ,     "id":-1,    "sister":-1,    "child":  1,    "mother2SelfVec": [     0,       0,  0.29846],    "jointAxis": "UZ",   "jointRotation": 0},
+        { "name":"RHIP_UZ"  ,     "id": 6,    "sister": 7,    "child":  2,    "mother2SelfVec": [0.0025, -0.0425,  -0.0468],    "jointAxis": "UZ",   "jointRotation": 0},
+        { "name":"RHIP_UX"  ,     "id": 8,    "sister":-1,    "child":  3,    "mother2SelfVec": [ 0.021,       0, -0.02882],    "jointAxis": "UX",   "jointRotation": 0},
+        { "name":"RHIP_UY"  ,     "id":10,    "sister":-1,    "child":  4,    "mother2SelfVec": [     0,       0,        0],    "jointAxis": "UY",   "jointRotation": 0},
+        { "name":"RKNEE"    ,     "id":12,    "sister":-1,    "child":  5,    "mother2SelfVec": [     0,       0,  -0.1111],    "jointAxis": "UY",   "jointRotation": 0},
+        { "name":"RANKLE_UY",     "id":14,    "sister":-1,    "child":  6,    "mother2SelfVec": [0.0083,       0,    -0.08],    "jointAxis": "UY",   "jointRotation": 0},
+        { "name":"RANKLE_UX",     "id":16,    "sister":-1,    "child": 14,    "mother2SelfVec": [     0,       0,        0],    "jointAxis": "UX",   "jointRotation": 0},
+        { "name":"LHIP_UZ"  ,     "id": 7,    "sister":-1,    "child":  8,    "mother2SelfVec": [0.0025,  0.0425,  -0.0468],    "jointAxis": "UZ",   "jointRotation": 0},
+        { "name":"LHIP_UX"  ,     "id": 9,    "sister":-1,    "child":  9,    "mother2SelfVec": [ 0.021,       0, -0.02882],    "jointAxis": "UX",   "jointRotation": 0},
+        { "name":"LHIP_UY"  ,     "id":11,    "sister":-1,    "child": 10,    "mother2SelfVec": [     0,       0,        0],    "jointAxis": "UY",   "jointRotation": 0},
+        { "name":"LKNEE"    ,     "id":13,    "sister":-1,    "child": 11,    "mother2SelfVec": [     0,       0,  -0.1111],    "jointAxis": "UY",   "jointRotation": 0},
+        { "name":"LANKLE_UY",     "id":15,    "sister":-1,    "child": 12,    "mother2SelfVec": [0.0083,       0,    -0.08],    "jointAxis": "UY",   "jointRotation": 0},
+        { "name":"LANKLE_UX",     "id":17,    "sister":-1,    "child": 13,    "mother2SelfVec": [     0,       0,        0],    "jointAxis": "UX",   "jointRotation": 0},
+        { "name":"LFOOT"    ,     "id":-1,    "sister":-1,    "child": -1,    "mother2SelfVec": [-0.021,       0,   -0.029],    "jointAxis": "UZ",   "jointRotation": 0},
+        { "name":"RFOOT"    ,     "id":-1,    "sister":-1,    "child": -1,    "mother2SelfVec": [-0.021,       0,   -0.029],    "jointAxis": "UZ",   "jointRotation": 0}
+    ],
+    "inverted_motors_id": [6, 7, 10, 12, 13,16, 17],
+    "knee_ids": [12,13]
+}

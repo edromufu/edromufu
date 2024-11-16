@@ -1,0 +1,8 @@
+prefix=/home/edrom/edromufu/devel
+
+Name: kinematic_functions
+Description: Description of kinematic_functions
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

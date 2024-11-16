@@ -1,0 +1,8 @@
+prefix=/home/edrom/edromufu/devel
+
+Name: localization_real
+Description: Description of localization_real
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

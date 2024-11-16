@@ -1,0 +1,8 @@
+prefix=/home/edrom/edromufu/devel
+
+Name: sensor_observer
+Description: Description of sensor_observer
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
