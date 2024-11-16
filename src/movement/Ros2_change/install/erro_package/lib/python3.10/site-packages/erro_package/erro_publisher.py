@@ -37,7 +37,7 @@ class PotValuesPublisher(Node):
         self.timer = self.create_timer(0.1, self.timer_callback)
 
     def listener(self, msg):
-        self.pagePoses = msg.data
+        self.pagePoses += msg.data
 
        
 

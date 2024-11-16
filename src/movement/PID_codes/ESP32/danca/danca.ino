@@ -11,23 +11,15 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  for(int i = 0; i < 4; i++){
+
+   for(int i = 0; i < 8; i++){
     digitalWrite(ACTUATOR_IN_IMP_PINS[i], HIGH);
     digitalWrite(ACTUATOR_IN_PAR_PINS[i], LOW);
    }
-
-   for(int i = 4; i < 8; i++){
+   delay(1000);
+   for(int i = 0; i < 8; i++){
     digitalWrite(ACTUATOR_IN_IMP_PINS[i], LOW);
     digitalWrite(ACTUATOR_IN_PAR_PINS[i], HIGH);
    }
-  delay(150);
-   for(int i = 0; i < 4; i++){
-    digitalWrite(ACTUATOR_IN_IMP_PINS[i], HIGH);
-    digitalWrite(ACTUATOR_IN_PAR_PINS[i], LOW);
-   }
-
-   for(int i = 4; i < 8; i++){
-    digitalWrite(ACTUATOR_IN_IMP_PINS[i], LOW);
-    digitalWrite(ACTUATOR_IN_PAR_PINS[i], HIGH);
-   }
+   delay(1000);
 }
