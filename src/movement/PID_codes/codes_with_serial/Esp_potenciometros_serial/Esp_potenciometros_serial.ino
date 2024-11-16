@@ -3,9 +3,9 @@
 
 const int addMux = 0x20;
 const int pinSaidaMux = 15;
-const int pinS0 = 21;
-const int pinS1 = 22;
-const int pinS2 = 23;
+const int pinS0 = 23;
+const int pinS1 = 21;
+const int pinS2 = 22;
 float valor = 0.0;
 
 int values[8];

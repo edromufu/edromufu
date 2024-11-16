@@ -71,7 +71,7 @@ const int pot_size = 8;
 //const int ACTUATOR_IN_IMP_PINS[] = {13, 33, 25, 14, 23, 15, 18, 16}; //vetor de pino de avanço
 //const int ACTUATOR_IN_PAR_PINS[] = {27, 32, 26, 12, 22, 21, 5, 4}; //vetor de pino de recuo
 const int ACTUATOR_IN_IMP_PINS[] = {26, 19, 2, 5, 32, 33, 13, 12}; //vetor de pino de avanço
-const int ACTUATOR_IN_PAR_PINS[] = {22, 21, 4, 17, 16, 18, 25, 14}; //vetor de pino de recuo
+const int ACTUATOR_IN_PAR_PINS[] = {22, 21, 4, 17, 16, 18, 27, 14}; //vetor de pino de recuo
 
 //--------constantes PID--------
 
@@ -121,18 +121,15 @@ void writeActuator (int id, int signal){
     digitalWrite(ACTUATOR_IN_IMP_PINS[id], LOW);
     digitalWrite(ACTUATOR_IN_PAR_PINS[id], HIGH);
     //analogWrite(ACTUATOR_EN_PINS[id], newSignal);
-    feedback[2]=float(100);
   }
   else if (signal > 5){
     digitalWrite(ACTUATOR_IN_IMP_PINS[id], HIGH);
     digitalWrite(ACTUATOR_IN_PAR_PINS[id], LOW);
-    feedback[2]=float(200);
 
     //analogWrite(ACTUATOR_EN_PINS[id], -newSignal);
   }else if(signal <= 5 && signal >= -5){
     digitalWrite(ACTUATOR_IN_IMP_PINS[id], LOW);
     digitalWrite(ACTUATOR_IN_PAR_PINS[id], LOW);
-    feedback[2]=float(300);
 
   }
 }
@@ -212,15 +209,15 @@ void subscription_callback(const void * msgin)
 void CalculatePWM(){
 
   //--------Calculando Entrada do PWM--------
-  //writeActuator(0, -erro[1]); //(erro[0]-erro[1])
-  //writeActuator(1, -erro[1]);//(-erro[0]-erro[1])
+  writeActuator(0, erro[0]-erro[1]); //(erro[0]-erro[1])
+  //writeActuator(1, -erro[0]-erro[1]);//(-erro[0]-erro[1])
   
-  //writeActuator(2, -erro[3]);//(erro[2]-erro[3])
-  //writeActuator(3, erro[3]);//(erro[2]+erro[3])
+  //writeActuator(2, -erro[2]+erro[3]);//(erro[2]+erro[3])
+  //writeActuator(3, -erro[2]-erro[3]);//(erro[2]-erro[3])
   
-  //writeActuator(4, erro[5]);//(erro[5] + erro[4])
-  //writeActuator(5, erro[5]);//(erro[5] -erro[4])
+  writeActuator(4, erro[5] + erro[4]);//(erro[5] + erro[4])
+  //writeActuator(5, erro[5] -erro[4]);//(erro[5] -erro[4])
   
-  //writeActuator(6, erro[6]);
-  //writeActuator(7, erro[6]);
+  //writeActuator(6, -erro[6]-erro[7]);
+  //writeActuator(7, -erro[6]+erro[7]);
 }

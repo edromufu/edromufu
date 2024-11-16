@@ -12,7 +12,7 @@ class PotValuesPublisher(Node):
         self.pagePoses=[ 0,0,0,0,0,0,0,0]
         self.vetor_reordenado =[ 0,0,0,0,0,0,0,0]
         self.errors =[ 0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]
-        self.posicoesPot=[6,5,7,4,3,0,1,2]
+        self.posicoesPot=[6,5,3,0,7,4,1,2]
         # Configuração da porta serial
         try:
             self.serial_connection = serial.Serial()
@@ -71,7 +71,7 @@ class PotValuesPublisher(Node):
                     msg = Float32MultiArray()
                     msg.data = self.errors
                     self.publisher_.publish(msg)
-                    self.get_logger().info(f"Valores publicados: {msg.data}")
+                    self.get_logger().info(f"Valores publicados: {[round(x,3) for x in msg.data]}")
                 else:
                     self.get_logger().warn(f"Vetor de tamanho inesperado: {len(values)}")
 
