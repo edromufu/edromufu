@@ -15,7 +15,7 @@ import object_finder.running_inference as ri    #Importa o arquivo python do dir
 
 edrom_dir = '/home/'+os.getlogin()+'/edromufu/src/'
 sys.path.append(edrom_dir+'behaviour/transitions_and_states/transitions_and_states')
-from behaviour_parameters import BehaviourParameters
+#!from behaviour_parameters import BehaviourParameters
 
 from sensor_msgs.msg import Image as ROS_Image
 from vision_msgs.msg import *
@@ -60,9 +60,9 @@ class Visao(Node):
         self.model = ri.set_model_input()
         self.searching = True
 
-        self.parameters = BehaviourParameters()
+        #!self.parameters = BehaviourParameters()
 
-        self.publisher = self.create_publisher(Webotsmsg,self.parameters.vision2BhvTopic, 100)
+        self.publisher = self.create_publisher(Webotsmsg,'self_parameters_vision2BhvTopic', 100)
 
         #SE FOR NO REAL
         print("\n==Visão Operante==\n")
@@ -76,7 +76,7 @@ class Visao(Node):
         pipeline = rs.pipeline()
         config = rs.config()
 
-        config.enable_stream(rs.stream.depth, 848, 480, rs.format.z16, 30)
+        #? config.enable_stream(rs.stream.depth, 848, 480, rs.format.z16, 30)
         config.enable_stream(rs.stream.color, 640, 480, rs.format.bgr8, 30)
 
         # Começa a captura
@@ -107,15 +107,16 @@ class Visao(Node):
             # Wait for a coherent pair of frames: depth and color
             frames = pipeline.wait_for_frames()
             self.depth_frame = frames.get_depth_frame()
-            self.intrinsics = self.depth_frame.profile.as_video_stream_profile().intrinsics
+            #? self.intrinsics = self.depth_frame.profile.as_video_stream_profile().intrinsics
             color_frame = frames.get_color_frame()
             
-            if not self.depth_frame or not color_frame:
+            #? if not self.depth_frame or not color_frame:
+            if not color_frame:
                 print("\nError capturing frame\n")
                 continue
 
             # Convert images to numpy arrays
-            depth_image = np.asanyarray(self.depth_frame.get_data())
+            #? depth_image = np.asanyarray(self.depth_frame.get_data())
             self.current_frame = np.asanyarray(color_frame.get_data())
             
             #Se a leitura da camera falhar imprime uma mensagem e tenta de novo
@@ -129,10 +130,10 @@ class Visao(Node):
             
             if self.output_img:
                 # Apply colormap on depth image (image must be converted to 8-bit per pixel first)
-                depth_colormap = cv2.applyColorMap(cv2.convertScaleAbs(depth_image, alpha=0.03), cv2.COLORMAP_JET)
+                #? depth_colormap = cv2.applyColorMap(cv2.convertScaleAbs(depth_image, alpha=0.03), cv2.COLORMAP_JET)
 
                 cv2.imshow("Current Frame", self.inference_frame)
-                cv2.imshow("Current Depth Frame", depth_colormap)
+                #? cv2.imshow("Current Depth Frame", depth_colormap)
 
             
             #Calculo do fps de cada loop (envolve tanto o tempo da inferencia quanto o da camera)
@@ -154,7 +155,7 @@ class Visao(Node):
     def setup_object(self, obj_data):
         obj = Objects()
         [obj.found, obj.x, obj.y, obj.roi_width, obj.roi_height, _] = obj_data
-        [obj.x_position, obj.y_position, obj.z_position] = self.pos_object_3d(obj.x, obj.y)
+        #? [obj.x_position, obj.y_position, obj.z_position] = self.pos_object_3d(obj.x, obj.y)
         return obj
     
     def pos_object_3d(self,x,y):
@@ -162,7 +163,7 @@ class Visao(Node):
         depth_value = self.depth_frame.get_distance(x, y) # retorna a distância em metros para o ponto específico (x, y) na imagem de profundidade.
         # Converte para coordenadas 3D (utiliza a função rs.rs2_deproject_pixel_to_point)
         point = rs.rs2_deproject_pixel_to_point(self.intrinsics, (x,y), depth_value) #  converte as coordenadas do pixel para coordenadas 3D, utilizando as informações de intrínsecos da câmera.
-        return point
+        return None #?point
         
     def pos_multi_objects_3d(self, x_coords, y_coords):
         # Inicializa listas para armazenar as posições x, y e z
@@ -193,25 +194,10 @@ class Visao(Node):
         multi_objects.roi_width = [obj[3] for obj in detection_list]
         multi_objects.roi_height = [obj[4] for obj in detection_list]
         
-        multi_objects.x_position, multi_objects.y_position, multi_objects.z_position = self.pos_multi_objects_3d(multi_objects.x,multi_objects.y) 
+        #? multi_objects.x_position, multi_objects.y_position, multi_objects.z_position = self.pos_multi_objects_3d(multi_objects.x,multi_objects.y) 
 
 
         return multi_objects
-
-    '''
-    # Exemplo de uso para cada tipo de objeto de interseção
-    if x_intersection_objects:
-        objects_msg.x_intersection = create_multi_objects(x_intersection_objects)
-    
-    if l_intersection_objects:
-        objects_msg.l_intersection = create_multi_objects(l_intersection_objects)
-    
-    if t_intersection_objects:
-        objects_msg.t_intersection = create_multi_objects(t_intersection_objects)
-    
-    if center_objects:
-        objects_msg.center = create_multi_objects(center_objects)'''
-
 
     def publish_results(self):
 
