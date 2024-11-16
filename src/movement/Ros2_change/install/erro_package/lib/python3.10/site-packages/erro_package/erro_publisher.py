@@ -12,6 +12,7 @@ class PotValuesPublisher(Node):
         self.pagePoses=[ 0,0,0,0,0,0,0,0]
         self.vetor_reordenado =[ 0,0,0,0,0,0,0,0]
         self.errors =[ 0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]
+        self.last_error =  [0,0,0,0,0,0,0,0]
         self.posicoesPot=[6,5,3,0,7,4,1,2]
         # Configuração da porta serial
         try:
@@ -59,10 +60,22 @@ class PotValuesPublisher(Node):
                         self.vetor_reordenado[pos] = values[i]
                     except:
                         pass
+
+
+                if all(num == 0.0 for num in self.pagePoses):
+                    self.pagePoses = self.vetor_reordenado
+                    self.last_error = self.vetor_reordenado
+
+                for i in (range(8) if len(self.vetor_reordenado)>=8 else range(len(self.vetor_reordenado))):
+                    if ((self.vetor_reordenado[i] - self.last_error[i])> 10):
+                        self.vetor_reordenado[i] = self.last_error[i]
+
+
+
+                
                 for i in (range(8) if len(self.vetor_reordenado)>=8 else range(len(self.vetor_reordenado))):
                     self.errors[i] = self.vetor_reordenado[i] - self.pagePoses[i]
-                #if(sum(self.errors) <= 50):
-                #    self.pagePoses.pop(1)
+
                 
 
                 # Verifica se o vetor tem 8 valores antes de publicar

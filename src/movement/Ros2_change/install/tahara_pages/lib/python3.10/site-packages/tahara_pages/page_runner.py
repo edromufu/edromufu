@@ -7,57 +7,56 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Float32MultiArray
 
-MAIN_DIR = '/home/'+os.getlogin()+'/edromufu/src/movement/movement_pages/pages_tahara/'
+MAIN_DIR = '/home/'+os.getlogin()+'/edromufu/src/movement/Ros2_change/src/tahara_pages/tahara_pages/'
 
 class MyPublisher(Node):
     def __init__(self):
         super().__init__('page_topic')
+        
         self.publisher_ = self.create_publisher(Float32MultiArray, 'pot_py_topic', 10)
-        self.timer = self.create_timer(1.0, self.timer_callback)  # Chama a callback a cada 1 segundo
+        self.subscriber_ = self.create_subscription(Float32MultiArray,'pot_values',self.listener,1)
         self.msg = Float32MultiArray()
-
-    def timer_callback(self):        
-        self.publisher_.publish(self.msg)
+        self.pagePoses=Page('walk')
 
 
-def Page(page2Run, queueTime):
+    def listener(self, msg):
+        
+        self.erro = msg.data
+        if all((num <= 5 and num>=-5) for num in self.erro):
+            self.messagePose = Float32MultiArray()
+            self.messagePose.data= self.pagePoses[0]
+            self.publisher_.publish(self.messagePose)
+            self.pagePoses.pop(0)
+        if len(self.pagePoses)==0:
+            self.pagePoses=Page('walk')
+
+
+
+def Page(page2Run):
 
     with open(MAIN_DIR+page2Run+'.json', 'r') as pageFile:
         jsonData = json.loads(pageFile.read())
+    
+    pagePoses = []
+    lenRange = len(jsonData["joints_positions"]["pot_0"])
+    for indices in range(0,lenRange):
+        vetor = [jsonData["joints_positions"][key][indices] for key in jsonData["joints_positions"]]
+        pagePoses.append(vetor)
+    
 
-
+    
     return pagePoses
 
-def pageInterpol(positions, time, deltaT):
 
-    for motor_id in range(8):
-        motor_n_positions = positions[f'pot_{motor_id}']
-        motor_n_interpol = []
 
-        for index, position in enumerate(motor_n_positions):
 
-            if index != 0:
-
-                last_position = motor_n_positions[index-1]
-                pose_time = time[index-1]
-
-                count = 0
-                while count * deltaT < pose_time:                    
-                    interpol_func_value = (1-np.cos((count+1)*deltaT*np.pi/pose_time))/2
-                    interpoled_position = last_position + (position - last_position)*interpol_func_value
-
-                    motor_n_interpol.append(round(interpoled_position,4))
-                    count += 1
-
-            else:
-                motor_n_interpol.append(position)
-        
-        positions[f'motor_{motor_id}'] = motor_n_interpol
+def main():
     
-    poses = interpolOrganization(positions)
+    rclpy.init()
+    node = MyPublisher()
+    rclpy.spin(node)
+    node.destroy_node()
+    rclpy.shutdown()
 
-    return poses
-
-def interpolOrganization(data):
-
-    return np.column_stack(list(data.values()))
+if __name__ == "__main__":
+    main()

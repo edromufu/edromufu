@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-        'software_pages = tahara_pages.software:main'
+        'software_pages = tahara_pages.software:main',
+        'page_runner = tahara_pages.page_runner:main'
         ],
     },
 )
