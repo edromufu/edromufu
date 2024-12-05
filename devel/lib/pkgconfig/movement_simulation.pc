@@ -1,8 +1,0 @@
-prefix=/home/edrom/edromufu/devel
-
-Name: movement_simulation
-Description: Description of movement_simulation
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

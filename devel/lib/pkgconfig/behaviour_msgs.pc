@@ -1,8 +1,0 @@
-prefix=/home/edrom/edromufu/devel
-
-Name: behaviour_msgs
-Description: Description of behaviour_msgs
-Version: 0.0.0
-Cflags: -I/home/edrom/edromufu/devel/include -I/home/edrom/edromufu/src/behaviour/bhv_antigo/behaviour_msgs/include
-Libs: -L${prefix}/lib 
-Requires: message_generation std_msgs geometry_msgs dynamic_reconfigure

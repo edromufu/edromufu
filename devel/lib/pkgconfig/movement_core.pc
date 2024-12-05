@@ -1,8 +1,0 @@
-prefix=/home/edrom/edromufu/devel
-
-Name: movement_core
-Description: Description of movement_core
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

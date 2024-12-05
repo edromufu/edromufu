@@ -1,8 +1,0 @@
-prefix=/home/edrom/edromufu/devel
-
-Name: movement_utils
-Description: Description of movement_utils
-Version: 0.0.0
-Cflags: -I/home/edrom/edromufu/devel/include
-Libs: -L${prefix}/lib 
-Requires: 

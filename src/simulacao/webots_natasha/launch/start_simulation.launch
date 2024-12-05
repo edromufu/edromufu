@@ -1,9 +1,0 @@
-<launch>
-
-<!-- Inicia o ambiente de simulação do Webots -->
-<include file="$(find webots_natasha)/launch/natasha_webots.launch"/>
-
-<!-- Inicia o controlador das robôs -->
-<include file="$(find webots_natasha)/launch/start_controller.launch"/>
-
-</launch>

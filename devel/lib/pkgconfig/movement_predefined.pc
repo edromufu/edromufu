@@ -1,8 +1,0 @@
-prefix=/home/edrom/edromufu/devel
-
-Name: movement_predefined
-Description: Description of movement_predefined
-Version: 1.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

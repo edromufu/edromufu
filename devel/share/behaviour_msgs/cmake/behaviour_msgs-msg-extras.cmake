@@ -1,2 +1,0 @@
-set(behaviour_msgs_MESSAGE_FILES "/home/edrom/edromufu/src/behaviour/bhv_antigo/behaviour_msgs/msg/simMovMsg.msg")
-set(behaviour_msgs_SERVICE_FILES "/home/edrom/edromufu/src/behaviour/bhv_antigo/behaviour_msgs/srv/GameControllerSrv.srv;/home/edrom/edromufu/src/behaviour/bhv_antigo/behaviour_msgs/srv/ActionPanelSrv.srv;/home/edrom/edromufu/src/behaviour/bhv_antigo/behaviour_msgs/srv/service_page.srv;/home/edrom/edromufu/src/behaviour/bhv_antigo/behaviour_msgs/srv/yamlTransitionSrv.srv")

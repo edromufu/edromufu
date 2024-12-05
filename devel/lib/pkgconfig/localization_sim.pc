@@ -1,8 +1,0 @@
-prefix=/home/edrom/edromufu/devel
-
-Name: localization_sim
-Description: Description of localization_sim
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

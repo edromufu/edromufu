@@ -1,8 +1,0 @@
-prefix=/home/edrom/edromufu/devel
-
-Name: approved_movement_preparing
-Description: Description of approved_movement_preparing
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

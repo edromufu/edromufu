@@ -1,8 +1,0 @@
-prefix=/home/edrom/edromufu/devel
-
-Name: movement_interface
-Description: Description of movement_interface
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

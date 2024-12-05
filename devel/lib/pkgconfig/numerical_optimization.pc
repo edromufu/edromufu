@@ -1,8 +1,0 @@
-prefix=/home/edrom/edromufu/devel
-
-Name: numerical_optimization
-Description: Description of numerical_optimization
-Version: 1.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

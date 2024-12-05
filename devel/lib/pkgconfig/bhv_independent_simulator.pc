@@ -1,8 +1,0 @@
-prefix=/home/edrom/edromufu/devel
-
-Name: bhv_independent_simulator
-Description: Description of bhv_independent_simulator
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
