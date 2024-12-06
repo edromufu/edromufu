@@ -42,8 +42,8 @@ class Core:
         rclpy.init(args=sys.argv)                   #(5)
         self.node = rclpy.create_node('movement_central')
 
-        self.QUEUE_TIME = self.node.declare_parameter('/movement_core/queue_time').get_parameter_value().double_value #Em segundos #(11)
-        self.PUB2VIS =self.node.declare_parameter('/movement_core/pub2vis').get_parameter_value().bool_value   #(12)
+        self.QUEUE_TIME = self.node.declare_parameter('/movement_core/queue_time',0.3).get_parameter_value().double_value #Em segundos #(11)
+        self.PUB2VIS =self.node.declare_parameter('/movement_core/pub2vis',False).get_parameter_value().bool_value   #(12)
         
 
         # Inicialização das variáveis do ROS para u2d2
@@ -59,12 +59,12 @@ class Core:
         #self.motorsTorque = rospy.ServiceProxy('u2d2_comm/enableTorque', enable_torque)        (4)
 
         #self.pub2motors = rospy.Publisher('u2d2_comm/data2body', BodyMotorsData, queue_size=100)  (10)
-        self.pub2motors = self.node.create_subscription(BodyMotorsData, 'u2d2_comm/data2body', 100)  #(10)
+        self.pub2motors = self.node.create_publisher(BodyMotorsData, 'u2d2_comm/data2body', 100)  #(10)
         self.pub2motorsMsg = BodyMotorsData()
 
         
-        self.motorsFeedback = self.create_client(BodyFeedback, 'u2d2_comm/feedbackBody')       #(3)
-        self.motorsTorque = self.create_client(EnableTorque, 'u2d2_comm/enableTorque')         #(4)
+        self.motorsFeedback = self.node.create_client(BodyFeedback, 'u2d2_comm/feedbackBody')       #(3)
+        self.motorsTorque = self.node.create_client(EnableTorque, 'u2d2_comm/enableTorque')         #(4)
 
         while not self.motorsFeedback.wait_for_service(timeout_sec=1.0):    #(1)
             self.node.get_logger().info('service not available, waiting again...')

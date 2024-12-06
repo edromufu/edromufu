@@ -47,18 +47,18 @@ else:
 class u2d2Control():
 
     def __init__(self):
-        self.motorLimitsDict = MIN_MAX_DICT
         
-        self.startComm()
+        
+        
 
         #rospy.init_node('u2d2') (3)
 
         rclpy.init(args=sys.argv) #(3)
         self.node = rclpy.create_node('u2d2') #(3)
 
-        self.DEVICENAME = self.node.declare_parameter('u2d2/port').get_parameter_value().string_value #(***)
+        self.DEVICENAME = self.node.declare_parameter('u2d2/port','/dev/ttyUSB0').get_parameter_value().string_value #(***)
 
-        if self.node.declare_parameter('u2d2/robot_name').get_parameter_value().string_value == 'aurea': #(2) #(***)
+        if self.node.declare_parameter('u2d2/robot_name','Aurea').get_parameter_value().string_value == 'aurea': #(2) #(***)
             print('Aurea')
             # MIN_MAX_DICT = {0: [570,4095],1: [0,3500],2: [2040,3600],3: [500,2100],4: [700,2300],
             #                 5: [1800,3400],6: [1930,2425],7: [1589,2275],8: [1600,2444],9: [1700,2500],
@@ -75,7 +75,8 @@ class u2d2Control():
                     10: [1050,3048],11: [1097,3083],12: [1024,2082],13: [1974,3071],14: [0,4095],
                     15: [0,4095],16: [1760,2290],17: [1760,2290],18: [0,1023],19: [0,1023]}
         
-
+        self.motorLimitsDict = MIN_MAX_DICT
+        self.startComm()
         #rospy.Subscriber('u2d2_comm/data2body', body_motors_data, self.data2body) (4)
         self.node.create_subscription(BodyMotorsData, 'u2d2_comm/data2body', self.data2body, rclpy.qos.QoSProfile()) #(4)
 

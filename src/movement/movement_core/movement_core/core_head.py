@@ -9,8 +9,8 @@ from movement_utils.srv import *
 from movement_utils.msg import *
 
 #Importação pelo sys
-#edrom_dir = '/home/'+os.getlogin()+'/edromufu/src/'
-#sys.path.append(edrom_dir+'behaviour/transitions_and_states/src')
+edrom_dir = '/home/'+os.getlogin()+'/edromufu/src/'
+sys.path.append(edrom_dir+'behaviour/transitions_and_states/src')
 
 from behaviour_parameters import BehaviourParameters
 
