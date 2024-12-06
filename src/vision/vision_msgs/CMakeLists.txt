@@ -21,6 +21,10 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Goal.msg"
   "msg/MultiObjects.msg"
   "msg/Webotsmsg.msg"
+  "msg/Ball.msg"
+  "msg/Leftgoalpost.msg"
+  "msg/Rightgoalpost.msg"
+  "msg/Robot.msg"
   DEPENDENCIES 
   sensor_msgs 
   std_msgs # Add packages that above messages depend on, in this case geometry_msgs for Sphere.msg

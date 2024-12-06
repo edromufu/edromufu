@@ -7,6 +7,7 @@ import rclpy, os, sys
 from vision_msgs.msg import Webotsmsg
 from movement_utils.srv import *
 from movement_utils.msg import *
+from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
 
 #Importação pelo sys
 edrom_dir = '/home/'+os.getlogin()+'/edromufu/src/'
@@ -26,7 +27,12 @@ class CoreHead:
     def __init__(self):
 
         #rospy.init_node('head_central') (1)
-
+        qos_profile_robot = QoSProfile(
+            reliability=ReliabilityPolicy.BEST_EFFORT,
+            durability=DurabilityPolicy.TRANSIENT_LOCAL,
+            history=HistoryPolicy.KEEP_LAST,
+            depth=1
+        )
         rclpy.init(args=sys.argv)   #(1)
         self.node = rclpy.create_node('head_central') #(1)
 
@@ -44,10 +50,12 @@ class CoreHead:
         self.motorsFeedback = self.node.create_client(HeadFeedback, 'u2d2_comm/feedbackHead')   #(5)
         while not self.motorsFeedback.wait_for_service(timeout_sec=1.0):   #(6)
             self.node.get_logger().info('service not available, waiting again...')
-        self.pub2motors = self.node.create_publisher(HeadMotorsData, 'u2d2_comm/data2head', queue_size=10) #(4)
+        self.pub2motors = self.node.create_publisher(HeadMotorsData, 'u2d2_comm/data2head', 10) #(4)
         self.pub2motorsMsg = HeadMotorsData() #(3)
 
-        self.node.create_subscription(Webotsmsg, self.parameters.vision2BhvTopic, self.updateBallParameters) #(2)
+
+        resp = self.motorsFeedback.call(True)
+        self.node.create_subscription(Webotsmsg, self.parameters.vision2BhvTopic, self.updateBallParameters, 10) #(2)
 
         self.found = False
         self.x = 0
@@ -111,7 +119,9 @@ class CoreHead:
                     dy = 0
 
                     if self.x > self.parameters.xCenterRightLimit or self.x < self.parameters.xCenterLeftLimit:
-                        [currentHorRotation, currentVerRotation] = self.motorsFeedback(True).pos_vector (10)
+                        resp = self.motorsFeedback.call_async(True)
+                        rclpy.spin_until_future_complete(self.node, resp)
+                        [currentHorRotation, currentVerRotation] = resp.pos_vector
                         dx = self.callPx(self.x)
 
                     if self.y > self.parameters.yCenterBottomLimit or self.y < self.parameters.yCenterTopLimit:
@@ -136,7 +146,8 @@ class CoreHead:
                     else:
                         rotation = -1
 
-                    [currentHorRotation, currentVerRotation] = self.motorsFeedback(True).pos_vector
+                    resp = self.motorsFeedback.call(True)                    
+                    [currentHorRotation, currentVerRotation] = resp.pos_vector
                     if abs(currentVerRotation-UP_Y_POSITION) < abs(currentVerRotation-BOTTOM_Y_POSITION):
                         startVer = UP_Y_POSITION
                     else:

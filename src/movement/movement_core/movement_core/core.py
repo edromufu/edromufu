@@ -66,6 +66,9 @@ class Core:
         self.motorsFeedback = self.node.create_client(BodyFeedback, 'u2d2_comm/feedbackBody')       #(3)
         self.motorsTorque = self.node.create_client(EnableTorque, 'u2d2_comm/enableTorque')         #(4)
 
+        resp = self.motorsTorque.call(True, [-1])
+        rclpy.spin_until_future_complete(self.node, resp)
+
         while not self.motorsFeedback.wait_for_service(timeout_sec=1.0):    #(1)
             self.node.get_logger().info('service not available, waiting again...')
 
@@ -73,8 +76,7 @@ class Core:
             self.node.get_logger().info('service not available, waiting again...')
 
         #Inicialização do torque
-        resp = self.motorsTorque.call_async(True, [-1])
-        rclpy.spin_until_future_complete(self.node, resp)
+        
 
         self.queue = []
 

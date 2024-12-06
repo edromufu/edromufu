@@ -28,7 +28,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'finder = object_finder.connecting_and_showing:main',
+            'finder = object_finder.connecting_and_showing_old:main',
         ],
     },
     author='EDROM',

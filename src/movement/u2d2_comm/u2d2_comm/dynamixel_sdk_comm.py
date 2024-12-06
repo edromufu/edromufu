@@ -4,7 +4,6 @@ import time
 #import rospy (0)
 import rclpy #(0)
 from dynamixel_sdk import *
-
 from movement_utils.msg import *
 from movement_utils.srv import *
 
@@ -78,10 +77,10 @@ class u2d2Control():
         self.motorLimitsDict = MIN_MAX_DICT
         self.startComm()
         #rospy.Subscriber('u2d2_comm/data2body', body_motors_data, self.data2body) (4)
-        self.node.create_subscription(BodyMotorsData, 'u2d2_comm/data2body', self.data2body, rclpy.qos.QoSProfile()) #(4)
+        self.node.create_subscription(BodyMotorsData, 'u2d2_comm/data2body', self.data2body, 10) #(4)
 
         #rospy.Subscriber('u2d2_comm/data2head', head_motors_data, self.data2head) (5)
-        self.node.create_subscription(HeadMotorsData, 'u2d2_comm/data2head', self.data2head, rclpy.qos.QoSProfile()) #(5)
+        self.node.create_subscription(HeadMotorsData, 'u2d2_comm/data2head', self.data2head, 10) #(5)
 
         #rospy.Service('u2d2_comm/enableTorque', enable_torque, self.enableTorque) (6)
         self.node.create_service(EnableTorque, 'u2d2_comm/enableTorque', self.enableTorque) #(6)
@@ -275,13 +274,10 @@ class u2d2Control():
 
         return pos_in_rad
 
-    def run(self):
-        #rospy.spin() (9)
-        rclpy.spin(u2d2.node) #(9)
 
 def main():
     u2d2 = u2d2Control()
-    u2d2.run()
+    rclpy.spin(u2d2.node)
     
 if __name__ == '__main__':
    main()
