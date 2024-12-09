@@ -13,8 +13,8 @@ set_target_properties(movement_utils::movement_utils__rosidl_typesupport_c PROPE
   IMPORTED_SONAME_NOCONFIG "libmovement_utils__rosidl_typesupport_c.so"
   )
 
-list(APPEND _IMPORT_CHECK_TARGETS movement_utils::movement_utils__rosidl_typesupport_c )
-list(APPEND _IMPORT_CHECK_FILES_FOR_movement_utils::movement_utils__rosidl_typesupport_c "${_IMPORT_PREFIX}/lib/libmovement_utils__rosidl_typesupport_c.so" )
+list(APPEND _cmake_import_check_targets movement_utils::movement_utils__rosidl_typesupport_c )
+list(APPEND _cmake_import_check_files_for_movement_utils::movement_utils__rosidl_typesupport_c "${_IMPORT_PREFIX}/lib/libmovement_utils__rosidl_typesupport_c.so" )
 
 # Commands beyond this point should not need to know the version.
 set(CMAKE_IMPORT_FILE_VERSION)

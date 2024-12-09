@@ -1,0 +1,89 @@
+[0.013s] Invoking command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/urdf_robox': CMAKE_PREFIX_PATH=/opt/ros/humble /home/edrom-mini/.local/bin/cmake /home/edrom-mini/edromufu/src/movement/Ros2_change/src/urdf_robox -DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox
+[0.195s] -- The C compiler identification is GNU 11.4.0
+[0.277s] -- The CXX compiler identification is GNU 11.4.0
+[0.292s] -- Detecting C compiler ABI info
+[0.374s] -- Detecting C compiler ABI info - done
+[0.401s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.401s] -- Detecting C compile features
+[0.402s] -- Detecting C compile features - done
+[0.408s] -- Detecting CXX compiler ABI info
+[0.516s] -- Detecting CXX compiler ABI info - done
+[0.543s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.543s] -- Detecting CXX compile features
+[0.544s] -- Detecting CXX compile features - done
+[0.547s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.740s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter
+[0.862s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.991s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.997s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.998s] -- Added test 'lint_cmake' to check CMake code style
+[0.999s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.002s] -- Added test 'xmllint' to check XML markup files
+[1.004s] -- Configuring done (0.9s)
+[1.008s] -- Generating done (0.0s)
+[1.010s] -- Build files have been written to: /home/edrom-mini/edromufu/src/movement/Ros2_change/build/urdf_robox
+[1.033s] Invoked command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/urdf_robox' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /home/edrom-mini/.local/bin/cmake /home/edrom-mini/edromufu/src/movement/Ros2_change/src/urdf_robox -DCMAKE_INSTALL_PREFIX=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox
+[1.034s] Invoking command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/urdf_robox': CMAKE_PREFIX_PATH=/opt/ros/humble /home/edrom-mini/.local/bin/cmake --build /home/edrom-mini/edromufu/src/movement/Ros2_change/build/urdf_robox -- -j4 -l4
+[1.210s] Invoked command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/urdf_robox' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /home/edrom-mini/.local/bin/cmake --build /home/edrom-mini/edromufu/src/movement/Ros2_change/build/urdf_robox -- -j4 -l4
+[1.408s] Invoking command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/urdf_robox': CMAKE_PREFIX_PATH=/opt/ros/humble /home/edrom-mini/.local/bin/cmake --install /home/edrom-mini/edromufu/src/movement/Ros2_change/build/urdf_robox
+[1.520s] -- Install configuration: ""
+[1.521s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/urdf
+[1.521s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/urdf/urdf_robox.csv
+[1.522s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/urdf/urdf_robox.urdf
+[1.522s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/launch
+[1.523s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/launch/rsp_sim.launch.py
+[1.523s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/launch/gazebo.launch
+[1.524s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/launch/rsp.launch.py
+[1.524s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/launch/display.launch
+[1.524s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes
+[1.525s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_1.STL
+[1.525s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_3.2.STL
+[1.526s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_3.1.STL
+[1.526s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RA_Link.STL
+[1.528s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_4.3.STL
+[1.529s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LA_Link.STL
+[1.529s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_2.1.STL
+[1.530s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_5.1.STL
+[1.530s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_5.2.STL
+[1.531s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_5.3.STL
+[1.531s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_2.2.STL
+[1.532s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_3.1.STL
+[1.532s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_3.3.STL
+[1.533s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_2.3.STL
+[1.533s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_4.3.STL
+[1.533s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_4.2.STL
+[1.534s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_2.1.STL
+[1.534s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_4.1.STL
+[1.535s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_6.STL
+[1.535s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_4.1.STL
+[1.536s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_3.2.STL
+[1.536s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_5.1.STL
+[1.536s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_1.STL
+[1.537s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_2.3.STL
+[1.537s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_6.STL
+[1.538s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_4.2.STL
+[1.538s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/Link_0.STL
+[1.555s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_5.3.STL
+[1.556s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_5.2.STL
+[1.556s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_3.3.STL
+[1.557s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_2.2.STL
+[1.557s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/config
+[1.558s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/config/joint_names_urdf_robox.yaml
+[1.558s] -- Up-to-date: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/worlds
+[1.559s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/worlds/test_world.world
+[1.559s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/ament_index/resource_index/package_run_dependencies/urdf_robox
+[1.559s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/ament_index/resource_index/parent_prefix_path/urdf_robox
+[1.560s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/environment/ament_prefix_path.sh
+[1.560s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/environment/ament_prefix_path.dsv
+[1.561s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/environment/path.sh
+[1.561s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/environment/path.dsv
+[1.561s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/local_setup.bash
+[1.562s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/local_setup.sh
+[1.562s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/local_setup.zsh
+[1.564s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/local_setup.dsv
+[1.566s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/package.dsv
+[1.570s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/ament_index/resource_index/packages/urdf_robox
+[1.570s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/cmake/urdf_roboxConfig.cmake
+[1.570s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/cmake/urdf_roboxConfig-version.cmake
+[1.571s] -- Installing: /home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/package.xml
+[1.604s] Invoked command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/urdf_robox' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /home/edrom-mini/.local/bin/cmake --install /home/edrom-mini/edromufu/src/movement/Ros2_change/build/urdf_robox

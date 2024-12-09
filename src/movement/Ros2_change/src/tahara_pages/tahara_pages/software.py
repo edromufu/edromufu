@@ -286,11 +286,11 @@ class Ui_MainWindow(object):
 
             
     def incrementar(self,pos):
-        self.message[pos-1] = 1
+        self.message[pos-1] = 1.0
         self.envio()
 
     def decrementar(self,pos):
-        self.message[pos-1] = -1
+        self.message[pos-1] = -1.0
         self.envio()
 
     def envio(self):

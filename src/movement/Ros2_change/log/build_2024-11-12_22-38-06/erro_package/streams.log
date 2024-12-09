@@ -1,0 +1,30 @@
+[1.025s] Invoking command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/src/erro_package': PYTHONPATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/build/erro_package/prefix_override:/home/edrom-mini/edromufu/src/movement/Ros2_change/install/erro_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/erro_package build --build-base /home/edrom-mini/edromufu/src/movement/Ros2_change/build/erro_package/build install --record /home/edrom-mini/edromufu/src/movement/Ros2_change/build/erro_package/install.log --single-version-externally-managed install_data
+[1.389s] running egg_info
+[1.389s] creating ../../build/erro_package/erro_package.egg-info
+[1.390s] writing ../../build/erro_package/erro_package.egg-info/PKG-INFO
+[1.390s] writing dependency_links to ../../build/erro_package/erro_package.egg-info/dependency_links.txt
+[1.390s] writing entry points to ../../build/erro_package/erro_package.egg-info/entry_points.txt
+[1.390s] writing requirements to ../../build/erro_package/erro_package.egg-info/requires.txt
+[1.390s] writing top-level names to ../../build/erro_package/erro_package.egg-info/top_level.txt
+[1.390s] writing manifest file '../../build/erro_package/erro_package.egg-info/SOURCES.txt'
+[1.395s] reading manifest file '../../build/erro_package/erro_package.egg-info/SOURCES.txt'
+[1.395s] writing manifest file '../../build/erro_package/erro_package.egg-info/SOURCES.txt'
+[1.395s] running build
+[1.395s] running build_py
+[1.395s] creating /home/edrom-mini/edromufu/src/movement/Ros2_change/build/erro_package/build
+[1.395s] creating /home/edrom-mini/edromufu/src/movement/Ros2_change/build/erro_package/build/lib
+[1.395s] creating /home/edrom-mini/edromufu/src/movement/Ros2_change/build/erro_package/build/lib/erro_package
+[1.395s] copying erro_package/__init__.py -> /home/edrom-mini/edromufu/src/movement/Ros2_change/build/erro_package/build/lib/erro_package
+[1.396s] copying erro_package/erro_publisher.py -> /home/edrom-mini/edromufu/src/movement/Ros2_change/build/erro_package/build/lib/erro_package
+[1.396s] running install
+[1.396s] running install_lib
+[1.400s] byte-compiling /home/edrom-mini/edromufu/src/movement/Ros2_change/install/erro_package/lib/python3.10/site-packages/erro_package/__init__.py to __init__.cpython-310.pyc
+[1.400s] byte-compiling /home/edrom-mini/edromufu/src/movement/Ros2_change/install/erro_package/lib/python3.10/site-packages/erro_package/erro_publisher.py to erro_publisher.cpython-310.pyc
+[1.403s] running install_data
+[1.403s] running install_egg_info
+[1.405s] removing '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/erro_package/lib/python3.10/site-packages/erro_package-0.0.0-py3.10.egg-info' (and everything under it)
+[1.407s] Copying ../../build/erro_package/erro_package.egg-info to /home/edrom-mini/edromufu/src/movement/Ros2_change/install/erro_package/lib/python3.10/site-packages/erro_package-0.0.0-py3.10.egg-info
+[1.407s] running install_scripts
+[1.439s] Installing erro_publisher script to /home/edrom-mini/edromufu/src/movement/Ros2_change/install/erro_package/lib/erro_package
+[1.441s] writing list of installed files to '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/erro_package/install.log'
+[1.486s] Invoked command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/src/erro_package' returned '0': PYTHONPATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/build/erro_package/prefix_override:/home/edrom-mini/edromufu/src/movement/Ros2_change/install/erro_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/erro_package build --build-base /home/edrom-mini/edromufu/src/movement/Ros2_change/build/erro_package/build install --record /home/edrom-mini/edromufu/src/movement/Ros2_change/build/erro_package/install.log --single-version-externally-managed install_data

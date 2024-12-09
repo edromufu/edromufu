@@ -1,0 +1,20 @@
+[0.969s] Invoking command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/src/movement_pages': CMAKE_PREFIX_PATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/movement_utils:/home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox:/home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_example:/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent:/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs:/home/edrom-mini/edromufu/src/movement/Ros2_change/install/humanoid_visualization PYTHONPATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/build/movement_pages/prefix_override:/home/edrom-mini/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/movement_pages build --build-base /home/edrom-mini/edromufu/src/movement/Ros2_change/build/movement_pages/build install --record /home/edrom-mini/edromufu/src/movement/Ros2_change/build/movement_pages/install.log --single-version-externally-managed install_data
+[1.344s] running egg_info
+[1.345s] writing ../../build/movement_pages/movement_pages.egg-info/PKG-INFO
+[1.346s] writing dependency_links to ../../build/movement_pages/movement_pages.egg-info/dependency_links.txt
+[1.346s] writing entry points to ../../build/movement_pages/movement_pages.egg-info/entry_points.txt
+[1.346s] writing requirements to ../../build/movement_pages/movement_pages.egg-info/requires.txt
+[1.346s] writing top-level names to ../../build/movement_pages/movement_pages.egg-info/top_level.txt
+[1.348s] reading manifest file '../../build/movement_pages/movement_pages.egg-info/SOURCES.txt'
+[1.349s] writing manifest file '../../build/movement_pages/movement_pages.egg-info/SOURCES.txt'
+[1.349s] running build
+[1.349s] running build_py
+[1.350s] running install
+[1.350s] running install_lib
+[1.352s] running install_data
+[1.352s] running install_egg_info
+[1.355s] removing '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages/movement_pages-0.0.0-py3.10.egg-info' (and everything under it)
+[1.358s] Copying ../../build/movement_pages/movement_pages.egg-info to /home/edrom-mini/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages/movement_pages-0.0.0-py3.10.egg-info
+[1.358s] running install_scripts
+[1.379s] writing list of installed files to '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/movement_pages/install.log'
+[1.443s] Invoked command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/src/movement_pages' returned '0': CMAKE_PREFIX_PATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/install/movement_utils:/home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_robox:/home/edrom-mini/edromufu/src/movement/Ros2_change/install/urdf_example:/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_agent:/home/edrom-mini/edromufu/src/movement/Ros2_change/install/micro_ros_msgs:/home/edrom-mini/edromufu/src/movement/Ros2_change/install/humanoid_visualization PYTHONPATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/build/movement_pages/prefix_override:/home/edrom-mini/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/movement_pages build --build-base /home/edrom-mini/edromufu/src/movement/Ros2_change/build/movement_pages/build install --record /home/edrom-mini/edromufu/src/movement/Ros2_change/build/movement_pages/install.log --single-version-externally-managed install_data

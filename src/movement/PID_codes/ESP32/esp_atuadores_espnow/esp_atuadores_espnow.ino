@@ -209,15 +209,25 @@ void subscription_callback(const void * msgin)
 void CalculatePWM(){
 
   //--------Calculando Entrada do PWM--------
-  writeActuator(0, erro[0]-erro[1]); //(erro[0]-erro[1])
-  //writeActuator(1, -erro[0]-erro[1]);//(-erro[0]-erro[1])
+  writeActuator(0, erro[0]); //(erro[0]-erro[1])
+  writeActuator(1, -erro[0]);//(-erro[0]-erro[1])
+  writeActuator(0, -erro[1]); //(erro[0]-erro[1])
+  writeActuator(1, -erro[1]);//(-erro[0]-erro[1])
   
-  //writeActuator(2, -erro[2]+erro[3]);//(erro[2]+erro[3])
-  //writeActuator(3, -erro[2]-erro[3]);//(erro[2]-erro[3])
-  
-  writeActuator(4, erro[5] + erro[4]);//(erro[5] + erro[4])
-  //writeActuator(5, erro[5] -erro[4]);//(erro[5] -erro[4])
-  
-  //writeActuator(6, -erro[6]-erro[7]);
-  //writeActuator(7, -erro[6]+erro[7]);
+  writeActuator(2, -erro[2]);//(erro[2]+erro[3])
+  writeActuator(3, -erro[2]);//(erro[2]-erro[3])
+  writeActuator(2, erro[3]);//(erro[2]+erro[3])
+  writeActuator(3, -erro[3]);//(erro[2]-erro[3])
+
+
+  writeActuator(4, erro[5] );//(erro[5] + erro[4])
+  writeActuator(5, erro[5] );//(erro[5] -erro[4])
+  writeActuator(4, + erro[4]);//(erro[5] + erro[4])
+  writeActuator(5, -erro[4]);
+
+  writeActuator(6, -erro[6]);
+  writeActuator(7, -erro[6]);
+  writeActuator(6, -erro[7]);
+  writeActuator(7, +erro[7]);
+
 }

@@ -1,0 +1,36 @@
+[1.047s] Invoking command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/src/kinematic_functions': PYTHONPATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/build/kinematic_functions/prefix_override:/home/edrom-mini/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/kinematic_functions build --build-base /home/edrom-mini/edromufu/src/movement/Ros2_change/build/kinematic_functions/build install --record /home/edrom-mini/edromufu/src/movement/Ros2_change/build/kinematic_functions/install.log --single-version-externally-managed install_data
+[1.404s] running egg_info
+[1.408s] creating ../../build/kinematic_functions/kinematic_functions.egg-info
+[1.409s] writing ../../build/kinematic_functions/kinematic_functions.egg-info/PKG-INFO
+[1.409s] writing dependency_links to ../../build/kinematic_functions/kinematic_functions.egg-info/dependency_links.txt
+[1.409s] writing entry points to ../../build/kinematic_functions/kinematic_functions.egg-info/entry_points.txt
+[1.409s] writing requirements to ../../build/kinematic_functions/kinematic_functions.egg-info/requires.txt
+[1.410s] writing top-level names to ../../build/kinematic_functions/kinematic_functions.egg-info/top_level.txt
+[1.410s] writing manifest file '../../build/kinematic_functions/kinematic_functions.egg-info/SOURCES.txt'
+[1.410s] reading manifest file '../../build/kinematic_functions/kinematic_functions.egg-info/SOURCES.txt'
+[1.412s] writing manifest file '../../build/kinematic_functions/kinematic_functions.egg-info/SOURCES.txt'
+[1.412s] running build
+[1.412s] running build_py
+[1.412s] creating /home/edrom-mini/edromufu/src/movement/Ros2_change/build/kinematic_functions/build
+[1.412s] creating /home/edrom-mini/edromufu/src/movement/Ros2_change/build/kinematic_functions/build/lib
+[1.413s] creating /home/edrom-mini/edromufu/src/movement/Ros2_change/build/kinematic_functions/build/lib/kinematic_functions
+[1.413s] copying kinematic_functions/__init__.py -> /home/edrom-mini/edromufu/src/movement/Ros2_change/build/kinematic_functions/build/lib/kinematic_functions
+[1.413s] copying kinematic_functions/direct_kinematics.py -> /home/edrom-mini/edromufu/src/movement/Ros2_change/build/kinematic_functions/build/lib/kinematic_functions
+[1.413s] copying kinematic_functions/ik_numerical.py -> /home/edrom-mini/edromufu/src/movement/Ros2_change/build/kinematic_functions/build/lib/kinematic_functions
+[1.413s] running install
+[1.413s] running install_lib
+[1.414s] copying /home/edrom-mini/edromufu/src/movement/Ros2_change/build/kinematic_functions/build/lib/kinematic_functions/__init__.py -> /home/edrom-mini/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages/kinematic_functions
+[1.414s] copying /home/edrom-mini/edromufu/src/movement/Ros2_change/build/kinematic_functions/build/lib/kinematic_functions/direct_kinematics.py -> /home/edrom-mini/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages/kinematic_functions
+[1.417s] copying /home/edrom-mini/edromufu/src/movement/Ros2_change/build/kinematic_functions/build/lib/kinematic_functions/ik_numerical.py -> /home/edrom-mini/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages/kinematic_functions
+[1.417s] byte-compiling /home/edrom-mini/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages/kinematic_functions/__init__.py to __init__.cpython-310.pyc
+[1.417s] byte-compiling /home/edrom-mini/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages/kinematic_functions/direct_kinematics.py to direct_kinematics.cpython-310.pyc
+[1.417s] byte-compiling /home/edrom-mini/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages/kinematic_functions/ik_numerical.py to ik_numerical.cpython-310.pyc
+[1.418s] running install_data
+[1.418s] copying resource/kinematic_functions -> /home/edrom-mini/edromufu/src/movement/Ros2_change/install/kinematic_functions/share/ament_index/resource_index/packages
+[1.418s] copying package.xml -> /home/edrom-mini/edromufu/src/movement/Ros2_change/install/kinematic_functions/share/kinematic_functions
+[1.418s] running install_egg_info
+[1.422s] removing '/home/edrom-mini/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages/kinematic_functions-0.0.0-py3.10.egg-info' (and everything under it)
+[1.422s] Copying ../../build/kinematic_functions/kinematic_functions.egg-info to /home/edrom-mini/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages/kinematic_functions-0.0.0-py3.10.egg-info
+[1.424s] running install_scripts
+[1.456s] writing list of installed files to '/home/edrom-mini/edromufu/src/movement/Ros2_change/build/kinematic_functions/install.log'
+[1.528s] Invoked command in '/home/edrom-mini/edromufu/src/movement/Ros2_change/src/kinematic_functions' returned '0': PYTHONPATH=/home/edrom-mini/edromufu/src/movement/Ros2_change/build/kinematic_functions/prefix_override:/home/edrom-mini/edromufu/src/movement/Ros2_change/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/kinematic_functions build --build-base /home/edrom-mini/edromufu/src/movement/Ros2_change/build/kinematic_functions/build install --record /home/edrom-mini/edromufu/src/movement/Ros2_change/build/kinematic_functions/install.log --single-version-externally-managed install_data
