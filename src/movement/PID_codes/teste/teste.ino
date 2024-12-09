@@ -1,11 +1,11 @@
 // Definindo os pinos para controle do BTS7960
-#define PWM_L 16     // Pino para controle PWM do lado baixo (DIR_L)
-#define PWM_H 16     // Pino para controle PWM do lado alto (DIR_H)
+#define PWM_L 21     // Pino para controle PWM do lado baixo (DIR_L)
+#define PWM_H 21     // Pino para controle PWM do lado alto (DIR_H)
 #define DIR_L 17     // Pino para controle de direção (Low)
 #define DIR_H 5     // Pino para controle de direção (High)
 
 // Variáveis de controle do PWM
-int motorSpeed = 255;  // Velocidade do motor (0 a 255)
+int motorSpeed = 128;  // Velocidade do motor (0 a 255)
 int motorDirection = 1; // 1 = sentido horário, -1 = sentido anti-horário
 
 void setup() {
