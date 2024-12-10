@@ -8,8 +8,6 @@
 #include <rcl/error_handling.h>
 #include <rclc/rclc.h>
 #include <rclc/executor.h>
-//#include <potmessage/msg/imumsg.h>
-//#include <potmessage/msg/buttonmsg.h>
 #include <std_msgs/msg/float32_multi_array.h>
 
 // MicroROS Variaveis
@@ -22,12 +20,8 @@ rcl_timer_t timer;
 rcl_publisher_t publisher2;
 rcl_subscription_t subscriber;
 
-// !!! Não precisamos mais das mensagens customizadas !!!
 std_msgs__msg__Float32MultiArray feedbackMsg;
 //std_msgs__msg__Float32MultiArray msg;
-
-//potmessage__msg__Imumsg msgImu;
-//potmessage__msg__Buttonmsg msgBot;
 // ------------------------------------
 
 esp_now_peer_info_t peerInfo;
@@ -70,8 +64,8 @@ const int pot_size = 8;
 //const int ACTUATOR_EN_PINS[] =     {x, 33, 27, 13, 15, 19, 17, 2}; //vetor de PWM
 //const int ACTUATOR_IN_IMP_PINS[] = {13, 33, 25, 14, 23, 15, 18, 16}; //vetor de pino de avanço
 //const int ACTUATOR_IN_PAR_PINS[] = {27, 32, 26, 12, 22, 21, 5, 4}; //vetor de pino de recuo
-const int ACTUATOR_IN_IMP_PINS[] = {26, 19, 2, 5, 32, 33, 13, 12}; //vetor de pino de avanço
-const int ACTUATOR_IN_PAR_PINS[] = {22, 21, 4, 17, 16, 18, 27, 14}; //vetor de pino de recuo
+const int ACTUATOR_RPWM[] = {13, 12, 14, 27, 26, 25, 33, 32}; // Pinos de Recuo quando HIGH
+const int ACTUATOR_IN_PAR_PINS[] = {}; // Pinos de Avanço quando HIGH
 
 //--------constantes PID--------
 
@@ -133,11 +127,6 @@ void writeActuator (int id, int signal){
 
   }
 }
-
-
-
-
-
 
 void setup() {
 
