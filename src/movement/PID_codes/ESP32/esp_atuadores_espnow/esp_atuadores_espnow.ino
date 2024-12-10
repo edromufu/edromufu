@@ -65,7 +65,7 @@ const int pot_size = 8;
 //const int ACTUATOR_IN_IMP_PINS[] = {13, 33, 25, 14, 23, 15, 18, 16}; //vetor de pino de avanço
 //const int ACTUATOR_IN_PAR_PINS[] = {27, 32, 26, 12, 22, 21, 5, 4}; //vetor de pino de recuo
 const int ACTUATOR_RPWM[] = {13, 12, 14, 27, 26, 25, 33, 32}; // Pinos de Recuo quando HIGH
-const int ACTUATOR_IN_PAR_PINS[] = {}; // Pinos de Avanço quando HIGH
+const int ACTUATOR_IN_PAR_PINS[] = {17, 5, 15, 2, 0, 4, 16, 18}; // Pinos de Avanço quando HIGH
 
 //--------constantes PID--------
 
