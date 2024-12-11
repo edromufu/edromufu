@@ -4,10 +4,10 @@
 #include <Wire.h>
 
 const int addMux = 0x20;
-const int pinSaidaMux = 3;
-const int pinS0 = 23;
+const int pinSaidaMux = 35;
+const int pinS0 = 21;
 const int pinS1 = 22;
-const int pinS2 = 1;
+const int pinS2 = 23;
 esp_now_peer_info_t peerInfo;
 
 int values[8];
