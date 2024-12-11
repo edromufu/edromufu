@@ -1,0 +1,5 @@
+  File "/home/pedrohperes/edromufu/src/movement/Ros2_change/install/erro_package/lib/python3.10/site-packages/erro_package/erro_publisher.py", line 28
+    serial_port = '/dev/ttyACM0
+                  ^
+SyntaxError: unterminated string literal (detected at line 28)
+

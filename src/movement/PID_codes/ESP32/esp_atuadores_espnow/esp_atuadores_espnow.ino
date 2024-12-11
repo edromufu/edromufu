@@ -112,12 +112,12 @@ void writeActuator (int id, int signal){
   //int newSignal = constrain(signal, -255, 255);
   feedback[id]=float(signal);
   if (signal < -5){
-    digitalWrite(ACTUATOR_RPWM[id], LOW);
+    digitalWrite(ACTUATOR_RPWM[id], LOW); //Quando o erro é negativo o atuador linear avança
     digitalWrite(ACTUATOR_LPWM[id], HIGH);
     //analogWrite(ACTUATOR_EN_PINS[id], newSignal);
   }
   else if (signal > 5){
-    digitalWrite(ACTUATOR_RPWM[id], HIGH);
+    digitalWrite(ACTUATOR_RPWM[id], HIGH); //Quando o erro é positivo o atuador linear retrai
     digitalWrite(ACTUATOR_LPWM[id], LOW);
 
     //analogWrite(ACTUATOR_EN_PINS[id], -newSignal);
@@ -200,13 +200,19 @@ void CalculatePWM(){
   //--------Calculando Entrada do PWM--------
   writeActuator(0, erro[0]); //(erro[0]-erro[1])
   writeActuator(1, -erro[0]);//(-erro[0]-erro[1])
-  writeActuator(0, -erro[1]); //(erro[0]-erro[1])
-  writeActuator(1, -erro[1]);//(-erro[0]-erro[1])
-  
-  writeActuator(2, -erro[2]);//(erro[2]+erro[3])
-  writeActuator(3, -erro[2]);//(erro[2]-erro[3])
+/*
+  if(abs(erro[0])<5){
+    writeActuator(0, erro[1]); //(erro[0]-erro[1])
+    writeActuator(1, erro[1]);//(-erro[0]-erro[1])
+  }
+
   writeActuator(2, erro[3]);//(erro[2]+erro[3])
   writeActuator(3, -erro[3]);//(erro[2]-erro[3])
+
+  if(abs(erro[3])<5){
+    writeActuator(2, -erro[2]);//(erro[2]+erro[3])
+    writeActuator(3, -erro[2]);//(erro[2]-erro[3])
+  }
 
 
   writeActuator(4, erro[5] );//(erro[5] + erro[4])
@@ -217,6 +223,6 @@ void CalculatePWM(){
   writeActuator(6, -erro[6]);
   writeActuator(7, -erro[6]);
   writeActuator(6, -erro[7]);
-  writeActuator(7, +erro[7]);
+  writeActuator(7, +erro[7]);*/
 
 }

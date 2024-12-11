@@ -5,7 +5,7 @@ import serial
 import time
 
 class PotValuesPublisher(Node):
-    def __init__(self, serial_port='/dev/ttyACM0', baud_rate=9600):
+    def __init__(self, serial_port='/dev/ttyUSB0', baud_rate=9600):
         super().__init__('pot_values_publisher')
         self.publisher_ = self.create_publisher(Float32MultiArray, 'pot_values', 1)
         self.subscriber_ = self.create_subscription(Float32MultiArray,'pot_py_topic',self.listener,1)
@@ -25,13 +25,7 @@ class PotValuesPublisher(Node):
             self.get_logger().info("Conexão serial estabelecida com sucesso.")
         except serial.SerialException as e:
             self.get_logger().error(f"Erro ao conectar com a porta serial: {e}")
-            serial_port = '/dev/ttyACM1'
-            self.serial_connection = serial.Serial()
-            self.serial_connection.port = serial_port
-            self.serial_connection.baudrate = baud_rate
-            self.serial_connection.open()
-            self.serial_connection = None
-            return
+            serial_port = '/dev/ttyUSB0'
         
         # Configuração do timer para publicar os dados a cada segundo
         self.timer = self.create_timer(0.1, self.timer_callback)
@@ -55,11 +49,9 @@ class PotValuesPublisher(Node):
                 values.pop()
                 values = [float(val) for val in values]
                 self.vetor_reordenado = [0] * len(values)
-                for i, pos in enumerate(self.posicoesPot):
-                    try:
-                        self.vetor_reordenado[pos] = values[i]
-                    except:
-                        pass
+
+                self.vetor_reordenado = values
+
 
 
                 if all(num == 0.0 for num in self.pagePoses):
