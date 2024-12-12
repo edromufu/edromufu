@@ -110,21 +110,23 @@ void writeActuator (int id, int signal){
   // id: id da junta
   // signal: valor de -4095 4095 para escrever na junta
   //int newSignal = constrain(signal, -255, 255);
-  feedback[id]=float(signal);
+  feedback[id]=0.0; // era signal
   if (signal < -5){
     digitalWrite(ACTUATOR_RPWM[id], LOW); //Quando o erro é negativo o atuador linear avança
     digitalWrite(ACTUATOR_LPWM[id], HIGH);
     //analogWrite(ACTUATOR_EN_PINS[id], newSignal);
+    feedback[id]=-1.0;
   }
   else if (signal > 5){
     digitalWrite(ACTUATOR_RPWM[id], HIGH); //Quando o erro é positivo o atuador linear retrai
     digitalWrite(ACTUATOR_LPWM[id], LOW);
-
+        feedback[id]=1.0;
     //analogWrite(ACTUATOR_EN_PINS[id], -newSignal);
   }else if(signal <= 5 && signal >= -5){
+    
     digitalWrite(ACTUATOR_RPWM[id], LOW);
     digitalWrite(ACTUATOR_LPWM[id], LOW);
-
+    feedback[id]=5.0;
   }
 }
 

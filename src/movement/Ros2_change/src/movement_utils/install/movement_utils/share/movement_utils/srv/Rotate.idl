@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from movement_utils/srv/Rotate.srv
+// generated code does not contain a copyright notice
+
+
+module movement_utils {
+  module srv {
+    struct Rotate_Request {
+      int8 direction;
+
+      int8 steps_number;
+    };
+    struct Rotate_Response {
+      boolean success;
+    };
+  };
+};

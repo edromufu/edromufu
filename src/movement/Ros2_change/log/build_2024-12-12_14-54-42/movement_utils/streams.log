@@ -1,0 +1,493 @@
+[0.300s] Invoking command in '/home/pedrohperes/edromufu/src/movement/Ros2_change/build/movement_utils': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/u2d2_comm:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/tahara_pages:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/pot_package:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_core:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_pages:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_functions:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/kinematic_functions:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/erro_package:/opt/ros/humble /usr/bin/cmake /home/pedrohperes/edromufu/src/movement/Ros2_change/src/movement_utils -DCMAKE_INSTALL_PREFIX=/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils
+[0.893s] -- The C compiler identification is GNU 11.4.0
+[0.893s] -- The CXX compiler identification is GNU 11.4.0
+[0.893s] -- Detecting C compiler ABI info
+[0.893s] -- Detecting C compiler ABI info - done
+[0.893s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.893s] -- Detecting C compile features
+[0.893s] -- Detecting C compile features - done
+[0.893s] -- Detecting CXX compiler ABI info
+[0.893s] -- Detecting CXX compiler ABI info - done
+[0.894s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.894s] -- Detecting CXX compile features
+[0.894s] -- Detecting CXX compile features - done
+[0.894s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.894s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.894s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.894s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.894s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.894s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.894s] -- Found std_msgs: 4.2.3 (/opt/ros/humble/share/std_msgs/cmake)
+[0.951s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.313s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.567s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.886s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.911s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[1.913s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.947s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[1.947s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.948s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.948s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.975s] -- Found PythonExtra: .so  
+[2.075s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.076s] -- Configured cppcheck include dirs: 
+[2.076s] -- Configured cppcheck exclude dirs and/or files: 
+[2.081s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.090s] -- Added test 'lint_cmake' to check CMake code style
+[2.096s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.137s] -- Added test 'uncrustify' to check C / C++ code style
+[2.137s] -- Configured uncrustify additional arguments: 
+[2.143s] -- Added test 'xmllint' to check XML markup files
+[2.147s] -- Configuring done
+[2.187s] -- Generating done
+[2.189s] -- Build files have been written to: /home/pedrohperes/edromufu/src/movement/Ros2_change/build/movement_utils
+[2.408s] Invoked command in '/home/pedrohperes/edromufu/src/movement/Ros2_change/build/movement_utils' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/u2d2_comm:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/tahara_pages:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/pot_package:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_core:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_pages:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_functions:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/kinematic_functions:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/erro_package:/opt/ros/humble /usr/bin/cmake /home/pedrohperes/edromufu/src/movement/Ros2_change/src/movement_utils -DCMAKE_INSTALL_PREFIX=/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils
+[2.409s] Invoking command in '/home/pedrohperes/edromufu/src/movement/Ros2_change/build/movement_utils': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/u2d2_comm:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/tahara_pages:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/pot_package:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_core:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_pages:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_functions:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/kinematic_functions:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/erro_package:/opt/ros/humble /usr/bin/cmake --build /home/pedrohperes/edromufu/src/movement/Ros2_change/build/movement_utils -- -j12 -l12
+[2.445s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[2.453s] [  2%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[2.460s] [  2%] Built target ament_cmake_python_copy_movement_utils
+[2.757s] running egg_info
+[2.758s] creating movement_utils.egg-info
+[2.758s] writing movement_utils.egg-info/PKG-INFO
+[2.758s] writing dependency_links to movement_utils.egg-info/dependency_links.txt
+[2.758s] writing top-level names to movement_utils.egg-info/top_level.txt
+[2.758s] writing manifest file 'movement_utils.egg-info/SOURCES.txt'
+[2.760s] reading manifest file 'movement_utils.egg-info/SOURCES.txt'
+[2.761s] writing manifest file 'movement_utils.egg-info/SOURCES.txt'
+[2.784s] [  2%] Built target ament_cmake_python_build_movement_utils_egg
+[3.257s] [  2%] Built target movement_utils__cpp
+[3.266s] [  5%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[3.266s] [  5%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[3.266s] [  5%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[3.348s] [  8%] [32mBuilding C object CMakeFiles/movement_utils__rosidl_generator_c.dir/rosidl_generator_c/movement_utils/srv/detail/enable_torque__functions.c.o[0m
+[3.349s] [  9%] [32mBuilding C object CMakeFiles/movement_utils__rosidl_generator_c.dir/rosidl_generator_c/movement_utils/msg/detail/head_motors_data__functions.c.o[0m
+[3.349s] [  9%] [32mBuilding C object CMakeFiles/movement_utils__rosidl_generator_c.dir/rosidl_generator_c/movement_utils/msg/detail/body_motors_data__functions.c.o[0m
+[3.349s] [  9%] [32mBuilding C object CMakeFiles/movement_utils__rosidl_generator_c.dir/rosidl_generator_c/movement_utils/srv/detail/body_feedback__functions.c.o[0m
+[3.349s] [ 10%] [32mBuilding C object CMakeFiles/movement_utils__rosidl_generator_c.dir/rosidl_generator_c/movement_utils/srv/detail/gait__functions.c.o[0m
+[3.349s] [ 12%] [32mBuilding C object CMakeFiles/movement_utils__rosidl_generator_c.dir/rosidl_generator_c/movement_utils/srv/detail/rotate__functions.c.o[0m
+[3.349s] [ 12%] [32mBuilding C object CMakeFiles/movement_utils__rosidl_generator_c.dir/rosidl_generator_c/movement_utils/srv/detail/page__functions.c.o[0m
+[3.349s] [ 13%] [32mBuilding C object CMakeFiles/movement_utils__rosidl_generator_c.dir/rosidl_generator_c/movement_utils/srv/detail/head_feedback__functions.c.o[0m
+[3.349s] [ 14%] [32mBuilding C object CMakeFiles/movement_utils__rosidl_generator_c.dir/rosidl_generator_c/movement_utils/srv/detail/walk_forward__functions.c.o[0m
+[3.422s] [ 15%] [32m[1mLinking C shared library libmovement_utils__rosidl_generator_c.so[0m
+[3.455s] [ 15%] Built target movement_utils__rosidl_generator_c
+[3.463s] [ 18%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[3.463s] [ 18%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[3.463s] [ 18%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[3.788s] [ 22%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/movement_utils/srv/body_feedback__type_support.cpp.o[0m
+[3.788s] [ 22%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/movement_utils/msg/head_motors_data__type_support.cpp.o[0m
+[3.788s] [ 23%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/movement_utils/msg/body_motors_data__type_support.cpp.o[0m
+[3.788s] [ 24%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/movement_utils/srv/enable_torque__type_support.cpp.o[0m
+[3.789s] [ 24%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/movement_utils/srv/gait__type_support.cpp.o[0m
+[3.789s] [ 25%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/movement_utils/srv/head_feedback__type_support.cpp.o[0m
+[3.789s] [ 26%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/movement_utils/srv/page__type_support.cpp.o[0m
+[4.091s] [ 27%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_c.dir/rosidl_typesupport_c/movement_utils/msg/body_motors_data__type_support.cpp.o[0m
+[4.131s] [ 28%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_c.dir/rosidl_typesupport_c/movement_utils/msg/head_motors_data__type_support.cpp.o[0m
+[4.170s] [ 29%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_c.dir/rosidl_typesupport_c/movement_utils/srv/body_feedback__type_support.cpp.o[0m
+[4.180s] [ 30%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/movement_utils/msg/detail/body_motors_data__type_support.cpp.o[0m
+[4.186s] [ 31%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/movement_utils/srv/rotate__type_support.cpp.o[0m
+[4.186s] [ 32%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/movement_utils/srv/walk_forward__type_support.cpp.o[0m
+[4.191s] [ 33%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/movement_utils/msg/detail/head_motors_data__type_support.cpp.o[0m
+[4.193s] [ 34%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/movement_utils/srv/detail/body_feedback__type_support.cpp.o[0m
+[4.195s] [ 35%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_c.dir/rosidl_typesupport_c/movement_utils/srv/enable_torque__type_support.cpp.o[0m
+[4.196s] [ 36%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/movement_utils/srv/detail/enable_torque__type_support.cpp.o[0m
+[4.201s] [ 37%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/movement_utils/srv/detail/gait__type_support.cpp.o[0m
+[4.222s] [ 38%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_c.dir/rosidl_typesupport_c/movement_utils/srv/gait__type_support.cpp.o[0m
+[4.244s] [ 40%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/movement_utils/srv/detail/head_feedback__type_support.cpp.o[0m
+[4.266s] [ 41%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_c.dir/rosidl_typesupport_c/movement_utils/srv/head_feedback__type_support.cpp.o[0m
+[4.304s] [ 42%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_c.dir/rosidl_typesupport_c/movement_utils/srv/page__type_support.cpp.o[0m
+[4.309s] [ 43%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/movement_utils/msg/detail/dds_fastrtps/body_motors_data__type_support.cpp.o[0m
+[4.346s] [ 44%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_c.dir/rosidl_typesupport_c/movement_utils/srv/rotate__type_support.cpp.o[0m
+[4.389s] [ 45%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_c.dir/rosidl_typesupport_c/movement_utils/srv/walk_forward__type_support.cpp.o[0m
+[4.433s] [ 46%] [32m[1mLinking CXX shared library libmovement_utils__rosidl_typesupport_c.so[0m
+[4.495s] [ 47%] [32mBuilding C object CMakeFiles/movement_utils__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/movement_utils/msg/detail/body_motors_data__type_support.c.o[0m
+[4.498s] [ 47%] Built target movement_utils__rosidl_typesupport_c
+[4.516s] [ 48%] [32mBuilding C object CMakeFiles/movement_utils__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/movement_utils/msg/detail/head_motors_data__type_support.c.o[0m
+[4.546s] [ 49%] [32mBuilding C object CMakeFiles/movement_utils__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/movement_utils/srv/detail/body_feedback__type_support.c.o[0m
+[4.565s] [ 50%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/movement_utils/msg/detail/dds_fastrtps/head_motors_data__type_support.cpp.o[0m
+[4.581s] [ 51%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/movement_utils/msg/detail/body_motors_data__type_support_c.cpp.o[0m
+[4.591s] [ 52%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/movement_utils/srv/detail/dds_fastrtps/body_feedback__type_support.cpp.o[0m
+[4.592s] [ 53%] [32m[1mLinking CXX shared library libmovement_utils__rosidl_typesupport_cpp.so[0m
+[4.597s] [ 54%] [32mBuilding C object CMakeFiles/movement_utils__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/movement_utils/srv/detail/enable_torque__type_support.c.o[0m
+[4.652s] [ 55%] [32mBuilding C object CMakeFiles/movement_utils__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/movement_utils/srv/detail/gait__type_support.c.o[0m
+[4.652s] [ 55%] Built target movement_utils__rosidl_typesupport_cpp
+[4.665s] [ 56%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/movement_utils/srv/detail/page__type_support.cpp.o[0m
+[4.702s] [ 57%] [32mBuilding C object CMakeFiles/movement_utils__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/movement_utils/srv/detail/head_feedback__type_support.c.o[0m
+[4.753s] [ 58%] [32mBuilding C object CMakeFiles/movement_utils__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/movement_utils/srv/detail/page__type_support.c.o[0m
+[4.777s] [ 60%] [32mBuilding C object CMakeFiles/movement_utils__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/movement_utils/srv/detail/rotate__type_support.c.o[0m
+[4.777s] [ 61%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/movement_utils/msg/detail/head_motors_data__type_support_c.cpp.o[0m
+[4.804s] [ 62%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/movement_utils/srv/detail/dds_fastrtps/enable_torque__type_support.cpp.o[0m
+[4.806s] [ 63%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/movement_utils/srv/detail/body_feedback__type_support_c.cpp.o[0m
+[4.807s] [ 64%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/movement_utils/srv/detail/dds_fastrtps/gait__type_support.cpp.o[0m
+[4.825s] [ 65%] [32mBuilding C object CMakeFiles/movement_utils__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/movement_utils/srv/detail/walk_forward__type_support.c.o[0m
+[4.833s] [ 66%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/movement_utils/srv/detail/dds_fastrtps/head_feedback__type_support.cpp.o[0m
+[4.845s] [ 67%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/movement_utils/srv/detail/enable_torque__type_support_c.cpp.o[0m
+[4.880s] [ 68%] [32m[1mLinking C shared library libmovement_utils__rosidl_typesupport_introspection_c.so[0m
+[4.920s] [ 68%] Built target movement_utils__rosidl_typesupport_introspection_c
+[4.932s] [ 69%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/movement_utils/srv/detail/walk_forward__type_support.cpp.o[0m
+[4.933s] [ 70%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/movement_utils/srv/detail/rotate__type_support.cpp.o[0m
+[5.088s] [ 71%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/movement_utils/srv/detail/gait__type_support_c.cpp.o[0m
+[5.167s] [ 72%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/movement_utils/srv/detail/head_feedback__type_support_c.cpp.o[0m
+[5.257s] [ 73%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/movement_utils/srv/detail/page__type_support_c.cpp.o[0m
+[5.261s] [ 74%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/movement_utils/srv/detail/rotate__type_support_c.cpp.o[0m
+[5.291s] [ 75%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/movement_utils/srv/detail/dds_fastrtps/page__type_support.cpp.o[0m
+[5.335s] [ 76%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/movement_utils/srv/detail/dds_fastrtps/rotate__type_support.cpp.o[0m
+[5.379s] [ 77%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/movement_utils/srv/detail/dds_fastrtps/walk_forward__type_support.cpp.o[0m
+[5.482s] [ 78%] [32mBuilding CXX object CMakeFiles/movement_utils__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/movement_utils/srv/detail/walk_forward__type_support_c.cpp.o[0m
+[5.614s] [ 80%] [32m[1mLinking CXX shared library libmovement_utils__rosidl_typesupport_introspection_cpp.so[0m
+[5.695s] [ 80%] Built target movement_utils__rosidl_typesupport_introspection_cpp
+[5.904s] [ 81%] [32m[1mLinking CXX shared library libmovement_utils__rosidl_typesupport_fastrtps_cpp.so[0m
+[5.935s] [ 82%] [32m[1mLinking CXX shared library libmovement_utils__rosidl_typesupport_fastrtps_c.so[0m
+[5.973s] [ 82%] Built target movement_utils__rosidl_typesupport_fastrtps_cpp
+[6.002s] [ 82%] Built target movement_utils__rosidl_typesupport_fastrtps_c
+[6.018s] [ 82%] Built target movement_utils
+[6.033s] [ 83%] [34m[1mGenerating Python code for ROS interfaces[0m
+[7.349s] [ 83%] Built target movement_utils__py
+[7.368s] [ 86%] [32mBuilding C object CMakeFiles/movement_utils__rosidl_generator_py.dir/rosidl_generator_py/movement_utils/srv/_head_feedback_s.c.o[0m
+[7.368s] [ 86%] [32mBuilding C object CMakeFiles/movement_utils__rosidl_generator_py.dir/rosidl_generator_py/movement_utils/srv/_enable_torque_s.c.o[0m
+[7.368s] [ 86%] [32mBuilding C object CMakeFiles/movement_utils__rosidl_generator_py.dir/rosidl_generator_py/movement_utils/srv/_gait_s.c.o[0m
+[7.369s] [ 88%] [32mBuilding C object CMakeFiles/movement_utils__rosidl_generator_py.dir/rosidl_generator_py/movement_utils/msg/_body_motors_data_s.c.o[0m
+[7.369s] [ 88%] [32mBuilding C object CMakeFiles/movement_utils__rosidl_generator_py.dir/rosidl_generator_py/movement_utils/msg/_head_motors_data_s.c.o[0m
+[7.369s] [ 89%] [32mBuilding C object CMakeFiles/movement_utils__rosidl_generator_py.dir/rosidl_generator_py/movement_utils/srv/_body_feedback_s.c.o[0m
+[7.370s] [ 90%] [32mBuilding C object CMakeFiles/movement_utils__rosidl_generator_py.dir/rosidl_generator_py/movement_utils/srv/_rotate_s.c.o[0m
+[7.371s] [ 91%] [32mBuilding C object CMakeFiles/movement_utils__rosidl_generator_py.dir/rosidl_generator_py/movement_utils/srv/_page_s.c.o[0m
+[7.371s] [ 92%] [32mBuilding C object CMakeFiles/movement_utils__rosidl_generator_py.dir/rosidl_generator_py/movement_utils/srv/_walk_forward_s.c.o[0m
+[7.523s] [ 93%] [32m[1mLinking C shared library rosidl_generator_py/movement_utils/libmovement_utils__rosidl_generator_py.so[0m
+[7.559s] [ 93%] Built target movement_utils__rosidl_generator_py
+[7.575s] [ 96%] [32mBuilding C object CMakeFiles/movement_utils__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/movement_utils/_movement_utils_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[7.576s] [ 96%] [32mBuilding C object CMakeFiles/movement_utils__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/movement_utils/_movement_utils_s.ep.rosidl_typesupport_c.c.o[0m
+[7.576s] [ 96%] [32mBuilding C object CMakeFiles/movement_utils__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/movement_utils/_movement_utils_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[7.703s] [100%] [32m[1mLinking C shared library rosidl_generator_py/movement_utils/movement_utils_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[7.703s] [100%] [32m[1mLinking C shared library rosidl_generator_py/movement_utils/movement_utils_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[7.703s] [100%] [32m[1mLinking C shared library rosidl_generator_py/movement_utils/movement_utils_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[7.736s] [100%] Built target movement_utils__rosidl_typesupport_c__pyext
+[7.736s] [100%] Built target movement_utils__rosidl_typesupport_introspection_c__pyext
+[7.736s] [100%] Built target movement_utils__rosidl_typesupport_fastrtps_c__pyext
+[7.746s] Invoked command in '/home/pedrohperes/edromufu/src/movement/Ros2_change/build/movement_utils' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/u2d2_comm:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/tahara_pages:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/pot_package:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_core:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_pages:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_functions:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/kinematic_functions:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/erro_package:/opt/ros/humble /usr/bin/cmake --build /home/pedrohperes/edromufu/src/movement/Ros2_change/build/movement_utils -- -j12 -l12
+[7.900s] Invoking command in '/home/pedrohperes/edromufu/src/movement/Ros2_change/build/movement_utils': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/u2d2_comm:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/tahara_pages:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/pot_package:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_core:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_pages:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_functions:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/kinematic_functions:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/erro_package:/opt/ros/humble /usr/bin/cmake --install /home/pedrohperes/edromufu/src/movement/Ros2_change/build/movement_utils
+[7.906s] -- Install configuration: ""
+[7.906s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/ament_index/resource_index/rosidl_interfaces/movement_utils
+[7.906s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils
+[7.906s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv
+[7.906s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/walk_forward.h
+[7.906s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/enable_torque.h
+[7.907s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/head_feedback.h
+[7.907s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail
+[7.907s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/walk_forward__functions.c
+[7.907s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/gait__struct.h
+[7.907s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/body_feedback__functions.h
+[7.907s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/head_feedback__functions.h
+[7.907s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/rotate__struct.h
+[7.907s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/body_feedback__struct.h
+[7.907s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/gait__type_support.h
+[7.907s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/enable_torque__functions.h
+[7.907s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/walk_forward__type_support.h
+[7.907s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/head_feedback__type_support.h
+[7.907s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/page__functions.h
+[7.907s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/walk_forward__functions.h
+[7.907s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/page__type_support.h
+[7.908s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/head_feedback__struct.h
+[7.908s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/enable_torque__type_support.h
+[7.908s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/gait__functions.c
+[7.908s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/rotate__functions.c
+[7.908s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/enable_torque__functions.c
+[7.908s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/head_feedback__functions.c
+[7.908s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/rotate__type_support.h
+[7.908s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/page__struct.h
+[7.908s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/walk_forward__struct.h
+[7.908s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/rotate__functions.h
+[7.908s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/gait__functions.h
+[7.908s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/enable_torque__struct.h
+[7.908s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/body_feedback__functions.c
+[7.909s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/body_feedback__type_support.h
+[7.909s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/page__functions.c
+[7.909s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/rotate.h
+[7.909s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/page.h
+[7.909s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/body_feedback.h
+[7.909s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/gait.h
+[7.909s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg
+[7.909s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/head_motors_data.h
+[7.909s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/rosidl_generator_c__visibility_control.h
+[7.909s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/detail
+[7.909s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/detail/body_motors_data__struct.h
+[7.909s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/detail/body_motors_data__functions.h
+[7.909s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/detail/head_motors_data__struct.h
+[7.910s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/detail/head_motors_data__type_support.h
+[7.910s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/detail/body_motors_data__type_support.h
+[7.910s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/detail/body_motors_data__functions.c
+[7.910s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/detail/head_motors_data__functions.h
+[7.910s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/detail/head_motors_data__functions.c
+[7.910s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/body_motors_data.h
+[7.910s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/environment/library_path.sh
+[7.910s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/environment/library_path.dsv
+[7.910s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/lib/libmovement_utils__rosidl_generator_c.so
+[7.911s] -- Set runtime path of "/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/lib/libmovement_utils__rosidl_generator_c.so" to ""
+[7.911s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils
+[7.911s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv
+[7.911s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail
+[7.911s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/gait__rosidl_typesupport_fastrtps_c.h
+[7.911s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/walk_forward__rosidl_typesupport_fastrtps_c.h
+[7.911s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/head_feedback__rosidl_typesupport_fastrtps_c.h
+[7.911s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/enable_torque__rosidl_typesupport_fastrtps_c.h
+[7.911s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/body_feedback__rosidl_typesupport_fastrtps_c.h
+[7.911s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/page__rosidl_typesupport_fastrtps_c.h
+[7.911s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/rotate__rosidl_typesupport_fastrtps_c.h
+[7.911s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg
+[7.911s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/detail
+[7.912s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/detail/head_motors_data__rosidl_typesupport_fastrtps_c.h
+[7.912s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/detail/body_motors_data__rosidl_typesupport_fastrtps_c.h
+[7.912s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[7.912s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/lib/libmovement_utils__rosidl_typesupport_fastrtps_c.so
+[7.912s] -- Set runtime path of "/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/lib/libmovement_utils__rosidl_typesupport_fastrtps_c.so" to ""
+[7.912s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils
+[7.912s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv
+[7.912s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail
+[7.912s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/enable_torque__rosidl_typesupport_introspection_c.h
+[7.912s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/page__rosidl_typesupport_introspection_c.h
+[7.912s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/gait__type_support.c
+[7.912s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/gait__rosidl_typesupport_introspection_c.h
+[7.913s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/walk_forward__rosidl_typesupport_introspection_c.h
+[7.913s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/head_feedback__rosidl_typesupport_introspection_c.h
+[7.913s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/rotate__rosidl_typesupport_introspection_c.h
+[7.913s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/page__type_support.c
+[7.913s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/rotate__type_support.c
+[7.913s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/body_feedback__rosidl_typesupport_introspection_c.h
+[7.913s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/body_feedback__type_support.c
+[7.913s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/walk_forward__type_support.c
+[7.913s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/enable_torque__type_support.c
+[7.913s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/head_feedback__type_support.c
+[7.913s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg
+[7.913s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/detail
+[7.913s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/detail/head_motors_data__rosidl_typesupport_introspection_c.h
+[7.914s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/detail/body_motors_data__rosidl_typesupport_introspection_c.h
+[7.914s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/detail/head_motors_data__type_support.c
+[7.914s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/detail/body_motors_data__type_support.c
+[7.914s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[7.914s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/lib/libmovement_utils__rosidl_typesupport_introspection_c.so
+[7.914s] -- Set runtime path of "/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/lib/libmovement_utils__rosidl_typesupport_introspection_c.so" to ""
+[7.914s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/lib/libmovement_utils__rosidl_typesupport_c.so
+[7.914s] -- Set runtime path of "/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/lib/libmovement_utils__rosidl_typesupport_c.so" to ""
+[7.914s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils
+[7.915s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv
+[7.915s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/walk_forward.hpp
+[7.915s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/rotate.hpp
+[7.915s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail
+[7.915s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/body_feedback__builder.hpp
+[7.915s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/head_feedback__traits.hpp
+[7.915s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/page__builder.hpp
+[7.915s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/head_feedback__struct.hpp
+[7.915s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/gait__traits.hpp
+[7.915s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/walk_forward__builder.hpp
+[7.915s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/enable_torque__traits.hpp
+[7.915s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/head_feedback__builder.hpp
+[7.915s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/page__traits.hpp
+[7.915s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/enable_torque__builder.hpp
+[7.916s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/gait__builder.hpp
+[7.916s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/body_feedback__traits.hpp
+[7.916s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/body_feedback__struct.hpp
+[7.916s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/rotate__builder.hpp
+[7.916s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/page__struct.hpp
+[7.916s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/walk_forward__struct.hpp
+[7.916s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/rotate__struct.hpp
+[7.916s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/rotate__traits.hpp
+[7.916s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/gait__struct.hpp
+[7.916s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/walk_forward__traits.hpp
+[7.916s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/enable_torque__struct.hpp
+[7.916s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/body_feedback.hpp
+[7.916s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/gait.hpp
+[7.917s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/page.hpp
+[7.917s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/enable_torque.hpp
+[7.917s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/head_feedback.hpp
+[7.917s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg
+[7.917s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/body_motors_data.hpp
+[7.917s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/head_motors_data.hpp
+[7.917s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/detail
+[7.917s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/detail/body_motors_data__traits.hpp
+[7.917s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/detail/head_motors_data__builder.hpp
+[7.917s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/detail/head_motors_data__struct.hpp
+[7.917s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/detail/head_motors_data__traits.hpp
+[7.917s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/detail/body_motors_data__builder.hpp
+[7.917s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/detail/body_motors_data__struct.hpp
+[7.917s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils
+[7.918s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv
+[7.918s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail
+[7.918s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/gait__rosidl_typesupport_fastrtps_cpp.hpp
+[7.918s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/dds_fastrtps
+[7.918s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/walk_forward__rosidl_typesupport_fastrtps_cpp.hpp
+[7.918s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/enable_torque__rosidl_typesupport_fastrtps_cpp.hpp
+[7.918s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/page__rosidl_typesupport_fastrtps_cpp.hpp
+[7.918s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/rotate__rosidl_typesupport_fastrtps_cpp.hpp
+[7.918s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/body_feedback__rosidl_typesupport_fastrtps_cpp.hpp
+[7.918s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/head_feedback__rosidl_typesupport_fastrtps_cpp.hpp
+[7.918s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg
+[7.918s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/detail
+[7.918s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/detail/dds_fastrtps
+[7.918s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/detail/body_motors_data__rosidl_typesupport_fastrtps_cpp.hpp
+[7.918s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/detail/head_motors_data__rosidl_typesupport_fastrtps_cpp.hpp
+[7.919s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[7.919s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/lib/libmovement_utils__rosidl_typesupport_fastrtps_cpp.so
+[7.919s] -- Set runtime path of "/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/lib/libmovement_utils__rosidl_typesupport_fastrtps_cpp.so" to ""
+[7.919s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils
+[7.919s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv
+[7.919s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail
+[7.919s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/gait__type_support.cpp
+[7.919s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/body_feedback__rosidl_typesupport_introspection_cpp.hpp
+[7.919s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/body_feedback__type_support.cpp
+[7.919s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/head_feedback__type_support.cpp
+[7.919s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/page__type_support.cpp
+[7.920s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/walk_forward__rosidl_typesupport_introspection_cpp.hpp
+[7.920s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/enable_torque__type_support.cpp
+[7.920s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/walk_forward__type_support.cpp
+[7.920s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/rotate__type_support.cpp
+[7.920s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/rotate__rosidl_typesupport_introspection_cpp.hpp
+[7.920s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/head_feedback__rosidl_typesupport_introspection_cpp.hpp
+[7.920s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/gait__rosidl_typesupport_introspection_cpp.hpp
+[7.920s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/page__rosidl_typesupport_introspection_cpp.hpp
+[7.920s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/srv/detail/enable_torque__rosidl_typesupport_introspection_cpp.hpp
+[7.920s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg
+[7.920s] -- Up-to-date: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/detail
+[7.920s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/detail/head_motors_data__rosidl_typesupport_introspection_cpp.hpp
+[7.920s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/detail/body_motors_data__type_support.cpp
+[7.920s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/detail/head_motors_data__type_support.cpp
+[7.921s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/include/movement_utils/movement_utils/msg/detail/body_motors_data__rosidl_typesupport_introspection_cpp.hpp
+[7.921s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/lib/libmovement_utils__rosidl_typesupport_introspection_cpp.so
+[7.921s] -- Set runtime path of "/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/lib/libmovement_utils__rosidl_typesupport_introspection_cpp.so" to ""
+[7.921s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/lib/libmovement_utils__rosidl_typesupport_cpp.so
+[7.921s] -- Set runtime path of "/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/lib/libmovement_utils__rosidl_typesupport_cpp.so" to ""
+[7.921s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/environment/pythonpath.sh
+[7.921s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/environment/pythonpath.dsv
+[7.922s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils-0.0.0-py3.10.egg-info
+[7.922s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils-0.0.0-py3.10.egg-info/PKG-INFO
+[7.922s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils-0.0.0-py3.10.egg-info/top_level.txt
+[7.922s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils-0.0.0-py3.10.egg-info/dependency_links.txt
+[7.922s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils-0.0.0-py3.10.egg-info/SOURCES.txt
+[7.922s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils
+[7.922s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/_movement_utils_s.ep.rosidl_typesupport_fastrtps_c.c
+[7.922s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/__init__.py
+[7.922s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/movement_utils_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[7.922s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/_movement_utils_s.ep.rosidl_typesupport_introspection_c.c
+[7.923s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/srv
+[7.923s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/srv/_gait.py
+[7.923s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/srv/_walk_forward.py
+[7.923s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/srv/_page.py
+[7.923s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/srv/_enable_torque.py
+[7.923s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/srv/_body_feedback.py
+[7.923s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/srv/_walk_forward_s.c
+[7.923s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/srv/__init__.py
+[7.923s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/srv/_rotate_s.c
+[7.923s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/srv/_head_feedback_s.c
+[7.923s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/srv/_head_feedback.py
+[7.923s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/srv/_enable_torque_s.c
+[7.923s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/srv/_gait_s.c
+[7.924s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/srv/_page_s.c
+[7.924s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/srv/_body_feedback_s.c
+[7.924s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/srv/_rotate.py
+[7.924s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/_movement_utils_s.ep.rosidl_typesupport_c.c
+[7.924s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/movement_utils_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[7.924s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/libmovement_utils__rosidl_generator_py.so
+[7.924s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/msg
+[7.924s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/msg/__init__.py
+[7.924s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/msg/_head_motors_data.py
+[7.924s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/msg/_body_motors_data.py
+[7.924s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/msg/_head_motors_data_s.c
+[7.925s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/msg/_body_motors_data_s.c
+[7.925s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/movement_utils_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[7.968s] Listing '/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils'...
+[7.968s] Compiling '/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/__init__.py'...
+[7.969s] Listing '/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/msg'...
+[7.969s] Compiling '/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/msg/__init__.py'...
+[7.969s] Compiling '/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/msg/_body_motors_data.py'...
+[7.969s] Compiling '/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/msg/_head_motors_data.py'...
+[7.969s] Listing '/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/srv'...
+[7.969s] Compiling '/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/srv/__init__.py'...
+[7.969s] Compiling '/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/srv/_body_feedback.py'...
+[7.969s] Compiling '/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/srv/_enable_torque.py'...
+[7.969s] Compiling '/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/srv/_gait.py'...
+[7.969s] Compiling '/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/srv/_head_feedback.py'...
+[7.969s] Compiling '/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/srv/_page.py'...
+[7.969s] Compiling '/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/srv/_rotate.py'...
+[7.969s] Compiling '/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/srv/_walk_forward.py'...
+[7.973s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/movement_utils_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[7.973s] -- Set runtime path of "/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/movement_utils_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[7.973s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/movement_utils_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[7.973s] -- Set runtime path of "/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/movement_utils_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[7.974s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/movement_utils_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[7.974s] -- Set runtime path of "/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/local/lib/python3.10/dist-packages/movement_utils/movement_utils_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[7.974s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/lib/libmovement_utils__rosidl_generator_py.so
+[7.974s] -- Set runtime path of "/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/lib/libmovement_utils__rosidl_generator_py.so" to ""
+[7.974s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/msg/BodyMotorsData.idl
+[7.974s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/msg/HeadMotorsData.idl
+[7.975s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/srv/BodyFeedback.idl
+[7.975s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/srv/EnableTorque.idl
+[7.975s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/srv/Gait.idl
+[7.975s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/srv/HeadFeedback.idl
+[7.975s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/srv/Page.idl
+[7.975s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/srv/Rotate.idl
+[7.975s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/srv/WalkForward.idl
+[7.975s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/msg/BodyMotorsData.msg
+[7.975s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/msg/HeadMotorsData.msg
+[7.975s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/srv/BodyFeedback.srv
+[7.975s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/srv/BodyFeedback_Request.msg
+[7.975s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/srv/BodyFeedback_Response.msg
+[7.976s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/srv/EnableTorque.srv
+[7.976s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/srv/EnableTorque_Request.msg
+[7.976s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/srv/EnableTorque_Response.msg
+[7.976s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/srv/Gait.srv
+[7.976s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/srv/Gait_Request.msg
+[7.976s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/srv/Gait_Response.msg
+[7.976s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/srv/HeadFeedback.srv
+[7.976s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/srv/HeadFeedback_Request.msg
+[7.976s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/srv/HeadFeedback_Response.msg
+[7.976s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/srv/Page.srv
+[7.977s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/srv/Page_Request.msg
+[7.977s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/srv/Page_Response.msg
+[7.977s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/srv/Rotate.srv
+[7.977s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/srv/Rotate_Request.msg
+[7.977s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/srv/Rotate_Response.msg
+[7.977s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/srv/WalkForward.srv
+[7.977s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/srv/WalkForward_Request.msg
+[7.977s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/srv/WalkForward_Response.msg
+[7.977s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/launch
+[7.977s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/launch/tahara_launch.py
+[7.978s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/launch/movement_start.launch.py
+[7.978s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/launch/__pycache__
+[7.978s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/launch/__pycache__/tahara_launch.cpython-310.pyc
+[7.978s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/ament_index/resource_index/package_run_dependencies/movement_utils
+[7.978s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/ament_index/resource_index/parent_prefix_path/movement_utils
+[7.978s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/environment/ament_prefix_path.sh
+[7.978s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/environment/ament_prefix_path.dsv
+[7.978s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/environment/path.sh
+[7.978s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/environment/path.dsv
+[7.978s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/local_setup.bash
+[7.979s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/local_setup.sh
+[7.979s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/local_setup.zsh
+[7.979s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/local_setup.dsv
+[7.979s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/package.dsv
+[7.979s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/ament_index/resource_index/packages/movement_utils
+[7.979s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/cmake/export_movement_utils__rosidl_generator_cExport.cmake
+[7.979s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/cmake/export_movement_utils__rosidl_generator_cExport-noconfig.cmake
+[7.979s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/cmake/export_movement_utils__rosidl_typesupport_fastrtps_cExport.cmake
+[7.980s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/cmake/export_movement_utils__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[7.980s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/cmake/movement_utils__rosidl_typesupport_introspection_cExport.cmake
+[7.980s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/cmake/movement_utils__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[7.980s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/cmake/movement_utils__rosidl_typesupport_cExport.cmake
+[7.980s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/cmake/movement_utils__rosidl_typesupport_cExport-noconfig.cmake
+[7.980s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/cmake/export_movement_utils__rosidl_generator_cppExport.cmake
+[7.980s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/cmake/export_movement_utils__rosidl_typesupport_fastrtps_cppExport.cmake
+[7.980s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/cmake/export_movement_utils__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[7.981s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/cmake/movement_utils__rosidl_typesupport_introspection_cppExport.cmake
+[7.981s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/cmake/movement_utils__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[7.981s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/cmake/movement_utils__rosidl_typesupport_cppExport.cmake
+[7.981s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/cmake/movement_utils__rosidl_typesupport_cppExport-noconfig.cmake
+[7.981s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/cmake/export_movement_utils__rosidl_generator_pyExport.cmake
+[7.981s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/cmake/export_movement_utils__rosidl_generator_pyExport-noconfig.cmake
+[7.981s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/cmake/rosidl_cmake-extras.cmake
+[7.981s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/cmake/ament_cmake_export_dependencies-extras.cmake
+[7.982s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/cmake/ament_cmake_export_include_directories-extras.cmake
+[7.982s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/cmake/ament_cmake_export_libraries-extras.cmake
+[7.982s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/cmake/ament_cmake_export_targets-extras.cmake
+[7.982s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[7.982s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[7.982s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/cmake/movement_utilsConfig.cmake
+[7.982s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/cmake/movement_utilsConfig-version.cmake
+[7.982s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils/share/movement_utils/package.xml
+[7.984s] Invoked command in '/home/pedrohperes/edromufu/src/movement/Ros2_change/build/movement_utils' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/u2d2_comm:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/tahara_pages:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/pot_package:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_core:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_pages:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_functions:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/kinematic_functions:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/erro_package:/opt/ros/humble /usr/bin/cmake --install /home/pedrohperes/edromufu/src/movement/Ros2_change/build/movement_utils

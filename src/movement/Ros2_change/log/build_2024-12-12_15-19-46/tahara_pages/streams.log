@@ -1,0 +1,22 @@
+[1.968s] Invoking command in '/home/pedrohperes/edromufu/src/movement/Ros2_change/src/tahara_pages': PYTHONPATH=/home/pedrohperes/edromufu/src/movement/Ros2_change/build/tahara_pages/prefix_override:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/tahara_pages/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/tahara_pages build --build-base /home/pedrohperes/edromufu/src/movement/Ros2_change/build/tahara_pages/build install --record /home/pedrohperes/edromufu/src/movement/Ros2_change/build/tahara_pages/install.log --single-version-externally-managed install_data
+[2.244s] running egg_info
+[2.246s] writing ../../build/tahara_pages/tahara_pages.egg-info/PKG-INFO
+[2.246s] writing dependency_links to ../../build/tahara_pages/tahara_pages.egg-info/dependency_links.txt
+[2.246s] writing entry points to ../../build/tahara_pages/tahara_pages.egg-info/entry_points.txt
+[2.246s] writing requirements to ../../build/tahara_pages/tahara_pages.egg-info/requires.txt
+[2.247s] writing top-level names to ../../build/tahara_pages/tahara_pages.egg-info/top_level.txt
+[2.248s] reading manifest file '../../build/tahara_pages/tahara_pages.egg-info/SOURCES.txt'
+[2.250s] writing manifest file '../../build/tahara_pages/tahara_pages.egg-info/SOURCES.txt'
+[2.250s] running build
+[2.250s] running build_py
+[2.250s] running install
+[2.251s] running install_lib
+[2.252s] running install_data
+[2.252s] running install_egg_info
+[2.254s] removing '/home/pedrohperes/edromufu/src/movement/Ros2_change/install/tahara_pages/lib/python3.10/site-packages/tahara_pages-0.0.0-py3.10.egg-info' (and everything under it)
+[2.254s] Copying ../../build/tahara_pages/tahara_pages.egg-info to /home/pedrohperes/edromufu/src/movement/Ros2_change/install/tahara_pages/lib/python3.10/site-packages/tahara_pages-0.0.0-py3.10.egg-info
+[2.255s] running install_scripts
+[2.277s] Installing page_runner script to /home/pedrohperes/edromufu/src/movement/Ros2_change/install/tahara_pages/lib/tahara_pages
+[2.277s] Installing software_pages script to /home/pedrohperes/edromufu/src/movement/Ros2_change/install/tahara_pages/lib/tahara_pages
+[2.277s] writing list of installed files to '/home/pedrohperes/edromufu/src/movement/Ros2_change/build/tahara_pages/install.log'
+[2.323s] Invoked command in '/home/pedrohperes/edromufu/src/movement/Ros2_change/src/tahara_pages' returned '0': PYTHONPATH=/home/pedrohperes/edromufu/src/movement/Ros2_change/build/tahara_pages/prefix_override:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/tahara_pages/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/tahara_pages build --build-base /home/pedrohperes/edromufu/src/movement/Ros2_change/build/tahara_pages/build install --record /home/pedrohperes/edromufu/src/movement/Ros2_change/build/tahara_pages/install.log --single-version-externally-managed install_data

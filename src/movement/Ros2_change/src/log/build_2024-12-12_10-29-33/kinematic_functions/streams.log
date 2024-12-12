@@ -1,0 +1,39 @@
+[1.603s] Invoking command in '/home/pedrohperes/edromufu/src/movement/Ros2_change/src/kinematic_functions': PYTHONPATH=/home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/kinematic_functions/prefix_override:/home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/kinematic_functions build --build-base /home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/kinematic_functions/build install --record /home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/kinematic_functions/install.log --single-version-externally-managed install_data
+[1.911s] running egg_info
+[1.911s] creating ../build/kinematic_functions/kinematic_functions.egg-info
+[1.911s] writing ../build/kinematic_functions/kinematic_functions.egg-info/PKG-INFO
+[1.912s] writing dependency_links to ../build/kinematic_functions/kinematic_functions.egg-info/dependency_links.txt
+[1.912s] writing entry points to ../build/kinematic_functions/kinematic_functions.egg-info/entry_points.txt
+[1.912s] writing requirements to ../build/kinematic_functions/kinematic_functions.egg-info/requires.txt
+[1.912s] writing top-level names to ../build/kinematic_functions/kinematic_functions.egg-info/top_level.txt
+[1.912s] writing manifest file '../build/kinematic_functions/kinematic_functions.egg-info/SOURCES.txt'
+[1.914s] reading manifest file '../build/kinematic_functions/kinematic_functions.egg-info/SOURCES.txt'
+[1.914s] writing manifest file '../build/kinematic_functions/kinematic_functions.egg-info/SOURCES.txt'
+[1.914s] running build
+[1.915s] running build_py
+[1.915s] creating /home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/kinematic_functions/build
+[1.915s] creating /home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/kinematic_functions/build/lib
+[1.915s] creating /home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/kinematic_functions/build/lib/kinematic_functions
+[1.915s] copying kinematic_functions/__init__.py -> /home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/kinematic_functions/build/lib/kinematic_functions
+[1.915s] copying kinematic_functions/direct_kinematics.py -> /home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/kinematic_functions/build/lib/kinematic_functions
+[1.915s] copying kinematic_functions/ik_numerical.py -> /home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/kinematic_functions/build/lib/kinematic_functions
+[1.915s] running install
+[1.916s] running install_lib
+[1.917s] creating /home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/kinematic_functions/lib/python3.10/site-packages/kinematic_functions
+[1.917s] copying /home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/kinematic_functions/build/lib/kinematic_functions/__init__.py -> /home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/kinematic_functions/lib/python3.10/site-packages/kinematic_functions
+[1.917s] copying /home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/kinematic_functions/build/lib/kinematic_functions/direct_kinematics.py -> /home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/kinematic_functions/lib/python3.10/site-packages/kinematic_functions
+[1.918s] copying /home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/kinematic_functions/build/lib/kinematic_functions/ik_numerical.py -> /home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/kinematic_functions/lib/python3.10/site-packages/kinematic_functions
+[1.918s] byte-compiling /home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/kinematic_functions/lib/python3.10/site-packages/kinematic_functions/__init__.py to __init__.cpython-310.pyc
+[1.918s] byte-compiling /home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/kinematic_functions/lib/python3.10/site-packages/kinematic_functions/direct_kinematics.py to direct_kinematics.cpython-310.pyc
+[1.919s] byte-compiling /home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/kinematic_functions/lib/python3.10/site-packages/kinematic_functions/ik_numerical.py to ik_numerical.cpython-310.pyc
+[1.920s] running install_data
+[1.920s] creating /home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/kinematic_functions/share/ament_index
+[1.920s] creating /home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/kinematic_functions/share/ament_index/resource_index
+[1.921s] creating /home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/kinematic_functions/share/ament_index/resource_index/packages
+[1.921s] copying resource/kinematic_functions -> /home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/kinematic_functions/share/ament_index/resource_index/packages
+[1.921s] copying package.xml -> /home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/kinematic_functions/share/kinematic_functions
+[1.921s] running install_egg_info
+[1.923s] Copying ../build/kinematic_functions/kinematic_functions.egg-info to /home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/kinematic_functions/lib/python3.10/site-packages/kinematic_functions-0.0.0-py3.10.egg-info
+[1.924s] running install_scripts
+[1.949s] writing list of installed files to '/home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/kinematic_functions/install.log'
+[1.974s] Invoked command in '/home/pedrohperes/edromufu/src/movement/Ros2_change/src/kinematic_functions' returned '0': PYTHONPATH=/home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/kinematic_functions/prefix_override:/home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/kinematic_functions build --build-base /home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/kinematic_functions/build install --record /home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/kinematic_functions/install.log --single-version-externally-managed install_data

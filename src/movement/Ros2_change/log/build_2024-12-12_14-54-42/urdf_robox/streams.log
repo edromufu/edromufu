@@ -1,0 +1,89 @@
+[0.878s] Invoking command in '/home/pedrohperes/edromufu/src/movement/Ros2_change/build/urdf_robox': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/u2d2_comm:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/tahara_pages:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/pot_package:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_core:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_pages:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_functions:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/kinematic_functions:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/erro_package:/opt/ros/humble /usr/bin/cmake /home/pedrohperes/edromufu/src/movement/Ros2_change/src/urdf_robox -DCMAKE_INSTALL_PREFIX=/home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox
+[0.929s] -- The C compiler identification is GNU 11.4.0
+[0.991s] -- The CXX compiler identification is GNU 11.4.0
+[0.997s] -- Detecting C compiler ABI info
+[1.055s] -- Detecting C compiler ABI info - done
+[1.069s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.069s] -- Detecting C compile features
+[1.069s] -- Detecting C compile features - done
+[1.073s] -- Detecting CXX compiler ABI info
+[1.149s] -- Detecting CXX compiler ABI info - done
+[1.157s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.157s] -- Detecting CXX compile features
+[1.157s] -- Detecting CXX compile features - done
+[1.159s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.318s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.423s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.515s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.521s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.522s] -- Added test 'lint_cmake' to check CMake code style
+[1.524s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.527s] -- Added test 'xmllint' to check XML markup files
+[1.529s] -- Configuring done
+[1.533s] -- Generating done
+[1.534s] -- Build files have been written to: /home/pedrohperes/edromufu/src/movement/Ros2_change/build/urdf_robox
+[1.540s] Invoked command in '/home/pedrohperes/edromufu/src/movement/Ros2_change/build/urdf_robox' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/u2d2_comm:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/tahara_pages:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/pot_package:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_core:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_pages:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_functions:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/kinematic_functions:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/erro_package:/opt/ros/humble /usr/bin/cmake /home/pedrohperes/edromufu/src/movement/Ros2_change/src/urdf_robox -DCMAKE_INSTALL_PREFIX=/home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox
+[1.541s] Invoking command in '/home/pedrohperes/edromufu/src/movement/Ros2_change/build/urdf_robox': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/u2d2_comm:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/tahara_pages:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/pot_package:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_core:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_pages:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_functions:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/kinematic_functions:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/erro_package:/opt/ros/humble /usr/bin/cmake --build /home/pedrohperes/edromufu/src/movement/Ros2_change/build/urdf_robox -- -j12 -l12
+[1.582s] Invoked command in '/home/pedrohperes/edromufu/src/movement/Ros2_change/build/urdf_robox' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/u2d2_comm:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/tahara_pages:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/pot_package:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_core:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_pages:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_functions:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/kinematic_functions:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/erro_package:/opt/ros/humble /usr/bin/cmake --build /home/pedrohperes/edromufu/src/movement/Ros2_change/build/urdf_robox -- -j12 -l12
+[1.613s] Invoking command in '/home/pedrohperes/edromufu/src/movement/Ros2_change/build/urdf_robox': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/u2d2_comm:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/tahara_pages:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/pot_package:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_core:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_pages:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_functions:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/kinematic_functions:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/erro_package:/opt/ros/humble /usr/bin/cmake --install /home/pedrohperes/edromufu/src/movement/Ros2_change/build/urdf_robox
+[1.619s] -- Install configuration: ""
+[1.619s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/urdf
+[1.619s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/urdf/urdf_robox.urdf
+[1.619s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/urdf/urdf_robox.csv
+[1.619s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/launch
+[1.620s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/launch/rsp_sim.launch.py
+[1.620s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/launch/gazebo.launch
+[1.620s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/launch/rsp.launch.py
+[1.620s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/launch/display.launch
+[1.620s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes
+[1.620s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_4.1.STL
+[1.620s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_2.3.STL
+[1.620s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_1.STL
+[1.621s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_2.3.STL
+[1.621s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RA_Link.STL
+[1.621s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_2.2.STL
+[1.621s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/Link_0.STL
+[1.631s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_3.2.STL
+[1.631s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_3.1.STL
+[1.631s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_4.3.STL
+[1.632s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_1.STL
+[1.632s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_5.3.STL
+[1.632s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_6.STL
+[1.632s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_6.STL
+[1.632s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LA_Link.STL
+[1.633s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_5.1.STL
+[1.633s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_3.3.STL
+[1.633s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_2.1.STL
+[1.633s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_3.1.STL
+[1.633s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_2.1.STL
+[1.633s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_3.3.STL
+[1.633s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_3.2.STL
+[1.634s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_5.2.STL
+[1.634s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_4.2.STL
+[1.634s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_4.2.STL
+[1.634s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_2.2.STL
+[1.634s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_4.3.STL
+[1.634s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_5.2.STL
+[1.634s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_5.1.STL
+[1.635s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/RL_Link_5.3.STL
+[1.635s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/meshes/LL_Link_4.1.STL
+[1.635s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/config
+[1.635s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/config/joint_names_urdf_robox.yaml
+[1.635s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/worlds
+[1.635s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/worlds/test_world.world
+[1.635s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/ament_index/resource_index/package_run_dependencies/urdf_robox
+[1.636s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/ament_index/resource_index/parent_prefix_path/urdf_robox
+[1.636s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/environment/ament_prefix_path.sh
+[1.636s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/environment/ament_prefix_path.dsv
+[1.636s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/environment/path.sh
+[1.636s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/environment/path.dsv
+[1.636s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/local_setup.bash
+[1.636s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/local_setup.sh
+[1.637s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/local_setup.zsh
+[1.637s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/local_setup.dsv
+[1.637s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/package.dsv
+[1.637s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/ament_index/resource_index/packages/urdf_robox
+[1.637s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/cmake/urdf_roboxConfig.cmake
+[1.637s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/cmake/urdf_roboxConfig-version.cmake
+[1.637s] -- Installing: /home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox/share/urdf_robox/package.xml
+[1.639s] Invoked command in '/home/pedrohperes/edromufu/src/movement/Ros2_change/build/urdf_robox' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/u2d2_comm:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/tahara_pages:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/pot_package:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_core:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_pages:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_functions:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/humanoid_definition:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/kinematic_functions:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/erro_package:/opt/ros/humble /usr/bin/cmake --install /home/pedrohperes/edromufu/src/movement/Ros2_change/build/urdf_robox

@@ -1,0 +1,39 @@
+[1.109s] Invoking command in '/home/pedrohperes/edromufu/src/movement/Ros2_change/src/humanoid_definition': AMENT_PREFIX_PATH=/home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/kinematic_functions:${AMENT_PREFIX_PATH} PYTHONPATH=/home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/humanoid_definition/prefix_override:/home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/humanoid_definition/lib/python3.10/site-packages:/home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/humanoid_definition build --build-base /home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/humanoid_definition/build install --record /home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/humanoid_definition/install.log --single-version-externally-managed install_data
+[1.390s] running egg_info
+[1.390s] creating ../build/humanoid_definition/humanoid_definition.egg-info
+[1.390s] writing ../build/humanoid_definition/humanoid_definition.egg-info/PKG-INFO
+[1.390s] writing dependency_links to ../build/humanoid_definition/humanoid_definition.egg-info/dependency_links.txt
+[1.390s] writing entry points to ../build/humanoid_definition/humanoid_definition.egg-info/entry_points.txt
+[1.390s] writing requirements to ../build/humanoid_definition/humanoid_definition.egg-info/requires.txt
+[1.390s] writing top-level names to ../build/humanoid_definition/humanoid_definition.egg-info/top_level.txt
+[1.391s] writing manifest file '../build/humanoid_definition/humanoid_definition.egg-info/SOURCES.txt'
+[1.392s] reading manifest file '../build/humanoid_definition/humanoid_definition.egg-info/SOURCES.txt'
+[1.395s] writing manifest file '../build/humanoid_definition/humanoid_definition.egg-info/SOURCES.txt'
+[1.395s] running build
+[1.395s] running build_py
+[1.395s] creating /home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/humanoid_definition/build
+[1.395s] creating /home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/humanoid_definition/build/lib
+[1.395s] creating /home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/humanoid_definition/build/lib/humanoid_definition
+[1.397s] copying humanoid_definition/joint.py -> /home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/humanoid_definition/build/lib/humanoid_definition
+[1.397s] copying humanoid_definition/__init__.py -> /home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/humanoid_definition/build/lib/humanoid_definition
+[1.397s] copying humanoid_definition/setup_robot.py -> /home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/humanoid_definition/build/lib/humanoid_definition
+[1.397s] running install
+[1.397s] running install_lib
+[1.398s] creating /home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/humanoid_definition/lib/python3.10/site-packages/humanoid_definition
+[1.398s] copying /home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/humanoid_definition/build/lib/humanoid_definition/joint.py -> /home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/humanoid_definition/lib/python3.10/site-packages/humanoid_definition
+[1.399s] copying /home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/humanoid_definition/build/lib/humanoid_definition/__init__.py -> /home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/humanoid_definition/lib/python3.10/site-packages/humanoid_definition
+[1.399s] copying /home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/humanoid_definition/build/lib/humanoid_definition/setup_robot.py -> /home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/humanoid_definition/lib/python3.10/site-packages/humanoid_definition
+[1.399s] byte-compiling /home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/humanoid_definition/lib/python3.10/site-packages/humanoid_definition/joint.py to joint.cpython-310.pyc
+[1.401s] byte-compiling /home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/humanoid_definition/lib/python3.10/site-packages/humanoid_definition/__init__.py to __init__.cpython-310.pyc
+[1.401s] byte-compiling /home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/humanoid_definition/lib/python3.10/site-packages/humanoid_definition/setup_robot.py to setup_robot.cpython-310.pyc
+[1.401s] running install_data
+[1.402s] creating /home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/humanoid_definition/share/ament_index
+[1.402s] creating /home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/humanoid_definition/share/ament_index/resource_index
+[1.402s] creating /home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/humanoid_definition/share/ament_index/resource_index/packages
+[1.402s] copying resource/humanoid_definition -> /home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/humanoid_definition/share/ament_index/resource_index/packages
+[1.402s] copying package.xml -> /home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/humanoid_definition/share/humanoid_definition
+[1.402s] running install_egg_info
+[1.404s] Copying ../build/humanoid_definition/humanoid_definition.egg-info to /home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/humanoid_definition/lib/python3.10/site-packages/humanoid_definition-0.0.0-py3.10.egg-info
+[1.409s] running install_scripts
+[1.432s] writing list of installed files to '/home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/humanoid_definition/install.log'
+[1.483s] Invoked command in '/home/pedrohperes/edromufu/src/movement/Ros2_change/src/humanoid_definition' returned '0': AMENT_PREFIX_PATH=/home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/kinematic_functions:${AMENT_PREFIX_PATH} PYTHONPATH=/home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/humanoid_definition/prefix_override:/home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/humanoid_definition/lib/python3.10/site-packages:/home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/humanoid_definition build --build-base /home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/humanoid_definition/build install --record /home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/humanoid_definition/install.log --single-version-externally-managed install_data

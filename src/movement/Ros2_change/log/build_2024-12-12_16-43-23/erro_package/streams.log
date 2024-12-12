@@ -1,0 +1,24 @@
+[1.975s] Invoking command in '/home/pedrohperes/edromufu/src/movement/Ros2_change/src/erro_package': PYTHONPATH=/home/pedrohperes/edromufu/src/movement/Ros2_change/build/erro_package/prefix_override:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/erro_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/erro_package build --build-base /home/pedrohperes/edromufu/src/movement/Ros2_change/build/erro_package/build install --record /home/pedrohperes/edromufu/src/movement/Ros2_change/build/erro_package/install.log --single-version-externally-managed install_data
+[2.246s] running egg_info
+[2.247s] writing ../../build/erro_package/erro_package.egg-info/PKG-INFO
+[2.247s] writing dependency_links to ../../build/erro_package/erro_package.egg-info/dependency_links.txt
+[2.247s] writing entry points to ../../build/erro_package/erro_package.egg-info/entry_points.txt
+[2.248s] writing requirements to ../../build/erro_package/erro_package.egg-info/requires.txt
+[2.248s] writing top-level names to ../../build/erro_package/erro_package.egg-info/top_level.txt
+[2.249s] reading manifest file '../../build/erro_package/erro_package.egg-info/SOURCES.txt'
+[2.250s] writing manifest file '../../build/erro_package/erro_package.egg-info/SOURCES.txt'
+[2.250s] running build
+[2.250s] running build_py
+[2.251s] copying erro_package/erro_publisher.py -> /home/pedrohperes/edromufu/src/movement/Ros2_change/build/erro_package/build/lib/erro_package
+[2.251s] running install
+[2.251s] running install_lib
+[2.252s] copying /home/pedrohperes/edromufu/src/movement/Ros2_change/build/erro_package/build/lib/erro_package/erro_publisher.py -> /home/pedrohperes/edromufu/src/movement/Ros2_change/install/erro_package/lib/python3.10/site-packages/erro_package
+[2.252s] byte-compiling /home/pedrohperes/edromufu/src/movement/Ros2_change/install/erro_package/lib/python3.10/site-packages/erro_package/erro_publisher.py to erro_publisher.cpython-310.pyc
+[2.253s] running install_data
+[2.253s] running install_egg_info
+[2.255s] removing '/home/pedrohperes/edromufu/src/movement/Ros2_change/install/erro_package/lib/python3.10/site-packages/erro_package-0.0.0-py3.10.egg-info' (and everything under it)
+[2.255s] Copying ../../build/erro_package/erro_package.egg-info to /home/pedrohperes/edromufu/src/movement/Ros2_change/install/erro_package/lib/python3.10/site-packages/erro_package-0.0.0-py3.10.egg-info
+[2.256s] running install_scripts
+[2.277s] Installing erro_publisher script to /home/pedrohperes/edromufu/src/movement/Ros2_change/install/erro_package/lib/erro_package
+[2.278s] writing list of installed files to '/home/pedrohperes/edromufu/src/movement/Ros2_change/build/erro_package/install.log'
+[2.312s] Invoked command in '/home/pedrohperes/edromufu/src/movement/Ros2_change/src/erro_package' returned '0': PYTHONPATH=/home/pedrohperes/edromufu/src/movement/Ros2_change/build/erro_package/prefix_override:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/erro_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/erro_package build --build-base /home/pedrohperes/edromufu/src/movement/Ros2_change/build/erro_package/build install --record /home/pedrohperes/edromufu/src/movement/Ros2_change/build/erro_package/install.log --single-version-externally-managed install_data

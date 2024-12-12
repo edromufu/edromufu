@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from movement_utils/srv/Gait.srv
+// generated code does not contain a copyright notice
+
+
+module movement_utils {
+  module srv {
+    struct Gait_Request {
+      int8 steps_number;
+
+      float step_height;
+    };
+    struct Gait_Response {
+      boolean success;
+    };
+  };
+};

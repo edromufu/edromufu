@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from movement_utils/srv/Page.srv
+// generated code does not contain a copyright notice
+
+
+module movement_utils {
+  module srv {
+    struct Page_Request {
+      string page_name;
+    };
+    struct Page_Response {
+      boolean success;
+    };
+  };
+};

@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <!-- This file demonstrates the use of some <gazebo> tags -->
+
+    <!-- To include it add the following line -->
+    <!-- <xacro:include filename="example_gazebo.xacro" /> -->
+
+
+
+    <!-- Gazebo is unable to use the same <material> tags that are already in the URDF (that RViz uses). -->
+    <!-- Instead, we need to add gazebo tags for our links that refer to Gazebo materials -->
+
+
+    
+
+
+
+
+    <!-- Gazebo requires the use of plugins to interact with other systems such as ROS. -->
+
+
+    <!-- This plugin will publish the joint_states for the selected joints 
+            (which robot_state_publisher can then use to broadcast the approprate tf). -->
+
+    <gazebo>
+        <plugin name="gazebo_ros_joint_state_publisher"
+            filename="libgazebo_ros_joint_state_publisher.so">
+            <update_rate>20</update_rate>
+            <joint_name>b_joint</joint_name>
+            <joint_name>R_SHLD</joint_name>
+            <joint_name>L_SHLD</joint_name>
+            <joint_name>RHIP_UX</joint_name>
+            <joint_name>RHIP_UY1</joint_name>
+            <joint_name>RUKNEE_1</joint_name>            
+            <joint_name>RLKNEE_1</joint_name>
+            <joint_name>RANKLE_UY1</joint_name>
+            <joint_name>RHIP_UY2</joint_name>
+            <joint_name>RUKNEE_2</joint_name>            
+            <joint_name>RLKNEE_2</joint_name>
+            <joint_name>RANKLE_UY2</joint_name>
+            <joint_name>RHIP_UY3</joint_name>
+            <joint_name>RUKNEE_3</joint_name>            
+            <joint_name>RLKNEE_3</joint_name>
+            <joint_name>RANKLE_UY3</joint_name>
+            <joint_name>LHIP_UX</joint_name>
+            <joint_name>LHIP_UY1</joint_name>
+            <joint_name>LUKNEE_1</joint_name>            
+            <joint_name>LLKNEE_1</joint_name>
+            <joint_name>LANKLE_UY1</joint_name>
+            <joint_name>LHIP_UY2</joint_name>
+            <joint_name>LUKNEE_2</joint_name>            
+            <joint_name>LLKNEE_2</joint_name>
+            <joint_name>LANKLE_UY2</joint_name>
+            <joint_name>LHIP_UY3</joint_name>
+            <joint_name>LUKNEE_3</joint_name>            
+            <joint_name>LLKNEE_3</joint_name>
+            <joint_name>LANKLE_UY3</joint_name>
+            <joint_name>LANKLE_UY</joint_name>
+        </plugin>
+    </gazebo>
+
+
+    <!-- This plugin will read a JointTrajectory message from the /set_joint_trajectory topic 
+            and move the machine accordingly. It's a bit clunky but it works. -->
+    <!-- You'll probably want to add damping to the joints to stop them it flopping around. 
+            e.g. <dynamics damping="10.0" friction="10.0"/> -->
+    <!-- Here's an example message to publish to test it:
+            ros2 topic pub -1 /set_joint_trajectory trajectory_msgs/msg/JointTrajectory  '{header: {frame_id: world}, joint_names: [slider_joint, arm_joint], points: [  {positions: {0.8,0.6}} ]}' -->
+    <gazebo>
+        <plugin name="gazebo_ros_joint_pose_trajectory"
+            filename="libgazebo_ros_joint_pose_trajectory.so">
+            <update_rate>2</update_rate>
+        </plugin>
+    </gazebo>
+
+
+
+
+
+
+
+    <!-- The next section shows an example of adding a sensor, in this case a depth camera. -->
+
+    <!-- Due to a quirk of how cameras work, an extra joint/link is required to create an
+            "optical frame" for the sensor. That isn't the focus for this tutorial, but you can
+            look at https://www.ros.org/reps/rep-0103.html#suffix-frames for slightly more information. -->
+
+    
+    
+    <!-- First, create the link and joint for the optical frame -->
+
+    
+
+
+
+</robot>

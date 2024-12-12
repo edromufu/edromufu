@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-set(microxrcedds_agent_VERSION 2.4.1)
+set(microxrcedds_agent_VERSION 2.4.2)
 
 
 ####### Expanded from @PACKAGE_INIT@ by configure_package_config_file() #######

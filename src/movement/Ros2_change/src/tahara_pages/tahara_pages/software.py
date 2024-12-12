@@ -21,7 +21,7 @@ MAIN_DIR = '/home/'+os.getlogin()+'/edromufu/src/movement/Ros2_change/src/tahara
 
 class MyPublisher(Node):
     def __init__(self):
-        super().__init__('page_topic')
+        super().__init__('pot_topic')
         self.publisher_ = self.create_publisher(Float32MultiArray, 'pot_py_topic', 10)
         self.timer = self.create_timer(1.0, self.timer_callback)  # Chama a callback a cada 1 segundo
         self.msg = Float32MultiArray()
@@ -288,10 +288,12 @@ class Ui_MainWindow(object):
     def incrementar(self,pos):
         self.message[pos-1] = 1.0
         self.envio()
+        self.message[pos-1] = 0.0
 
     def decrementar(self,pos):
         self.message[pos-1] = -1.0
         self.envio()
+        self.message[pos-1] = 0.0
 
     def envio(self):
 

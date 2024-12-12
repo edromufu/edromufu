@@ -1,0 +1,20 @@
+[1.113s] Invoking command in '/home/pedrohperes/edromufu/src/movement/Ros2_change/src/humanoid_definition': AMENT_PREFIX_PATH=/home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/kinematic_functions:${AMENT_PREFIX_PATH} PYTHONPATH=/home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/humanoid_definition/prefix_override:/home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/humanoid_definition/lib/python3.10/site-packages:/home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/humanoid_definition build --build-base /home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/humanoid_definition/build install --record /home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/humanoid_definition/install.log --single-version-externally-managed install_data
+[1.389s] running egg_info
+[1.389s] writing ../build/humanoid_definition/humanoid_definition.egg-info/PKG-INFO
+[1.389s] writing dependency_links to ../build/humanoid_definition/humanoid_definition.egg-info/dependency_links.txt
+[1.390s] writing entry points to ../build/humanoid_definition/humanoid_definition.egg-info/entry_points.txt
+[1.390s] writing requirements to ../build/humanoid_definition/humanoid_definition.egg-info/requires.txt
+[1.390s] writing top-level names to ../build/humanoid_definition/humanoid_definition.egg-info/top_level.txt
+[1.391s] reading manifest file '../build/humanoid_definition/humanoid_definition.egg-info/SOURCES.txt'
+[1.392s] writing manifest file '../build/humanoid_definition/humanoid_definition.egg-info/SOURCES.txt'
+[1.392s] running build
+[1.392s] running build_py
+[1.393s] running install
+[1.393s] running install_lib
+[1.394s] running install_data
+[1.394s] running install_egg_info
+[1.396s] removing '/home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/humanoid_definition/lib/python3.10/site-packages/humanoid_definition-0.0.0-py3.10.egg-info' (and everything under it)
+[1.396s] Copying ../build/humanoid_definition/humanoid_definition.egg-info to /home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/humanoid_definition/lib/python3.10/site-packages/humanoid_definition-0.0.0-py3.10.egg-info
+[1.397s] running install_scripts
+[1.416s] writing list of installed files to '/home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/humanoid_definition/install.log'
+[1.445s] Invoked command in '/home/pedrohperes/edromufu/src/movement/Ros2_change/src/humanoid_definition' returned '0': AMENT_PREFIX_PATH=/home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/kinematic_functions:${AMENT_PREFIX_PATH} PYTHONPATH=/home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/humanoid_definition/prefix_override:/home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/humanoid_definition/lib/python3.10/site-packages:/home/pedrohperes/edromufu/src/movement/Ros2_change/src/install/kinematic_functions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/humanoid_definition build --build-base /home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/humanoid_definition/build install --record /home/pedrohperes/edromufu/src/movement/Ros2_change/src/build/humanoid_definition/install.log --single-version-externally-managed install_data

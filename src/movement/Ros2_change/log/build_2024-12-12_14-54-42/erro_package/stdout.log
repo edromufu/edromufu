@@ -1,0 +1,35 @@
+running egg_info
+creating ../../build/erro_package/erro_package.egg-info
+writing ../../build/erro_package/erro_package.egg-info/PKG-INFO
+writing dependency_links to ../../build/erro_package/erro_package.egg-info/dependency_links.txt
+writing entry points to ../../build/erro_package/erro_package.egg-info/entry_points.txt
+writing requirements to ../../build/erro_package/erro_package.egg-info/requires.txt
+writing top-level names to ../../build/erro_package/erro_package.egg-info/top_level.txt
+writing manifest file '../../build/erro_package/erro_package.egg-info/SOURCES.txt'
+reading manifest file '../../build/erro_package/erro_package.egg-info/SOURCES.txt'
+writing manifest file '../../build/erro_package/erro_package.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/pedrohperes/edromufu/src/movement/Ros2_change/build/erro_package/build
+creating /home/pedrohperes/edromufu/src/movement/Ros2_change/build/erro_package/build/lib
+creating /home/pedrohperes/edromufu/src/movement/Ros2_change/build/erro_package/build/lib/erro_package
+copying erro_package/__init__.py -> /home/pedrohperes/edromufu/src/movement/Ros2_change/build/erro_package/build/lib/erro_package
+copying erro_package/erro_publisher.py -> /home/pedrohperes/edromufu/src/movement/Ros2_change/build/erro_package/build/lib/erro_package
+running install
+running install_lib
+creating /home/pedrohperes/edromufu/src/movement/Ros2_change/install/erro_package/lib/python3.10/site-packages/erro_package
+copying /home/pedrohperes/edromufu/src/movement/Ros2_change/build/erro_package/build/lib/erro_package/__init__.py -> /home/pedrohperes/edromufu/src/movement/Ros2_change/install/erro_package/lib/python3.10/site-packages/erro_package
+copying /home/pedrohperes/edromufu/src/movement/Ros2_change/build/erro_package/build/lib/erro_package/erro_publisher.py -> /home/pedrohperes/edromufu/src/movement/Ros2_change/install/erro_package/lib/python3.10/site-packages/erro_package
+byte-compiling /home/pedrohperes/edromufu/src/movement/Ros2_change/install/erro_package/lib/python3.10/site-packages/erro_package/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/pedrohperes/edromufu/src/movement/Ros2_change/install/erro_package/lib/python3.10/site-packages/erro_package/erro_publisher.py to erro_publisher.cpython-310.pyc
+running install_data
+creating /home/pedrohperes/edromufu/src/movement/Ros2_change/install/erro_package/share/ament_index
+creating /home/pedrohperes/edromufu/src/movement/Ros2_change/install/erro_package/share/ament_index/resource_index
+creating /home/pedrohperes/edromufu/src/movement/Ros2_change/install/erro_package/share/ament_index/resource_index/packages
+copying resource/erro_package -> /home/pedrohperes/edromufu/src/movement/Ros2_change/install/erro_package/share/ament_index/resource_index/packages
+copying package.xml -> /home/pedrohperes/edromufu/src/movement/Ros2_change/install/erro_package/share/erro_package
+running install_egg_info
+Copying ../../build/erro_package/erro_package.egg-info to /home/pedrohperes/edromufu/src/movement/Ros2_change/install/erro_package/lib/python3.10/site-packages/erro_package-0.0.0-py3.10.egg-info
+running install_scripts
+Installing erro_publisher script to /home/pedrohperes/edromufu/src/movement/Ros2_change/install/erro_package/lib/erro_package
+writing list of installed files to '/home/pedrohperes/edromufu/src/movement/Ros2_change/build/erro_package/install.log'

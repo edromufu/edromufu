@@ -1,0 +1,48 @@
+[1.075s] Invoking command in '/home/pedrohperes/edromufu/src/movement/Ros2_change/src/movement_pages': CMAKE_PREFIX_PATH=/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_example:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/micro_ros_agent:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/micro_ros_msgs:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/humanoid_visualization PYTHONPATH=/home/pedrohperes/edromufu/src/movement/Ros2_change/build/movement_pages/prefix_override:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/movement_pages build --build-base /home/pedrohperes/edromufu/src/movement/Ros2_change/build/movement_pages/build install --record /home/pedrohperes/edromufu/src/movement/Ros2_change/build/movement_pages/install.log --single-version-externally-managed install_data
+[1.341s] running egg_info
+[1.341s] creating ../../build/movement_pages/movement_pages.egg-info
+[1.341s] writing ../../build/movement_pages/movement_pages.egg-info/PKG-INFO
+[1.342s] writing dependency_links to ../../build/movement_pages/movement_pages.egg-info/dependency_links.txt
+[1.342s] writing entry points to ../../build/movement_pages/movement_pages.egg-info/entry_points.txt
+[1.342s] writing requirements to ../../build/movement_pages/movement_pages.egg-info/requires.txt
+[1.342s] writing top-level names to ../../build/movement_pages/movement_pages.egg-info/top_level.txt
+[1.342s] writing manifest file '../../build/movement_pages/movement_pages.egg-info/SOURCES.txt'
+[1.344s] reading manifest file '../../build/movement_pages/movement_pages.egg-info/SOURCES.txt'
+[1.344s] writing manifest file '../../build/movement_pages/movement_pages.egg-info/SOURCES.txt'
+[1.344s] running build
+[1.344s] running build_py
+[1.345s] creating /home/pedrohperes/edromufu/src/movement/Ros2_change/build/movement_pages/build
+[1.345s] creating /home/pedrohperes/edromufu/src/movement/Ros2_change/build/movement_pages/build/lib
+[1.345s] creating /home/pedrohperes/edromufu/src/movement/Ros2_change/build/movement_pages/build/lib/movement_pages
+[1.345s] copying movement_pages/page_runner.py -> /home/pedrohperes/edromufu/src/movement/Ros2_change/build/movement_pages/build/lib/movement_pages
+[1.345s] copying movement_pages/page_interface.py -> /home/pedrohperes/edromufu/src/movement/Ros2_change/build/movement_pages/build/lib/movement_pages
+[1.345s] copying movement_pages/__init__.py -> /home/pedrohperes/edromufu/src/movement/Ros2_change/build/movement_pages/build/lib/movement_pages
+[1.345s] copying movement_pages/edrom_logo_rc.py -> /home/pedrohperes/edromufu/src/movement/Ros2_change/build/movement_pages/build/lib/movement_pages
+[1.346s] copying movement_pages/new_pose.py -> /home/pedrohperes/edromufu/src/movement/Ros2_change/build/movement_pages/build/lib/movement_pages
+[1.346s] copying movement_pages/ui.py -> /home/pedrohperes/edromufu/src/movement/Ros2_change/build/movement_pages/build/lib/movement_pages
+[1.346s] running install
+[1.347s] running install_lib
+[1.347s] creating /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages/movement_pages
+[1.347s] copying /home/pedrohperes/edromufu/src/movement/Ros2_change/build/movement_pages/build/lib/movement_pages/page_runner.py -> /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages/movement_pages
+[1.347s] copying /home/pedrohperes/edromufu/src/movement/Ros2_change/build/movement_pages/build/lib/movement_pages/page_interface.py -> /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages/movement_pages
+[1.347s] copying /home/pedrohperes/edromufu/src/movement/Ros2_change/build/movement_pages/build/lib/movement_pages/__init__.py -> /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages/movement_pages
+[1.348s] copying /home/pedrohperes/edromufu/src/movement/Ros2_change/build/movement_pages/build/lib/movement_pages/edrom_logo_rc.py -> /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages/movement_pages
+[1.349s] copying /home/pedrohperes/edromufu/src/movement/Ros2_change/build/movement_pages/build/lib/movement_pages/new_pose.py -> /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages/movement_pages
+[1.349s] copying /home/pedrohperes/edromufu/src/movement/Ros2_change/build/movement_pages/build/lib/movement_pages/ui.py -> /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages/movement_pages
+[1.349s] byte-compiling /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages/movement_pages/page_runner.py to page_runner.cpython-310.pyc
+[1.350s] byte-compiling /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages/movement_pages/page_interface.py to page_interface.cpython-310.pyc
+[1.351s] byte-compiling /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages/movement_pages/__init__.py to __init__.cpython-310.pyc
+[1.352s] byte-compiling /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages/movement_pages/edrom_logo_rc.py to edrom_logo_rc.cpython-310.pyc
+[1.365s] byte-compiling /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages/movement_pages/new_pose.py to new_pose.cpython-310.pyc
+[1.366s] byte-compiling /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages/movement_pages/ui.py to ui.cpython-310.pyc
+[1.370s] running install_data
+[1.370s] creating /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_pages/share/ament_index
+[1.370s] creating /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_pages/share/ament_index/resource_index
+[1.370s] creating /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_pages/share/ament_index/resource_index/packages
+[1.370s] copying resource/movement_pages -> /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_pages/share/ament_index/resource_index/packages
+[1.370s] copying package.xml -> /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_pages/share/movement_pages
+[1.370s] running install_egg_info
+[1.372s] Copying ../../build/movement_pages/movement_pages.egg-info to /home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages/movement_pages-0.0.0-py3.10.egg-info
+[1.372s] running install_scripts
+[1.392s] writing list of installed files to '/home/pedrohperes/edromufu/src/movement/Ros2_change/build/movement_pages/install.log'
+[1.414s] Invoked command in '/home/pedrohperes/edromufu/src/movement/Ros2_change/src/movement_pages' returned '0': CMAKE_PREFIX_PATH=/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_utils:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_robox:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/urdf_example:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/micro_ros_agent:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/micro_ros_msgs:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/humanoid_visualization PYTHONPATH=/home/pedrohperes/edromufu/src/movement/Ros2_change/build/movement_pages/prefix_override:/home/pedrohperes/edromufu/src/movement/Ros2_change/install/movement_pages/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/movement_pages build --build-base /home/pedrohperes/edromufu/src/movement/Ros2_change/build/movement_pages/build install --record /home/pedrohperes/edromufu/src/movement/Ros2_change/build/movement_pages/install.log --single-version-externally-managed install_data

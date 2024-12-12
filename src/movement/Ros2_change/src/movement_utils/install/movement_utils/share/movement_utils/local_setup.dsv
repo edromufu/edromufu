@@ -1,0 +1,4 @@
+source;share/movement_utils/environment/ament_prefix_path.sh
+source;share/movement_utils/environment/library_path.sh
+source;share/movement_utils/environment/path.sh
+source;share/movement_utils/environment/pythonpath.sh

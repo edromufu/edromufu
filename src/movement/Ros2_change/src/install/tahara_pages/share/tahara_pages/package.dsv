@@ -1,0 +1,6 @@
+source;share/tahara_pages/hook/pythonpath.ps1
+source;share/tahara_pages/hook/pythonpath.dsv
+source;share/tahara_pages/hook/pythonpath.sh
+source;share/tahara_pages/hook/ament_prefix_path.ps1
+source;share/tahara_pages/hook/ament_prefix_path.dsv
+source;share/tahara_pages/hook/ament_prefix_path.sh

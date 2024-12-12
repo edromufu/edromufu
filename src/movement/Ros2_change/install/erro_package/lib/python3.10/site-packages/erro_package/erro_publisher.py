@@ -31,7 +31,9 @@ class PotValuesPublisher(Node):
         self.timer = self.create_timer(0.1, self.timer_callback)
 
     def listener(self, msg):
-        self.pagePoses += msg.data
+        self.pagePoses = [v1 + v2 for v1, v2 in zip(self.pagePoses, msg.data)]
+
+        
 
        
 
@@ -44,7 +46,7 @@ class PotValuesPublisher(Node):
             try:
                 # Lê a linha enviada pelo Arduino
                 line = self.serial_connection.readline().decode('utf-8')
-                
+               # self.get_logger().info(f"Linha recebida: {line}")
                 values = line.split(',')
                 values.pop()
                 values = [float(val) for val in values]
@@ -54,16 +56,17 @@ class PotValuesPublisher(Node):
 
 
 
+                
                 if all(num == 0.0 for num in self.pagePoses):
                     self.pagePoses = self.vetor_reordenado
                     self.last_error = self.vetor_reordenado
 
-                for i in (range(8) if len(self.vetor_reordenado)>=8 else range(len(self.vetor_reordenado))):
+                '''for i in (range(8) if len(self.vetor_reordenado)>=8 else range(len(self.vetor_reordenado))):
                     if ((self.vetor_reordenado[i] - self.last_error[i])> 10):
-                        self.vetor_reordenado[i] = self.last_error[i]
+                        self.vetor_reordenado[i] = self.last_error[i]'''
 
 
-
+            
                 
                 for i in (range(8) if len(self.vetor_reordenado)>=8 else range(len(self.vetor_reordenado))):
                     self.errors[i] = self.vetor_reordenado[i] - self.pagePoses[i]
@@ -72,6 +75,7 @@ class PotValuesPublisher(Node):
 
                 # Verifica se o vetor tem 8 valores antes de publicar
                 self.get_logger().info(f"Linha recebida: {self.vetor_reordenado}") 
+                self.get_logger().info(f"Linha recebida do software de pages: {self.pagePoses}")
                 if len(values) == 8:
                     msg = Float32MultiArray()
                     msg.data = self.errors
