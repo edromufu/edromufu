@@ -201,7 +201,14 @@ void CalculatePWM(){
 
   //--------Calculando Entrada do PWM--------
   writeActuator(0, erro[0]); //(erro[0]-erro[1])
-  writeActuator(1, -erro[0]);//(-erro[0]-erro[1])
+  //writeActuator(1, erro[1]);//(-erro[0]-erro[1])
+  //writeActuator(2, -erro[2]); //(erro[0]-erro[1])
+  //writeActuator(3, -erro[2]);//(-erro[0]-erro[1])
+  //writeActuator(4, erro[5]); //(erro[0]-erro[1])
+  //writeActuator(5, erro[5]);//(-erro[0]-erro[1])
+
+  //writeActuator(6, erro[6]); //(erro[0]-erro[1])
+  writeActuator(7, erro[7]);//(-erro[0]-erro[1])
 /*
   if(abs(erro[0])<5){
     writeActuator(0, erro[1]); //(erro[0]-erro[1])
