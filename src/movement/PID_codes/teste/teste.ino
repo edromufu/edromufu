@@ -2,7 +2,7 @@
 #define PWM_L 2  // 13, 12, 14, 27,26,25, 33, 32,  // Pino para controle PWM do lado baixo (DIR_L)
 #define PWM_H 2      //  17, 5 , 15, 2, 0, 4, 16, 18   Pino para controle PWM do lado alto (DIR_H)
 #define DIR_L 18     // Pino para controle de direção (Low) L_PWM LOW -> Recuo
-#define DIR_H 5    // Pino para controle de direção (High) R_PWM HIGH -> Recuo
+#define DIR_H 19    // Pino para controle de direção (High) R_PWM HIGH -> Recuo
 
 // Variáveis de controle do PWM
 int motorSpeed = 255;  // Velocidade do motor (0 a 255)

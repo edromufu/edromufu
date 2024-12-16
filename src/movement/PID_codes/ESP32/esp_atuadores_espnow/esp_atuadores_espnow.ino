@@ -64,8 +64,8 @@ const int pot_size = 8;
 //const int ACTUATOR_EN_PINS[] =     {x, 33, 27, 13, 15, 19, 17, 2}; //vetor de PWM
 //const int ACTUATOR_IN_IMP_PINS[] = {13, 33, 25, 14, 23, 15, 18, 16}; //vetor de pino de avanço
 //const int ACTUATOR_IN_PAR_PINS[] = {27, 32, 26, 12, 22, 21, 5, 4}; //vetor de pino de recuo
-const int ACTUATOR_RPWM[] = {13, 12, 14, 27, 26, 25, 33, 32}; // Pinos de Recuo quando HIGH
-const int ACTUATOR_LPWM[] = {17, 5, 15, 2, 0, 4, 16, 18}; // Pinos de Avanço quando HIGH
+const int ACTUATOR_RPWM[] = {17, 12, 14, 27, 26, 25, 33, 32}; // Pinos de Recuo quando HIGH
+const int ACTUATOR_LPWM[] = {13, 5, 15, 2, 0, 4, 16, 18}; // Pinos de Avanço quando HIGH
 
 //--------constantes PID--------
 
@@ -200,15 +200,23 @@ void subscription_callback(const void * msgin)
 void CalculatePWM(){
 
   //--------Calculando Entrada do PWM--------
-  writeActuator(0, erro[0]); //(erro[0]-erro[1])
-  //writeActuator(1, erro[1]);//(-erro[0]-erro[1])
-  //writeActuator(2, -erro[2]); //(erro[0]-erro[1])
-  //writeActuator(3, -erro[2]);//(-erro[0]-erro[1])
-  //writeActuator(4, erro[5]); //(erro[0]-erro[1])
-  //writeActuator(5, erro[5]);//(-erro[0]-erro[1])
+  
+  writeActuator(0, erro[0]);
+  writeActuator(1, -erro[0]);
+  if(abs(erro[0])<5){
+    writeActuator(0, erro[1]);
+    writeActuator(1, erro[1]);
+  }
+  
+  writeActuator(2, -erro[2]); 
+  writeActuator(3, -erro[2]);
+  if(abs(erro[2])<5){
+    writeActuator(2, erro[3]); 
+    writeActuator(3, -erro[3]);
+  }
 
   //writeActuator(6, erro[6]); //(erro[0]-erro[1])
-  writeActuator(7, erro[7]);//(-erro[0]-erro[1])
+  //writeActuator(7, erro[7]);//(-erro[0]-erro[1])
 /*
   if(abs(erro[0])<5){
     writeActuator(0, erro[1]); //(erro[0]-erro[1])
