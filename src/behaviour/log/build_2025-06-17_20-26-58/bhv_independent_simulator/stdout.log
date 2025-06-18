@@ -1,0 +1,17 @@
+running develop
+running egg_info
+writing bhv_independent_simulator.egg-info/PKG-INFO
+writing dependency_links to bhv_independent_simulator.egg-info/dependency_links.txt
+writing entry points to bhv_independent_simulator.egg-info/entry_points.txt
+writing requirements to bhv_independent_simulator.egg-info/requires.txt
+writing top-level names to bhv_independent_simulator.egg-info/top_level.txt
+reading manifest file 'bhv_independent_simulator.egg-info/SOURCES.txt'
+writing manifest file 'bhv_independent_simulator.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv-independent-simulator.egg-link (link to .)
+Installing bhv_sim script to /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/bin
+Installing bhv_sim script to /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/bin
+
+Installed /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator
+running symlink_data
+symbolically linking /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/resource/bhv_independent_simulator -> /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/ament_index/resource_index/packages

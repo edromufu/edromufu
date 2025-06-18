@@ -1,0 +1,575 @@
+#VRML_SIM R2022a utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation -0.897547894342499 0.4407700732022495 -0.011380682344660357 1.8102373400371086
+  position -4.163276538921375 2.7610556481651027 -1.2942164355358414
+}
+DEF Grass Floor {
+  rotation -0.5773502691896258 0.5773502691896258 0.5773502691896258 2.0943951023931953
+  appearance Parquetry {
+    type "dark strip"
+    colorOverride 0 1 0
+  }
+}
+TexturedBackground {
+  texture "noon_park_empty"
+}
+TexturedBackgroundLight {
+  texture "noon_park_empty"
+}
+DEF ball Ball {
+  hidden linearVelocity_0 5.0110240239563385e-37 -8.75978459012915e-17 2.4595347541917783e-22
+  hidden angularVelocity_0 -2.042597818875964e-20 2.723345741289542e-36 -6.64459561030491e-36
+  translation 2.5251354888415025 0.07491367200000101 -3.008619696968761
+  rotation 0.2749982598116083 0.6798440840005922 0.6798440840001351 -2.6048634674585083
+  radius 0.075
+}
+DEF Supervisor Robot {
+  translation 0.46879395393800416 0.25723048000000087 -2.8739223256778987
+  rotation 0.015257393890729096 -5.2675784087966705e-17 0.9998835991912575 3.141592653589793
+  children [
+    DEF HorizontalMotor Transform {
+      translation 0 -0.31 -0.03
+      rotation 0 1 0 0
+      children [
+        Transform {
+          rotation 1 0 0 1.5699996938995748
+          children [
+            Transform {
+              translation 0.035 -0.02 0.02
+              rotation 0.7071062811861719 0.7071072811865696 -1.0171504044775673e-08 3.14159
+              children [
+                DEF VerticalMotor Transform {
+                  translation 0 -0.035 -0.015
+                  rotation 0 1 0 0.45
+                  children [
+                    Transform {
+                      rotation 1 0 0 -1.5707953071795862
+                      children [
+                        DEF jointCilynder Shape {
+                          geometry Cylinder {
+                            height 0.01
+                            radius 0.005
+                          }
+                        }
+                      ]
+                    }
+                    Transform {
+                      translation -0.003 0 0
+                      children [
+                        DEF boxHead Transform {
+                          translation -0.024 0 -0.025
+                          children [
+                            Transform {
+                              translation 0 0 -0.025
+                              children [
+                                Camera {
+                                  translation -0.025 0 0.02
+                                  rotation 3.6634499999728014e-06 0.9999999999925757 -1.1949199999911285e-06 3.14159
+                                  name "Camera"
+                                  fieldOfView 1.01
+                                  width 416
+                                  height 416
+                                  focus Focus {
+                                  }
+                                }
+                              ]
+                            }
+                            Shape {
+                              appearance PBRAppearance {
+                                baseColor 0.3 0.3 0.3
+                                metalness 0.5
+                                IBLStrength 0.1
+                              }
+                              geometry Box {
+                                size 0.05 0.1 0.05
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            DEF horizontalNeck Shape {
+              appearance PBRAppearance {
+                baseColor 0.3 0.3 0.3
+                metalness 0.5
+                IBLStrength 0.1
+              }
+              geometry Cylinder {
+                height 0.07
+                radius 0.02
+              }
+            }
+          ]
+        }
+      ]
+    }
+    DEF torsoBox Shape {
+      appearance PBRAppearance {
+        baseColor 0.3 0.3 0.3
+        metalness 0.5
+        IBLStrength 0.01
+        emissiveIntensity 0
+      }
+      geometry Box {
+        size 0.2 0.55 0.11
+      }
+    }
+    DEF Accelerometer Accelerometer {
+      rotation 1.2723699999955203e-14 -2.6535899999906573e-06 0.9999999999964793 3.14159
+      name "Accelerometer"
+    }
+  ]
+  boundingObject Transform {
+    translation 0 -0.065 -0.02
+    children [
+      Box {
+        size 0.2 0.66 0.15
+      }
+    ]
+  }
+  physics Physics {
+  }
+  controller "<extern>"
+  supervisor TRUE
+  linearVelocity 2.977077731631016e-17 4.594746741268058e-16 -2.5490020250557224e-16
+  angularVelocity -8.082718267453448e-16 -1.992848930800428e-18 -7.054100369657456e-17
+}
+DEF Goal2 Solid {
+  translation 0 -4.46605e-06 4.38
+  rotation 1 0 0 -1.5707953071795862
+  children [
+    DEF HORIZONTAL_POST_TRANS Transform {
+      translation 0 0 1.25
+      rotation -0.5773488553723224 -0.5773509760969792 0.5773509760969793 2.094397223120449
+      children [
+        Shape {
+          appearance DEF POST_APP PBRAppearance {
+            roughness 0.2
+            metalness 0
+          }
+          geometry Capsule {
+            height 2.7
+            radius 0.05
+          }
+        }
+      ]
+    }
+    DEF RIGHT_POST_TRANS Transform {
+      translation -1.35 0 0.625
+      rotation 1 0 0 3.6731891284930826e-06
+      children [
+        Shape {
+          appearance USE POST_APP
+          geometry Cylinder {
+            bottom FALSE
+            height 1.25
+            radius 0.05
+            top FALSE
+          }
+        }
+      ]
+    }
+    DEF LEFT_POST_TRANS Transform {
+      translation 1.35 0 0.625
+      rotation 1 0 0 3.6731891284930826e-06
+      children [
+        Shape {
+          appearance USE POST_APP
+          geometry Cylinder {
+            bottom FALSE
+            height 1.25
+            radius 0.05
+            top FALSE
+          }
+        }
+      ]
+    }
+    Shape {
+      appearance DEF NET_APP PBRAppearance {
+        baseColor 0.3 0.3 0.3
+        baseColorMap ImageTexture {
+          url [
+            "textures/net.png"
+          ]
+          filtering 0
+        }
+        roughness 1
+        metalness 0
+      }
+      geometry IndexedFaceSet {
+        coord Coordinate {
+          point [
+            -1.35 -0.6 0
+            1.35 -0.6 0
+            1.35 -0.6 1.25
+            -1.35 -0.6 1.25
+            1.35 -0.05 0
+            -1.35 -0.05 0
+            1.35 -0.05 1.25
+            -1.35 -0.05 1.25
+          ]
+        }
+        texCoord TextureCoordinate {
+          point [
+            0 0
+            28 0
+            28 16
+            0 16
+            7 0
+            7 16
+            0 16
+            28 0
+            28 6
+            0 6
+          ]
+        }
+        coordIndex [
+          0, 1, 2, 3, -1, 3, 2, 1, 0, -1, 1, 4, 6, 2, -1, 2, 6, 4, 1, -1, 0, 5, 7, 3, -1, 3, 7, 5, 0, -1, 2, 3, 7, 6, -1, 6, 7, 3, 2, -1
+        ]
+        texCoordIndex [
+          0, 1, 2, 3, -1, 0, 1, 2, 3, -1, 0, 4, 5, 6, -1, 0, 4, 5, 6, -1, 0, 4, 5, 6, -1, 0, 4, 5, 6, -1, 0, 7, 8, 9, -1, 0, 7, 8, 9, -1
+        ]
+      }
+    }
+    Transform {
+      translation 0 -0.6 1.25
+      rotation -0.5773488553723224 -0.5773509760969792 0.5773509760969793 2.094397223120449
+      children [
+        DEF SMALL_HORIZONTAL_POST_SHAPE Shape {
+          appearance USE POST_APP
+          geometry Capsule {
+            height 2.7
+            radius 0.02
+          }
+        }
+      ]
+    }
+    Transform {
+      translation 0 -0.6 0.01
+      rotation -0.5773488553723224 -0.5773509760969792 0.5773509760969793 2.094397223120449
+      children [
+        USE SMALL_HORIZONTAL_POST_SHAPE
+      ]
+    }
+    Transform {
+      translation 1.35 -0.6 0.625
+      rotation 1 0 0 3.6731891284930826e-06
+      children [
+        DEF SMALL_POST_SHAPE Shape {
+          appearance USE POST_APP
+          geometry Cylinder {
+            bottom FALSE
+            height 1.25
+            radius 0.02
+            top FALSE
+          }
+        }
+      ]
+    }
+    Transform {
+      translation -1.35 -0.6 0.625
+      rotation 1 0 0 3.6731891284930826e-06
+      children [
+        USE SMALL_POST_SHAPE
+      ]
+    }
+    Transform {
+      translation 1.35 -0.3 1.25
+      rotation -1 0 0 1.5707963267948966
+      children [
+        DEF OTHER_SMALL_POST_SHAPE Shape {
+          appearance USE POST_APP
+          geometry Cylinder {
+            bottom FALSE
+            height 0.6
+            radius 0.02
+            top FALSE
+          }
+        }
+      ]
+    }
+    Transform {
+      translation -1.35 -0.3 1.25
+      rotation -1 0 0 1.5707963267948966
+      children [
+        USE OTHER_SMALL_POST_SHAPE
+      ]
+    }
+    Transform {
+      translation 1.35 -0.3 0.01
+      rotation -1 0 0 1.5707963267948966
+      children [
+        USE OTHER_SMALL_POST_SHAPE
+      ]
+    }
+    Transform {
+      translation -1.35 -0.3 0.01
+      rotation -1 0 0 1.5707963267948966
+      children [
+        USE OTHER_SMALL_POST_SHAPE
+      ]
+    }
+  ]
+  name "robotstadium goal"
+  model "robotstadium goal"
+  boundingObject Group {
+    children [
+      USE HORIZONTAL_POST_TRANS
+      USE RIGHT_POST_TRANS
+      USE LEFT_POST_TRANS
+      Transform {
+        translation -1.35 -0.325 0.615
+        children [
+          DEF GOAL_SIDE_BOX Box {
+            size 0.04 0.55 1.23
+          }
+        ]
+      }
+      Transform {
+        translation 1.35 -0.325 0.615
+        children [
+          USE GOAL_SIDE_BOX
+        ]
+      }
+      Transform {
+        translation 0 -0.75 0.635
+        children [
+          Box {
+            size 2.74 0.3 1.27
+          }
+        ]
+      }
+      Transform {
+        translation 0 -0.325 1.25
+        children [
+          Box {
+            size 2.74 0.55 0.04
+          }
+        ]
+      }
+    ]
+  }
+}
+DEF Goal1 Solid {
+  translation -1.07227e-06 4.2413e-06 -4.38
+  rotation -3.3905013482585576e-09 0.7071062811861719 0.7071072811865696 3.14159
+  children [
+    DEF HORIZONTAL_POST_TRANS Transform {
+      translation 0 0 1.25
+      rotation -0.5773488553723224 -0.5773509760969792 0.5773509760969793 2.094397223120449
+      children [
+        Shape {
+          appearance DEF POST_APP PBRAppearance {
+            roughness 0.2
+            metalness 0
+          }
+          geometry Capsule {
+            height 2.7
+            radius 0.05
+          }
+        }
+      ]
+    }
+    DEF RIGHT_POST_TRANS Transform {
+      translation -1.35 0 0.625
+      rotation 1 0 0 3.6731891284930826e-06
+      children [
+        Shape {
+          appearance USE POST_APP
+          geometry Cylinder {
+            bottom FALSE
+            height 1.25
+            radius 0.05
+            top FALSE
+          }
+        }
+      ]
+    }
+    DEF LEFT_POST_TRANS Transform {
+      translation 1.35 0 0.625
+      rotation 1 0 0 3.6731891284930826e-06
+      children [
+        Shape {
+          appearance USE POST_APP
+          geometry Cylinder {
+            bottom FALSE
+            height 1.25
+            radius 0.05
+            top FALSE
+          }
+        }
+      ]
+    }
+    Shape {
+      appearance DEF NET_APP PBRAppearance {
+        baseColor 0.3 0.3 0.3
+        baseColorMap ImageTexture {
+          url [
+            "textures/net.png"
+          ]
+          filtering 0
+        }
+        roughness 1
+        metalness 0
+      }
+      geometry IndexedFaceSet {
+        coord Coordinate {
+          point [
+            -1.35 -0.6 0
+            1.35 -0.6 0
+            1.35 -0.6 1.25
+            -1.35 -0.6 1.25
+            1.35 -0.05 0
+            -1.35 -0.05 0
+            1.35 -0.05 1.25
+            -1.35 -0.05 1.25
+          ]
+        }
+        texCoord TextureCoordinate {
+          point [
+            0 0
+            28 0
+            28 16
+            0 16
+            7 0
+            7 16
+            0 16
+            28 0
+            28 6
+            0 6
+          ]
+        }
+        coordIndex [
+          0, 1, 2, 3, -1, 3, 2, 1, 0, -1, 1, 4, 6, 2, -1, 2, 6, 4, 1, -1, 0, 5, 7, 3, -1, 3, 7, 5, 0, -1, 2, 3, 7, 6, -1, 6, 7, 3, 2, -1
+        ]
+        texCoordIndex [
+          0, 1, 2, 3, -1, 0, 1, 2, 3, -1, 0, 4, 5, 6, -1, 0, 4, 5, 6, -1, 0, 4, 5, 6, -1, 0, 4, 5, 6, -1, 0, 7, 8, 9, -1, 0, 7, 8, 9, -1
+        ]
+      }
+    }
+    Transform {
+      translation 0 -0.6 1.25
+      rotation -0.5773488553723224 -0.5773509760969792 0.5773509760969793 2.094397223120449
+      children [
+        DEF SMALL_HORIZONTAL_POST_SHAPE Shape {
+          appearance USE POST_APP
+          geometry Capsule {
+            height 2.7
+            radius 0.02
+          }
+        }
+      ]
+    }
+    Transform {
+      translation 0 -0.6 0.01
+      rotation -0.5773488553723224 -0.5773509760969792 0.5773509760969793 2.094397223120449
+      children [
+        USE SMALL_HORIZONTAL_POST_SHAPE
+      ]
+    }
+    Transform {
+      translation 1.35 -0.6 0.625
+      rotation 1 0 0 3.6731891284930826e-06
+      children [
+        DEF SMALL_POST_SHAPE Shape {
+          appearance USE POST_APP
+          geometry Cylinder {
+            bottom FALSE
+            height 1.25
+            radius 0.02
+            top FALSE
+          }
+        }
+      ]
+    }
+    Transform {
+      translation -1.35 -0.6 0.625
+      rotation 1 0 0 3.6731891284930826e-06
+      children [
+        USE SMALL_POST_SHAPE
+      ]
+    }
+    Transform {
+      translation 1.35 -0.3 1.25
+      rotation -1 0 0 1.5707963267948966
+      children [
+        DEF OTHER_SMALL_POST_SHAPE Shape {
+          appearance USE POST_APP
+          geometry Cylinder {
+            bottom FALSE
+            height 0.6
+            radius 0.02
+            top FALSE
+          }
+        }
+      ]
+    }
+    Transform {
+      translation -1.35 -0.3 1.25
+      rotation -1 0 0 1.5707963267948966
+      children [
+        USE OTHER_SMALL_POST_SHAPE
+      ]
+    }
+    Transform {
+      translation 1.35 -0.3 0.01
+      rotation -1 0 0 1.5707963267948966
+      children [
+        USE OTHER_SMALL_POST_SHAPE
+      ]
+    }
+    Transform {
+      translation -1.35 -0.3 0.01
+      rotation -1 0 0 1.5707963267948966
+      children [
+        USE OTHER_SMALL_POST_SHAPE
+      ]
+    }
+  ]
+  name "robotstadium goal(1)"
+  model "robotstadium goal"
+  boundingObject Group {
+    children [
+      USE HORIZONTAL_POST_TRANS
+      USE RIGHT_POST_TRANS
+      USE LEFT_POST_TRANS
+      Transform {
+        translation -1.35 -0.325 0.615
+        children [
+          DEF GOAL_SIDE_BOX Box {
+            size 0.04 0.55 1.23
+          }
+        ]
+      }
+      Transform {
+        translation 1.35 -0.325 0.615
+        children [
+          USE GOAL_SIDE_BOX
+        ]
+      }
+      Transform {
+        translation 0 -0.75 0.635
+        children [
+          Box {
+            size 2.74 0.3 1.27
+          }
+        ]
+      }
+      Transform {
+        translation 0 -0.325 1.25
+        children [
+          Box {
+            size 2.74 0.55 0.04
+          }
+        ]
+      }
+    ]
+  }
+}

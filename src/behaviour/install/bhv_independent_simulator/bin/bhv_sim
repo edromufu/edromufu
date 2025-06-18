@@ -1,0 +1,7 @@
+#!/usr/bin/python3
+# EASY-INSTALL-DEV-SCRIPT: 'bhv-independent-simulator==0.0.0','bhv_sim'
+__requires__ = 'bhv-independent-simulator==0.0.0'
+__import__('pkg_resources').require('bhv-independent-simulator==0.0.0')
+__file__ = '/home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/scripts/bhv_sim'
+with open(__file__) as f:
+    exec(compile(f.read(), __file__, 'exec'))

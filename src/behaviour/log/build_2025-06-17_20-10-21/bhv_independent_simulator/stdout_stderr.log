@@ -1,0 +1,28 @@
+running develop
+running egg_info
+creating bhv_independent_simulator.egg-info
+writing bhv_independent_simulator.egg-info/PKG-INFO
+writing dependency_links to bhv_independent_simulator.egg-info/dependency_links.txt
+writing entry points to bhv_independent_simulator.egg-info/entry_points.txt
+writing requirements to bhv_independent_simulator.egg-info/requires.txt
+writing top-level names to bhv_independent_simulator.egg-info/top_level.txt
+writing manifest file 'bhv_independent_simulator.egg-info/SOURCES.txt'
+reading manifest file 'bhv_independent_simulator.egg-info/SOURCES.txt'
+writing manifest file 'bhv_independent_simulator.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv-independent-simulator.egg-link (link to .)
+Installing bhv_sim script to /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/bin
+Installing bhv_sim.py script to /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/bin
+
+Installed /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator
+running symlink_data
+symbolically linking /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/package.xml -> /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator
+creating /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/launch
+symbolically linking /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/launch/behaviour_simulator.launch.py -> /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/launch
+symbolically linking /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/launch/start_sim_world.launch.py -> /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/launch
+symbolically linking /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/launch/simulation_only.launch.py -> /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/launch
+symbolically linking /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/launch/webots.launch.py -> /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/launch
+symbolically linking /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/launch/start_sim_supervisor.launch.py -> /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/launch
+creating /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/worlds
+symbolically linking /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/worlds/bhv_sim_world_backup.wbt -> /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/worlds
+symbolically linking /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/worlds/bhv_sim_world.wbt -> /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/worlds

@@ -1,0 +1,24 @@
+[0.603s] Invoking command in '/home/vtr_caixeta/edromufu/src/behaviour/bhv_independent_simulator': PYTHONPATH=/home/vtr_caixeta/edromufu/build/bhv_independent_simulator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vtr_caixeta/edromufu/install/bhv_independent_simulator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/bhv_independent_simulator build --build-base /home/vtr_caixeta/edromufu/build/bhv_independent_simulator/build install --record /home/vtr_caixeta/edromufu/build/bhv_independent_simulator/install.log --single-version-externally-managed install_data
+[0.821s] running egg_info
+[0.822s] writing ../../../build/bhv_independent_simulator/bhv_independent_simulator.egg-info/PKG-INFO
+[0.823s] writing dependency_links to ../../../build/bhv_independent_simulator/bhv_independent_simulator.egg-info/dependency_links.txt
+[0.823s] writing entry points to ../../../build/bhv_independent_simulator/bhv_independent_simulator.egg-info/entry_points.txt
+[0.823s] writing requirements to ../../../build/bhv_independent_simulator/bhv_independent_simulator.egg-info/requires.txt
+[0.823s] writing top-level names to ../../../build/bhv_independent_simulator/bhv_independent_simulator.egg-info/top_level.txt
+[0.825s] reading manifest file '../../../build/bhv_independent_simulator/bhv_independent_simulator.egg-info/SOURCES.txt'
+[0.826s] writing manifest file '../../../build/bhv_independent_simulator/bhv_independent_simulator.egg-info/SOURCES.txt'
+[0.826s] running build
+[0.826s] running build_py
+[0.828s] running build_scripts
+[0.829s] running install
+[0.829s] running install_lib
+[0.830s] running install_data
+[0.830s] copying launch/behaviour_simulator.launch.py -> /home/vtr_caixeta/edromufu/install/bhv_independent_simulator/share/bhv_independent_simulator/launch
+[0.830s] running install_egg_info
+[0.832s] removing '/home/vtr_caixeta/edromufu/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator-0.0.0-py3.10.egg-info' (and everything under it)
+[0.832s] Copying ../../../build/bhv_independent_simulator/bhv_independent_simulator.egg-info to /home/vtr_caixeta/edromufu/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator-0.0.0-py3.10.egg-info
+[0.833s] running install_scripts
+[0.850s] changing mode of /home/vtr_caixeta/edromufu/install/bhv_independent_simulator/bin/bhv_sim to 775
+[0.851s] Installing bhv_sim script to /home/vtr_caixeta/edromufu/install/bhv_independent_simulator/bin
+[0.852s] writing list of installed files to '/home/vtr_caixeta/edromufu/build/bhv_independent_simulator/install.log'
+[0.876s] Invoked command in '/home/vtr_caixeta/edromufu/src/behaviour/bhv_independent_simulator' returned '0': PYTHONPATH=/home/vtr_caixeta/edromufu/build/bhv_independent_simulator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vtr_caixeta/edromufu/install/bhv_independent_simulator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/bhv_independent_simulator build --build-base /home/vtr_caixeta/edromufu/build/bhv_independent_simulator/build install --record /home/vtr_caixeta/edromufu/build/bhv_independent_simulator/install.log --single-version-externally-managed install_data
