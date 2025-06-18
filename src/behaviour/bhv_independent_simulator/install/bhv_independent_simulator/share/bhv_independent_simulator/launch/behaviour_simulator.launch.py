@@ -7,16 +7,16 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     return LaunchDescription([
-        # Inicia o ambiente de simulação do Webots
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource([
-                PathJoinSubstitution([
-                    FindPackageShare('bhv_independent_simulator'),
-                    'launch/start_sim_world.launch.py'
-                ])
-            ])
+        Node(
+            package='bhv_independent_simulator',
+            executable='bhv_sim',
+            name='bhv_simulator_node',
+            output='screen',
+            parameters=[{
+                'use_sim_time': True
+            }]
         ),
-        
+        '''
         # Inicia o supervisor da robô simulada
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([
@@ -28,10 +28,12 @@ def generate_launch_description():
         ),
         
         # Inicia a interpretação simulada da bola por detecção de cores
+        
         Node(
             package='bhv_independent_simulator',
             executable='color_based_vision_for_sim.py',
             name='vision_sim',
             output='screen'
         )
+        '''
     ])

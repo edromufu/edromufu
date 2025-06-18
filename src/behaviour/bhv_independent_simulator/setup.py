@@ -14,7 +14,7 @@ setup(
         (os.path.join('share', package_name, 'launch'), glob('launch/*.launch.py')),
     ],
     # Estas linhas são críticas para instalação correta no ROS2:
-    scripts=['scripts/bhv_sim'],  # Mova seu script para uma pasta scripts/
+    scripts=['scripts/bhv_sim'], 
     include_package_data=True,
     install_requires=['setuptools'],
     zip_safe=False,

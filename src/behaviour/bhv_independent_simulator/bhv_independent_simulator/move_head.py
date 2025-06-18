@@ -38,19 +38,12 @@ class HeadMover(Node):
         self.general_supervisor = supervisor
 
         # ROS2 Subscriber
-        self.state_subscriber = self.create_subscription(
-            CurrentStateMsg,
-            '/transitions_and_states/state_machine',
-            self.flag_update,
-            10
-        )
+        self.state_subscriber = self.create_subscription(CurrentStateMsg,'/transitions_and_states/state_machine',
+            self.flag_update,10)
 
         # ROS2 Service
-        self.head_service = self.create_service(
-            MoveRequest,
-            '/bhv2mov_communicator/head_requisitions',
-            self.move_sim_head
-        )
+        self.head_service = self.create_service(MoveRequest,'/bhv2mov_communicator/head_requisitions',
+            self.move_sim_head)
 
         self.init_head()
 

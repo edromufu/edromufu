@@ -24,30 +24,29 @@ def generate_launch_description():
         'PYTHONPATH',
         [EnvironmentVariable('PYTHONPATH'), ':', EnvironmentVariable('WEBOTS_HOME'), '/lib/controller/python27'],
         condition=UnlessCondition(
-            PythonExpression(["'", EnvironmentVariable('ROS_DISTRO'), "' == 'noetic'"])  
-        )  
+            PythonExpression(["'", EnvironmentVariable('ROS_DISTRO'), "' == 'noetic'"])
+        )
     )
     
     python_path_py38 = SetEnvironmentVariable(
         'PYTHONPATH',
         [EnvironmentVariable('PYTHONPATH'), ':', EnvironmentVariable('WEBOTS_HOME'), '/lib/controller/python38'],
         condition=IfCondition(
-            PythonExpression(["'", EnvironmentVariable('ROS_DISTRO'), "' == 'noetic'"])  
-        )  
+            PythonExpression(["'", EnvironmentVariable('ROS_DISTRO'), "' == 'noetic'"])
+        )
     )
     
     # Nó do supervisor
     bhv_simulator_node = Node(
         package='bhv_independent_simulator',
-        executable='bhv_sim.py',
+        executable='bhv_sim',
         name='bhv_simulator',
         output='screen',
         on_exit=ExecuteProcess(
             cmd=['ros2', 'launch', 'webots_ros2_core', 'webots_launcher.py'],
             condition=IfCondition(LaunchConfiguration('auto_close'))
-        if LaunchConfiguration('auto_close') == 'true' else None
         )
-    )
+    )   
     
     return LaunchDescription([
         auto_close_arg,
