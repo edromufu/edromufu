@@ -1,0 +1,33 @@
+[0.352s] Invoking command in '/home/vtr_caixeta/edromufu/src/behaviour/build/sensor_observer': /usr/bin/cmake /home/vtr_caixeta/edromufu/src/behaviour/sensor_observer -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/vtr_caixeta/edromufu/src/behaviour/install/sensor_observer
+[0.531s] -- The C compiler identification is GNU 11.4.0
+[0.673s] -- The CXX compiler identification is GNU 11.4.0
+[0.690s] -- Detecting C compiler ABI info
+[0.800s] -- Detecting C compiler ABI info - done
+[0.819s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.820s] -- Detecting C compile features
+[0.822s] -- Detecting C compile features - done
+[0.832s] -- Detecting CXX compiler ABI info
+[0.964s] -- Detecting CXX compiler ABI info - done
+[0.981s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.982s] -- Detecting CXX compile features
+[0.983s] -- Detecting CXX compile features - done
+[1.006s] -- Configuring incomplete, errors occurred!
+[1.006s] See also "/home/vtr_caixeta/edromufu/src/behaviour/build/sensor_observer/CMakeFiles/CMakeOutput.log".
+[1.010s] [31mCMake Error at CMakeLists.txt:10 (find_package):
+[1.010s]   By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has
+[1.010s]   asked CMake to find a package configuration file provided by "catkin", but
+[1.010s]   CMake did not find one.
+[1.010s] 
+[1.011s]   Could not find a package configuration file provided by "catkin" with any
+[1.011s]   of the following names:
+[1.011s] 
+[1.011s]     catkinConfig.cmake
+[1.011s]     catkin-config.cmake
+[1.011s] 
+[1.012s]   Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set
+[1.012s]   "catkin_DIR" to a directory containing one of the above files.  If "catkin"
+[1.012s]   provides a separate development package or SDK, be sure it has been
+[1.012s]   installed.
+[1.012s] 
+[1.012s] [0m
+[1.015s] Invoked command in '/home/vtr_caixeta/edromufu/src/behaviour/build/sensor_observer' returned '1': /usr/bin/cmake /home/vtr_caixeta/edromufu/src/behaviour/sensor_observer -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/vtr_caixeta/edromufu/src/behaviour/install/sensor_observer

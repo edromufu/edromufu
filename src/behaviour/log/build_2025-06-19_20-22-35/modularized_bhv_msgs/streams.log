@@ -1,0 +1,41 @@
+[0.349s] Invoking command in '/home/vtr_caixeta/edromufu/src/behaviour/build/modularized_bhv_msgs': /usr/bin/cmake /home/vtr_caixeta/edromufu/src/behaviour/modularized_bhv_msgs -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs
+[0.377s] [0mCMake Deprecation Warning at CMakeLists.txt:4 (cmake_minimum_required):
+[0.377s]   Compatibility with CMake < 2.8.12 will be removed from a future version of
+[0.377s]   CMake.
+[0.377s] 
+[0.378s]   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[0.378s]   CMake that the project does not need compatibility with older versions.
+[0.378s] 
+[0.378s] [0m
+[0.536s] -- The C compiler identification is GNU 11.4.0
+[0.682s] -- The CXX compiler identification is GNU 11.4.0
+[0.695s] -- Detecting C compiler ABI info
+[0.810s] -- Detecting C compiler ABI info - done
+[0.828s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.829s] -- Detecting C compile features
+[0.830s] -- Detecting C compile features - done
+[0.837s] -- Detecting CXX compiler ABI info
+[0.966s] -- Detecting CXX compiler ABI info - done
+[0.984s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.985s] -- Detecting CXX compile features
+[0.986s] -- Detecting CXX compile features - done
+[1.007s] [31mCMake Error at CMakeLists.txt:10 (find_package):
+[1.007s]   By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has
+[1.007s]   asked CMake to find a package configuration file provided by "catkin", but
+[1.008s]   CMake did not find one.
+[1.008s] 
+[1.008s]   Could not find a package configuration file provided by "catkin" with any
+[1.008s]   of the following names:
+[1.008s] 
+[1.008s]     catkinConfig.cmake
+[1.009s]     catkin-config.cmake
+[1.009s] 
+[1.009s] -- Configuring incomplete, errors occurred!
+[1.009s] See also "/home/vtr_caixeta/edromufu/src/behaviour/build/modularized_bhv_msgs/CMakeFiles/CMakeOutput.log".
+[1.011s]   Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set
+[1.011s]   "catkin_DIR" to a directory containing one of the above files.  If "catkin"
+[1.011s]   provides a separate development package or SDK, be sure it has been
+[1.012s]   installed.
+[1.012s] 
+[1.012s] [0m
+[1.026s] Invoked command in '/home/vtr_caixeta/edromufu/src/behaviour/build/modularized_bhv_msgs' returned '1': /usr/bin/cmake /home/vtr_caixeta/edromufu/src/behaviour/modularized_bhv_msgs -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs

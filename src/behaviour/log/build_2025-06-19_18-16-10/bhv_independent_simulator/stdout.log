@@ -1,0 +1,64 @@
+running develop
+Removing /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv-independent-simulator.egg-link (link to .)
+running egg_info
+writing ../build/bhv_independent_simulator/bhv_independent_simulator.egg-info/PKG-INFO
+writing dependency_links to ../build/bhv_independent_simulator/bhv_independent_simulator.egg-info/dependency_links.txt
+writing entry points to ../build/bhv_independent_simulator/bhv_independent_simulator.egg-info/entry_points.txt
+writing requirements to ../build/bhv_independent_simulator/bhv_independent_simulator.egg-info/requires.txt
+writing top-level names to ../build/bhv_independent_simulator/bhv_independent_simulator.egg-info/top_level.txt
+reading manifest file '../build/bhv_independent_simulator/bhv_independent_simulator.egg-info/SOURCES.txt'
+writing manifest file '../build/bhv_independent_simulator/bhv_independent_simulator.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/build
+creating /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib
+creating /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator
+copying bhv_independent_simulator/__init__.py -> /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator
+copying bhv_independent_simulator/sensors_update.py -> /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator
+copying bhv_independent_simulator/color_based_vision_for_sim.py -> /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator
+copying bhv_independent_simulator/hsv.py -> /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator
+copying bhv_independent_simulator/move_head.py -> /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator
+copying bhv_independent_simulator/robot_3D_moves.py -> /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator
+copying bhv_independent_simulator/setup.py -> /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator
+copying bhv_independent_simulator/sim_page_exec.py -> /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator
+copying bhv_independent_simulator/bhv_sim.py -> /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator
+running build_scripts
+creating /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/build/scripts-3.10
+copying and adjusting scripts/bhv_sim -> /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/build/scripts-3.10
+changing mode of /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/build/scripts-3.10/bhv_sim from 664 to 775
+running install
+running install_lib
+creating /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator
+copying /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator/__init__.py -> /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator
+copying /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator/sensors_update.py -> /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator
+copying /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator/color_based_vision_for_sim.py -> /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator
+copying /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator/hsv.py -> /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator
+copying /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator/move_head.py -> /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator
+copying /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator/robot_3D_moves.py -> /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator
+copying /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator/setup.py -> /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator
+copying /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator/sim_page_exec.py -> /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator
+copying /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/build/lib/bhv_independent_simulator/bhv_sim.py -> /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator
+byte-compiling /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator/sensors_update.py to sensors_update.cpython-310.pyc
+byte-compiling /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator/color_based_vision_for_sim.py to color_based_vision_for_sim.cpython-310.pyc
+byte-compiling /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator/hsv.py to hsv.cpython-310.pyc
+byte-compiling /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator/move_head.py to move_head.cpython-310.pyc
+byte-compiling /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator/robot_3D_moves.py to robot_3D_moves.cpython-310.pyc
+byte-compiling /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator/setup.py to setup.cpython-310.pyc
+byte-compiling /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator/sim_page_exec.py to sim_page_exec.cpython-310.pyc
+byte-compiling /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator/bhv_sim.py to bhv_sim.cpython-310.pyc
+running install_data
+copying resource/bhv_independent_simulator -> /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/ament_index/resource_index/packages
+copying package.xml -> /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator
+copying launch/behaviour_simulator.launch.py -> /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/launch
+copying launch/start_sim_world.launch.py -> /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/launch
+copying launch/test.launch.py -> /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/launch
+copying launch/webots.launch.py -> /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/launch
+copying launch/start_sim_supervisor.launch.py -> /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/launch
+running install_egg_info
+Copying ../build/bhv_independent_simulator/bhv_independent_simulator.egg-info to /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator-0.0.0-py3.10.egg-info
+running install_scripts
+copying /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/build/scripts-3.10/bhv_sim -> /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/bin
+changing mode of /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/bin/bhv_sim to 775
+Installing bhv_sim script to /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/bin
+writing list of installed files to '/home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/install.log'

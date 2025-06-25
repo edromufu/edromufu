@@ -27,12 +27,7 @@ def generate_launch_description():
             ])
         ),
         
-        # Inicia a interpretação simulada da bola por detecção de cores
-        '''
-        Node(
-            package='bhv_independent_simulator',
-            executable='color_based_vision_for_sim.py',
-            name='vision_sim',
-            output='screen'
-        )'''
+       
+    
     ])
+       

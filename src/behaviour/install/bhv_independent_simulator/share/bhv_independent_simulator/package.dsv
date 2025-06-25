@@ -10,6 +10,3 @@ source;share/bhv_independent_simulator/hook/pythonscriptspath.sh
 source;share/bhv_independent_simulator/hook/ament_prefix_path.ps1
 source;share/bhv_independent_simulator/hook/ament_prefix_path.dsv
 source;share/bhv_independent_simulator/hook/ament_prefix_path.sh
-source;../../build/bhv_independent_simulator/share/bhv_independent_simulator/hook/pythonpath_develop.ps1
-source;../../build/bhv_independent_simulator/share/bhv_independent_simulator/hook/pythonpath_develop.dsv
-source;../../build/bhv_independent_simulator/share/bhv_independent_simulator/hook/pythonpath_develop.sh

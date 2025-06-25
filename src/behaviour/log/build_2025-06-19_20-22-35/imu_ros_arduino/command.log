@@ -1,0 +1,2 @@
+Invoking command in '/home/vtr_caixeta/edromufu/src/behaviour/build/imu_ros_arduino': /usr/bin/cmake /home/vtr_caixeta/edromufu/src/behaviour/imu_ros_arduino -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/vtr_caixeta/edromufu/src/behaviour/install/imu_ros_arduino
+Invoked command in '/home/vtr_caixeta/edromufu/src/behaviour/build/imu_ros_arduino' returned '1': /usr/bin/cmake /home/vtr_caixeta/edromufu/src/behaviour/imu_ros_arduino -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/vtr_caixeta/edromufu/src/behaviour/install/imu_ros_arduino

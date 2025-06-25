@@ -1,0 +1,33 @@
+[0.349s] Invoking command in '/home/vtr_caixeta/edromufu/src/behaviour/build/imu_ros_arduino': /usr/bin/cmake /home/vtr_caixeta/edromufu/src/behaviour/imu_ros_arduino -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/vtr_caixeta/edromufu/src/behaviour/install/imu_ros_arduino
+[0.542s] -- The C compiler identification is GNU 11.4.0
+[0.680s] -- The CXX compiler identification is GNU 11.4.0
+[0.700s] -- Detecting C compiler ABI info
+[0.809s] -- Detecting C compiler ABI info - done
+[0.826s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.826s] -- Detecting C compile features
+[0.829s] -- Detecting C compile features - done
+[0.841s] -- Detecting CXX compiler ABI info
+[0.973s] -- Detecting CXX compiler ABI info - done
+[0.992s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.993s] -- Detecting CXX compile features
+[0.996s] -- Detecting CXX compile features - done
+[1.017s] -- Configuring incomplete, errors occurred!
+[1.017s] See also "/home/vtr_caixeta/edromufu/src/behaviour/build/imu_ros_arduino/CMakeFiles/CMakeOutput.log".
+[1.017s] [31mCMake Error at CMakeLists.txt:10 (find_package):
+[1.017s]   By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has
+[1.017s]   asked CMake to find a package configuration file provided by "catkin", but
+[1.017s]   CMake did not find one.
+[1.018s] 
+[1.018s]   Could not find a package configuration file provided by "catkin" with any
+[1.018s]   of the following names:
+[1.018s] 
+[1.018s]     catkinConfig.cmake
+[1.018s]     catkin-config.cmake
+[1.018s] 
+[1.018s]   Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set
+[1.019s]   "catkin_DIR" to a directory containing one of the above files.  If "catkin"
+[1.019s]   provides a separate development package or SDK, be sure it has been
+[1.019s]   installed.
+[1.019s] 
+[1.019s] [0m
+[1.022s] Invoked command in '/home/vtr_caixeta/edromufu/src/behaviour/build/imu_ros_arduino' returned '1': /usr/bin/cmake /home/vtr_caixeta/edromufu/src/behaviour/imu_ros_arduino -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/vtr_caixeta/edromufu/src/behaviour/install/imu_ros_arduino

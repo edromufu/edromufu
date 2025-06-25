@@ -1,0 +1,21 @@
+running egg_info
+writing ../build/bhv_independent_simulator/bhv_independent_simulator.egg-info/PKG-INFO
+writing dependency_links to ../build/bhv_independent_simulator/bhv_independent_simulator.egg-info/dependency_links.txt
+writing entry points to ../build/bhv_independent_simulator/bhv_independent_simulator.egg-info/entry_points.txt
+writing requirements to ../build/bhv_independent_simulator/bhv_independent_simulator.egg-info/requires.txt
+writing top-level names to ../build/bhv_independent_simulator/bhv_independent_simulator.egg-info/top_level.txt
+reading manifest file '../build/bhv_independent_simulator/bhv_independent_simulator.egg-info/SOURCES.txt'
+writing manifest file '../build/bhv_independent_simulator/bhv_independent_simulator.egg-info/SOURCES.txt'
+running build
+running build_py
+running build_scripts
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../build/bhv_independent_simulator/bhv_independent_simulator.egg-info to /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages/bhv_independent_simulator-0.0.0-py3.10.egg-info
+running install_scripts
+changing mode of /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/bin/bhv_sim to 775
+Installing bhv_sim script to /home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/bin
+writing list of installed files to '/home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/install.log'
