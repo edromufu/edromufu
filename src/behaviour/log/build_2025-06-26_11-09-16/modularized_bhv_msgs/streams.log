@@ -1,0 +1,52 @@
+[0.305s] Invoking command in '/home/vtr_caixeta/edromufu/src/behaviour/build/modularized_bhv_msgs': CMAKE_PREFIX_PATH=/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator:/opt/ros/iron /usr/bin/cmake /home/vtr_caixeta/edromufu/src/behaviour/modularized_bhv_msgs -DCMAKE_INSTALL_PREFIX=/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs
+[0.356s] -- Found ament_cmake: 2.0.7 (/opt/ros/iron/share/ament_cmake/cmake)
+[0.575s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.710s] -- Found rosidl_default_generators: 1.5.0 (/opt/ros/iron/share/rosidl_default_generators/cmake)
+[0.721s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.815s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.867s] -- Found rosidl_adapter: 4.0.1 (/opt/ros/iron/share/rosidl_adapter/cmake)
+[0.874s] -- Found std_msgs: 5.0.1 (/opt/ros/iron/share/std_msgs/cmake)
+[0.954s] -- Found geometry_msgs: 5.0.1 (/opt/ros/iron/share/geometry_msgs/cmake)
+[1.169s] [31mCMake Error at /opt/ros/iron/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:57 (message):
+[1.169s]   execute_process(/usr/bin/python3.10 -m rosidl_adapter --package-name
+[1.169s]   modularized_bhv_msgs --arguments-file
+[1.169s]   /home/vtr_caixeta/edromufu/src/behaviour/build/modularized_bhv_msgs/rosidl_adapter__arguments__modularized_bhv_msgs.json
+[1.169s]   --output-dir
+[1.169s]   /home/vtr_caixeta/edromufu/src/behaviour/build/modularized_bhv_msgs/rosidl_adapter/modularized_bhv_msgs
+[1.169s]   --output-file
+[1.169s]   /home/vtr_caixeta/edromufu/src/behaviour/build/modularized_bhv_msgs/rosidl_adapter/modularized_bhv_msgs.idls)
+[1.170s]   returned error code 1:
+[1.170s] 
+[1.170s]   Error processing 'string ballPosition' of
+[1.170s]   'modularized_bhv_msgs/stateMachineMsg': ''ballPosition' is an invalid field
+[1.170s]   name.  It should have the pattern '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$''
+[1.170s] 
+[1.170s]   Traceback (most recent call last):
+[1.170s] 
+[1.170s]     File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[1.170s]       return _run_code(code, main_globals, None,
+[1.170s]     File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+[1.170s]       exec(code, run_globals)
+[1.171s]     File "/opt/ros/iron/lib/python3.10/site-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[1.171s]       sys.exit(main())
+[1.171s]     File "/opt/ros/iron/lib/python3.10/site-packages/rosidl_adapter/main.py", line 53, in main
+[1.171s]       abs_idl_file = convert_to_idl(
+[1.171s]     File "/opt/ros/iron/lib/python3.10/site-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl
+[1.171s]       return convert_msg_to_idl(
+[1.171s]     File "/opt/ros/iron/lib/python3.10/site-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl
+[1.171s]       msg = parse_message_string(package_name, input_file.stem, content)
+[1.171s]     File "/opt/ros/iron/lib/python3.10/site-packages/rosidl_adapter/parser.py", line 520, in parse_message_string
+[1.171s]       fields.append(Field(
+[1.171s]     File "/opt/ros/iron/lib/python3.10/site-packages/rosidl_adapter/parser.py", line 355, in __init__
+[1.172s]       raise NameError(
+[1.172s] 
+[1.172s]   NameError: 'ballPosition' is an invalid field name.  It should have the
+[1.172s]   pattern '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$'
+[1.172s] 
+[1.172s] Call Stack (most recent call first):
+[1.172s]   /opt/ros/iron/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:132 (rosidl_adapt_interfaces)
+[1.172s]   CMakeLists.txt:20 (rosidl_generate_interfaces)
+[1.172s] 
+[1.172s] [0m
+[1.172s] -- Configuring incomplete, errors occurred!
+[1.172s] See also "/home/vtr_caixeta/edromufu/src/behaviour/build/modularized_bhv_msgs/CMakeFiles/CMakeOutput.log".

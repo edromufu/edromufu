@@ -1,0 +1,52 @@
+[0.295s] Invoking command in '/home/vtr_caixeta/edromufu/src/behaviour/build/modularized_bhv_msgs': CMAKE_PREFIX_PATH=/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator:/opt/ros/iron /usr/bin/cmake /home/vtr_caixeta/edromufu/src/behaviour/modularized_bhv_msgs -DCMAKE_INSTALL_PREFIX=/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs
+[0.315s] -- Found ament_cmake: 2.0.7 (/opt/ros/iron/share/ament_cmake/cmake)
+[0.506s] -- Found rosidl_default_generators: 1.5.0 (/opt/ros/iron/share/rosidl_default_generators/cmake)
+[0.510s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.559s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.589s] -- Found rosidl_adapter: 4.0.1 (/opt/ros/iron/share/rosidl_adapter/cmake)
+[0.594s] -- Found std_msgs: 5.0.1 (/opt/ros/iron/share/std_msgs/cmake)
+[0.662s] -- Found geometry_msgs: 5.0.1 (/opt/ros/iron/share/geometry_msgs/cmake)
+[0.906s] [31mCMake Error at /opt/ros/iron/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:57 (message):
+[0.907s]   execute_process(/usr/bin/python3.10 -m rosidl_adapter --package-name
+[0.907s]   modularized_bhv_msgs --arguments-file
+[0.907s]   /home/vtr_caixeta/edromufu/src/behaviour/build/modularized_bhv_msgs/rosidl_adapter__arguments__modularized_bhv_msgs.json
+[0.907s]   --output-dir
+[0.907s]   /home/vtr_caixeta/edromufu/src/behaviour/build/modularized_bhv_msgs/rosidl_adapter/modularized_bhv_msgs
+[0.907s]   --output-file
+[0.907s]   /home/vtr_caixeta/edromufu/src/behaviour/build/modularized_bhv_msgs/rosidl_adapter/modularized_bhv_msgs.idls)
+[0.907s]   returned error code 1:
+[0.907s] 
+[0.907s]   Error processing 'string ballPosition' of
+[0.908s]   'modularized_bhv_msgs/stateMachineMsg': ''ballPosition' is an invalid field
+[0.908s]   name.  It should have the pattern '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$''
+[0.908s] 
+[0.908s]   Traceback (most recent call last):
+[0.908s] 
+[0.908s]     File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[0.908s]       return _run_code(code, main_globals, None,
+[0.908s]     File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+[0.908s]       exec(code, run_globals)
+[0.908s]     File "/opt/ros/iron/lib/python3.10/site-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[0.908s]       sys.exit(main())
+[0.908s]     File "/opt/ros/iron/lib/python3.10/site-packages/rosidl_adapter/main.py", line 53, in main
+[0.909s]       abs_idl_file = convert_to_idl(
+[0.909s]     File "/opt/ros/iron/lib/python3.10/site-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl
+[0.909s]       return convert_msg_to_idl(
+[0.909s]     File "/opt/ros/iron/lib/python3.10/site-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl
+[0.909s]       msg = parse_message_string(package_name, input_file.stem, content)
+[0.909s]     File "/opt/ros/iron/lib/python3.10/site-packages/rosidl_adapter/parser.py", line 520, in parse_message_string
+[0.909s]       fields.append(Field(
+[0.909s]     File "/opt/ros/iron/lib/python3.10/site-packages/rosidl_adapter/parser.py", line 355, in __init__
+[0.910s]       raise NameError(
+[0.910s] 
+[0.910s]   NameError: 'ballPosition' is an invalid field name.  It should have the
+[0.911s]   pattern '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$'
+[0.911s] 
+[0.911s] Call Stack (most recent call first):
+[0.911s]   /opt/ros/iron/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:132 (rosidl_adapt_interfaces)
+[0.911s]   CMakeLists.txt:20 (rosidl_generate_interfaces)
+[0.911s] 
+[0.911s] [0m
+[0.911s] -- Configuring incomplete, errors occurred!
+[0.911s] See also "/home/vtr_caixeta/edromufu/src/behaviour/build/modularized_bhv_msgs/CMakeFiles/CMakeOutput.log".
+[0.914s] Invoked command in '/home/vtr_caixeta/edromufu/src/behaviour/build/modularized_bhv_msgs' returned '1': CMAKE_PREFIX_PATH=/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator:/opt/ros/iron /usr/bin/cmake /home/vtr_caixeta/edromufu/src/behaviour/modularized_bhv_msgs -DCMAKE_INSTALL_PREFIX=/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs

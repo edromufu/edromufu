@@ -1,0 +1,2 @@
+Invoking command in '/home/vtr_caixeta/edromufu/src/behaviour/build/sensor_observer': /usr/bin/cmake /home/vtr_caixeta/edromufu/src/behaviour/sensor_observer -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/vtr_caixeta/edromufu/src/behaviour/install/sensor_observer
+Invoked command in '/home/vtr_caixeta/edromufu/src/behaviour/build/sensor_observer' returned '1': /usr/bin/cmake /home/vtr_caixeta/edromufu/src/behaviour/sensor_observer -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/vtr_caixeta/edromufu/src/behaviour/install/sensor_observer

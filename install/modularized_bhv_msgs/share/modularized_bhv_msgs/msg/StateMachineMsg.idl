@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from modularized_bhv_msgs/msg/StateMachineMsg.msg
+// generated code does not contain a copyright notice
+
+
+module modularized_bhv_msgs {
+  module msg {
+    struct StateMachineMsg {
+      string ball_position;
+
+      boolean ball_close;
+
+      boolean ball_found;
+
+      string fall_state;
+
+      string hor_motor_out_of_center;
+
+      boolean head_kick_check;
+    };
+  };
+};

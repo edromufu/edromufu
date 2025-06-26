@@ -1,0 +1,12 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from modularized_bhv_msgs/msg/CurrentStateMsg.msg
+// generated code does not contain a copyright notice
+
+
+module modularized_bhv_msgs {
+  module msg {
+    struct CurrentStateMsg {
+      string current_state;
+    };
+  };
+};

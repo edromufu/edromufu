@@ -1,0 +1,50 @@
+[0.291s] Invoking command in '/home/vtr_caixeta/edromufu/src/behaviour/build/modularized_bhv_msgs': CMAKE_PREFIX_PATH=/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator:/opt/ros/iron /usr/bin/cmake /home/vtr_caixeta/edromufu/src/behaviour/modularized_bhv_msgs -DCMAKE_INSTALL_PREFIX=/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs
+[0.310s] -- Found ament_cmake: 2.0.7 (/opt/ros/iron/share/ament_cmake/cmake)
+[0.492s] -- Found rosidl_default_generators: 1.5.0 (/opt/ros/iron/share/rosidl_default_generators/cmake)
+[0.495s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.531s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.562s] -- Found rosidl_adapter: 4.0.1 (/opt/ros/iron/share/rosidl_adapter/cmake)
+[0.567s] -- Found std_msgs: 5.0.1 (/opt/ros/iron/share/std_msgs/cmake)
+[0.634s] -- Found geometry_msgs: 5.0.1 (/opt/ros/iron/share/geometry_msgs/cmake)
+[0.877s] [31mCMake Error at /opt/ros/iron/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:57 (message):
+[0.877s]   execute_process(/usr/bin/python3.10 -m rosidl_adapter --package-name
+[0.877s]   modularized_bhv_msgs --arguments-file
+[0.878s]   /home/vtr_caixeta/edromufu/src/behaviour/build/modularized_bhv_msgs/rosidl_adapter__arguments__modularized_bhv_msgs.json
+[0.878s]   --output-dir
+[0.878s]   /home/vtr_caixeta/edromufu/src/behaviour/build/modularized_bhv_msgs/rosidl_adapter/modularized_bhv_msgs
+[0.878s]   --output-file
+[0.878s]   /home/vtr_caixeta/edromufu/src/behaviour/build/modularized_bhv_msgs/rosidl_adapter/modularized_bhv_msgs.idls)
+[0.878s]   returned error code 1:
+[0.878s] 
+[0.878s]   Traceback (most recent call last):
+[0.878s] 
+[0.878s]     File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[0.878s]       return _run_code(code, main_globals, None,
+[0.878s]     File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+[0.879s]       exec(code, run_globals)
+[0.879s]     File "/opt/ros/iron/lib/python3.10/site-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[0.879s]       sys.exit(main())
+[0.879s]     File "/opt/ros/iron/lib/python3.10/site-packages/rosidl_adapter/main.py", line 53, in main
+[0.879s]       abs_idl_file = convert_to_idl(
+[0.879s]     File "/opt/ros/iron/lib/python3.10/site-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl
+[0.879s]       return convert_msg_to_idl(
+[0.879s]     File "/opt/ros/iron/lib/python3.10/site-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl
+[0.879s]       msg = parse_message_string(package_name, input_file.stem, content)
+[0.879s]     File "/opt/ros/iron/lib/python3.10/site-packages/rosidl_adapter/parser.py", line 545, in parse_message_string
+[0.879s]       msg = MessageSpecification(pkg_name, msg_name, fields, constants)
+[0.879s]     File "/opt/ros/iron/lib/python3.10/site-packages/rosidl_adapter/parser.py", line 389, in __init__
+[0.880s]       self.base_type = BaseType(
+[0.880s]     File "/opt/ros/iron/lib/python3.10/site-packages/rosidl_adapter/parser.py", line 206, in __init__
+[0.880s]       raise InvalidResourceName(
+[0.880s] 
+[0.880s]   rosidl_adapter.parser.InvalidResourceName: 'stateMachineMsg' is an invalid
+[0.880s]   message name.  It should have the pattern '^[A-Z][A-Za-z0-9]*$'
+[0.880s] 
+[0.880s] Call Stack (most recent call first):
+[0.880s]   /opt/ros/iron/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:132 (rosidl_adapt_interfaces)
+[0.880s]   CMakeLists.txt:20 (rosidl_generate_interfaces)
+[0.880s] 
+[0.881s] [0m
+[0.881s] -- Configuring incomplete, errors occurred!
+[0.881s] See also "/home/vtr_caixeta/edromufu/src/behaviour/build/modularized_bhv_msgs/CMakeFiles/CMakeOutput.log".
+[0.885s] Invoked command in '/home/vtr_caixeta/edromufu/src/behaviour/build/modularized_bhv_msgs' returned '1': CMAKE_PREFIX_PATH=/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator:/opt/ros/iron /usr/bin/cmake /home/vtr_caixeta/edromufu/src/behaviour/modularized_bhv_msgs -DCMAKE_INSTALL_PREFIX=/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs

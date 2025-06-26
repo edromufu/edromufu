@@ -1,68 +1,31 @@
 ################################################################################
 # CMake
 ################################################################################
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.8)
 project(modularized_bhv_msgs)
 
 ################################################################################
 # Packages
 ################################################################################
-find_package(catkin REQUIRED COMPONENTS
-  message_generation
-  std_msgs 
-  geometry_msgs
-  dynamic_reconfigure
-)  
+# Encontra o Ament (sistema de build do ROS2) e os pacotes necessários.
+find_package(ament_cmake REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
 
 ################################################################################
 # Declare ROS messages, services and actions
 ################################################################################
-# Generate dynamic parameters
-generate_dynamic_reconfigure_options()
-
-
-add_message_files(
-  FILES
-  stateMachineMsg.msg
-  currentStateMsg.msg
+# Macro unificada do ROS2 para gerar mensagens e serviços
+rosidl_generate_interfaces(${PROJECT_NAME}
+  "msg/StateMachineMsg.msg"
+  "msg/CurrentStateMsg.msg"
+  "srv/MoveRequest.srv"
+  DEPENDENCIES std_msgs geometry_msgs
 )
-
-add_service_files(
-  FILES
-  moveRequest.srv
-)
-
-generate_messages(
-  DEPENDENCIES
-  std_msgs
-  geometry_msgs
-)
-
-################################################################################
-# Declare ROS dynamic reconfigure parameters
-################################################################################
 
 ################################################################################
 # Catkin specific configuration
 ################################################################################
-catkin_package(
-  #INCLUDE_DIRS include
-  CATKIN_DEPENDS message_generation std_msgs geometry_msgs dynamic_reconfigure
-)
-
-################################################################################
-# Build
-################################################################################
-include_directories(
-  include
-  ${catkin_INCLUDE_DIRS}
-)
-
-################################################################################
-# Install
-################################################################################
-
-
-################################################################################
-# Test
-################################################################################
+# Macro que finaliza o empacotamento no Ament
+ament_package()

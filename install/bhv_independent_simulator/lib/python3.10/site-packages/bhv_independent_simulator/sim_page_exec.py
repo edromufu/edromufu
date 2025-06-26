@@ -7,9 +7,7 @@ import math as m
 import numpy as np
 from controller import Supervisor
 
-# Assumindo que modularized_bhv_msgs foi migrado para ROS2
-# e que os tipos de serviço estão disponíveis via 'modularized_bhv_msgs.srv'
-from modularized_bhv_msgs.srv import MoveRequest, MoveRequestResponse # Use o nome correto MoveRequest/Response como nos outros arquivos
+from modularized_bhv_msgs.srv import MoveRequest # Use o nome correto MoveRequest/Response como nos outros arquivos
 # Nota: O nome original era 'moveRequest', mas em ROS2 e Python, nomes de classes são CamelCase.
 # Verifique o nome real gerado para o serviço. Usarei MoveRequest/Response por consistência.
 

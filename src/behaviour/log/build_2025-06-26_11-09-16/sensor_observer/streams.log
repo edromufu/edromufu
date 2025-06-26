@@ -1,0 +1,21 @@
+[0.308s] Invoking command in '/home/vtr_caixeta/edromufu/src/behaviour/build/sensor_observer': /usr/bin/cmake /home/vtr_caixeta/edromufu/src/behaviour/sensor_observer -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/vtr_caixeta/edromufu/src/behaviour/install/sensor_observer
+[0.360s] [31mCMake Error at CMakeLists.txt:10 (find_package):
+[0.360s]   By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has
+[0.360s]   asked CMake to find a package configuration file provided by "catkin", but
+[0.361s]   CMake did not find one.
+[0.361s] 
+[0.361s]   Could not find a package configuration file provided by "catkin" with any
+[0.361s]   of the following names:
+[0.361s] 
+[0.361s]     catkinConfig.cmake
+[0.362s]     catkin-config.cmake
+[0.362s] 
+[0.362s]   Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set
+[0.363s]   "catkin_DIR" to a directory containing one of the above files.  If "catkin"
+[0.363s]   provides a separate development package or SDK, be sure it has been
+[0.363s]   installed.
+[0.363s] 
+[0.365s] -- Configuring incomplete, errors occurred!
+[0.365s] See also "/home/vtr_caixeta/edromufu/src/behaviour/build/sensor_observer/CMakeFiles/CMakeOutput.log".
+[0.365s] [0m
+[0.373s] Invoked command in '/home/vtr_caixeta/edromufu/src/behaviour/build/sensor_observer' returned '1': /usr/bin/cmake /home/vtr_caixeta/edromufu/src/behaviour/sensor_observer -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/vtr_caixeta/edromufu/src/behaviour/install/sensor_observer

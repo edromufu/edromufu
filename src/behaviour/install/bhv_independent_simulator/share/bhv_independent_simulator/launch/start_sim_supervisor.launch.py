@@ -24,7 +24,7 @@ def generate_launch_description():
         'PYTHONPATH',
         [EnvironmentVariable('PYTHONPATH'), ':', EnvironmentVariable('WEBOTS_HOME'), '/lib/controller/python27'],
         condition=UnlessCondition(
-            PythonExpression(["'", EnvironmentVariable('ROS_DISTRO'), "' == 'noetic'"])
+            PythonExpression(["'", EnvironmentVariable('ROS_DISTRO'), "' == 'iron'"])
         )
     )
     
@@ -32,7 +32,7 @@ def generate_launch_description():
         'PYTHONPATH',
         [EnvironmentVariable('PYTHONPATH'), ':', EnvironmentVariable('WEBOTS_HOME'), '/lib/controller/python38'],
         condition=IfCondition(
-            PythonExpression(["'", EnvironmentVariable('ROS_DISTRO'), "' == 'noetic'"])
+            PythonExpression(["'", EnvironmentVariable('ROS_DISTRO'), "' == 'iron'"])
         )
     )
     

@@ -1,0 +1,8 @@
+[31mCMake Error at /opt/ros/iron/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:95 (message):
+  rosidl_generate_interfaces() the passed file 'msg/stateMachineMsg.msg'
+  doesn't exist relative to the CMAKE_CURRENT_SOURCE_DIR
+  '/home/vtr_caixeta/edromufu/src/behaviour/modularized_bhv_msgs'
+Call Stack (most recent call first):
+  CMakeLists.txt:20 (rosidl_generate_interfaces)
+
+[0m

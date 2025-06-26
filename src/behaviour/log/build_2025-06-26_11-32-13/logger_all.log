@@ -1,0 +1,247 @@
+[0.170s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'bhv_independent_simulator', 'modularized_bhv_msgs']
+[0.170s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['bhv_independent_simulator', 'modularized_bhv_msgs'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x77ad13c6d900>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x77ad13c6d3f0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x77ad13c6d3f0>>)
+[0.413s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.414s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.414s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.414s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.414s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.414s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.414s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/vtr_caixeta/edromufu/src/behaviour'
+[0.414s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.414s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.414s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.414s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.414s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(bhv_independent_simulator) by extensions ['ignore', 'ignore_ament_install']
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(bhv_independent_simulator) by extension 'ignore'
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(bhv_independent_simulator) by extension 'ignore_ament_install'
+[0.430s] Level 1:colcon.colcon_core.package_identification:_identify(bhv_independent_simulator) by extensions ['colcon_pkg']
+[0.430s] Level 1:colcon.colcon_core.package_identification:_identify(bhv_independent_simulator) by extension 'colcon_pkg'
+[0.430s] Level 1:colcon.colcon_core.package_identification:_identify(bhv_independent_simulator) by extensions ['colcon_meta']
+[0.430s] Level 1:colcon.colcon_core.package_identification:_identify(bhv_independent_simulator) by extension 'colcon_meta'
+[0.430s] Level 1:colcon.colcon_core.package_identification:_identify(bhv_independent_simulator) by extensions ['ros']
+[0.430s] Level 1:colcon.colcon_core.package_identification:_identify(bhv_independent_simulator) by extension 'ros'
+[0.434s] DEBUG:colcon.colcon_core.package_identification:Package 'bhv_independent_simulator' with type 'ros.ament_python' and name 'bhv_independent_simulator'
+[0.434s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.434s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.434s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(imu_ros_arduino) by extensions ['ignore', 'ignore_ament_install']
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(imu_ros_arduino) by extension 'ignore'
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(imu_ros_arduino) by extension 'ignore_ament_install'
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(imu_ros_arduino) by extensions ['colcon_pkg']
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(imu_ros_arduino) by extension 'colcon_pkg'
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(imu_ros_arduino) by extensions ['colcon_meta']
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(imu_ros_arduino) by extension 'colcon_meta'
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(imu_ros_arduino) by extensions ['ros']
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(imu_ros_arduino) by extension 'ros'
+[0.437s] DEBUG:colcon.colcon_core.package_identification:Package 'imu_ros_arduino' with type 'ros.catkin' and name 'imu_ros_arduino'
+[0.437s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.437s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.437s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.438s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.438s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.438s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.438s] Level 1:colcon.colcon_core.package_identification:_identify(modularized_bhv_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.438s] Level 1:colcon.colcon_core.package_identification:_identify(modularized_bhv_msgs) by extension 'ignore'
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(modularized_bhv_msgs) by extension 'ignore_ament_install'
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(modularized_bhv_msgs) by extensions ['colcon_pkg']
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(modularized_bhv_msgs) by extension 'colcon_pkg'
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(modularized_bhv_msgs) by extensions ['colcon_meta']
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(modularized_bhv_msgs) by extension 'colcon_meta'
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(modularized_bhv_msgs) by extensions ['ros']
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(modularized_bhv_msgs) by extension 'ros'
+[0.441s] DEBUG:colcon.colcon_core.package_identification:Package 'modularized_bhv_msgs' with type 'ros.ament_cmake' and name 'modularized_bhv_msgs'
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(sensor_observer) by extensions ['ignore', 'ignore_ament_install']
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(sensor_observer) by extension 'ignore'
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(sensor_observer) by extension 'ignore_ament_install'
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(sensor_observer) by extensions ['colcon_pkg']
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(sensor_observer) by extension 'colcon_pkg'
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(sensor_observer) by extensions ['colcon_meta']
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(sensor_observer) by extension 'colcon_meta'
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(sensor_observer) by extensions ['ros']
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(sensor_observer) by extension 'ros'
+[0.443s] DEBUG:colcon.colcon_core.package_identification:Package 'sensor_observer' with type 'ros.catkin' and name 'sensor_observer'
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(states_routine) by extensions ['ignore', 'ignore_ament_install']
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(states_routine) by extension 'ignore'
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(states_routine) by extension 'ignore_ament_install'
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(states_routine) by extensions ['colcon_pkg']
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(states_routine) by extension 'colcon_pkg'
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(states_routine) by extensions ['colcon_meta']
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(states_routine) by extension 'colcon_meta'
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(states_routine) by extensions ['ros']
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(states_routine) by extension 'ros'
+[0.444s] DEBUG:colcon.colcon_core.package_identification:Package 'states_routine' with type 'ros.catkin' and name 'states_routine'
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(transitions_and_states) by extensions ['ignore', 'ignore_ament_install']
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(transitions_and_states) by extension 'ignore'
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(transitions_and_states) by extension 'ignore_ament_install'
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(transitions_and_states) by extensions ['colcon_pkg']
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(transitions_and_states) by extension 'colcon_pkg'
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(transitions_and_states) by extensions ['colcon_meta']
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(transitions_and_states) by extension 'colcon_meta'
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(transitions_and_states) by extensions ['ros']
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(transitions_and_states) by extension 'ros'
+[0.446s] DEBUG:colcon.colcon_core.package_identification:Package 'transitions_and_states' with type 'ros.catkin' and name 'transitions_and_states'
+[0.446s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.446s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.446s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.446s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.446s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.474s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'imu_ros_arduino' in 'imu_ros_arduino'
+[0.474s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'sensor_observer' in 'sensor_observer'
+[0.475s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'states_routine' in 'states_routine'
+[0.475s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'transitions_and_states' in 'transitions_and_states'
+[0.475s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.475s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.478s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/vtr_caixeta/edromufu/src/behaviour/install
+[0.479s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 369 installed packages in /opt/ros/iron
+[0.481s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.552s] Level 5:colcon.colcon_core.verb:set package 'bhv_independent_simulator' build argument 'cmake_args' from command line to 'None'
+[0.552s] Level 5:colcon.colcon_core.verb:set package 'bhv_independent_simulator' build argument 'cmake_target' from command line to 'None'
+[0.552s] Level 5:colcon.colcon_core.verb:set package 'bhv_independent_simulator' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.552s] Level 5:colcon.colcon_core.verb:set package 'bhv_independent_simulator' build argument 'cmake_clean_cache' from command line to 'False'
+[0.552s] Level 5:colcon.colcon_core.verb:set package 'bhv_independent_simulator' build argument 'cmake_clean_first' from command line to 'False'
+[0.552s] Level 5:colcon.colcon_core.verb:set package 'bhv_independent_simulator' build argument 'cmake_force_configure' from command line to 'False'
+[0.552s] Level 5:colcon.colcon_core.verb:set package 'bhv_independent_simulator' build argument 'ament_cmake_args' from command line to 'None'
+[0.552s] Level 5:colcon.colcon_core.verb:set package 'bhv_independent_simulator' build argument 'catkin_cmake_args' from command line to 'None'
+[0.552s] Level 5:colcon.colcon_core.verb:set package 'bhv_independent_simulator' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.552s] DEBUG:colcon.colcon_core.verb:Building package 'bhv_independent_simulator' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator', 'merge_install': False, 'path': '/home/vtr_caixeta/edromufu/src/behaviour/bhv_independent_simulator', 'symlink_install': False, 'test_result_base': None}
+[0.553s] Level 5:colcon.colcon_core.verb:set package 'modularized_bhv_msgs' build argument 'cmake_args' from command line to 'None'
+[0.553s] Level 5:colcon.colcon_core.verb:set package 'modularized_bhv_msgs' build argument 'cmake_target' from command line to 'None'
+[0.553s] Level 5:colcon.colcon_core.verb:set package 'modularized_bhv_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.553s] Level 5:colcon.colcon_core.verb:set package 'modularized_bhv_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.553s] Level 5:colcon.colcon_core.verb:set package 'modularized_bhv_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.553s] Level 5:colcon.colcon_core.verb:set package 'modularized_bhv_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.553s] Level 5:colcon.colcon_core.verb:set package 'modularized_bhv_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.553s] Level 5:colcon.colcon_core.verb:set package 'modularized_bhv_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.553s] Level 5:colcon.colcon_core.verb:set package 'modularized_bhv_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.553s] DEBUG:colcon.colcon_core.verb:Building package 'modularized_bhv_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/vtr_caixeta/edromufu/src/behaviour/build/modularized_bhv_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs', 'merge_install': False, 'path': '/home/vtr_caixeta/edromufu/src/behaviour/modularized_bhv_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.553s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.556s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.556s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/vtr_caixeta/edromufu/src/behaviour/bhv_independent_simulator' with build type 'ament_python'
+[0.556s] Level 1:colcon.colcon_core.shell:create_environment_hook('bhv_independent_simulator', 'ament_prefix_path')
+[0.560s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.560s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/hook/ament_prefix_path.ps1'
+[0.561s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/hook/ament_prefix_path.dsv'
+[0.561s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/hook/ament_prefix_path.sh'
+[0.563s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.563s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.567s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/vtr_caixeta/edromufu/src/behaviour/modularized_bhv_msgs' with build type 'ament_cmake'
+[0.568s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/vtr_caixeta/edromufu/src/behaviour/modularized_bhv_msgs'
+[0.568s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.568s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.982s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/vtr_caixeta/edromufu/src/behaviour/bhv_independent_simulator'
+[0.983s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.983s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.996s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vtr_caixeta/edromufu/src/behaviour/build/modularized_bhv_msgs': CMAKE_PREFIX_PATH=/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator:/opt/ros/iron /usr/bin/cmake /home/vtr_caixeta/edromufu/src/behaviour/modularized_bhv_msgs -DCMAKE_INSTALL_PREFIX=/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs
+[1.577s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vtr_caixeta/edromufu/src/behaviour/bhv_independent_simulator': PYTHONPATH=/home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/bhv_independent_simulator build --build-base /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/build install --record /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/install.log --single-version-externally-managed install_data
+[2.069s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vtr_caixeta/edromufu/src/behaviour/bhv_independent_simulator' returned '0': PYTHONPATH=/home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/bhv_independent_simulator build --build-base /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/build install --record /home/vtr_caixeta/edromufu/src/behaviour/build/bhv_independent_simulator/install.log --single-version-externally-managed install_data
+[2.072s] Level 1:colcon.colcon_core.environment:checking '/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator' for CMake module files
+[2.073s] Level 1:colcon.colcon_core.environment:checking '/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator' for CMake config files
+[2.074s] Level 1:colcon.colcon_core.environment:checking '/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/lib'
+[2.075s] Level 1:colcon.colcon_core.environment:checking '/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/bin'
+[2.075s] Level 1:colcon.colcon_core.shell:create_environment_hook('bhv_independent_simulator', 'path')
+[2.075s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/hook/path.ps1'
+[2.077s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/hook/path.dsv'
+[2.077s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/hook/path.sh'
+[2.078s] Level 1:colcon.colcon_core.environment:checking '/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/lib/pkgconfig/bhv_independent_simulator.pc'
+[2.078s] Level 1:colcon.colcon_core.environment:checking '/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/lib/python3.10/site-packages'
+[2.078s] Level 1:colcon.colcon_core.shell:create_environment_hook('bhv_independent_simulator', 'pythonpath')
+[2.079s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/hook/pythonpath.ps1'
+[2.079s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/hook/pythonpath.dsv'
+[2.080s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/hook/pythonpath.sh'
+[2.081s] Level 1:colcon.colcon_core.environment:checking '/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/bin'
+[2.081s] Level 1:colcon.colcon_core.shell:create_environment_hook('bhv_independent_simulator', 'pythonscriptspath')
+[2.082s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/hook/pythonscriptspath.ps1'
+[2.083s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/hook/pythonscriptspath.dsv'
+[2.083s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/hook/pythonscriptspath.sh'
+[2.084s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(bhv_independent_simulator)
+[2.085s] INFO:colcon.colcon_core.shell:Creating package script '/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/package.ps1'
+[2.087s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/package.dsv'
+[2.089s] INFO:colcon.colcon_core.shell:Creating package script '/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/package.sh'
+[2.091s] INFO:colcon.colcon_core.shell:Creating package script '/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/package.bash'
+[2.093s] INFO:colcon.colcon_core.shell:Creating package script '/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/bhv_independent_simulator/package.zsh'
+[2.095s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator/share/colcon-core/packages/bhv_independent_simulator)
+[3.219s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vtr_caixeta/edromufu/src/behaviour/build/modularized_bhv_msgs' returned '0': CMAKE_PREFIX_PATH=/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator:/opt/ros/iron /usr/bin/cmake /home/vtr_caixeta/edromufu/src/behaviour/modularized_bhv_msgs -DCMAKE_INSTALL_PREFIX=/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs
+[3.222s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vtr_caixeta/edromufu/src/behaviour/build/modularized_bhv_msgs': CMAKE_PREFIX_PATH=/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator:/opt/ros/iron /usr/bin/cmake --build /home/vtr_caixeta/edromufu/src/behaviour/build/modularized_bhv_msgs -- -j4 -l4
+[9.632s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vtr_caixeta/edromufu/src/behaviour/build/modularized_bhv_msgs' returned '0': CMAKE_PREFIX_PATH=/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator:/opt/ros/iron /usr/bin/cmake --build /home/vtr_caixeta/edromufu/src/behaviour/build/modularized_bhv_msgs -- -j4 -l4
+[9.645s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vtr_caixeta/edromufu/src/behaviour/build/modularized_bhv_msgs': CMAKE_PREFIX_PATH=/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator:/opt/ros/iron /usr/bin/cmake --install /home/vtr_caixeta/edromufu/src/behaviour/build/modularized_bhv_msgs
+[9.727s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(modularized_bhv_msgs)
+[9.727s] Level 1:colcon.colcon_core.environment:checking '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs' for CMake module files
+[9.728s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vtr_caixeta/edromufu/src/behaviour/build/modularized_bhv_msgs' returned '0': CMAKE_PREFIX_PATH=/home/vtr_caixeta/edromufu/src/behaviour/install/bhv_independent_simulator:/opt/ros/iron /usr/bin/cmake --install /home/vtr_caixeta/edromufu/src/behaviour/build/modularized_bhv_msgs
+[9.729s] Level 1:colcon.colcon_core.environment:checking '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs' for CMake config files
+[9.730s] Level 1:colcon.colcon_core.shell:create_environment_hook('modularized_bhv_msgs', 'cmake_prefix_path')
+[9.730s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/hook/cmake_prefix_path.ps1'
+[9.731s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/hook/cmake_prefix_path.dsv'
+[9.731s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/hook/cmake_prefix_path.sh'
+[9.732s] Level 1:colcon.colcon_core.environment:checking '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/lib'
+[9.732s] Level 1:colcon.colcon_core.shell:create_environment_hook('modularized_bhv_msgs', 'ld_library_path_lib')
+[9.732s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/hook/ld_library_path_lib.ps1'
+[9.733s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/hook/ld_library_path_lib.dsv'
+[9.734s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/hook/ld_library_path_lib.sh'
+[9.735s] Level 1:colcon.colcon_core.environment:checking '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/bin'
+[9.735s] Level 1:colcon.colcon_core.environment:checking '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/lib/pkgconfig/modularized_bhv_msgs.pc'
+[9.735s] Level 1:colcon.colcon_core.environment:checking '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/lib/python3.10/site-packages'
+[9.735s] Level 1:colcon.colcon_core.shell:create_environment_hook('modularized_bhv_msgs', 'pythonpath')
+[9.736s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/hook/pythonpath.ps1'
+[9.736s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/hook/pythonpath.dsv'
+[9.737s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/hook/pythonpath.sh'
+[9.738s] Level 1:colcon.colcon_core.environment:checking '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/bin'
+[9.739s] INFO:colcon.colcon_core.shell:Creating package script '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/package.ps1'
+[9.740s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/package.dsv'
+[9.740s] INFO:colcon.colcon_core.shell:Creating package script '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/package.sh'
+[9.741s] INFO:colcon.colcon_core.shell:Creating package script '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/package.bash'
+[9.741s] INFO:colcon.colcon_core.shell:Creating package script '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/package.zsh'
+[9.742s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/share/colcon-core/packages/modularized_bhv_msgs)
+[9.742s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(modularized_bhv_msgs)
+[9.743s] Level 1:colcon.colcon_core.environment:checking '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs' for CMake module files
+[9.743s] Level 1:colcon.colcon_core.environment:checking '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs' for CMake config files
+[9.744s] Level 1:colcon.colcon_core.shell:create_environment_hook('modularized_bhv_msgs', 'cmake_prefix_path')
+[9.744s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/hook/cmake_prefix_path.ps1'
+[9.745s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/hook/cmake_prefix_path.dsv'
+[9.745s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/hook/cmake_prefix_path.sh'
+[9.746s] Level 1:colcon.colcon_core.environment:checking '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/lib'
+[9.746s] Level 1:colcon.colcon_core.shell:create_environment_hook('modularized_bhv_msgs', 'ld_library_path_lib')
+[9.746s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/hook/ld_library_path_lib.ps1'
+[9.747s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/hook/ld_library_path_lib.dsv'
+[9.747s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/hook/ld_library_path_lib.sh'
+[9.747s] Level 1:colcon.colcon_core.environment:checking '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/bin'
+[9.747s] Level 1:colcon.colcon_core.environment:checking '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/lib/pkgconfig/modularized_bhv_msgs.pc'
+[9.748s] Level 1:colcon.colcon_core.environment:checking '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/lib/python3.10/site-packages'
+[9.748s] Level 1:colcon.colcon_core.shell:create_environment_hook('modularized_bhv_msgs', 'pythonpath')
+[9.748s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/hook/pythonpath.ps1'
+[9.748s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/hook/pythonpath.dsv'
+[9.749s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/hook/pythonpath.sh'
+[9.749s] Level 1:colcon.colcon_core.environment:checking '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/bin'
+[9.750s] INFO:colcon.colcon_core.shell:Creating package script '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/package.ps1'
+[9.750s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/package.dsv'
+[9.751s] INFO:colcon.colcon_core.shell:Creating package script '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/package.sh'
+[9.751s] INFO:colcon.colcon_core.shell:Creating package script '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/package.bash'
+[9.752s] INFO:colcon.colcon_core.shell:Creating package script '/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/share/modularized_bhv_msgs/package.zsh'
+[9.752s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vtr_caixeta/edromufu/src/behaviour/install/modularized_bhv_msgs/share/colcon-core/packages/modularized_bhv_msgs)
+[9.753s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[9.753s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[9.753s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[9.753s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[9.758s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[9.758s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[9.758s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[9.771s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[9.771s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vtr_caixeta/edromufu/src/behaviour/install/local_setup.ps1'
+[9.772s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/vtr_caixeta/edromufu/src/behaviour/install/_local_setup_util_ps1.py'
+[9.774s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vtr_caixeta/edromufu/src/behaviour/install/setup.ps1'
+[9.775s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vtr_caixeta/edromufu/src/behaviour/install/local_setup.sh'
+[9.776s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/vtr_caixeta/edromufu/src/behaviour/install/_local_setup_util_sh.py'
+[9.776s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vtr_caixeta/edromufu/src/behaviour/install/setup.sh'
+[9.777s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vtr_caixeta/edromufu/src/behaviour/install/local_setup.bash'
+[9.778s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vtr_caixeta/edromufu/src/behaviour/install/setup.bash'
+[9.779s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vtr_caixeta/edromufu/src/behaviour/install/local_setup.zsh'
+[9.779s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vtr_caixeta/edromufu/src/behaviour/install/setup.zsh'

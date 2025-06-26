@@ -7,7 +7,7 @@ from controller import Supervisor
 
 # Assumindo que modularized_bhv_msgs foi migrado para ROS2
 from modularized_bhv_msgs.msg import CurrentStateMsg
-from modularized_bhv_msgs.srv import MoveRequest, MoveRequestResponse # Importar a resposta também
+from modularized_bhv_msgs.srv import MoveRequest # Importar a resposta também
 
 # QoS para publishers e subscribers
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy

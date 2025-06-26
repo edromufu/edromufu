@@ -1,0 +1,316 @@
+[0.276s] Invoking command in '/home/vtr_caixeta/edromufu/build/modularized_bhv_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vtr_caixeta/edromufu/install/bhv_independent_simulator:/opt/ros/iron /usr/bin/cmake /home/vtr_caixeta/edromufu/src/behaviour/modularized_bhv_msgs -DCMAKE_INSTALL_PREFIX=/home/vtr_caixeta/edromufu/install/modularized_bhv_msgs
+[0.346s] -- The C compiler identification is GNU 11.4.0
+[0.411s] -- The CXX compiler identification is GNU 11.4.0
+[0.422s] -- Detecting C compiler ABI info
+[0.507s] -- Detecting C compiler ABI info - done
+[0.522s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.522s] -- Detecting C compile features
+[0.523s] -- Detecting C compile features - done
+[0.528s] -- Detecting CXX compiler ABI info
+[0.613s] -- Detecting CXX compiler ABI info - done
+[0.629s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.629s] -- Detecting CXX compile features
+[0.630s] -- Detecting CXX compile features - done
+[0.634s] -- Found ament_cmake: 2.0.7 (/opt/ros/iron/share/ament_cmake/cmake)
+[0.840s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.940s] -- Found rosidl_default_generators: 1.5.0 (/opt/ros/iron/share/rosidl_default_generators/cmake)
+[0.945s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.993s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.039s] -- Found rosidl_adapter: 4.0.1 (/opt/ros/iron/share/rosidl_adapter/cmake)
+[1.045s] -- Found std_msgs: 5.0.1 (/opt/ros/iron/share/std_msgs/cmake)
+[1.124s] -- Found geometry_msgs: 5.0.1 (/opt/ros/iron/share/geometry_msgs/cmake)
+[1.574s] -- Found ament_cmake_ros: 0.11.2 (/opt/ros/iron/share/ament_cmake_ros/cmake)
+[1.830s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.164s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.187s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[2.189s] -- Found python_cmake_module: 0.10.2 (/opt/ros/iron/share/python_cmake_module/cmake)
+[2.216s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[2.216s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.216s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[2.216s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[2.240s] -- Found PythonExtra: .so  
+[2.306s] -- Configuring done
+[2.342s] -- Generating done
+[2.356s] -- Build files have been written to: /home/vtr_caixeta/edromufu/build/modularized_bhv_msgs
+[2.365s] Invoked command in '/home/vtr_caixeta/edromufu/build/modularized_bhv_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vtr_caixeta/edromufu/install/bhv_independent_simulator:/opt/ros/iron /usr/bin/cmake /home/vtr_caixeta/edromufu/src/behaviour/modularized_bhv_msgs -DCMAKE_INSTALL_PREFIX=/home/vtr_caixeta/edromufu/install/modularized_bhv_msgs
+[2.367s] Invoking command in '/home/vtr_caixeta/edromufu/build/modularized_bhv_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vtr_caixeta/edromufu/install/bhv_independent_simulator:/opt/ros/iron /usr/bin/cmake --build /home/vtr_caixeta/edromufu/build/modularized_bhv_msgs -- -j4 -l4
+[2.415s] [  1%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[2.424s] [  1%] Built target ament_cmake_python_copy_modularized_bhv_msgs
+[2.664s] [  1%] Built target modularized_bhv_msgs__rosidl_generator_type_description
+[2.679s] [  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[2.687s] [  5%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[2.744s] running egg_info
+[2.745s] creating modularized_bhv_msgs.egg-info
+[2.745s] writing modularized_bhv_msgs.egg-info/PKG-INFO
+[2.745s] writing dependency_links to modularized_bhv_msgs.egg-info/dependency_links.txt
+[2.746s] writing top-level names to modularized_bhv_msgs.egg-info/top_level.txt
+[2.746s] writing manifest file 'modularized_bhv_msgs.egg-info/SOURCES.txt'
+[2.750s] reading manifest file 'modularized_bhv_msgs.egg-info/SOURCES.txt'
+[2.751s] writing manifest file 'modularized_bhv_msgs.egg-info/SOURCES.txt'
+[2.798s] [  5%] Built target ament_cmake_python_build_modularized_bhv_msgs_egg
+[3.165s] [  5%] Built target modularized_bhv_msgs__cpp
+[3.269s] [ 11%] [32mBuilding C object CMakeFiles/modularized_bhv_msgs__rosidl_generator_c.dir/rosidl_generator_c/modularized_bhv_msgs/msg/detail/state_machine_msg__type_support.c.o[0m
+[3.270s] [ 11%] [32mBuilding C object CMakeFiles/modularized_bhv_msgs__rosidl_generator_c.dir/rosidl_generator_c/modularized_bhv_msgs/msg/detail/state_machine_msg__description.c.o[0m
+[3.270s] [ 12%] [32mBuilding C object CMakeFiles/modularized_bhv_msgs__rosidl_generator_c.dir/rosidl_generator_c/modularized_bhv_msgs/msg/detail/current_state_msg__description.c.o[0m
+[3.270s] [ 11%] [32mBuilding C object CMakeFiles/modularized_bhv_msgs__rosidl_generator_c.dir/rosidl_generator_c/modularized_bhv_msgs/msg/detail/state_machine_msg__functions.c.o[0m
+[3.319s] [ 14%] [32mBuilding C object CMakeFiles/modularized_bhv_msgs__rosidl_generator_c.dir/rosidl_generator_c/modularized_bhv_msgs/msg/detail/current_state_msg__functions.c.o[0m
+[3.326s] [ 16%] [32mBuilding C object CMakeFiles/modularized_bhv_msgs__rosidl_generator_c.dir/rosidl_generator_c/modularized_bhv_msgs/msg/detail/current_state_msg__type_support.c.o[0m
+[3.326s] [ 18%] [32mBuilding C object CMakeFiles/modularized_bhv_msgs__rosidl_generator_c.dir/rosidl_generator_c/modularized_bhv_msgs/srv/detail/move_request__description.c.o[0m
+[3.349s] [ 20%] [32mBuilding C object CMakeFiles/modularized_bhv_msgs__rosidl_generator_c.dir/rosidl_generator_c/modularized_bhv_msgs/srv/detail/move_request__functions.c.o[0m
+[3.375s] [ 22%] [32mBuilding C object CMakeFiles/modularized_bhv_msgs__rosidl_generator_c.dir/rosidl_generator_c/modularized_bhv_msgs/srv/detail/move_request__type_support.c.o[0m
+[3.439s] [ 24%] [32m[1mLinking C shared library libmodularized_bhv_msgs__rosidl_generator_c.so[0m
+[3.482s] [ 24%] Built target modularized_bhv_msgs__rosidl_generator_c
+[3.497s] [ 31%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[3.497s] [ 31%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[3.497s] [ 31%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[3.498s] [ 31%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[4.075s] [ 33%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/modularized_bhv_msgs/msg/state_machine_msg__type_support.cpp.o[0m
+[4.085s] [ 35%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/modularized_bhv_msgs/msg/state_machine_msg__type_support.cpp.o[0m
+[4.146s] [ 37%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/modularized_bhv_msgs/msg/current_state_msg__type_support.cpp.o[0m
+[4.208s] [ 38%] [32mBuilding C object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/modularized_bhv_msgs/msg/detail/state_machine_msg__type_support.c.o[0m
+[4.214s] [ 40%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/modularized_bhv_msgs/srv/move_request__type_support.cpp.o[0m
+[4.247s] [ 42%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/modularized_bhv_msgs/msg/detail/state_machine_msg__type_support_c.cpp.o[0m
+[4.271s] [ 44%] [32mBuilding C object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/modularized_bhv_msgs/msg/detail/current_state_msg__type_support.c.o[0m
+[4.289s] [ 46%] [32m[1mLinking CXX shared library libmodularized_bhv_msgs__rosidl_typesupport_c.so[0m
+[4.335s] [ 48%] [32mBuilding C object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/modularized_bhv_msgs/srv/detail/move_request__type_support.c.o[0m
+[4.364s] [ 48%] Built target modularized_bhv_msgs__rosidl_typesupport_c
+[4.376s] [ 50%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/modularized_bhv_msgs/msg/detail/current_state_msg__type_support_c.cpp.o[0m
+[4.419s] [ 51%] [32m[1mLinking C shared library libmodularized_bhv_msgs__rosidl_typesupport_introspection_c.so[0m
+[4.475s] [ 51%] Built target modularized_bhv_msgs__rosidl_typesupport_introspection_c
+[4.488s] [ 53%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/modularized_bhv_msgs/msg/current_state_msg__type_support.cpp.o[0m
+[4.739s] [ 55%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[4.959s] [ 57%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[5.076s] [ 59%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/modularized_bhv_msgs/srv/detail/move_request__type_support_c.cpp.o[0m
+[5.227s] [ 61%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/modularized_bhv_msgs/srv/move_request__type_support.cpp.o[0m
+[5.551s] [ 62%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/modularized_bhv_msgs/msg/detail/dds_fastrtps/state_machine_msg__type_support.cpp.o[0m
+[5.684s] [ 64%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/modularized_bhv_msgs/msg/detail/state_machine_msg__type_support.cpp.o[0m
+[5.742s] [ 66%] [32m[1mLinking CXX shared library libmodularized_bhv_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[5.911s] [ 66%] Built target modularized_bhv_msgs__rosidl_typesupport_fastrtps_c
+[5.927s] [ 68%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/modularized_bhv_msgs/msg/detail/current_state_msg__type_support.cpp.o[0m
+[6.094s] [ 70%] [32m[1mLinking CXX shared library libmodularized_bhv_msgs__rosidl_typesupport_cpp.so[0m
+[6.234s] [ 70%] Built target modularized_bhv_msgs__rosidl_typesupport_cpp
+[6.252s] [ 72%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/modularized_bhv_msgs/srv/detail/move_request__type_support.cpp.o[0m
+[6.390s] [ 74%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/modularized_bhv_msgs/msg/detail/dds_fastrtps/current_state_msg__type_support.cpp.o[0m
+[6.579s] [ 75%] [32mBuilding CXX object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/modularized_bhv_msgs/srv/detail/dds_fastrtps/move_request__type_support.cpp.o[0m
+[7.131s] [ 77%] [32m[1mLinking CXX shared library libmodularized_bhv_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[7.267s] [ 77%] Built target modularized_bhv_msgs__rosidl_typesupport_introspection_cpp
+[7.367s] [ 79%] [32m[1mLinking CXX shared library libmodularized_bhv_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[7.448s] [ 79%] Built target modularized_bhv_msgs__rosidl_typesupport_fastrtps_cpp
+[7.470s] [ 79%] Built target modularized_bhv_msgs
+[7.490s] [ 81%] [34m[1mGenerating Python code for ROS interfaces[0m
+[8.039s] [ 81%] Built target modularized_bhv_msgs__py
+[8.060s] [ 83%] [32mBuilding C object CMakeFiles/modularized_bhv_msgs__rosidl_generator_py.dir/rosidl_generator_py/modularized_bhv_msgs/msg/_state_machine_msg_s.c.o[0m
+[8.062s] [ 85%] [32mBuilding C object CMakeFiles/modularized_bhv_msgs__rosidl_generator_py.dir/rosidl_generator_py/modularized_bhv_msgs/msg/_current_state_msg_s.c.o[0m
+[8.062s] [ 87%] [32mBuilding C object CMakeFiles/modularized_bhv_msgs__rosidl_generator_py.dir/rosidl_generator_py/modularized_bhv_msgs/srv/_move_request_s.c.o[0m
+[8.250s] [ 88%] [32m[1mLinking C shared library rosidl_generator_py/modularized_bhv_msgs/libmodularized_bhv_msgs__rosidl_generator_py.so[0m
+[8.294s] [ 88%] Built target modularized_bhv_msgs__rosidl_generator_py
+[8.316s] [ 90%] [32mBuilding C object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/modularized_bhv_msgs/_modularized_bhv_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[8.320s] [ 92%] [32mBuilding C object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/modularized_bhv_msgs/_modularized_bhv_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[8.320s] [ 94%] [32mBuilding C object CMakeFiles/modularized_bhv_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/modularized_bhv_msgs/_modularized_bhv_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[8.439s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/modularized_bhv_msgs/modularized_bhv_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[8.488s] [ 96%] Built target modularized_bhv_msgs__rosidl_typesupport_introspection_c__pyext
+[8.514s] [100%] [32m[1mLinking C shared library rosidl_generator_py/modularized_bhv_msgs/modularized_bhv_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[8.514s] [100%] [32m[1mLinking C shared library rosidl_generator_py/modularized_bhv_msgs/modularized_bhv_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[8.559s] [100%] Built target modularized_bhv_msgs__rosidl_typesupport_c__pyext
+[8.559s] [100%] Built target modularized_bhv_msgs__rosidl_typesupport_fastrtps_c__pyext
+[8.571s] Invoked command in '/home/vtr_caixeta/edromufu/build/modularized_bhv_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vtr_caixeta/edromufu/install/bhv_independent_simulator:/opt/ros/iron /usr/bin/cmake --build /home/vtr_caixeta/edromufu/build/modularized_bhv_msgs -- -j4 -l4
+[8.582s] Invoking command in '/home/vtr_caixeta/edromufu/build/modularized_bhv_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vtr_caixeta/edromufu/install/bhv_independent_simulator:/opt/ros/iron /usr/bin/cmake --install /home/vtr_caixeta/edromufu/build/modularized_bhv_msgs
+[8.591s] -- Install configuration: ""
+[8.591s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/ament_index/resource_index/rosidl_interfaces/modularized_bhv_msgs
+[8.591s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/msg/StateMachineMsg.json
+[8.591s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/msg/CurrentStateMsg.json
+[8.591s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/srv/MoveRequest.json
+[8.591s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs
+[8.591s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv
+[8.591s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/move_request.h
+[8.592s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail
+[8.592s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail/move_request__functions.h
+[8.592s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail/move_request__functions.c
+[8.592s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail/move_request__type_support.h
+[8.592s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail/move_request__description.c
+[8.592s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail/move_request__type_support.c
+[8.592s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail/move_request__struct.h
+[8.592s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg
+[8.592s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/state_machine_msg.h
+[8.592s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail
+[8.593s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/current_state_msg__type_support.h
+[8.593s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/state_machine_msg__functions.c
+[8.593s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/current_state_msg__type_support.c
+[8.593s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/state_machine_msg__type_support.c
+[8.593s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/current_state_msg__description.c
+[8.593s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/current_state_msg__struct.h
+[8.593s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/current_state_msg__functions.h
+[8.593s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/state_machine_msg__description.c
+[8.594s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/state_machine_msg__struct.h
+[8.594s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/state_machine_msg__type_support.h
+[8.594s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/state_machine_msg__functions.h
+[8.594s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/current_state_msg__functions.c
+[8.594s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/current_state_msg.h
+[8.594s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/rosidl_generator_c__visibility_control.h
+[8.594s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/environment/library_path.sh
+[8.594s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/environment/library_path.dsv
+[8.595s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/libmodularized_bhv_msgs__rosidl_generator_c.so
+[8.595s] -- Set runtime path of "/home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/libmodularized_bhv_msgs__rosidl_generator_c.so" to ""
+[8.595s] -- Up-to-date: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs
+[8.595s] -- Up-to-date: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv
+[8.595s] -- Up-to-date: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail
+[8.595s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail/move_request__rosidl_typesupport_fastrtps_c.h
+[8.595s] -- Up-to-date: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg
+[8.595s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[8.596s] -- Up-to-date: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail
+[8.596s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/state_machine_msg__rosidl_typesupport_fastrtps_c.h
+[8.596s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/current_state_msg__rosidl_typesupport_fastrtps_c.h
+[8.596s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/libmodularized_bhv_msgs__rosidl_typesupport_fastrtps_c.so
+[8.596s] -- Set runtime path of "/home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/libmodularized_bhv_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[8.596s] -- Up-to-date: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs
+[8.596s] -- Up-to-date: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv
+[8.596s] -- Up-to-date: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail
+[8.597s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail/move_request__rosidl_typesupport_introspection_c.h
+[8.597s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail/move_request__type_support.c
+[8.597s] -- Up-to-date: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg
+[8.597s] -- Up-to-date: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail
+[8.597s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/current_state_msg__type_support.c
+[8.597s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/state_machine_msg__type_support.c
+[8.597s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/state_machine_msg__rosidl_typesupport_introspection_c.h
+[8.597s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/current_state_msg__rosidl_typesupport_introspection_c.h
+[8.597s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[8.597s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/libmodularized_bhv_msgs__rosidl_typesupport_introspection_c.so
+[8.598s] -- Set runtime path of "/home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/libmodularized_bhv_msgs__rosidl_typesupport_introspection_c.so" to ""
+[8.598s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/libmodularized_bhv_msgs__rosidl_typesupport_c.so
+[8.598s] -- Set runtime path of "/home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/libmodularized_bhv_msgs__rosidl_typesupport_c.so" to ""
+[8.598s] -- Up-to-date: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs
+[8.598s] -- Up-to-date: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv
+[8.598s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/move_request.hpp
+[8.599s] -- Up-to-date: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail
+[8.599s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail/move_request__traits.hpp
+[8.599s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail/move_request__builder.hpp
+[8.599s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail/move_request__struct.hpp
+[8.599s] -- Up-to-date: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg
+[8.599s] -- Up-to-date: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail
+[8.599s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/state_machine_msg__struct.hpp
+[8.600s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/current_state_msg__builder.hpp
+[8.600s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/current_state_msg__traits.hpp
+[8.600s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/current_state_msg__struct.hpp
+[8.600s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/state_machine_msg__builder.hpp
+[8.600s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/state_machine_msg__traits.hpp
+[8.600s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/state_machine_msg.hpp
+[8.600s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/current_state_msg.hpp
+[8.600s] -- Up-to-date: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs
+[8.601s] -- Up-to-date: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv
+[8.601s] -- Up-to-date: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail
+[8.601s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail/move_request__rosidl_typesupport_fastrtps_cpp.hpp
+[8.601s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail/dds_fastrtps
+[8.602s] -- Up-to-date: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg
+[8.602s] -- Up-to-date: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail
+[8.602s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/state_machine_msg__rosidl_typesupport_fastrtps_cpp.hpp
+[8.602s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/current_state_msg__rosidl_typesupport_fastrtps_cpp.hpp
+[8.602s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/dds_fastrtps
+[8.602s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[8.602s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/libmodularized_bhv_msgs__rosidl_typesupport_fastrtps_cpp.so
+[8.603s] -- Set runtime path of "/home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/libmodularized_bhv_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[8.603s] -- Up-to-date: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs
+[8.603s] -- Up-to-date: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv
+[8.603s] -- Up-to-date: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail
+[8.603s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail/move_request__type_support.cpp
+[8.603s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/srv/detail/move_request__rosidl_typesupport_introspection_cpp.hpp
+[8.603s] -- Up-to-date: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg
+[8.604s] -- Up-to-date: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail
+[8.604s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/state_machine_msg__rosidl_typesupport_introspection_cpp.hpp
+[8.604s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/current_state_msg__rosidl_typesupport_introspection_cpp.hpp
+[8.604s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/current_state_msg__type_support.cpp
+[8.604s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/include/modularized_bhv_msgs/modularized_bhv_msgs/msg/detail/state_machine_msg__type_support.cpp
+[8.604s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/libmodularized_bhv_msgs__rosidl_typesupport_introspection_cpp.so
+[8.605s] -- Set runtime path of "/home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/libmodularized_bhv_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[8.605s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/libmodularized_bhv_msgs__rosidl_typesupport_cpp.so
+[8.606s] -- Set runtime path of "/home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/libmodularized_bhv_msgs__rosidl_typesupport_cpp.so" to ""
+[8.606s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/environment/pythonpath.sh
+[8.606s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/environment/pythonpath.dsv
+[8.606s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs-0.0.0-py3.10.egg-info
+[8.606s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs-0.0.0-py3.10.egg-info/top_level.txt
+[8.606s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs-0.0.0-py3.10.egg-info/PKG-INFO
+[8.607s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs-0.0.0-py3.10.egg-info/SOURCES.txt
+[8.607s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs-0.0.0-py3.10.egg-info/dependency_links.txt
+[8.607s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs
+[8.607s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs/__init__.py
+[8.607s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs/srv
+[8.607s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs/srv/__init__.py
+[8.607s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs/srv/_move_request_s.c
+[8.608s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs/srv/_move_request.py
+[8.608s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs/modularized_bhv_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[8.608s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs/_modularized_bhv_msgs_s.ep.rosidl_typesupport_c.c
+[8.608s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs/modularized_bhv_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[8.608s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs/_modularized_bhv_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[8.608s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs/_modularized_bhv_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[8.609s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs/modularized_bhv_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[8.609s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs/libmodularized_bhv_msgs__rosidl_generator_py.so
+[8.609s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs/msg
+[8.609s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs/msg/__init__.py
+[8.609s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs/msg/_state_machine_msg.py
+[8.609s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs/msg/_current_state_msg.py
+[8.609s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs/msg/_state_machine_msg_s.c
+[8.610s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs/msg/_current_state_msg_s.c
+[8.649s] Listing '/home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs'...
+[8.649s] Compiling '/home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs/__init__.py'...
+[8.649s] Listing '/home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs/msg'...
+[8.649s] Compiling '/home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs/msg/__init__.py'...
+[8.649s] Compiling '/home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs/msg/_current_state_msg.py'...
+[8.649s] Compiling '/home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs/msg/_state_machine_msg.py'...
+[8.649s] Listing '/home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs/srv'...
+[8.650s] Compiling '/home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs/srv/__init__.py'...
+[8.650s] Compiling '/home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs/srv/_move_request.py'...
+[8.654s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs/modularized_bhv_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[8.654s] -- Set runtime path of "/home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs/modularized_bhv_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[8.655s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs/modularized_bhv_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[8.655s] -- Set runtime path of "/home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs/modularized_bhv_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[8.655s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs/modularized_bhv_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[8.655s] -- Set runtime path of "/home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/python3.10/site-packages/modularized_bhv_msgs/modularized_bhv_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[8.655s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/libmodularized_bhv_msgs__rosidl_generator_py.so
+[8.656s] -- Set runtime path of "/home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/lib/libmodularized_bhv_msgs__rosidl_generator_py.so" to ""
+[8.656s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/msg/StateMachineMsg.idl
+[8.656s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/msg/CurrentStateMsg.idl
+[8.656s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/srv/MoveRequest.idl
+[8.656s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/msg/StateMachineMsg.msg
+[8.656s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/msg/CurrentStateMsg.msg
+[8.656s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/srv/MoveRequest.srv
+[8.656s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/srv/MoveRequest_Request.msg
+[8.657s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/srv/MoveRequest_Response.msg
+[8.657s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/ament_index/resource_index/package_run_dependencies/modularized_bhv_msgs
+[8.657s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/ament_index/resource_index/parent_prefix_path/modularized_bhv_msgs
+[8.657s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/environment/ament_prefix_path.sh
+[8.657s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/environment/ament_prefix_path.dsv
+[8.657s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/environment/path.sh
+[8.657s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/environment/path.dsv
+[8.658s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/local_setup.bash
+[8.658s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/local_setup.sh
+[8.658s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/local_setup.zsh
+[8.658s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/local_setup.dsv
+[8.658s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/package.dsv
+[8.658s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/ament_index/resource_index/packages/modularized_bhv_msgs
+[8.658s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/export_modularized_bhv_msgs__rosidl_generator_cExport.cmake
+[8.658s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/export_modularized_bhv_msgs__rosidl_generator_cExport-noconfig.cmake
+[8.659s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/export_modularized_bhv_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[8.659s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/export_modularized_bhv_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[8.659s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/modularized_bhv_msgs__rosidl_typesupport_introspection_cExport.cmake
+[8.659s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/modularized_bhv_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[8.659s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/modularized_bhv_msgs__rosidl_typesupport_cExport.cmake
+[8.659s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/modularized_bhv_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[8.659s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/export_modularized_bhv_msgs__rosidl_generator_cppExport.cmake
+[8.660s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/export_modularized_bhv_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[8.660s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/export_modularized_bhv_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[8.660s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/modularized_bhv_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[8.660s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/modularized_bhv_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[8.660s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/modularized_bhv_msgs__rosidl_typesupport_cppExport.cmake
+[8.661s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/modularized_bhv_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[8.661s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/export_modularized_bhv_msgs__rosidl_generator_pyExport.cmake
+[8.661s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/export_modularized_bhv_msgs__rosidl_generator_pyExport-noconfig.cmake
+[8.661s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/rosidl_cmake-extras.cmake
+[8.661s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[8.662s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[8.662s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[8.662s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[8.662s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[8.662s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[8.662s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/modularized_bhv_msgsConfig.cmake
+[8.663s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/cmake/modularized_bhv_msgsConfig-version.cmake
+[8.663s] -- Installing: /home/vtr_caixeta/edromufu/install/modularized_bhv_msgs/share/modularized_bhv_msgs/package.xml
+[8.666s] Invoked command in '/home/vtr_caixeta/edromufu/build/modularized_bhv_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vtr_caixeta/edromufu/install/bhv_independent_simulator:/opt/ros/iron /usr/bin/cmake --install /home/vtr_caixeta/edromufu/build/modularized_bhv_msgs
